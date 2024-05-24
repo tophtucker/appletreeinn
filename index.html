@@ -6,21 +6,62 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="icon" href="logo-simple.png" />
   <link rel="stylesheet" href="styles.css" />
+  <title>Apple Tree Inn • Lenox, MA</title>
 
   <header>
     <img src="logo.svg" height="200" />
+    <div><a href="https://maps.app.goo.gl/vpsxJ5KnzqR1n78q8">Lenox, MA</a></div>
+    <div><a href="https://www.instagram.com/appletreeinn">Instagram</a></div>
+    <div><a href="mailto:claire@appletreeinnlenox.com">Email</a></div>
+    <div><a href="tel:1.413.200.8456">(413) 200-8456</a></div>
+    <div><a href="https://appletreeinn.book.pegsbe.com/">Reserve</a></div>
   </header>
 
-  <form id="reserve">
+  <article>
+    <p style="font-size: 2em">
+      The Apple Tree Inn is a small historic hotel in the Berkshires.
+    </p>
+    <p>
+      It is the only hotel within walking distance to
+      <a href="https://www.bso.org/tanglewood/" target="_blank">Tanglewood</a>
+      and <a href="https://kripalu.org/">Kripalu</a>.
+    </p>
+    <p>
+      The guest rooms are currently open Thursday, Friday and Saturday nights and will be open 7 days a week starting June 1. We’re working as hard as we can to reopen the Ostrich Room (our tavern) in early June. We are planning for Wed, Thu, Fri, Sat nights from 4–10pm with live music a couple times a week. The idea is great, simple drinks and great, simple food. We’ll post more here
+      as we figure it out.
+    </p>
+    <p>We are hiring a cook; please email <a href="mailto:claire@appletreeinnlenox.com">claire@appletreeinnlenox.com</a> if you know someone great!</p>
+
+    <h2>Rooms</h2>
+  </article>
+
+  <footer>
+    <form id="reserve">
       <input id="start" type="date" />
       <input id="end" type="date" />
       <button type="submit">Reserve</button>
-  </form>
+    </form>
+  </footer>
 
   <script type="module">
+    import * as d3 from "https://esm.run/d3@7.1";
+
+    const isoDate = "%Y-%m-%d";
+    const dateParse = d3.timeParse(isoDate);
+    const dateFormat = d3.timeFormat(isoDate);
+    const today = d3.timeDay(new Date());
+    start.setAttribute("min", dateFormat(today));
+    end.setAttribute("min", dateFormat(today));
+    start.value = dateFormat(today);
+    end.value = dateFormat(d3.timeDay.offset(today, 1));
+
     reserve.addEventListener("submit", (e) => {
-        e.preventDefault();
-        console.log(start.value, end.value)
-    })
+      e.preventDefault();
+      const dates = [start, end]
+        .map((d) => d3.isoParse(d.value))
+        .sort((a, b) => d3.ascending(a, b));
+      const los = d3.timeDay.count(...dates);
+      window.location.href = `https://appletreeinn.book.pegsbe.com/search?CheckinDate=${start.value}&LOS=${los}&nights=&Rooms=1`;
+    });
   </script>
 </html>
