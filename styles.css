@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    0deg,
+    transparent 0%,
+    transparent 10.95%,
+    #5e4c3c 10.95%,
+    #5e4c3c 11.45%,
+    #ffeacc 11.45%,
+    #ffeacc 79.75%,
+    #5e4c3c 79.75%,
+    #5e4c3c 80.25%,
+    transparent 80.25%,
+    transparent 100%
+  );
+}

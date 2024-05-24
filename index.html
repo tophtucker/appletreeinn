@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="icon" href="logo-simple.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <header>
+    <img src="logo.svg" height="200" />
+  </header>
+
+  <form id="reserve">
+      <input id="start" type="date" />
+      <input id="end" type="date" />
+      <button type="submit">Reserve</button>
+  </form>
+
+  <script type="module">
+    reserve.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log(start.value, end.value)
+    })
+  </script>
+</html>
