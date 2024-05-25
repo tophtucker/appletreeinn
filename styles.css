@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-size: 20px;
@@ -41,6 +45,7 @@ article {
 }
 
 footer {
+  z-index: 3;
   padding: 1em;
   border-top: 1px solid var(--brown);
   text-align: center;
@@ -81,26 +86,42 @@ h2, h3, h4 {
   border: 1px solid var(--brown);
 }
 
-.tab-wrapper {
-  border: 1px solid var(--brown);
-  padding: 1em;
-  max-width: 1200px;
-  margin: 2em auto;
+.tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  border-bottom: 1px solid var(--brown);
 }
 
 .tabs {
+  max-width: 1200px;
   display: flex;
   gap: 1em;
 }
 
 .tabs h2 {
-  text-decoration: underline;
   color: var(--brown);
   margin: 0;
+  position: relative;
+  bottom: -1px;
+  border-top: 1px solid var(--brown);
+  border-right: 1px solid var(--brown);
+  border-left: 1px solid var(--brown);
+  padding: 0.5em;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .tabs h2.active {
   text-decoration: none;
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+
+#rooms {
+  margin: 1em auto;
+  max-width: 1200px;
 }
 
 .room {
@@ -109,6 +130,6 @@ h2, h3, h4 {
   justify-content: space-between;
   align-items: start;
   border: 1px solid var(--brown);
-  margin-bottom: 5px;
+  margin-bottom: 1em;
   padding: 1em;
 }

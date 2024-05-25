@@ -60,10 +60,12 @@
     <img src="heropics/1.jpg" />
   </div>
 
-  <div class="tab-wrapper">
-    <div class="tabs">
-      <h2>Main House</h2>
-      <h2>Summer Annex</h2>
+  <div class="rooms-section">
+    <div class="tabs-wrapper">
+      <div class="tabs">
+        <h2 class="tab" data-tab="main-house">Main House</h2>
+        <h2 class="tab" data-tab="summer-annex">Summer Annex</h2>
+      </div>
     </div>
     <div id="rooms"></div>
   </div>
@@ -83,7 +85,7 @@
       {
         number: "Room 1",
         name: "Orchard",
-        desc: `Located on the second floor of our 1885 main house, the centerpieces of this room are a charming working fireplace and a spacious balcony with seating for reading, sipping coffee, and watching the sunset. A romantic wrought iron bed features high-thread-count Frette linens, while an indoor seating area includes an expandable full bed for additional guests. Enjoy views of the woods and sink into a deep reading chair for full relaxation, or tackle a creative project at the included desk.. A full bath is outfitted with our luxe Beekman 1802 bath amenities.`,
+        desc: `Located on the second floor of our 1885 main house, the centerpieces of this room are a charming working fireplace and a spacious balcony with seating for reading, sipping coffee, and watching the sunset. A romantic wrought iron bed features high-thread-count Frette linens, while an indoor seating area includes an expandable full bed for additional guests. Enjoy views of the woods and sink into a deep reading chair for full relaxation, or tackle a creative project at the included desk. A full bath is outfitted with our luxe Beekman 1802 bath amenities.`,
       },
       {
         number: "Room 2",
@@ -97,7 +99,24 @@
       },
     ];
 
-    const summerAnnex = [{}];
+    const summerAnnex = [
+      {
+        type: "Queen",
+        desc: `Ideal for a solo getaway or a romantic couples weekend, this room includes a plush queen bed dressed in Frette linens and space to spread out. Read a book by the window with views of the forest, or sit down to work at the full size writing desk. In the bathroom you’ll find a shower with an included tub, outfitted with 1802 bath amenities.`,
+      },
+      {
+        type: "Two Double",
+        desc: `Richly textured and warmly designed, this Lodge room features two double beds and is a great choice for a weekend trip to reconnect with a friend, or a convenient setting for a family getaway. A spacious bathroom offers a full bath, and amenities include our signature Beekman 1802 bath products and silky Frette sateen sheets.`,
+      },
+      {
+        type: "Queen, Mountain View",
+        desc: `A favorite for couples getaways or some indulgent solo time, this Lodge queen features expansive windows with views of the rustling trees and a soaring mountain backdrop. Sink into our soft Frette linens and soak in the full bath using our signature Beekman 1802 amenities.`,
+      },
+      {
+        type: "Two Double, Mountain View",
+        desc: `Located on both the first and second floors of our Lodge, these rooms offer large windows and sprawling views of our rolling lawns and the treetops beyond. In addition to the stunning sights, each room includes two double beds outfitted in our high-thread-count Frette linens and a full bath including Beekman 1802 amenities. A great choice for friends and families alike.`,
+      },
+    ];
 
     const isoDate = "%Y-%m-%d";
     const dateParse = d3.timeParse(isoDate);
@@ -120,7 +139,17 @@
     const tabs = document.querySelectorAll(".tabs h2");
     for (const tab of tabs) {
       tab.addEventListener("click", (e) => {
-        rooms.innerHTML = "";
+        renderRooms(e.currentTarget.dataset.tab);
+      });
+    }
+
+    renderRooms("main-house");
+
+    function renderRooms(tab) {
+      rooms.innerHTML = "";
+      d3.selectAll(".tabs h2").classed("active", false);
+      d3.select(`[data-tab=${tab}]`).classed("active", true);
+      if (tab === "main-house") {
         rooms.appendChild(htl.html`<div>
         ${mainHouse.map(
           ({ number, name, desc }, i) => htl.html`<div class="room">
@@ -129,11 +158,13 @@
               <h3>${name}</h3>
               <p>${desc}</p>
             </div>
-            <img src="roompics/${i + 1}-1.jpg" width="300">
+            <img src="roompics/${i + 1}-1.jpg" width="500">
           </div>`
         )}
         </div>`);
-      });
+      } else {
+        rooms.appendChild(htl.html`<div>Coming soon</div>`)
+      }
     }
   </script>
 </html>
