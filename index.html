@@ -10,11 +10,25 @@
 
   <header>
     <img src="logo.svg" height="200" />
-    <div><a href="https://maps.app.goo.gl/vpsxJ5KnzqR1n78q8" target="_blank">Lenox, MA</a></div>
-    <div><a href="https://www.instagram.com/appletreeinn" target="_blank">Instagram</a></div>
-    <div><a href="mailto:claire@appletreeinnlenox.com" target="_blank">Email</a></div>
+    <div>
+      <a href="https://maps.app.goo.gl/vpsxJ5KnzqR1n78q8" target="_blank"
+        >Lenox, MA</a
+      >
+    </div>
+    <div>
+      <a href="https://www.instagram.com/appletreeinn" target="_blank"
+        >Instagram</a
+      >
+    </div>
+    <div>
+      <a href="mailto:claire@appletreeinnlenox.com" target="_blank">Email</a>
+    </div>
     <div><a href="tel:1.413.200.8456" target="_blank">(413) 200-8456</a></div>
-    <div><a href="https://appletreeinn.book.pegsbe.com/" target="_blank">Reserve</a></div>
+    <div>
+      <a href="https://appletreeinn.book.pegsbe.com/" target="_blank"
+        >Reserve</a
+      >
+    </div>
   </header>
 
   <div class="intro">
@@ -51,6 +65,7 @@
       <h2>Main House</h2>
       <h2>Summer Annex</h2>
     </div>
+    <div id="rooms"></div>
   </article>
 
   <footer>
@@ -63,6 +78,27 @@
 
   <script type="module">
     import * as d3 from "https://esm.run/d3@7.1";
+    import * as htl from "https://esm.run/htl";
+
+    const mainHouse = [
+      {
+        number: "Room 1",
+        name: "Orchard",
+        desc: `Located on the second floor of our 1885 main house, the centerpieces of this room are a charming working fireplace and a spacious balcony with seating for reading, sipping coffee, and watching the sunset. A romantic wrought iron bed features high-thread-count Frette linens, while an indoor seating area includes an expandable full bed for additional guests. Enjoy views of the woods and sink into a deep reading chair for full relaxation, or tackle a creative project at the included desk.. A full bath is outfitted with our luxe Beekman 1802 bath amenities.`,
+      },
+      {
+        number: "Room 2",
+        name: "Astalula",
+        desc: `One of our most luxe rooms, Astalula includes charming details original to the 1885 Victorian mansion, including an intimate daybed tucked into a French window alcove, surrounded by lush trees and a built-in wood-burning fireplace. Spread out in the plush king bed featuring Frette linens, nap in the chaise lounge, and soak in the full bath using our signature Beekman 1802 amenities.`,
+      },
+      {
+        number: "Room 3",
+        name: "Bristed Suite",
+        desc: `Make a grand entrance to this massive suite on the second floor of our Victorian mansion. This spacious king suite offers a taste of historic elegance with modern amenities like Frette linens and Beekman 1802 bath products. A brass king bed, fully separate living room with a pull-out couch, writing desk, and wood-burning fireplace will make you never want to leave this creative haven. An included table seats four for shared dinner, and wide windows open to expansive views of the rolling hills.`,
+      },
+    ];
+
+    const summerAnnex = [{}];
 
     const isoDate = "%Y-%m-%d";
     const dateParse = d3.timeParse(isoDate);
@@ -81,5 +117,21 @@
       const los = d3.timeDay.count(...dates);
       window.location.href = `https://appletreeinn.book.pegsbe.com/search?CheckinDate=${start.value}&LOS=${los}&nights=&Rooms=1`;
     });
+
+    const tabs = document.querySelectorAll(".tabs h2");
+    for (const tab of tabs) {
+      tab.addEventListener("click", (e) => {
+        rooms.innerHTML = "";
+        rooms.appendChild(htl.html`<div>
+        ${mainHouse.map(
+          ({ number, name, desc }, i) => htl.html`<div>
+            <small>${number}</small>
+            <h3>${name}</h3>
+            <p>${desc}</p>
+          </div>`
+        )}
+        </div>`);
+      });
+    }
   </script>
 </html>
