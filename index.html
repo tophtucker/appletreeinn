@@ -25,7 +25,10 @@
     </div>
     <div><a href="tel:1.413.200.8456" target="_blank">(413) 200-8456</a></div>
     <div>
-      <a href="https://appletreeinn.book.pegsbe.com/" target="_blank"
+      <a
+        href="https://appletreeinn.book.pegsbe.com/"
+        target="_blank"
+        class="highlight"
         >Reserve</a
       >
     </div>
@@ -67,7 +70,7 @@
         <h2 class="tab" data-tab="summer-annex">Summer Annex</h2>
       </div>
     </div>
-    <div id="rooms"></div>
+    <div id="buildingContainer"></div>
   </div>
 
   <footer>
@@ -101,20 +104,37 @@
 
     const summerAnnex = [
       {
-        type: "Queen",
+        name: "Queen",
         desc: `Ideal for a solo getaway or a romantic couples weekend, this room includes a plush queen bed dressed in Frette linens and space to spread out. Read a book by the window with views of the forest, or sit down to work at the full size writing desk. In the bathroom you’ll find a shower with an included tub, outfitted with 1802 bath amenities.`,
       },
       {
-        type: "Two Double",
+        name: "Two Double",
         desc: `Richly textured and warmly designed, this Lodge room features two double beds and is a great choice for a weekend trip to reconnect with a friend, or a convenient setting for a family getaway. A spacious bathroom offers a full bath, and amenities include our signature Beekman 1802 bath products and silky Frette sateen sheets.`,
       },
       {
-        type: "Queen, Mountain View",
+        name: "Queen, Mountain View",
         desc: `A favorite for couples getaways or some indulgent solo time, this Lodge queen features expansive windows with views of the rustling trees and a soaring mountain backdrop. Sink into our soft Frette linens and soak in the full bath using our signature Beekman 1802 amenities.`,
       },
       {
-        type: "Two Double, Mountain View",
+        name: "Two Double, Mountain View",
         desc: `Located on both the first and second floors of our Lodge, these rooms offer large windows and sprawling views of our rolling lawns and the treetops beyond. In addition to the stunning sights, each room includes two double beds outfitted in our high-thread-count Frette linens and a full bath including Beekman 1802 amenities. A great choice for friends and families alike.`,
+      },
+    ];
+
+    const buildings = [
+      {
+        id: "main-house",
+        title: "Main House",
+        rooms: mainHouse,
+        img: "heropics/main-house.jpg",
+        desc: `Built in 1885, sited overlooking the hill, three stories, has tavern, every room is unique.`,
+      },
+      {
+        id: "summer-annex",
+        title: "Summer Annex",
+        rooms: summerAnnex,
+        img: "heropics/summer-annex.jpg",
+        desc: `Open from Memorial Day to Labor Day, has four standard room types, over by the pool.`,
       },
     ];
 
@@ -146,25 +166,28 @@
     renderRooms("main-house");
 
     function renderRooms(tab) {
-      rooms.innerHTML = "";
+      buildingContainer.innerHTML = "";
       d3.selectAll(".tabs h2").classed("active", false);
       d3.select(`[data-tab=${tab}]`).classed("active", true);
-      if (tab === "main-house") {
-        rooms.appendChild(htl.html`<div>
-        ${mainHouse.map(
+      const { title, desc, img, rooms } = buildings.find((d) => d.id === tab);
+      buildingContainer.appendChild(htl.html`<div>
+        <div class="building">
+          <img src=${img} width=400 />
+          <div>${desc}</div>
+        </div>
+        ${rooms.map(
           ({ number, name, desc }, i) => htl.html`<div class="room">
             <div>
-              <small>${number}</small>
+              ${
+                number !== undefined ? htl.html`<small>${number}</small>` : null
+              }
               <h3>${name}</h3>
               <p>${desc}</p>
             </div>
-            <img src="roompics/${i + 1}-1.jpg" width="500">
+            <img src="roompics/${tab}/${i + 1}-1.jpg" width="500">
           </div>`
         )}
         </div>`);
-      } else {
-        rooms.appendChild(htl.html`<div>Coming soon</div>`)
-      }
     }
   </script>
 </html>
