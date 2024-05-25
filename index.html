@@ -60,18 +60,17 @@
     <img src="heropics/1.jpg" />
   </div>
 
-  <article class="tab-wrapper">
+  <div class="tab-wrapper">
     <div class="tabs">
       <h2>Main House</h2>
       <h2>Summer Annex</h2>
     </div>
     <div id="rooms"></div>
-  </article>
+  </div>
 
   <footer>
     <form id="reserve">
-      <input id="start" type="date" />
-      <input id="end" type="date" />
+      From <input id="start" type="date" /> to <input id="end" type="date" />
       <button type="submit">Reserve</button>
     </form>
   </footer>
@@ -124,10 +123,13 @@
         rooms.innerHTML = "";
         rooms.appendChild(htl.html`<div>
         ${mainHouse.map(
-          ({ number, name, desc }, i) => htl.html`<div>
-            <small>${number}</small>
-            <h3>${name}</h3>
-            <p>${desc}</p>
+          ({ number, name, desc }, i) => htl.html`<div class="room">
+            <div>
+              <small>${number}</small>
+              <h3>${name}</h3>
+              <p>${desc}</p>
+            </div>
+            <img src="roompics/${i + 1}-1.jpg" width="300">
           </div>`
         )}
         </div>`);

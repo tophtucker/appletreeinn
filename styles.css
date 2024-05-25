@@ -44,6 +44,9 @@ footer {
   padding: 1em;
   border-top: 1px solid var(--brown);
   text-align: center;
+  position: sticky;
+  bottom: 0;
+  background: white;
 }
 
 a {
@@ -55,8 +58,9 @@ input, button {
   font-size: inherit;
 }
 
-h2 {
+h2, h3, h4 {
   font-weight: normal;
+  margin: 0;
 }
 
 .intro {
@@ -80,6 +84,8 @@ h2 {
 .tab-wrapper {
   border: 1px solid var(--brown);
   padding: 1em;
+  max-width: 1200px;
+  margin: 2em auto;
 }
 
 .tabs {
@@ -95,4 +101,14 @@ h2 {
 
 .tabs h2.active {
   text-decoration: none;
+}
+
+.room {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: start;
+  border: 1px solid var(--brown);
+  margin-bottom: 5px;
+  padding: 1em;
 }
