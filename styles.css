@@ -76,10 +76,12 @@ header a, nav a {
 
 a.highlight {
   border: 1px solid var(--brown);
-  padding: 0.5em;
+  padding: 0.5em 0.7em;
   border-radius: 5px;
   background: white;
   text-decoration: none;
+  font-size: 2em;
+  margin: -2em 0;
 }
 
 nav {
@@ -171,6 +173,7 @@ h2, h3, h4 {
   cursor: pointer;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  font-size: larger;
 }
 
 .tabs h2.active {
