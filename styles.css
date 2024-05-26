@@ -98,9 +98,12 @@ h2, h3, h4 {
 }
 
 .tabs {
-  max-width: 1200px;
+  width: 1200px;
+  max-width: 100%;
   display: flex;
   gap: 1em;
+  align-items: center;
+  justify-content: center;
 }
 
 .tabs h2 {
