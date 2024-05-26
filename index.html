@@ -69,10 +69,9 @@
       <a href="mailto:info@appletreeinnlenox.com" target="_blank">Email</a>
       <a href="tel:1.413.200.8456" target="_blank">(413) 200-8456</a>
     </div>
-    <form id="reserve">
-      From <input id="start" type="date" /> to <input id="end" type="date" />
-      <button type="submit">Reserve</button>
-    </form>
+    <a href="https://appletreeinn.book.pegsbe.com/" class="highlight"
+      >Reserve</a
+    >
   </nav>
 
   <div class="rooms-section">
@@ -161,24 +160,6 @@
         desc: `Open from Memorial Day to Labor Day, has four standard room types, over by the pool.`,
       },
     ];
-
-    const isoDate = "%Y-%m-%d";
-    const dateParse = d3.timeParse(isoDate);
-    const dateFormat = d3.timeFormat(isoDate);
-    const today = d3.timeDay(new Date());
-    start.setAttribute("min", dateFormat(today));
-    end.setAttribute("min", dateFormat(today));
-    start.value = dateFormat(today);
-    end.value = dateFormat(d3.timeDay.offset(today, 1));
-
-    reserve.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const dates = [start, end]
-        .map((d) => d3.isoParse(d.value))
-        .sort((a, b) => d3.ascending(a, b));
-      const los = d3.timeDay.count(...dates);
-      window.location.href = `https://appletreeinn.book.pegsbe.com/search?CheckinDate=${start.value}&LOS=${los}&nights=&Rooms=1`;
-    });
 
     const tabs = document.querySelectorAll(".tabs h2");
     for (const tab of tabs) {
