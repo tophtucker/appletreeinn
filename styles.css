@@ -38,13 +38,12 @@ header {
 
 header .links {
   padding-top: 14px;
+}
+
+.links {
   display: flex;
   align-items: center;
   gap: 1em;
-}
-
-header a {
-  color: inherit;
 }
 
 a.highlight {
@@ -57,13 +56,17 @@ a.highlight {
 
 nav {
   z-index: 3;
-  padding: 1em;
+  padding: 1em var(--gutter);
   border-top: 1px solid var(--brown);
   border-bottom: 1px solid var(--brown);
   text-align: center;
   position: sticky;
   top: -1px;
   background: var(--tan);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--brown);
 }
 
 a {
@@ -188,7 +191,7 @@ small {
 footer {
   border-top: 1px solid var(--brown);
   background: var(--tan);
-  padding: 4em var(--gutter);
+  padding: 4em var(--gutter) 6em;
   font-size: smaller;
   display: flex;
   justify-content: space-between;
