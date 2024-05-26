@@ -10,20 +10,15 @@
 
   <header>
     <img src="logo.svg" height="200" />
-    <div>
+    <div class="links">
       <a href="https://maps.app.goo.gl/vpsxJ5KnzqR1n78q8" target="_blank"
         >Lenox, MA</a
       >
-    </div>
-    <div>
       <a href="https://www.instagram.com/appletreeinn" target="_blank"
         >Instagram</a
       >
-    </div>
-    <div>
       <a href="mailto:info@appletreeinnlenox.com" target="_blank">Email</a>
-    </div>
-    <div><a href="tel:1.413.200.8456" target="_blank">(413) 200-8456</a></div>
+    <a href="tel:1.413.200.8456" target="_blank">(413) 200-8456</a>
     <div>
       <a
         href="https://appletreeinn.book.pegsbe.com/"
@@ -53,15 +48,21 @@
         food. We’ll post more here as we figure it out.
       </p>
       <p>
-        We are hiring a cook; please email
+        We are hiring a cook; please 
         <a href="mailto:claire@appletreeinnlenox.com"
-          >claire@appletreeinnlenox.com</a
+          >email Claire</a
         >
         if you know someone great!
       </p>
     </article>
-    <img src="heropics/1.jpg" />
   </div>
+
+  <nav>
+    <form id="reserve">
+      From <input id="start" type="date" /> to <input id="end" type="date" />
+      <button type="submit">Reserve</button>
+    </form>
+  </nav>
 
   <div class="rooms-section">
     <div class="tabs-wrapper">
@@ -73,13 +74,6 @@
     </div>
     <div id="buildingContainer"></div>
   </div>
-
-  <footer>
-    <form id="reserve">
-      From <input id="start" type="date" /> to <input id="end" type="date" />
-      <button type="submit">Reserve</button>
-    </form>
-  </footer>
 
   <script type="module">
     import * as d3 from "https://esm.run/d3@7.1";
