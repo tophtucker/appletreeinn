@@ -8,6 +8,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   --brown: #5e4c3c;
   --tan: #ffeacc;
+  --gutter: calc((100vw - 1200px) / 2);
 }
 
 header {
@@ -19,7 +20,7 @@ header {
   color: var(--brown);
   position: relative;
   z-index: 2;
-  padding: 0 calc((100vw - 1200px) / 2);
+  padding: 0 var(--gutter);
   background: linear-gradient(
     0deg,
     transparent 0%,
@@ -87,7 +88,7 @@ h2, h3, h4 {
   background-image: url("./heropics/1.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  padding: 4em calc((100vw - 1200px) / 2) 3em;
+  padding: 4em var(--gutter) 3em;
   margin-top: -1.4em;
 }
 
@@ -148,8 +149,7 @@ h2, h3, h4 {
 }
 
 #buildingContainer {
-  margin: 1em auto;
-  max-width: 1200px;
+  padding: 1em var(--gutter);
 }
 
 .room {
@@ -183,4 +183,17 @@ small {
 .building img {
   border-radius: 50%;
   border: 1px solid var(--brown);
+}
+
+footer {
+  border-top: 1px solid var(--brown);
+  background: var(--tan);
+  padding: 4em var(--gutter);
+  font-size: smaller;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div:nth-child(2) {
+  text-align: right;
 }
