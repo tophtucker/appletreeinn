@@ -1,6 +1,8 @@
 <script>
 	import { page } from '$app/stores';
 	import { buildings } from '$lib/index.js';
+  import Footer from './Footer.svelte';
+
 	const defaultTab = buildings[0].id;
 	let tab = $state($page.url.hash.slice(1) || defaultTab);
 	const building = $derived(buildings.find((d) => d.id === tab));
@@ -22,19 +24,19 @@
 	<div class="links">
 		<div class="thumbnail">
 			<img src="img/ostrich-room.png" alt="The Ostrich Room" />
-			<a href="#">Ostrich Room</a>
+			<a href="/ostrich-room">Ostrich Room</a>
 		</div>
 		<div class="thumbnail">
 			<img src="img/activities.jpg" alt="Activities" />
-			<a href="#">Activities</a>
+			<a href="/activities">Activities</a>
 		</div>
 		<div class="thumbnail">
 			<img src="img/weddings.jpg" alt="Weddings" />
-			<a href="#">Weddings & Events</a>
+			<a href="/weddings-events">Weddings & Events</a>
 		</div>
 		<div class="thumbnail">
 			<img src="img/history.png" alt="History" />
-			<a href="#">History</a>
+			<a href="/history">History</a>
 		</div>
 	</div>
 </header>
@@ -114,18 +116,4 @@
 	</div>
 </div>
 
-<footer>
-	<div>
-		10 Richmond Mountain Road<br />
-		Lenox, Massachusetts<br />
-		01240<br />
-		<br />
-		<a href="tel:1.413.200.8456" target="_blank">(413) 200-8456</a><br />
-		<a href="mailto:info@appletreeinnlenox.com" target="_blank">info@appletreeinnlenox.com</a>
-	</div>
-	<div>
-		Check-in: 4 p.m.<br />
-		Check-out: 11 a.m.<br />
-		<a href="#">All policies</a>
-	</div>
-</footer>
+<Footer />
