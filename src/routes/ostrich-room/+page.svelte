@@ -15,6 +15,7 @@
 
 <div class="inner">
 	<h1>The Ostrich Room</h1>
+	<img src="heropics/ostrich.jpg" alt="The Ostrich Room" style="max-width: 100%;" />
 	<p>Our tavern etc etc…</p>
 	<p>Some pictures…</p>
 	<p>Hours…</p>

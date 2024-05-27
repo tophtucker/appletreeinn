@@ -5,10 +5,7 @@
 
 <svelte:head>
 	<title>History • Apple Tree Inn • Lenox, MA</title>
-	<meta
-		name="description"
-		content="TODO"
-	/>
+	<meta name="description" content="TODO" />
 </svelte:head>
 
 <Header />
