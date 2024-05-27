@@ -6,7 +6,6 @@
 		{ pathname: '/weddings-events', title: 'Weddings & Events', img: 'img/weddings.jpg' },
 		{ pathname: '/history', title: 'History', img: 'img/history.png' }
 	];
-  console.log($page.url.pathname)
 </script>
 
 <div class="sticky-header">
@@ -29,13 +28,13 @@
 </header>
 
 <style>
-  .current {
-    font-weight: bold;
-  }
+	.current {
+		font-weight: bold;
+	}
 
-  .current img {
-    border-width: 2px;
-  }
+	.current img {
+		border-width: 2px;
+	}
 
 	header {
 		position: absolute;
