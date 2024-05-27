@@ -171,3 +171,11 @@ small {
   border-radius: 50%;
   border: 1px solid var(--brown);
 }
+
+.inner {
+  padding: 1em var(--gutter);
+}
+
+.inner p {
+  max-width: 640px;
+}

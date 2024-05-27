@@ -1,6 +1,6 @@
 <script>
-    import Header from '../Header.svelte';
-    import Footer from '../Footer.svelte';
+	import Header from '../Header.svelte';
+	import Footer from '../Footer.svelte';
 </script>
 
 <svelte:head>
@@ -13,7 +13,12 @@
 
 <Header />
 
-<h1>Ostrich Room</h1>
-<a href="/">Home</a>
+<div class="inner">
+	<h1>The Ostrich Room</h1>
+	<p>Our tavern etc etc…</p>
+	<p>Some pictures…</p>
+	<p>Hours…</p>
+	<p>Upcoming music…</p>
+</div>
 
 <Footer />
