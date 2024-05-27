@@ -161,7 +161,8 @@ h2, h3, h4 {
   justify-content: center;
 }
 
-.tabs h2 {
+.tabs a {
+  text-decoration: none;
   color: var(--brown);
   margin: 0;
   position: relative;
@@ -176,7 +177,7 @@ h2, h3, h4 {
   font-size: larger;
 }
 
-.tabs h2.active {
+.tabs a.active {
   text-decoration: none;
   border-bottom: 1px solid white;
   z-index: 2;
