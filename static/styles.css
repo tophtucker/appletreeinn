@@ -12,14 +12,14 @@ body {
 }
 
 header {
-  margin-top: 2em;
+  position: absolute;
+  width: 100%;
+  top: 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2em;
   color: var(--brown);
-  position: relative;
-  z-index: 2;
   padding: 0 var(--gutter);
   background: linear-gradient(
     0deg,
@@ -36,8 +36,20 @@ header {
   );
 }
 
-header .links {
-  padding-top: 14px;
+.sticky-header {
+  position: sticky;
+  top: -84px;
+  margin-top: 2em;
+  height: 200px;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  z-index: 2;
+}
+
+header a img {
+  display: block;
 }
 
 .links {
@@ -74,24 +86,29 @@ header a, nav a {
   border-radius: 50%;
 }
 
-a.highlight {
+.highlight {
   border: 1px solid var(--brown);
   padding: 0.5em 0.7em;
   border-radius: 5px;
   background: white;
   text-decoration: none;
-  font-size: 2em;
-  margin: -2em 0;
+  font-size: 1.4em;
+}
+
+.sticky-header .highlight {
+  position: relative;
+  top: 10px;
+}
+
+.highlight.hidden {
+  visibility: hidden;
 }
 
 nav {
-  z-index: 3;
   padding: 1em var(--gutter);
   border-top: 1px solid var(--brown);
   border-bottom: 1px solid var(--brown);
   text-align: center;
-  position: sticky;
-  top: -1px;
   background: var(--tan);
   display: flex;
   align-items: center;
