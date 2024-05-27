@@ -46,6 +46,7 @@ header {
   flex-direction: row-reverse;
   align-items: center;
   z-index: 2;
+  pointer-events: none;
 }
 
 header a img {
@@ -96,6 +97,7 @@ header a, nav a {
 }
 
 .sticky-header .highlight {
+  pointer-events: auto;
   position: relative;
   top: 10px;
 }

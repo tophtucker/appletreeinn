@@ -1,4 +1,5 @@
 <script>
+    import Header from '../Header.svelte';
     import Footer from '../Footer.svelte';
 </script>
 
@@ -9,6 +10,8 @@
 		content="The Ostrich Room is a tavern with weekly live music at the Apple Tree Inn"
 	/>
 </svelte:head>
+
+<Header />
 
 <h1>Ostrich Room</h1>
 <a href="/">Home</a>
