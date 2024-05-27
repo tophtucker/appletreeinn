@@ -1,3 +1,14 @@
+<script>
+	import { page } from '$app/stores';
+	const pages = [
+		{ pathname: '/ostrich-room', title: 'Ostrich Room', img: 'img/ostrich-room.png' },
+		{ pathname: '/activities', title: 'Activities', img: 'img/activities.jpg' },
+		{ pathname: '/weddings-events', title: 'Weddings & Events', img: 'img/weddings.jpg' },
+		{ pathname: '/history', title: 'History', img: 'img/history.png' }
+	];
+  console.log($page.url.pathname)
+</script>
+
 <div class="sticky-header">
 	<a href="https://appletreeinn.book.pegsbe.com/" class="highlight">Reserve</a>
 </div>
@@ -6,27 +17,26 @@
 		<img src="logo.svg" height="200" alt="The Apple Tree Inn" />
 	</a>
 	<div class="links">
-		<div class="thumbnail">
-			<img src="img/ostrich-room.png" alt="The Ostrich Room" />
-			<a href="/ostrich-room">Ostrich Room</a>
-		</div>
-		<div class="thumbnail">
-			<img src="img/activities.jpg" alt="Activities" />
-			<a href="/activities">Activities</a>
-		</div>
-		<div class="thumbnail">
-			<img src="img/weddings.jpg" alt="Weddings" />
-			<a href="/weddings-events">Weddings & Events</a>
-		</div>
-		<div class="thumbnail">
-			<img src="img/history.png" alt="History" />
-			<a href="/history">History</a>
-		</div>
+		{#each pages as { pathname, title, img }}
+			<a href={pathname} class={`thumbnail ${$page.url.pathname === pathname ? 'current' : ''}`}>
+				<img src={img} alt={title} />
+				{title}
+			</a>
+		{/each}
+
 		<a href="https://appletreeinn.book.pegsbe.com/" class="highlight hidden">Reserve</a>
 	</div>
 </header>
 
 <style>
+  .current {
+    font-weight: bold;
+  }
+
+  .current img {
+    border-width: 2px;
+  }
+
 	header {
 		position: absolute;
 		width: 100%;
@@ -72,7 +82,7 @@
 	header .links {
 		align-items: start;
 		position: relative;
-		top: -20px;
+		top: -10px;
 	}
 
 	.highlight {
