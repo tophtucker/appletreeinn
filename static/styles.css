@@ -21,6 +21,10 @@ header a, nav a {
   text-decoration: none;
 }
 
+header a:hover, nav a:hover {
+  text-decoration: underline;
+}
+
 .thumbnail {
   display: flex;
   flex-direction: column;
