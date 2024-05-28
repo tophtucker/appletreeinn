@@ -142,10 +142,14 @@ h2, h3, h4 {
 .room {
   display: flex;
   gap: 1em;
-  justify-content: space-between;
+  justify-content: start;
   align-items: start;
   border-bottom: 1px solid var(--brown);
   padding: 1em 0;
+}
+
+.room img {
+  width: 70%;
 }
 
 .room:last-child {
@@ -159,12 +163,15 @@ small {
 
 .building {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1em;
   border-bottom: 1px solid var(--brown);
   padding-bottom: 1em;
-  margin-bottom: 1em;
+}
+
+.building p {
+  max-width: 460px;
 }
 
 .building img {
