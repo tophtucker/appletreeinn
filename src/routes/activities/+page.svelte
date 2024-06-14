@@ -12,30 +12,48 @@
 
 <div class="inner">
 	<h1>Activities</h1>
-	<p>
-		The <a href="https://www.bso.org/tanglewood/">Tanglewood</a> gate is a 6-minute walk from the main
-		house. Their world-class concerts run from June 20 to August 31, or you can walk the grounds from
-		9am to 3pm year-round.
-	</p>
-	<p>
-		The entrace to the <a href="https://kripalu.org/">Kripalu</a> yoga center is right at the base of
-		our driveway. They offer…
-	</p>
-	<p>
-		<a href="https://www.highlawnfarm.com/">High Lawn Farm</a> is a 10-minute drive away, where you can
-		see and pat calves and cows of all ages and buy cheese and ice cream.
-	</p>
-	<h2>Restaurants</h2>
-	<p>
-		Downtown Lenox (4-minute drive) features breakfast spots Haven and dinner options like Pizzeria
-		Boema or its sister Frankie’s.
-	</p>
-	<p>
-		A bit farther away, we love No Comply (Great Barrington, 18 minutes), Common or Garden Pub
-		(Great Barrington, 14 minutes), …
-	</p>
-	<h2>Historic homes</h2>
-	<p>The Mount is Edith Wharton’s. Naumkeag. Etc.</p>
+	<h2>Food & drink</h2>
+	<p>Downtown Lenox (3 min) has lots of cute shops and restaurants:</p>
+	<ul>
+		<li>Breakfast & cafés: Haven, Bagel & Brew, Patisserie Lenox, Shots</li>
+		<li>Groceries and sandwiches to go: Loeb’s Foodtown</li>
+		<li>Dinner: Pizzeria Boema (pizza), Betty’s (pizza), Frankie’s (Italian), Olde Heritage Tavern (pub), Alta (Mediterranean)</li>
+		<li>Drinks: Alta, Brava, Firefly, Olde Heritage Tavern, Ombra</li>
+	</ul>
+	<p>Some of our favorite special places beyond:</p>
+	<ul>
+		<li>Common or Garden Pub — Great Barrington, 14 min</li>
+		<li>No Comply — Great Barrington, 18 min</li>
+		<li>Hilltown Hot Pies — Egremont Barn pop-up, 27 min</li>
+		<li>Stissing House — Pine Plains, 1 hour</li>
+	</ul>
+	<h2>Everything else</h2>
+	<ul>
+		<li>
+			<a href="https://www.bso.org/tanglewood/">Tanglewood</a> (outdoor summer concert venue) — across
+			the street
+		</li>
+		<li><a href="https://kripalu.org/">Kripalu</a> (year-round yoga retreat) — next door</li>
+		<li>Stockbridge Bowl (lake) — 2 min</li>
+		<li>Olivia’s Overlook (viewpoint and trailhead for many popular hikes) — 4 min</li>
+		<li>Shakespeare & Co (famous theater company with shows in summer & fall) — 5 min</li>
+		<li>The Mount (Edith Wharton historic home) — 7 min</li>
+		<li>Canyon Ranch (famous spa) — 7 min</li>
+		<li>Miraval (famous spa) — 7 min</li>
+		<li>
+			Norman Rockwell Museum (museum dedicated to the beloved American everyman illustrator) — 9 min
+		</li>
+		<li>
+			<a href="https://www.highlawnfarm.com/">High Lawn Farm</a> (baby calves you can pat, cheese, ice
+			cream) — 10 min
+		</li>
+		<li>Arrowhead (Herman Melville historic home) — 12 min</li>
+		<li>Bousquet (ski area) — 12 min</li>
+		<li>Hancock Shaker Village (open-air architectural museum) — 17 min</li>
+		<li>Pittsfield (city of 40k+) — 20 min</li>
+		<li>Butternut (ski area) — 22 min</li>
+		<li>Jacob’s Pillow (summer dance festival with a famous wooded outdoor stage) — 25 min</li>
+	</ul>
 </div>
 
 <Footer />
