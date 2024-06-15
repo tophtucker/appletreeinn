@@ -15,10 +15,10 @@ export const server_loads = [];
 
 export const dictionary = {
 		"/": [2],
-		"/activities": [3],
-		"/history": [4],
-		"/ostrich-room": [5],
-		"/policies": [6],
+		"/history": [3],
+		"/ostrich-room": [4],
+		"/policies": [5],
+		"/things-to-do": [6],
 		"/weddings-events": [7]
 	};
 

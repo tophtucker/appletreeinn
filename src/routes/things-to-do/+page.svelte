@@ -11,8 +11,8 @@
 <Header />
 
 <div class="inner">
-	<h1>Activities</h1>
-	<h2>Food & drink</h2>
+	<h1>Things to do</h1>
+	<h2>Eat and drink</h2>
 	<p>Downtown Lenox (3 min) has lots of cute shops and restaurants:</p>
 	<ul>
 		<li>Breakfast & cafés: Haven, Bagel & Brew, Patisserie Lenox, Shots</li>
@@ -22,9 +22,10 @@
 	</ul>
 	<p>Some of our favorite special places beyond:</p>
 	<ul>
+		<li>The Red Lion Inn — Stockbridge, 10 min (dinner, drinks, live music Wed–Sun)</li>
 		<li>Common or Garden Pub — Great Barrington, 14 min</li>
 		<li>No Comply — Great Barrington, 18 min</li>
-		<li>Hilltown Hot Pies — Egremont Barn pop-up, 27 min</li>
+		<li>Hilltown Hot Pies — Egremont Barn, 27 min (pizza pop-up)</li>
 		<li>Stissing House — Pine Plains, 1 hour</li>
 	</ul>
 	<h2>Everything else</h2>
@@ -41,8 +42,9 @@
 		<li>Canyon Ranch (famous spa) — 7 min</li>
 		<li>Miraval (famous spa) — 7 min</li>
 		<li>
-			Norman Rockwell Museum (museum dedicated to the beloved American everyman illustrator) — 9 min
+			Norman Rockwell Museum (galleries and studio) — 9 min
 		</li>
+		<li>Naumkeag (McKim, Mead & White–designed historic home)</li>
 		<li>
 			<a href="https://www.highlawnfarm.com/">High Lawn Farm</a> (baby calves you can pat, cheese, ice
 			cream) — 10 min
