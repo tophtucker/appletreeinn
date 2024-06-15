@@ -3,6 +3,7 @@
 	import { buildings } from '$lib/index.js';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
+	import Slideshow from './Slideshow.svelte';
 
 	const defaultTab = buildings[0].id;
 	let tab = $state($page.url.hash.slice(1) || defaultTab);
@@ -22,24 +23,27 @@
 
 <Header />
 
-<div class="intro">
-	<article>
-		<p style="font-size: 2em; margin: 0;">The Apple Tree Inn is a small historic hotel in the Berkshires.</p>
-		<p>
-			It is the only hotel within walking distance to
-			<a href="https://www.bso.org/tanglewood/" target="_blank">Tanglewood</a>
-			and <a href="https://kripalu.org/">Kripalu</a>.
-		</p>
-		<p>
-			It has 34 rooms split across two buildings, a porch where you can enjoy the complimentary
-			continental breakfast while appreciating the Berkshire hills, a pool, and lots of wood-burning
-			fireplaces (including in a few of the guest rooms).
-		</p>
-		<p>
-			<a href="/ostrich-room">The Ostrich Room</a>, our tavern, is open for drinks Wednesday–Saturday, 4–10
-			p.m., with food from 5–9 and live music on Wednesdays and Saturdays.
-		</p>
-	</article>
+<div class="inner">
+	<div class="intro">
+		<article>
+			<p style="font-size: 2em; margin: 0;">The Apple Tree Inn is a small historic hotel in the Berkshires.</p>
+			<p>
+				It is the only hotel within walking distance to
+				<a href="https://www.bso.org/tanglewood/" target="_blank">Tanglewood</a>
+				and <a href="https://kripalu.org/">Kripalu</a>.
+			</p>
+			<p>
+				It has 34 rooms split across two buildings, a porch where you can enjoy the complimentary
+				continental breakfast while appreciating the Berkshire hills, a pool, and lots of wood-burning
+				fireplaces (including in a few of the guest rooms).
+			</p>
+			<p>
+				<a href="/ostrich-room">The Ostrich Room</a>, our tavern, is open for drinks Wednesday–Saturday, 4–10
+				p.m., with food from 5–9 and live music on Wednesdays and Saturdays.
+			</p>
+		</article>
+		<Slideshow />
+	</div>
 </div>
 
 <nav>
