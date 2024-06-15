@@ -1,60 +1,269 @@
 // place files you want to import through the `$lib` alias in this folder.
+
+// https://observablehq.com/d/37b2ab91a954e6bc
 export const buildings = [
-	{
-		id: 'main-house',
-		title: 'Main House',
-		rooms: [
-			{
-				number: 'Room 1',
-				name: 'Orchard',
-				floor: 2,
-				tags: ["Queen bed", "Pull-out full bed", "Working fireplace"],
-				desc: `Located on the second floor of our 1885 main house, the centerpieces of this room are a charming working fireplace and a spacious balcony with seating for reading, sipping coffee, and watching the sunset. A romantic wrought iron bed features high-thread-count Frette linens, while an indoor seating area includes an expandable full bed for additional guests. Enjoy views of the woods and sink into a deep reading chair for full relaxation, or tackle a creative project at the included desk. A full bath is outfitted with our luxe Beekman 1802 bath amenities.`
-			},
-			{
-				number: 'Room 2',
-				name: 'Astalula',
-				floor: 2,
-				tags: ["King bed", "Working fireplace"],
-				desc: `One of our most luxe rooms, Astalula includes charming details original to the 1885 Victorian mansion, including an intimate daybed tucked into a French window alcove, surrounded by lush trees and a built-in wood-burning fireplace. Spread out in the plush king bed featuring Frette linens, nap in the chaise lounge, and soak in the full bath using our signature Beekman 1802 amenities.`
-			},
-			{
-				number: 'Room 3',
-				name: 'Bristed Suite',
-				floor: 2,
-				tags: ["King bed", "Pull-out full bed", "Working fireplace"],
-				desc: `Make a grand entrance to this massive suite on the second floor of our Victorian mansion. This spacious king suite offers a taste of historic elegance with modern amenities like Frette linens and Beekman 1802 bath products. A brass king bed, fully separate living room with a pull-out couch, writing desk, and wood-burning fireplace will make you never want to leave this creative haven. An included table seats four for shared dinner, and wide windows open to expansive views of the rolling hills.`
-			}
-		],
-		img: 'heropics/main-house.jpg',
-		desc: `Built in 1885, the three-story main house includes our front desk, breakfast room, and weekend tavern. Every room is unique.`
-	},
 	{
 		id: 'summer-annex',
 		title: 'Summer Annex',
+		img: 'heropics/summer-annex.jpg',
+		desc: 'Open from Memorial Day to Labor Day, the summer annex has four standard room types. It’s located by the pool, a three-minute walk from the main house.',
+		building: 'summer-annex',
 		rooms: [
 			{
-				name: 'Queen',
-				tags: ["Queen bed"],
-				desc: `Ideal for a solo getaway or a romantic couples weekend, this room includes a plush queen bed dressed in Frette linens and space to spread out. Read a book by the window with views of the forest, or sit down to work at the full size writing desk. In the bathroom you’ll find a shower with an included tub, outfitted with 1802 bath amenities.`
+				building: 'summer-annex',
+				floor: null,
+				room_number: null,
+				room_name: 'Queen Woods View',
+				beds: '1 queen',
+				sleeps: 2,
+				views: null,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['1 queen', 'Sleeps 2']
 			},
 			{
-				name: 'Two Double',
-				tags: ["2 double beds"],
-				desc: `Richly textured and warmly designed, this Lodge room features two double beds and is a great choice for a weekend trip to reconnect with a friend, or a convenient setting for a family getaway. A spacious bathroom offers a full bath, and amenities include our signature Beekman 1802 bath products and silky Frette sateen sheets.`
+				building: 'summer-annex',
+				floor: null,
+				room_number: null,
+				room_name: '2 Double Woods View',
+				beds: '2 double',
+				sleeps: 4,
+				views: null,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['2 double', 'Sleeps 4']
 			},
 			{
-				name: 'Queen, Mountain View',
-				tags: ["Queen bed"],
-				desc: `A favorite for couples getaways or some indulgent solo time, this Lodge queen features expansive windows with views of the rustling trees and a soaring mountain backdrop. Sink into our soft Frette linens and soak in the full bath using our signature Beekman 1802 amenities.`
+				building: 'summer-annex',
+				floor: null,
+				room_number: null,
+				room_name: 'Queen Mountain View',
+				beds: '1 queen',
+				sleeps: 2,
+				views: true,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
 			},
 			{
-				name: 'Two Double, Mountain View',
-				tags: ["2 double beds"],
-				desc: `Located on both the first and second floors of our Lodge, these rooms offer large windows and sprawling views of our rolling lawns and the treetops beyond. In addition to the stunning sights, each room includes two double beds outfitted in our high-thread-count Frette linens and a full bath including Beekman 1802 amenities. A great choice for friends and families alike.`
+				building: 'summer-annex',
+				floor: null,
+				room_number: null,
+				room_name: '2 Double Mountain View',
+				beds: '2 double',
+				sleeps: 4,
+				views: true,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['2 double', 'Sleeps 4', 'Beautiful views of the hills']
 			}
-		],
-		img: 'heropics/summer-annex.jpg',
-		desc: `Open from Memorial Day to Labor Day, the summer annex has four standard room types. It’s located by the pool, a three-minute walk from the main house.`
+		]
+	},
+	{
+		id: 'main-house',
+		title: 'Main House',
+		img: 'heropics/main-house.jpg',
+		desc: 'Built in 1885, the three-story main house includes our front desk, breakfast room, and weekend tavern. Every room is unique.',
+		building: 'main-house',
+		rooms: [
+			{
+				building: 'main-house',
+				floor: 2,
+				room_number: '1',
+				room_name: 'Dogwood',
+				beds: '1 queen',
+				sleeps: 2,
+				views: true,
+				features: 'Writing desk with three windows in turret',
+				caveats: '',
+				'thing at foot of bed': true,
+				tags: [
+					'1 queen',
+					'Sleeps 2',
+					'Beautiful views of the hills',
+					'Writing desk with three windows in turret'
+				]
+			},
+			{
+				building: 'main-house',
+				floor: 2,
+				room_number: '2',
+				room_name: 'Orchard',
+				beds: '1 king',
+				sleeps: 2,
+				views: true,
+				features: 'Working wood-burning fireplace, Balcony with seating, Large room',
+				caveats: '',
+				'thing at foot of bed': false,
+				tags: [
+					'1 king',
+					'Sleeps 2',
+					'Beautiful views of the hills',
+					'Working wood-burning fireplace',
+					'Balcony with seating',
+					'Large room'
+				]
+			},
+			{
+				building: 'main-house',
+				floor: 2,
+				room_number: '3',
+				room_name: 'Richmond',
+				beds: '1 queen',
+				sleeps: 2,
+				views: null,
+				features: 'Working wood-burning fireplace',
+				caveats: '',
+				'thing at foot of bed': true,
+				tags: ['1 queen', 'Sleeps 2', 'Working wood-burning fireplace']
+			},
+			{
+				building: 'main-house',
+				floor: 2,
+				room_number: '4',
+				room_name: 'Astalula',
+				beds: '1 king',
+				sleeps: 2,
+				views: null,
+				features: 'Working wood-burning fireplace',
+				caveats: '',
+				'thing at foot of bed': false,
+				tags: ['1 king', 'Sleeps 2', 'Working wood-burning fireplace']
+			},
+			{
+				building: 'main-house',
+				floor: 2,
+				room_number: '5, 6',
+				room_name: 'Woodside',
+				beds: '2 double',
+				sleeps: 4,
+				views: null,
+				features: '',
+				caveats: 'Room 6 obstructed view',
+				'thing at foot of bed': null,
+				tags: ['2 double', 'Sleeps 4', 'Room 6 obstructed view']
+			},
+			{
+				building: 'main-house',
+				floor: 2,
+				room_number: '7',
+				room_name: 'Leighton Rollins',
+				beds: '1 queen',
+				sleeps: 2,
+				views: null,
+				features: 'Claw foot bathtub, Vintage sink',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['1 queen', 'Sleeps 2', 'Claw foot bathtub', 'Vintage sink']
+			},
+			{
+				building: 'main-house',
+				floor: 2,
+				room_number: '8',
+				room_name: 'Bristed Suite',
+				beds: '1 king, 1 pull-out',
+				sleeps: 4,
+				views: true,
+				features: 'Working wood-burning fireplace, Living room',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: [
+					'1 king, 1 pull-out',
+					'Sleeps 4',
+					'Beautiful views of the hills',
+					'Working wood-burning fireplace',
+					'Living room'
+				]
+			},
+			{
+				building: 'main-house',
+				floor: 2,
+				room_number: '9',
+				room_name: 'Shadowbrook',
+				beds: '1 queen',
+				sleeps: 2,
+				views: true,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
+			},
+			{
+				building: 'main-house',
+				floor: 3,
+				room_number: '10',
+				room_name: 'Alice’s',
+				beds: '1 queen',
+				sleeps: 2,
+				views: null,
+				features: '',
+				caveats:
+					'Low ceilings, Steep staircase to 3rd floor, No in-room bathroom; private bathroom in hallway with separate key',
+				'thing at foot of bed': null,
+				tags: [
+					'1 queen',
+					'Sleeps 2',
+					'Low ceilings',
+					'Steep staircase to 3rd floor',
+					'No in-room bathroom; private bathroom in hallway with separate key'
+				]
+			},
+			{
+				building: 'main-house',
+				floor: 3,
+				room_number: '12',
+				room_name: 'Arlo’s Suite',
+				beds: '1 queen, 2 double',
+				sleeps: 6,
+				views: null,
+				features: 'Living room',
+				caveats: 'Low ceilings, Steep staircase to 3rd floor',
+				'thing at foot of bed': null,
+				tags: [
+					'1 queen, 2 double',
+					'Sleeps 6',
+					'Living room',
+					'Low ceilings',
+					'Steep staircase to 3rd floor'
+				]
+			},
+			{
+				building: 'main-house',
+				floor: 3,
+				room_number: '14',
+				room_name: 'Avaloch Suite',
+				beds: '1 king, 1 pull-out',
+				sleeps: 4,
+				views: true,
+				features: 'Living room',
+				caveats: 'Low ceilings, Steep staircase to 3rd floor',
+				'thing at foot of bed': null,
+				tags: [
+					'1 king, 1 pull-out',
+					'Sleeps 4',
+					'Beautiful views of the hills',
+					'Living room',
+					'Low ceilings',
+					'Steep staircase to 3rd floor'
+				]
+			},
+			{
+				building: 'main-house',
+				floor: 3,
+				room_number: '15',
+				room_name: 'Cecile’s',
+				beds: '1 queen',
+				sleeps: 2,
+				views: null,
+				features: '',
+				caveats: 'Low ceilings, Steep staircase to 3rd floor',
+				'thing at foot of bed': null,
+				tags: ['1 queen', 'Sleeps 2', 'Low ceilings', 'Steep staircase to 3rd floor']
+			}
+		]
 	}
 ];

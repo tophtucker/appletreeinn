@@ -65,20 +65,15 @@
 				{building.desc} All rooms feature Frette linens and Beekman 1802 bath amenities.
 			</p>
 		</div>
-		{#each building.rooms as { number, name, floor, tags }, i}
+		{#each building.rooms as { room_number, room_name, floor, tags }, i}
 			<div class="room">
 				<img src={`roompics/${tab}/${i + 1}-1.jpg`} alt="Room" loading="lazy" />
 				<div>
-					{#if number !== undefined}
-						<small>{number}</small>
+					{#if room_number}
+						<small>{floor === 1 ? '1st' : floor === 2 ? '2nd' : floor === 3 ? '3rd' : floor} floor, room {room_number?.split(", ")?.join(" or ")}</small>
 					{/if}
-					<h3>{name}</h3>
+					<h3>{room_name}</h3>
 					<ul>
-						{#if floor !== undefined}
-							<li>
-								{floor === 1 ? '1st' : floor === 2 ? '2nd' : floor === 3 ? '3rd' : floor} floor
-							</li>
-						{/if}
 						{#each tags as tag}
 							<li>{tag}</li>
 						{/each}
