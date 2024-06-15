@@ -36,7 +36,7 @@
 				/>
 			</svg>
 			<a href="https://maps.app.goo.gl/vpsxJ5KnzqR1n78q8" target="_blank"
-				>10 Richmond Mountain Road, Lenox, MA</a
+				><span class="hide-mobile">10 Richmond Mountain Road, </span>Lenox, MA</a
 			>
 		</span>
 	</div>
@@ -50,7 +50,7 @@
 <div class="rooms-section">
 	<div class="tabs-wrapper">
 		<div class="tabs">
-			<em>Choose your building</em>
+			<em class="hide-mobile">Choose your building</em>
 			{#each buildings as building}
 				<a href={`#${building.id}`} class={`tab ${tab === building.id ? 'active' : ''}`}>
 					{building.title}
@@ -60,17 +60,23 @@
 	</div>
 	<div id="buildingContainer">
 		<div class="building">
-			<img src={building.img} width="400" alt={building.title} />
-			<p>
-				{building.desc} All rooms feature Frette linens and Beekman 1802 bath amenities.
-			</p>
+			<img src={building.img} alt={building.title} />
+			<div style="display: flex; flex-direction: column; gap: 1em;">
+				<p>
+					{building.desc}
+				</p>
+				<p>All rooms have Frette linens and Beekman 1802 bath amenities.</p>
+			</div>
 		</div>
 		{#each building.rooms as { room_number, room_name, floor, tags }, i}
 			<div class="room">
 				<img src={`roompics/${tab}/${i + 1}-1.jpg`} alt="Room" loading="lazy" />
 				<div>
 					{#if room_number}
-						<small>{floor === 1 ? '1st' : floor === 2 ? '2nd' : floor === 3 ? '3rd' : floor} floor, room {room_number?.split(", ")?.join(" or ")}</small>
+						<small
+							>{floor === 1 ? '1st' : floor === 2 ? '2nd' : floor === 3 ? '3rd' : floor} floor, room
+							{room_number?.split(', ')?.join(' or ')}</small
+						>
 					{/if}
 					<h3>{room_name}</h3>
 					<ul>
@@ -156,10 +162,23 @@
 
 	.building p {
 		max-width: 460px;
+		margin: 0;
 	}
 
 	.building img {
+		width: 100%;
+		max-width: 400px;
 		border-radius: 50%;
 		border: 1px solid var(--brown);
+	}
+
+	@media (max-width: 640px) {
+		.building,
+		.room {
+			flex-direction: column;
+		}
+		.room img {
+			width: 100%;
+		}
 	}
 </style>

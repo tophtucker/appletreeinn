@@ -3,67 +3,6 @@
 // https://observablehq.com/d/37b2ab91a954e6bc
 export const buildings = [
 	{
-		id: 'summer-annex',
-		title: 'Summer Annex',
-		img: 'heropics/summer-annex.jpg',
-		desc: 'Open from Memorial Day to Labor Day, the summer annex has four standard room types. It’s located by the pool, a three-minute walk from the main house.',
-		building: 'summer-annex',
-		rooms: [
-			{
-				building: 'summer-annex',
-				floor: null,
-				room_number: null,
-				room_name: 'Queen Woods View',
-				beds: '1 queen',
-				sleeps: 2,
-				views: null,
-				features: '',
-				caveats: '',
-				'thing at foot of bed': null,
-				tags: ['1 queen', 'Sleeps 2']
-			},
-			{
-				building: 'summer-annex',
-				floor: null,
-				room_number: null,
-				room_name: '2 Double Woods View',
-				beds: '2 double',
-				sleeps: 4,
-				views: null,
-				features: '',
-				caveats: '',
-				'thing at foot of bed': null,
-				tags: ['2 double', 'Sleeps 4']
-			},
-			{
-				building: 'summer-annex',
-				floor: null,
-				room_number: null,
-				room_name: 'Queen Mountain View',
-				beds: '1 queen',
-				sleeps: 2,
-				views: true,
-				features: '',
-				caveats: '',
-				'thing at foot of bed': null,
-				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
-			},
-			{
-				building: 'summer-annex',
-				floor: null,
-				room_number: null,
-				room_name: '2 Double Mountain View',
-				beds: '2 double',
-				sleeps: 4,
-				views: true,
-				features: '',
-				caveats: '',
-				'thing at foot of bed': null,
-				tags: ['2 double', 'Sleeps 4', 'Beautiful views of the hills']
-			}
-		]
-	},
-	{
 		id: 'main-house',
 		title: 'Main House',
 		img: 'heropics/main-house.jpg',
@@ -263,6 +202,67 @@ export const buildings = [
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
 				'thing at foot of bed': null,
 				tags: ['1 queen', 'Sleeps 2', 'Low ceilings', 'Steep staircase to 3rd floor']
+			}
+		]
+	},
+	{
+		id: 'lodge',
+		title: 'Lodge',
+		img: 'heropics/summer-annex.jpg',
+		desc: 'Open from Memorial Day to Labor Day, the lodge has four standard room types. Simpler, quieter, newer rooms. It’s located by the pool, a three-minute walk from the main house.',
+		building: 'lodge',
+		rooms: [
+			{
+				building: 'lodge',
+				floor: null,
+				room_number: null,
+				room_name: 'Queen Woods View',
+				beds: '1 queen',
+				sleeps: 2,
+				views: null,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['1 queen', 'Sleeps 2']
+			},
+			{
+				building: 'lodge',
+				floor: null,
+				room_number: null,
+				room_name: '2 Double Woods View',
+				beds: '2 double',
+				sleeps: 4,
+				views: null,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['2 double', 'Sleeps 4']
+			},
+			{
+				building: 'lodge',
+				floor: null,
+				room_number: null,
+				room_name: 'Queen Mountain View',
+				beds: '1 queen',
+				sleeps: 2,
+				views: true,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
+			},
+			{
+				building: 'lodge',
+				floor: null,
+				room_number: null,
+				room_name: '2 Double Mountain View',
+				beds: '2 double',
+				sleeps: 4,
+				views: true,
+				features: '',
+				caveats: '',
+				'thing at foot of bed': null,
+				tags: ['2 double', 'Sleeps 4', 'Beautiful views of the hills']
 			}
 		]
 	}
