@@ -3,7 +3,7 @@
 	import { buildings } from '$lib/index.js';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
-	import Slideshow from './Slideshow.svelte';
+	import Intro from './Intro.svelte';
 
 	const defaultTab = buildings[0].id;
 	let tab = $state($page.url.hash.slice(1) || defaultTab);
@@ -23,29 +23,7 @@
 
 <Header />
 
-<div class="inner">
-	<div class="intro">
-		<article>
-			<p>The Apple Tree Inn is a small historic hotel in the Berkshires.</p>
-			<p>
-				It is the only hotel within walking distance to
-				<a href="https://www.bso.org/tanglewood/" target="_blank">Tanglewood</a>
-				and <a href="https://kripalu.org/">Kripalu</a>.
-			</p>
-			<p>
-				It has 34 rooms split across two buildings, a porch where you can enjoy the complimentary
-				continental breakfast while appreciating the Berkshire hills, a pool, and lots of
-				wood-burning fireplaces (including in a few of the guest rooms).
-			</p>
-			<p>
-				<a href="/ostrich-room">The Ostrich Room</a>, our tavern, is open for drinks
-				Wednesday–Saturday, 4–10 p.m., with food from 5–9 and live music on Wednesdays and
-				Saturdays.
-			</p>
-		</article>
-		<Slideshow />
-	</div>
-</div>
+<Intro />
 
 <nav>
 	<div class="links">
@@ -114,41 +92,79 @@
 <Footer />
 
 <style>
-	.intro {
-		display: grid;
-		grid-template-columns: 2fr 3fr;
-		border-radius: 5px;
-		border: 1px solid var(--brown);
-		overflow: hidden;
+	.tabs-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 2em;
+		border-bottom: 1px solid var(--brown);
 	}
 
-	.intro article {
-		padding: 2em;
-		max-width: 640px;
-		background: var(--tan);
-		border-right: 1px solid var(--brown);
+	.tabs {
+		width: 1200px;
+		max-width: 100%;
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.intro article p:first-child {
+	.tabs a {
+		text-decoration: none;
+		color: var(--brown);
 		margin: 0;
-		font-size: 2em;
+		position: relative;
+		bottom: -1px;
+		border-top: 1px solid var(--brown);
+		border-right: 1px solid var(--brown);
+		border-left: 1px solid var(--brown);
+		padding: 0.5em;
+		cursor: pointer;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		font-size: larger;
 	}
-	.intro article p:last-child {
-		margin-bottom: 0;
+
+	.tabs a.active {
+		text-decoration: none;
+		border-bottom: 1px solid white;
+		z-index: 2;
 	}
-	@media (max-width: 640px) {
-		.intro {
-			grid-template-columns: none;
-			grid-template-rows: 1fr 2fr;
-		}
-		.intro .slideshow {
-			order: 1;
-		}
-		.intro article {
-			order: 2;
-			padding: 1em;
-			border: none;
-			border-top: 1px solid var(--brown);
-		}
+
+	#buildingContainer {
+		padding: 1em var(--gutter);
+	}
+
+	.room {
+		display: flex;
+		gap: 1em;
+		justify-content: start;
+		align-items: start;
+		border-bottom: 1px solid var(--brown);
+		padding: 1em 0;
+	}
+
+	.room img {
+		width: 70%;
+	}
+
+	.room:last-child {
+		border-bottom: none;
+	}
+	.building {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+		border-bottom: 1px solid var(--brown);
+		padding-bottom: 1em;
+	}
+
+	.building p {
+		max-width: 460px;
+	}
+
+	.building img {
+		border-radius: 50%;
+		border: 1px solid var(--brown);
 	}
 </style>

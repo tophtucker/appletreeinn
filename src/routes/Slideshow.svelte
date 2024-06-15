@@ -1,8 +1,9 @@
 <script>
-	const pics = [
+	const defaultPics = [
 		{ src: './heropics/1.jpg', title: 'The house' },
 		{ src: './heropics/2.jpg', title: 'The house or something' }
 	];
+    let {pics = defaultPics} = $props();
 	let i = $state(0);
 	const pic = $derived(pics[i]);
 	function next() {

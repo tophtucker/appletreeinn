@@ -132,6 +132,32 @@
 		display: none;
 	}
 
+	header a {
+		text-decoration: none;
+	}
+
+	header a:hover {
+		text-decoration: underline;
+	}
+
+	.thumbnail {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 100px;
+	}
+	.thumbnail img {
+		display: block;
+		width: 80px;
+		height: 80px;
+		object-fit: cover;
+		margin-bottom: 5px;
+		border: 1px solid var(--brown);
+		border-radius: 50%;
+	}
+
 	@media (max-width: 640px) {
 		header {
 			position: static;
