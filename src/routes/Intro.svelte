@@ -1,5 +1,9 @@
 <script>
-    import Slideshow from './Slideshow.svelte';
+	import Slideshow from './Slideshow.svelte';
+	const pics = [
+		{ src: './heropics/1.jpg', title: 'The house' },
+		{ src: './heropics/2.jpg', title: 'The house or something' }
+	];
 </script>
 
 <div class="inner">
@@ -22,7 +26,7 @@
 				Saturdays.
 			</p>
 		</article>
-		<Slideshow />
+		<Slideshow {pics} />
 	</div>
 </div>
 
