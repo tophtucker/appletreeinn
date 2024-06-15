@@ -69,31 +69,6 @@ h2, h3, h4 {
   margin: 0;
 }
 
-.intro {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  border-radius: 5px;
-  border: 1px solid var(--brown);
-  overflow: hidden;
-}
-
-.intro article {
-  padding: 2em;
-  max-width: 640px;
-  background: var(--tan);
-}
-
-.intro article p:first-child {
-  margin-top: 0;
-}
-.intro article p:last-child {
-  margin-bottom: 0;
-}
-
-.intro img {
-  width: 40%;
-}
-
 .tabs-wrapper {
   display: flex;
   justify-content: center;
@@ -182,4 +157,11 @@ small {
 
 .inner p {
   max-width: 640px;
+}
+
+@media (max-width: 640px) {
+  nav, .links {
+    flex-direction: column;
+    gap: 1em;
+  }
 }

@@ -1,11 +1,29 @@
 <script>
+	const pics = [
+		{ src: './heropics/1.jpg', title: 'The house' },
+		{ src: './heropics/2.jpg', title: 'The house or something' }
+	];
+	let i = $state(0);
+	const pic = $derived(pics[i]);
+	function next() {
+		move(1);
+	}
+	function prev() {
+		move(-1);
+	}
+	function move(d) {
+		i = mod(i + d, pics.length);
+	}
+	function mod(n, m) {
+		return ((n % m) + m) % m;
+	}
 </script>
 
 <div class="slideshow">
-	<img src="./heropics/1.jpg" />
+	<img src={pic.src} alt={pic.title} />
 	<div class="controls">
-		<button>←</button>
-		<button>→</button>
+		<button onclick={prev}>←</button>
+		<button onclick={next}>→</button>
 	</div>
 </div>
 
@@ -15,10 +33,10 @@
 	}
 	.slideshow img {
 		display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50% 50%;
 	}
 	.controls {
 		position: absolute;
