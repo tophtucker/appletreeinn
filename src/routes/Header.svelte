@@ -1,15 +1,33 @@
 <script>
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
+	const BOOKING_URL = 'https://appletreeinn.book.pegsbe.com/';
 	const pages = [
 		{ pathname: '/ostrich-room', title: 'Ostrich Room', img: 'img/ostrich-room.png' },
 		{ pathname: '/things-to-do', title: 'Things to do', img: 'img/activities.jpg' },
 		{ pathname: '/weddings-events', title: 'Weddings & events', img: 'img/weddings.jpg' },
 		{ pathname: '/history', title: 'History', img: 'img/history.png' }
 	];
+	const allPages = [
+		{ pathname: '/', title: 'Home' },
+		...pages,
+		{ pathname: BOOKING_URL, title: 'Reserve' }
+	];
+	const currentPage = allPages.find((d) => {
+		return d.pathname === $page.url.pathname;
+	});
+	function handlePageSelect(event) {
+		const { value } = event.target;
+		if (value.startsWith('http')) {
+			window.location = value;
+		} else {
+			goto(event.target.value);
+		}
+	}
 </script>
 
 <div class="sticky-header">
-	<a href="https://appletreeinn.book.pegsbe.com/" class="highlight">Reserve</a>
+	<a href={BOOKING_URL} class="highlight">Reserve</a>
 </div>
 <header>
 	<a href="/">
@@ -26,6 +44,13 @@
 		<a href="https://appletreeinn.book.pegsbe.com/" class="highlight hidden">Reserve</a>
 	</div>
 </header>
+<div class="select-wrapper">
+	<select value={currentPage.pathname} on:change={handlePageSelect}>
+		{#each allPages as { title, pathname }}
+			<option value={pathname}>{title}</option>
+		{/each}
+	</select>
+</div>
 
 <style>
 	.current {
@@ -101,5 +126,32 @@
 
 	.highlight.hidden {
 		visibility: hidden;
+	}
+
+	.select-wrapper {
+		display: none;
+	}
+
+	@media (max-width: 640px) {
+		header {
+			position: static;
+			justify-content: center;
+		}
+		.links {
+			display: none;
+		}
+		.sticky-header {
+			display: none;
+		}
+		.select-wrapper {
+			margin: 1em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.select-wrapper select {
+			font-size: 1.3em;
+			text-align: center;
+		}
 	}
 </style>
