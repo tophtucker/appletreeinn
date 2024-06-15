@@ -24,23 +24,20 @@
 
 <div class="intro">
 	<article>
-		<p style="font-size: 2em">The Apple Tree Inn is a small historic hotel in the Berkshires.</p>
+		<p style="font-size: 2em; margin: 0;">The Apple Tree Inn is a small historic hotel in the Berkshires.</p>
 		<p>
 			It is the only hotel within walking distance to
 			<a href="https://www.bso.org/tanglewood/" target="_blank">Tanglewood</a>
 			and <a href="https://kripalu.org/">Kripalu</a>.
 		</p>
 		<p>
-			The guest rooms are currently open Thursday, Friday and Saturday nights and will be open 7
-			days a week starting June 1. We’re working as hard as we can to reopen the Ostrich Room (our
-			tavern) in early June. We are planning for Wed, Thu, Fri, Sat nights from 4–10pm with live
-			music a couple times a week. The idea is great, simple drinks and great, simple food. We’ll
-			post more here as we figure it out.
+			It has 34 rooms split across two buildings, a porch where you can enjoy the complimentary
+			continental breakfast while appreciating the Berkshire hills, a pool, and lots of wood-burning
+			fireplaces (including in a few of the guest rooms).
 		</p>
 		<p>
-			We are hiring a cook; please
-			<a href="mailto:claire@appletreeinnlenox.com">email Claire</a>
-			if you know someone great!
+			<a href="/ostrich-room">The Ostrich Room</a>, our tavern, is open for drinks Wednesday–Saturday, 4–10
+			p.m., with food from 5–9 and live music on Wednesdays and Saturdays.
 		</p>
 	</article>
 </div>
@@ -87,7 +84,7 @@
 		</div>
 		{#each building.rooms as { number, name, floor, tags }, i}
 			<div class="room">
-        <img src={`roompics/${tab}/${i + 1}-1.jpg`} alt="Room" loading="lazy" />
+				<img src={`roompics/${tab}/${i + 1}-1.jpg`} alt="Room" loading="lazy" />
 				<div>
 					{#if number !== undefined}
 						<small>{number}</small>
@@ -95,14 +92,14 @@
 					<h3>{name}</h3>
 					<ul>
 						{#if floor !== undefined}
-							<li
-								>{floor === 1 ? '1st' : floor === 2 ? '2nd' : floor === 3 ? '3rd' : floor} floor</li
-							>
+							<li>
+								{floor === 1 ? '1st' : floor === 2 ? '2nd' : floor === 3 ? '3rd' : floor} floor
+							</li>
 						{/if}
 						{#each tags as tag}
 							<li>{tag}</li>
 						{/each}
-          </ul>
+					</ul>
 				</div>
 			</div>
 		{/each}
