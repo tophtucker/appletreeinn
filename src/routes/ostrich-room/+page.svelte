@@ -44,10 +44,10 @@
 	</div>
 	<hr />
 	<h2>Sample menus</h2>
-	<p>The menu’s always changing, but here are a couple recent ones.</p>
+	<p>The menu’s always changing, but here are a couple recent ones for drinks and food.</p>
 	<div class="menus">
-		<img src="img/menu-drinks.png" title="Drinks menu" />
-		<img src="img/menu-food.png" title="Food menu" />
+		<img src="img/menu-drinks.png" alt="Drinks menu" />
+		<img src="img/menu-food.png" alt="Food menu" />
 	</div>
 </div>
 
