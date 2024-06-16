@@ -16,7 +16,7 @@
 			<ul>
 				<li>beautiful views & grounds,</li>
 				<li>hidden gem pool,</li>
-				<li>wood-paneled <a href="/ostrich-room">tavern</a> (open for food & drinks Wed-Sat with live music twice a week),</li>
+				<li>wood-paneled <a href="/ostrich-room">tavern</a> (open for food & drinks Wed. – Sat. with live music twice a week),</li>
 				<li>luxurious bedding, and</li>
 				<li>location walking distance to Tanglewood and Kripalu.</li>
 			</ul>
@@ -56,8 +56,8 @@
 
 	@media (max-width: 640px) {
 		.intro {
-			grid-template-columns: none;
-			grid-template-rows: 1fr 2fr;
+			display: flex;
+			flex-direction: column;
 		}
 		.intro .slideshow {
 			order: 1;
