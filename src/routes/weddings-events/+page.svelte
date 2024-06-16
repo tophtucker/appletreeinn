@@ -12,8 +12,8 @@
 
 <div class="inner">
 	<h1>Weddings & events</h1>
-  <p>We’d love to host your wedding, reception, or brunch.</p>
-	<p>We have 34 rooms, a broad flat lawn with a beautiful view, a dining room with panoramic windows, a tavern, the lobby lounge, cozy fireplaces, and a commercial kitchen that has fed 200 people.</p>
+  <p>We’d love to host your wedding, rehearsal dinner, welcome party, afterparty, Sunday brunch, room block, or some combination of those. We also host a variety of other events.</p>
+	<p>We have 34 rooms, a broad flat lawn with a beautiful view, a dining room with panoramic windows, a tavern, the lobby lounge, cozy fireplaces, and a large-scale commercial kitchen.</p>
 	<p>Claire just took over and, as of June 2024, is racing to figure out our plan for next season. Fill out the form below and we’ll be in touch as soon as we know more about pricing and availability.</p>
 	<!-- <p>TODO: Photos…</p> -->
   <iframe title="Event inquiry form" src="https://app.eventtemple.com/lead_intakes/ecdbd71af44e5dcb8407c0e53f184e18/2586/new"></iframe>

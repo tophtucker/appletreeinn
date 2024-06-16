@@ -33,8 +33,7 @@
 	<p>A valid photo ID and credit card are required at check-in.</p>
 
 	<p>
-		Please note that the full amount of the reservation is due before arrival. You are not permitted
-		to enter the property until the full payment has been completed.
+		Please note that the full amount of the reservation is due before arrival.
 	</p>
 
 	<p>
