@@ -30,7 +30,7 @@
 		text-align: right;
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		footer {
 			flex-direction: column;
 		}

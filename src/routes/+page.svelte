@@ -9,13 +9,8 @@
 
 	const defaultTab = buildings[0].id;
 	let tab = $state(new URLSearchParams($page.url.search).get("building") || defaultTab);
-	console.log(new URLSearchParams($page.url.search).get("building"), tab)
 	const building = $derived(buildings.find((d) => d.id === tab));
-
-	function setBuilding(id) {
-		tab = id;
-		window.history.replaceState(null, '', `/?building=${id}`);
-	}
+	const setBuilding = id => void window.history.replaceState(null, '', `/?building=${tab = id}`);
 </script>
 
 <svelte:head>
@@ -175,7 +170,7 @@
 		border: 1px solid var(--brown);
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		.building,
 		.room {
 			display: flex;

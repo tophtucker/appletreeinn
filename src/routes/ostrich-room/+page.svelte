@@ -67,7 +67,7 @@
 		border-radius: 5px;
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		.menus {
 			display: flex;
 			flex-direction: column;

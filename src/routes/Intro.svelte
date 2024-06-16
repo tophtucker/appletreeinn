@@ -54,7 +54,16 @@
 		margin-bottom: 0;
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 1160px) {
+		.intro article {
+			font-size: 1em;
+		}
+		.intro li {
+			margin-bottom: 0;
+		}
+	}
+
+	@media (max-width: 800px) {
 		.intro {
 			display: flex;
 			flex-direction: column;
@@ -68,6 +77,7 @@
 			border: none;
 			border-top: 1px solid var(--brown);
 			font-size: 1em;
+			max-width: 100%;
 		}
 	}
 </style>

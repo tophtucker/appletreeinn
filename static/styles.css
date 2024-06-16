@@ -76,7 +76,7 @@ hr {
 	gap: 1em;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
 	nav,
 	.links {
 		align-items: start;

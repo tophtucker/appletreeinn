@@ -159,7 +159,7 @@
 		border-radius: 50%;
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: 800px) {
 		header {
 			position: static;
 			justify-content: center;
