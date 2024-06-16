@@ -1,6 +1,13 @@
 <script>
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
+	import Slideshow from '../Slideshow.svelte';
+
+	const pics = [
+		{ src: './heropics/ostrich2.jpg', title: 'The Ostrich Room' },
+		{ src: './heropics/ostrich3.jpg', title: 'The Ostrich Room' },
+		{ src: './heropics/ostrich4.jpg', title: 'The Ostrich Room' }
+	];
 </script>
 
 <svelte:head>
@@ -14,11 +21,71 @@
 <Header />
 
 <div class="inner">
-	<h1>The Ostrich Room</h1>
-	<img src="heropics/ostrich.jpg" alt="The Ostrich Room" style="max-width: 100%;" />
-	<p>Drinks Wednesday – Saturday, 4 – 10 p.m.</p>
-	<p>Food 5 – 9 p.m.</p>
-	<p>Live music Wednesdays and Saturdays</p>
+	<div class="flexy">
+		<div>
+			<h1>The Ostrich Room</h1>
+			<p>
+				Originally built around 1900 by then-owners Mr. and Mrs. Pease as a billiards room, our
+				tavern is locally famous for its music program and roaring fires in the <em>inglenook</em> (that’s
+				a fireplace nook with facing benches).
+			</p>
+			<ul>
+				<li>Open Wednesday – Saturday</li>
+				<li>Drinks 4 – 10 p.m.</li>
+				<li>Food 5 – 9 p.m.</li>
+				<li>Live music Wednesdays and Saturdays</li>
+			</ul>
+			<p>
+				Follow us on <a href="https://instagram.com/appletreeinn">Instagram</a> to find out about upcoming
+				live music.
+			</p>
+		</div>
+		<Slideshow {pics} aspectRatio={1.33} objectFit={'contain'} />
+	</div>
+	<hr />
+	<h2>Sample menus</h2>
+	<p>The menu’s always changing, but here are a couple recent ones.</p>
+	<div class="menus">
+		<img src="img/menu-drinks.png" title="Drinks menu" />
+		<img src="img/menu-food.png" title="Food menu" />
+	</div>
 </div>
 
 <Footer />
+
+<style>
+	.flexy {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		gap: 1em;
+	}
+
+	hr {
+		margin: 2em 0;
+	}
+
+	.menus {
+		display: grid;
+		grid-template-columns: 8.5fr 5.5fr;
+		gap: 1em;
+		width: 100%;
+	}
+
+	.menus img {
+		width: 100%;
+		border: 1px solid var(--brown);
+		border-radius: 5px;
+	}
+
+	@media (max-width: 640px) {
+		.flexy {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.menus {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+</style>

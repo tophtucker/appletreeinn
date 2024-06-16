@@ -1,28 +1,34 @@
 <script>
 	import Slideshow from './Slideshow.svelte';
 	const pics = [
-		{ src: './heropics/1.jpg', title: 'The house' },
-		{ src: './heropics/2.jpg', title: 'The house or something' }
+		{ src: './heropics/exterior.jpg', title: 'The Apple Tree Inn, viewed from the air' },
+		{ src: './heropics/pool1.jpg', title: 'The pool' },
+		{ src: './heropics/ostrich2.jpg', title: 'The Ostrich Room, our tavern'},
+		{ src: './roompics/main-house/8/_XCS2672.jpg', title: 'Room 8'},
+		{ src: './heropics/view1.jpg', title: 'The view from the lawn'}
 	];
 </script>
 
 <div class="inner">
 	<div class="intro">
 		<article>
-			<p>
-				Come to enjoy our beautiful views & grounds, our hidden gem pool, our wood-paneled tavern
-				(open for food & drinks Wed-Sat with live music twice a week), our luxurious bedding, and
-				our location walking distance to Tanglewood and Kripalu.
-			</p>
+			<p>Come enjoy our</p>
+			<ul>
+				<li>beautiful views & grounds,</li>
+				<li>hidden gem pool,</li>
+				<li>wood-paneled <a href="/ostrich-room">tavern</a> (open for food & drinks Wed-Sat with live music twice a week),</li>
+				<li>luxurious bedding, and</li>
+				<li>location walking distance to Tanglewood and Kripalu.</li>
+			</ul>
 		</article>
-		<Slideshow {pics} />
+		<Slideshow {pics} aspectRatio={1.33} />
 	</div>
 </div>
 
 <style>
 	.intro {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 2fr 3fr;
 		border-radius: 5px;
 		border: 1px solid var(--brown);
 		overflow: hidden;
@@ -30,20 +36,24 @@
 	}
 
 	.intro article {
-		font-size: 1.4em;
+		font-size: larger;
 		padding: 2em;
 		max-width: 640px;
 		background: var(--tan);
 		border-right: 1px solid var(--brown);
 	}
 
-	/* .intro article p:first-child {
-		margin: 0;
-		font-size: 2em;
+	.intro article p:first-child {
+		margin-top: 0;
 	}
-	.intro article p:last-child {
+
+	.intro li {
+		margin-bottom: 1em;
+	}
+	.intro li:last-child {
 		margin-bottom: 0;
-	} */
+	}
+
 	@media (max-width: 640px) {
 		.intro {
 			grid-template-columns: none;
@@ -57,6 +67,7 @@
 			padding: 1em;
 			border: none;
 			border-top: 1px solid var(--brown);
+			font-size: 1em;
 		}
 	}
 </style>

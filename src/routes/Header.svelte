@@ -3,8 +3,8 @@
 	import { goto } from '$app/navigation';
 	const BOOKING_URL = 'https://appletreeinn.book.pegsbe.com/';
 	const pages = [
-		{ pathname: '/ostrich-room', title: 'Ostrich Room', img: 'img/ostrich-room.png' },
-		{ pathname: '/weddings-events', title: 'Weddings & events', img: 'img/weddings.jpg' }
+		{ pathname: '/ostrich-room', title: 'Ostrich Room', img: 'img/ostrich-egg.jpg' },
+		{ pathname: '/weddings-events', title: 'Weddings & events', img: 'img/weddings1.png' }
 		// { pathname: '/things-to-do', title: 'Things to do', img: 'img/activities.jpg' },
 		// { pathname: '/history', title: 'History', img: 'img/history.png' },
 	];
