@@ -19,7 +19,7 @@ export const buildings = [
 				views: true,
 				features: 'Writing desk with three windows in turret',
 				caveats: '',
-				'thing at foot of bed': true,
+				pics: ['main-house/1/_XCS2684.jpg'],
 				tags: [
 					'1 queen',
 					'Sleeps 2',
@@ -37,7 +37,11 @@ export const buildings = [
 				views: true,
 				features: 'Working wood-burning fireplace, Balcony with seating, Large room',
 				caveats: '',
-				'thing at foot of bed': false,
+				pics: [
+					'main-house/2/_XCS2621.jpg',
+					'main-house/2/_XCS2623.jpg',
+					'main-house/2/_XCS2624.jpg'
+				],
 				tags: [
 					'1 king',
 					'Sleeps 2',
@@ -57,7 +61,7 @@ export const buildings = [
 				views: null,
 				features: 'Working wood-burning fireplace',
 				caveats: '',
-				'thing at foot of bed': true,
+				pics: ['main-house/3/_XCS2685.jpg', 'main-house/3/_XCS2686.jpg'],
 				tags: ['1 queen', 'Sleeps 2', 'Working wood-burning fireplace']
 			},
 			{
@@ -70,20 +74,24 @@ export const buildings = [
 				views: null,
 				features: 'Working wood-burning fireplace',
 				caveats: '',
-				'thing at foot of bed': false,
+				pics: [
+					'main-house/4/_XCS2628.jpg',
+					'main-house/4/_XCS2629.jpg',
+					'main-house/4/_XCS2631.jpg'
+				],
 				tags: ['1 king', 'Sleeps 2', 'Working wood-burning fireplace']
 			},
 			{
 				building: 'main-house',
 				floor: 2,
-				room_number: '5, 6',
+				room_number: '5 or 6',
 				room_name: 'Woodside',
 				beds: '2 double',
 				sleeps: 4,
 				views: null,
 				features: '',
 				caveats: 'Room 6 obstructed view',
-				'thing at foot of bed': null,
+				pics: ['main-house/5-or-6/5/_XCS2662.jpg', 'main-house/5-or-6/6/_XCS2678.jpg'],
 				tags: ['2 double', 'Sleeps 4', 'Room 6 obstructed view']
 			},
 			{
@@ -96,7 +104,7 @@ export const buildings = [
 				views: null,
 				features: 'Claw foot bathtub, Vintage sink',
 				caveats: '',
-				'thing at foot of bed': null,
+				pics: ['main-house/7/_XCS2637.jpg'],
 				tags: ['1 queen', 'Sleeps 2', 'Claw foot bathtub', 'Vintage sink']
 			},
 			{
@@ -109,7 +117,12 @@ export const buildings = [
 				views: true,
 				features: 'Working wood-burning fireplace, Living room',
 				caveats: '',
-				'thing at foot of bed': null,
+				pics: [
+					'main-house/8/_XCS2666.jpg',
+					'main-house/8/_XCS2668.jpg',
+					'main-house/8/_XCS2669.jpg',
+					'main-house/8/_XCS2672.jpg'
+				],
 				tags: [
 					'1 king, 1 pull-out',
 					'Sleeps 4',
@@ -128,7 +141,7 @@ export const buildings = [
 				views: true,
 				features: '',
 				caveats: '',
-				'thing at foot of bed': null,
+				pics: ['main-house/9/_XCS2640.jpg', 'main-house/9/_XCS2641.jpg'],
 				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
 			},
 			{
@@ -142,7 +155,7 @@ export const buildings = [
 				features: '',
 				caveats:
 					'Low ceilings, Steep staircase to 3rd floor, No in-room bathroom; private bathroom in hallway with separate key',
-				'thing at foot of bed': null,
+				pics: ['main-house/10/_XCS2642.jpg'],
 				tags: [
 					'1 queen',
 					'Sleeps 2',
@@ -154,14 +167,19 @@ export const buildings = [
 			{
 				building: 'main-house',
 				floor: 3,
-				room_number: '12',
+				room_number: '11–12',
 				room_name: 'Arlo’s Suite',
 				beds: '1 queen, 2 double',
 				sleeps: 6,
 				views: null,
 				features: 'Living room',
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
-				'thing at foot of bed': null,
+				pics: [
+					'main-house/11-12/_XCS2643.jpg',
+					'main-house/11-12/_XCS2647.jpg',
+					'main-house/11-12/_XCS2649.jpg',
+					'main-house/11-12/_XCS2650.jpg'
+				],
 				tags: [
 					'1 queen, 2 double',
 					'Sleeps 6',
@@ -180,7 +198,7 @@ export const buildings = [
 				views: true,
 				features: 'Living room',
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
-				'thing at foot of bed': null,
+				pics: ['main-house/14/_XCS2679.jpg', 'main-house/14/_XCS2680.jpg'],
 				tags: [
 					'1 king, 1 pull-out',
 					'Sleeps 4',
@@ -200,7 +218,7 @@ export const buildings = [
 				views: null,
 				features: '',
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
-				'thing at foot of bed': null,
+				pics: ['main-house/15/_XCS2683.jpg'],
 				tags: ['1 queen', 'Sleeps 2', 'Low ceilings', 'Steep staircase to 3rd floor']
 			}
 		]
@@ -222,7 +240,7 @@ export const buildings = [
 				views: null,
 				features: '',
 				caveats: '',
-				'thing at foot of bed': null,
+				pics: ['lodge/queen-woods-view/1.jpg', 'lodge/queen-woods-view/2.jpg'],
 				tags: ['1 queen', 'Sleeps 2']
 			},
 			{
@@ -235,7 +253,11 @@ export const buildings = [
 				views: null,
 				features: '',
 				caveats: '',
-				'thing at foot of bed': null,
+				pics: [
+					'lodge/2-double-woods-view/1.jpg',
+					'lodge/2-double-woods-view/2.jpg',
+					'lodge/2-double-woods-view/3.jpg'
+				],
 				tags: ['2 double', 'Sleeps 4']
 			},
 			{
@@ -248,7 +270,11 @@ export const buildings = [
 				views: true,
 				features: '',
 				caveats: '',
-				'thing at foot of bed': null,
+				pics: [
+					'lodge/queen-mountain-view/1.jpg',
+					'lodge/queen-mountain-view/2.jpg',
+					'lodge/queen-mountain-view/3.jpg'
+				],
 				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
 			},
 			{
@@ -261,7 +287,7 @@ export const buildings = [
 				views: true,
 				features: '',
 				caveats: '',
-				'thing at foot of bed': null,
+				pics: ['lodge/2-double-mountain-view/1.jpg', 'lodge/2-double-mountain-view/2.jpg'],
 				tags: ['2 double', 'Sleeps 4', 'Beautiful views of the hills']
 			}
 		]

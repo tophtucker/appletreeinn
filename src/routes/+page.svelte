@@ -4,6 +4,7 @@
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
 	import Intro from './Intro.svelte';
+	import Slideshow from './Slideshow.svelte';
 
 	const defaultTab = buildings[0].id;
 	let tab = $state($page.url.hash.slice(1) || defaultTab);
@@ -68,9 +69,10 @@
 				<p>All rooms have Frette linens and Beekman 1802 bath amenities.</p>
 			</div>
 		</div>
-		{#each building.rooms as { room_number, room_name, floor, tags }, i}
+		{#each building.rooms as { room_number, room_name, floor, tags, pics }, i}
 			<div class="room">
-				<img src={`roompics/${tab}/${i + 1}-1.jpg`} alt="Room" loading="lazy" />
+				<!-- <img src={`roompics/${tab}/${i + 1}-1.jpg`} alt="Room" loading="lazy" /> -->
+				<Slideshow pics={pics.map(src => ({src: `roompics/${src}`, title: room_name}))} />
 				<div>
 					{#if room_number}
 						<small
@@ -136,16 +138,11 @@
 	}
 
 	.room {
-		display: flex;
+		display: grid;
+		grid-template-columns: 3fr 1fr;
 		gap: 1em;
-		justify-content: start;
-		align-items: start;
 		border-bottom: 1px solid var(--brown);
 		padding: 1em 0;
-	}
-
-	.room img {
-		width: 70%;
 	}
 
 	.room:last-child {
@@ -175,10 +172,9 @@
 	@media (max-width: 640px) {
 		.building,
 		.room {
+			display: flex;
 			flex-direction: column;
 		}
-		.room img {
-			width: 100%;
-		}
+		
 	}
 </style>

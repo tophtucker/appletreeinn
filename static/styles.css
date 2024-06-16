@@ -54,11 +54,6 @@ h4 {
 	margin: 0;
 }
 
-small {
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
 .inner {
 	padding: 1em var(--gutter);
 }

@@ -174,6 +174,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			position: sticky;
+			top: 1em;
+			z-index: 3;
 		}
 		.select-wrapper select {
 			font-size: 1.3em;

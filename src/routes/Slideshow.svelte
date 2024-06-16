@@ -1,5 +1,5 @@
 <script>
-    let {pics} = $props();
+	let { pics } = $props();
 	let i = $state(0);
 	const pic = $derived(pics[i]);
 	function next() {
@@ -17,11 +17,13 @@
 </script>
 
 <div class="slideshow">
-	<img src={pic.src} alt={pic.title} />
-	<div class="controls">
-		<button onclick={prev}>←</button>
-		<button onclick={next}>→</button>
-	</div>
+	<img src={pic.src} alt={pic.title} loading="lazy" />
+	{#if pics.length > 1}
+		<div class="controls">
+			<button onclick={prev}>←</button>
+			<button onclick={next}>→</button>
+		</div>
+	{/if}
 </div>
 
 <style>
