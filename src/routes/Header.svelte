@@ -41,7 +41,7 @@
 	</div>
 </header>
 <div class="select-wrapper">
-	<select value={currentPage.pathname} on:change={handlePageSelect}>
+	<select value={currentPage?.pathname} on:change={handlePageSelect}>
 		{#each allPages as { title, pathname }}
 			<option value={pathname}>{title}</option>
 		{/each}
