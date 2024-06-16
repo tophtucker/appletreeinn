@@ -10,8 +10,8 @@
 </script>
 
 <svelte:head>
-	<title>Policies • Apple Tree Inn • Lenox, MA</title>
-	<meta name="description" content="TODO" />
+	<title>About us • Apple Tree Inn • Lenox, MA</title>
+	<meta name="description" content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream" />
 </svelte:head>
 
 <Header />

@@ -11,7 +11,7 @@
 	<div>
 		Check-in: 4 p.m.<br />
 		Check-out: 11 a.m.<br />
-		<a href="/policies">All policies</a>
+		<a href="/terms-of-service">Terms of service</a>
 	</div>
 </footer>
 

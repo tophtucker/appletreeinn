@@ -19,7 +19,7 @@ export const dictionary = {
 		"/about-us": [3],
 		"/history": [4],
 		"/ostrich-room": [5],
-		"/policies": [6],
+		"/terms-of-service": [6],
 		"/things-to-do": [7],
 		"/weddings-events": [8]
 	};

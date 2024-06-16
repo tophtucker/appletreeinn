@@ -4,14 +4,14 @@
 </script>
 
 <svelte:head>
-	<title>Policies • Apple Tree Inn • Lenox, MA</title>
-	<meta name="description" content="TODO" />
+	<title>Terms of service • Apple Tree Inn • Lenox, MA</title>
+	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
 <Header />
 
 <div class="inner">
-	<h1>Policies</h1>
+	<h1>Terms of service</h1>
 	<p>
 		Reservations require a valid credit card at the time of booking (Visa, American Express,
 		MasterCard, Discover), email and mobile phone number. Apple Tree Inn does not accept cash or

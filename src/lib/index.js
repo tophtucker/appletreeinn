@@ -227,7 +227,7 @@ export const buildings = [
 		id: 'lodge',
 		title: 'Lodge',
 		img: 'heropics/summer-annex.jpg',
-		desc: 'Open from Memorial Day to Labor Day, the lodge has four standard room types. Simpler, quieter, newer rooms. It’s located by the pool, a three-minute walk from the main house.',
+		desc: 'Open from Memorial Day to Labor Day, the motel-style lodge has four standard room types. It’s located between the main house and the pool, a three-minute walk from each.',
 		building: 'lodge',
 		rooms: [
 			{
@@ -253,11 +253,7 @@ export const buildings = [
 				views: null,
 				features: '',
 				caveats: '',
-				pics: [
-					'lodge/2-double-woods-view/1.jpg',
-					'lodge/2-double-woods-view/2.jpg',
-					'lodge/2-double-woods-view/3.jpg'
-				],
+				pics: ['lodge/2-double-woods-view/1.jpg', 'lodge/2-double-woods-view/2.jpg'],
 				tags: ['2 double', 'Sleeps 4']
 			},
 			{
