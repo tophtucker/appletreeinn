@@ -21,7 +21,7 @@
 <Header />
 
 <div class="inner">
-	<div class="flexy">
+	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
 			<p>
@@ -54,16 +54,6 @@
 <Footer />
 
 <style>
-	.flexy {
-		display: grid;
-		grid-template-columns: 2fr 3fr;
-		gap: 1em;
-	}
-
-	hr {
-		margin: 2em 0;
-	}
-
 	.menus {
 		display: grid;
 		grid-template-columns: 8.5fr 5.5fr;
@@ -78,11 +68,6 @@
 	}
 
 	@media (max-width: 640px) {
-		.flexy {
-			display: flex;
-			flex-direction: column;
-		}
-
 		.menus {
 			display: flex;
 			flex-direction: column;

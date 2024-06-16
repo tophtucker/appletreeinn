@@ -4,7 +4,8 @@
 	const BOOKING_URL = 'https://appletreeinn.book.pegsbe.com/';
 	const pages = [
 		{ pathname: '/ostrich-room', title: 'Ostrich Room', img: 'img/ostrich-egg.jpg' },
-		{ pathname: '/weddings-events', title: 'Weddings & events', img: 'img/weddings1.png' }
+		{ pathname: '/weddings-events', title: 'Weddings & events', img: 'img/weddings1.png' },
+		{ pathname: '/about-us', title: "About us", img: 'img/claire.jpg'}
 		// { pathname: '/things-to-do', title: 'Things to do', img: 'img/activities.jpg' },
 		// { pathname: '/history', title: 'History', img: 'img/history.png' },
 	];
