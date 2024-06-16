@@ -23,9 +23,19 @@
 		font-size: smaller;
 		display: flex;
 		justify-content: space-between;
+		gap: 1em;
 	}
 
 	footer div:nth-child(2) {
 		text-align: right;
+	}
+
+	@media (max-width: 640px) {
+		footer {
+			flex-direction: column;
+		}
+		footer div:nth-child(2) {
+			text-align: left;
+		}
 	}
 </style>
