@@ -8,11 +8,7 @@
 		// { pathname: '/things-to-do', title: 'Things to do', img: 'img/activities.jpg' },
 		// { pathname: '/history', title: 'History', img: 'img/history.png' },
 	];
-	const allPages = [
-		{ pathname: '/', title: 'Home' },
-		...pages,
-		{ pathname: BOOKING_URL, title: 'Reserve' }
-	];
+	const allPages = [{ pathname: '/', title: 'Home' }, ...pages];
 	const currentPage = allPages.find((d) => {
 		return d.pathname === $page.url.pathname;
 	});
@@ -41,7 +37,7 @@
 			</a>
 		{/each}
 
-		<a href="https://appletreeinn.book.pegsbe.com/" class="highlight hidden">Reserve</a>
+		<a href={BOOKING_URL} class="highlight hidden">Reserve</a>
 	</div>
 </header>
 <div class="select-wrapper">
@@ -50,6 +46,7 @@
 			<option value={pathname}>{title}</option>
 		{/each}
 	</select>
+	<a href={BOOKING_URL}>Reserve</a>
 </div>
 
 <style>
@@ -172,7 +169,8 @@
 		.select-wrapper {
 			margin: 1em;
 			display: flex;
-			align-items: center;
+			gap: 1em;
+			align-items: stretch;
 			justify-content: center;
 			position: sticky;
 			top: 1em;
@@ -181,6 +179,19 @@
 		.select-wrapper select {
 			font-size: 1.3em;
 			text-align: center;
+			width: 50%;
+			font: inherit;
+			color: var(--brown);
+		}
+		.select-wrapper a {
+			width: 50%;
+			border: 1px solid var(--brown);
+			border-radius: 3px;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: white;
 		}
 	}
 </style>

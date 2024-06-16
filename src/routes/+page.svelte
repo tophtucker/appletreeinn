@@ -37,7 +37,7 @@
 				/>
 			</svg>
 			<a href="https://maps.app.goo.gl/vpsxJ5KnzqR1n78q8" target="_blank"
-				><span class="hide-mobile">10 Richmond Mountain Road, </span>Lenox, MA</a
+				><span class="hide-mobile">10 Richmond Mountain Road,{" "}</span>Lenox, MA</a
 			>
 		</span>
 	</div>
