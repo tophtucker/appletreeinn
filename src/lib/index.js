@@ -72,14 +72,14 @@ export const buildings = [
 				beds: '1 king',
 				sleeps: 2,
 				views: null,
-				features: 'Working wood-burning fireplace',
+				features: 'Working wood-burning fireplace, Window seat',
 				caveats: '',
 				pics: [
 					'main-house/4/_XCS2628.jpg',
 					'main-house/4/_XCS2629.jpg',
 					'main-house/4/_XCS2631.jpg'
 				],
-				tags: ['1 king', 'Sleeps 2', 'Working wood-burning fireplace']
+				tags: ['1 king', 'Sleeps 2', 'Working wood-burning fireplace', 'Window seat']
 			},
 			{
 				building: 'main-house',
@@ -193,14 +193,14 @@ export const buildings = [
 				floor: 3,
 				room_number: '14',
 				room_name: 'Avaloch Suite',
-				beds: '1 king, 1 pull-out',
+				beds: '1 king, 2 small pull-outs',
 				sleeps: 4,
 				views: true,
 				features: 'Living room',
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
 				pics: ['main-house/14/_XCS2679.jpg', 'main-house/14/_XCS2680.jpg'],
 				tags: [
-					'1 king, 1 pull-out',
+					'1 king, 2 small pull-outs',
 					'Sleeps 4',
 					'Beautiful views of the hills',
 					'Living room',
