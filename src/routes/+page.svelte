@@ -5,13 +5,18 @@
 	import Footer from './Footer.svelte';
 	import Intro from './Intro.svelte';
 	import Slideshow from './Slideshow.svelte';
+	import { goto } from '$app/navigation';
 
 	const defaultTab = buildings[0].id;
-	let tab = $state($page.url.hash.slice(1) || defaultTab);
+	let tab = $state(new URLSearchParams($page.url.search).get("building") || defaultTab);
+	console.log(new URLSearchParams($page.url.search).get("building"), tab)
 	const building = $derived(buildings.find((d) => d.id === tab));
-</script>
 
-<svelte:window on:hashchange={() => (tab = $page.url.hash.slice(1) || defaultTab)} />
+	function setBuilding(id) {
+		tab = id;
+		window.history.replaceState(null, '', `/?building=${id}`);
+	}
+</script>
 
 <svelte:head>
 	<title>Apple Tree Inn • Lenox, MA</title>
@@ -52,10 +57,10 @@
 	<div class="tabs-wrapper">
 		<div class="tabs">
 			<em class="hide-mobile">Choose your building</em>
-			{#each buildings as building}
-				<a href={`#${building.id}`} class={`tab ${tab === building.id ? 'active' : ''}`}>
+			{#each buildings as building (building.id)}
+				<button onclick={() => setBuilding(building.id)} class={`tab ${tab === building.id ? 'active' : ''}`}>
 					{building.title}
-				</a>
+				</button>
 			{/each}
 		</div>
 	</div>
@@ -69,9 +74,8 @@
 				<p>All rooms have Frette linens and Beekman 1802 bath amenities.</p>
 			</div>
 		</div>
-		{#each building.rooms as { room_number, room_name, floor, tags, pics }, i}
+		{#each building.rooms as { room_number, room_name, floor, tags, pics }, i (room_name)}
 			<div class="room">
-				<!-- <img src={`roompics/${tab}/${i + 1}-1.jpg`} alt="Room" loading="lazy" /> -->
 				<Slideshow pics={pics.map(src => ({src: `roompics/${src}`, title: room_name}))} />
 				<div>
 					{#if room_number}
@@ -111,12 +115,14 @@
 		justify-content: center;
 	}
 
-	.tabs a {
+	.tab {
 		text-decoration: none;
 		color: var(--brown);
 		margin: 0;
 		position: relative;
 		bottom: -1px;
+		background: none;
+		border: none;
 		border-top: 1px solid var(--brown);
 		border-right: 1px solid var(--brown);
 		border-left: 1px solid var(--brown);
@@ -127,7 +133,7 @@
 		font-size: larger;
 	}
 
-	.tabs a.active {
+	.tab.active {
 		text-decoration: none;
 		border-bottom: 1px solid white;
 		z-index: 2;
