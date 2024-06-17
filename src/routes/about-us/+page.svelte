@@ -11,7 +11,10 @@
 
 <svelte:head>
 	<title>About us • Apple Tree Inn • Lenox, MA</title>
-	<meta name="description" content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream" />
+	<meta
+		name="description"
+		content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream"
+	/>
 </svelte:head>
 
 <Header />
@@ -47,7 +50,7 @@
 				followed us out here from the Boston area to escape the office desk job life and try
 				something different, and judging from some of the stuff we’ve got him doing (climbing
 				ladders to update security cameras or cleaning up bird poop), we bet we have achieved
-				“different”. His mom is in Toph’s mom’s book group and helps run Beacon Hill Books, so,
+				“different”. His mom is in Toph’s mom’s book group and has always worked at bookstores, so,
 				naturally, Christian seems to always have a good book on hand.
 			</p>
 			<p>
