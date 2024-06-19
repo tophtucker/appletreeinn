@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-    const chars = 'Under new management'.toUpperCase().split('');
+    const message = 'Under new management';
+    const chars = message.toUpperCase().split('');
 	onMount(() => {
         const charWidth = 14;
         const charEls = document.querySelectorAll('.char');
@@ -21,9 +22,9 @@
 	});
 </script>
 
-<div class="banner">
+<div class="banner" aria-label={message} role="presentation">
 	{#each chars as char}
-		<div class="char">{char}</div>
+		<span class="char" aria-hidden="true">{char}</span>
 	{/each}
 </div>
 

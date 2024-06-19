@@ -9,6 +9,7 @@ body {
 	--brown: #5e4c3c;
 	--tan: #ffeacc;
 	--gutter: max(1em, calc((100vw - 1200px) / 2));
+	overflow-x: hidden; /* for 'Under new management' banner */
 }
 
 .links {
