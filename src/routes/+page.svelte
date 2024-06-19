@@ -5,7 +5,7 @@
 	import Footer from './Footer.svelte';
 	import Intro from './Intro.svelte';
 	import Slideshow from './Slideshow.svelte';
-	import { goto } from '$app/navigation';
+	import NewMgmt from './NewMgmt.svelte';
 
 	const defaultTab = buildings[0].id;
 	let tab = $state(new URLSearchParams($page.url.search).get("building") || defaultTab);
@@ -21,6 +21,8 @@
 		content="A historic hotel in Lenox, MA, with views of the Berkshires hills and 5-minute walks to Tanglewood or Kripalu"
 	/>
 </svelte:head>
+
+<NewMgmt />
 
 <Header />
 
