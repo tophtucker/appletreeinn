@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Activities • Apple Tree Inn • Lenox, MA</title>
+	<title>Things to do • Apple Tree Inn • Lenox, MA</title>
 	<meta name="description" content="TODO" />
 </svelte:head>
 

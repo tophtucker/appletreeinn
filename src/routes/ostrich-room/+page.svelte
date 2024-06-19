@@ -24,17 +24,13 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
+			<h2>Open Wednesday – Saturday, 4 – 10 p.m., live music Wed. & Sat.</h2>
 			<p>
-				Originally built around 1900 by then-owners Mr. and Mrs. Pease as a billiards room, our
-				tavern is locally famous for its music program and roaring fires in the <em>inglenook</em> (that’s
+				Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards room, our
+				tavern is locally famous for its music program and the roaring fires in the <em>inglenook</em> (that’s
 				a fireplace nook with facing benches).
 			</p>
-			<ul>
-				<li>Open Wednesday – Saturday</li>
-				<li>Drinks 4 – 10 p.m.</li>
-				<li>Food 5 – 9 p.m.</li>
-				<li>Live music Wednesdays and Saturdays</li>
-			</ul>
+			
 			<p>
 				Follow us on <a href="https://instagram.com/appletreeinn">Instagram</a> to find out about upcoming
 				live music.
@@ -54,6 +50,18 @@
 <Footer />
 
 <style>
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	h1 + h2 {
+		font-style: italic;
+		font-weight: normal;
+		font-size: 1.2em;
+		margin-top: 0;
+	}
+
 	.menus {
 		display: grid;
 		grid-template-columns: 8.5fr 5.5fr;

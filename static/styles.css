@@ -47,6 +47,10 @@ button {
 	font-size: inherit;
 }
 
+h1 {
+	margin: 0;
+}
+
 h2,
 h3,
 h4 {
@@ -68,6 +72,10 @@ hr {
 
 .inner p {
 	max-width: 640px;
+}
+
+.inner p:first-child {
+	margin-top: 0;
 }
 
 .grid-or-flex {

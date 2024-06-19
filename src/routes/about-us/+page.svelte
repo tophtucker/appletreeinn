@@ -50,9 +50,14 @@
 				followed us out here from the Boston area to escape the office desk job life and try
 				something different, and judging from some of the stuff we’ve got him doing (climbing
 				ladders to update security cameras or cleaning up bird poop), we bet we have achieved
-				“different”. His mom is in Toph’s mom’s book group and has always worked at bookstores, so,
-				naturally, Christian seems to always have a good book on hand.
+				“different”. His mom is in Toph’s mom’s book group and has always worked at bookstores,
+				which is how she met Christian’s dad. Christian is currently reading:
 			</p>
+			<ul>
+				<li><em>The Year of the Locust</em>, by Terry Hayes</li>
+				<li><em>Martyr!</em>, by Kaveh Akbar</li>
+				<li><em>Four Seasons: The Story of a Business Philosophy</em>, by Isadore Sharp</li>
+			</ul>
 			<p>
 				You’re also likely to meet Christian’s German shepherd Max, who is not yet trained to use
 				the point-of-sale systems but is otherwise a startlingly good listener. Max will be very
