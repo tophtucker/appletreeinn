@@ -7,27 +7,27 @@
 		{
 			pathname: '/ostrich-room',
 			title: 'Ostrich Room',
-			img: 'img/ostrich-egg.jpg',
+			img: '/img/ostrich-egg.jpg',
 			mobileNav: true,
 			desktopNav: true
 		},
 		{
 			pathname: '/weddings-events',
 			title: 'Weddings & events',
-			img: 'img/weddings1.png',
+			img: '/img/weddings1.png',
 			mobileNav: true,
 			desktopNav: true
 		},
 		{
 			pathname: '/about-us',
 			title: 'About us',
-			img: 'img/claire.jpg',
+			img: '/img/claire.jpg',
 			mobileNav: true,
 			desktopNav: true
 		},
 		{ pathname: '/terms-of-service', title: 'Terms of service' },
-		{ pathname: '/things-to-do', title: 'Things to do', img: 'img/activities.jpg' },
-		{ pathname: '/history', title: 'History', img: 'img/history.png' },
+		{ pathname: '/things-to-do', title: 'Things to do', img: '/img/activities.jpg' },
+		{ pathname: '/history', title: 'History', img: '/img/history.png' },
 		{ pathname: '/jobs', title: 'Jobs' }
 	];
 	const currentPage = pages.find((d) => {
@@ -50,7 +50,7 @@
 </div>
 <header>
 	<a href="/">
-		<img src="logo.svg" height="200" alt="The Apple Tree Inn" />
+		<img src="/logo.svg" height="200" alt="The Apple Tree Inn" />
 	</a>
 	<div class="links">
 		{#each desktopNav as { pathname, title, img }}
