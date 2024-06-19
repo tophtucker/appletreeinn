@@ -4,6 +4,9 @@
 	onMount(() => {
         const charWidth = 14;
         const charEls = document.querySelectorAll('.char');
+        for (let i = 0; i < charEls.length; i++) {
+            charEls[i].style.visibility = "visible";
+        }
         const bannerWidth = charEls.length * charWidth;
         let x = innerWidth + bannerWidth / 2;
 		requestAnimationFrame(function animate() {
@@ -30,8 +33,10 @@
 		top: 15px;
 		left: 0;
 		font-family: Consolas, monospace;
+        z-index: -1;
 	}
 	.char {
 		position: absolute;
+        visibility: hidden;
 	}
 </style>
