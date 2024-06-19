@@ -3,20 +3,38 @@
 	import { goto } from '$app/navigation';
 	const BOOKING_URL = 'https://appletreeinn.book.pegsbe.com/';
 	const pages = [
-		{ pathname: '/', title: 'Home', mobileNav: true},
-		{ pathname: '/ostrich-room', title: 'Ostrich Room', img: 'img/ostrich-egg.jpg', mobileNav: true , desktopNav: true},
-		{ pathname: '/weddings-events', title: 'Weddings & events', img: 'img/weddings1.png', mobileNav: true , desktopNav: true},
-		{ pathname: '/about-us', title: "About us", img: 'img/claire.jpg', mobileNav: true, desktopNav: true},
-		{ pathname: '/terms-of-service', title: 'Terms of service'},
+		{ pathname: '/', title: 'Home', mobileNav: true },
+		{
+			pathname: '/ostrich-room',
+			title: 'Ostrich Room',
+			img: 'img/ostrich-egg.jpg',
+			mobileNav: true,
+			desktopNav: true
+		},
+		{
+			pathname: '/weddings-events',
+			title: 'Weddings & events',
+			img: 'img/weddings1.png',
+			mobileNav: true,
+			desktopNav: true
+		},
+		{
+			pathname: '/about-us',
+			title: 'About us',
+			img: 'img/claire.jpg',
+			mobileNav: true,
+			desktopNav: true
+		},
+		{ pathname: '/terms-of-service', title: 'Terms of service' },
 		{ pathname: '/things-to-do', title: 'Things to do', img: 'img/activities.jpg' },
 		{ pathname: '/history', title: 'History', img: 'img/history.png' },
-		{ pathname: '/jobs', title: 'Jobs'}
+		{ pathname: '/jobs', title: 'Jobs' }
 	];
 	const currentPage = pages.find((d) => {
 		return d.pathname === $page.url.pathname;
 	});
-	const desktopNav = pages.filter(d => d.desktopNav);
-	const mobileNav = pages.filter(d => d.mobileNav || d.pathname === currentPage.pathname);
+	const desktopNav = pages.filter((d) => d.desktopNav);
+	const mobileNav = pages.filter((d) => d.mobileNav || d.pathname === currentPage?.pathname);
 	function handlePageSelect(event) {
 		const { value } = event.target;
 		if (value.startsWith('http')) {
@@ -46,7 +64,10 @@
 	</div>
 </header>
 <div class="select-wrapper">
-	<select value={currentPage?.pathname} on:change={handlePageSelect}>
+	<select value={currentPage?.pathname || ""} on:change={handlePageSelect}>
+		{#if !currentPage}
+			<option value="" disabled>—</option>
+		{/if}
 		{#each mobileNav as { title, pathname }}
 			<option value={pathname}>{title}</option>
 		{/each}
