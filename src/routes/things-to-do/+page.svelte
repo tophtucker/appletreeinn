@@ -5,12 +5,13 @@
 
 <svelte:head>
 	<title>Things to do • Apple Tree Inn • Lenox, MA</title>
-	<meta name="description" content="TODO" />
+	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
 <Header />
 
 <div class="inner">
+	<div style="float: right; width: 10em; border: 1px solid var(--brown); padding: 0.5em; font-size: smaller; text-align: center;">This page is under construction!</div>
 	<h1>Things to do</h1>
 	<h2>Eat and drink</h2>
 	<p>Downtown Lenox (3 min) has lots of cute shops and restaurants:</p>

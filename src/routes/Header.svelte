@@ -10,6 +10,7 @@
 		{ pathname: '/terms-of-service', title: 'Terms of service'},
 		{ pathname: '/things-to-do', title: 'Things to do', img: 'img/activities.jpg' },
 		{ pathname: '/history', title: 'History', img: 'img/history.png' },
+		{ pathname: '/jobs', title: 'Jobs'}
 	];
 	const currentPage = pages.find((d) => {
 		return d.pathname === $page.url.pathname;

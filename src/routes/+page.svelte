@@ -50,7 +50,7 @@
 	</div>
 </nav>
 
-<div class="rooms-section">
+<div id="rooms" class="rooms-section">
 	<div class="tabs-wrapper">
 		<div class="tabs">
 			<em class="hide-mobile">Choose your building</em>
