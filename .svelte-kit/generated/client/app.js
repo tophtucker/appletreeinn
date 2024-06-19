@@ -27,7 +27,7 @@ export const dictionary = {
 		"/": [2],
 		"/about-us": [3],
 		"/career": [~4],
-		"/dining-ati/[...catchall]": [~6],
+		"/dining_ati/[...catchall]": [~6],
 		"/dining/[...catchall]": [~5],
 		"/explore": [~7],
 		"/history": [8],
