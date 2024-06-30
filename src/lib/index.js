@@ -16,10 +16,10 @@ export const buildings = [
 				room_name: 'Dogwood',
 				beds: '1 queen',
 				sleeps: 2,
+				pics: ['main-house/1/_XCS2684.jpg'],
 				views: true,
 				features: 'Writing desk with three windows in turret',
-				caveats: '',
-				pics: ['main-house/1/_XCS2684.jpg'],
+				caveats: null,
 				tags: [
 					'1 queen',
 					'Sleeps 2',
@@ -34,14 +34,14 @@ export const buildings = [
 				room_name: 'Orchard',
 				beds: '1 king',
 				sleeps: 2,
-				views: true,
-				features: 'Working wood-burning fireplace, Balcony with seating, Large room',
-				caveats: '',
 				pics: [
-					'main-house/2/_XCS2621.jpg',
 					'main-house/2/_XCS2623.jpg',
+					'main-house/2/_XCS2621.jpg',
 					'main-house/2/_XCS2624.jpg'
 				],
+				views: true,
+				features: 'Working wood-burning fireplace, Balcony with seating, Large room',
+				caveats: null,
 				tags: [
 					'1 king',
 					'Sleeps 2',
@@ -58,10 +58,10 @@ export const buildings = [
 				room_name: 'Richmond',
 				beds: '1 queen',
 				sleeps: 2,
+				pics: ['main-house/3/_XCS2685.jpg', 'main-house/3/_XCS2686.jpg'],
 				views: null,
 				features: 'Working wood-burning fireplace',
-				caveats: '',
-				pics: ['main-house/3/_XCS2685.jpg', 'main-house/3/_XCS2686.jpg'],
+				caveats: null,
 				tags: ['1 queen', 'Sleeps 2', 'Working wood-burning fireplace']
 			},
 			{
@@ -71,14 +71,14 @@ export const buildings = [
 				room_name: 'Astalula',
 				beds: '1 king',
 				sleeps: 2,
-				views: null,
-				features: 'Working wood-burning fireplace, Window seat',
-				caveats: '',
 				pics: [
-					'main-house/4/_XCS2628.jpg',
 					'main-house/4/_XCS2629.jpg',
+					'main-house/4/_XCS2628.jpg',
 					'main-house/4/_XCS2631.jpg'
 				],
+				views: null,
+				features: 'Working wood-burning fireplace, Window seat',
+				caveats: null,
 				tags: ['1 king', 'Sleeps 2', 'Working wood-burning fireplace', 'Window seat']
 			},
 			{
@@ -88,10 +88,10 @@ export const buildings = [
 				room_name: 'Woodside',
 				beds: '2 double',
 				sleeps: 4,
-				views: null,
-				features: '',
-				caveats: 'Room 6 obstructed view',
 				pics: ['main-house/5-or-6/5/_XCS2662.jpg', 'main-house/5-or-6/6/_XCS2678.jpg'],
+				views: null,
+				features: null,
+				caveats: 'Room 6 obstructed view',
 				tags: ['2 double', 'Sleeps 4', 'Room 6 obstructed view']
 			},
 			{
@@ -101,10 +101,10 @@ export const buildings = [
 				room_name: 'Leighton Rollins',
 				beds: '1 queen',
 				sleeps: 2,
+				pics: ['main-house/7/_XCS2637.jpg'],
 				views: null,
 				features: 'Claw foot bathtub, Vintage sink',
-				caveats: '',
-				pics: ['main-house/7/_XCS2637.jpg'],
+				caveats: null,
 				tags: ['1 queen', 'Sleeps 2', 'Claw foot bathtub', 'Vintage sink']
 			},
 			{
@@ -114,15 +114,15 @@ export const buildings = [
 				room_name: 'Bristed Suite',
 				beds: '1 king, 1 pull-out',
 				sleeps: 4,
-				views: true,
-				features: 'Working wood-burning fireplace, Living room',
-				caveats: '',
 				pics: [
+					'main-house/8/_XCS2672.jpg',
 					'main-house/8/_XCS2666.jpg',
 					'main-house/8/_XCS2668.jpg',
-					'main-house/8/_XCS2669.jpg',
-					'main-house/8/_XCS2672.jpg'
+					'main-house/8/_XCS2669.jpg'
 				],
+				views: true,
+				features: 'Working wood-burning fireplace, Living room',
+				caveats: null,
 				tags: [
 					'1 king, 1 pull-out',
 					'Sleeps 4',
@@ -138,10 +138,10 @@ export const buildings = [
 				room_name: 'Shadowbrook',
 				beds: '1 queen',
 				sleeps: 2,
-				views: true,
-				features: '',
-				caveats: '',
 				pics: ['main-house/9/_XCS2640.jpg', 'main-house/9/_XCS2641.jpg'],
+				views: true,
+				features: null,
+				caveats: null,
 				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
 			},
 			{
@@ -151,11 +151,11 @@ export const buildings = [
 				room_name: 'Alice’s',
 				beds: '1 queen',
 				sleeps: 2,
+				pics: ['main-house/10/_XCS2642.jpg'],
 				views: null,
-				features: '',
+				features: null,
 				caveats:
 					'Low ceilings, Steep staircase to 3rd floor, No in-room bathroom; private bathroom in hallway with separate key',
-				pics: ['main-house/10/_XCS2642.jpg'],
 				tags: [
 					'1 queen',
 					'Sleeps 2',
@@ -171,15 +171,15 @@ export const buildings = [
 				room_name: 'Arlo’s Suite',
 				beds: '1 queen, 2 double',
 				sleeps: 6,
+				pics: [
+					'main-house/11-12/_XCS2649.jpg',
+					'main-house/11-12/_XCS2643.jpg',
+					'main-house/11-12/_XCS2647.jpg',
+					'main-house/11-12/_XCS2650.jpg'
+				],
 				views: null,
 				features: 'Living room',
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
-				pics: [
-					'main-house/11-12/_XCS2643.jpg',
-					'main-house/11-12/_XCS2647.jpg',
-					'main-house/11-12/_XCS2649.jpg',
-					'main-house/11-12/_XCS2650.jpg'
-				],
 				tags: [
 					'1 queen, 2 double',
 					'Sleeps 6',
@@ -195,10 +195,10 @@ export const buildings = [
 				room_name: 'Avaloch Suite',
 				beds: '1 king, 2 small pull-outs',
 				sleeps: 4,
+				pics: ['main-house/14/_XCS2680.jpg', 'main-house/14/_XCS2679.jpg'],
 				views: true,
 				features: 'Living room',
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
-				pics: ['main-house/14/_XCS2679.jpg', 'main-house/14/_XCS2680.jpg'],
 				tags: [
 					'1 king, 2 small pull-outs',
 					'Sleeps 4',
@@ -215,10 +215,10 @@ export const buildings = [
 				room_name: 'Cecile’s',
 				beds: '1 queen',
 				sleeps: 2,
-				views: null,
-				features: '',
-				caveats: 'Low ceilings, Steep staircase to 3rd floor',
 				pics: ['main-house/15/_XCS2683.jpg'],
+				views: null,
+				features: null,
+				caveats: 'Low ceilings, Steep staircase to 3rd floor',
 				tags: ['1 queen', 'Sleeps 2', 'Low ceilings', 'Steep staircase to 3rd floor']
 			}
 		]
@@ -237,10 +237,10 @@ export const buildings = [
 				room_name: 'Queen Woods View',
 				beds: '1 queen',
 				sleeps: 2,
-				views: null,
-				features: '',
-				caveats: '',
 				pics: ['lodge/queen-woods-view/1.jpg', 'lodge/queen-woods-view/2.jpg'],
+				views: null,
+				features: null,
+				caveats: null,
 				tags: ['1 queen', 'Sleeps 2']
 			},
 			{
@@ -250,10 +250,10 @@ export const buildings = [
 				room_name: '2 Double Woods View',
 				beds: '2 double',
 				sleeps: 4,
-				views: null,
-				features: '',
-				caveats: '',
 				pics: ['lodge/2-double-woods-view/1.jpg', 'lodge/2-double-woods-view/2.jpg'],
+				views: null,
+				features: null,
+				caveats: null,
 				tags: ['2 double', 'Sleeps 4']
 			},
 			{
@@ -263,14 +263,14 @@ export const buildings = [
 				room_name: 'Queen Mountain View',
 				beds: '1 queen',
 				sleeps: 2,
-				views: true,
-				features: '',
-				caveats: '',
 				pics: [
 					'lodge/queen-mountain-view/1.jpg',
 					'lodge/queen-mountain-view/2.jpg',
 					'lodge/queen-mountain-view/3.jpg'
 				],
+				views: true,
+				features: null,
+				caveats: null,
 				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
 			},
 			{
@@ -280,10 +280,10 @@ export const buildings = [
 				room_name: '2 Double Mountain View',
 				beds: '2 double',
 				sleeps: 4,
-				views: true,
-				features: '',
-				caveats: '',
 				pics: ['lodge/2-double-mountain-view/1.jpg', 'lodge/2-double-mountain-view/2.jpg'],
+				views: true,
+				features: null,
+				caveats: null,
 				tags: ['2 double', 'Sleeps 4', 'Beautiful views of the hills']
 			}
 		]
