@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-    const message = 'Under new management';
+    const message = 'OSTRICH ROOM OPEN WED — SAT, DRINKS 4 - 10, FOOD 5 – 10, LIVE MUSIC EVERY WED & SAT!';
     const chars = message.toUpperCase().split('');
 	onMount(() => {
         const charWidth = 14;
@@ -14,7 +14,7 @@
 			for (let i = 0; i < charEls.length; i++) {
 				const char = charEls[i];
 				char.style.left = `${x + i * 14}px`;
-				char.style.top = `${5 * Math.sin(x / 15 + i / 2)}px`;
+				char.style.top = `${5 * Math.sin(x / 20 + i / 4)}px`;
 			}
 			x--;
 			if (x >= -bannerWidth - 10) requestAnimationFrame(animate);

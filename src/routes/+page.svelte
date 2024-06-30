@@ -5,7 +5,7 @@
 	import Footer from './Footer.svelte';
 	import Intro from './Intro.svelte';
 	import Slideshow from './Slideshow.svelte';
-	import NewMgmt from './NewMgmt.svelte';
+	import Banner from './Banner.svelte';
 
 	const defaultTab = buildings[0].id;
 	let tab = $state(new URLSearchParams($page.url.search).get("building") || defaultTab);
@@ -22,7 +22,7 @@
 	/>
 </svelte:head>
 
-<NewMgmt />
+<Banner />
 
 <Header />
 
