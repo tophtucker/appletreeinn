@@ -6,7 +6,7 @@ export const buildings = [
 		id: 'main-house',
 		title: 'Main House',
 		img: 'heropics/main-house.jpg',
-		desc: 'Built in 1885, the three-story main house includes our front desk, breakfast room, and weekend tavern. Every room is unique.',
+		desc: 'Built in 1885, the three-story main house includes our front desk, breakfast room, and weekend tavern. Every room is unique. Guest rooms are on the second and third floor, and there is no elevator.',
 		building: 'main-house',
 		rooms: [
 			{
@@ -227,7 +227,7 @@ export const buildings = [
 		id: 'lodge',
 		title: 'Lodge',
 		img: 'heropics/summer-annex.jpg',
-		desc: 'Open from Memorial Day to Labor Day, the motel-style lodge has four standard room types. It’s located between the main house and the pool, a three-minute walk from each.',
+		desc: 'Open from Memorial Day to Labor Day, the motel-style lodge has four standard room types, facing either the woods (basically no view) or mountains (beautiful view). It’s located between the main house and the pool, a three-minute walk from each. Guest rooms are on the first and second floor, and there is no elevator.',
 		building: 'lodge',
 		rooms: [
 			{
@@ -237,7 +237,7 @@ export const buildings = [
 				room_name: 'Queen Woods View',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: ['lodge/queen-woods-view/1.jpg', 'lodge/queen-woods-view/2.jpg'],
+				pics: ['lodge/queen-woods-view/_XCS2800.jpg', 'lodge/queen-woods-view/2.jpg'],
 				views: null,
 				features: null,
 				caveats: null,
@@ -250,7 +250,7 @@ export const buildings = [
 				room_name: '2 Double Woods View',
 				beds: '2 double',
 				sleeps: 4,
-				pics: ['lodge/2-double-woods-view/1.jpg', 'lodge/2-double-woods-view/2.jpg'],
+				pics: ['lodge/2-double-woods-view/_XCS2794.jpg', 'lodge/2-double-woods-view/2.jpg'],
 				views: null,
 				features: null,
 				caveats: null,
@@ -263,11 +263,7 @@ export const buildings = [
 				room_name: 'Queen Mountain View',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: [
-					'lodge/queen-mountain-view/1.jpg',
-					'lodge/queen-mountain-view/2.jpg',
-					'lodge/queen-mountain-view/3.jpg'
-				],
+				pics: ['lodge/queen-mountain-view/_XCS2772.jpg', 'lodge/queen-mountain-view/3.jpg'],
 				views: true,
 				features: null,
 				caveats: null,
@@ -280,7 +276,7 @@ export const buildings = [
 				room_name: '2 Double Mountain View',
 				beds: '2 double',
 				sleeps: 4,
-				pics: ['lodge/2-double-mountain-view/1.jpg', 'lodge/2-double-mountain-view/2.jpg'],
+				pics: ['lodge/2-double-mountain-view/_XCS2782.jpg', 'lodge/2-double-mountain-view/2.jpg'],
 				views: true,
 				features: null,
 				caveats: null,
