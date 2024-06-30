@@ -24,19 +24,38 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
-			<h2>Open Wednesday – Saturday, 4 – 10 p.m., live music Wed. & Sat.</h2>
+			<p><s>Ten</s> Eight things to know:</p>
+			<ol>
+				<li>We are open Wednesday - Saturday evenings</li>
+				<li>Drinks start at 4pm and food starts at 5pm</li>
+				<li>We close at 10pm</li>
+				<li>
+					We have live music twice a week — Wednesdays & Saturdays — from approximately 7:30 - 9:30 p.m.
+					(see <a href="https://instagram.com/appletreeinn">Instagram</a> for show details)
+				</li>
+				<li>
+					We do not take reservations & we do not keep a wait list. All tables are first come, first
+					serve, including for hotel guests!
+				</li>
+				<li>If you snag a table in the Ostrich Room, we offer full waiter service</li>
+				<li>
+					You can also find a spot to sit in the lobby, on the front porch, or outside on the picnic
+					tables and then come in and order at the bar. Take your drinks with you and we’ll bring
+					the food out to you when it’s ready. We will bus your table when you’re done.
+				</li>
+				<li>
+					Life is a work in progress! All of the above may change in the future! Thank you for being
+					here!
+				</li>
+			</ol>
 			<p>
-				Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards room, our
-				tavern is locally famous for its music program and the roaring fires in the <em>inglenook</em> (that’s
-				a fireplace nook with facing benches).
-			</p>
-			
-			<p>
-				Follow us on <a href="https://instagram.com/appletreeinn">Instagram</a> to find out about upcoming
-				live music.
+				Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards
+				room, our tavern is locally famous for its music program and the roaring fires in the <em
+					>inglenook</em
+				> (that’s a fireplace nook with facing benches).
 			</p>
 		</div>
-		<Slideshow {pics} aspectRatio={1.33} objectFit={'contain'} />
+		<Slideshow {pics} />
 	</div>
 	<hr />
 	<h2>Sample menus</h2>
@@ -50,7 +69,6 @@
 <Footer />
 
 <style>
-
 	h1 {
 		margin-bottom: 0;
 	}
