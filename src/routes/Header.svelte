@@ -1,6 +1,8 @@
 <script>
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import OpenSign from './OpenSign.svelte';
+
 	const BOOKING_URL = 'https://appletreeinn.book.pegsbe.com/';
 	const pages = [
 		{ pathname: '/', title: 'Home', mobileNav: true },
@@ -57,6 +59,9 @@
 			<a href={pathname} class={`thumbnail ${$page.url.pathname === pathname ? 'current' : ''}`}>
 				<img src={img} alt={title} />
 				{title}
+				{#if title === "Ostrich Room"}
+					<OpenSign />
+				{/if}
 			</a>
 		{/each}
 
@@ -170,6 +175,7 @@
 		align-items: center;
 		text-align: center;
 		width: 100px;
+		position: relative;
 	}
 	.thumbnail img {
 		display: block;
