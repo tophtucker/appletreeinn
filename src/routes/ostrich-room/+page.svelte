@@ -72,6 +72,7 @@
 	</div>
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
+	<p>Live music goes from around 7:30 to around 9:30 p.m. on Wednesdays and Saturdays. Shows are subject to change… the farther out, the more subject!</p>
 	{#if !data}
 		<div style="padding-bottom: 20em;">Loading music calendar…</div>
 	{:else}
