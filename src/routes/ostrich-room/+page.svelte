@@ -79,7 +79,7 @@
 		<table>
 			<tbody>
 				{#each data as { date, description }}
-					<tr><td>{formatDate(date)}</td><td>{description}</td></tr>
+					<tr><td style="min-width: 6em;">{formatDate(date)}</td><td>{description}</td></tr>
 				{/each}
 			</tbody>
 		</table>
