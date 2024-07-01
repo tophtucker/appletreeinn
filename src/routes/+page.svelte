@@ -6,6 +6,7 @@
 	import Intro from './Intro.svelte';
 	import Slideshow from './Slideshow.svelte';
 	import Banner from './Banner.svelte';
+	import Events from './Events.svelte';
 
 	const defaultTab = buildings[0].id;
 	let tab = $state(new URLSearchParams($page.url.search).get("building") || defaultTab);
@@ -27,6 +28,8 @@
 <Header />
 
 <Intro />
+
+<Events />
 
 <nav>
 	<div class="links">

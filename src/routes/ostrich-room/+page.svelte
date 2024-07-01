@@ -2,6 +2,12 @@
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
 	import Slideshow from '../Slideshow.svelte';
+	import { loadEvents, formatDate } from '$lib/index.js';
+
+	let data = $state(null);
+	(async function () {
+		data = await loadEvents();
+	})();
 
 	const pics = [
 		{ src: './heropics/ostrich2.jpg', title: 'The Ostrich Room' },
@@ -26,18 +32,18 @@
 			<h1>The Ostrich Room</h1>
 			<p><s>Ten</s> Eight things to know:</p>
 			<ol>
-				<li>We are open Wednesday - Saturday evenings</li>
-				<li>Drinks start at 4pm and food starts at 5pm</li>
-				<li>We close at 10pm</li>
+				<li>We are open Wednesday - Saturday evenings.</li>
+				<li>Drinks start at 4 p.m. and food starts at 5 p.m.</li>
+				<li>We close at 10 p.m.</li>
 				<li>
-					We have live music twice a week — Wednesdays & Saturdays — from approximately 7:30 - 9:30 p.m.
-					(see <a href="https://instagram.com/appletreeinn">Instagram</a> for show details)
+					We have live music twice a week — Wednesdays & Saturdays — from approximately 7:30 - 9:30
+					p.m. (see <a href="https://instagram.com/appletreeinn">Instagram</a> for show details).
 				</li>
 				<li>
 					We do not take reservations & we do not keep a wait list. All tables are first come, first
 					serve, including for hotel guests!
 				</li>
-				<li>If you snag a table in the Ostrich Room, we offer full waiter service</li>
+				<li>If you snag a table in the Ostrich Room, we offer full waiter service.</li>
 				<li>
 					You can also find a spot to sit in the lobby, on the front porch, or outside on the picnic
 					tables and then come in and order at the bar. Take your drinks with you and we’ll bring
@@ -58,12 +64,25 @@
 		<Slideshow {pics} />
 	</div>
 	<hr />
-	<h2>Sample menus</h2>
+	<h2 id="menus">Sample menus</h2>
 	<p>The menu’s always changing, but here are a couple recent ones for drinks and food.</p>
 	<div class="menus">
 		<img src="img/menu-drinks.png" alt="Drinks menu" />
 		<img src="img/menu-food.png" alt="Food menu" />
 	</div>
+	<hr />
+	<h2 id="calendar">Live music calendar</h2>
+	{#if !data}
+		<div style="padding-bottom: 20em;">Loading music calendar…</div>
+	{:else}
+		<table>
+			<tbody>
+				{#each data as { date, description }}
+					<tr><td>{formatDate(date)}</td><td>{description}</td></tr>
+				{/each}
+			</tbody>
+		</table>
+	{/if}
 </div>
 
 <Footer />
@@ -71,13 +90,6 @@
 <style>
 	h1 {
 		margin-bottom: 0;
-	}
-
-	h1 + h2 {
-		font-style: italic;
-		font-weight: normal;
-		font-size: 1.2em;
-		margin-top: 0;
 	}
 
 	.menus {
@@ -91,6 +103,16 @@
 		width: 100%;
 		border: 1px solid var(--brown);
 		border-radius: 5px;
+	}
+
+	table {
+		margin: 2em 0;
+		border-collapse: collapse;
+	}
+
+	td {
+		padding-right: 1em;
+		padding-bottom: 0.5em;
 	}
 
 	@media (max-width: 800px) {

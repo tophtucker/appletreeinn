@@ -16,7 +16,7 @@
 				char.style.left = `${x + i * 14}px`;
 				char.style.top = `${5 * Math.sin(x / 20 + i / 4)}px`;
 			}
-			x -= 2;
+			x--;
 			if (x >= -bannerWidth - 10) requestAnimationFrame(animate);
 		});
 	});

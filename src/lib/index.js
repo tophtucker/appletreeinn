@@ -1,4 +1,27 @@
 // place files you want to import through the `$lib` alias in this folder.
+// e.g. import { buildings } from '$lib/index.js';
+import { csvParse } from 'd3-dsv';
+
+export async function loadEvents() {
+	const sheet = await (
+		await fetch(
+			'https://docs.google.com/spreadsheets/d/1BWPT2mLSwruoWHLiNzuOCT1flhFPk4aoa4KbGaN_c-Y/export?format=csv&gid=287995536'
+		)
+	).text();
+	const now = new Date();
+	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+	return csvParse(sheet)
+		.map((d) => ({ date: new Date(d.date), description: d.description || "TBD" }))
+		.filter((d) => d.date >= today);
+}
+
+export const formatDate = (date) =>
+	new Intl.DateTimeFormat('en-US', {
+		weekday: 'short',
+		month: 'numeric',
+		day: 'numeric',
+		timeZone: 'utc'
+	}).format(date);
 
 // https://observablehq.com/d/37b2ab91a954e6bc
 export const buildings = [
