@@ -1,6 +1,6 @@
 <script>
 	import { loadEvents, formatDate } from '$lib/index.js';
-	let data = $state(null);
+	let data = $state(undefined);
 	(async function () {
 		data = await loadEvents();
 	})();
@@ -8,8 +8,10 @@
 
 <div class="wrapper">
 	<span class="events">
-		{#if !data}
+		{#if data === undefined}
 			Loading music calendar…
+		{:else if data === null}
+			See <a href="https://instagram.com/appletreeinn">Instagram</a> for live music updates.
 		{:else}
 			{#each data.slice(0, 5) as { date, description }}
 				<span>{formatDate(date)}: {description} • </span>

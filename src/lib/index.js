@@ -3,11 +3,17 @@
 import { csvParse } from 'd3-dsv';
 
 export async function loadEvents() {
-	const sheet = await (
-		await fetch(
-			'https://docs.google.com/spreadsheets/d/1BWPT2mLSwruoWHLiNzuOCT1flhFPk4aoa4KbGaN_c-Y/export?format=csv&gid=287995536'
-		)
-	).text();
+	let sheet;
+	try {
+		sheet = await (
+			await fetch(
+				'https://docs.google.com/spreadsheets/d/1BWPT2mLSwruoWHLiNzuOCT1flhFPk4aoa4KbGaN_c-Y/export?format=csv&gid=287995536'
+			)
+		).text();
+	} catch (err) {
+		console.error(err);
+		return null;
+	}
 	const now = new Date();
 	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 	return csvParse(sheet)

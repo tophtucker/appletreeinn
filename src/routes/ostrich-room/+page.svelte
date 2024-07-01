@@ -4,7 +4,7 @@
 	import Slideshow from '../Slideshow.svelte';
 	import { loadEvents, formatDate } from '$lib/index.js';
 
-	let data = $state(null);
+	let data = $state(undefined);
 	(async function () {
 		data = await loadEvents();
 	})();
@@ -72,9 +72,16 @@
 	</div>
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
-	<p>Live music goes from around 7:30 to around 9:30 p.m. on Wednesdays and Saturdays. Shows are subject to change… the farther out, the more subject!</p>
-	{#if !data}
+	<p>
+		Live music goes from around 7:30 to around 9:30 p.m. on Wednesdays and Saturdays. Shows are
+		subject to change… the farther out, the more subject!
+	</p>
+	{#if data === undefined}
 		<div style="padding-bottom: 20em;">Loading music calendar…</div>
+	{:else if data === null}
+		We can’t load the events calendar right now. Try again in a minute or see our <a
+			href="https://instagram.com/appletreeinn">Instagram</a
+		> for posts about upcoming shows.
 	{:else}
 		<table>
 			<tbody>
