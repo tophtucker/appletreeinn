@@ -14,7 +14,7 @@
 			for (let i = 0; i < charEls.length; i++) {
 				const char = charEls[i];
 				char.style.left = `${x + i * 14}px`;
-				char.style.top = `${5 * Math.sin(x / 20 + i / 4)}px`;
+				char.style.top = `${2.5 + 5 * Math.sin(x / 20 + i / 4)}px`;
 			}
 			x--;
 			if (x >= -bannerWidth - 10) requestAnimationFrame(animate);
@@ -35,6 +35,9 @@
 		left: 0;
 		font-family: Consolas, monospace;
         z-index: -1;
+		width: 100%;
+		height: 40px;
+		overflow: hidden;
 	}
 	.char {
 		position: absolute;
