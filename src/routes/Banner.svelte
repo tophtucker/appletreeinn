@@ -9,14 +9,14 @@
             charEls[i].style.visibility = "visible";
         }
         const bannerWidth = charEls.length * charWidth;
-        let x = innerWidth + bannerWidth / 2;
+        let x = innerWidth + 10;
 		requestAnimationFrame(function animate() {
 			for (let i = 0; i < charEls.length; i++) {
 				const char = charEls[i];
 				char.style.left = `${x + i * 14}px`;
 				char.style.top = `${5 * Math.sin(x / 20 + i / 4)}px`;
 			}
-			x--;
+			x -= 2;
 			if (x >= -bannerWidth - 10) requestAnimationFrame(animate);
 		});
 	});
