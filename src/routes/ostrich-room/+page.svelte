@@ -30,6 +30,15 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
+			<div style="padding: 1em; border: 1px solid var(--brown); border-radius: 5px; background: var(--tan); margin: 2em 0;">
+				<h2>Holiday week schedule</h2>
+				<ul>
+					<li>Wed July 3rd — closing early: 4-8pm drinks & food; no live music</li>
+					<li>Thu July 4th — closing early: 4-8pm drinks & food</li>
+					<li>Fri July 5th — business as usual: 4-10pm drinks & 5-10pm food</li>
+					<li>Sat July 6th — business as usual: 4-10pm drinks & 5-10pm food; live music, act TBD</li>
+				</ul>
+			</div>
 			<p><s>Ten</s> Eight things to know:</p>
 			<ol>
 				<li>We are open Wednesday - Saturday evenings.</li>
