@@ -87,9 +87,7 @@
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
 		Live music goes from around 7:30 to around 9:30 p.m. on Wednesdays and Saturdays. Shows are
-		subject to change… the farther out, the more subject! Email Jenny, <a
-			href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a
-		>, for information about booking acts.
+		subject to change… the farther out, the more subject!
 	</p>
 	{#if data === undefined}
 		<div style="padding-bottom: 20em;">Loading music calendar…</div>
@@ -106,6 +104,10 @@
 			</tbody>
 		</table>
 	{/if}
+	<p>
+		Email Jenny Rubin at <a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for
+		information about booking acts.
+	</p>
 </div>
 
 <Footer />
@@ -129,13 +131,12 @@
 	}
 
 	table {
-		margin: 2em 0;
+		margin: 1em 0;
 		border-collapse: collapse;
 	}
 
 	td {
-		padding-right: 1em;
-		padding-bottom: 0.5em;
+		padding: 0 1em 0.5em 0;
 	}
 
 	@media (max-width: 800px) {
