@@ -30,13 +30,17 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
-			<div style="padding: 1em; border: 1px solid var(--brown); border-radius: 5px; background: var(--tan); margin: 2em 0;">
+			<div
+				style="padding: 1em; border: 1px solid var(--brown); border-radius: 5px; background: var(--tan); margin: 2em 0;"
+			>
 				<h2>Holiday week schedule</h2>
 				<ul>
 					<li>Wed July 3rd — closing early: 4-8pm drinks & food; no live music</li>
 					<li>Thu July 4th — closing early: 4-8pm drinks & food</li>
 					<li>Fri July 5th — business as usual: 4-10pm drinks & 5-10pm food</li>
-					<li>Sat July 6th — business as usual: 4-10pm drinks & 5-10pm food; live music, act TBD</li>
+					<li>
+						Sat July 6th — business as usual: 4-10pm drinks & 5-10pm food; live music, act TBD
+					</li>
 				</ul>
 			</div>
 			<p><s>Ten</s> Eight things to know:</p>
@@ -83,7 +87,9 @@
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
 		Live music goes from around 7:30 to around 9:30 p.m. on Wednesdays and Saturdays. Shows are
-		subject to change… the farther out, the more subject!
+		subject to change… the farther out, the more subject! Email Jenny, <a
+			href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a
+		>, for information about booking acts.
 	</p>
 	{#if data === undefined}
 		<div style="padding-bottom: 20em;">Loading music calendar…</div>
