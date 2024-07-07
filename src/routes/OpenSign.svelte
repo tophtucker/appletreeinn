@@ -5,8 +5,8 @@
 	const hour = today.getHours();
 
 	const hours = [
-		[3, [16, 20]], // TODO revert to normal hours
-		[4, [16, 20]], // TODO revert to normal hours
+		[3, [16, 22]],
+		[4, [16, 22]],
 		[5, [16, 22]],
 		[6, [16, 22]]
 	];
