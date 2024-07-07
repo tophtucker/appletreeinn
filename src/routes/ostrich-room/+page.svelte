@@ -30,27 +30,14 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
-			<div
-				style="padding: 1em; border: 1px solid var(--brown); border-radius: 5px; background: var(--tan); margin: 2em 0;"
-			>
-				<h2>Holiday week schedule</h2>
-				<ul>
-					<li>Wed July 3rd — closing early: 4-8pm drinks & food; no live music</li>
-					<li>Thu July 4th — closing early: 4-8pm drinks & food</li>
-					<li>Fri July 5th — business as usual: 4-10pm drinks & 5-10pm food</li>
-					<li>
-						Sat July 6th — business as usual: 4-10pm drinks & 5-10pm food; live music, act TBD
-					</li>
-				</ul>
-			</div>
 			<p><s>Ten</s> Eight things to know:</p>
 			<ol>
-				<li>We are open Wednesday - Saturday evenings.</li>
+				<li>We are open Wednesday – Saturday evenings for both guests and the public.</li>
 				<li>Drinks start at 4 p.m. and food starts at 5 p.m.</li>
 				<li>We close at 10 p.m.</li>
 				<li>
-					We have live music twice a week — Wednesdays & Saturdays — from approximately 7:30 - 9:30
-					p.m. (see <a href="https://instagram.com/appletreeinn">Instagram</a> for show details).
+					We have live music twice a week — Wednesdays & Saturdays — from approximately 7:30–9:30
+					p.m. (see <a href="#calendar">schedule</a>).
 				</li>
 				<li>
 					We do not take reservations & we do not keep a wait list. All tables are first come, first
@@ -87,7 +74,9 @@
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
 		Live music goes from around 7:30 to around 9:30 p.m. on Wednesdays and Saturdays. Shows are
-		subject to change… the farther out, the more subject!
+		subject to change… the farther out, the more subject! See <a
+			href="https://instagram.com/appletreeinn">Instagram</a
+		> for previews and updates.
 	</p>
 	{#if data === undefined}
 		<div style="padding-bottom: 20em;">Loading music calendar…</div>
@@ -105,8 +94,8 @@
 		</table>
 	{/if}
 	<p>
-		Email Jenny Rubin at <a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for
-		information about booking acts.
+		Email Jenny Rubin at <a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information
+		about booking acts.
 	</p>
 </div>
 
