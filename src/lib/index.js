@@ -15,7 +15,7 @@ export async function loadEvents() {
 		return null;
 	}
 	const now = new Date();
-	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
 	return csvParse(sheet)
 		.map((d) => ({ date: new Date(d.date), description: d.description || "TBD" }))
 		.filter((d) => d.date >= today);
