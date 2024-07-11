@@ -87,11 +87,21 @@
 	{:else}
 		<table>
 			<tbody>
-				{#each data as { date, description }}
+				{#each data.future as { date, description }}
 					<tr><td style="min-width: 6em;">{formatDate(date)}</td><td>{description}</td></tr>
 				{/each}
 			</tbody>
 		</table>
+		<details>
+			<summary>Past shows</summary>
+			<table>
+				<tbody>
+					{#each data.past as { date, description }}
+						<tr><td style="min-width: 6em;">{formatDate(date)}</td><td>{description}</td></tr>
+					{/each}
+				</tbody>
+			</table>
+		</details>
 	{/if}
 	<p>
 		Email Jenny Rubin at <a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information

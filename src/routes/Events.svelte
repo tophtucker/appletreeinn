@@ -13,7 +13,7 @@
 		{:else if data === null}
 			See <a href="https://instagram.com/appletreeinn">Instagram</a> for live music updates.
 		{:else}
-			{#each data.slice(0, 5) as { date, description }}
+			{#each data.future.slice(0, 5) as { date, description }}
 				<span>{formatDate(date)}: {description} • </span>
 			{/each}
 		{/if}
