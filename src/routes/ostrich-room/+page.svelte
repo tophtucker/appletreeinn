@@ -118,7 +118,7 @@
 
 	.menus {
 		display: grid;
-		grid-template-columns: 8.5fr 5.5fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 1em;
 		width: 100%;
 	}
