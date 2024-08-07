@@ -5,10 +5,10 @@
 	const hour = today.getHours();
 
 	const hours = [
-		[3, [16, 22]],
-		[4, [16, 22]],
-		[5, [16, 22]],
-		[6, [16, 22]]
+		[3, [17, 22]],
+		[4, [17, 22]],
+		[5, [17, 22]],
+		[6, [17, 22]]
 	];
 
 	const currentOpen = hours.find(

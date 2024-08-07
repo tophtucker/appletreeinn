@@ -30,11 +30,10 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
-			<p><s>Ten</s> Eight things to know:</p>
+			<p><s>Ten</s> Seven things to know:</p>
 			<ol>
 				<li>We are open Wednesday – Saturday evenings for both guests and the public.</li>
-				<li>Drinks start at 4 p.m. and food starts at 5 p.m.</li>
-				<li>We close at 10 p.m.</li>
+				<li>We open at 5 p.m. and close at 10 p.m.</li>
 				<li>
 					We have live music twice a week — Wednesdays & Saturdays — from approximately 7:30–9:30
 					p.m. (see <a href="#calendar">schedule</a>).
