@@ -4,6 +4,7 @@
 	const day = today.getDay();
 	const hour = today.getHours();
 
+	// Keep in sync with Banner.svelte message
 	const hours = [
 		[3, [17, 22]],
 		[4, [17, 22]],
