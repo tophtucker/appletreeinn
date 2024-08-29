@@ -30,6 +30,7 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
+			<div style="background: var(--tan); border: 1px solid var(--brown); border-radius: 5px; padding: 0.5em 0.75em;">The Ostrich Room will be closed September 4–7 for a private event. We’ll reopen on Wed., September 11.</div>
 			<p><s>Ten</s> Seven things to know:</p>
 			<ol>
 				<li>We are open Wednesday – Saturday evenings for both guests and the public.</li>
