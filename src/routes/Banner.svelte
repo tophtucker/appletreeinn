@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	// Keep in sync with OpenSign.svelte hours
-    const message = 'OSTRICH ROOM OPEN WED — SAT FROM 5 - 10 PM ... LIVE MUSIC WED & SAT STARTS 7:30 PM';
+    const message = 'OSTRICH ROOM CLOSED ALL LABOR DAY WEEK, BACK WED. SEP. 11 WITH FALL MENU';
     const chars = message.toUpperCase().split('');
 	onMount(() => {
         const charWidth = 14;

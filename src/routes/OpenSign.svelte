@@ -12,7 +12,19 @@
 		[6, [17, 22]]
 	];
 
-	const currentOpen = hours.find(
+	// These dates override the open times
+	const closures = [
+		new Date(2024, 8, 4),
+		new Date(2024, 8, 5),
+		new Date(2024, 8, 6),
+		new Date(2024, 8, 7),
+	];
+
+	function isClosure(date) {
+		return !!closures.find(c => +c === +(new Date(date.getFullYear(), date.getMonth(), date.getDate())));
+	}
+
+	const currentOpen = !isClosure(today) && hours.find(
 		([openDay, [openHour, closeHour]]) => day === openDay && hour >= openHour && hour < closeHour
 	);
 
@@ -29,9 +41,14 @@
 				hour: 'numeric',
 				hour12: true
 			}).format(date);
-		} else {
+		} else if (date < new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7)) {
 			return new Intl.DateTimeFormat('en-US', {
 				weekday: 'short'
+			}).format(date);
+		} else {
+			return new Intl.DateTimeFormat('en-US', {
+				month: 'numeric',
+				day: 'numeric'
 			}).format(date);
 		}
 	}
@@ -42,14 +59,16 @@
 		const currentHour = now.getHours();
 
 		// Find the next opening time
-		for (let i = 0; i < 7; i++) {
+		for (let i = 0; i < 14; i++) {
 			const dayIndex = (currentDay + i) % 7;
-			const opening = hours.find(([day]) => day === dayIndex);
+			const opening = !isClosure(new Date(now.getFullYear(), now.getMonth(), now.getDate() + i))
+				&& hours.find(([day]) => day === dayIndex);
+			
 			if (opening) {
 				const [day, [openHour]] = opening;
 				if (i === 0 && currentHour < openHour) {
-					// Today but later
 					const nextOpening = new Date();
+					// Today but later
 					nextOpening.setHours(openHour, 0, 0, 0);
 					return nextOpening;
 				} else if (i > 0) {
@@ -68,7 +87,7 @@
 {#if isET}
 	{#if currentOpen}
 		<div class="neon open" title={`Open until ${currentOpen[1][1] - 12}`}>OPEN</div>
-	{:else}
+	{:else if nextOpen}
 		<div class="neon">Opens {formatFutureDate(nextOpen)}</div>
 	{/if}
 {/if}
