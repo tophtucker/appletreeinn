@@ -28,8 +28,4 @@
 		padding-right: 0.5em;
         vertical-align: top;
 	}
-	thead td {
-		padding-bottom: 0.5em;
-		text-transform: uppercase;
-	}
 </style>
