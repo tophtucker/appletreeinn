@@ -3,6 +3,7 @@
 	import Footer from '../Footer.svelte';
 	import Slideshow from '../Slideshow.svelte';
 	import { loadEvents, formatDate } from '$lib/index.js';
+	import OpenSignBig from '../OpenSignBig.svelte';
 
 	let data = $state(undefined);
 	(async function () {
@@ -30,29 +31,19 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
-			<div style="background: var(--tan); border: 1px solid var(--brown); border-radius: 5px; padding: 0.5em 0.75em;">The Ostrich Room will be closed September 4–7 for a private event. We’ll reopen on Wed., September 11.</div>
-			<p><s>Ten</s> Seven things to know:</p>
+			<h2>Hours</h2>
+			<OpenSignBig />
+			<h2>Five things to know</h2>
 			<ol>
-				<li>We are open Wednesday – Saturday evenings for both guests and the public.</li>
-				<li>We open at 5 p.m. and close at 10 p.m.</li>
-				<li>
-					We have live music twice a week — Wednesdays & Saturdays — from approximately 7:30–9:30
-					p.m. (see <a href="#calendar">schedule</a>).
-				</li>
-				<li>
-					We do not take reservations & we do not keep a wait list. All tables are first come, first
-					serve, including for hotel guests!
-				</li>
-				<li>If you snag a table in the Ostrich Room, we offer full waiter service.</li>
-				<li>
-					You can also find a spot to sit in the lobby, on the front porch, or outside on the picnic
-					tables and then come in and order at the bar. Take your drinks with you and we’ll bring
-					the food out to you when it’s ready. We will bus your table when you’re done.
-				</li>
-				<li>
-					Life is a work in progress! All of the above may change in the future! Thank you for being
-					here!
-				</li>
+<li>We do not take reservations and we do not keep a wait list. All tables are “first come, first served”, including for hotel guests.</li>
+<li>If you sit in the Ostrich Room, we will come to your table to take your order.</li>
+<li>If you want to sit elsewhere, please order at the bar. Take your drinks with you, and we’ll bring the food.
+	<ul>
+		<li>Feel free to sit in the lobby, on the porch, or outside at the picnic tables. It’s a nice view!</li>
+	</ul>
+</li>
+<li>We will clear your table when you’re done.</li>
+<li>Life is a work in progress! All this may change! Thank you for being here!</li>
 			</ol>
 			<p>
 				Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards
@@ -112,13 +103,13 @@
 <Footer />
 
 <style>
-	h1 {
-		margin-bottom: 0;
+	h2 {
+		margin: 1em 0 0.5em 0;
 	}
 
 	.menus {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1.305fr 1fr;
 		gap: 1em;
 		width: 100%;
 	}

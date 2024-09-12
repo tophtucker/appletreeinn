@@ -1,24 +1,10 @@
 <script>
+	import {hours, closures} from "$lib/index.js";
+	
 	const isET = Intl.DateTimeFormat().resolvedOptions().timeZone === 'America/New_York';
 	const today = new Date();
 	const day = today.getDay();
 	const hour = today.getHours();
-
-	// Keep in sync with Banner.svelte message
-	const hours = [
-		[3, [17, 22]],
-		[4, [17, 22]],
-		[5, [17, 22]],
-		[6, [17, 22]]
-	];
-
-	// These dates override the open times
-	const closures = [
-		new Date(2024, 8, 4),
-		new Date(2024, 8, 5),
-		new Date(2024, 8, 6),
-		new Date(2024, 8, 7),
-	];
 
 	function isClosure(date) {
 		return !!closures.find(c => +c === +(new Date(date.getFullYear(), date.getMonth(), date.getDate())));

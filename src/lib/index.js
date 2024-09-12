@@ -2,6 +2,24 @@
 // e.g. import { buildings } from '$lib/index.js';
 import { csvParse } from 'd3-dsv';
 
+// Keep in sync with Banner.svelte message
+export const hours = [
+	[3, [17, 21]],
+	[4, [17, 21]],
+	[5, [17, 22]],
+	[6, [17, 23]]
+];
+
+export const musicHours = [
+	[3, ["6:30", "8:30"]],
+	[6, ["8:30", "10:30"]]
+]
+
+// These dates override the open times
+export const closures = [
+	// new Date(2024, 8, 4),
+];
+
 export async function loadEvents() {
 	let sheet;
 	try {
@@ -16,9 +34,11 @@ export async function loadEvents() {
 	}
 	const now = new Date();
 	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1); // todo: more robust
-	const data = csvParse(sheet)
-		.map((d) => ({ date: new Date(d.date), description: d.description || "TBD" }))
-	return {past: data.filter(d => d.date < today), future: data.filter((d) => d.date >= today)};
+	const data = csvParse(sheet).map((d) => ({
+		date: new Date(d.date),
+		description: d.description || 'TBD'
+	}));
+	return { past: data.filter((d) => d.date < today), future: data.filter((d) => d.date >= today) };
 }
 
 export const formatDate = (date) =>
