@@ -28,4 +28,7 @@
 		padding-right: 0.5em;
         vertical-align: top;
 	}
+    td:nth-child(2) {
+        min-width: 5em;
+    }
 </style>
