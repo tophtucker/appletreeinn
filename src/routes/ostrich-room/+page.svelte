@@ -2,8 +2,13 @@
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
 	import Slideshow from '../Slideshow.svelte';
-	import { loadEvents, formatDate } from '$lib/index.js';
+	import { musicHours, loadEvents, formatDate } from '$lib/index.js';
 	import OpenSignBig from '../OpenSignBig.svelte';
+
+	const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+	const musicDesc = musicHours
+		.map(([day, hours]) => `${daysOfWeek[day]}s ~${hours.join('–')}`)
+		.join(' and ');
 
 	let data = $state(undefined);
 	(async function () {
@@ -35,15 +40,23 @@
 			<OpenSignBig />
 			<h2>Five things to know</h2>
 			<ol>
-<li>We do not take reservations and we do not keep a wait list. All tables are “first come, first served”, including for hotel guests.</li>
-<li>If you sit in the Ostrich Room, we will come to your table to take your order.</li>
-<li>If you want to sit elsewhere, please order at the bar. Take your drinks with you, and we’ll bring the food.
-	<ul>
-		<li>Feel free to sit in the lobby, on the porch, or outside at the picnic tables. It’s a nice view!</li>
-	</ul>
-</li>
-<li>We will clear your table when you’re done.</li>
-<li>Life is a work in progress! All this may change! Thank you for being here!</li>
+				<li>
+					We do not take reservations and we do not keep a wait list. All tables are “first come,
+					first served”, including for hotel guests.
+				</li>
+				<li>If you sit in the Ostrich Room, we will come to your table to take your order.</li>
+				<li>
+					If you want to sit elsewhere, please order at the bar. Take your drinks with you, and
+					we’ll bring the food.
+					<ul>
+						<li>
+							Feel free to sit in the lobby, on the porch, or outside at the picnic tables. It’s a
+							nice view!
+						</li>
+					</ul>
+				</li>
+				<li>We will clear your table when you’re done.</li>
+				<li>Life is a work in progress! All this may change! Thank you for being here!</li>
 			</ol>
 			<p>
 				Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards
@@ -64,10 +77,8 @@
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
-		Live music goes from around 7:30 to around 9:30 p.m. on Wednesdays and Saturdays. Shows are
-		subject to change… the farther out, the more subject! See <a
-			href="https://instagram.com/appletreeinn">Instagram</a
-		> for previews and updates.
+		We have live music {musicDesc} p.m. Shows are subject to change… the farther out, the more subject!
+		See <a href="https://instagram.com/appletreeinn">Instagram</a> for previews and updates.
 	</p>
 	{#if data === undefined}
 		<div style="padding-bottom: 20em;">Loading music calendar…</div>

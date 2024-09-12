@@ -10,14 +10,14 @@ export const hours = [
 	[6, [17, 23]]
 ];
 
-export const musicHours = [
-	[3, ["6:30", "8:30"]],
-	[6, ["8:30", "10:30"]]
-]
-
 // These dates override the open times
 export const closures = [
 	// new Date(2024, 8, 4),
+];
+
+export const musicHours = [
+	[3, ['6:30', '8:30']],
+	[6, ['8:30', '10:30']]
 ];
 
 export async function loadEvents() {
