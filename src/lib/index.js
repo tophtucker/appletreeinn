@@ -15,10 +15,10 @@ export const closures = [
 	// new Date(2024, 8, 4),
 ];
 
-export const musicHours = [
-	[3, ['6:30', '8:30']],
-	[6, ['8:30', '10:30']]
-];
+// export const musicHours = [
+// 	[3, ['6:30', '8:30']],
+// 	[6, ['8:30', '10:30']]
+// ];
 
 export async function loadEvents() {
 	let sheet;

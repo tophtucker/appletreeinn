@@ -2,13 +2,8 @@
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
 	import Slideshow from '../Slideshow.svelte';
-	import { musicHours, loadEvents, formatDate } from '$lib/index.js';
+	import { loadEvents, formatDate } from '$lib/index.js';
 	import OpenSignBig from '../OpenSignBig.svelte';
-
-	const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-	const musicDesc = musicHours
-		.map(([day, hours]) => `${daysOfWeek[day]}s ~${hours.join('–')}`)
-		.join(' and ');
 
 	let data = $state(undefined);
 	(async function () {
@@ -36,7 +31,7 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
-			<h2>Hours</h2>
+			<!-- <h2>Hours</h2> -->
 			<OpenSignBig />
 			<h2>Five things to know</h2>
 			<ol>
@@ -77,7 +72,7 @@
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
-		We have live music {musicDesc} p.m. Shows are subject to change… the farther out, the more subject!
+		Shows are subject to change… the farther out, the more subject!
 		See <a href="https://instagram.com/appletreeinn">Instagram</a> for previews and updates.
 	</p>
 	{#if data === undefined}
