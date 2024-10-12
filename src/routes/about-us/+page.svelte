@@ -36,7 +36,7 @@
 			<p>
 				She lives on the property with her husband, Toph, who works remotely for a <a
 					href="https://observablehq.com">different job</a
-				> but does run social media for the hotel and is making this website right now.
+				> but does some social media for the hotel and is making this website right now.
 			</p>
 		</div>
 		<img src="./heropics/claire-toph.jpg" alt="Claire and Toph" />

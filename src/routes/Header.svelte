@@ -2,14 +2,24 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import OpenSign from './OpenSign.svelte';
+	import {ostrichRoom, baladi} from '$lib/index.js';
 
 	const BOOKING_URL = 'https://appletreeinn.book.pegsbe.com/';
 	const pages = [
 		{ pathname: '/', title: 'Home', mobileNav: true },
 		{
+			pathname: '/baladi',
+			title: 'Baladi',
+			eyebrow: 'Brunch',
+			img: '/img/baladi-icon.jpg',
+			mobileNav: true,
+			desktopNav: true
+		},
+		{
 			pathname: '/ostrich-room',
 			title: 'Ostrich Room',
-			img: '/img/ostrich-egg.jpg',
+			eyebrow: 'Dinner',
+			img: '/img/cocktail.jpg',
 			mobileNav: true,
 			desktopNav: true
 		},
@@ -55,12 +65,17 @@
 		<img src="/logo.svg" height="200" alt="The Apple Tree Inn" />
 	</a>
 	<div class="links">
-		{#each desktopNav as { pathname, title, img }}
+		{#each desktopNav as { pathname, title, img, eyebrow }}
 			<a href={pathname} class={`thumbnail ${$page.url.pathname === pathname ? 'current' : ''}`}>
+				{#if eyebrow}
+				<div class="eyebrow">{eyebrow}</div>
+				{/if}
 				<img src={img} alt={title} />
-				{title}
+				<span style="min-height: 46px;">{title}</span>
 				{#if title === "Ostrich Room"}
-					<OpenSign />
+					<OpenSign data={ostrichRoom} />
+				{:else if title === "Baladi"}
+					<OpenSign data={baladi} />
 				{/if}
 			</a>
 		{/each}
@@ -87,6 +102,16 @@
 
 	.current img {
 		border-width: 2px;
+	}
+
+	.eyebrow {
+		font-weight: normal;
+		font-size: 14px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		position: absolute; 
+		top: -30px;
+		color: #999;
 	}
 
 	header {

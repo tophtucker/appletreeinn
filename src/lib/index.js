@@ -2,23 +2,27 @@
 // e.g. import { buildings } from '$lib/index.js';
 import { csvParse } from 'd3-dsv';
 
-// Keep in sync with Banner.svelte message
-export const hours = [
-	[3, [17, 21]],
-	[4, [17, 21]],
-	[5, [17, 22]],
-	[6, [17, 23]]
-];
+export const ostrichRoom = {
+	hours: [
+		[3, [17, 21]],
+		[4, [17, 21]],
+		[5, [17, 22]],
+		[6, [17, 23]]
+	],
+	closures: [
+		// new Date(2024, 8, 4),
+	]
+};
 
-// These dates override the open times
-export const closures = [
-	// new Date(2024, 8, 4),
-];
-
-// export const musicHours = [
-// 	[3, ['6:30', '8:30']],
-// 	[6, ['8:30', '10:30']]
-// ];
+export const baladi = {
+	hours: [
+		[6, [9, 14]],
+		[0, [9, 14]]
+	],
+	closures: [
+		// new Date(2024, 8, 4),
+	]
+};
 
 export async function loadEvents() {
 	let sheet;

@@ -1,5 +1,7 @@
 <script>
-	import {hours, closures} from "$lib/index.js";
+	// import {hours, closures} from "$lib/index.js";
+	let { data } = $props();
+	const { hours, closures } = data;
 	
 	const isET = Intl.DateTimeFormat().resolvedOptions().timeZone === 'America/New_York';
 	const today = new Date();

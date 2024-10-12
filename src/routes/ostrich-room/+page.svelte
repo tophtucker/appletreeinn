@@ -2,12 +2,12 @@
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
 	import Slideshow from '../Slideshow.svelte';
-	import { loadEvents, formatDate } from '$lib/index.js';
+	import { loadEvents, formatDate, ostrichRoom } from '$lib/index.js';
 	import OpenSignBig from '../OpenSignBig.svelte';
 
-	let data = $state(undefined);
+	let events = $state(undefined);
 	(async function () {
-		data = await loadEvents();
+		events = await loadEvents();
 	})();
 
 	const pics = [
@@ -21,7 +21,7 @@
 	<title>The Ostrich Room • Apple Tree Inn • Lenox, MA</title>
 	<meta
 		name="description"
-		content="The Ostrich Room is open for drinks and food Wed.–Sat., 4–10 pm, with live music on Wed. and Sat., at the Apple Tree Inn"
+		content="The Ostrich Room is open for drinks and food (and often live music) Wed.–Sat. at the Apple Tree Inn"
 	/>
 </svelte:head>
 
@@ -31,8 +31,7 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
-			<!-- <h2>Hours</h2> -->
-			<OpenSignBig />
+			<OpenSignBig data={ostrichRoom} {events} />
 			<h2>Five things to know</h2>
 			<ol>
 				<li>
@@ -72,19 +71,20 @@
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
-		Shows are subject to change… the farther out, the more subject!
-		See <a href="https://instagram.com/appletreeinn">Instagram</a> for previews and updates.
+		Shows are subject to change… the farther out, the more subject! See <a
+			href="https://instagram.com/appletreeinn">Instagram</a
+		> for previews and updates.
 	</p>
-	{#if data === undefined}
+	{#if events === undefined}
 		<div style="padding-bottom: 20em;">Loading music calendar…</div>
-	{:else if data === null}
+	{:else if events === null}
 		We can’t load the events calendar right now. Try again in a minute or see our <a
 			href="https://instagram.com/appletreeinn">Instagram</a
 		> for posts about upcoming shows.
 	{:else}
 		<table>
 			<tbody>
-				{#each data.future as { date, description }}
+				{#each events.future as { date, description }}
 					<tr><td style="min-width: 6em;">{formatDate(date)}</td><td>{description}</td></tr>
 				{/each}
 			</tbody>
@@ -93,7 +93,7 @@
 			<summary>Past shows</summary>
 			<table>
 				<tbody>
-					{#each data.past as { date, description }}
+					{#each events.past as { date, description }}
 						<tr><td style="min-width: 6em;">{formatDate(date)}</td><td>{description}</td></tr>
 					{/each}
 				</tbody>
