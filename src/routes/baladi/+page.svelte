@@ -31,7 +31,7 @@
 			<OpenSignBig data={baladi} />
 			<p>
 				Baladi (<em><small>BALL</small>-ah-dee</em>, بلدي, Arabic for “local”) is our new brunch
-				restaurant featuring the Mediterranean food our husband–wife team of Hagai and Adi have
+				restaurant featuring the Mediterranean food that our husband–wife team of Hagai and Adi have
 				always loved cooking for themselves.
 			</p>
 			<p>
