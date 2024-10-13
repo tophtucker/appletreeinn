@@ -46,12 +46,11 @@
 		<img src="./heropics/christian.jpg" alt="Christian and Max" style="order: 1" />
 		<div style="order: 2">
 			<p>
-				Christian is Claire’s right-hand man; one of the two of them will probably check you in. He
-				followed us out here from the Boston area to escape the office desk job life and try
-				something different, and judging from some of the stuff we’ve got him doing (climbing
-				ladders to update security cameras or cleaning up bird poop), we bet we have achieved
-				“different”. His mom is in Toph’s mom’s book group and has always worked at bookstores,
-				which is how she met Christian’s dad. Christian is currently reading:
+				Christian is Claire’s right-hand man. He followed us out here from the Boston area to escape
+				the office desk job life and try something different, and judging from some of the stuff
+				we’ve got him doing (climbing ladders to update security cameras or cleaning up bird poop),
+				we bet we have achieved “different”. His mom is in Toph’s mom’s book group and has always
+				worked at bookstores, which is how she met Christian’s dad. Christian is currently reading:
 			</p>
 			<ul>
 				<li><em>The Year of the Locust</em>, by Terry Hayes</li>
@@ -107,7 +106,7 @@
 		<img src="./img/nic.png" alt="Nic" />
 		<p>
 			Nic (bartender), also born and raised somewhere around here, is an interior designer by day.
-			Ask him about boating around the lake, how his parents professional skiers, or how to navigate
+			Ask him about boating around the lake, his parents’ professional ski careers, or navigating
 			the Tanglewood ticket counter.
 		</p>
 	</div>
@@ -120,7 +119,9 @@
 		<img src="./heropics/staff2.jpg" alt="Bar crew" />
 		<figcaption>
 			June 1: Bar crew on opening night. Left to right: Kari, Finn, Rory, Giovanna, Danny, and
-			Claire. Not a single person came!
+			Claire. Danny had gotten us these branded hats and totally redecorated behind the bar.
+			(Previously it had some contemporary art; he went to local flea markets for like two months to
+			find new-old stuff for it.) Not a single customer came!
 		</figcaption>
 	</figure>
 
