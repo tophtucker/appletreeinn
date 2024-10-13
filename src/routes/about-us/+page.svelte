@@ -1,12 +1,6 @@
 <script>
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
-	import Slideshow from '../Slideshow.svelte';
-
-	const pics = [
-		{ src: './heropics/staff1.jpg', title: 'Staff barbecue' },
-		{ src: './heropics/staff2.jpg', title: 'Bar crew opening night' }
-	];
 </script>
 
 <svelte:head>
