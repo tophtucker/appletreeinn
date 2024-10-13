@@ -67,13 +67,103 @@
 		</div>
 	</div>
 	<hr />
-	<Slideshow {pics} />
-	<p>
-		Above, see our staff barbecue and bar crew opening night, featuring the other people you might
-		see around with some of their families: Memo and Demetrio on maintenance, Karla on housekeeping,
-		Giovanna and Nic bartending, Finn and Rory as their barbacks, Kari on food and beverage
-		operations, and Danny arranging and decorating the space.
-	</p>
+
+	<div class="bios">
+		<img src="./img/abby.jpg" alt="Abby" />
+		<p>
+			Abby (front desk) grew up like a mile from here; she went to Lenox High and UMass Amherst,
+			where she played soccer. We think maybe she likes Disney movies but we’re not sure. Her
+			brother goes by “Toph” but weirdly she didn’t even tell our Toph for like two months.
+		</p>
+		<div style="height: 140px; position: relative;">
+			<img
+				src="./img/hagai.png"
+				alt="Hagai"
+				style="width: 90px; position: absolute; top: 0; left: 0;"
+			/>
+			<img
+				src="./img/adi.png"
+				alt="Adi"
+				style="width: 90px; position: absolute; bottom: 0; right: 0; border: 1px solid white;"
+			/>
+		</div>
+		<p>
+			Hagai and Adi (chefs) moved here from Israel a couple years ago. Hagai’s been doing dinner in
+			the Ostrich Room since the start of the summer, and now Adi is coming aboard for our new
+			brunch restaurant, Baladi. Hagai once bought a didgeridoo in Australia and lugged it all over
+			the world and has learned to play a little bit.
+		</p>
+		<img src="./img/sean.jpg" alt="Sean" />
+		<p>
+			Sean (bar manager) just started so Toph doesn’t know much about him as of writing this but idk
+			he seems great.
+		</p>
+		<img src="./img/giovanna.png" alt="Giovanna" />
+		<p>
+			Giovanna (bartender) studied linguistics and teaches literacy to kids in North Adams; ask her
+			about phonemes and stuff. Or Aquinas. Or her dogs. Or how much she loves the cows at High
+			Lawn. Or the Death & Co. cocktail book.
+		</p>
+		<img src="./img/nic.png" alt="Nic" />
+		<p>
+			Nic (bartender), also born and raised somewhere around here, is an interior designer by day.
+			Ask him about boating around the lake, how his parents professional skiers, or how to navigate
+			the Tanglewood ticket counter.
+		</p>
+	</div>
+
+	<hr />
+
+	<h2>Scrapbook</h2>
+
+	<figure>
+		<img src="./heropics/staff2.jpg" alt="Bar crew" />
+		<figcaption>
+			June 1: Bar crew on opening night. Left to right: Kari, Finn, Rory, Giovanna, Danny, and
+			Claire. Not a single person came!
+		</figcaption>
+	</figure>
+
+	<figure>
+		<img src="./heropics/staff1.jpg" alt="Staff barbecue" />
+		<figcaption>
+			June 10: Staff barbecue with some staff and their families, including Memo and Demetrio
+			(maintenance), Karla (housekeeping), Kari, Giovanna, and Nic (bar), Danny (“opening
+			consultant”), Christian, and Claire.
+		</figcaption>
+	</figure>
 </div>
 
 <Footer />
+
+<style>
+	.bios {
+		display: grid;
+		grid-template-columns: 130px 1fr;
+		gap: 1em;
+	}
+	.bios img {
+		border-radius: 100%;
+	}
+
+	.bios p {
+		margin: 0;
+	}
+
+	figure {
+		margin: 2em 0;
+		max-width: 960px;
+	}
+
+	figcaption {
+		max-width: 640px;
+	}
+
+	@media (max-width: 640px) {
+		.bios {
+			display: grid;
+			grid-template-columns: 60px 1fr;
+			gap: 1em;
+		}
+	}
+</style>
