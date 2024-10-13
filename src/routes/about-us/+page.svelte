@@ -132,6 +132,14 @@
 			consultant”), Christian, and Claire.
 		</figcaption>
 	</figure>
+
+	<p>
+		<a href="https://www.instagram.com/reel/C8afucjujq-/"
+			>June 19: Introducing the bar crew on the first day of live music</a
+		>
+	</p>
+
+	<p><a href="https://www.instagram.com/p/DA3wc94ObOt/">October 8: Repainting the house</a></p>
 </div>
 
 <Footer />
