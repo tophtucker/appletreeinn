@@ -59,7 +59,7 @@ export const buildings = [
 		id: 'main-house',
 		title: 'Main House',
 		img: 'heropics/main-house.jpg',
-		desc: 'Built in 1885, the three-story main house includes our front desk, breakfast room, and weekend tavern. Every room is unique. Guest rooms are on the second and third floor, and there is no elevator.',
+		desc: 'Built in 1885, the three-story main house includes our front desk, Baladi, and the Ostrich Room. Every room is unique. Guest rooms are on the second and third floor, and there is no elevator.',
 		building: 'main-house',
 		rooms: [
 			{

@@ -16,7 +16,8 @@
 			<ul>
 				<li>beautiful views & grounds,</li>
 				<li>hidden gem pool,</li>
-				<li>wood-paneled <a href="/ostrich-room">tavern</a> (open for food & drinks Wed. – Sat. with live music twice a week),</li>
+				<li>wood-paneled <a href="/ostrich-room">tavern</a> (Wed. – Sat.) with frequent live music,</li>
+				<li>weekend <a href="/baladi">brunch restaurant</a> overlooking the hills,</li>
 				<li>luxurious bedding, and</li>
 				<li>location walking distance to Tanglewood and Kripalu.</li>
 			</ul>
