@@ -16,10 +16,13 @@
 		return events?.future.filter(({ date }) => +date === +nextDay) ?? [];
 	};
 
-	// const collapsible = hours.every(([day, range]) => range.every((hour, i) => hour === hours[0][1][i]));
-	// console.log({collapsible});
+	const collapsible = hours.every(([day, range]) => range.every((hour, i) => hour === hours[0][1][i]));
+	console.log({collapsible});
 </script>
 
+{#if collapsible}
+<div class="hours">Hours: {hours.map(d => `${daysOfWeek[d[0]]}.`).join(" & ")}, {formatTimeRange(hours[0][1])}</div>
+{:else}
 <table class="hours">
 	<thead>
 		<tr>
@@ -46,6 +49,7 @@
 		{/each}
 	</tbody>
 </table>
+{/if}
 
 <style>
 	.hours {

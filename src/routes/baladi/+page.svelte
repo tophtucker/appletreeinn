@@ -29,6 +29,7 @@
 		<div>
 			<h1>Baladi</h1>
 			<OpenSignBig data={baladi} />
+			<p style="margin-top: 0;">Reservations: Call 413-717-9522</p>
 			<p>
 				Baladi (<em><small>BALL</small>-ah-dee</em>, بلدي, Arabic for “local”) is our new brunch
 				restaurant featuring the Mediterranean food that our husband–wife team of Hagai and Adi have
