@@ -11,6 +11,7 @@
 	})();
 
 	const pics = [
+		{ src: './ostrich-room/IMG_8470.jpg', title: 'Live music in the Ostrich Room' },
 		{ src: './heropics/ostrich2.jpg', title: 'The Ostrich Room' },
 		{ src: './heropics/ostrich3.jpg', title: 'The Ostrich Room' },
 		{ src: './heropics/ostrich4.jpg', title: 'The Ostrich Room' }

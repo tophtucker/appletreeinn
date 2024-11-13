@@ -1,11 +1,16 @@
 <script>
 	import Slideshow from './Slideshow.svelte';
 	const pics = [
-		{ src: './heropics/exterior.jpg', title: 'The Apple Tree Inn, viewed from the air' },
-		{ src: './heropics/pool1.jpg', title: 'The pool' },
-		{ src: './heropics/ostrich2.jpg', title: 'The Ostrich Room, our tavern' },
+		{ src: './heropics/view2.jpg', title: 'The view' },
+		{ src: './ostrich-room/P8243018.JPG', title: 'The Ostrich Room, our tavern' },
+		{ src: './baladi/IMG_0268.jpg', title: 'Brunch at Baladi' },
+		{ src: './heropics/drone-repainted.jpg', title: 'The Apple Tree Inn, viewed from the air' },
 		{ src: './roompics/main-house/8/_XCS2672.jpg', title: 'Room 8' },
-		{ src: './heropics/view1.jpg', title: 'The view from the lawn' }
+		{ src: './heropics/fire-pit.jpg', title: 'The fire pit' },
+		// { src: './heropics/view1.jpg', title: 'The view from the lawn' },
+		{ src: './heropics/max.jpg', title: 'Max, the hotel dog, but really Christian’s' },
+		{ src: './heropics/pool1.jpg', title: 'The pool' }
+		// { src: './heropics/exterior.jpg', title: 'The Apple Tree Inn, viewed from the air' }
 	];
 </script>
 

@@ -16,7 +16,7 @@
 	}
 </script>
 
-<div class="slideshow" style={`aspect-ratio: ${aspectRatio}`}>
+<figure class="slideshow" style={`aspect-ratio: ${aspectRatio}`}>
 	<img src={pic.src} alt={pic.title} loading="lazy" style={`object-fit: ${objectFit}`} />
 	{#if pics.length > 1}
 		<div class={`controls ${side}`}>
@@ -24,10 +24,14 @@
 			<button onclick={next}>→</button>
 		</div>
 	{/if}
-</div>
+	{#if pic.caption}
+		<figcaption>{@html pic.caption}</figcaption>
+	{/if}
+</figure>
 
 <style>
 	.slideshow {
+		margin: 0;
 		position: relative;
 	}
 	.slideshow.square {
@@ -50,5 +54,22 @@
 	.controls.top {
 		top: 1em;
 		left: 1em;
+	}
+	figcaption {
+		position: absolute;
+		left: 1em;
+		bottom: 1em;
+		color: var(--brown);
+		font-family: sans-serif;
+		font-size: smaller;
+		margin-top: 0.25em;
+		background: rgb(255, 255, 255, 1);
+		border: 1px solid var(--brown);
+		padding: 4px 8px;
+		border-radius: 4px;
+		margin-right: 120px;
+	}
+	figcaption a {
+		color: inherit;
 	}
 </style>

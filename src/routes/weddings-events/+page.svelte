@@ -3,7 +3,44 @@
 	import Footer from '../Footer.svelte';
 	import Slideshow from '../Slideshow.svelte';
 
-	const pics = [{ src: './heropics/lawn.jpg', title: 'The main lawn' }];
+	const pics = [
+		{
+			title: 'Robin and Nat’s wedding, by Leah Freeman Photography',
+			src: './weddings/Robin&Nat_B&G-53.jpg',
+			caption: `Robin and Nat’s wedding, by <a href="https://leahfreemanphotography.com/">Leah Freeman Photography</a>`
+		},
+		{
+			title: 'Robin and Nat’s wedding, by Leah Freeman Photography',
+			src: './weddings/Robin&Nat_B&G-93.jpg',
+			caption: `Robin and Nat’s wedding, by <a href="https://leahfreemanphotography.com/">Leah Freeman Photography</a>`
+		},
+		{
+			title: 'Robin and Nat’s wedding, by Leah Freeman Photography',
+			src: './weddings/Robin&Nat_B&G-206.jpg',
+			caption: `Robin and Nat’s wedding, by <a href="https://leahfreemanphotography.com/">Leah Freeman Photography</a>`
+		},
+		{
+			title: 'Robin and Nat’s wedding, by Leah Freeman Photography',
+			src: './weddings/Robin&Nat_Prep-82.jpg',
+			caption: `Robin and Nat’s wedding, by <a href="https://leahfreemanphotography.com/">Leah Freeman Photography</a>`
+		},
+		{
+			title: 'Robin and Nat’s wedding, by Leah Freeman Photography',
+			src: './weddings/Robin&Nat_Prep-125.jpg',
+			caption: `Robin and Nat’s wedding, by <a href="https://leahfreemanphotography.com/">Leah Freeman Photography</a>`
+		},
+		{
+			title: 'Robin and Nat’s wedding, by Leah Freeman Photography',
+			src: './weddings/Robin&Nat_Reception-1.jpg',
+			caption: `Robin and Nat’s wedding, by <a href="https://leahfreemanphotography.com/">Leah Freeman Photography</a>`
+		},
+		{
+			title: 'Robin and Nat’s wedding, by Leah Freeman Photography',
+			src: './weddings/Robin&Nat_Reception-414.jpg',
+			caption: `Robin and Nat’s wedding, by <a href="https://leahfreemanphotography.com/">Leah Freeman Photography</a>`
+		},
+		{ src: './heropics/lawn.jpg', title: 'The main lawn' }
+	];
 </script>
 
 <svelte:head>
