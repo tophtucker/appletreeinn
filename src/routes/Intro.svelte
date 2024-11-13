@@ -35,7 +35,6 @@
 		border-radius: 5px;
 		border: 1px solid var(--brown);
 		overflow: hidden;
-		margin-bottom: 1em;
 	}
 
 	.intro article {
