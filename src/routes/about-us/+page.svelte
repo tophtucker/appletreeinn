@@ -109,11 +109,19 @@
 
 	<h2>Scrapbook</h2>
 
+	<p>
+		<a
+			href="https://www.berkshireeagle.com/news/central_berkshires/historic-lenox-inn-has-a-new-owner-who-is-keen-on-fulfilling-her-dream/article_d19dd82e-fdaf-11ee-909e-77af370eac17.html"
+			>April 22: Claire’s first Berkshire Eagle article!</a
+		> Reporter Clarence Fanto came by the day after she took over, when it was still quiet and cold and
+		the Ostrich Room was still far from reopening.
+	</p>
+
 	<figure>
 		<img src="./heropics/staff2.jpg" alt="Bar crew" />
 		<figcaption>
 			June 1: Bar crew on opening night. Left to right: Kari, Finn, Rory, Giovanna, Danny, and
-			Claire. Danny had gotten us these branded hats and totally redecorated behind the bar.
+			Claire. Danny had gotten us these sick branded hats and totally redecorated behind the bar.
 			(Previously it had some contemporary art; he went to local flea markets for like two months to
 			find new-old stuff for it.) Not a single customer came!
 		</figcaption>
@@ -135,6 +143,22 @@
 	</p>
 
 	<p><a href="https://www.instagram.com/p/DA3wc94ObOt/">October 8: Repainting the house</a></p>
+
+	<figure>
+		<img src="./heropics/staff3.jpg" alt="Baladi staff" />
+		<figcaption>
+			October 13: The first day of Baladi brunch! With Adi, Dune, Luke, Armando, Claire, Isaias,
+			Christian, Jaime, and Hagai. It was packed and we fell pretty behind for a bit but we caught
+			up and everyone seemed to have a great time.
+		</figcaption>
+	</figure>
+
+	<p>
+		<a
+			href="https://www.berkshireeagle.com/business/brunch-lenox-mass-baladi/article_b2403f98-8c8f-11ef-84bb-0fdec741df4e.html"
+			>October 18: Our second Berkshire Eagle article!</a
+		> About the opening of Baladi and how the Ostrich Room is going.
+	</p>
 </div>
 
 <Footer />
@@ -160,6 +184,8 @@
 
 	figcaption {
 		max-width: 640px;
+		line-height: 1.4;
+		margin-top: 0.25em;
 	}
 
 	@media (max-width: 640px) {

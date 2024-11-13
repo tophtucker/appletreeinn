@@ -81,7 +81,7 @@ hr {
 }
 
 .inner {
-	padding: 1em var(--gutter);
+	padding: 1em var(--gutter) 2em var(--gutter);
 }
 
 .inner p {

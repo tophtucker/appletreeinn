@@ -78,7 +78,7 @@
 				<p>All rooms have Frette linens and Beekman 1802 bath amenities.</p>
 			</div>
 		</div>
-		<hr />
+		<hr style="margin-bottom: 0" />
 		{#each building.rooms as { room_number, room_name, floor, tags, pics }, i (room_name)}
 			<div class="room">
 				<Slideshow pics={pics.map((src) => ({ src: `roompics/${src}`, title: room_name }))} />
