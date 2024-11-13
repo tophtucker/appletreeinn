@@ -103,6 +103,11 @@
 			Ask him about boating around the lake, his parents’ professional ski careers, or navigating
 			the Tanglewood ticket counter.
 		</p>
+		<img src="./img/peter.png" alt="“Peter”" />
+		<p>
+			Peter (bartender) started recently and I don’t have a photo of him yet but he looks a lot like
+			Luke Wilson (left).
+		</p>
 	</div>
 
 	<hr />
