@@ -53,6 +53,7 @@ button {
 
 h1 {
 	margin: 0;
+	font-weight: normal;
 }
 
 /* h1 + h2 {
@@ -75,6 +76,8 @@ img {
 
 hr {
 	margin: 2em 0;
+	border: none;
+	border-bottom: 1px solid var(--brown);
 }
 
 .inner {
@@ -93,6 +96,14 @@ hr {
 	display: grid;
 	grid-template-columns: 2fr 3fr;
 	gap: 1em;
+}
+
+p {
+	line-height: 1.4;
+}
+
+li {
+	line-height: 1.4;
 }
 
 @media (max-width: 800px) {

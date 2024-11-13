@@ -1,20 +1,23 @@
 <script>
-	// import {hours, closures} from "$lib/index.js";
 	let { data } = $props();
 	const { hours, closures } = data;
-	
+
 	const isET = Intl.DateTimeFormat().resolvedOptions().timeZone === 'America/New_York';
 	const today = new Date();
 	const day = today.getDay();
 	const hour = today.getHours();
 
 	function isClosure(date) {
-		return !!closures.find(c => +c === +(new Date(date.getFullYear(), date.getMonth(), date.getDate())));
+		return !!closures.find(
+			(c) => +c === +new Date(date.getFullYear(), date.getMonth(), date.getDate())
+		);
 	}
 
-	const currentOpen = !isClosure(today) && hours.find(
-		([openDay, [openHour, closeHour]]) => day === openDay && hour >= openHour && hour < closeHour
-	);
+	const currentOpen =
+		!isClosure(today) &&
+		hours.find(
+			([openDay, [openHour, closeHour]]) => day === openDay && hour >= openHour && hour < closeHour
+		);
 
 	const nextOpen = getNextOpen();
 
@@ -49,9 +52,10 @@
 		// Find the next opening time
 		for (let i = 0; i < 14; i++) {
 			const dayIndex = (currentDay + i) % 7;
-			const opening = !isClosure(new Date(now.getFullYear(), now.getMonth(), now.getDate() + i))
-				&& hours.find(([day]) => day === dayIndex);
-			
+			const opening =
+				!isClosure(new Date(now.getFullYear(), now.getMonth(), now.getDate() + i)) &&
+				hours.find(([day]) => day === dayIndex);
+
 			if (opening) {
 				const [day, [openHour]] = opening;
 				if (i === 0 && currentHour < openHour) {
@@ -94,7 +98,7 @@
 	}
 	.neon.open {
 		color: white;
-        border: none;
+		border: none;
 		box-shadow: green 0 0 10px;
 		background: green;
 	}

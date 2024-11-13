@@ -109,7 +109,7 @@
 		font-size: 14px;
 		letter-spacing: 1px;
 		text-transform: uppercase;
-		position: absolute; 
+		position: absolute;
 		top: -30px;
 		color: #999;
 	}

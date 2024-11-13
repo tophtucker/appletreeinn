@@ -9,9 +9,10 @@
 	import Events from './Events.svelte';
 
 	const defaultTab = buildings[0].id;
-	let tab = $state(new URLSearchParams($page.url.search).get("building") || defaultTab);
+	let tab = $state(new URLSearchParams($page.url.search).get('building') || defaultTab);
 	const building = $derived(buildings.find((d) => d.id === tab));
-	const setBuilding = id => void window.history.replaceState(null, '', `/?building=${tab = id}`);
+	const setBuilding = (id) =>
+		void window.history.replaceState(null, '', `/?building=${(tab = id)}`);
 </script>
 
 <svelte:head>
@@ -42,7 +43,7 @@
 				/>
 			</svg>
 			<a href="https://maps.app.goo.gl/vpsxJ5KnzqR1n78q8" target="_blank"
-				><span class="hide-mobile">10 Richmond Mountain Road,{" "}</span>Lenox, MA</a
+				><span class="hide-mobile">10 Richmond Mountain Road,{' '}</span>Lenox, MA</a
 			>
 		</span>
 	</div>
@@ -58,7 +59,10 @@
 		<div class="tabs">
 			<em class="hide-mobile">Choose your building</em>
 			{#each buildings as building (building.id)}
-				<button onclick={() => setBuilding(building.id)} class={`tab ${tab === building.id ? 'active' : ''}`}>
+				<button
+					onclick={() => setBuilding(building.id)}
+					class={`tab ${tab === building.id ? 'active' : ''}`}
+				>
 					{building.title}
 				</button>
 			{/each}
@@ -74,9 +78,10 @@
 				<p>All rooms have Frette linens and Beekman 1802 bath amenities.</p>
 			</div>
 		</div>
+		<hr />
 		{#each building.rooms as { room_number, room_name, floor, tags, pics }, i (room_name)}
 			<div class="room">
-				<Slideshow pics={pics.map(src => ({src: `roompics/${src}`, title: room_name}))} />
+				<Slideshow pics={pics.map((src) => ({ src: `roompics/${src}`, title: room_name }))} />
 				<div>
 					{#if room_number}
 						<small
@@ -159,8 +164,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1em;
-		border-bottom: 1px solid var(--brown);
-		padding-bottom: 1em;
+		margin: 1em 0;
 	}
 
 	.building p {
@@ -181,6 +185,5 @@
 			display: flex;
 			flex-direction: column;
 		}
-		
 	}
 </style>

@@ -62,8 +62,7 @@
 		<Slideshow {pics} />
 	</div>
 	<hr />
-	<h2 id="menus">Sample menus</h2>
-	<p>The menu’s always changing, but here are a couple recent ones for drinks and food.</p>
+	<h2 id="menus">Menus</h2>
 	<div class="menus">
 		<img src="img/menu-drinks.png" alt="Drinks menu" />
 		<img src="img/menu-food.png" alt="Food menu" />
@@ -71,9 +70,10 @@
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
-		Shows are subject to change… the farther out, the more subject! See <a
-			href="https://instagram.com/appletreeinn">Instagram</a
-		> for previews and updates.
+		See <a href="https://instagram.com/appletreeinn">Instagram</a>
+		for previews and updates. Email Jenny Rubin at
+		<a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information about booking
+		acts.
 	</p>
 	{#if events === undefined}
 		<div style="padding-bottom: 20em;">Loading music calendar…</div>
@@ -100,10 +100,6 @@
 			</table>
 		</details>
 	{/if}
-	<p>
-		Email Jenny Rubin at <a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information
-		about booking acts.
-	</p>
 </div>
 
 <Footer />
@@ -133,6 +129,10 @@
 
 	td {
 		padding: 0 1em 0.5em 0;
+	}
+
+	details {
+		margin-bottom: 1em;
 	}
 
 	@media (max-width: 800px) {

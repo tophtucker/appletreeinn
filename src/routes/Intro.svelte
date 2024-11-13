@@ -3,9 +3,9 @@
 	const pics = [
 		{ src: './heropics/exterior.jpg', title: 'The Apple Tree Inn, viewed from the air' },
 		{ src: './heropics/pool1.jpg', title: 'The pool' },
-		{ src: './heropics/ostrich2.jpg', title: 'The Ostrich Room, our tavern'},
-		{ src: './roompics/main-house/8/_XCS2672.jpg', title: 'Room 8'},
-		{ src: './heropics/view1.jpg', title: 'The view from the lawn'}
+		{ src: './heropics/ostrich2.jpg', title: 'The Ostrich Room, our tavern' },
+		{ src: './roompics/main-house/8/_XCS2672.jpg', title: 'Room 8' },
+		{ src: './heropics/view1.jpg', title: 'The view from the lawn' }
 	];
 </script>
 
@@ -16,7 +16,9 @@
 			<ul>
 				<li>beautiful views & grounds,</li>
 				<li>hidden gem pool,</li>
-				<li>wood-paneled <a href="/ostrich-room">tavern</a> (Wed. – Sat.) with frequent live music,</li>
+				<li>
+					wood-paneled <a href="/ostrich-room">tavern</a> (Wed. – Sat.) with frequent live music,
+				</li>
 				<li>weekend <a href="/baladi">brunch restaurant</a> overlooking the hills,</li>
 				<li>luxurious bedding, and</li>
 				<li>location walking distance to Tanglewood and Kripalu.</li>
@@ -50,6 +52,7 @@
 
 	.intro li {
 		margin-bottom: 1em;
+		line-height: normal;
 	}
 	.intro li:last-child {
 		margin-bottom: 0;

@@ -9,9 +9,7 @@ export const ostrichRoom = {
 		[5, [17, 22]],
 		[6, [17, 23]]
 	],
-	closures: [
-		// new Date(2024, 8, 4),
-	]
+	closures: [new Date(2024, 10, 27), new Date(2024, 10, 28), new Date(2024, 11, 25)]
 };
 
 export const baladi = {

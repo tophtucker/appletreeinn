@@ -16,39 +16,42 @@
 		return events?.future.filter(({ date }) => +date === +nextDay) ?? [];
 	};
 
-	const collapsible = hours.every(([day, range]) => range.every((hour, i) => hour === hours[0][1][i]));
-	console.log({collapsible});
+	const collapsible = hours.every(([day, range]) =>
+		range.every((hour, i) => hour === hours[0][1][i])
+	);
 </script>
 
 {#if collapsible}
-<div class="hours">Hours: {hours.map(d => `${daysOfWeek[d[0]]}.`).join(" & ")}, {formatTimeRange(hours[0][1])}</div>
+	<div class="hours">
+		Hours: {hours.map((d) => `${daysOfWeek[d[0]]}.`).join(' & ')}, {formatTimeRange(hours[0][1])}
+	</div>
 {:else}
-<table class="hours">
-	<thead>
-		<tr>
-			<td colspan="2" style="padding-bottom: 1em;">Hours</td>
-			{#if events?.future.length}
-				<td style="padding-bottom: 1em; color: var(--brown);">Events</td>
-			{/if}
-		</tr>
-	</thead>
-	<tbody>
-		{#each hours as day}
+	<table class="hours">
+		<thead>
 			<tr>
-				<td>{daysOfWeek[day[0]]}.</td>
-				<td>{formatTimeRange(day[1])}</td>
+				<td colspan="2" style="padding-bottom: 1em;">Hours</td>
 				{#if events?.future.length}
-					<td style="font-style: italic; color: var(--brown); font-size: smaller;">
-						{#each getEventsForDay(day[0]) as event}
-							{event.description}
-							<br />
-						{/each}
-					</td>
+					<td style="padding-bottom: 1em; color: var(--brown);">Events this week</td>
 				{/if}
 			</tr>
-		{/each}
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			{#each hours as day}
+				<tr>
+					<td>{daysOfWeek[day[0]]}.</td>
+					<td>{formatTimeRange(day[1])}</td>
+					{#if events?.future.length}
+						<td style="font-style: italic; color: var(--brown); font-size: smaller;">
+							{#each getEventsForDay(day[0]) as event}
+								{event.description}
+								<br />
+							{/each}
+						</td>
+					{/if}
+				</tr>
+			{/each}
+		</tbody>
+	</table>
 {/if}
 
 <style>
