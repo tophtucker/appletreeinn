@@ -62,26 +62,17 @@
 				We have 34 rooms, a broad flat lawn with a beautiful view, a dining room with panoramic
 				windows, a tavern, the lobby lounge, cozy fireplaces, and a large-scale commercial kitchen.
 			</p>
-			<p>
-				Email Abby at <a href="mailto:abigail@appletreeinnlenox.com"
-					>abigail@appletreeinnlenox.com</a
-				> and we’ll follow up. Please include:
-			</p>
-			<ul>
-				<li>Your name</li>
-				<li>What kind of event it is</li>
-				<li>Your desired dates</li>
-				<li>The number of guests</li>
-				<li>Any other requirements</li>
-				<li>And anything else about your vision!</li>
-			</ul>
+			<p>Fill out the form below and we’ll get back to you.</p>
 		</div>
 		<Slideshow {pics} />
 	</div>
 
-	<!-- <hr /> -->
+	<hr />
 
-	<!-- <iframe title="Event inquiry form" src="https://app.eventtemple.com/lead_intakes/ecdbd71af44e5dcb8407c0e53f184e18/2586/new"></iframe> -->
+	<iframe
+		title="Event inquiry form"
+		src="https://app.eventtemple.com/lead_intakes/ecdbd71af44e5dcb8407c0e53f184e18/2586/new"
+	></iframe>
 </div>
 
 <Footer />
@@ -89,7 +80,6 @@
 <style>
 	iframe {
 		width: 100%;
-		margin: 2em 0;
 		border: none;
 		height: 700px;
 		border-radius: 5px;
