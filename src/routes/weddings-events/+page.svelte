@@ -62,7 +62,7 @@
 				We have 34 rooms, a broad flat lawn with a beautiful view, a dining room with panoramic
 				windows, a tavern, the lobby lounge, cozy fireplaces, and a large-scale commercial kitchen.
 			</p>
-			<p>Fill out the form below and we’ll get back to you.</p>
+			<p>Fill out the form below and we’ll get back to you. Thank you for your interest!</p>
 		</div>
 		<Slideshow {pics} />
 	</div>
