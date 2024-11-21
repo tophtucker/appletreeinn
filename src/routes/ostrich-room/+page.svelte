@@ -65,8 +65,8 @@
 	<hr />
 	<h2 id="menus">Menus</h2>
 	<div class="menus">
-		<img src="img/menu-drinks.png" alt="Drinks menu" />
-		<img src="img/menu-food.png" alt="Food menu" />
+		<img src="ostrich-room/menu-drinks.png" alt="Drinks menu" />
+		<img src="ostrich-room/menu-food.png" alt="Food menu" />
 	</div>
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
