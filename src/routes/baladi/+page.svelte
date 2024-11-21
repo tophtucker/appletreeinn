@@ -43,8 +43,7 @@
 		</div>
 	</div>
 	<hr />
-	<h2 id="menu">Menu</h2>
-	<img src="img/menu-baladi.jpg" alt="Baladi menu" />
+	<img src="baladi/menu.png" alt="Baladi menu" style="width: 100%;" />
 	<hr />
 	<h2 id="glossary"><u>Glo</u>ssary</h2>
 
