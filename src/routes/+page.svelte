@@ -50,7 +50,7 @@
 	<div class="links">
 		<a href="https://www.instagram.com/appletreeinn" target="_blank">Instagram</a>
 		<a href="mailto:info@appletreeinnlenox.com" target="_blank">Email</a>
-		<a href="tel:1.413.200.8456" target="_blank">(413) 200-8456</a>
+		<a href="tel:1.413.637.1910" target="_blank">(413) 637-1910</a>
 	</div>
 </nav>
 

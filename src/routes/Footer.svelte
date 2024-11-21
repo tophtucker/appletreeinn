@@ -4,7 +4,7 @@
 		Lenox, Massachusetts<br />
 		01240<br />
 		<br />
-		<a href="tel:1.413.200.8456" target="_blank">(413) 200-8456</a><br />
+		<a href="tel:1.413.637.1910" target="_blank">(413) 637-1910</a><br />
 		<a href="mailto:info@appletreeinnlenox.com" target="_blank">info@appletreeinnlenox.com</a><br />
 		<a href="https://instagram.com/appletreeinn">@appletreeinn</a>
 	</div>

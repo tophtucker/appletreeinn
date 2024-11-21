@@ -32,9 +32,7 @@
 
 	<p>A valid photo ID and credit card are required at check-in.</p>
 
-	<p>
-		Please note that the full amount of the reservation is due before arrival.
-	</p>
+	<p>Please note that the full amount of the reservation is due before arrival.</p>
 
 	<p>
 		An additional incidental amount of $150 will be placed on your credit card provided at check in
@@ -104,7 +102,7 @@
 		Apple Tree Inn does not share customer information and credit card transactions to comply with
 		Payment Card Industry (PCI) Data Security Standards. If you would like to review, correct,
 		update, or delete Personal Information that you have previously provided to us, you may contact
-		us by calling or texting us at 1.413.200.8456 or emailing us at <a
+		us by calling us at (413) 637-1910 or emailing us at <a
 			class="autolink"
 			href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a
 		>.
