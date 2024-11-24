@@ -119,8 +119,8 @@
 	@font-face {
 		font-family: 'JohnDoeRegular';
 		src:
-			url('baladi/font.woff2') format('woff2'),
-			url('baladi/font.woff') format('woff');
+			url('/baladi/font.woff2') format('woff2'),
+			url('/baladi/font.woff') format('woff');
 	}
 	h1 {
 		font-family: 'JohnDoeRegular';
