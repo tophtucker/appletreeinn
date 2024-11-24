@@ -89,17 +89,17 @@
 			</ul>
 		</div>
 	</div>
-	<hr style="margin-bottom: 0" />
-</div>
-<div class="gallery">
-	<img src="./baladi/IMG_7442.jpg" alt="Food at Baladi" />
-	<img src="./baladi/IMG_7496.jpg" alt="Food at Baladi" />
-	<img src="./baladi/IMG_7580.jpg" alt="Food at Baladi" />
-	<img src="./baladi/IMG_7445.jpg" alt="Food at Baladi" />
-	<img src="./baladi/IMG_7540.jpg" alt="Food at Baladi" />
-	<img src="./baladi/IMG_7613.jpg" alt="Food at Baladi" />
-</div>
-<div class="inner">
+	<hr style="margin-bottom: 1em;" />
+
+	<div class="gallery">
+		<img src="./baladi/IMG_7442.jpg" alt="Food at Baladi" />
+		<img src="./baladi/IMG_7496.jpg" alt="Food at Baladi" />
+		<img src="./baladi/IMG_7580.jpg" alt="Food at Baladi" />
+		<img src="./baladi/IMG_7445.jpg" alt="Food at Baladi" />
+		<img src="./baladi/IMG_7540.jpg" alt="Food at Baladi" />
+		<img src="./baladi/IMG_7613.jpg" alt="Food at Baladi" />
+	</div>
+
 	<hr style="margin-top: 1em;" />
 	<p>
 		Baladi (<em><small>BALL</small>-ah-dee</em>, بلدي, Arabic for “local”) is our new brunch
@@ -126,7 +126,7 @@
 		font-family: 'JohnDoeRegular';
 		color: #003070;
 		letter-spacing: 0.1em;
-		font-size: min(6em, 12vw);
+		font-size: min(6em, 16vw);
 		margin-bottom: 2.5em;
 		font-weight: bold;
 		text-shadow: 0.05em 0.05em #eaeaa9;
@@ -172,8 +172,6 @@
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		gap: 1em;
-		width: 100%;
-		padding: 0 1em;
 	}
 	.gallery img {
 		flex: 1 1 auto;
@@ -181,6 +179,8 @@
 		height: auto;
 		min-height: 1px;
 		border-radius: 5px;
+		aspect-ratio: 500/643;
+		object-fit: cover;
 	}
 	.menu-grid {
 		display: grid;
@@ -190,6 +190,7 @@
 	.menu-grid img {
 		width: 100%;
 		max-width: 800px;
+		border-radius: 5px;
 	}
 	h2 {
 		margin: 0 0 0.5em 0;
@@ -219,6 +220,10 @@
 		}
 		.glossary {
 			display: none;
+		}
+		.gallery {
+			grid-template-rows: 1fr 1fr;
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 	@media (max-width: 660px) {
