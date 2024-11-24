@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import OpenSign from './OpenSign.svelte';
-	import {ostrichRoom, baladi} from '$lib/index.js';
+	import { ostrichRoom, baladi } from '$lib/index.js';
 
 	const BOOKING_URL = 'https://appletreeinn.book.pegsbe.com/';
 	const pages = [
@@ -68,13 +68,13 @@
 		{#each desktopNav as { pathname, title, img, eyebrow }}
 			<a href={pathname} class={`thumbnail ${$page.url.pathname === pathname ? 'current' : ''}`}>
 				{#if eyebrow}
-				<div class="eyebrow">{eyebrow}</div>
+					<div class="eyebrow">{eyebrow}</div>
 				{/if}
 				<img src={img} alt={title} />
 				<span style="min-height: 46px;">{title}</span>
-				{#if title === "Ostrich Room"}
+				{#if title === 'Ostrich Room'}
 					<OpenSign data={ostrichRoom} />
-				{:else if title === "Baladi"}
+				{:else if title === 'Baladi'}
 					<OpenSign data={baladi} />
 				{/if}
 			</a>
@@ -84,7 +84,7 @@
 	</div>
 </header>
 <div class="select-wrapper">
-	<select value={currentPage?.pathname || ""} on:change={handlePageSelect}>
+	<select value={currentPage?.pathname || ''} on:change={handlePageSelect}>
 		{#if !currentPage}
 			<option value="" disabled>—</option>
 		{/if}
@@ -212,7 +212,7 @@
 		border-radius: 50%;
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 900px) {
 		header {
 			position: static;
 			justify-content: center;

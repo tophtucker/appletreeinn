@@ -71,7 +71,7 @@
 		}
 	}
 
-	@media (max-width: 800px) {
+	@media (max-width: 900px) {
 		.intro {
 			display: flex;
 			flex-direction: column;
