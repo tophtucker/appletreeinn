@@ -1,16 +1,9 @@
 <script>
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
-	import Slideshow from '../Slideshow.svelte';
 	import { baladi } from '$lib/index.js';
 	import OpenSignBig from '../OpenSignBig.svelte';
-
-	const pics = [
-		{ src: './heropics/baladi1.jpg', title: 'The panoramic views of our round room' },
-		{ src: './heropics/baladi2.jpg', title: 'The panoramic views of our round room' },
-		{ src: './heropics/baladi3.jpg', title: 'The panoramic views of our round room' },
-		{ src: './heropics/baladi4.jpg', title: 'The panoramic views of our round room' }
-	];
+	import Pin from '../Pin.svelte';
 </script>
 
 <svelte:head>
@@ -36,10 +29,14 @@
 					>Make a reservation</a
 				>
 			</div>
+			<div class="pill">
+				<Pin /> <a href="https://maps.app.goo.gl/s2E2mA27XHEvfAuj8">The round room</a>
+			</div>
 		</div>
+		<div style="text-shadow: 1px 1px 2px black;">Walk-ins welcome</div>
 	</div>
 	<hr />
-	<div class="menu-grid">
+	<div id="menu" class="menu-grid">
 		<img src="baladi/menu.png" alt="Baladi menu" />
 		<div class="glossary">
 			<h2 id="glossary"><u>Glo</u>ssary</h2>
@@ -141,6 +138,7 @@
 		align-items: center;
 		justify-content: center;
 		padding: 2em;
+		color: white;
 		font-family: 'cheddar-gothic-sans', sans-serif;
 		font-weight: 400;
 		font-style: normal;
@@ -156,12 +154,12 @@
 	.intro > div {
 		display: flex;
 		gap: 1em;
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 	.intro .pill {
 		color: #003070;
 		background: #eaeaa9;
-		padding: 1em;
+		padding: 0.5em 1em;
 		text-align: center;
 		border-radius: 1em;
 	}

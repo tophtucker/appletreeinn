@@ -7,6 +7,7 @@
 	import Slideshow from './Slideshow.svelte';
 	import Banner from './Banner.svelte';
 	import Events from './Events.svelte';
+	import Pin from './Pin.svelte';
 
 	const defaultTab = buildings[0].id;
 	let tab = $state(new URLSearchParams($page.url.search).get('building') || defaultTab);
@@ -35,13 +36,7 @@
 <nav>
 	<div class="links">
 		<span style="display: flex; align-items: center; gap: 5px">
-			<svg height="18" viewBox="0 0 24 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-				<path
-					fill-rule="evenodd"
-					clip-rule="evenodd"
-					d="M21.528 19.9511C22.7353 17.2959 24 14.5145 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 14.5145 1.26468 17.2959 2.47203 19.9511C2.88662 20.8629 3.29445 21.7598 3.64199 22.626C7.38824 31.9623 12 40.7634 12 40.7634C12 40.7634 16.6118 31.9623 20.358 22.626C20.7055 21.7598 21.1134 20.8629 21.528 19.9511ZM12 16.4886C14.5801 16.4886 16.6718 14.3969 16.6718 11.8168C16.6718 9.23665 14.5801 7.14504 12 7.14504C9.41986 7.14504 7.32824 9.23665 7.32824 11.8168C7.32824 14.3969 9.41986 16.4886 12 16.4886Z"
-				/>
-			</svg>
+			<Pin />
 			<a href="https://maps.app.goo.gl/vpsxJ5KnzqR1n78q8" target="_blank"
 				><span class="hide-mobile">10 Richmond Mountain Road,{' '}</span>Lenox, MA</a
 			>
