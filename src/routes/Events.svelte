@@ -26,6 +26,7 @@
 		display: flex;
 		gap: 0.5em;
 		padding: 0 var(--gutter) 2em var(--gutter);
+		justify-content: space-between;
 	}
 	.wrapper a {
 		flex-shrink: 0;
