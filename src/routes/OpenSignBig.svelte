@@ -23,7 +23,7 @@
 
 {#if collapsible}
 	<div class="hours">
-		Hours: {hours.map((d) => `${daysOfWeek[d[0]]}.`).join(' & ')}, {formatTimeRange(hours[0][1])}
+		{hours.map((d) => `${daysOfWeek[d[0]]}.`).join(' & ')}, {formatTimeRange(hours[0][1])}
 	</div>
 {:else}
 	<table class="hours">
@@ -57,7 +57,6 @@
 <style>
 	.hours {
 		border-collapse: collapse;
-		margin-top: 1em;
 	}
 	td {
 		padding-right: 0.5em;

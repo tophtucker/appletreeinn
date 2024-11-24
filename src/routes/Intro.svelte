@@ -3,7 +3,7 @@
 	const pics = [
 		{ src: './heropics/view2.jpg', title: 'The view' },
 		{ src: './ostrich-room/P8243018.JPG', title: 'The Ostrich Room, our tavern' },
-		{ src: './baladi/IMG_0268.jpg', title: 'Brunch at Baladi' },
+		{ src: './baladi/room.jpg', title: 'Brunch at Baladi' },
 		{ src: './heropics/drone-repainted.jpg', title: 'The Apple Tree Inn, viewed from the air' },
 		{ src: './roompics/main-house/8/_XCS2672.jpg', title: 'Room 8' },
 		{ src: './heropics/fire-pit.jpg', title: 'The fire pit' },

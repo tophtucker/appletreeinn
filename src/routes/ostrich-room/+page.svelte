@@ -32,7 +32,9 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>The Ostrich Room</h1>
-			<OpenSignBig data={ostrichRoom} {events} />
+			<div style="margin-top: 1em">
+				<OpenSignBig data={ostrichRoom} {events} />
+			</div>
 			<h2>Five things to know</h2>
 			<ol>
 				<li>
