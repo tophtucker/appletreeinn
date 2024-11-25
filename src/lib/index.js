@@ -155,13 +155,13 @@ export const buildings = [
 				pics: ['main-house/7/_XCS2637.jpg'],
 				views: null,
 				features: 'Claw foot bathtub, Vintage sink',
-				caveats: 'Noise from Ostrich Room & live music below',
+				caveats: 'Located above Ostrich Room; can be noisy',
 				tags: [
 					'1 queen',
 					'Sleeps 2',
 					'Claw foot bathtub',
 					'Vintage sink',
-					'Noise from Ostrich Room & live music below'
+					'Located above Ostrich Room; can be noisy'
 				]
 			},
 			{
@@ -179,14 +179,14 @@ export const buildings = [
 				],
 				views: true,
 				features: 'Working wood-burning fireplace, Living room',
-				caveats: 'Noise from Ostrich Room & live music below',
+				caveats: 'Located above Ostrich Room; can be noisy',
 				tags: [
 					'1 king, 1 pull-out',
 					'Sleeps 4',
 					'Beautiful views of the hills',
 					'Working wood-burning fireplace',
 					'Living room',
-					'Noise from Ostrich Room & live music below'
+					'Located above Ostrich Room; can be noisy'
 				]
 			},
 			{
@@ -199,12 +199,12 @@ export const buildings = [
 				pics: ['main-house/9/_XCS2640.jpg', 'main-house/9/_XCS2641.jpg'],
 				views: true,
 				features: null,
-				caveats: 'Noise from Ostrich Room & live music below',
+				caveats: 'Located above Ostrich Room; can be noisy',
 				tags: [
 					'1 queen',
 					'Sleeps 2',
 					'Beautiful views of the hills',
-					'Noise from Ostrich Room & live music below'
+					'Located above Ostrich Room; can be noisy'
 				]
 			},
 			{
