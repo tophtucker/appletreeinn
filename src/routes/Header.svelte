@@ -60,6 +60,12 @@
 <div class="sticky-header">
 	<a href={BOOKING_URL} class="highlight">Reserve</a>
 </div>
+<div class="nye">
+	Join us in the Ostrich Room on December 31 for a New Year’s Countdown! <a
+		href="/ostrich-room/nye2024.png">Info</a
+	>
+	• <a href="https://ostrichroomnewyearseve.eventbrite.com/">Tickets</a>
+</div>
 <header>
 	<a href="/">
 		<img src="/logo.svg" height="200" alt="The Apple Tree Inn" />
@@ -250,5 +256,23 @@
 			justify-content: center;
 			background: white;
 		}
+	}
+
+	.nye {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		color: #d0b061;
+		background: #23242a;
+		padding: 0.5rem 1rem;
+		font-family: sans-serif;
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 1px;
+	}
+	.nye a {
+		color: inherit;
 	}
 </style>
