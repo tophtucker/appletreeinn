@@ -57,14 +57,16 @@
 	}
 </script>
 
+<div class="nye">
+	<span
+		>Join us <span class="hide-mobile">in the Ostrich Room on December 31</span> for
+		<span class="hide-mobile">a</span>
+		New Year’s<span class="hide-mobile">&nbsp;Countdown</span>!
+	</span>
+	<a href="/nye">Learn more</a>
+</div>
 <div class="sticky-header">
 	<a href={BOOKING_URL} class="highlight">Reserve</a>
-</div>
-<div class="nye">
-	Join us in the Ostrich Room on December 31 for a New Year’s Countdown! <a
-		href="/ostrich-room/nye2024.png">Info</a
-	>
-	• <a href="https://ostrichroomnewyearseve.eventbrite.com/">Tickets</a>
 </div>
 <header>
 	<a href="/">
@@ -123,7 +125,8 @@
 	header {
 		position: absolute;
 		width: 100%;
-		top: 2em;
+		z-index: 2;
+		top: calc(2em + 20px); /* TODO: 20px offset only if nye banner */
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -148,7 +151,7 @@
 	.sticky-header {
 		position: sticky;
 		top: -84px;
-		margin-top: 2em;
+		margin-top: calc(2em - 20px); /* TODO: 20px offset only if nye banner */
 		height: 200px;
 		padding: 0 var(--gutter);
 		display: flex;
@@ -220,7 +223,8 @@
 
 	@media (max-width: 900px) {
 		header {
-			position: static;
+			position: relative;
+			top: 10px; /* TODO: rm NYE offset */
 			justify-content: center;
 		}
 		.links {
@@ -259,20 +263,29 @@
 	}
 
 	.nye {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		text-align: center;
+		height: 40px;
 		color: #d0b061;
 		background: #23242a;
-		padding: 0.5rem 1rem;
+		padding: 0 1rem;
 		font-family: sans-serif;
 		text-transform: uppercase;
 		font-size: 14px;
 		letter-spacing: 1px;
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		justify-content: center;
 	}
 	.nye a {
 		color: inherit;
+		border: 1px solid #d0b061;
+		border-radius: 4px;
+		padding: 2px 4px;
+		text-decoration: none;
+	}
+	@media (max-width: 900px) {
+		.hide-mobile {
+			display: none;
+		}
 	}
 </style>
