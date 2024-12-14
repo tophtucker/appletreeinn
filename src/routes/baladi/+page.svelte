@@ -29,11 +29,11 @@
 					>Make a reservation</a
 				>
 			</div>
-			<div class="pill"><a href="tel:413.717.9522" target="_blank">(413) 717-9522</a></div>
+			<div class="pill">Walk-ins welcome</div>
 		</div>
 		<div style="text-shadow: 1px 1px 2px black;">
 			<span><Pin /> <a href="https://maps.app.goo.gl/s2E2mA27XHEvfAuj8">The round room</a></span>
-			<span>Walk-ins welcome</span>
+			<span><a href="tel:413.717.9522" target="_blank">(413) 717-9522</a></span>
 			<span><a href="https://www.instagram.com/baladiberkshires">@baladiberkshires</a></span>
 		</div>
 	</div>
@@ -110,6 +110,13 @@
 		sun-kissed shores of Lenox. Take in the panoramic view of the Berkshire hills from our round
 		room (formerly the site of Alice’s Restaurant).
 	</p>
+	<p>
+		<a
+			class="pill"
+			href="https://www.toasttab.com/apple-tree-inn-lenox-10-richmond-mountain-road/giftcards"
+			>Buy a gift card</a
+		>
+	</p>
 </div>
 
 <Footer />
@@ -158,7 +165,7 @@
 		gap: 1em;
 		margin-top: 1em;
 	}
-	.intro .pill {
+	.pill {
 		color: #003070;
 		background: #eaeaa9;
 		padding: 0.5em 1em;
