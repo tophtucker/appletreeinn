@@ -29,11 +29,13 @@
 					>Make a reservation</a
 				>
 			</div>
-			<div class="pill">
-				<Pin /> <a href="https://maps.app.goo.gl/s2E2mA27XHEvfAuj8">The round room</a>
-			</div>
+			<div class="pill"><a href="tel:413.717.9522" target="_blank">(413) 717-9522</a></div>
 		</div>
-		<div style="text-shadow: 1px 1px 2px black;">Walk-ins welcome</div>
+		<div style="text-shadow: 1px 1px 2px black;">
+			<span><Pin /> <a href="https://maps.app.goo.gl/s2E2mA27XHEvfAuj8">The round room</a></span>
+			<span>Walk-ins welcome</span>
+			<span><a href="https://www.instagram.com/baladiberkshires">@baladiberkshires</a></span>
+		</div>
 	</div>
 	<hr />
 	<div id="menu" class="menu-grid">
@@ -163,7 +165,7 @@
 		text-align: center;
 		border-radius: 1em;
 	}
-	.intro .pill a {
+	.intro a {
 		color: inherit;
 	}
 	.gallery {
