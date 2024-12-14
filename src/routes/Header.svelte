@@ -157,7 +157,7 @@
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
-		z-index: 2;
+		z-index: 3;
 		pointer-events: none;
 	}
 
