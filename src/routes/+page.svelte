@@ -25,7 +25,7 @@
 	/>
 </svelte:head>
 
-<!-- <Banner /> -->
+<Banner />
 
 <Header />
 
