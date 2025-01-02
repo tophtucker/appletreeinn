@@ -1,7 +1,7 @@
 <script>
 	let { data, events } = $props();
-	// TODO: show closures
-	const { hours, closures } = data;
+	// TODO: show overrides
+	const { hours, overrides } = data;
 
 	const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
 	const mod = (hour) => hour % 12;

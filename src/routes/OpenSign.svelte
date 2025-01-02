@@ -1,25 +1,11 @@
 <script>
+	import { timeDay, timeMinute } from 'd3-time';
 	let { data } = $props();
-	const { hours, closures } = data;
 
 	const isET = Intl.DateTimeFormat().resolvedOptions().timeZone === 'America/New_York';
-	const today = new Date();
-	const day = today.getDay();
-	const hour = today.getHours();
-
-	function isClosure(date) {
-		return !!closures.find(
-			(c) => +c === +new Date(date.getFullYear(), date.getMonth(), date.getDate())
-		);
-	}
-
-	const currentOpen =
-		!isClosure(today) &&
-		hours.find(
-			([openDay, [openHour, closeHour]]) => day === openDay && hour >= openHour && hour < closeHour
-		);
-
-	const nextOpen = getNextOpen();
+	const now = new Date();
+	const nextHours = getNextHours(data);
+	const isOpen = nextHours && nextHours[0] <= now && nextHours[1] > now;
 
 	function formatFutureDate(date) {
 		const now = new Date();
@@ -44,32 +30,17 @@
 		}
 	}
 
-	function getNextOpen() {
+	function getNextHours(data) {
 		const now = new Date();
-		const currentDay = now.getDay();
-		const currentHour = now.getHours();
-
-		// Find the next opening time
+		const today = timeDay();
 		for (let i = 0; i < 14; i++) {
-			const dayIndex = (currentDay + i) % 7;
-			const opening =
-				!isClosure(new Date(now.getFullYear(), now.getMonth(), now.getDate() + i)) &&
-				hours.find(([day]) => day === dayIndex);
-
-			if (opening) {
-				const [day, [openHour]] = opening;
-				if (i === 0 && currentHour < openHour) {
-					const nextOpening = new Date();
-					// Today but later
-					nextOpening.setHours(openHour, 0, 0, 0);
-					return nextOpening;
-				} else if (i > 0) {
-					// In the future
-					const nextOpening = new Date();
-					nextOpening.setDate(now.getDate() + i);
-					nextOpening.setHours(openHour, 0, 0, 0);
-					return nextOpening;
-				}
+			const day = timeDay.offset(today, i);
+			const rule = data.hours.find(([dayOfWeek]) => dayOfWeek === day.getDay());
+			const exception = data.overrides.find((d) => +d[0] === +day);
+			const thisCase = exception || rule;
+			if (thisCase && thisCase[1]) {
+				const absoluteHours = thisCase[1].map((hr) => timeMinute.offset(day, hr * 60));
+				if (absoluteHours[1] > now) return absoluteHours;
 			}
 		}
 		return null;
@@ -77,10 +48,10 @@
 </script>
 
 {#if isET}
-	{#if currentOpen}
-		<div class="neon open" title={`Open until ${currentOpen[1][1] - 12}`}>OPEN</div>
-	{:else if nextOpen}
-		<div class="neon">Opens {formatFutureDate(nextOpen)}</div>
+	{#if isOpen}
+		<div class="neon open" title={`Open until ${formatFutureDate(nextHours[1])}`}>OPEN</div>
+	{:else if nextHours}
+		<div class="neon">Opens {formatFutureDate(nextHours[0])}</div>
 	{/if}
 {/if}
 

@@ -18,6 +18,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"d3-dsv": "^3.0.1"
+		"d3-dsv": "^3.0.1",
+		"d3-time": "^3.1.0"
 	}
 }

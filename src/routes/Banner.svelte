@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	const message = 'HAPPY NEW YEAR';
+	const message = 'NEW HOURS: OSTRICH ROOM NOW OPEN THU–SUN INSTEAD OF WED–SAT';
 	const chars = message.toUpperCase().split('');
 	onMount(() => {
 		const charWidth = 14;

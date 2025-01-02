@@ -4,12 +4,12 @@ import { csvParse } from 'd3-dsv';
 
 export const ostrichRoom = {
 	hours: [
-		[3, [17, 21]],
 		[4, [17, 21]],
-		[5, [17, 22]],
-		[6, [17, 23]]
+		[5, [17, 22.5]],
+		[6, [17, 23]],
+		[0, [17, 20]]
 	],
-	closures: [new Date(2024, 10, 27), new Date(2024, 10, 28), new Date(2024, 11, 25)]
+	overrides: [[new Date(2024, 10, 27), null], [new Date(2024, 10, 28), null], [new Date(2024, 11, 25), null]]
 };
 
 export const baladi = {
@@ -17,9 +17,7 @@ export const baladi = {
 		[6, [9, 14]],
 		[0, [9, 14]]
 	],
-	closures: [
-		// new Date(2024, 8, 4),
-	]
+	overrides: [new Date(2025, 0, 20), [9, 14]]
 };
 
 export async function loadEvents() {
