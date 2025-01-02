@@ -1,15 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
-    const message = 'INTRODUCING BALADI — SERVING BRUNCH SAT & SUN 9 – 2';
-    const chars = message.toUpperCase().split('');
+	const message = 'HAPPY NEW YEAR';
+	const chars = message.toUpperCase().split('');
 	onMount(() => {
-        const charWidth = 14;
-        const charEls = document.querySelectorAll('.char');
-        for (let i = 0; i < charEls.length; i++) {
-            charEls[i].style.visibility = "visible";
-        }
-        const bannerWidth = charEls.length * charWidth;
-        let x = innerWidth + 10;
+		const charWidth = 14;
+		const charEls = document.querySelectorAll('.char');
+		for (let i = 0; i < charEls.length; i++) {
+			charEls[i].style.visibility = 'visible';
+		}
+		const bannerWidth = charEls.length * charWidth;
+		let x = innerWidth + 10;
 		requestAnimationFrame(function animate() {
 			for (let i = 0; i < charEls.length; i++) {
 				const char = charEls[i];
@@ -34,13 +34,13 @@
 		top: 15px;
 		left: 0;
 		font-family: Consolas, monospace;
-        z-index: -1;
+		z-index: -1;
 		width: 100%;
 		height: 40px;
 		overflow: hidden;
 	}
 	.char {
 		position: absolute;
-        visibility: hidden;
+		visibility: hidden;
 	}
 </style>
