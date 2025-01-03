@@ -5,10 +5,11 @@
 
 	const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
 	const mod = (hour) => hour % 12;
+	const fmt = (hour) => `${~~mod(hour)}${hour % 1 ? `:${(hour % 1) * 60}` : ''}`;
 	const formatTimeRange = (hours) =>
 		hours.every((hour) => hour < 12 === hours[0] < 12)
-			? `${hours.map(mod).join(' – ')} ${amPm(hours[0])}`
-			: hours.map((hour) => `${mod(hour)} ${amPm(hour)}`).join(' – ');
+			? `${hours.map(fmt).join(' – ')} ${amPm(hours[0])}`
+			: hours.map((hour) => `${fmt(hour)} ${amPm(hour)}`).join(' – ');
 
 	const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 	const getEventsForDay = (day) => {
