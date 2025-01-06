@@ -101,8 +101,8 @@
 		</p>
 		<img src="./img/sean.jpg" alt="Sean" />
 		<p>
-			Sean (bar manager) just started so Toph doesn’t know much about him as of writing this but idk
-			he seems great.
+			Sean (bar manager) really knows a lot about cocktails. His favorite is a Vesper martini. Also
+			he and his wife have a 3-year-old daughter.
 		</p>
 		<img src="./img/giovanna.png" alt="Giovanna" />
 		<p>
