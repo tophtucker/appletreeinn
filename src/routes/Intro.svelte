@@ -1,10 +1,12 @@
 <script>
 	import Slideshow from './Slideshow.svelte';
 	const pics = [
-		{ src: './heropics/view2.jpg', title: 'The view' },
+		// { src: './heropics/view2.jpg', title: 'The view' },
+		{ src: './heropics/view3.jpg', title: 'The view' },
 		{ src: './ostrich-room/P8243018.JPG', title: 'The Ostrich Room, our tavern' },
 		{ src: './baladi/room.jpg', title: 'Brunch at Baladi' },
-		{ src: './heropics/drone-repainted.jpg', title: 'The Apple Tree Inn, viewed from the air' },
+		{ src: './heropics/view4.jpg', title: 'The main house' },
+		// { src: './heropics/drone-repainted.jpg', title: 'The Apple Tree Inn, viewed from the air' },
 		{ src: './roompics/main-house/8/_XCS2672.jpg', title: 'Room 8' },
 		{ src: './heropics/fire-pit.jpg', title: 'The fire pit' },
 		// { src: './heropics/view1.jpg', title: 'The view from the lawn' },
