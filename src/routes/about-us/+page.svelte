@@ -1,6 +1,7 @@
 <script>
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
+	import Subheader from './Subheader.svelte';
 </script>
 
 <svelte:head>
@@ -13,10 +14,12 @@
 
 <Header />
 
+<Subheader />
+
 <div class="inner">
+	<h1>Staff</h1>
 	<div class="grid-or-flex">
 		<div>
-			<h1>About us</h1>
 			<p>Claire took over the hotel in April 2024, realizing a lifelong dream.</p>
 			<p>
 				For three summers in college, Claire worked at the concierge desk of the Chatham Bars Inn in
@@ -25,7 +28,9 @@
 				Rosewood and then, after business school, managed hotels from the corporate side for
 				Starwood. After three years there, she decided she understood enough to strike out on her
 				own, and is excited to now be in a position to run it end-to-end: build the business, craft
-				the guest experience, and introduce you to town.
+				the guest experience, and introduce you to town. <a href="/about-us/claire"
+					>Read her letter</a
+				>.
 			</p>
 			<p>
 				She lives on the property with her husband, Toph, who works remotely for a <a
@@ -33,18 +38,25 @@
 				> but does some social media for the hotel and is making this website right now.
 			</p>
 		</div>
-		<img src="./heropics/claire-toph.jpg" alt="Claire and Toph" />
+		<img
+			src="./heropics/claire-toph.jpg"
+			alt="Claire and Toph, smiling at the camera, Toph’s arm lovingly around Claire’s shoulder, standing at the top of the Apple Tree hill in front of the unseen old carriage house, a beautiful verdant backdrop with layered mountains and just a hint of the Stockbridge Bowl visible at the far right"
+		/>
 	</div>
 	<hr />
 	<div class="grid-or-flex">
-		<img src="./heropics/christian.jpg" alt="Christian and Max" style="order: 1" />
+		<img
+			src="./heropics/christian.jpg"
+			alt="Christian and his German shepherd Max climing the hill, with two of our actual surviving apple trees in the background, Christian in an Apple Tree branded baseball cap, Max following attentively behind"
+			style="order: 1"
+		/>
 		<div style="order: 2">
 			<p>
-				Christian is Claire’s right-hand man. He followed us out here from the Boston area to escape
-				the office desk job life and try something different, and judging from some of the stuff
-				we’ve got him doing (climbing ladders to update security cameras or cleaning up bird poop),
-				we bet we have achieved “different”. His mom is in Toph’s mom’s book group and has always
-				worked at bookstores, which is how she met Christian’s dad. Christian is currently reading:
+				Christian is the Hotel Manager. He followed us out here from the Boston area to escape the
+				office desk job life and try something different, and judging from some of the stuff we’ve
+				got him doing (climbing ladders to update security cameras or cleaning up bird poop), we bet
+				we have achieved “different”. His mom is in Toph’s mom’s book group and has always worked at
+				bookstores, which is how she met Christian’s dad. Christian is currently reading:
 			</p>
 			<ul>
 				<li><em>The Year of the Locust</em>, by Terry Hayes</li>
@@ -64,9 +76,10 @@
 	<div class="bios">
 		<img src="./img/abby.jpg" alt="Abby" />
 		<p>
-			Abby (front desk) grew up like a mile from here; she went to Lenox High and UMass Amherst,
-			where she played soccer. We think maybe she likes Disney movies but we’re not sure. Her
-			brother goes by “Toph” but weirdly she didn’t even tell our Toph for like two months.
+			Abby (front desk and private events) grew up like a mile from here; she went to Lenox High and
+			UMass Amherst, where she played soccer. We think maybe she likes Disney movies but we’re not
+			sure. Her brother goes by “Toph” but weirdly she didn’t even tell our Toph for like two
+			months.
 		</p>
 		<div style="height: 140px; position: relative;">
 			<img
@@ -75,16 +88,16 @@
 				style="width: 90px; position: absolute; top: 0; left: 0;"
 			/>
 			<img
-				src="./img/adi.png"
+				src="./img/adi.jpg"
 				alt="Adi"
 				style="width: 90px; position: absolute; bottom: 0; right: 0; border: 1px solid white;"
 			/>
 		</div>
 		<p>
-			Hagai and Adi (chefs) moved here from Israel a couple years ago. Hagai’s been doing dinner in
-			the Ostrich Room since the start of the summer, and now Adi is coming aboard for our new
-			brunch restaurant, Baladi. Hagai once bought a didgeridoo in Australia and lugged it all over
-			the world and has learned to play a little bit.
+			Hagai (chef) and Adi (Baladi mastermind) moved here from Israel a couple years ago. Hagai’s
+			been doing dinner in the Ostrich Room since the start of the summer, and now Adi is coming
+			aboard for our new brunch restaurant, Baladi. Hagai once bought a didgeridoo in Australia and
+			lugged it all over the world and has learned to play a little bit.
 		</p>
 		<img src="./img/sean.jpg" alt="Sean" />
 		<p>
@@ -103,72 +116,29 @@
 			Ask him about boating around the lake, his parents’ professional ski careers, or navigating
 			the Tanglewood ticket counter.
 		</p>
-		<img src="./img/peter.png" alt="“Peter”" />
+		<img src="./img/peter.jpg" alt="Peter" />
 		<p>
-			Peter (bartender) started recently and I don’t have a photo of him yet but he looks a lot like
-			Luke Wilson (left).
+			Peter (bartender) looks a lot like Luke Wilson. He was a camp counselor for 14 summers at Camp
+			Timanous and has a Master’s in elementary education.
 		</p>
+		<img src="./img/magdalen.jpg" alt="Magdalen" />
+		<p>
+			Magdalen (server) also works at the Springfield zoo where she takes care of emus, wallabees,
+			and porcupines. “No ostriches, I’d die. Emus are already scary and ostriches are bigger. Emus
+			have murder in their eyes.”
+		</p>
+		<img src="./img/luke.jpg" alt="Luke" />
+		<p>Luke (server) is all bundled up for the cold in his nice hat!</p>
 	</div>
-
-	<hr />
-
-	<h2>Scrapbook</h2>
-
-	<p>
-		<a
-			href="https://www.berkshireeagle.com/news/central_berkshires/historic-lenox-inn-has-a-new-owner-who-is-keen-on-fulfilling-her-dream/article_d19dd82e-fdaf-11ee-909e-77af370eac17.html"
-			>April 22: Claire’s first Berkshire Eagle article!</a
-		> Reporter Clarence Fanto came by the day after she took over, when it was still quiet and cold and
-		the Ostrich Room was still far from reopening.
-	</p>
-
-	<figure>
-		<img src="./heropics/staff2.jpg" alt="Bar crew" />
-		<figcaption>
-			June 1: Bar crew on opening night. Left to right: Kari, Finn, Rory, Giovanna, Danny, and
-			Claire. Danny had gotten us these sick branded hats and totally redecorated behind the bar.
-			(Previously it had some contemporary art; he went to local flea markets for like two months to
-			find new-old stuff for it.) Not a single customer came!
-		</figcaption>
-	</figure>
-
-	<figure>
-		<img src="./heropics/staff1.jpg" alt="Staff barbecue" />
-		<figcaption>
-			June 10: Staff barbecue with some staff and their families, including Memo and Demetrio
-			(maintenance), Karla (housekeeping), Kari, Giovanna, and Nic (bar), Danny (“opening
-			consultant”), Christian, and Claire.
-		</figcaption>
-	</figure>
-
-	<p>
-		<a href="https://www.instagram.com/reel/C8afucjujq-/"
-			>June 19: Introducing the bar crew on the first day of live music</a
-		>
-	</p>
-
-	<p><a href="https://www.instagram.com/p/DA3wc94ObOt/">October 8: Repainting the house</a></p>
-
-	<figure>
-		<img src="./heropics/staff3.jpg" alt="Baladi staff" />
-		<figcaption>
-			October 13: The first day of Baladi brunch! With Adi, Dune, Luke, Armando, Claire, Isaias,
-			Christian, Jaime, and Hagai. It was packed and we fell pretty behind for a bit but we caught
-			up and everyone seemed to have a great time.
-		</figcaption>
-	</figure>
-
-	<p>
-		<a
-			href="https://www.berkshireeagle.com/business/brunch-lenox-mass-baladi/article_b2403f98-8c8f-11ef-84bb-0fdec741df4e.html"
-			>October 18: Our second Berkshire Eagle article!</a
-		> About the opening of Baladi and how the Ostrich Room is going.
-	</p>
 </div>
 
 <Footer />
 
 <style>
+	h1 {
+		margin-bottom: 1rem;
+	}
+
 	.bios {
 		display: grid;
 		grid-template-columns: 130px 1fr;
@@ -180,17 +150,6 @@
 
 	.bios p {
 		margin: 0;
-	}
-
-	figure {
-		margin: 2em 0;
-		max-width: 960px;
-	}
-
-	figcaption {
-		max-width: 640px;
-		line-height: 1.4;
-		margin-top: 0.25em;
 	}
 
 	@media (max-width: 640px) {

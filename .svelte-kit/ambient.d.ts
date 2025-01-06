@@ -50,7 +50,6 @@ declare module '$env/static/private' {
 	export const SSH_AUTH_SOCK: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
-	export const ZED_ENVIRONMENT: string;
 	export const FNM_VERSION_FILE_STRATEGY: string;
 	export const FNM_ARCH: string;
 	export const PATH: string;
@@ -145,7 +144,6 @@ declare module '$env/dynamic/private' {
 		SSH_AUTH_SOCK: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
-		ZED_ENVIRONMENT: string;
 		FNM_VERSION_FILE_STRATEGY: string;
 		FNM_ARCH: string;
 		PATH: string;

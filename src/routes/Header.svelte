@@ -66,7 +66,10 @@
 	</a>
 	<div class="links">
 		{#each desktopNav as { pathname, title, img, eyebrow }}
-			<a href={pathname} class={`thumbnail ${$page.url.pathname === pathname ? 'current' : ''}`}>
+			<a
+				href={pathname}
+				class={`thumbnail ${$page.url.pathname.startsWith(pathname) ? 'current' : ''}`}
+			>
 				{#if eyebrow}
 					<div class="eyebrow">{eyebrow}</div>
 				{/if}

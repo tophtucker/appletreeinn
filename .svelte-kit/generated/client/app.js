@@ -20,7 +20,10 @@ export const nodes = [
 	() => import('./nodes/16'),
 	() => import('./nodes/17'),
 	() => import('./nodes/18'),
-	() => import('./nodes/19')
+	() => import('./nodes/19'),
+	() => import('./nodes/20'),
+	() => import('./nodes/21'),
+	() => import('./nodes/22')
 ];
 
 export const server_loads = [];
@@ -28,22 +31,25 @@ export const server_loads = [];
 export const dictionary = {
 		"/": [2],
 		"/about-us": [3],
-		"/baladi": [4],
-		"/career": [~5],
-		"/dining_ati/[...catchall]": [~7],
-		"/dining/[...catchall]": [~6],
-		"/explore": [~8],
-		"/history": [9],
-		"/jobs": [10],
-		"/nye": [11],
-		"/offers": [~12],
-		"/ostrich-room": [13],
-		"/restaurants": [~14],
-		"/rooms": [~15],
-		"/terms-of-service": [16],
-		"/termsandcondition": [~17],
-		"/things-to-do": [18],
-		"/weddings-events": [19]
+		"/about-us/claire": [4],
+		"/about-us/newsletter": [5],
+		"/about-us/scrapbook": [6],
+		"/baladi": [7],
+		"/career": [~8],
+		"/dining_ati/[...catchall]": [~10],
+		"/dining/[...catchall]": [~9],
+		"/explore": [~11],
+		"/history": [12],
+		"/jobs": [13],
+		"/nye": [14],
+		"/offers": [~15],
+		"/ostrich-room": [16],
+		"/restaurants": [~17],
+		"/rooms": [~18],
+		"/terms-of-service": [19],
+		"/termsandcondition": [~20],
+		"/things-to-do": [21],
+		"/weddings-events": [22]
 	};
 
 export const hooks = {
