@@ -218,7 +218,7 @@
 
 	@media (max-width: 900px) {
 		header {
-			position: relative;
+			position: static;
 			justify-content: center;
 		}
 		.links {
