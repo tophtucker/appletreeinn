@@ -21,7 +21,7 @@
 	<p>Guests must be 21 years or older to book a reservation. Minimum check-in age is 21.</p>
 
 	<p>
-		Hotel check-in is at 4:00 p.m. Check-out is at 11:00 a.m. Early check-in and late check-out may
+		Hotel check-in is at 3:00 p.m. Check-out is at 11:00 a.m. Early check-in and late check-out may
 		be available upon request and is subject to availability. Additional fees will apply.
 	</p>
 

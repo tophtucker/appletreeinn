@@ -9,7 +9,7 @@
 		<a href="https://instagram.com/appletreeinn">@appletreeinn</a>
 	</div>
 	<div>
-		Check-in: 4 p.m.<br />
+		Check-in: 3 p.m.<br />
 		Check-out: 11 a.m.<br />
 		<a href="/terms-of-service">Terms of service</a>
 	</div>
