@@ -249,7 +249,8 @@ Or any other reason why.”
 		Many thanks to Sharon Walker, James K, Cornelia Gilder, Amy Lafave, and above all Alison Adams
 		for helping me piece together what I know so far. Thanks to the many others whom I have
 		interviewed or who have swung by the hotel to tell tales. I look forward to continuing to learn
-		from all of you!
+		from all of you! If you have other information or especially photographs, please email me at
+		<a href="mailto:info@appletreeinnlenox.com" target="_blank">info@appletreeinnlenox.com</a>.
 	</p>
 
 	<p><em>Last updated January 2025.</em></p>

@@ -29,35 +29,35 @@
 		I am originally from just outside New York City — a town called Pelham — and though this makes
 		me technically a New Yorker, I have always had a weird “thing” for Massachusetts. I grew up as a
 		big Red Sox fan thanks to my Massachusetts-born dad, attended boarding school in Massachusetts,
-		and spent two months every summer in Massachusetts. It was really just icing on the cake by the
-		time I married my husband Toph, who has many great qualities, only one of which is being from
-		Massachusetts.
+		and spent two months every summer in Massachusetts. It was just icing on the cake when I married
+		my husband Toph, who has many great qualities, only one of which is being a Massachusetts
+		native.
 	</p>
 
 	<p>
-		In those Massachusetts summers, I spent a few seasons working at the Chatham Bars Inn, a
+		During those Massachusetts summers, I spent a few seasons working at the Chatham Bars Inn, a
 		beautiful old hotel on Cape Cod, which is where I fell in love with hospitality. I worked as a
-		concierge and just <em>loved</em> sitting at my desk in the great, wood-paneled lobby, watching the
-		guests go hither and thither, all with their own lives and stories. The hotel was such a fun, grand
-		production every single day and, to me, represented the intersection of so many of the best parts
-		of life: food, history, architecture, intriguing backstories, teamwork, nice views….
+		concierge and loved sitting at my desk in the great, wood-paneled lobby, watching the guests go
+		to and fro, all with their own lives and stories. The hotel was a fun, grand production every
+		single day and, to me, represented the intersection of so many of the best parts of life: food,
+		history, architecture, intriguing backstories, teamwork, nice views….
 	</p>
 
 	<p>
-		After I graduated from college, I worked a couple of jobs — in real estate development which I
-		liked, and in edtech, which I did not — and had been at business school for a couple of months,
-		still not totally sure what I should do with myself, when I had my “Eureka!” moment: I had loved
-		my summer hotel job so much, and had liked working in real estate development, why not try to
-		work in “hotel real estate development”? Felt too good to be true. Does such a thing exist?? I
-		wondered.
+		After I graduated from college, I worked at a couple of jobs — in real estate development which
+		I liked, and in edtech, which I did not — and had been at business school for a couple of
+		months, still not totally sure what I should do with myself, when I had my “Eureka!” moment: I
+		had loved my summer hotel job so much, and had liked working in real estate development, why not
+		try to work in “hotel real estate development”? Felt too good to be true. Does such a thing
+		exist?? I wondered.
 	</p>
 
 	<p>
-		Took me a little while to figure it out, but turns out it does! So I spent the balance of
-		business school taking every real estate and finance class they offered, meeting every
-		hotel-related person I could, and working an internship in development finance at a luxury hotel
-		company called Rosewood. I was rewarded at the end with a prize I could hardly believe — a job
-		offer at a very intense and analytical hotel investment firm called Starwood Capital Group.
+		It took me a little while to figure it out, but it turns out that it does! So I spent the
+		balance of business school taking every real estate and finance class they offered, meeting
+		every hotel-related person I could, and working as an intern in development finance at a luxury
+		hotel company called Rosewood. I was rewarded at the end with a prize I could hardly believe — a
+		job offer at a very intense and analytical hotel investment firm called Starwood Capital Group.
 	</p>
 
 	<p>
@@ -68,27 +68,28 @@
 			>go out on my own</em
 		>. It sure is comforting to have some understanding of how hotel financials work when you buy a
 		struggling, seasonal inn in a remote area, and for that, and for many things, I am eternally
-		grateful to Starwood.
+		grateful to the people at Starwood.
 	</p>
 
 	<p>
 		I started my hotel search in Cape Cod because of my familiarity with it, but discovered after
 		some months that anything remotely nice on the Cape was going to be just too expensive for me.
 		When brainstorming alternatives, I thought: What about the Berkshires?? Toph and I had gone to
-		see the Boston Symphony Orchestra perform at Tanglewood one weekend in Summer 2023 (thanks to
-		Gene’s wedding present!), and we had absolutely loved the show, the Tanglewood campus, and the
-		whole area. But, we had only been there once, and only spent two days, so it did not seem like
-		the most reasonable thing in the history of time to pack up our lives and go buy a hotel there.
+		see the Boston Symphony Orchestra perform at Tanglewood one weekend in Summer 2023 (thanks to a
+		friend’s wedding present!), and we had absolutely loved the show, the Tanglewood campus, and the
+		whole area. But, we had only been there once, and for only two days at that, so it did not seem
+		like the most reasonable thing in the history of time to pack up our lives and go buy a hotel
+		there.
 	</p>
 
 	<p>
-		But, the Apple Tree was for sale and I went to go look at it and it was love at first sight. The
-		views, the history, the arches in the living room, the graceful front porch, the moldings, the
-		wood paneling in the Ostrich Room, the working fireplaces, the wallpaper, the music wafting up
-		from Tanglewood, the acres of woods in the back, the fact that it had just been connected to
-		town sewer, I mean, come <em>on</em>, this was <em>it</em>! I had my mom out there two days
-		later to make sure I wasn’t crazy, and I wasn’t. I made an offer that day, and the rest, as they
-		say, will unfold in future <a href="/about-us/newsletter">email newsletters</a>!
+		However, I discovered that the Apple Tree Inn was on the market so I went to look at it and it
+		was love at first sight. The views, the history, the arches in the living room, the graceful
+		front porch, the moldings, the wood paneling in the Ostrich Room, the working fireplaces, the
+		wallpaper, the music wafting up from Tanglewood, the acres of woods in the back, the fact that
+		it had just been connected to town sewer, I mean, come <em>on</em>, this was <em>it</em>! I made
+		an offer that day, and the rest, as they say, will unfold in future
+		<a href="/about-us/newsletter">email newsletters</a>!
 	</p>
 
 	<p>
