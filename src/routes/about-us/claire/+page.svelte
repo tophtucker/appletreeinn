@@ -75,11 +75,11 @@
 		I started my hotel search in Cape Cod because of my familiarity with it, but discovered after
 		some months that anything remotely nice on the Cape was going to be just too expensive for me.
 		When brainstorming alternatives, I thought: What about the Berkshires?? Toph and I had gone to
-		see the Boston Symphony Orchestra perform at Tanglewood one weekend in Summer 2023 (thanks to a
-		friend’s wedding present!), and we had absolutely loved the show, the Tanglewood campus, and the
-		whole area. But, we had only been there once, and for only two days at that, so it did not seem
-		like the most reasonable thing in the history of time to pack up our lives and go buy a hotel
-		there.
+		see the Boston Symphony Orchestra perform at Tanglewood one weekend in Summer 2023 (thanks to
+		our friend Gene’s wedding present!), and we had absolutely loved the show, the Tanglewood
+		campus, and the whole area. But, we had only been there once, and for only two days at that, so
+		it did not seem like the most reasonable thing in the history of time to pack up our lives and
+		go buy a hotel there.
 	</p>
 
 	<p>
