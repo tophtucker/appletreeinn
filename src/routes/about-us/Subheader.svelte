@@ -3,6 +3,7 @@
 	const pages = [
 		{ pathname: '/about-us', title: 'Staff' },
 		{ pathname: '/about-us/claire', title: 'Claire' },
+		{ pathname: '/about-us/history', title: 'History' },
 		{ pathname: '/about-us/scrapbook', title: 'Scrapbook' },
 		{ pathname: '/about-us/newsletter', title: 'Newsletter' }
 	];
@@ -22,6 +23,7 @@
 		padding: 1rem;
 		border-bottom: 1px solid var(--brown);
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	@media (max-width: 900px) {
