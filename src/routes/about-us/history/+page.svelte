@@ -258,6 +258,10 @@ Or any other reason why.”
 <Footer />
 
 <style>
+	h1 {
+		max-width: 640px;
+	}
+
 	figure {
 		margin-left: 0;
 		margin-right: 0;
