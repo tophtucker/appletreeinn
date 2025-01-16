@@ -20,7 +20,7 @@
 	<h1>Claire</h1>
 
 	<img
-		src="../heropics/claire2.jpg"
+		src="../heropics/claire3.jpg"
 		alt="Claire Collery, proprietor of the inn, sitting by the roaring fireplace in the main lobby in a maroon sweater and blue jeans, legs crossed. She is inexplicably holding a newspaper open over her head, creating a sort of roof shape."
 		class="hero"
 	/>
