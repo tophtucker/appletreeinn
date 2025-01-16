@@ -63,10 +63,10 @@
 	<p>
 		Having never done Excel financial modeling professionally before, I spent every day of my first
 		year there afraid that I was going to get fired. But by the end of three years, I couldn’t
-		believe how much I had learned and improved. It gave me the confidence to act on the whisper in my head to do it, to <em
-			>go out on my own</em
-		>. It sure is comforting to have some understanding of how hotel financials work when you buy a seasonal inn in a remote area, and for that, and for many things, I am eternally
-		grateful to the people at Starwood.
+		believe how much I had learned and improved. It gave me the confidence to act on the whisper in
+		my head to do it, to <em>go out on my own</em>. It sure is comforting to have some understanding
+		of how hotel financials work when you buy a seasonal inn in a remote area, and for that, and for
+		many things, I am eternally grateful to the people at Starwood.
 	</p>
 
 	<p>
