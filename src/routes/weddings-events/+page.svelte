@@ -54,11 +54,6 @@
 	<div class="grid-or-flex">
 		<div>
 			<h1>Weddings & events</h1>
-			<p class="notice">
-				<em>Feb. 2025</em> — Thank you for your interest in hosting an event with us! Due to heavy demand,
-				we are temporarily not accepting new inquiries. Please check back in a few weeks; we look forward
-				to working with you to host your special day!
-			</p>
 			<p>
 				We’d love to host your wedding, rehearsal dinner, welcome party, afterparty, Sunday brunch,
 				room block, or some combination of those. We also host a variety of other events.
@@ -67,16 +62,22 @@
 				We have 34 rooms, a broad flat lawn with a beautiful view, a dining room with panoramic
 				windows, a tavern, the lobby lounge, cozy fireplaces, and a large-scale commercial kitchen.
 			</p>
-			<!-- <p>Fill out the form below and we’ll get back to you. Thank you for your interest!</p> -->
+			<p>Fill out the form below and we’ll get back to you. Thank you for your interest!</p>
 		</div>
 		<Slideshow {pics} />
 	</div>
 
-	<!-- <hr />
+	<hr />
+
+	<p class="notice">
+		<strong>We are currently only accepting events up until October 31, 2025.</strong> If your event
+		would be later than that, then feel free to check back on this page for updated availability. Thank
+		you for thinking of us!
+	</p>
 	<iframe
 		title="Event inquiry form"
 		src="https://app.eventtemple.com/lead_intakes/ecdbd71af44e5dcb8407c0e53f184e18/2586/new"
-	></iframe> -->
+	></iframe>
 </div>
 
 <Footer />
@@ -87,11 +88,13 @@
 		border: 1px solid var(--brown);
 		border-radius: 1em;
 		padding: 1rem;
+		margin-bottom: 2rem;
+		max-width: 100%;
 	}
-	/* iframe {
+	iframe {
 		width: 100%;
 		border: none;
 		height: 700px;
 		border-radius: 5px;
-	} */
+	}
 </style>
