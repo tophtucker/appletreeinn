@@ -5,9 +5,8 @@ import { csvParse } from 'd3-dsv';
 export const ostrichRoom = {
 	hours: [
 		[4, [17, 21]],
-		[5, [17, 22.5]],
-		[6, [17, 23]],
-		[0, [17, 20]]
+		[5, [17, 22]],
+		[6, [17, 22.5]]
 	],
 	overrides: [[new Date(2024, 10, 27), null], [new Date(2024, 10, 28), null], [new Date(2024, 11, 25), null]]
 };
