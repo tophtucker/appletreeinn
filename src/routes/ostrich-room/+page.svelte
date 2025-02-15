@@ -67,9 +67,10 @@
 	<hr />
 	<h2 id="menus">Menus</h2>
 	<div class="menus">
-		<img src="ostrich-room/menu-drinks.png" alt="Drinks menu" />
-		<img src="ostrich-room/menu-food.png" alt="Food menu" />
+		<img src="ostrich-room/menu1.png" alt="Food menu" />
+		<img src="ostrich-room/menu2.png" alt="Drinks menu" />
 	</div>
+	<p><a href="ostrich-room/menu.pdf">View as PDF</a></p>
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
@@ -114,7 +115,7 @@
 
 	.menus {
 		display: grid;
-		grid-template-columns: 1.305fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 1em;
 		width: 100%;
 	}

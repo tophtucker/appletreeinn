@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	const message = 'NEW HOURS: OSTRICH ROOM CLOSED ON SUNDAYS';
+	const message =
+		'CONCERT TIME ADJUSTED TIME DUE TO SNOWSTORM: 5:30 – 8:30pm, Mike Cobb & The Crevulators';
 	const chars = message.toUpperCase().split('');
 	onMount(() => {
 		const charWidth = 14;
