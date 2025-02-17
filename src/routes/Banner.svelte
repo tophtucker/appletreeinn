@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	const message =
-		'CONCERT TIME ADJUSTED TIME DUE TO SNOWSTORM: 5:30 – 8:30pm, Mike Cobb & The Crevulators';
+	const message = '';
 	const chars = message.toUpperCase().split('');
 	onMount(() => {
 		const charWidth = 14;
