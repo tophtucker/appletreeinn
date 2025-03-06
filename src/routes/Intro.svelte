@@ -19,16 +19,14 @@
 <div class="inner">
 	<div class="intro">
 		<article>
-			<p>Come enjoy our</p>
+			<p>Welcome to the Apple Tree!</p>
 			<ul>
-				<li>beautiful views & grounds,</li>
-				<li>hidden gem pool,</li>
-				<li>
-					wood-paneled <a href="/ostrich-room">tavern</a> (Wed. – Sat.) with frequent live music,
-				</li>
-				<li>weekend <a href="/baladi">brunch restaurant</a> overlooking the hills,</li>
-				<li>luxurious bedding, and</li>
-				<li>location walking distance to Tanglewood and Kripalu.</li>
+				<li>Historic Lenox estate situated high on a hill in the Berkshires</li>
+				<li>21 scenic acres with beautiful year-round views</li>
+				<li>Walking distance to Tanglewood and Kripalu</li>
+				<li>Fireplaces in winter; pool in summer; board games all year round</li>
+				<li>Wood paneled tavern serving dinner and cocktails and featuring frequent live music</li>
+				<li>Weekend brunch restaurant with panoramic views</li>
 			</ul>
 		</article>
 		<Slideshow {pics} aspectRatio={1.33} />
@@ -45,7 +43,7 @@
 	}
 
 	.intro article {
-		font-size: larger;
+		font-size: normal;
 		padding: 2em;
 		max-width: 640px;
 		background: var(--tan);

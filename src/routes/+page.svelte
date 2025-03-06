@@ -70,7 +70,10 @@
 				<p>
 					{building.desc}
 				</p>
-				<p>All rooms have Frette linens and Beekman 1802 bath amenities.</p>
+				<p>
+					There are no elevators in either building; all rooms require stairs to access. Continental
+					breakfast is included in the room rates.
+				</p>
 			</div>
 		</div>
 		<hr style="margin-bottom: 0" />

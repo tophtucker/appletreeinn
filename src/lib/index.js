@@ -8,7 +8,11 @@ export const ostrichRoom = {
 		[5, [17, 22]],
 		[6, [17, 22.5]]
 	],
-	overrides: [[new Date(2024, 10, 27), null], [new Date(2024, 10, 28), null], [new Date(2024, 11, 25), null]]
+	overrides: [
+		[new Date(2024, 10, 27), null],
+		[new Date(2024, 10, 28), null],
+		[new Date(2024, 11, 25), null]
+	]
 };
 
 export const baladi = {
@@ -54,7 +58,7 @@ export const buildings = [
 		id: 'main-house',
 		title: 'Main House',
 		img: 'heropics/main-house.jpg',
-		desc: 'Built in 1885, the three-story main house includes our front desk, Baladi, and the Ostrich Room. Every room is unique. Guest rooms are on the second and third floor, and there is no elevator.',
+		desc: 'Built in 1885, the three story main house includes a spacious, comfortable living room with fireplace, the Ostrich Room (our bar/dining room with live music most nights), and Baladi (our weekend brunch venue). There are 13 guest rooms on the second and third floors of the main house, all of which are unique. Open year round.',
 		building: 'main-house',
 		rooms: [
 			{
@@ -64,8 +68,8 @@ export const buildings = [
 				room_name: 'Dogwood',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: ['main-house/1/_XCS2684.jpg'],
 				views: true,
+				pics: ['main-house/1/_XCS2684.jpg'],
 				features: 'Writing desk with three windows in turret',
 				caveats: null,
 				tags: [
@@ -82,12 +86,12 @@ export const buildings = [
 				room_name: 'Orchard',
 				beds: '1 king',
 				sleeps: 2,
+				views: true,
 				pics: [
 					'main-house/2/_XCS2623.jpg',
 					'main-house/2/_XCS2621.jpg',
 					'main-house/2/_XCS2624.jpg'
 				],
-				views: true,
 				features: 'Working wood-burning fireplace, Balcony with seating, Large room',
 				caveats: null,
 				tags: [
@@ -106,8 +110,8 @@ export const buildings = [
 				room_name: 'Richmond',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: ['main-house/3/_XCS2685.jpg', 'main-house/3/_XCS2686.jpg'],
 				views: null,
+				pics: ['main-house/3/_XCS2685.jpg', 'main-house/3/_XCS2686.jpg'],
 				features: 'Working wood-burning fireplace',
 				caveats: null,
 				tags: ['1 queen', 'Sleeps 2', 'Working wood-burning fireplace']
@@ -119,12 +123,12 @@ export const buildings = [
 				room_name: 'Astalula',
 				beds: '1 king',
 				sleeps: 2,
+				views: null,
 				pics: [
 					'main-house/4/_XCS2629.jpg',
 					'main-house/4/_XCS2628.jpg',
 					'main-house/4/_XCS2631.jpg'
 				],
-				views: null,
 				features: 'Working wood-burning fireplace, Window seat',
 				caveats: null,
 				tags: ['1 king', 'Sleeps 2', 'Working wood-burning fireplace', 'Window seat']
@@ -136,8 +140,8 @@ export const buildings = [
 				room_name: 'Woodside',
 				beds: '2 double',
 				sleeps: 4,
-				pics: ['main-house/5-or-6/5/_XCS2662.jpg', 'main-house/5-or-6/6/_XCS2678.jpg'],
 				views: null,
+				pics: ['main-house/5-or-6/5/_XCS2662.jpg', 'main-house/5-or-6/6/_XCS2678.jpg'],
 				features: null,
 				caveats: 'Room 6 obstructed view',
 				tags: ['2 double', 'Sleeps 4', 'Room 6 obstructed view']
@@ -149,8 +153,8 @@ export const buildings = [
 				room_name: 'Leighton Rollins',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: ['main-house/7/_XCS2637.jpg'],
 				views: null,
+				pics: ['main-house/7/_XCS2637.jpg'],
 				features: 'Claw foot bathtub, Vintage sink',
 				caveats: 'Located above Ostrich Room; can be noisy',
 				tags: [
@@ -168,13 +172,13 @@ export const buildings = [
 				room_name: 'Bristed Suite',
 				beds: '1 king, 1 pull-out',
 				sleeps: 4,
+				views: true,
 				pics: [
 					'main-house/8/_XCS2672.jpg',
 					'main-house/8/_XCS2666.jpg',
 					'main-house/8/_XCS2668.jpg',
 					'main-house/8/_XCS2669.jpg'
 				],
-				views: true,
 				features: 'Working wood-burning fireplace, Living room',
 				caveats: 'Located above Ostrich Room; can be noisy',
 				tags: [
@@ -193,8 +197,8 @@ export const buildings = [
 				room_name: 'Shadowbrook',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: ['main-house/9/_XCS2640.jpg', 'main-house/9/_XCS2641.jpg'],
 				views: true,
+				pics: ['main-house/9/_XCS2640.jpg', 'main-house/9/_XCS2641.jpg'],
 				features: null,
 				caveats: 'Located above Ostrich Room; can be noisy',
 				tags: [
@@ -211,8 +215,8 @@ export const buildings = [
 				room_name: 'Alice’s',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: ['main-house/10/_XCS2642.jpg'],
 				views: null,
+				pics: ['main-house/10/_XCS2642.jpg'],
 				features: null,
 				caveats:
 					'Low ceilings, Steep staircase to 3rd floor, No in-room bathroom; private bathroom in hallway with separate key',
@@ -231,13 +235,13 @@ export const buildings = [
 				room_name: 'Arlo’s Suite',
 				beds: '1 queen, 2 double',
 				sleeps: 6,
+				views: null,
 				pics: [
 					'main-house/11-12/_XCS2649.jpg',
 					'main-house/11-12/_XCS2643.jpg',
 					'main-house/11-12/_XCS2647.jpg',
 					'main-house/11-12/_XCS2650.jpg'
 				],
-				views: null,
 				features: 'Living room',
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
 				tags: [
@@ -255,8 +259,8 @@ export const buildings = [
 				room_name: 'Avaloch Suite',
 				beds: '1 king, 2 small pull-outs',
 				sleeps: 4,
-				pics: ['main-house/14/_XCS2680.jpg', 'main-house/14/_XCS2679.jpg'],
 				views: true,
+				pics: ['main-house/14/_XCS2680.jpg', 'main-house/14/_XCS2679.jpg'],
 				features: 'Living room',
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
 				tags: [
@@ -275,8 +279,8 @@ export const buildings = [
 				room_name: 'Cecile’s',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: ['main-house/15/_XCS2683.jpg'],
 				views: null,
+				pics: ['main-house/15/_XCS2683.jpg'],
 				features: null,
 				caveats: 'Low ceilings, Steep staircase to 3rd floor',
 				tags: ['1 queen', 'Sleeps 2', 'Low ceilings', 'Steep staircase to 3rd floor']
@@ -287,44 +291,18 @@ export const buildings = [
 		id: 'lodge',
 		title: 'Lodge',
 		img: 'heropics/summer-annex.jpg',
-		desc: 'The motel-style lodge has four standard room types, facing either the woods (basically no view) or mountains (beautiful view). It’s located between the main house and the pool, a three-minute walk from each. Guest rooms are on the first and second floor, and there is no elevator.',
+		desc: 'Built in 1966, the motel-style lodge has four standard room types, facing either the woods (basically no view) or mountains (beautiful view). It’s located between the main house and the pool, a three-minute walk from each. There are 21 guest rooms on the first and second floors. Open from May to October.',
 		building: 'lodge',
 		rooms: [
 			{
 				building: 'lodge',
 				floor: null,
 				room_number: null,
-				room_name: 'Queen Woods View',
+				room_name: 'Queen Scenic View',
 				beds: '1 queen',
 				sleeps: 2,
-				pics: ['lodge/queen-woods-view/_XCS2800.jpg', 'lodge/queen-woods-view/2.jpg'],
-				views: null,
-				features: null,
-				caveats: null,
-				tags: ['1 queen', 'Sleeps 2']
-			},
-			{
-				building: 'lodge',
-				floor: null,
-				room_number: null,
-				room_name: '2 Double Woods View',
-				beds: '2 double',
-				sleeps: 4,
-				pics: ['lodge/2-double-woods-view/_XCS2794.jpg', 'lodge/2-double-woods-view/2.jpg'],
-				views: null,
-				features: null,
-				caveats: null,
-				tags: ['2 double', 'Sleeps 4']
-			},
-			{
-				building: 'lodge',
-				floor: null,
-				room_number: null,
-				room_name: 'Queen Mountain View',
-				beds: '1 queen',
-				sleeps: 2,
-				pics: ['lodge/queen-mountain-view/_XCS2772.jpg', 'lodge/queen-mountain-view/3.jpg'],
 				views: true,
+				pics: ['lodge/queen-scenic-view/_XCS2772.jpg', 'lodge/queen-scenic-view/3.jpg'],
 				features: null,
 				caveats: null,
 				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
@@ -333,14 +311,40 @@ export const buildings = [
 				building: 'lodge',
 				floor: null,
 				room_number: null,
-				room_name: '2 Double Mountain View',
+				room_name: '2 Double Scenic View',
 				beds: '2 double',
 				sleeps: 4,
-				pics: ['lodge/2-double-mountain-view/_XCS2782.jpg', 'lodge/2-double-mountain-view/2.jpg'],
 				views: true,
+				pics: ['lodge/2-double-scenic-view/_XCS2782.jpg', 'lodge/2-double-scenic-view/2.jpg'],
 				features: null,
 				caveats: null,
 				tags: ['2 double', 'Sleeps 4', 'Beautiful views of the hills']
+			},
+			{
+				building: 'lodge',
+				floor: null,
+				room_number: null,
+				room_name: 'Queen',
+				beds: '1 queen',
+				sleeps: 2,
+				views: null,
+				pics: ['lodge/queen/_XCS2800.jpg', 'lodge/queen/2.jpg'],
+				features: null,
+				caveats: null,
+				tags: ['1 queen', 'Sleeps 2']
+			},
+			{
+				building: 'lodge',
+				floor: null,
+				room_number: null,
+				room_name: '2 Double',
+				beds: '2 double',
+				sleeps: 4,
+				views: null,
+				pics: ['lodge/2-double/_XCS2794.jpg', 'lodge/2-double/2.jpg'],
+				features: null,
+				caveats: null,
+				tags: ['2 double', 'Sleeps 4']
 			}
 		]
 	}
