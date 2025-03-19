@@ -24,15 +24,17 @@
 <table class="hours">
 	<thead>
 		<tr>
-			<td colspan="2" style="padding-bottom: 1em;">Hours</td>
+			<td colspan="2"></td>
+			<td style="padding-bottom: 1em;">Hours</td>
 			{#if events?.future.length}
-				<td style="padding-bottom: 1em; color: var(--brown);">Events this week</td>
+				<td style="padding-bottom: 1em; color: var(--brown);">Events</td>
 			{/if}
 		</tr>
 	</thead>
 	<tbody>
 		{#each days as day}
 			<tr>
+				<td>{+timeDay(day) === +timeDay(new Date()) ? '☞' : ''}</td>
 				<td>{formatWeekday(day.getDay())}</td>
 				<td>{getHoursForDay(day)}</td>
 				{#if events?.future.length}
