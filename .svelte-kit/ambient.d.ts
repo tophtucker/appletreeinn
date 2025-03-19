@@ -49,6 +49,7 @@ declare module '$env/static/private' {
 	export const npm_package_private: string;
 	export const npm_config_registry: string;
 	export const npm_package_readmeFilename: string;
+	export const npm_package_dependencies_d3_time_format: string;
 	export const USER: string;
 	export const npm_package_description: string;
 	export const COMMAND_MODE: string;
@@ -161,6 +162,7 @@ declare module '$env/dynamic/private' {
 		npm_package_private: string;
 		npm_config_registry: string;
 		npm_package_readmeFilename: string;
+		npm_package_dependencies_d3_time_format: string;
 		USER: string;
 		npm_package_description: string;
 		COMMAND_MODE: string;

@@ -3,7 +3,7 @@
 	import Footer from '../Footer.svelte';
 	import Slideshow from '../Slideshow.svelte';
 	import { loadEvents, formatDate, ostrichRoom } from '$lib/index.js';
-	import OpenSignBig from '../OpenSignBig.svelte';
+	import WeekHours from '../WeekHours.svelte';
 
 	let events = $state(undefined);
 	(async function () {
@@ -33,7 +33,7 @@
 		<div>
 			<h1>The Ostrich Room</h1>
 			<div style="margin-top: 1em">
-				<OpenSignBig data={ostrichRoom} {events} />
+				<WeekHours data={ostrichRoom} {events} />
 			</div>
 			<h2>Five things to know</h2>
 			<ol>

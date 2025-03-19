@@ -2,7 +2,7 @@
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
 	import { baladi } from '$lib/index.js';
-	import OpenSignBig from '../OpenSignBig.svelte';
+	import InlineHours from '../InlineHours.svelte';
 	import Pin from '../Pin.svelte';
 </script>
 
@@ -22,7 +22,7 @@
 		<img src="./baladi/room.jpg" alt="The Baladi dining room" />
 		<h1>BÁLADI</h1>
 		<div>
-			<div class="pill"><OpenSignBig data={baladi} /></div>
+			<div class="pill"><InlineHours data={baladi} /></div>
 			<div class="pill">
 				<a
 					href="https://tables.toasttab.com/apple-tree-inn-lenox-10-richmond-mountain-road/reserve?partySize=6&dateTime=2024-11-24T09%3A00%3A00.000-05%3A00"
