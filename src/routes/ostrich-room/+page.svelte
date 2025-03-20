@@ -100,7 +100,7 @@
 <style>
 	.intro {
 		box-shadow: inset 0 0 10em 5vw #000;
-		background-image: url('./ostrich-room/packed.jpg');
+		background-image: url('/ostrich-room/packed.jpg');
 		background-size: cover;
 		background-position: 50% 30%;
 		display: flex;
