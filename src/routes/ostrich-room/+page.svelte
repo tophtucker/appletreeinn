@@ -89,9 +89,11 @@
 	<hr />
 	<p>
 		Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards
-		room, our tavern is locally famous for its music program and the roaring fires in the <em
+		room, our tavern is locally famous for its live music program and the roaring fires in the <em
 			>inglenook</em
-		> (that’s a fireplace nook with facing benches).
+		> (that’s a fireplace nook with facing benches). It gets its name from its chandelier of real ostrich
+		eggs. Sean’s always thinking of great cocktails, new and old, seasonal and timeless. And Hagai’s
+		cooking elevates fries to an art.
 	</p>
 </div>
 
