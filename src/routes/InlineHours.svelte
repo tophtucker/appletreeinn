@@ -1,6 +1,6 @@
 <script>
 	import { formatTimeRange, formatWeekday } from '$lib/index.js';
-	let { data, events } = $props();
+	let { data } = $props();
 	// TODO: show overrides
 	const { hours, overrides } = data;
 

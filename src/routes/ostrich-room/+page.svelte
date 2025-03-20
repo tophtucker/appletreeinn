@@ -29,40 +29,13 @@
 <Header />
 
 <div class="inner">
-	<div class="grid-or-flex">
-		<div>
-			<h1>The Ostrich Room</h1>
-			<div style="margin-top: 1em">
-				<WeekHours data={ostrichRoom} {events} />
-			</div>
-			<h2>Five things to know</h2>
-			<ol>
-				<li>
-					We do not take reservations and we do not keep a wait list. All tables are “first come,
-					first served”, including for hotel guests.
-				</li>
-				<li>If you sit in the Ostrich Room, we will come to your table to take your order.</li>
-				<li>
-					If you want to sit elsewhere, please order at the bar. Take your drinks with you, and
-					we’ll bring the food.
-					<ul>
-						<li>
-							Feel free to sit in the lobby, on the porch, or outside at the picnic tables. It’s a
-							nice view!
-						</li>
-					</ul>
-				</li>
-				<li>We will clear your table when you’re done.</li>
-				<li>Life is a work in progress! All this may change! Thank you for being here!</li>
-			</ol>
-			<p>
-				Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards
-				room, our tavern is locally famous for its music program and the roaring fires in the <em
-					>inglenook</em
-				> (that’s a fireplace nook with facing benches).
-			</p>
-		</div>
-		<Slideshow {pics} />
+	<div class="intro">
+		<div>Drinks • Food • Music</div>
+		<h1>The Ostrich Room</h1>
+		<div>No reservations • All are welcome</div>
+	</div>
+	<div class="hours-wrapper">
+		<WeekHours data={ostrichRoom} {events} />
 	</div>
 	<hr />
 	<h2 id="menus">Menus</h2>
@@ -71,6 +44,15 @@
 		<img src="ostrich-room/menu2.png" alt="Drinks menu" />
 	</div>
 	<p><a href="ostrich-room/menu.pdf">View as PDF</a></p>
+	<hr />
+	<div class="gallery">
+		<img src="./ostrich-room/cauliflower.jpg" alt="Food at Baladi" />
+		<img src="./ostrich-room/fireplace.jpg" alt="Food at Baladi" />
+		<img src="./ostrich-room/cocktail.jpg" alt="Food at Baladi" />
+		<img src="./heropics/ostrich3.jpg" alt="Food at Baladi" />
+		<img src="./ostrich-room/IMG_6961.jpg" alt="Food at Baladi" />
+		<img src="./ostrich-room/empty.jpg" alt="Food at Baladi" />
+	</div>
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
 	<p>
@@ -104,11 +86,76 @@
 			</table>
 		</details>
 	{/if}
+	<hr />
+	<p>
+		Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards
+		room, our tavern is locally famous for its music program and the roaring fires in the <em
+			>inglenook</em
+		> (that’s a fireplace nook with facing benches).
+	</p>
 </div>
 
 <Footer />
 
 <style>
+	.intro {
+		box-shadow: inset 0 0 10em 5vw #000;
+		background-image: url('./ostrich-room/packed.jpg');
+		background-size: cover;
+		background-position: 50% 30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem 1rem;
+		border-radius: 5px;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.intro div {
+		opacity: 0.6;
+		color: var(--tan);
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 5vw;
+		text-shadow: 3px 3px 3px black;
+		margin: 3em 1em 3em 1em;
+		text-align: center;
+	}
+
+	@media (min-width: 1200px) {
+		h1 {
+			font-size: 80px;
+		}
+	}
+
+	@media (min-width: 420px) and (max-width: 1200px) {
+		h1 {
+			font-size: 6vw;
+		}
+	}
+
+	@media (max-width: 420px) {
+		h1 {
+			font-size: 2em;
+			margin: 3em 1em;
+		}
+		.intro div {
+			font-size: small;
+		}
+	}
+
+	.hours-wrapper {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin-top: 2em;
+	}
+
 	h2 {
 		margin: 1em 0 0.5em 0;
 	}
@@ -143,6 +190,27 @@
 		.menus {
 			display: flex;
 			flex-direction: column;
+		}
+	}
+
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 1em;
+	}
+	.gallery img {
+		flex: 1 1 auto;
+		max-width: 100%;
+		height: auto;
+		min-height: 1px;
+		border-radius: 5px;
+		aspect-ratio: 500/643;
+		object-fit: cover;
+	}
+	@media (max-width: 800px) {
+		.gallery {
+			grid-template-rows: 1fr 1fr;
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 </style>

@@ -1,13 +1,15 @@
 <script>
 	import { timeMonday, timeDay } from 'd3-time';
+	import { timeFormat } from 'd3-time-format';
 	import { formatTimeRange, formatWeekday } from '$lib/index.js';
 	let { data, events } = $props();
-	// TODO: show overrides
 	const { hours, overrides } = data;
 
 	const start = timeMonday.floor(new Date());
 	const end = timeMonday.ceil(new Date());
 	const days = timeDay.range(start, end);
+
+	const formatDate = timeFormat('%a. %-m/%d');
 
 	const getHoursForDay = (date) => {
 		const h = overrides.find((o) => +o[0] === +date) || hours.find((h) => h[0] === date.getDay());
@@ -16,29 +18,35 @@
 	};
 
 	const getEventsForDay = (date) => {
-		console.log('rendering', date, events.data);
 		return events?.data.filter((d) => +date === +d.date) ?? [];
 	};
+
+	const isToday = (day) => +timeDay(day) === +timeDay(new Date());
 </script>
 
 <table class="hours">
 	<thead>
 		<tr>
-			<td colspan="2"></td>
-			<td style="padding-bottom: 1em;">Hours</td>
+			<th style="border-top: none; border-left: none; background: none;"></th>
+			<th>Hours</th>
 			{#if events?.future.length}
-				<td style="padding-bottom: 1em; color: var(--brown);">Events</td>
+				<th
+					><div style="display: flex; justify-content: space-between;">
+						Events <a href="#calendar" style="font-size: smaller;">see all</a>
+					</div></th
+				>
 			{/if}
 		</tr>
 	</thead>
 	<tbody>
 		{#each days as day}
 			<tr>
-				<td>{+timeDay(day) === +timeDay(new Date()) ? '☞' : ''}</td>
-				<td>{formatWeekday(day.getDay())}</td>
-				<td>{getHoursForDay(day)}</td>
+				<td style="width: 6em; position: relative;"
+					>{#if isToday(day)}<span class="manicule">☞</span>{/if}{formatDate(day)}</td
+				>
+				<td style="width: 8em;">{getHoursForDay(day)}</td>
 				{#if events?.future.length}
-					<td style="font-style: italic; color: var(--brown); font-size: smaller;">
+					<td>
 						{#each getEventsForDay(day) as event}
 							{event.description}
 							<br />
@@ -53,12 +61,47 @@
 <style>
 	.hours {
 		border-collapse: collapse;
+		max-width: 720px;
+	}
+	th,
+	td {
+		font-weight: normal;
+		text-align: left;
+		border: 1px solid var(--brown);
+		padding: 0.5em;
+		position: relative;
+		background: white;
 	}
 	td {
-		padding-right: 0.5em;
 		vertical-align: top;
 	}
-	td:nth-child(2) {
-		min-width: 5em;
+	@keyframes wiggle {
+		0%,
+		90% {
+			transform: rotate(0deg);
+		} /* Idle */
+		93% {
+			transform: rotate(10deg);
+		}
+		95% {
+			transform: rotate(-10deg);
+		}
+		99% {
+			transform: rotate(5deg);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+	.manicule {
+		position: absolute;
+		left: -14px;
+		top: 6px;
+		animation: wiggle 10s ease-in-out infinite;
+	}
+	@media (min-width: 1240px) {
+		.manicule {
+			left: -30px;
+		}
 	}
 </style>
