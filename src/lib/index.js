@@ -1,8 +1,8 @@
 // place files you want to import through the `$lib` alias in this folder.
 // e.g. import { buildings } from '$lib/index.js';
 import { csvParse } from 'd3-dsv';
-import { timeDay } from "d3-time";
-import { timeParse} from "d3-time-format"
+import { timeDay } from 'd3-time';
+import { timeParse, timeFormat } from 'd3-time-format';
 
 export const ostrichRoom = {
 	hours: [
@@ -17,7 +17,7 @@ export const ostrichRoom = {
 		[new Date(2025, 2, 19), [18, 21]],
 		[new Date(2024, 3, 3), null],
 		[new Date(2024, 3, 4), null],
-		[new Date(2024, 3, 5), null],
+		[new Date(2024, 3, 5), null]
 	]
 };
 
@@ -29,7 +29,7 @@ export const baladi = {
 	overrides: [new Date(2025, 0, 20), [9, 14]]
 };
 
-const parseDate = timeParse("%Y-%m-%d");
+const parseDate = timeParse('%Y-%m-%d');
 export async function loadEvents() {
 	let sheet;
 	try {
@@ -47,16 +47,14 @@ export async function loadEvents() {
 		description: d.description || 'TBD'
 	}));
 	const today = timeDay(new Date());
-	return { data, past: data.filter((d) => d.date < today), future: data.filter((d) => d.date >= today) };
+	return {
+		data,
+		past: data.filter((d) => d.date < today),
+		future: data.filter((d) => d.date >= today)
+	};
 }
 
-export const formatDate = (date) =>
-	new Intl.DateTimeFormat('en-US', {
-		weekday: 'short',
-		month: 'numeric',
-		day: 'numeric',
-		timeZone: 'utc'
-	}).format(date);
+export const formatDate = timeFormat('%a. %-m/%d');
 
 const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
 const mod = (hour) => hour % 12;
@@ -67,7 +65,7 @@ export const formatTimeRange = (hours) =>
 		: hours.map((hour) => `${fmt(hour)} ${amPm(hour)}`).join(' – ');
 
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-export const formatWeekday = d => `${daysOfWeek[d]}.`;
+export const formatWeekday = (d) => `${daysOfWeek[d]}.`;
 
 // https://observablehq.com/d/37b2ab91a954e6bc
 export const buildings = [

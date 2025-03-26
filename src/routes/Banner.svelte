@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	const message = '';
+	const message = 'Ostrich Room closed April 3 – 5 for “spring break”';
 	const chars = message.toUpperCase().split('');
 	onMount(() => {
 		const charWidth = 14;

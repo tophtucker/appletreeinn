@@ -1,7 +1,6 @@
 <script>
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
-	import Slideshow from '../Slideshow.svelte';
 	import { loadEvents, formatDate, ostrichRoom } from '$lib/index.js';
 	import WeekHours from '../WeekHours.svelte';
 
@@ -32,10 +31,12 @@
 	<div class="intro">
 		<div>Drinks • Food • Music</div>
 		<h1>The Ostrich Room</h1>
-		<div>No reservations • All are welcome</div>
+		<div>All are welcome</div>
+		<div class="notice">Closed April 3 – 5</div>
 	</div>
 	<div class="hours-wrapper">
 		<WeekHours data={ostrichRoom} {events} />
+		<em>Limited reservations available for parties of 5 or more; call (413) 637-1910.</em>
 	</div>
 	<hr />
 	<h2 id="menus">Menus</h2>
@@ -114,6 +115,7 @@
 		color: white;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
+		position: relative;
 	}
 
 	.intro div {
@@ -127,6 +129,18 @@
 		text-shadow: 3px 3px 3px black;
 		margin: 3em 1em 3em 1em;
 		text-align: center;
+	}
+
+	.notice {
+		position: absolute;
+		padding: 1rem;
+		background: red;
+		text-transform: uppercase;
+		color: white;
+		opacity: 1 !important;
+		bottom: 0;
+		transform: rotate(-7deg);
+		border: 1px solid white;
 	}
 
 	@media (min-width: 1200px) {
@@ -153,7 +167,8 @@
 
 	.hours-wrapper {
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 		gap: 1rem;
 		margin-top: 2em;
 	}

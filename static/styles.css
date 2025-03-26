@@ -106,6 +106,10 @@ li {
 	line-height: 1.4;
 }
 
+.show-mobile {
+	display: none;
+}
+
 @media (max-width: 800px) {
 	nav,
 	.links {
@@ -116,6 +120,10 @@ li {
 
 	.hide-mobile {
 		display: none;
+	}
+
+	.show-mobile {
+		display: block;
 	}
 
 	.grid-or-flex {
