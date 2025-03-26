@@ -4,7 +4,7 @@
 	import OpenSign from './OpenSign.svelte';
 	import { ostrichRoom, baladi } from '$lib/index.js';
 
-	const BOOKING_URL = 'https://appletreeinn.book.pegsbe.com/';
+	const BOOKING_URL = 'https://direct-book.com/properties/AppleTreeInndirect';
 	const pages = [
 		{ pathname: '/', title: 'Home', mobileNav: true },
 		{
