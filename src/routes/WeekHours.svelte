@@ -91,7 +91,6 @@
 		padding: 0.5em;
 		position: relative;
 		background: white;
-		overflow: hidden;
 	}
 	td {
 		vertical-align: top;
@@ -136,6 +135,9 @@
 	}
 	td:hover .notice {
 		transform: translate(0%, 120%) rotate(-7deg);
+	}
+	td:has(.notice) {
+		overflow: hidden;
 	}
 	@media (max-width: 800px) {
 		.description {
