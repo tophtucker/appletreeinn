@@ -31,7 +31,9 @@
 			<th style="border-top: none; border-left: none; background: none;"></th>
 			<th>Hours</th>
 			{#if events?.future.length}
-				<th><div style="display: flex; justify-content: space-between;">Events</div></th>
+				<th class="hide-mobile"
+					><div style="display: flex; justify-content: space-between;">Events</div></th
+				>
 			{/if}
 		</tr>
 	</thead>
@@ -51,10 +53,17 @@
 				<td
 					>{getRegularHoursForDate(day)}{#if override(day)}<span class="notice"
 							>{#if override(day)[1]}{formatTimeRange(override(day)[1])}{:else}Closed{/if}</span
-						>{/if}</td
+						>{/if}
+					{#if getEventsForDay(day).length}
+						<div class="description show-mobile">
+							{getEventsForDay(day)
+								.map((d) => d.description)
+								.join(', ')}
+						</div>
+					{/if}</td
 				>
 				{#if events?.future.length}
-					<td class="description">
+					<td class="description hide-mobile">
 						{#each getEventsForDay(day) as event}
 							{event.description}
 							<br />
@@ -82,6 +91,7 @@
 		padding: 0.5em;
 		position: relative;
 		background: white;
+		overflow: hidden;
 	}
 	td {
 		vertical-align: top;
@@ -116,20 +126,22 @@
 		padding: 3px 6px;
 		background: red;
 		color: white;
-		top: 50%;
-		left: 40%;
-		transform: translate(-50%, -50%) rotate(-7deg);
+		top: 0.5em;
+		left: 1em;
+		transform: translate(0%, 0%) rotate(-7deg);
 		border: 1px solid white;
 		white-space: nowrap;
 		transition: transform 0.2s;
 		pointer-events: none;
 	}
 	td:hover .notice {
-		transform: translate(-50%, 100%) rotate(-7deg);
+		transform: translate(0%, 120%) rotate(-7deg);
 	}
 	@media (max-width: 800px) {
 		.description {
 			font-size: smaller;
+			margin-top: 1em;
+			color: var(--gray);
 		}
 	}
 	@media (min-width: 1240px) {
