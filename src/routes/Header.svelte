@@ -114,7 +114,7 @@
 		text-transform: uppercase;
 		position: absolute;
 		top: -30px;
-		color: #999;
+		color: var(--gray);
 	}
 
 	header {

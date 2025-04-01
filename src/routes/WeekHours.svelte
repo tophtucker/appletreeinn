@@ -1,18 +1,12 @@
 <script>
 	import { timeMonday, timeDay } from 'd3-time';
-	import { formatTimeRange, formatDate } from '$lib/index.js';
+	import { formatTimeRange, formatDay, formatDateShort } from '$lib/index.js';
 	let { data, events } = $props();
 	const { hours, overrides } = data;
 
 	const start = timeMonday.floor(new Date());
 	const end = timeMonday.ceil(new Date());
 	const days = timeDay.range(start, end);
-
-	const getHoursForDay = (date) => {
-		const h = overrides.find((o) => +o[0] === +date) || hours.find((h) => h[0] === date.getDay());
-		if (!h || !h[1]) return '—';
-		return formatTimeRange(h[1]);
-	};
 
 	const getRegularHoursForDate = (date) => {
 		const h = hours.find((h) => h[0] === date.getDay());
@@ -44,10 +38,17 @@
 	<tbody>
 		{#each days as day}
 			<tr>
-				<td style="position: relative;"
-					>{#if isToday(day)}<span class="manicule">☞</span>{/if}{formatDate(day)}
+				<td
+					><div
+						style="display: flex; justify-content: space-between; align-items: center; gap: 0.5em;"
+					>
+						{#if isToday(day)}<span class="manicule">☞</span>{/if}{formatDay(day)}
+						<span style="color: var(--gray); font-variant-numeric: tabular-nums;"
+							>{formatDateShort(day)}</span
+						>
+					</div>
 				</td>
-				<td style="position: relative;"
+				<td
 					>{getRegularHoursForDate(day)}{#if override(day)}<span class="notice"
 							>{#if override(day)[1]}{formatTimeRange(override(day)[1])}{:else}Closed{/if}</span
 						>{/if}</td
@@ -120,6 +121,11 @@
 		transform: translate(-50%, -50%) rotate(-7deg);
 		border: 1px solid white;
 		white-space: nowrap;
+		transition: transform 0.2s;
+		pointer-events: none;
+	}
+	td:hover .notice {
+		transform: translate(-50%, 100%) rotate(-7deg);
 	}
 	@media (max-width: 800px) {
 		.description {

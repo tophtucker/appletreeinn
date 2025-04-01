@@ -15,9 +15,9 @@ export const ostrichRoom = {
 		[new Date(2024, 10, 28), null],
 		[new Date(2024, 11, 25), null],
 		[new Date(2025, 2, 19), [18, 21]],
-		[new Date(2024, 3, 3), null],
-		[new Date(2024, 3, 4), null],
-		[new Date(2024, 3, 5), null]
+		[new Date(2025, 3, 3), null],
+		[new Date(2025, 3, 4), null],
+		[new Date(2025, 3, 5), null]
 	]
 };
 
@@ -55,6 +55,8 @@ export async function loadEvents() {
 }
 
 export const formatDate = timeFormat('%a. %-m/%d');
+export const formatDay = timeFormat('%a.');
+export const formatDateShort = timeFormat('%-m/%d');
 
 const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
 const mod = (hour) => hour % 12;

@@ -12,6 +12,7 @@ body {
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	--brown: #5e4c3c;
 	--tan: #ffeacc;
+	--gray: #999;
 	--gutter: max(1em, calc((100vw - 1200px) / 2));
 }
 
