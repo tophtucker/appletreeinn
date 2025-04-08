@@ -32,7 +32,6 @@
 		<div>Drinks • Food • Music</div>
 		<h1>The Ostrich Room</h1>
 		<div>All are welcome</div>
-		<div class="notice">Closed April 3 – 5</div>
 	</div>
 	<div class="hours-wrapper">
 		<WeekHours data={ostrichRoom} {events} />
@@ -129,18 +128,6 @@
 		text-shadow: 3px 3px 3px black;
 		margin: 3em 1em 3em 1em;
 		text-align: center;
-	}
-
-	.notice {
-		position: absolute;
-		padding: 1rem;
-		background: red;
-		text-transform: uppercase;
-		color: white;
-		opacity: 1 !important;
-		bottom: 0;
-		transform: rotate(-7deg);
-		border: 1px solid white;
 	}
 
 	@media (min-width: 1200px) {
