@@ -7,11 +7,11 @@
 </script>
 
 <svelte:head>
-	<title>Baladi • Apple Tree Inn • Lenox, MA</title>
+	<title>Báladi • Apple Tree Inn • Lenox, MA</title>
 	<link rel="stylesheet" href="https://use.typekit.net/ktg1lbx.css" />
 	<meta
 		name="description"
-		content="Baladi is our new brunch restaurant serving Mediterranean fare Sat. & Sun., 9 am – 2 pm"
+		content="Báladi is our new brunch restaurant serving Mediterranean fare Sat. & Sun., 9 am – 2 pm"
 	/>
 </svelte:head>
 
@@ -19,7 +19,7 @@
 
 <div class="inner">
 	<div class="intro">
-		<img src="./baladi/room.jpg" alt="The Baladi dining room" />
+		<img src="./baladi/room.jpg" alt="The Báladi dining room" />
 		<h1>BÁLADI</h1>
 		<div>
 			<div class="pill"><InlineHours data={baladi} /></div>
@@ -39,7 +39,7 @@
 	</div>
 	<hr />
 	<div id="menu" class="menu-grid">
-		<img src="baladi/menu.png" alt="Baladi menu" />
+		<img src="baladi/menu.png" alt="Báladi menu" />
 		<div class="glossary">
 			<h2 id="glossary"><u>Glo</u>ssary</h2>
 			<ul>
@@ -91,17 +91,17 @@
 	<hr style="margin-bottom: 1em;" />
 
 	<div class="gallery">
-		<img src="./baladi/IMG_7442.jpg" alt="Food at Baladi" />
-		<img src="./baladi/IMG_7496.jpg" alt="Food at Baladi" />
-		<img src="./baladi/IMG_7580.jpg" alt="Food at Baladi" />
-		<img src="./baladi/IMG_7445.jpg" alt="Food at Baladi" />
-		<img src="./baladi/IMG_7540.jpg" alt="Food at Baladi" />
-		<img src="./baladi/IMG_7613.jpg" alt="Food at Baladi" />
+		<img src="./baladi/IMG_7442.jpg" alt="Food at Báladi" />
+		<img src="./baladi/IMG_7496.jpg" alt="Food at Báladi" />
+		<img src="./baladi/IMG_7580.jpg" alt="Food at Báladi" />
+		<img src="./baladi/IMG_7445.jpg" alt="Food at Báladi" />
+		<img src="./baladi/IMG_7540.jpg" alt="Food at Báladi" />
+		<img src="./baladi/IMG_7613.jpg" alt="Food at Báladi" />
 	</div>
 
 	<hr style="margin-top: 1em;" />
 	<p>
-		Baladi (<em><small>BALL</small>-ah-dee</em>, بلدي, Arabic for “local”) is our new brunch
+		Báladi (<em><small>BALL</small>-ah-dee</em>, بلدي, Arabic for “local”) is our new brunch
 		restaurant featuring the Mediterranean food that our husband–wife team of Hagai and Adi have
 		always loved cooking for themselves.
 	</p>

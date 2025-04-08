@@ -9,7 +9,7 @@
 		{ pathname: '/', title: 'Home', mobileNav: true },
 		{
 			pathname: '/baladi',
-			title: 'Baladi',
+			title: 'Báladi',
 			eyebrow: 'Brunch',
 			img: '/img/baladi-icon.jpg',
 			mobileNav: true,
