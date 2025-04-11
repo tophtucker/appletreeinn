@@ -12,6 +12,7 @@
 			title: 'Báladi',
 			eyebrow: 'Brunch',
 			img: '/img/baladi-icon.jpg',
+			hours: baladi,
 			mobileNav: true,
 			desktopNav: true
 		},
@@ -20,6 +21,7 @@
 			title: 'Ostrich Room',
 			eyebrow: 'Dinner',
 			img: '/img/cocktail.jpg',
+			hours: ostrichRoom,
 			mobileNav: true,
 			desktopNav: true
 		},
@@ -65,7 +67,7 @@
 		<img src="/logo.svg" height="200" alt="The Apple Tree Inn" />
 	</a>
 	<div class="links">
-		{#each desktopNav as { pathname, title, img, eyebrow }}
+		{#each desktopNav as { pathname, title, img, eyebrow, hours }}
 			<a
 				href={pathname}
 				class={`thumbnail ${$page.url.pathname.startsWith(pathname) ? 'current' : ''}`}
@@ -75,10 +77,8 @@
 				{/if}
 				<img src={img} alt={title} />
 				<span style="min-height: 46px;">{title}</span>
-				{#if title === 'Ostrich Room'}
-					<OpenSign data={ostrichRoom} />
-				{:else if title === 'Baladi'}
-					<OpenSign data={baladi} />
+				{#if hours}
+					<OpenSign data={hours} />
 				{/if}
 			</a>
 		{/each}
