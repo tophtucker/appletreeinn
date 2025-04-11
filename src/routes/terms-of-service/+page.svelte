@@ -32,7 +32,11 @@
 
 	<p>A valid photo ID and credit card are required at check-in.</p>
 
-	<p>Please note that the full amount of the reservation is due before arrival.</p>
+	<p>
+		The Apple Tree Inn charges a 0.5% deposit at the time of booking in order to i) secure your
+		reservation and ii) validate the card provided. Please note that the full amount of the
+		reservation is due before arrival.
+	</p>
 
 	<p>
 		An additional incidental amount of $150 will be placed on your credit card provided at check in
