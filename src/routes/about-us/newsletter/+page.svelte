@@ -20,7 +20,7 @@
 	<h1>Newsletter</h1>
 
 	<p>
-		Claire writes every 2–3 weeks with: the goings-on (live music schedule, new food and cocktails,
+		Claire writes every month with: the goings-on (live music schedule, new food and cocktails,
 		interesting events you can come to), behind-the-scenes stories about running an inn, and a
 		couple of other short recommendations to enhance your Berkshires experience.
 	</p>
@@ -75,14 +75,13 @@
 
 	<h2>Past installments</h2>
 
-	<iframe
-		src="https://us19.campaign-archive.com/home/?u=0e2051740f0e8e07588b8b1ce&id=7c3030910a"
-		width="100%"
-		height="500px"
-		frameborder="0"
-		scrolling="auto"
-		title="Past newsletters"
-	></iframe>
+	<div style="padding: 1em 0">
+		<script
+			language="javascript"
+			src="https://appletreeinnlenox.us19.list-manage.com/generate-js/?u=0e2051740f0e8e07588b8b1ce&show=10&fid=27878"
+			type="text/javascript"
+		></script>
+	</div>
 </div>
 
 <Footer />
