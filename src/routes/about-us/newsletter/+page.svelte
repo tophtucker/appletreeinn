@@ -2,6 +2,7 @@
 	import Header from '../../Header.svelte';
 	import Footer from '../../Footer.svelte';
 	import Subheader from '../Subheader.svelte';
+	import Embed from './Embed.svelte';
 </script>
 
 <svelte:head>
@@ -76,11 +77,7 @@
 	<h2>Past installments</h2>
 
 	<div style="padding: 1em 0">
-		<script
-			language="javascript"
-			src="https://appletreeinnlenox.us19.list-manage.com/generate-js/?u=0e2051740f0e8e07588b8b1ce&show=10&fid=27878"
-			type="text/javascript"
-		></script>
+		<Embed />
 	</div>
 </div>
 
