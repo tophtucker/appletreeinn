@@ -70,6 +70,19 @@
 			</form>
 		</div>
 	</div>
+
+	<hr />
+
+	<h2>Past installments</h2>
+
+	<iframe
+		src="https://us19.campaign-archive.com/home/?u=0e2051740f0e8e07588b8b1ce&id=7c3030910a"
+		width="100%"
+		height="500px"
+		frameborder="0"
+		scrolling="auto"
+		title="Past newsletters"
+	></iframe>
 </div>
 
 <Footer />
