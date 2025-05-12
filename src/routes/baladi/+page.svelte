@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://use.typekit.net/ktg1lbx.css" />
 	<meta
 		name="description"
-		content="Báladi is our new brunch restaurant serving Mediterranean fare Sat. & Sun., 9 am – 2 pm"
+		content="Báladi was our weekend brunch restaurant serving Mediterranean fare — moving to a new location soon"
 	/>
 </svelte:head>
 
@@ -21,21 +21,19 @@
 	<div class="intro">
 		<img src="./baladi/room.jpg" alt="The Báladi dining room" />
 		<h1>BÁLADI</h1>
-		<div>
-			<div class="pill"><InlineHours data={baladi} /></div>
-			<div class="pill">
-				<a
-					href="https://tables.toasttab.com/apple-tree-inn-lenox-10-richmond-mountain-road/reserve?partySize=6&dateTime=2024-11-24T09%3A00%3A00.000-05%3A00"
-					>Make a reservation</a
-				>
-			</div>
-			<div class="pill">Walk-ins welcome</div>
-		</div>
 		<div style="text-shadow: 1px 1px 2px black;">
-			<span><Pin /> <a href="https://maps.app.goo.gl/s2E2mA27XHEvfAuj8">The round room</a></span>
+			<span><Pin /> <a href="https://maps.app.goo.gl/s2E2mA27XHEvfAuj8">Google Maps</a></span>
 			<span><a href="tel:413.717.9522" target="_blank">(413) 717-9522</a></span>
 			<span><a href="https://www.instagram.com/baladiberkshires">@baladiberkshires</a></span>
 		</div>
+	</div>
+	<hr />
+	<div class="notice">
+		<h2 class="pill">Temporarily closed — moving soon</h2>
+		Báladi’s last brunch service at the Apple Tree Inn was a packed house for Mother’s Day on Sunday,
+		May 11. It is moving to a new location to be announced soon. Stay tuned to{' '}<a
+			href="https://www.instagram.com/baladiberkshires">@baladiberkshires</a
+		> for updates!
 	</div>
 	<hr />
 	<div id="menu" class="menu-grid">
@@ -220,6 +218,13 @@
 	}
 	li {
 		margin-bottom: 1em;
+	}
+	.notice {
+		max-width: 640px;
+		margin: 0 auto;
+		text-align: center;
+		font-size: larger;
+		font-family: 'cheddar-gothic-sans', sans-serif;
 	}
 	@media (max-width: 800px) {
 		.menu-grid {

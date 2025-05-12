@@ -35,7 +35,12 @@
 	</div>
 	<div class="hours-wrapper">
 		<WeekHours data={ostrichRoom} {events} />
-		<em>Limited reservations available for parties of 5 or more; call (413) 637-1910.</em>
+		<em style="text-align: center;"
+			>Walk-ins welcome.<br />
+			No reservations for parties of 4 or under.<br />
+			Reservations optional for parties of 5 or more.<br />
+			Call (413) 637-1910!</em
+		>
 	</div>
 	<hr />
 	<h2 id="menus">Menus</h2>

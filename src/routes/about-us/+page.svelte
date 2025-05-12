@@ -74,6 +74,11 @@
 	<hr />
 
 	<div class="bios">
+		<img src="./img/sean.jpg" alt="Sean" />
+		<p>
+			Sean (bar manager) really knows a lot about cocktails and has vastly expanded our menu. His
+			favorite is a Vesper martini. Also he and his wife have a 3-year-old daughter.
+		</p>
 		<img src="./img/abby.jpg" alt="Abby" />
 		<p>
 			Abby (front desk and private events) grew up like a mile from here; she went to Lenox High and
@@ -81,40 +86,11 @@
 			sure. Her brother goes by “Toph” but weirdly she didn’t even tell our Toph for like two
 			months.
 		</p>
-		<div style="height: 140px; position: relative;">
-			<img
-				src="./img/hagai.png"
-				alt="Hagai"
-				style="width: 90px; position: absolute; top: 0; left: 0;"
-			/>
-			<img
-				src="./img/adi.jpg"
-				alt="Adi"
-				style="width: 90px; position: absolute; bottom: 0; right: 0; border: 1px solid white;"
-			/>
-		</div>
-		<p>
-			Hagai (chef) and Adi (Baladi mastermind) moved here from Israel a couple years ago. Hagai’s
-			been doing dinner in the Ostrich Room since the start of the summer, and now Adi is coming
-			aboard for our new brunch restaurant, Baladi. Hagai once bought a didgeridoo in Australia and
-			lugged it all over the world and has learned to play a little bit.
-		</p>
-		<img src="./img/sean.jpg" alt="Sean" />
-		<p>
-			Sean (bar manager) really knows a lot about cocktails. His favorite is a Vesper martini. Also
-			he and his wife have a 3-year-old daughter.
-		</p>
 		<img src="./img/giovanna.png" alt="Giovanna" />
 		<p>
 			Giovanna (bartender) studied linguistics and teaches literacy to kids in North Adams; ask her
 			about phonemes and stuff. Or Aquinas. Or her dogs. Or how much she loves the cows at High
 			Lawn. Or the Death & Co. cocktail book.
-		</p>
-		<img src="./img/nic.png" alt="Nic" />
-		<p>
-			Nic (bartender), also born and raised somewhere around here, is an interior designer by day.
-			Ask him about boating around the lake, his parents’ professional ski careers, or navigating
-			the Tanglewood ticket counter.
 		</p>
 		<img src="./img/peter.jpg" alt="Peter" />
 		<p>

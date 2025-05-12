@@ -2,24 +2,14 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import OpenSign from './OpenSign.svelte';
-	import { ostrichRoom, baladi } from '$lib/index.js';
+	import { ostrichRoom } from '$lib/index.js';
 
 	const BOOKING_URL = 'https://direct-book.com/properties/AppleTreeInndirect';
 	const pages = [
 		{ pathname: '/', title: 'Home', mobileNav: true },
 		{
-			pathname: '/baladi',
-			title: 'Báladi',
-			eyebrow: 'Brunch',
-			img: '/img/baladi-icon.jpg',
-			hours: baladi,
-			mobileNav: true,
-			desktopNav: true
-		},
-		{
 			pathname: '/ostrich-room',
 			title: 'Ostrich Room',
-			eyebrow: 'Dinner',
 			img: '/img/cocktail.jpg',
 			hours: ostrichRoom,
 			mobileNav: true,
