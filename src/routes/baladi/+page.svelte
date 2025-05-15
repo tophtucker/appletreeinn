@@ -1,8 +1,6 @@
 <script>
 	import Header from '../Header.svelte';
 	import Footer from '../Footer.svelte';
-	import { baladi } from '$lib/index.js';
-	import InlineHours from '../InlineHours.svelte';
 	import Pin from '../Pin.svelte';
 </script>
 
@@ -99,21 +97,13 @@
 
 	<hr style="margin-top: 1em;" />
 	<p>
-		Báladi (<em><small>BALL</small>-ah-dee</em>, بلدي, Arabic for “local”) is our new brunch
-		restaurant featuring the Mediterranean food that our husband–wife team of Hagai and Adi have
-		always loved cooking for themselves.
+		Báladi (<em><small>BALL</small>-ah-dee</em>, بلدي, Arabic for “local”) is a brunch restaurant
+		featuring the Mediterranean food that the husband–wife team of Hagai and Adi have always loved
+		cooking for themselves.
 	</p>
 	<p>
 		They originally dreamed of opening it in Greece, and we feel lucky they instead landed on the
-		sun-kissed shores of Lenox. Take in the panoramic view of the Berkshire hills from our round
-		room (formerly the site of Alice’s Restaurant).
-	</p>
-	<p>
-		<a
-			class="pill"
-			href="https://www.toasttab.com/apple-tree-inn-lenox-10-richmond-mountain-road/giftcards"
-			>Buy a gift card</a
-		>
+		sun-kissed shores of the Berkshires.
 	</p>
 </div>
 
