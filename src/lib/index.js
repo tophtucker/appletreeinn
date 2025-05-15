@@ -6,7 +6,8 @@ import { timeParse, timeFormat } from 'd3-time-format';
 
 export const ostrichRoom = {
 	hours: [
-		[4, [17, 21]],
+		[3, [17, 21.5]],
+		[4, [17, 21.5]],
 		[5, [17, 22.5]],
 		[6, [17, 22.5]]
 	],

@@ -3,6 +3,8 @@
 	import Footer from '../Footer.svelte';
 	import { loadEvents, formatDate, ostrichRoom } from '$lib/index.js';
 	import WeekHours from '../WeekHours.svelte';
+	import GoogleDrive from '../GoogleDrive.svelte';
+	import Pin from '../Pin.svelte';
 
 	let events = $state(undefined);
 	(async function () {
@@ -31,32 +33,32 @@
 	<div class="intro">
 		<div>Drinks • Food • Music</div>
 		<h1>The Ostrich Room</h1>
-		<div>All are welcome</div>
+		<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a> • (413) 637-1910</div>
 	</div>
 	<div class="hours-wrapper">
 		<WeekHours data={ostrichRoom} {events} />
-		<em style="text-align: center;"
-			>Walk-ins welcome.<br />
-			No reservations for parties of 4 or under.<br />
-			Reservations optional for parties of 5 or more.<br />
-			Call (413) 637-1910!</em
-		>
+		<div style="text-align: center; font-style: italic; max-width: 420px;">
+			<div>Walk-ins welcome.</div>
+			<div>
+				No reservations for parties of 4 or under. Reservations optional for parties of 5 or more.
+			</div>
+			<div>Call (413) 637-1910!</div>
+		</div>
 	</div>
 	<hr />
 	<h2 id="menus">Menus</h2>
 	<div class="menus">
-		<img src="ostrich-room/menu1.png" alt="Food menu" />
-		<img src="ostrich-room/menu2.png" alt="Drinks menu" />
+		<GoogleDrive id={'1139xqH3Gb25F5FIamPBE8G-TPF8uputv'} title="Drinks" />
+		<GoogleDrive id={'1_9J3SqtSpiVupO8VgDlnq8YMsSdQ3Qgx'} title="Food" />
 	</div>
-	<p><a href="ostrich-room/menu.pdf">View as PDF</a></p>
 	<hr />
 	<div class="gallery">
-		<img src="./ostrich-room/cauliflower.jpg" alt="Food at Baladi" />
-		<img src="./ostrich-room/fireplace.jpg" alt="Food at Baladi" />
-		<img src="./ostrich-room/cocktail.jpg" alt="Food at Baladi" />
-		<img src="./heropics/ostrich3.jpg" alt="Food at Baladi" />
-		<img src="./ostrich-room/IMG_6961.jpg" alt="Food at Baladi" />
-		<img src="./ostrich-room/empty.jpg" alt="Food at Baladi" />
+		<img src="./ostrich-room/cauliflower.jpg" alt="Cauliflower" />
+		<img src="./ostrich-room/fireplace.jpg" alt="The inglenook" />
+		<img src="./ostrich-room/cocktail.jpg" alt="One of Sean’s cocktails" />
+		<img src="./heropics/ostrich3.jpg" alt="The Ostrich Room" />
+		<img src="./ostrich-room/IMG_6961.jpg" alt="The Ostrich Room" />
+		<img src="./ostrich-room/empty.jpg" alt="The Ostrich Room" />
 	</div>
 	<hr />
 	<h2 id="calendar">Live music calendar</h2>
@@ -126,6 +128,10 @@
 		opacity: 0.6;
 		color: var(--tan);
 		text-align: center;
+	}
+
+	.intro a {
+		color: inherit;
 	}
 
 	h1 {
