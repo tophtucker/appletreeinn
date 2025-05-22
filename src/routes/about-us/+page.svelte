@@ -19,7 +19,7 @@
 <div class="inner">
 	<h1>Staff</h1>
 	<div class="grid-or-flex">
-		<div>
+		<div style="order: 2">
 			<p>Claire took over the hotel in April 2024, realizing a lifelong dream.</p>
 			<p>
 				For three summers in college, Claire worked at the concierge desk of the Chatham Bars Inn in
@@ -39,8 +39,9 @@
 			</p>
 		</div>
 		<img
-			src="./heropics/claire-toph.jpg"
+			src="./heropics/claire-toph2.jpg"
 			alt="Claire and Toph, smiling at the camera, Toph’s arm lovingly around Claire’s shoulder, standing at the top of the Apple Tree hill in front of the unseen old carriage house, a beautiful verdant backdrop with layered mountains and just a hint of the Stockbridge Bowl visible at the far right"
+			style="order: 1"
 		/>
 	</div>
 	<hr />
