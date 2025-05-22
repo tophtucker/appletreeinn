@@ -1,7 +1,8 @@
 <script>
 	import Slideshow from './Slideshow.svelte';
 	const pics = [
-		{ src: './heropics/driveway.jpg', title: 'The view from the driveway' },
+		{ src: './heropics/verdant.jpg', title: 'The view from the lawn' },
+		// { src: './heropics/driveway.jpg', title: 'The view from the driveway' },
 		{ src: './heropics/view1.jpg', title: 'The view from the lawn' },
 		// { src: './heropics/view2.jpg', title: 'The view' },
 		// { src: './heropics/view3.jpg', title: 'The view' },

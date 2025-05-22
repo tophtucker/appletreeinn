@@ -75,7 +75,7 @@ export const buildings = [
 	{
 		id: 'main-house',
 		title: 'Main House',
-		img: 'heropics/main-house.jpg',
+		img: 'heropics/driveway.jpg',
 		desc: 'Built in 1885, the three story main house includes a spacious, comfortable living room with fireplace, the Ostrich Room (our bar/dining room with live music most nights), and Baladi (our weekend brunch venue). There are 13 guest rooms on the second and third floors of the main house, all of which are unique. Open year round.',
 		building: 'main-house',
 		rooms: [

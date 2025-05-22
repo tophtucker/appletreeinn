@@ -65,7 +65,11 @@
 	</div>
 	<div id="buildingContainer">
 		<div class="building">
-			<img src={building.img} alt={building.title} />
+			<img
+				src={building.img}
+				alt={building.title}
+				style="aspect-ratio: 3 / 2; width: 100%; object-fit: cover;"
+			/>
 			<div style="display: flex; flex-direction: column; gap: 1em;">
 				<p>
 					{building.desc}
