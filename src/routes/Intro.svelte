@@ -21,14 +21,13 @@
 <div class="inner">
 	<div class="intro">
 		<article>
-			<p>Welcome to the Apple Tree!</p>
+			<p>Welcome to the Apple Tree Inn!</p>
 			<ul>
 				<li>Historic Lenox estate situated high on a hill in the Berkshires</li>
 				<li>21 scenic acres with beautiful year-round views</li>
 				<li>Walking distance to Tanglewood and Kripalu</li>
 				<li>Fireplaces in winter; pool in summer; board games all year round</li>
 				<li>Wood paneled tavern serving dinner and cocktails and featuring frequent live music</li>
-				<li>Weekend brunch restaurant with panoramic views</li>
 			</ul>
 		</article>
 		<Slideshow {pics} aspectRatio={1.33} />
