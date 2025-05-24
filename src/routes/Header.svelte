@@ -19,14 +19,14 @@
 		{
 			pathname: '/weddings-events',
 			title: 'Weddings & events',
-			img: '/img/weddings1.png',
+			img: '/img/weddings.jpg',
 			mobileNav: true,
 			desktopNav: true
 		},
 		{
 			pathname: '/about-us',
 			title: 'About us',
-			img: '/img/claire.jpg',
+			img: '/img/max.jpg',
 			mobileNav: true,
 			desktopNav: true
 		},

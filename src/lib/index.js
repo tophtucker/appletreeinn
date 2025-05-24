@@ -39,7 +39,7 @@ export async function getSheet(gid) {
 		sheet = await (await fetch(url)).text();
 	} catch (err) {
 		console.error(err);
-		return null;
+		return [];
 	}
 	return csvParse(sheet);
 }
