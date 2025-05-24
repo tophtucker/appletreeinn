@@ -1,17 +1,27 @@
 <script>
+	import { page } from '$app/stores';
+	import { loadAnnouncements } from '$lib/index.js';
 	import BannerWavy from './BannerWavy.svelte';
 	import BannerFixed from './BannerFixed.svelte';
-	const wavy = false;
+
+	let data = $state(undefined);
+	(async function () {
+		data = await loadAnnouncements();
+	})();
+
+	const today = new Date();
+	const item = $derived(
+		data?.find(
+			(d) => today >= d.from && today < d.until && (d.page === '' || d.page === $page.url.pathname)
+		)
+	);
+	const message = $derived(item?.message);
 </script>
 
-{#snippet message()}
-	Báladi brunch has moved! Visit their <a href="https://www.instagram.com/baladiberkshires"
-		>Instagram</a
-	> page for more updates.
-{/snippet}
-
-{#if wavy}
-	<BannerWavy message="" />
-{:else}
-	<BannerFixed {message} />
+{#if item}
+	{#if item.wavy}
+		<BannerWavy {message} />
+	{:else}
+		<BannerFixed {message} />
+	{/if}
 {/if}

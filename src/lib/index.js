@@ -31,19 +31,31 @@ export const baladi = {
 };
 
 const parseDate = timeParse('%Y-%m-%d');
-export async function loadEvents() {
+
+export async function getSheet(gid) {
+	const url = `https://docs.google.com/spreadsheets/d/1BWPT2mLSwruoWHLiNzuOCT1flhFPk4aoa4KbGaN_c-Y/export?format=csv&gid=${gid}`;
 	let sheet;
 	try {
-		sheet = await (
-			await fetch(
-				'https://docs.google.com/spreadsheets/d/1BWPT2mLSwruoWHLiNzuOCT1flhFPk4aoa4KbGaN_c-Y/export?format=csv&gid=287995536'
-			)
-		).text();
+		sheet = await (await fetch(url)).text();
 	} catch (err) {
 		console.error(err);
 		return null;
 	}
-	const data = csvParse(sheet).map((d) => ({
+	return csvParse(sheet);
+}
+
+export async function loadAnnouncements() {
+	return (await getSheet('604853803')).map((d) => ({
+		message: d.message,
+		from: parseDate(d.from),
+		until: parseDate(d.until),
+		page: d.page,
+		wavy: d.wavy === 'TRUE'
+	}));
+}
+
+export async function loadEvents() {
+	const data = (await getSheet('287995536')).map((d) => ({
 		date: parseDate(d.date),
 		description: d.description || 'TBD'
 	}));

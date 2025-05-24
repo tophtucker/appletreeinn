@@ -3,7 +3,7 @@
 </script>
 
 <div class="banner">
-	{@render message()}
+	{message}
 </div>
 
 <style>

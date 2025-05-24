@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import Banner from './Banner.svelte';
 	import OpenSign from './OpenSign.svelte';
 	import { ostrichRoom } from '$lib/index.js';
 
@@ -48,6 +49,8 @@
 		}
 	}
 </script>
+
+<Banner />
 
 <div class="sticky-header">
 	<a href={BOOKING_URL} class="highlight">Reserve</a>

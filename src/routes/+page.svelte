@@ -5,7 +5,6 @@
 	import Footer from './Footer.svelte';
 	import Intro from './Intro.svelte';
 	import Slideshow from './Slideshow.svelte';
-	import Banner from './Banner.svelte';
 	import Events from './Events.svelte';
 	import Pin from './Pin.svelte';
 
@@ -24,8 +23,6 @@
 		content="A historic hotel in Lenox, MA, with views of the Berkshires hills and 5-minute walks to Tanglewood or Kripalu"
 	/>
 </svelte:head>
-
-<Banner />
 
 <Header />
 
