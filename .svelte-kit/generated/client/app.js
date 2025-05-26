@@ -36,7 +36,7 @@ export const dictionary = {
 		"/about-us/history": [5],
 		"/about-us/newsletter": [6],
 		"/about-us/scrapbook": [7],
-		"/baladi": [8],
+		"/baladi": [~8],
 		"/career": [~9],
 		"/dining_ati/[...catchall]": [~11],
 		"/dining/[...catchall]": [~10],

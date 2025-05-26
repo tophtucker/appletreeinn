@@ -80,9 +80,9 @@
 
 	<figure>
 		<div class="triple">
-			<img src="../baladi/bmag1.png" alt="The B Magazine" />
-			<img src="../baladi/bmag2.png" alt="The B Magazine" />
-			<img src="../baladi/bmag3.png" alt="The B Magazine" />
+			<img src="../press/bmag1.png" alt="The B Magazine" />
+			<img src="../press/bmag2.png" alt="The B Magazine" />
+			<img src="../press/bmag3.png" alt="The B Magazine" />
 		</div>
 		<figcaption>
 			November 21: Baladi is featured in <a
