@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+
+/* html {
+	scroll-padding-top: 4em;
+} */
+
+body {
+	margin: 0;
+	font-size: 18px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	--red: #c29b58;
+	--green: #c29b58;
+	--gold: #c29b58;
+	--blue: #02718a;
+}
+
+@font-face {
+	font-family: 'Watkins';
+	src: url('./TAYWatkins.otf');
+}
+
+@font-face {
+	font-family: 'Bartender';
+	src: url('./TAYBartender.otf');
+}
