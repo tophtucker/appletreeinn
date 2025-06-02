@@ -8,7 +8,6 @@
 		// { src: './heropics/view3.jpg', title: 'The view' },
 		{ src: './ostrich-room/P8243018.JPG', title: 'The Ostrich Room, our tavern' },
 		{ src: './heropics/pool1.jpg', title: 'The pool' },
-		{ src: './baladi/room.jpg', title: 'Brunch at Baladi' },
 		// { src: './heropics/view4.jpg', title: 'The main house in winter' },
 		// { src: './heropics/drone-repainted.jpg', title: 'The Apple Tree Inn, viewed from the air' },
 		{ src: './roompics/main-house/8/_XCS2672.jpg', title: 'Room 8' },
