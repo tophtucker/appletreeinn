@@ -47,30 +47,44 @@
 	}
 </script>
 
-{#if isET}
-	{#if isOpen}
-		<div class="neon open" title={`Open until ${formatFutureDate(nextHours[1])}`}>OPEN</div>
-	{:else if nextHours}
-		<div class="neon">Opens {formatFutureDate(nextHours[0])}</div>
-	{/if}
+{#if isET && isOpen}
+	<div class="open" title={`Open until ${formatFutureDate(nextHours[1])}`}>
+		<svg width="30" height="15">
+			<path d="M 16 0 30 15" stroke="black"></path>
+			<path d="M 14 0 0 15" stroke="black"></path>
+		</svg>
+		<div>OPEN</div>
+	</div>
 {/if}
 
 <style>
-	.neon {
-		position: absolute;
-		top: calc(100% + 0.75em);
-		font-family: sans-serif;
-		font-size: 12px;
-		padding: 2px 4px;
-		border-radius: 4px;
-		background: var(--tan);
-		border: 1px solid var(--brown);
-		text-transform: uppercase;
+	@keyframes swing {
+		0% {
+			transform: rotate(-10deg);
+		}
+		100% {
+			transform: rotate(10deg);
+		}
 	}
-	.neon.open {
-		color: white;
-		border: none;
-		box-shadow: green 0 0 10px;
-		background: green;
+
+	.open {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		top: 73%;
+		left: 45%;
+		font-family: 'watkins';
+		font-size: 12px;
+		animation: swing 2s ease-in-out infinite alternate;
+		transform-origin: top center;
+	}
+	.open > svg {
+		display: block;
+	}
+	.open > div {
+		border: 1px solid var(--black);
+		padding: 4px 4px 2px 4px;
+		border-radius: 4px;
 	}
 </style>

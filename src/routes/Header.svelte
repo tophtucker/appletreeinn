@@ -121,6 +121,7 @@
 		color: inherit;
 		text-align: center;
 		transition: color 0.3s;
+		position: relative;
 	}
 
 	a:hover {
@@ -128,7 +129,7 @@
 	}
 
 	.current {
-		/*  */
+		text-decoration: underline;
 	}
 
 	.select-wrapper {
