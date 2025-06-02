@@ -10,7 +10,7 @@
 		{ pathname: '/', title: 'Home', mobileNav: true },
 		{
 			pathname: '/visit',
-			title: 'Plan your visit',
+			title: 'Visit',
 			mobileNav: true,
 			desktopNav: true
 		},
@@ -31,7 +31,7 @@
 		},
 		{
 			pathname: '/about-us',
-			title: 'About us',
+			title: 'About',
 			img: '/img/max.jpg',
 			mobileNav: true,
 			desktopNav: true
@@ -75,7 +75,7 @@
 		{@render link(item)}
 	{/each}
 	<a href="/" class="home">
-		<img src="/avaloch/avaloch.svg" height="100" alt="Avaloch" />
+		<img src="/avaloch/avaloch.svg" height="50" alt="Avaloch" />
 		A Country Inn.
 	</a>
 	{#each desktopNav.slice(2, 4) as item}
@@ -97,28 +97,34 @@
 <style>
 	header {
 		display: grid;
-		grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
 		gap: 1em;
 		font-family: 'watkins';
 		justify-content: space-between;
 		align-items: center;
-		padding: 1em;
+		padding: 3em 2em;
+		font-size: smaller;
+		transform: rotate(-1deg);
 	}
 
 	.home {
 		display: flex;
 		flex-direction: column;
-		gap: 3px;
+		gap: 1em;
 		justify-content: center;
 		align-content: center;
 		width: 100%;
 	}
 
 	a {
-		max-width: 20em;
 		text-decoration: none;
 		color: inherit;
 		text-align: center;
+		transition: color 0.3s;
+	}
+
+	a:hover {
+		color: var(--blue);
 	}
 
 	.current {
