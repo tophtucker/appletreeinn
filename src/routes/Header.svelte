@@ -103,7 +103,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 3em 2em;
-		font-size: smaller;
+		/* font-size: smaller; */
 		transform: rotate(-1deg);
 	}
 

@@ -48,5 +48,7 @@
 		display: grid;
 		grid-template-columns: 20px 1fr 20px;
 		grid-template-rows: 20px 3px 1fr 3px 20px;
+		margin: 2em auto;
+		max-width: 1400px;
 	}
 </style>
