@@ -10,10 +10,12 @@ body {
 	margin: 0;
 	font-size: 18px;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	--red: #c29b58;
-	--green: #c29b58;
+	--red: #750f29;
+	--green: #204638;
 	--gold: #c29b58;
 	--blue: #02718a;
+	--black: #333;
+	color: var(--black);
 }
 
 @font-face {
