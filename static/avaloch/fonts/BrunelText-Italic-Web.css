@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'Brunel Text Web';
+	src: url('BrunelText-Italic-Web.woff2') format('woff2');
+	font-weight: 300;
+	font-style: italic;
+	}
+
+.BrunelText-Italic-Web {
+	font-family: 'Brunel Text Web';
+	font-weight: 300;
+	font-style: italic;
+	}

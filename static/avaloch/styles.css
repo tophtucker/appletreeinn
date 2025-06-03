@@ -1,3 +1,5 @@
+@import url('fonts/fonts.css');
+
 * {
 	box-sizing: border-box;
 }
@@ -18,12 +20,32 @@ body {
 	color: var(--black);
 }
 
-@font-face {
-	font-family: 'Watkins';
-	src: url('./TAYWatkins.otf');
+img {
+	max-width: 100%;
 }
 
-@font-face {
-	font-family: 'Bartender';
-	src: url('./TAYBartender.otf');
+.red {
+	color: var(--red);
+}
+.blue {
+	color: var(--blue);
+}
+.green {
+	color: var(--green);
+}
+.gold {
+	color: var(--gold);
+}
+
+.bg-red {
+	background-color: var(--red);
+}
+.bg-blue {
+	background-color: var(--blue);
+}
+.bg-green {
+	background-color: var(--green);
+}
+.bg-gold {
+	background-color: var(--gold);
 }

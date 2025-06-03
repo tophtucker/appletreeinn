@@ -19,6 +19,25 @@
 			<img src="./avaloch/img/door.jpg" alt="Door" />
 			<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" />
 		</div>
+
+		<div class="grid-1-2">
+			<div class="panel">
+				<img src="./avaloch/icons/doorknob.svg" alt="Pentathing" width="25" />
+				Avaloch is a historic estate built in 1885 high atop a hill in the Berkshires on 21 acres.
+			</div>
+			<img src="./avaloch/img/lawn-snow.jpg" alt="Lawn in snow" />
+		</div>
+
+		<div class="panel">
+			<img src="./avaloch/icons/pane.svg" alt="Pentathing" width="25" />
+			Enjoy the pool in summer; the fireplaces in winter; and board games all year round.
+		</div>
+
+		<div class="panel">
+			<img src="./avaloch/icons/door.svg" alt="Pentathing" width="25" />
+			Get drinks or dinner with local live music in our 1898 wood-paneled tavern, The Ostrich Room.
+		</div>
+
 		<footer>
 			<img src="./avaloch/icons/pentathing.svg" alt="Pentathing" width="50" />
 			Directly across the road from Tanglewood
@@ -29,6 +48,15 @@
 <style>
 	.content {
 		padding: 0 6em;
+	}
+	.grid-1-2 {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 1em;
+	}
+	.panel {
+		padding: 2em;
+		font-family: 'watkins';
 	}
 	.img-pair {
 		display: grid;

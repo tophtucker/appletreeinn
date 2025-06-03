@@ -1,0 +1,62 @@
+/* TAYLOR PENTON */
+
+@font-face {
+	font-family: 'Watkins';
+	src: url('./TAYWatkins.otf');
+}
+
+@font-face {
+	font-family: 'Bartender';
+	src: url('./TAYBartender.otf');
+}
+
+/* COMMERCIAL TYPE */
+
+@font-face {
+	font-family: 'Brunel';
+	src: url('BrunelText-Roman-Web.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+}
+
+.brunel {
+	font-family: 'Brunel';
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Brunel';
+	src: url('BrunelText-Italic-Web.woff2') format('woff2');
+	font-weight: 300;
+	font-style: italic;
+}
+
+.brunel-italic {
+	font-family: 'Brunel';
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Brunel';
+	src: url('BrunelText-Semibold-Web.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+
+.brunel-semibold {
+	font-family: 'Brunel';
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Brunel';
+	src: url('BrunelText-SemiboldItalic-Web.woff2') format('woff2');
+	font-weight: 600;
+	font-style: italic;
+}
+
+.brunel-semibold-italic {
+	font-family: 'Brunel';
+	font-weight: 600;
+	font-style: italic;
+}
