@@ -99,11 +99,11 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
 		gap: 1em;
+		font-size: 14px;
 		font-family: 'watkins';
 		justify-content: space-between;
 		align-items: center;
 		padding: 3em 2em;
-		/* font-size: smaller; */
 		transform: rotate(-1deg);
 	}
 
@@ -111,9 +111,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1em;
-		justify-content: center;
-		align-content: center;
-		width: 100%;
 	}
 
 	a {

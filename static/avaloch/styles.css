@@ -10,8 +10,9 @@
 
 body {
 	margin: 0;
-	font-size: 14px;
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 18px;
+	line-height: 1.2;
+	font-family: 'Brunel', 'Times New Roman', Times, serif;
 	--red: #750f29;
 	--green: #204638;
 	--gold: #c29b58;
