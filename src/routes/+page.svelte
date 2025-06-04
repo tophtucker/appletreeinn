@@ -70,7 +70,7 @@
 			<p>
 				In the winter, Bousquet ski mountain is a fifteen minute drive away. If you’re a little
 				lazier, you can just sled on our hill. If you’re even lazier, like us, you can enjoy a
-				“book” (if you actually read) by the lobby fire, the outdoor fire pit, the tavern’s
+				“book” (or more often cocktail) by the lobby fire, the outdoor fire pit, the tavern’s
 				fireplace <em>inglenook</em>, or one of our four guest rooms with real wood-burning private
 				fireplaces. You know Melville wrote Moby Dick right up the road, right? What’s your excuse?
 			</p>
