@@ -99,7 +99,7 @@
 	.blurbs {
 		font-family: watkins;
 		text-align: center;
-		margin: 2em 0;
+		margin: 2rem 0;
 	}
 	.prose-columns {
 		columns: 3;
@@ -137,7 +137,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1em;
-		padding: 4em 0;
+		margin: 4rem 0;
 		font-size: smaller;
 	}
 </style>

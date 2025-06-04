@@ -56,10 +56,10 @@
 	}
 </script>
 
-{#snippet link({ pathname, title, hours })}
+{#snippet link({ pathname, title, hours }, className)}
 	<a
 		href={pathname}
-		class={`thumbnail ${$page.url.pathname.startsWith(pathname) ? 'current' : ''}`}
+		class={`thumbnail ${$page.url.pathname.startsWith(pathname) ? 'current' : ''} ${className}`}
 	>
 		{title}
 		{#if hours}
@@ -71,16 +71,14 @@
 <!-- <Banner /> -->
 
 <header>
-	{#each desktopNav.slice(0, 2) as item}
-		{@render link(item)}
-	{/each}
+	{@render link(desktopNav[0], 'hover-green')}
+	{@render link(desktopNav[1], 'hover-red')}
 	<a href="/" class="home">
 		<img src="/avaloch/avaloch.svg" height="50" alt="Avaloch" />
 		A Country Inn.
 	</a>
-	{#each desktopNav.slice(2, 4) as item}
-		{@render link(item)}
-	{/each}
+	{@render link(desktopNav[2], 'hover-blue')}
+	{@render link(desktopNav[3], 'hover-gold')}
 </header>
 <div class="select-wrapper">
 	<select value={currentPage?.pathname || ''} on:change={handlePageSelect}>
@@ -121,8 +119,17 @@
 		position: relative;
 	}
 
-	a:hover {
+	.hover-green:hover {
+		color: var(--green);
+	}
+	.hover-red:hover {
+		color: var(--red);
+	}
+	.hover-blue:hover {
 		color: var(--blue);
+	}
+	.hover-gold:hover {
+		color: var(--gold);
 	}
 
 	.current {
