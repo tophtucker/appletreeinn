@@ -2,7 +2,7 @@
 	import Lightbox from '$lib/Lightbox.svelte';
 	import { setContext } from 'svelte';
 	let { children } = $props();
-	let lightbox = $state({ src: null });
+	let lightbox = $state({ src: null, alt: null });
 	setContext('lightbox', lightbox);
 </script>
 

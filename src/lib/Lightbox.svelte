@@ -11,14 +11,27 @@
 			dialogRef.close();
 		}
 	});
+
+	function advance(direction) {
+		const images = document.querySelectorAll('[data-lightbox]');
+		let currentIndex = Array.from(images).indexOf(lightbox.src);
+		currentIndex += direction;
+		if (currentIndex < 0) currentIndex = images.length - 1;
+		if (currentIndex >= images.length) currentIndex = 0;
+		lightbox.src = images[currentIndex];
+	}
 </script>
 
 <dialog id="lightbox" bind:this={dialogRef} onclose={() => (lightbox.src = null)}>
-	<div class="name">YOUR PICTURE</div>
-	<img src={lightbox.src} alt="?" />
-	<div>
-		<button onclick={() => (lightbox.src = null)}>Close</button>
+	<div class="header">
+		{lightbox.src?.getAttribute('alt')}
+		<div>
+			<button onclick={() => advance(-1)}>Previous</button>
+			<button onclick={() => advance(1)}>Next</button>
+			<button onclick={() => (lightbox.src = null)}>Close</button>
+		</div>
 	</div>
+	<img src={lightbox.src?.getAttribute('src')} alt={lightbox.src?.getAttribute('alt')} />
 </dialog>
 
 <style>
@@ -54,8 +67,20 @@
 		min-height: 0;
 	}
 
-	dialog .name {
+	dialog .header {
 		color: white;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+		font-family: watkins;
+	}
+
+	dialog .header > div {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
 	}
 
 	dialog button {
@@ -63,5 +88,7 @@
 		color: white;
 		border: 1px solid white;
 		border-radius: 3px;
+		font-family: inherit;
+		padding-top: 5px;
 	}
 </style>

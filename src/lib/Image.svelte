@@ -6,8 +6,9 @@
 
 <img
 	{...props}
+	data-lightbox
 	onclick={(e) => {
-		lightbox.src = e.currentTarget.src;
+		lightbox.src = e.currentTarget;
 	}}
 />
 
