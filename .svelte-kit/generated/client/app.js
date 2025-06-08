@@ -51,7 +51,7 @@ export const dictionary = {
 		"/offers": [~18],
 		"/ostrich-room": [19],
 		"/restaurants": [~20],
-		"/rooms": [~21],
+		"/rooms": [21],
 		"/terms-of-service": [22],
 		"/termsandcondition": [~23],
 		"/things-to-do": [24],
