@@ -33,7 +33,13 @@
 
 	<p>It was great having you. We hope to welcome you back soon!</p>
 
-	<p>Warmly,<br />The staff at the Apple Tree Inn</p>
+	<p>Warmly,</p>
+
+	<p>
+		<img src="/signatures/christian-digital.png" alt="Christian's signature" height="75" /><br />
+		Christian, hotel manager<br />
+		and the whole staff of the Apple Tree Inn
+	</p>
 </div>
 
 <Footer />
