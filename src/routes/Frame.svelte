@@ -1,5 +1,9 @@
 <script>
+	import Lightbox from '$lib/Lightbox.svelte';
+	import { setContext } from 'svelte';
 	let { children } = $props();
+	let lightbox = $state({ src: null });
+	setContext('lightbox', lightbox);
 </script>
 
 {#snippet circle()}
@@ -29,6 +33,8 @@
 	<div class="top bottom"></div>
 	{@render circle()}
 </div>
+
+<Lightbox />
 
 <style>
 	.top {

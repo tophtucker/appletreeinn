@@ -1,8 +1,18 @@
-<!-- <script>
+<script>
+	import { getContext } from 'svelte';
+	let props = $props();
+	let lightbox = getContext('lightbox');
+</script>
 
-  let props = $props()
+<img
+	{...props}
+	onclick={(e) => {
+		lightbox.src = e.currentTarget.src;
+	}}
+/>
 
-    </script>
-
-
-<img {...props} onclick={() => console.log('clicked')} /> -->
+<style>
+	img {
+		cursor: pointer;
+	}
+</style>

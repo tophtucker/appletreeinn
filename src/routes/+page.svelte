@@ -2,6 +2,8 @@
 	import Frame from './Frame.svelte';
 	import Header from './Header.svelte';
 	import Asterisk from './icons/Asterisk.svelte';
+
+	import Image from '$lib/Image.svelte';
 </script>
 
 <svelte:head>
@@ -77,11 +79,11 @@
 		</div>
 
 		<div class="gallery">
-			<img src="/avaloch/img/firepit.jpg" alt="Firepit" />
-			<img src="/avaloch/img/lawn-snow.jpg" alt="The snowy lawn" />
-			<img src="/avaloch/img/music.jpg" alt="The Ostrich Room" />
-			<img src="/img/cocktail.jpg" alt="One of Sean’s cocktails" />
-			<img src="/heropics/pool1.jpg" alt="The pool" />
+			<Image src="/avaloch/img/firepit.jpg" alt="Firepit" class="square" />
+			<Image src="/avaloch/img/lawn-snow.jpg" alt="The snowy lawn" class="square" />
+			<Image src="/avaloch/img/music.jpg" alt="The Ostrich Room" class="square" />
+			<Image src="/img/cocktail.jpg" alt="One of Sean’s cocktails" class="square" />
+			<Image src="/heropics/pool1.jpg" alt="The pool" class="square" />
 			<a href="/about/gallery"><span>Gallery</span></a>
 		</div>
 
@@ -111,11 +113,6 @@
 		grid-template-columns: repeat(6, 1fr);
 		gap: 1rem;
 		font-family: watkins;
-	}
-	.gallery img {
-		aspect-ratio: 1;
-		width: 200px;
-		object-fit: cover;
 	}
 	.gallery a {
 		/* border: 1px solid black; */

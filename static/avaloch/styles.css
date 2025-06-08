@@ -50,3 +50,8 @@ img {
 .bg-gold {
 	background-color: var(--gold);
 }
+
+.square {
+	aspect-ratio: 1;
+	object-fit: cover;
+}
