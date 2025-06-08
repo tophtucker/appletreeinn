@@ -1,10 +1,9 @@
 <script>
-	import Header from '../Header.svelte';
-	import Footer from '../Footer.svelte';
+	import Frame from '$lib/template/Frame.svelte';
 	import { loadEvents, formatDate, ostrichRoom } from '$lib/index.js';
-	import WeekHours from '../WeekHours.svelte';
-	import GoogleDrive from '../GoogleDrive.svelte';
-	import Pin from '../Pin.svelte';
+	import WeekHours from '$lib/components/WeekHours.svelte';
+	import GoogleDrive from '$lib/components/GoogleDrive.svelte';
+	import Pin from '$lib/components/Pin.svelte';
 
 	let events = $state(undefined);
 	(async function () {
@@ -20,9 +19,7 @@
 	/>
 </svelte:head>
 
-<Header />
-
-<div class="inner">
+<Frame>
 	<div class="intro">
 		<div>Drinks • Food • Music</div>
 		<h1>The Ostrich Room</h1>
@@ -90,7 +87,7 @@
 
 	<p>
 		Originally built in 1899 by Henry Pease and Katharine Di Pollone as a billiards room (<a
-			href="/about-us/history">more history</a
+			href="/about/history">more history</a
 		>), our tavern is locally famous for its live music, cocktails, and roaring fires in the
 		<em>inglenook</em>. It gets its name from its chandelier of real ostrich eggs.
 	</p>
@@ -125,9 +122,7 @@
 			Sean<br />Bar manager
 		</div>
 	</div>
-</div>
-
-<Footer />
+</Frame>
 
 <style>
 	.intro {

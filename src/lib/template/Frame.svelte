@@ -1,5 +1,7 @@
 <script>
-	import Lightbox from '$lib/Lightbox.svelte';
+	import Lightbox from '$lib/lightbox/Lightbox.svelte';
+	import Header from '$lib/template/Header.svelte';
+	import Footer from '$lib/template/Footer.svelte';
 	import { setContext } from 'svelte';
 	let { children } = $props();
 	let lightbox = $state({ src: null, alt: null });
@@ -22,7 +24,7 @@
 	<div class="left right bottom"></div>
 
 	<div class="left right"></div>
-	<div class="content">{@render children()}</div>
+	<div class="content"><Header />{@render children()}<Footer /></div>
 	<div class="left right"></div>
 
 	<div class="left right top"></div>

@@ -1,11 +1,11 @@
 <script>
 	import { page } from '$app/stores';
 	const pages = [
-		{ pathname: '/about-us', title: 'Staff' },
-		{ pathname: '/about-us/claire', title: 'Claire' },
-		{ pathname: '/about-us/history', title: 'History' },
-		{ pathname: '/about-us/scrapbook', title: 'Scrapbook' },
-		{ pathname: '/about-us/newsletter', title: 'Newsletter' }
+		{ pathname: '/about', title: 'Staff' },
+		{ pathname: '/about/claire', title: 'Claire' },
+		{ pathname: '/about/history', title: 'History' },
+		{ pathname: '/about/scrapbook', title: 'Scrapbook' },
+		{ pathname: '/about/newsletter', title: 'Newsletter' }
 	];
 </script>
 

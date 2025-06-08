@@ -1,6 +1,5 @@
 <script>
-	import Header from '../Header.svelte';
-	import Footer from '../Footer.svelte';
+	import Frame from '$lib/template/Frame.svelte';
 	export let data;
 </script>
 
@@ -12,19 +11,17 @@
 	/>
 </svelte:head>
 
-<Header />
+<Frame>
+	<div class="inner">
+		<h1>Gallery</h1>
 
-<div class="inner">
-	<h1>Gallery</h1>
-
-	<div class="grid">
-		{#each data.images as image}
-			<img src={`/gallery/image/${image.id}`} alt={image.name} />
-		{/each}
+		<div class="grid">
+			{#each data.images as image}
+				<img src={`/gallery/image/${image.id}`} alt={image.name} />
+			{/each}
+		</div>
 	</div>
-</div>
-
-<Footer />
+</Frame>
 
 <style>
 	h1 {

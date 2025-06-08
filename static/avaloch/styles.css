@@ -55,3 +55,31 @@ img {
 	aspect-ratio: 1;
 	object-fit: cover;
 }
+
+.inner {
+	padding: 0 6rem;
+}
+
+h1 {
+	font-family: watkins;
+}
+
+h2,
+h3,
+h4 {
+	font-weight: normal;
+}
+
+p {
+	max-width: 640px;
+	margin: 0;
+	text-indent: 1em;
+}
+
+p:first-of-type {
+	text-indent: 0;
+}
+
+a {
+	color: var(--blue);
+}

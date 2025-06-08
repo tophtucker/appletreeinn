@@ -1,8 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import { loadAnnouncements } from '$lib/index.js';
-	import BannerWavy from './BannerWavy.svelte';
-	import BannerFixed from './BannerFixed.svelte';
 
 	let data = $state(undefined);
 	(async function () {
@@ -19,9 +17,5 @@
 </script>
 
 {#if item}
-	{#if item.wavy}
-		<BannerWavy {message} />
-	{:else}
-		<BannerFixed {message} />
-	{/if}
+	<div>{message}</div>
 {/if}

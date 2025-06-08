@@ -1,8 +1,8 @@
 <script>
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
-	import Banner from './Banner.svelte';
-	import OpenSign from './OpenSign.svelte';
+	// import Banner from '$lib/template/Banner.svelte';
+	import OpenSign from '$lib/components/OpenSign.svelte';
 	import { ostrichRoom } from '$lib/index.js';
 
 	const BOOKING_URL = 'https://direct-book.com/properties/AppleTreeInndirect';
@@ -31,7 +31,7 @@
 			desktopNav: true
 		},
 		{
-			pathname: '/about-us',
+			pathname: '/about',
 			title: 'About',
 			img: '/img/max.jpg',
 			mobileNav: true,

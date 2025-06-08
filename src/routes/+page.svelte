@@ -1,14 +1,11 @@
 <script>
-	import Frame from './Frame.svelte';
-	import Header from './Header.svelte';
-	import Asterisk from './icons/Asterisk.svelte';
-
-	import Image from '$lib/Image.svelte';
+	import Frame from '$lib/template/Frame.svelte';
+	import Asterisk from '$lib/icons/Asterisk.svelte';
+	import Image from '$lib/lightbox/Image.svelte';
 </script>
 
 <svelte:head>
 	<title>Avaloch • A Country Inn • Lenox, MA</title>
-	<link rel="stylesheet" href="avaloch/styles.css" />
 	<meta
 		name="description"
 		content="A historic hotel in Lenox, MA, with views of the Berkshires hills and 5-minute walks to Tanglewood or Kripalu"
@@ -16,8 +13,7 @@
 </svelte:head>
 
 <Frame>
-	<Header />
-	<div class="content">
+	<div class="inner">
 		<div class="img-pair">
 			<img src="./avaloch/img/door.jpg" alt="Door" />
 			<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" />
@@ -86,27 +82,10 @@
 			<Image src="/heropics/pool1.jpg" alt="The pool" class="square" />
 			<a href="/about/gallery"><span>Gallery</span></a>
 		</div>
-
-		<footer>
-			<div>10 Richmond Mountain Road<br />Lenox, Massachusetts<br />01240</div>
-			<div>
-				<img src="./avaloch/icons/pentathing.svg" alt="Pentathing" width="50" />
-				Directly across the road from Tanglewood
-			</div>
-			<div>
-				<div>
-					(413) 637-1910<br />info@avalochinn.com<br />
-					@avaloch.inn
-				</div>
-			</div>
-		</footer>
 	</div>
 </Frame>
 
 <style>
-	.content {
-		padding: 0 6rem;
-	}
 	.gallery {
 		margin: 2rem 0;
 		display: grid;
@@ -156,24 +135,5 @@
 	}
 	.img-pair img {
 		max-width: 100%;
-	}
-	footer {
-		display: flex;
-		justify-content: space-between;
-		font-family: watkins;
-		font-size: 14px;
-		margin: 4rem 0;
-	}
-	footer div:nth-child(2) {
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		justify-content: center;
-		align-items: center;
-		padding-top: 1rem;
-	}
-	footer div:nth-child(3) {
-		text-align: right;
 	}
 </style>

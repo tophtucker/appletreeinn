@@ -1,7 +1,6 @@
 <script>
-	import Header from '../Header.svelte';
-	import Footer from '../Footer.svelte';
-	import Slideshow from '../Slideshow.svelte';
+	import Frame from '$lib/template/Frame.svelte';
+	import Slideshow from '$lib/components/Slideshow.svelte';
 
 	const pics = [
 		{
@@ -48,38 +47,36 @@
 	<meta name="description" content="TODO" />
 </svelte:head>
 
-<Header />
-
-<div class="inner">
-	<div class="grid-or-flex">
-		<div>
-			<h1>Weddings & events</h1>
-			<p>
-				We are no longer accepting private events for the 2025 & 2026 seasons. If you’d like to be
-				put on our list, we will reach out to you once private events bookings reopen.
-			</p>
-			<p>
-				If you are looking for guest rooms only (as opposed to venue rental or catering), please
-				contact us at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
-			</p>
-			<p>
-				If you are looking to book dinner for a party up to 12 people in the Ostrich Room, please
-				contact us at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
-			</p>
-			<p>Thank you for your interest!</p>
-			<p>
-				<a
-					style="font-weight: bold;"
-					href="https://docs.google.com/forms/d/e/1FAIpQLSeWZNsHNjJ7gsrEh0-p4hrJJk5SCSnHJgSuPCR1YmSoNuXsRA/viewform?usp=preview"
-					>Let me know when bookings reopen →</a
-				>
-			</p>
+<Frame>
+	<div class="inner">
+		<div class="grid-or-flex">
+			<div>
+				<h1>Weddings & events</h1>
+				<p>
+					We are no longer accepting private events for the 2025 & 2026 seasons. If you’d like to be
+					put on our list, we will reach out to you once private events bookings reopen.
+				</p>
+				<p>
+					If you are looking for guest rooms only (as opposed to venue rental or catering), please
+					contact us at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
+				</p>
+				<p>
+					If you are looking to book dinner for a party up to 12 people in the Ostrich Room, please
+					contact us at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
+				</p>
+				<p>Thank you for your interest!</p>
+				<p>
+					<a
+						style="font-weight: bold;"
+						href="https://docs.google.com/forms/d/e/1FAIpQLSeWZNsHNjJ7gsrEh0-p4hrJJk5SCSnHJgSuPCR1YmSoNuXsRA/viewform?usp=preview"
+						>Let me know when bookings reopen →</a
+					>
+				</p>
+			</div>
+			<Slideshow {pics} />
 		</div>
-		<Slideshow {pics} />
 	</div>
-</div>
-
-<Footer />
+</Frame>
 
 <style>
 	.notice {
