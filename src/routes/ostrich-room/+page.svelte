@@ -10,13 +10,6 @@
 	(async function () {
 		events = await loadEvents();
 	})();
-
-	const pics = [
-		{ src: './ostrich-room/IMG_8470.jpg', title: 'Live music in the Ostrich Room' },
-		{ src: './heropics/ostrich2.jpg', title: 'The Ostrich Room' },
-		{ src: './heropics/ostrich3.jpg', title: 'The Ostrich Room' },
-		{ src: './heropics/ostrich4.jpg', title: 'The Ostrich Room' }
-	];
 </script>
 
 <svelte:head>
@@ -94,14 +87,44 @@
 		</details>
 	{/if}
 	<hr />
+
 	<p>
-		Originally built in 1899 by then-owners Henry Pease and Katharine Di Pollone as a billiards
-		room, our tavern is locally famous for its live music program and the roaring fires in the <em
-			>inglenook</em
-		> (that’s a fireplace nook with facing benches). It gets its name from its chandelier of real ostrich
-		eggs. Sean’s always thinking of great cocktails, new and old, seasonal and timeless. And Hagai’s
-		cooking elevates fries to an art.
+		Originally built in 1899 by Henry Pease and Katharine Di Pollone as a billiards room (<a
+			href="/about-us/history">more history</a
+		>), our tavern is locally famous for its live music, cocktails, and roaring fires in the
+		<em>inglenook</em>. It gets its name from its chandelier of real ostrich eggs.
 	</p>
+
+	<div class="letter">
+		<p>
+			Our menu isn’t just a list of what we pour. It’s a reflection of the time, care, and heart
+			we’ve put into building something we hope feels like yours.
+		</p>
+		<p>
+			Our bar program was never meant to be ordinary. We didn’t build it to play it safe — we built
+			it to spark curiosity, to share stories through flavor, and to challenge the idea that
+			ordering a drink should ever be boring.
+		</p>
+		<p>
+			We hope you find something familiar here — but more than that, we hope you find something
+			unexpected. Something that wages you gently (or not so gently) out of your usual go-to. That’s
+			the fun part. The good part.
+		</p>
+		<p>
+			This whole project is for the community — for the regulars no stay too long (please keep
+			staying), the newcomers who ask good questions, and everyone in between. You’re why we do
+			this. You’re what keeps the lights on and the ideas flowing. So thank you. For showing up. For
+			trusting us with your time and your taste buds.
+		</p>
+		<p>
+			We promise to keep growing, keep listening, and keep putting everything we’ve got into the
+			glass in front of you. Here’s to friends, community and trying new things — together.
+		</p>
+		<div style="text-align: right;">
+			<img src="/signatures/sean.png" alt="Sean's signature" height="100" /><br />
+			Sean<br />Bar manager
+		</div>
+	</div>
 </div>
 
 <Footer />
@@ -139,6 +162,12 @@
 		text-shadow: 3px 3px 3px black;
 		margin: 3em 1em 3em 1em;
 		text-align: center;
+	}
+
+	.letter {
+		max-width: 640px;
+		border: 1px solid var(--brown);
+		padding: 1em;
 	}
 
 	@media (min-width: 1200px) {

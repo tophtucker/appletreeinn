@@ -9,8 +9,9 @@
 	const pages = [
 		{ pathname: '/', title: 'Home', mobileNav: true },
 		{
-			pathname: '/visit',
-			title: 'Visit',
+			pathname: '/rooms',
+			title: 'Stay',
+			img: '/img/rooms.jpg',
 			mobileNav: true,
 			desktopNav: true
 		},

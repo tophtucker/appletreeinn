@@ -60,12 +60,12 @@
 				view on the property, or drive three minutes to the Stockbridge Bowl.
 			</p>
 			<p>
-				In the fall, visitors tend more so to relax and “peep” the spectacular foliage. We can
-				recommend a good local hike for any occasion — bird-watching at Parsons Marsh, a quick loop
-				at Olivia’s Overlook, the waterfall at Stevens Glen, a workout at Monument Mountain. Pat the
-				cows and get ice cream at High Lawn; go for a horse ride at HomeFarm or HorseWorks. It’s a
-				great time to take in the area’s many historic houses and museums, from Edith Wharton to
-				Norman Rockwell.
+				In the fall, visitors tend to relax and “peep” the spectacular foliage. We can recommend a
+				good local hike for any occasion — bird-watching at Parsons Marsh, a quick loop at Olivia’s
+				Overlook, the waterfall at Stevens Glen, a workout at Monument Mountain. Pat the cows and
+				get ice cream at High Lawn; go for a horse ride at HomeFarm or HorseWorks. It’s a great time
+				to take in the area’s many historic houses and museums, from Edith Wharton to Norman
+				Rockwell.
 			</p>
 			<p>
 				In the winter, Bousquet ski mountain is a fifteen minute drive away. If you’re a little
@@ -79,28 +79,27 @@
 		<div class="gallery">
 			<img src="/avaloch/img/firepit.jpg" alt="Firepit" />
 			<img src="/avaloch/img/lawn-snow.jpg" alt="The snowy lawn" />
-			<img src="/img/ostrich-egg.jpg" alt="The ostrich egg chandelier" />
+			<img src="/avaloch/img/music.jpg" alt="The Ostrich Room" />
 			<img src="/img/cocktail.jpg" alt="One of Sean’s cocktails" />
 			<img src="/heropics/pool1.jpg" alt="The pool" />
-			<a href="/about/gallery">Gallery→</a>
+			<a href="/about/gallery"><span>Gallery</span></a>
 		</div>
 
-		<div class="info">
+		<footer>
 			<div>10 Richmond Mountain Road<br />Lenox, Massachusetts<br />01240</div>
+			<div>
+				<img src="./avaloch/icons/pentathing.svg" alt="Pentathing" width="50" />
+				Directly across the road from Tanglewood
+			</div>
 			<div>
 				<div>
 					(413) 637-1910<br />info@avalochinn.com<br />
 					@avaloch.inn
 				</div>
 			</div>
-		</div>
+		</footer>
 	</div>
 </Frame>
-
-<footer>
-	<img src="./avaloch/icons/pentathing.svg" alt="Pentathing" width="50" />
-	Directly across the road from Tanglewood
-</footer>
 
 <style>
 	.content {
@@ -119,7 +118,7 @@
 		object-fit: cover;
 	}
 	.gallery a {
-		border: 1px solid black;
+		/* border: 1px solid black; */
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -127,6 +126,13 @@
 		text-decoration: none;
 		color: inherit;
 		transition: color 0.3s;
+
+		background-image: url('/avaloch/img/gallery.png');
+		background-size: cover;
+	}
+	.gallery a span {
+		padding: 10px 6px 8px 6px;
+		background: white;
 	}
 	.gallery a:hover {
 		color: var(--blue);
@@ -154,25 +160,23 @@
 	.img-pair img {
 		max-width: 100%;
 	}
-	.info {
+	footer {
 		display: flex;
 		justify-content: space-between;
 		font-family: watkins;
 		font-size: 14px;
 		margin: 4rem 0;
 	}
-	.info div:nth-child(2) {
-		text-align: right;
-	}
-	footer {
-		font-size: 12px;
-		font-family: 'watkins';
+	footer div:nth-child(2) {
+		text-align: center;
 		display: flex;
 		flex-direction: column;
+		gap: 1rem;
 		justify-content: center;
 		align-items: center;
-		gap: 1rem;
-		margin: 4rem 0;
-		font-size: smaller;
+		padding-top: 1rem;
+	}
+	footer div:nth-child(3) {
+		text-align: right;
 	}
 </style>
