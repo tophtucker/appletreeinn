@@ -90,8 +90,7 @@
 		<img src="./img/giovanna.png" alt="Giovanna" />
 		<p>
 			Giovanna (bartender) studied linguistics and teaches literacy to kids in North Adams; ask her
-			about phonemes and stuff. Or Aquinas. Or her dogs. Or how much she loves the cows at High
-			Lawn. Or the Death & Co. cocktail book.
+			about phonemes, Aquinas, dogs, the Death & Co. cocktail book, or the cows at High Lawn.
 		</p>
 		<img src="./img/peter.jpg" alt="Peter" />
 		<p>
