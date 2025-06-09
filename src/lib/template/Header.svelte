@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
-	// import Banner from '$lib/template/Banner.svelte';
 	import OpenSign from '$lib/components/OpenSign.svelte';
 	import { ostrichRoom } from '$lib/index.js';
 
@@ -75,8 +74,6 @@
 		{/if}
 	</a>
 {/snippet}
-
-<!-- <Banner /> -->
 
 <header>
 	{@render link(desktopNav[0], 'hover-green')}

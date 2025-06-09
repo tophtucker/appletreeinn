@@ -2,6 +2,7 @@
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import Header from '$lib/template/Header.svelte';
 	import Footer from '$lib/template/Footer.svelte';
+	// import Banner from '$lib/template/Banner.svelte';
 	import { setContext } from 'svelte';
 	let { children } = $props();
 	let lightbox = $state({ src: null, alt: null });
@@ -13,6 +14,8 @@
 		<circle r="3.5" cx="9" cy="9" stroke="black" fill="none"></circle>
 	</svg>
 {/snippet}
+
+<!-- <Banner /> -->
 
 <div class="frame">
 	{@render circle()}
