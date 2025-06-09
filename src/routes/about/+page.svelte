@@ -1,5 +1,6 @@
 <script>
 	import Frame from '$lib/template/Frame.svelte';
+	import HR from '$lib/components/HR.svelte';
 </script>
 
 <svelte:head>
@@ -39,7 +40,7 @@
 				style="order: 1"
 			/>
 		</div>
-		<hr />
+		<HR />
 		<div class="grid-or-flex">
 			<img
 				src="./heropics/christian.jpg"
@@ -68,7 +69,7 @@
 				</p>
 			</div>
 		</div>
-		<hr />
+		<HR />
 
 		<div class="bios">
 			<img src="./img/sean.jpg" alt="Sean" />

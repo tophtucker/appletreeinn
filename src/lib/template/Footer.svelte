@@ -1,7 +1,7 @@
 <footer class="inner">
 	<div>10 Richmond Mountain Road<br />Lenox, Massachusetts<br />01240</div>
 	<div>
-		<img src="./avaloch/icons/pentathing.svg" alt="Pentathing" width="50" />
+		<img src="/avaloch/icons/pentathing.svg" alt="Pentathing" width="50" />
 		Directly across the road from Tanglewood
 	</div>
 	<div>

@@ -13,7 +13,11 @@
 			title: 'Stay',
 			img: '/img/rooms.jpg',
 			mobileNav: true,
-			desktopNav: true
+			desktopNav: true,
+			children: [
+				{ title: 'Rooms', pathname: '/' },
+				{ title: 'Things to do', pathname: '/things-to-do' }
+			]
 		},
 		{
 			pathname: '/ostrich-room',
@@ -35,12 +39,15 @@
 			title: 'About',
 			img: '/img/max.jpg',
 			mobileNav: true,
-			desktopNav: true
+			desktopNav: true,
+			children: [
+				{ title: 'Staff', pathname: '/' },
+				{ title: 'Claire', pathname: '/claire' },
+				{ title: 'History', pathname: '/history' },
+				{ title: 'Newsletter', pathname: '/newsletter' }
+			]
 		},
-		{ pathname: '/terms-of-service', title: 'Terms of service' },
-		{ pathname: '/things-to-do', title: 'Things to do', img: '/img/activities.jpg' },
-		{ pathname: '/history', title: 'History', img: '/img/history.png' },
-		{ pathname: '/jobs', title: 'Jobs' }
+		{ pathname: '/terms-of-service', title: 'Terms of service' }
 	];
 	const currentPage = pages.find((d) => {
 		return d.pathname === $page.url.pathname;

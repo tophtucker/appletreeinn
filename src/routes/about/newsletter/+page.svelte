@@ -1,5 +1,6 @@
 <script>
 	import Frame from '$lib/template/Frame.svelte';
+	import HR from '$lib/components/HR.svelte';
 	import Embed from './Embed.svelte';
 </script>
 
@@ -11,9 +12,7 @@
 	/>
 </svelte:head>
 
-<Frame
-	>>
-
+<Frame>
 	<div class="inner">
 		<h1>Newsletter</h1>
 
@@ -69,7 +68,7 @@
 			</div>
 		</div>
 
-		<hr />
+		<HR />
 
 		<h2>Past installments</h2>
 
