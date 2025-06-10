@@ -5,6 +5,7 @@
 	import GoogleDrive from '$lib/components/GoogleDrive.svelte';
 	import Pin from '$lib/components/Pin.svelte';
 	import HR from '$lib/components/HR.svelte';
+	import Image from '$lib/lightbox/Image.svelte';
 
 	let events = $state(undefined);
 	(async function () {
@@ -44,12 +45,28 @@
 		</div>
 		<HR />
 		<div class="gallery">
-			<img src="./ostrich-room/cauliflower.jpg" alt="Cauliflower" />
-			<img src="./ostrich-room/fireplace.jpg" alt="The inglenook" />
-			<img src="./ostrich-room/cocktail.jpg" alt="One of Sean’s cocktails" />
-			<img src="./heropics/ostrich3.jpg" alt="The Ostrich Room" />
-			<img src="./ostrich-room/IMG_6961.jpg" alt="The Ostrich Room" />
-			<img src="./ostrich-room/empty.jpg" alt="The Ostrich Room" />
+			<Image
+				src="./ostrich-room/cauliflower.jpg"
+				alt="Cauliflower"
+				style="aspect-ratio: 500/643;"
+			/>
+			<Image
+				src="./ostrich-room/fireplace.jpg"
+				alt="The inglenook"
+				style="aspect-ratio: 500/643;"
+			/>
+			<Image
+				src="./ostrich-room/cocktail.jpg"
+				alt="One of Sean’s cocktails"
+				style="aspect-ratio: 500/643;"
+			/>
+			<Image src="./heropics/ostrich3.jpg" alt="The Ostrich Room" style="aspect-ratio: 500/643;" />
+			<Image
+				src="./ostrich-room/IMG_6961.jpg"
+				alt="The Ostrich Room"
+				style="aspect-ratio: 500/643;"
+			/>
+			<Image src="./ostrich-room/empty.jpg" alt="The Ostrich Room" style="aspect-ratio: 500/643;" />
 		</div>
 		<HR />
 		<h2 id="calendar">Live music calendar</h2>
@@ -137,7 +154,6 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 2rem 1rem;
-		/* border-radius: 5px; */
 		color: white;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
@@ -156,36 +172,13 @@
 		color: inherit;
 	}
 
-	h1 {
-		font-size: 5vw;
-		text-shadow: 3px 3px 3px black;
-		margin: 3em 1em 3em 1em;
-		text-align: center;
-	}
-
 	.letter {
 		max-width: 640px;
 		border: 1px solid var(--black);
 		padding: 1em;
 	}
 
-	@media (min-width: 1200px) {
-		h1 {
-			font-size: 80px;
-		}
-	}
-
-	@media (min-width: 420px) and (max-width: 1200px) {
-		h1 {
-			font-size: 6vw;
-		}
-	}
-
 	@media (max-width: 420px) {
-		h1 {
-			font-size: 2em;
-			margin: 3em 1em;
-		}
 		.intro div {
 			font-size: small;
 		}
@@ -208,12 +201,6 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 1em;
 		width: 100%;
-	}
-
-	.menus img {
-		width: 100%;
-		border: 1px solid var(--black);
-		border-radius: 5px;
 	}
 
 	table {
@@ -240,15 +227,6 @@
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		gap: 1em;
-	}
-	.gallery img {
-		flex: 1 1 auto;
-		max-width: 100%;
-		height: auto;
-		min-height: 1px;
-		border-radius: 5px;
-		aspect-ratio: 500/643;
-		object-fit: cover;
 	}
 	@media (max-width: 800px) {
 		.gallery {
