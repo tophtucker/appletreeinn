@@ -10,7 +10,7 @@
 <Frame>
 	<div class="inner">
 		<div
-			style="float: right; width: 10em; border: 1px solid var(--brown); padding: 0.5em; font-size: smaller; text-align: center;"
+			style="float: right; width: 10em; border: 1px solid var(--black); padding: 0.5em; font-size: smaller; text-align: center;"
 		>
 			This page is under construction!
 		</div>

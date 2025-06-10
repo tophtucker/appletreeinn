@@ -83,12 +83,12 @@
 <style>
 	.spacer {
 		width: var(--gutter);
-		border-bottom: 1px solid var(--brown);
+		border-bottom: 1px solid var(--black);
 	}
 
 	.gap {
 		width: 1em;
-		border-bottom: 1px solid var(--brown);
+		border-bottom: 1px solid var(--black);
 	}
 
 	.grow {
@@ -99,18 +99,19 @@
 		display: flex;
 		align-items: end;
 		justify-content: center;
+		margin-top: 2rem;
 	}
 
 	.tab {
 		text-decoration: none;
-		color: var(--brown);
+		color: var(--black);
 		margin: 0;
 		position: relative;
 		background: none;
 		border: none;
-		border-top: 1px solid var(--brown);
-		border-right: 1px solid var(--brown);
-		border-left: 1px solid var(--brown);
+		border-top: 1px solid var(--black);
+		border-right: 1px solid var(--black);
+		border-left: 1px solid var(--black);
 		padding: 0.5em;
 		cursor: pointer;
 		border-top-left-radius: 5px;
@@ -125,7 +126,7 @@
 	}
 
 	.tab:not(.active) {
-		border-bottom: 1px solid var(--brown);
+		border-bottom: 1px solid var(--black);
 	}
 
 	#buildingContainer {
@@ -136,7 +137,7 @@
 		display: grid;
 		grid-template-columns: 3fr 1fr;
 		gap: 1em;
-		border-bottom: 1px solid var(--brown);
+		border-bottom: 1px solid var(--black);
 		padding: 1em 0;
 	}
 
@@ -159,7 +160,7 @@
 		width: 100%;
 		max-width: 400px;
 		border-radius: 50%;
-		border: 1px solid var(--brown);
+		border: 1px solid var(--black);
 	}
 
 	@media (max-width: 800px) {

@@ -21,12 +21,11 @@
 </svelte:head>
 
 <Frame>
+	<div class="intro">
+		<div>Drinks • Food • Music</div>
+		<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a> • (413) 637-1910</div>
+	</div>
 	<div class="inner">
-		<div class="intro">
-			<div>Drinks • Food • Music</div>
-			<h1>The Ostrich Room</h1>
-			<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a> • (413) 637-1910</div>
-		</div>
 		<div class="hours-wrapper">
 			<WeekHours data={ostrichRoom} {events} />
 			<div style="text-align: center; font-style: italic; max-width: 420px;">
@@ -135,19 +134,21 @@
 		background-position: 50% 30%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		padding: 2rem 1rem;
-		border-radius: 5px;
+		/* border-radius: 5px; */
 		color: white;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		position: relative;
+		min-height: 500px;
+		font-family: watkins;
+		color: white;
 	}
 
 	.intro div {
-		opacity: 0.6;
-		color: var(--gold);
+		opacity: 0.8;
 		text-align: center;
 	}
 

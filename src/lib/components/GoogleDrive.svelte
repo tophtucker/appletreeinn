@@ -12,7 +12,7 @@
 		width: 100%;
 		height: 500px;
 		border: none;
-		border: 1px solid var(--brown);
+		border: 1px solid var(--black);
 		border-radius: 5px;
 	}
 </style>

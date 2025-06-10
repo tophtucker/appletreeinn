@@ -59,12 +59,12 @@
 		position: absolute;
 		left: 1em;
 		bottom: 1em;
-		color: var(--brown);
+		color: var(--black);
 		font-family: sans-serif;
 		font-size: smaller;
 		margin-top: 0.25em;
 		background: rgb(255, 255, 255, 1);
-		border: 1px solid var(--brown);
+		border: 1px solid var(--black);
 		padding: 4px 8px;
 		border-radius: 4px;
 		margin-right: 120px;

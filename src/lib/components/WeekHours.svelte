@@ -87,7 +87,7 @@
 	td {
 		font-weight: normal;
 		text-align: left;
-		border: 1px solid var(--brown);
+		border: 1px solid var(--black);
 		padding: 0.5em;
 		position: relative;
 		background: white;

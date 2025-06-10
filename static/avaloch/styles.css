@@ -14,6 +14,8 @@ body {
 	--gold: #c29b58;
 	--blue: #02718a;
 	--black: #333;
+	--gray: #ccc;
+	--gutter: 6rem;
 	color: var(--black);
 }
 
@@ -53,7 +55,7 @@ img {
 }
 
 .inner {
-	padding: 0 6rem;
+	padding: 0 var(--gutter);
 }
 
 h1,
@@ -79,4 +81,33 @@ p:first-of-type {
 
 a {
 	color: var(--blue);
+}
+
+button {
+	font-family: inherit;
+}
+
+.grid-or-flex {
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	gap: 1em;
+}
+
+.show-mobile {
+	display: none;
+}
+
+@media (max-width: 800px) {
+	.hide-mobile {
+		display: none;
+	}
+
+	.show-mobile {
+		display: block;
+	}
+
+	.grid-or-flex {
+		display: flex;
+		flex-direction: column;
+	}
 }
