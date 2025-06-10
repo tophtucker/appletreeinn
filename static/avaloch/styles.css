@@ -14,7 +14,7 @@ body {
 	--gold: #c29b58;
 	--blue: #02718a;
 	--black: #333;
-	--gray: #ccc;
+	--gray: #999;
 	--gutter: 6rem;
 	color: var(--black);
 }

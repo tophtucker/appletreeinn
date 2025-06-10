@@ -21,7 +21,7 @@
 	</a>
 {/snippet}
 
-<header style={`--accent: ${currentPage.section.color};`}>
+<header style={`--accent: ${currentPage?.section.color || 'var(--black)'};`}>
 	<div class="inner-header">
 		{@render link(nav[0])}
 		{@render link(nav[1])}
@@ -32,7 +32,7 @@
 		{@render link(nav[2])}
 		{@render link(nav[3])}
 	</div>
-	{#if currentPage.section && currentPage.pathname !== '/'}
+	{#if currentPage && currentPage.section && currentPage.pathname !== '/'}
 		<div class="subheader">
 			<div class="subheader-inner">
 				<h2>{currentPage.section.title}</h2>
