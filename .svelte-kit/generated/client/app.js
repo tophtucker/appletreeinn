@@ -50,9 +50,9 @@ export const dictionary = {
 		"/ostrich-room": [18],
 		"/restaurants": [~19],
 		"/rooms": [20],
-		"/terms-of-service": [21],
-		"/termsandcondition": [~22],
-		"/things-to-do": [23],
+		"/rooms/things-to-do": [21],
+		"/terms-of-service": [22],
+		"/termsandcondition": [~23],
 		"/weddings-events": [24]
 	};
 
