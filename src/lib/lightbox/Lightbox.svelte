@@ -20,15 +20,24 @@
 		if (currentIndex >= images.length) currentIndex = 0;
 		lightbox.src = images[currentIndex];
 	}
+
+	function onKeyDown(event) {
+		if (lightbox.src) {
+			if (event.keyCode === 37) advance(-1);
+			if (event.keyCode === 39) advance(1);
+		}
+	}
 </script>
+
+<svelte:window on:keydown={onKeyDown} />
 
 <dialog id="lightbox" bind:this={dialogRef} onclose={() => (lightbox.src = null)}>
 	<div class="header">
+		<button onclick={() => advance(-1)}>&lt;</button>
 		{lightbox.src?.getAttribute('alt')}
 		<div>
-			<button onclick={() => advance(-1)}>Previous</button>
-			<button onclick={() => advance(1)}>Next</button>
-			<button onclick={() => (lightbox.src = null)}>Close</button>
+			<button onclick={() => advance(1)}>&gt;</button>
+			<button onclick={() => (lightbox.src = null)}>✕</button>
 		</div>
 	</div>
 	<img src={lightbox.src?.getAttribute('src')} alt={lightbox.src?.getAttribute('alt')} />
@@ -90,5 +99,7 @@
 		border-radius: 3px;
 		font-family: inherit;
 		padding-top: 5px;
+		width: 24px;
+		height: 24px;
 	}
 </style>
