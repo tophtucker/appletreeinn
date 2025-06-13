@@ -38,14 +38,23 @@
 		mounted = true;
 		return unsubscribe;
 	});
+
+	const Pyramid_1=$derived(constructors[1])
 </script>
 
 {#if constructors[1]}
-	<svelte:component this={constructors[0]} bind:this={components[0]} data={data_0}>
-		<svelte:component this={constructors[1]} bind:this={components[1]} data={data_1} {form} />
-	</svelte:component>
+	{@const Pyramid_0 = constructors[0]}
+							<!-- svelte-ignore binding_property_non_reactive -->
+							<Pyramid_0 bind:this={components[0]} data={data_0} {form}>
+								<!-- svelte-ignore binding_property_non_reactive -->
+										<Pyramid_1 bind:this={components[1]} data={data_1} {form} />
+							</Pyramid_0>
+	
 {:else}
-	<svelte:component this={constructors[0]} bind:this={components[0]} data={data_0} {form} />
+	{@const Pyramid_0 = constructors[0]}
+	<!-- svelte-ignore binding_property_non_reactive -->
+	<Pyramid_0 bind:this={components[0]} data={data_0} {form} />
+	
 {/if}
 
 {#if mounted}

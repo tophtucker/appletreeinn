@@ -10,6 +10,9 @@
 	(async function () {
 		events = await loadEvents();
 	})();
+
+	const RESERVATIONS_URL =
+		'https://tables.toasttab.com/restaurants/701827ce-60b2-4de3-a117-eeef40adcbe1/findTime';
 </script>
 
 <svelte:head>
@@ -26,16 +29,22 @@
 	<div class="intro">
 		<div>Drinks • Food • Music</div>
 		<h1>The Ostrich Room</h1>
-		<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a> • (413) 637-1910</div>
+		<div>
+			<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a></div>
+			<a class="cta" href={RESERVATIONS_URL}>Make a reservation</a>
+			<div>(413) 637-1910</div>
+		</div>
 	</div>
 	<div class="hours-wrapper">
 		<WeekHours data={ostrichRoom} {events} />
-		<div style="text-align: center; font-style: italic; max-width: 420px;">
-			<div>Walk-ins welcome.</div>
+		<div style="text-align: center; font-style: italic; max-width: 560px;">
 			<div>
-				No reservations for parties of 4 or under. Reservations optional for parties of 5 or more.
+				Now accepting <a href={RESERVATIONS_URL}>reservations</a>! Walk-ins always welcome.<br /><br
+				/>
+				Reservations are for the Ostrich Room only. Service is available in other areas — patio, front
+				porch, and parlor — but they are “first come, first served”.<br /><br />
+				Feel free to call the front desk at 413-637-1910 for help or to make a reservation.
 			</div>
-			<div>Call (413) 637-1910!</div>
 		</div>
 	</div>
 	<hr />
@@ -151,6 +160,8 @@
 		opacity: 0.6;
 		color: var(--tan);
 		text-align: center;
+		display: flex;
+		align-items: center;
 	}
 
 	.intro a {
@@ -189,6 +200,7 @@
 		}
 		.intro div {
 			font-size: small;
+			flex-direction: column;
 		}
 	}
 
@@ -228,6 +240,17 @@
 
 	details {
 		margin-bottom: 1em;
+	}
+
+	.cta {
+		display: block;
+		border: 1px solid var(--brown);
+		border-radius: 5px;
+		padding: 0.5em 1em;
+		margin: 1em;
+		text-decoration: none;
+		color: var(--brown) !important;
+		background-color: var(--tan);
 	}
 
 	@media (max-width: 800px) {
