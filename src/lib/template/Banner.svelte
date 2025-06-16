@@ -14,25 +14,12 @@
 		)
 	);
 	// const message = $derived(item?.message);
-	const message = 'The Apple Tree Inn is returning to its former name, Avaloch';
+	const message = 'The Apple Tree Inn is returning to its former name, Avaloch.';
 </script>
 
 {#if message}
-	<div class="container">
-		<div class="notice">Notice</div>
+	<div>
+		<h6>Notice</h6>
 		{message}
 	</div>
 {/if}
-
-<style>
-	.container {
-		display: flex;
-		flex-direction: column;
-	}
-	.notice {
-		text-transform: uppercase;
-		font-size: smaller;
-		font-family: watkins;
-		/* color: #bbb; */
-	}
-</style>

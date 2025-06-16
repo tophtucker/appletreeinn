@@ -49,20 +49,11 @@
 
 {#if isET}
 	<div>
-		<div class="notice">The Ostrich Room</div>
+		<h6>The Ostrich Room</h6>
 		{#if isOpen}
-			<div>Open until ${formatFutureDate(nextHours[1])}</div>
+			<div>Open until ${formatFutureDate(nextHours[1])}.</div>
 		{:else if nextHours}
-			<div>Closed until {formatFutureDate(nextHours[0])}</div>
+			<div>Closed until {formatFutureDate(nextHours[0])}.</div>
 		{/if}
 	</div>
 {/if}
-
-<style>
-	.notice {
-		text-transform: uppercase;
-		font-size: smaller;
-		font-family: watkins;
-		/* color: #bbb; */
-	}
-</style>

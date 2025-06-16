@@ -75,6 +75,12 @@ h4 {
 	font-weight: normal;
 }
 
+h6 {
+	font-size: 14px;
+	font-family: watkins;
+	margin: 0;
+}
+
 p {
 	max-width: 640px;
 	margin: 0;
