@@ -4,6 +4,7 @@
 	import Footer from '$lib/template/Footer.svelte';
 	// import Banner from '$lib/template/Banner.svelte';
 	import { setContext } from 'svelte';
+	import Nav from './Nav.svelte';
 	let { children } = $props();
 	let lightbox = $state({ src: null, alt: null });
 	setContext('lightbox', lightbox);
@@ -15,33 +16,40 @@
 	</svg>
 {/snippet}
 
-<!-- <Banner /> -->
+<main>
+	<Nav />
 
-<div class="frame">
-	{@render circle()}
-	<div class="top bottom"></div>
-	{@render circle()}
+	<div class="frame">
+		{@render circle()}
+		<div class="top bottom"></div>
+		{@render circle()}
 
-	<div class="left right bottom"></div>
-	<div class="bottom"></div>
-	<div class="left right bottom"></div>
+		<div class="left right bottom"></div>
+		<div class="bottom"></div>
+		<div class="left right bottom"></div>
 
-	<div class="left right"></div>
-	<div class="content"><Header />{@render children()}<Footer /></div>
-	<div class="left right"></div>
+		<div class="left right"></div>
+		<div class="content"><Header />{@render children()}<Footer /></div>
+		<div class="left right"></div>
 
-	<div class="left right top"></div>
-	<div class="top"></div>
-	<div class="left right top"></div>
+		<div class="left right top"></div>
+		<div class="top"></div>
+		<div class="left right top"></div>
 
-	{@render circle()}
-	<div class="top bottom"></div>
-	{@render circle()}
-</div>
+		{@render circle()}
+		<div class="top bottom"></div>
+		{@render circle()}
+	</div>
+</main>
 
 <Lightbox />
 
 <style>
+	main {
+		display: flex;
+		padding: 2em;
+		gap: 2em;
+	}
 	.top {
 		border-top: 1px solid var(--black);
 	}
@@ -59,7 +67,7 @@
 		display: grid;
 		grid-template-columns: 20px 1fr 20px;
 		grid-template-rows: 20px 3px 1fr 3px 20px;
-		margin: 2em auto;
+		/* margin: 2em auto; */
 		max-width: 1400px;
 	}
 </style>

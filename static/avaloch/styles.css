@@ -23,6 +23,12 @@ img {
 	max-width: 100%;
 }
 
+hr {
+	width: 100%;
+	border: none;
+	border-top: 1px solid black;
+}
+
 .red {
 	color: var(--red);
 }

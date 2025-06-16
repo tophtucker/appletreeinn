@@ -8,29 +8,11 @@
 	const currentPage = getCurrentPage($page);
 </script>
 
-{#snippet link({ pathname, icon, title, hours, color, active })}
-	<a href={pathname} class={`hide-mobile ${active ? 'active' : ''}`} style={`--accent: ${color};`}>
-		{#if active}
-			<Icon {icon} size="32" fill="var(--accent)" altFill="white" />
-		{:else}
-			{title}
-		{/if}
-		{#if hours}
-			<OpenSign data={hours} />
-		{/if}
-	</a>
-{/snippet}
-
 <header style={`--accent: ${currentPage?.section.color || 'var(--black)'};`}>
 	<div class="inner-header">
-		{@render link(nav[0])}
-		{@render link(nav[1])}
-		<a href="/" class="home">
-			<Avaloch />
-			<span style="color: var(--black)">A Country Inn.</span>
-		</a>
-		{@render link(nav[2])}
-		{@render link(nav[3])}
+		<div>Lenox, Mass.</div>
+		<a href="/" class="home"><Avaloch /></a>
+		<div>A country inn</div>
 	</div>
 	{#if currentPage && currentPage.section && currentPage.pathname !== '/'}
 		<div class="subheader">
@@ -51,14 +33,21 @@
 <style>
 	.inner-header {
 		display: grid;
-		grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-		gap: 1em;
+		grid-template-columns: 1fr max-content 1fr;
+		gap: 3em;
 		font-size: 14px;
 		font-family: 'watkins';
 		justify-content: space-between;
 		align-items: center;
 		padding: 3em 2em;
 		transform: rotate(-1deg);
+		/* text-align: center; */
+	}
+	.inner-header > div {
+		padding-top: 1em;
+	}
+	.inner-header > div:first-child {
+		text-align: right;
 	}
 
 	.subheader {

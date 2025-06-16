@@ -1,6 +1,7 @@
 <script>
 	import Frame from '$lib/template/Frame.svelte';
 	import { loadEvents, formatDate, ostrichRoom } from '$lib/index.js';
+	import { RESERVATIONS_URL } from '$lib/nav.js';
 	import WeekHours from '$lib/components/WeekHours.svelte';
 	import GoogleDrive from '$lib/components/GoogleDrive.svelte';
 	import Pin from '$lib/components/Pin.svelte';
@@ -11,9 +12,6 @@
 	(async function () {
 		events = await loadEvents();
 	})();
-
-	const RESERVATIONS_URL =
-		'https://tables.toasttab.com/restaurants/701827ce-60b2-4de3-a117-eeef40adcbe1/findTime';
 </script>
 
 <svelte:head>
