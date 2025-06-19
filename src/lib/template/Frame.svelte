@@ -10,7 +10,7 @@
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
 
-	let navOpen = $state(true);
+	let navOpen = $state(false);
 	const toggleNav = () => {
 		console.log(navOpen);
 		navOpen = !navOpen;
@@ -25,7 +25,7 @@
 
 <main>
 	{#if navOpen}
-		<Nav />
+		<Nav {toggleNav} />
 	{/if}
 
 	<div class="frame">
@@ -37,9 +37,9 @@
 		<div class="bottom"></div>
 		<div class="left right bottom"></div>
 
-		<div class="left right"></div>
+		<div class="left right mobile-no-border"></div>
 		<div class="content"><Header {toggleNav} />{@render children()}<Footer /></div>
-		<div class="left right"></div>
+		<div class="left right mobile-no-border"></div>
 
 		<div class="left right top"></div>
 		<div class="top"></div>
@@ -79,5 +79,14 @@
 		grid-template-rows: 20px 3px 1fr 3px 20px;
 		max-width: 1200px;
 		width: 100%;
+	}
+
+	@media (max-width: 800px) {
+		main {
+			padding: 0;
+		}
+		.mobile-no-border {
+			border: none;
+		}
 	}
 </style>

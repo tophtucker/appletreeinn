@@ -15,7 +15,7 @@
 			<a href="/" class="home"><Avaloch /></a>
 			<div>A country inn</div>
 		</div>
-		<a class="book" href={BOOKING_URL}>Book now</a>
+		<a class="book" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;now</span></a>
 	</div>
 	{#if currentPage && currentPage.section && currentPage.pathname !== '/'}
 		<div class="subheader">
@@ -29,17 +29,10 @@
 </header>
 
 <style>
+	header {
+		container-type: inline-size;
+	}
 	button {
-		font: inherit;
-		font-feature-settings: inherit;
-		font-variation-settings: inherit;
-		letter-spacing: inherit;
-		color: inherit;
-		opacity: 1;
-		border: 1px solid black;
-		padding: 3px;
-		background-color: #0000;
-		border-radius: 0;
 		justify-self: start;
 		width: 2rem;
 		height: 2rem;
@@ -60,7 +53,7 @@
 		display: grid;
 		grid-template-columns: 1fr max-content 1fr;
 		align-items: center;
-		gap: 2rem;
+		gap: 1rem;
 		padding: 0 var(--gutter);
 	}
 	.inner-header {
@@ -110,8 +103,17 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 1rem;
 		color: var(--accent);
-		text-decoration: none;
+	}
+
+	@container (max-width: 1000px) {
+		.inner-header {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+		.inner-header > div:first-child {
+			display: none;
+		}
 	}
 </style>

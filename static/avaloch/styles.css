@@ -96,7 +96,16 @@ a {
 }
 
 button {
-	font-family: inherit;
+	font: inherit;
+	font-feature-settings: inherit;
+	font-variation-settings: inherit;
+	letter-spacing: inherit;
+	color: inherit;
+	opacity: 1;
+	border: 1px solid black;
+	padding: 3px;
+	background-color: #0000;
+	border-radius: 0;
 }
 
 .grid-or-flex {
@@ -109,7 +118,22 @@ button {
 	display: none;
 }
 
+.prose-columns {
+	columns: 3;
+}
+.prose-columns p {
+	margin: 0;
+	text-indent: 1em;
+}
+.prose-columns p:first-child {
+	text-indent: 0;
+}
+
 @media (max-width: 800px) {
+	body {
+		--gutter: 0;
+	}
+
 	.hide-mobile {
 		display: none;
 	}

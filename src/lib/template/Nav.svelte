@@ -5,22 +5,25 @@
 	import Banner from './Banner.svelte';
 	import OpenSign from '../components/OpenSign.svelte';
 	import Events from '../components/Events.svelte';
+	import Icon from '../icons/Icon.svelte';
 	const nav = getNav($page);
+	let { toggleNav } = $props();
 </script>
 
-<nav class="main">
+<nav>
+	<button onclick={toggleNav}><Icon icon="Close" /></button>
 	{#each nav as n}
 		<div class="section">
 			<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a>
 			{#if n.children}
-				<nav>
+				<div>
 					{#each n.children as n}
 						<a
 							href={n.url || n.pathname}
 							class={`${n.active ? 'active' : ''} ${n.url ? 'external' : ''}`}>{n.title}</a
 						>
 					{/each}
-				</nav>
+				</div>
 			{/if}
 		</div>
 	{/each}
@@ -31,7 +34,7 @@
 </nav>
 
 <style>
-	.main {
+	nav {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
@@ -53,13 +56,13 @@
 		font-size: 14px;
 	}
 
-	.section nav {
+	.section div {
 		padding-left: 1em;
 		color: #aaa;
 		transition: color 0.2s;
 	}
 
-	.section:hover nav {
+	.section:hover div {
 		color: #333;
 	}
 
@@ -72,5 +75,28 @@
 		content: '↗';
 		font-size: 12px;
 		padding-left: 3px;
+	}
+
+	button {
+		position: fixed;
+		right: 1rem;
+		top: 1rem;
+		width: 2rem;
+		height: 2rem;
+	}
+
+	@media (max-width: 800px) {
+		nav {
+			background: white;
+			width: 100%;
+			position: absolute;
+			z-index: 2;
+			padding: 2rem;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			overflow: scroll;
+		}
 	}
 </style>
