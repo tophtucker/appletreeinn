@@ -2,12 +2,19 @@
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import Header from '$lib/template/Header.svelte';
 	import Footer from '$lib/template/Footer.svelte';
-	// import Banner from '$lib/template/Banner.svelte';
-	import { setContext } from 'svelte';
 	import Nav from './Nav.svelte';
+	import { setContext } from 'svelte';
+
 	let { children } = $props();
-	let lightbox = $state({ src: null, alt: null });
+
+	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
+
+	let navOpen = $state(true);
+	const toggleNav = () => {
+		console.log(navOpen);
+		navOpen = !navOpen;
+	};
 </script>
 
 {#snippet circle()}
@@ -17,7 +24,9 @@
 {/snippet}
 
 <main>
-	<Nav />
+	{#if navOpen}
+		<Nav />
+	{/if}
 
 	<div class="frame">
 		{@render circle()}
@@ -29,7 +38,7 @@
 		<div class="left right bottom"></div>
 
 		<div class="left right"></div>
-		<div class="content"><Header />{@render children()}<Footer /></div>
+		<div class="content"><Header {toggleNav} />{@render children()}<Footer /></div>
 		<div class="left right"></div>
 
 		<div class="left right top"></div>
@@ -47,6 +56,7 @@
 <style>
 	main {
 		display: flex;
+		justify-content: center;
 		padding: 2em;
 		gap: 2em;
 	}
@@ -67,7 +77,7 @@
 		display: grid;
 		grid-template-columns: 20px 1fr 20px;
 		grid-template-rows: 20px 3px 1fr 3px 20px;
-		/* margin: 2em auto; */
-		max-width: 1400px;
+		max-width: 1200px;
+		width: 100%;
 	}
 </style>

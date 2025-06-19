@@ -5,13 +5,10 @@
 	import Banner from './Banner.svelte';
 	import OpenSign from '../components/OpenSign.svelte';
 	import Events from '../components/Events.svelte';
-	import Icon from '../icons/Icon.svelte';
 	const nav = getNav($page);
-	// const currentPage = getCurrentPage($page);
 </script>
 
 <nav class="main">
-	<Icon icon="Door" size="28" />
 	{#each nav as n}
 		<div class="section">
 			<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a>

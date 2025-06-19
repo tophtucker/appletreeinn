@@ -5,6 +5,7 @@
 	import Doorknob from './Doorknob.svelte';
 	import Pane from './Pane.svelte';
 	import Pentathing from './Pentathing.svelte';
+	import Hamburger from './Hamburger.svelte';
 
 	let { icon, ...rest } = $props();
 </script>
@@ -21,6 +22,8 @@
 	<Pane {...rest} />
 {:else if icon === 'Pentathing'}
 	<Pentathing {...rest} />
+{:else if icon === 'Hamburger'}
+	<Hamburger {...rest} />
 {:else}
 	<div></div>
 {/if}
