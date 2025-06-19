@@ -23,12 +23,12 @@ const nav = [
 		title: 'Dining',
 		color: 'var(--red)',
 		children: [
-			{ title: 'Cocktails', pathname: 'cocktails' },
+			{ title: 'The Ostrich Room', pathname: null },
 			{ title: 'Make a reservation', url: RESERVATIONS_URL }
 		]
 	},
 	{
-		pathname: '/weddings-events',
+		pathname: '/ostrich-room',
 		title: 'Live music',
 		color: 'var(--blue)'
 	},

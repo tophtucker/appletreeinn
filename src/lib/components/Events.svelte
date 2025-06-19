@@ -13,9 +13,9 @@
 	{:else if data === null}
 		See <a href="https://instagram.com/appletreeinn">Instagram</a> for live music updates.
 	{:else}
-		{#each data.future.slice(0, 1) as { date, description }}
-			<span>{formatDate(date)}: {description}</span>
-		{/each}
+		<span
+			>{formatDate(data.future[0].date)}: {data.future[0].description}.
+			<a href="/ostrich-room#calendar">More →</a></span
+		>
 	{/if}
-	<div><a href="/ostrich-room#calendar">More →</a></div>
 </div>
