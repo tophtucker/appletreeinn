@@ -11,11 +11,10 @@ const nav = [
 		pathname: '/rooms',
 		title: 'Lodging',
 		color: 'var(--green)',
-		icon: 'Doorknob',
 		children: [
-			{ title: 'Main House', pathname: null },
-			{ title: 'The Lodge', pathname: 'things-to-do' },
-			{ title: 'Amenities', pathname: 'amenities' },
+			{ title: 'Rooms', pathname: null },
+			{ title: 'The property', pathname: 'property' },
+			{ title: 'The area', pathname: 'things-to-do' },
 			{ title: 'Book now', url: BOOKING_URL }
 		]
 	},
@@ -23,8 +22,6 @@ const nav = [
 		pathname: '/ostrich-room',
 		title: 'Dining',
 		color: 'var(--red)',
-		icon: 'Pentathing',
-		hours: ostrichRoom,
 		children: [
 			{ title: 'Cocktails', pathname: 'cocktails' },
 			{ title: 'Make a reservation', url: RESERVATIONS_URL }
@@ -33,34 +30,32 @@ const nav = [
 	{
 		pathname: '/weddings-events',
 		title: 'Live music',
-		color: 'var(--blue)',
-		icon: 'Pane'
+		color: 'var(--blue)'
 	},
 	{
 		pathname: '/weddings-events',
 		title: 'Private events'
 	},
 	{
-		pathname: '/explore',
-		title: 'Explore',
-		color: 'var(--gold)',
-		icon: 'Door',
-		children: [
-			{ title: 'Gallery', pathname: 'gallery' },
-			{ title: 'Map', pathname: 'map' },
-			{ title: 'Things to do', pathname: 'things-to-do' }
-		]
+		pathname: '/gallery',
+		title: 'Gallery',
+		color: 'var(--gold)'
+	},
+	{
+		pathname: '/map',
+		title: 'Map',
+		color: 'var(--gold)'
 	},
 	{
 		pathname: '/about',
 		title: 'About',
 		color: 'var(--gold)',
-		icon: 'Door',
 		children: [
 			{ title: 'Staff', pathname: null },
 			{ title: 'Claire', pathname: 'claire' },
 			{ title: 'History', pathname: 'history' },
-			{ title: 'Newsletter', pathname: 'newsletter' }
+			{ title: 'Newsletter', pathname: 'newsletter' },
+			{ title: 'Terms of service', pathname: 'terms-of-service' }
 		]
 	}
 ];
