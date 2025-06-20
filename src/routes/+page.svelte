@@ -2,6 +2,7 @@
 	import Frame from '$lib/template/Frame.svelte';
 	import Asterisk from '$lib/icons/Asterisk.svelte';
 	import Image from '$lib/lightbox/Image.svelte';
+	import GalleryGrid from '$lib/components/GalleryGrid.svelte';
 </script>
 
 <svelte:head>
@@ -19,40 +20,23 @@
 			<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" />
 		</div>
 
-		<div class="blurbs">
-			Come enjoy our
-			<Asterisk />
-			34 guest rooms
-			<Asterisk />
-			Hidden gem pool
-			<Asterisk />
-			Cozy fireplaces
-			<Asterisk />
-			Hilltop views of Berkshires hills
-			<Asterisk />
-			Wood-paneled tavern (Wed - Sat)
-			<Asterisk />
-			Sean’s cocktails
-			<Asterisk />
-			Lots of live music
-			<Asterisk />
-			21 acres
-			<Asterisk />
-			10-minute walk to Kripalu or Tanglewood
-		</div>
+		<div class="section"><GalleryGrid /></div>
 
-		<div class="gallery">
+		<!-- <div class="gallery">
 			<Image src="/avaloch/img/firepit.jpg" alt="Firepit" class="square" />
 			<Image src="/avaloch/img/lawn-snow.jpg" alt="The snowy lawn" class="square" />
 			<Image src="/avaloch/img/music.jpg" alt="The Ostrich Room" class="square" />
 			<Image src="/img/cocktail.jpg" alt="One of Sean’s cocktails" class="square" />
 			<Image src="/heropics/pool1.jpg" alt="The pool" class="square" />
 			<a href="/about/gallery"><span>Gallery</span></a>
-		</div>
+		</div> -->
 	</div>
 </Frame>
 
 <style>
+	.section {
+		margin: 1rem 0;
+	}
 	.gallery {
 		margin: 2rem 0;
 		display: grid;

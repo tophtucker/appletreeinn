@@ -1,3 +1,7 @@
+<div class="inner">
+	<hr />
+</div>
+
 <footer class="inner">
 	<div>10 Richmond Mountain Road<br />Lenox, Massachusetts<br />01240</div>
 	<div>
@@ -13,6 +17,9 @@
 </footer>
 
 <style>
+	hr {
+		margin: 4rem 0;
+	}
 	footer {
 		display: flex;
 		justify-content: space-between;

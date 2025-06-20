@@ -81,6 +81,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
+		margin-bottom: 2rem;
 	}
 	.spacer {
 		flex-grow: 1;
