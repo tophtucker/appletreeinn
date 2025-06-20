@@ -57,8 +57,8 @@
 	main {
 		display: flex;
 		justify-content: center;
-		padding: 2em;
-		gap: 2em;
+		padding: 2rem;
+		gap: 2rem;
 	}
 	.top {
 		border-top: 1px solid var(--black);
@@ -79,6 +79,12 @@
 		grid-template-rows: 20px 3px 1fr 3px 20px;
 		max-width: 1200px;
 		width: 100%;
+	}
+
+	@media (max-width: 1000px) {
+		main {
+			padding: 1rem;
+		}
 	}
 
 	@media (max-width: 800px) {

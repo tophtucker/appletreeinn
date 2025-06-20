@@ -32,4 +32,21 @@
 	footer div:nth-child(3) {
 		text-align: right;
 	}
+	@media (max-width: 800px) {
+		footer {
+			flex-direction: column;
+			text-align: center;
+			gap: 1rem;
+		}
+
+		footer div:nth-child(2) {
+			padding-top: 0;
+			order: 3;
+		}
+
+		footer div:nth-child(3) {
+			order: 2;
+			text-align: center;
+		}
+	}
 </style>
