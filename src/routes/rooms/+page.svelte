@@ -160,7 +160,7 @@
 		width: 100%;
 		max-width: 400px;
 		border-radius: 50%;
-		border: 1px solid var(--black);
+		border: 3px double var(--black);
 	}
 
 	@media (max-width: 800px) {

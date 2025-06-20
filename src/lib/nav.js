@@ -25,7 +25,7 @@ const nav = [
 		]
 	},
 	{
-		pathname: '/ostrich-room',
+		pathname: '/music',
 		title: 'Live music',
 		color: 'var(--blue)'
 	},
