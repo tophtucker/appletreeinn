@@ -10,11 +10,20 @@
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
 
-	let navOpen = $state(false);
+	let desktopNav = $state(true);
+	let mobileNav = $state(false);
 	const toggleNav = () => {
-		console.log(navOpen);
-		navOpen = !navOpen;
+		if (window.innerWidth > 800) {
+			desktopNav = !desktopNav;
+		} else {
+			mobileNav = !mobileNav;
+		}
 	};
+	function onResize() {
+		if (window.matchMedia('(min-width: 801px)').matches) {
+			mobileNav = false;
+		}
+	}
 </script>
 
 {#snippet circle()}
@@ -23,10 +32,10 @@
 	</svg>
 {/snippet}
 
+<svelte:window on:resize={onResize} />
+
 <main>
-	{#if navOpen}
-		<Nav {toggleNav} />
-	{/if}
+	<Nav {toggleNav} {desktopNav} {mobileNav} />
 
 	<div class="frame">
 		{@render circle()}
