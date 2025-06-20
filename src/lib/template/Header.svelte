@@ -12,7 +12,7 @@
 		<button onclick={toggleNav}><Icon icon="Hamburger" /></button>
 		<div class="inner-header">
 			<div>Lenox, Mass.</div>
-			<a href="/" class="home"><Avaloch /></a>
+			<a href="/" class="home"><Avaloch style="width: 100%" /></a>
 			<div>A country inn</div>
 		</div>
 		<a class="book" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;now</span></a>
@@ -29,6 +29,9 @@
 </header>
 
 <style>
+	.shrink {
+		width: 20px;
+	}
 	header {
 		container-type: inline-size;
 	}
@@ -64,7 +67,7 @@
 		font-family: 'watkins';
 		justify-content: space-between;
 		align-items: center;
-		padding: 3em 2em;
+		padding: 3rem 2rem;
 		transform: rotate(-1deg);
 		/* text-align: center; */
 	}
@@ -115,6 +118,17 @@
 		}
 		.inner-header > div:first-child {
 			display: none;
+		}
+	}
+
+	@container (max-width: 500px) {
+		.home {
+			width: 40vw;
+		}
+		.inner-header {
+			gap: 0;
+			font-size: 12px;
+			padding: 2rem 0;
 		}
 	}
 </style>

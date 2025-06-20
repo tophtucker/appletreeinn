@@ -38,7 +38,7 @@
 </script>
 
 {#snippet img({ src, alt, size })}
-	<figure class={size}>
+	<figure class={`${size} ${!alt ? 'hide-mobile' : ''}`}>
 		<img {src} {alt} />
 		{#if alt}
 			<figcaption style={`background-color: ${randColor()}`}>{alt}</figcaption>
@@ -114,5 +114,14 @@
 	.lg {
 		grid-column: span 3;
 		grid-row: span 2;
+	}
+
+	@media (max-width: 800px) {
+		.gallery-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.lg {
+			grid-row: span 1;
+		}
 	}
 </style>
