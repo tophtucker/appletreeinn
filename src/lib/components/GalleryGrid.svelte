@@ -27,10 +27,15 @@
 		{ src: '/avaloch/img/wanda.jpg', alt: 'Live music', size: 'md', url: '/music' },
 		{ src: '/avaloch/img/music.jpg' },
 		{ src: '/img/cocktail.jpg', alt: 'Sean’s cocktails', url: '/ostrich-room' },
-		{ src: '/heropics/pool1.jpg', alt: 'Hidden gem pool', size: 'md', url: '/rooms/property' },
+		{ src: '/heropics/pool1.jpg', alt: 'Hidden gem pool', size: 'md' },
 		{ src: '/heropics/max.jpg', alt: 'Inn dog Max' },
-		{ src: '/heropics/view2.jpg', alt: 'Autumnal leaf peeping' },
-		{ src: '/avaloch/history/avaloch.jpg', alt: 'Welcoming the Berkshires since 1952', size: 'md' },
+		{ src: '/heropics/view2.jpg' },
+		{
+			src: '/avaloch/history/avaloch.jpg',
+			alt: 'History',
+			size: 'md',
+			url: '/about/history'
+		},
 		{ src: '/avaloch/img/proposal.jpg' },
 		{ src: '/avaloch/img/sledding.jpg', alt: 'Claire', url: '/about/claire' },
 		{ src: '/avaloch/img/pool-view.jpg', size: 'md' }
