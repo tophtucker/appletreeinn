@@ -2,10 +2,11 @@
 	import { timeFormat } from 'd3-time-format';
 	import { min, group } from 'd3-array';
 	import { timeDay, timeSunday } from 'd3-time';
-
 	import Frame from '$lib/template/Frame.svelte';
-	export let data;
-	console.log(data);
+	import Icon from '$lib/icons/Icon.svelte';
+	let { data } = $props();
+	console.log(data.performances);
+
 	const fWeekday = timeFormat('%a');
 	const fDate = timeFormat('%B %-d');
 	const fTime = timeFormat('%-I:%M %p');
@@ -14,16 +15,40 @@
 	const days = timeDay.range(start, timeDay.offset(start, 28));
 	const groupedPerformances = group(data.performances, (d) => timeDay(d.time));
 
-	days.map((day) => {
-		console.log(day, timeDay(), +day === +timeDay() ? 'today' : '');
-	});
-	// console.log(days)
+	let dialogRef;
+	let dialogPerformance = $state(null);
+	const open = (p) => {
+		dialogPerformance = p;
+		dialogRef.showModal();
+	};
+	const close = () => {
+		dialogPerformance = null;
+		dialogRef.close();
+	};
 </script>
 
 <svelte:head>
 	<title>Live music • Apple Tree Inn • Lenox, MA</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
+
+{#snippet card(p)}
+	<div class="performance">
+		<div class="time">
+			<h3>{fWeekday(p.time)}.</h3>
+			<div>{fDate(p.time)}</div>
+			<div>{fTime(p.time)}</div>
+		</div>
+		<div>
+			<h3>{p.act.name}</h3>
+			{@html p.act.description}
+			{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
+		</div>
+		{#if p.act.image}
+			<img src={p.act.image} alt={p.act.name} />
+		{/if}
+	</div>
+{/snippet}
 
 <Frame>
 	<div class="inner">
@@ -43,21 +68,7 @@
 
 		<div class="performances">
 			{#each data.performances.slice(0, 4) as p}
-				<div class="performance">
-					<div class="time">
-						<h3>{fWeekday(p.time)}.</h3>
-						<div>{fDate(p.time)}</div>
-						<div>{fTime(p.time)}</div>
-					</div>
-					<div>
-						<h3>{p.act.name}</h3>
-						{@html p.act.description}
-						{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
-					</div>
-					{#if p.act.image}
-						<img src={p.act.image} alt={p.act.name} />
-					{/if}
-				</div>
+				{@render card(p)}
 			{/each}
 		</div>
 
@@ -69,11 +80,20 @@
 				<div class={+day === +timeDay() ? 'today' : ''}>
 					<div class="date">{day.getDate() === 1 ? fDate(day) : day.getDate()}</div>
 					{#each groupedPerformances.get(day) as p}
-						<div><small>{fTime(p.time)}</small><br /> {p.act.name}</div>
+						<button onclick={() => open(p)}
+							><small>{fTime(p.time)}</small><br /> {p.act.name}</button
+						>
 					{/each}
 				</div>
 			{/each}
 		</div>
+
+		<dialog bind:this={dialogRef}>
+			<div class="button-wrapper"><button onclick={close}><Icon icon="Close" /></button></div>
+			{#if dialogPerformance}
+				{@render card(dialogPerformance)}
+			{/if}
+		</dialog>
 	</div>
 </Frame>
 
@@ -106,6 +126,15 @@
 	.calendar div.date {
 		color: var(--gray);
 	}
+	.calendar button {
+		padding: 0;
+		text-align: left;
+		border: none;
+		cursor: pointer;
+	}
+	.calendar button:hover {
+		color: var(--blue);
+	}
 	.performances {
 		display: flex;
 		flex-direction: column;
@@ -129,5 +158,17 @@
 	img {
 		border: 3px double black;
 		width: 200px;
+	}
+	dialog {
+		max-width: 720px;
+	}
+	dialog .button-wrapper {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 1rem;
+	}
+	dialog button {
+		width: 2rem;
+		height: 2rem;
 	}
 </style>
