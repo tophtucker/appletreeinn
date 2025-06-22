@@ -1,11 +1,14 @@
 import { sanity } from '$lib/sanity.js';
 import { toHTML } from '@portabletext/to-html';
 import imageUrlBuilder from '@sanity/image-url';
-import { isoParse } from 'd3-time-format';
+import { isoParse, isoFormat } from 'd3-time-format';
+import { timeDay } from 'd3-time';
 
 const builder = imageUrlBuilder(sanity);
 
-const QUERY = `*[_type == "performance" && time > now()] | order(time asc) {
+// TODO: is this date math possible within groq?
+const yesterday = isoFormat(timeDay.offset(timeDay(), -1));
+const QUERY = `*[_type == "performance" && time > '${yesterday}'] | order(time asc) {
   _id,
   time,
   note,
