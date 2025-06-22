@@ -1,11 +1,18 @@
 <script>
 	import { timeFormat } from 'd3-time-format';
+	import { min, group } from 'd3-array';
+	import { timeDay, timeSunday } from 'd3-time';
+
 	import Frame from '$lib/template/Frame.svelte';
 	export let data;
 	console.log(data);
 	const fWeekday = timeFormat('%a');
 	const fDate = timeFormat('%B %-d');
 	const fTime = timeFormat('%-I:%M %p');
+
+	const start = timeSunday(min(data.performances, (d) => d.time));
+	const days = timeDay.range(start, timeDay.offset(start, 28));
+	const groupedPerformances = group(data.performances, (d) => timeDay(d.time));
 </script>
 
 <svelte:head>
@@ -29,24 +36,70 @@
 
 		<h2>Upcoming</h2>
 
-		{#each data.performances as p}
-			<div class="performance">
-				<div class="time">
-					<h3>{fWeekday(p.time)}.</h3>
-					<div>{fDate(p.time)}</div>
-					<div>{fTime(p.time)}</div>
+		<div class="performances">
+			{#each data.performances.slice(0, 4) as p}
+				<div class="performance">
+					<div class="time">
+						<h3>{fWeekday(p.time)}.</h3>
+						<div>{fDate(p.time)}</div>
+						<div>{fTime(p.time)}</div>
+					</div>
+					<div>
+						<h3>{p.act.name}</h3>
+						<p>{@html p.act.description}</p>
+					</div>
+					{#if p.act.image}
+						<img src={p.act.image} alt={p.act.name} />
+					{/if}
 				</div>
+			{/each}
+		</div>
+
+		<hr />
+
+		<div class="calendar">
+			{#each days.slice(0, 7) as day}
+				<div class="header">{fWeekday(day)}</div>
+			{/each}
+			{#each days as day}
 				<div>
-					<h3>{p.act.name}</h3>
-					<p>{@html p.act.description}</p>
+					<div class="date">{day.getDate() === 1 ? fDate(day) : day.getDate()}</div>
+					{#each groupedPerformances.get(day) as p}
+						<div><small>{fTime(p.time)}</small><br /> {p.act.name}</div>
+					{/each}
 				</div>
-				<img src={p.act.image} alt={p.act.name} />
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</div>
 </Frame>
 
 <style>
+	.calendar {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: 2rem repeat(auto-fill, 1fr);
+		border: 0.5px solid #ddd;
+	}
+	.calendar > div.header {
+		background: var(--blue);
+		color: white;
+		border: none;
+	}
+	.calendar > div {
+		border: 0.5px solid #ddd;
+		padding: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.calendar div.date {
+		color: var(--gray);
+	}
+	.performances {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 	.performance {
 		display: flex;
 		gap: 2rem;
