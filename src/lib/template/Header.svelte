@@ -29,9 +29,6 @@
 </header>
 
 <style>
-	.shrink {
-		width: 20px;
-	}
 	header {
 		container-type: inline-size;
 	}
@@ -50,6 +47,12 @@
 		padding: 0 6px;
 		display: flex;
 		align-items: center;
+	}
+
+	button:hover,
+	.book:hover {
+		background: var(--black);
+		color: white;
 	}
 
 	.outer-header {
