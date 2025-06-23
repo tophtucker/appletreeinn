@@ -7,7 +7,7 @@ import { timeDay } from 'd3-time';
 const builder = imageUrlBuilder(sanity);
 
 // TODO: is this date math possible within groq?
-const yesterday = isoFormat(timeDay.offset(timeDay(), -1));
+const yesterday = isoFormat(timeDay());
 const QUERY = `*[_type == "performance" && time > '${yesterday}'] | order(time asc) {
   _id,
   time,
