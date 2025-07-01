@@ -5,6 +5,7 @@
 	import { getCurrentPage, BOOKING_URL } from '$lib/nav.js';
 	const currentPage = getCurrentPage($page);
 	let { toggleNav } = $props();
+	console.log(currentPage);
 </script>
 
 <header style={`--accent: ${currentPage?.section.color || 'var(--black)'};`}>

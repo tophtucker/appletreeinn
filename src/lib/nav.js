@@ -16,11 +16,12 @@ const nav = [
 		]
 	},
 	{
-		pathname: '/ostrich-room',
+		pathname: '/dining',
 		title: 'Dining',
 		color: 'var(--red)',
 		children: [
-			{ title: 'The Ostrich Room', pathname: null },
+			{ title: 'Overview', pathname: null },
+			{ title: 'The Ostrich Room', pathname: 'ostrich-room' },
 			{ title: 'Make a reservation', url: RESERVATIONS_URL }
 		]
 	},
@@ -28,7 +29,10 @@ const nav = [
 		pathname: '/music',
 		title: 'Live music',
 		color: 'var(--blue)',
-		children: [{ title: 'Past shows', pathname: 'past' }]
+		children: [
+			{ title: 'Upcoming shows', pathname: null },
+			{ title: 'Past shows', pathname: 'past' }
+		]
 	},
 	{
 		pathname: '/weddings-events',

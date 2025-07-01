@@ -5,7 +5,6 @@
 	import Frame from '$lib/template/Frame.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	let { data } = $props();
-	console.log(data.performances);
 
 	const fWeekday = timeFormat('%a');
 	const fDate = timeFormat('%B %-d');

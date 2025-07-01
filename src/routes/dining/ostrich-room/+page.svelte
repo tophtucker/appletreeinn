@@ -1,6 +1,6 @@
 <script>
 	import Frame from '$lib/template/Frame.svelte';
-	import { loadEvents, formatDate, ostrichRoom } from '$lib/index.js';
+	import { loadEvents, ostrichRoom } from '$lib/index.js';
 	import { RESERVATIONS_URL } from '$lib/nav.js';
 	import WeekHours from '$lib/components/WeekHours.svelte';
 	import GoogleDrive from '$lib/components/GoogleDrive.svelte';
@@ -25,6 +25,7 @@
 <Frame>
 	<div class="intro">
 		<div>Drinks • Food • Music</div>
+		<h1>The Ostrich Room</h1>
 		<div>
 			<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a></div>
 			<a class="cta" href={RESERVATIONS_URL}>Make a reservation</a>
@@ -50,28 +51,20 @@
 		</div>
 		<HR />
 		<div class="gallery">
+			<Image src="/ostrich-room/cauliflower.jpg" alt="Cauliflower" style="aspect-ratio: 500/643;" />
+			<Image src="/ostrich-room/fireplace.jpg" alt="The inglenook" style="aspect-ratio: 500/643;" />
 			<Image
-				src="./ostrich-room/cauliflower.jpg"
-				alt="Cauliflower"
-				style="aspect-ratio: 500/643;"
-			/>
-			<Image
-				src="./ostrich-room/fireplace.jpg"
-				alt="The inglenook"
-				style="aspect-ratio: 500/643;"
-			/>
-			<Image
-				src="./ostrich-room/cocktail.jpg"
+				src="/ostrich-room/cocktail.jpg"
 				alt="One of Sean’s cocktails"
 				style="aspect-ratio: 500/643;"
 			/>
-			<Image src="./heropics/ostrich3.jpg" alt="The Ostrich Room" style="aspect-ratio: 500/643;" />
+			<Image src="/heropics/ostrich3.jpg" alt="The Ostrich Room" style="aspect-ratio: 500/643;" />
 			<Image
-				src="./ostrich-room/IMG_6961.jpg"
+				src="/ostrich-room/IMG_6961.jpg"
 				alt="The Ostrich Room"
 				style="aspect-ratio: 500/643;"
 			/>
-			<Image src="./ostrich-room/empty.jpg" alt="The Ostrich Room" style="aspect-ratio: 500/643;" />
+			<Image src="/ostrich-room/empty.jpg" alt="The Ostrich Room" style="aspect-ratio: 500/643;" />
 		</div>
 
 		<HR />
@@ -145,6 +138,12 @@
 
 	.intro a {
 		color: inherit;
+	}
+
+	h1 {
+		font-size: 3vw;
+		text-shadow: 3px 3px 3px black;
+		margin: 3em 1em 3em 1em;
 	}
 
 	.letter {
