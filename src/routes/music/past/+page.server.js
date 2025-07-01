@@ -1,10 +1,6 @@
 import { sanity, parsePerformances } from '$lib/sanity.js';
-import { isoFormat } from 'd3-time-format';
-import { timeDay } from 'd3-time';
 
-// TODO: is this date math possible within groq?
-const yesterday = isoFormat(timeDay());
-const QUERY = `*[_type == "performance" && time > '${yesterday}'] | order(time asc) {
+const QUERY = `*[_type == "performance" && time < now()] | order(time asc) {
   _id,
   time,
   note,

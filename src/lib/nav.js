@@ -27,7 +27,8 @@ const nav = [
 	{
 		pathname: '/music',
 		title: 'Live music',
-		color: 'var(--blue)'
+		color: 'var(--blue)',
+		children: [{ title: 'Past shows', pathname: 'past' }]
 	},
 	{
 		pathname: '/weddings-events',

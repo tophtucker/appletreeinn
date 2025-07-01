@@ -73,39 +73,7 @@
 			/>
 			<Image src="./ostrich-room/empty.jpg" alt="The Ostrich Room" style="aspect-ratio: 500/643;" />
 		</div>
-		<HR />
-		<h2 id="calendar">Live music calendar</h2>
-		<p>
-			See <a href="https://instagram.com/appletreeinn">Instagram</a>
-			for previews and updates. Email Jenny Rubin at
-			<a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information about booking
-			acts.
-		</p>
-		{#if events === undefined}
-			<div style="padding-bottom: 20em;">Loading music calendar…</div>
-		{:else if events === null}
-			We can’t load the events calendar right now. Try again in a minute or see our <a
-				href="https://instagram.com/appletreeinn">Instagram</a
-			> for posts about upcoming shows.
-		{:else}
-			<table>
-				<tbody>
-					{#each events.future as { date, description }}
-						<tr><td style="min-width: 6em;">{formatDate(date)}</td><td>{description}</td></tr>
-					{/each}
-				</tbody>
-			</table>
-			<details>
-				<summary>Past shows</summary>
-				<table>
-					<tbody>
-						{#each events.past as { date, description }}
-							<tr><td style="min-width: 6em;">{formatDate(date)}</td><td>{description}</td></tr>
-						{/each}
-					</tbody>
-				</table>
-			</details>
-		{/if}
+
 		<HR />
 
 		<p>
@@ -182,7 +150,8 @@
 	.letter {
 		max-width: 640px;
 		border: 1px solid var(--black);
-		padding: 1em;
+		padding: 2rem;
+		margin-top: 2rem;
 	}
 
 	@media (max-width: 420px) {
