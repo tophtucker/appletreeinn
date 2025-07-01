@@ -10,8 +10,7 @@ const nav = [
 		color: 'var(--green)',
 		children: [
 			{ title: 'Rooms', pathname: null },
-			{ title: 'The property', pathname: 'property' },
-			{ title: 'The area', pathname: 'area' },
+			{ title: 'Plan your stay', pathname: 'plan' },
 			{ title: 'Book now', url: BOOKING_URL }
 		]
 	},
@@ -46,7 +45,12 @@ const nav = [
 	{
 		pathname: '/map',
 		title: 'Map',
-		color: 'var(--gold)'
+		color: 'var(--gold)',
+		children: [
+			{ title: 'The property', pathname: 'property' },
+			{ title: 'Tanglewood', pathname: 'tanglewood' },
+			{ title: 'The area', pathname: 'area' }
+		]
 	},
 	{
 		pathname: '/about',

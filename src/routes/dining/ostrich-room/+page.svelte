@@ -23,16 +23,16 @@
 </svelte:head>
 
 <Frame>
-	<div class="intro">
-		<div>Drinks • Food • Music</div>
-		<h1>The Ostrich Room</h1>
-		<div>
-			<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a></div>
-			<a class="cta" href={RESERVATIONS_URL}>Make a reservation</a>
-			<div>(413) 637-1910</div>
-		</div>
-	</div>
 	<div class="inner">
+		<div class="intro">
+			<div>Drinks • Food • Music</div>
+			<h1>The Ostrich Room</h1>
+			<div>
+				<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a></div>
+				<a class="cta" href={RESERVATIONS_URL}>Make a reservation</a>
+				<div>(413) 637-1910</div>
+			</div>
+		</div>
 		<div class="hours-wrapper">
 			<WeekHours data={ostrichRoom} {events} />
 			<div style="text-align: center; font-style: italic; max-width: 420px;">
