@@ -22,27 +22,46 @@
 			<div>
 				<h3>From Boston</h3>
 				<p>
-					Take the Mass Pike for 123 miles (90% of the drive). Listen to “Sweet Baby James”. Stop at
-					one of the many McDonald’s; beware the D’Angelos rest stops.
+					Two hours once you’re out of the city. Take the Mass Pike for 123 miles (90% of the
+					drive). Listen to “Sweet Baby James”. Stop at the 24/7 Charlton Service Plaza McDonald’s;
+					beware the D’Angelos rest stops.
 				</p>
 			</div>
 			<VR />
 			<div>
-				<h3>From New York City</h3>
+				<h3>From NYC</h3>
 				<p>
-					Take the Taconic for 91 miles (⅔ of the drive). Try stopping at Troutbeck (+20 min) or
-					Stissing House (+10 min) (check hours). The road becomes winding as you get closer; watch
-					for deer.
+					Two and a half once you’re out of the city. Take the Taconic for 91 miles (⅔ of the
+					drive). Try stopping at Troutbeck (+20 min) or Stissing House (+10 min) (check hours). The
+					road becomes winding as you get closer; watch for deer.
+				</p>
+			</div>
+			<VR />
+			<div>
+				<h3>From Albany</h3>
+				<p>
+					Forty five minutes. It’s slightly prettier (but 12 minutes slower) if you take NY-22 S
+					(through New Lebanon) instead of the I-90 route.
 				</p>
 			</div>
 		</div>
+		<hr />
+		<h2>Amenities</h2>
+		<p>We have dinner only these nights. Continental bfast every morning.</p>
+		<p>No elevators, no laundry, no taxis.</p>
+		<hr />
+		<h2>Kids</h2>
+		<p>
+			We’re not the most kid-friendly hotel but not the least. Things we have… things to watch out
+			for…
+		</p>
 	</div>
 </Frame>
 
 <style>
 	.comparison {
 		display: grid;
-		grid-template-columns: 1fr 12px 1fr;
+		grid-template-columns: 1fr 12px 1fr 12px 1fr;
 		gap: 1rem;
 		text-align: center;
 		margin-top: 2rem;

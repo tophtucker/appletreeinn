@@ -16,7 +16,7 @@
 			<a href="/" class="home"><Avaloch style="width: 100%" /></a>
 			<div>A country inn</div>
 		</div>
-		<a class="book" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;now</span></a>
+		<a class="book" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a>
 	</div>
 	{#if currentPage && currentPage.section && currentPage.pathname !== '/'}
 		<div class="subheader">

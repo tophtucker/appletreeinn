@@ -5,13 +5,22 @@ export const RESERVATIONS_URL =
 const nav = [
 	{ pathname: '/', title: 'Home', color: 'var(--black)' },
 	{
+		pathname: '/',
+		title: 'Overview',
+		children: [
+			{ title: 'Property map', pathname: 'map' },
+			{ title: 'Gallery', pathname: '/gallery' },
+			{ title: 'FAQ', pathname: 'plan' }
+		]
+	},
+	{
 		pathname: '/rooms',
-		title: 'Lodging',
+		title: 'Rooms',
 		color: 'var(--green)',
 		children: [
-			{ title: 'Rooms', pathname: null },
-			{ title: 'Plan your stay', pathname: 'plan' },
-			{ title: 'Book now', url: BOOKING_URL }
+			{ title: 'Main House', pathname: null },
+			{ title: 'Lodge', pathname: null },
+			{ title: 'Book a room', url: BOOKING_URL }
 		]
 	},
 	{
@@ -19,7 +28,7 @@ const nav = [
 		title: 'Dining',
 		color: 'var(--red)',
 		children: [
-			{ title: 'Overview', pathname: null },
+			// { title: 'Overview', pathname: null },
 			{ title: 'The Ostrich Room', pathname: 'ostrich-room' },
 			{ title: 'Make a reservation', url: RESERVATIONS_URL }
 		]
@@ -27,41 +36,44 @@ const nav = [
 	{
 		pathname: '/music',
 		title: 'Live music',
-		color: 'var(--blue)',
-		children: [
-			{ title: 'Upcoming shows', pathname: null },
-			{ title: 'Past shows', pathname: 'past' }
-		]
+		color: 'var(--blue)'
+		// children: [
+		// 	{ title: 'Upcoming shows', pathname: null },
+		// 	{ title: 'Past shows', pathname: 'past' }
+		// ]
 	},
 	{
 		pathname: '/weddings-events',
 		title: 'Private events'
 	},
 	{
-		pathname: '/gallery',
-		title: 'Gallery',
-		color: 'var(--gold)'
-	},
-	{
-		pathname: '/map',
-		title: 'Map',
+		pathname: '/activities',
+		title: 'Activities',
 		color: 'var(--gold)',
 		children: [
-			{ title: 'The property', pathname: 'property' },
+			{ title: 'Amenities', pathname: 'amenities' },
 			{ title: 'Tanglewood', pathname: 'tanglewood' },
-			{ title: 'The area', pathname: 'area' }
+			{ title: 'The Berkshires', pathname: 'berkshires' }
 		]
 	},
 	{
 		pathname: '/about',
-		title: 'About',
+		title: 'About us',
 		color: 'var(--gold)',
 		children: [
 			{ title: 'Staff', pathname: null },
-			{ title: 'Claire', pathname: 'claire' },
+			// { title: 'Claire', pathname: 'claire' },
 			{ title: 'History', pathname: 'history' },
-			{ title: 'Newsletter', pathname: 'newsletter' },
-			{ title: 'Terms of service', pathname: 'terms-of-service' }
+			{ title: 'Press', pathname: null },
+			{ title: 'Newsletter', pathname: 'newsletter' }
+		]
+	},
+	{
+		pathname: '/footer',
+		title: '(Footer)',
+		children: [
+			{ title: 'Policies', pathname: 'terms-of-service' },
+			{ title: 'Jobs', pathname: 'jobs' }
 		]
 	}
 ];

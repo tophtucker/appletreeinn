@@ -54,8 +54,10 @@
 
 	.section div {
 		padding-left: 1em;
-		color: #aaa;
+		/* color: #aaa; */
 		transition: color 0.2s;
+		/* font-size: smaller; */
+		/* padding-top: 0.5rem; */
 	}
 
 	.section:hover div {
