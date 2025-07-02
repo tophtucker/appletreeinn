@@ -40,6 +40,7 @@
 		</div>
 		<div>
 			<h3>{p.act.name}</h3>
+			{#if p.note}<strong>{p.note}</strong>{/if}
 			{@html p.act.description}
 			{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
 		</div>
@@ -54,7 +55,9 @@
 		<p>
 			<a href="/ostrich-room">The Ostrich Room</a> features live music every week, drawing on the Berkshires’
 			rich history… Though this incarnation is only a few years old, we have people come in who tell
-			us they played here decades ago… something something… Johnny Irion, James Taylor…
+			us they played here decades ago… something something… Johnny Irion, James Taylor played here in
+			the summer of 1970… Arlo Guthrie has been through… Claire once heard that Bob Dylan has been here.
+			Stephanie show we have the poster for, check out the poster when you visit. Randy Weston…
 		</p>
 		<p>
 			See <a href="https://instagram.com/appletreeinn">Instagram</a>
