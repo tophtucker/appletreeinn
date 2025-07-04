@@ -6,10 +6,10 @@ import { timeParse, timeFormat } from 'd3-time-format';
 
 export const ostrichRoom = {
 	hours: [
-		[3, [17, 21.5]],
-		[4, [17, 21.5]],
-		[5, [17, 22.5]],
-		[6, [17, 22.5]]
+		[3, [17, 22.5]],
+		[4, [17, 22.5]],
+		[5, [16, 22.5]],
+		[6, [16, 23]]
 	],
 	overrides: [
 		[new Date(2024, 10, 27), null],
@@ -18,7 +18,9 @@ export const ostrichRoom = {
 		[new Date(2025, 2, 19), [18, 21]],
 		[new Date(2025, 3, 3), null],
 		[new Date(2025, 3, 4), null],
-		[new Date(2025, 3, 5), null]
+		[new Date(2025, 3, 5), null],
+		[new Date(2025, 6, 3), [15, 23]],
+		[new Date(2025, 6, 4), [15, 23]]
 	]
 };
 
