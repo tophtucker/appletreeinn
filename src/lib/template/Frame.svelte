@@ -10,14 +10,9 @@
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
 
-	let desktopNav = $state(true);
 	let mobileNav = $state(false);
 	const toggleNav = () => {
-		if (window.innerWidth > 800) {
-			desktopNav = !desktopNav;
-		} else {
-			mobileNav = !mobileNav;
-		}
+		mobileNav = !mobileNav;
 	};
 	function onResize() {
 		if (window.matchMedia('(min-width: 801px)').matches) {
@@ -35,7 +30,7 @@
 <svelte:window on:resize={onResize} />
 
 <main>
-	<Nav {toggleNav} {desktopNav} {mobileNav} />
+	<Nav {toggleNav} {mobileNav} />
 
 	<div class="frame">
 		{@render circle()}

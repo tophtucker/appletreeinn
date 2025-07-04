@@ -10,7 +10,7 @@
 
 <header style={`--accent: ${currentPage?.section.color || 'var(--black)'};`}>
 	<div class="outer-header">
-		<button onclick={toggleNav}><Icon icon="Hamburger" /></button>
+		<button class="hamburger" onclick={toggleNav}><Icon icon="Hamburger" /></button>
 		<div class="inner-header">
 			<div>Lenox, Mass.</div>
 			<a href="/" class="home"><Avaloch style="width: 100%" /></a>
@@ -112,6 +112,16 @@
 		flex-direction: column;
 		align-items: center;
 		color: var(--accent);
+	}
+
+	.hamburger {
+		visibility: hidden;
+	}
+
+	@media (max-width: 1400px) {
+		.hamburger {
+			visibility: visible;
+		}
 	}
 
 	@container (max-width: 1000px) {
