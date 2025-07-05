@@ -35,8 +35,8 @@
 			/>
 
 			<div class="header">Offerings</div>
-			<div>Beer, cocktails, elevated tavern classics</div>
 			<div>Toast, fruit, hard-boiled eggs (no hot food)</div>
+			<div>Beer, cocktails, elevated tavern classics</div>
 
 			<div class="header">Open to</div>
 			<div>Guests</div>
@@ -44,7 +44,7 @@
 
 			<div class="header">Hours</div>
 			<div>Daily 8 – 10 a.m.</div>
-			<div>Wed – Sat.</div>
+			<div>Wed. – Sat. evenings</div>
 
 			<div class="header">Location</div>
 			<div>Round room (Main House)</div>
