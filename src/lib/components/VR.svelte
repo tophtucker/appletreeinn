@@ -1,8 +1,9 @@
 <script>
 	import Asterisk from '$lib/icons/Asterisk.svelte';
+	let props = $props();
 </script>
 
-<div class="vr">
+<div class="vr" {...props}>
 	<div></div>
 	<Asterisk />
 	<div></div>

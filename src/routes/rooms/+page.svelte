@@ -1,14 +1,6 @@
 <script>
-	import { page } from '$app/stores';
-	import { buildings } from '$lib/index.js';
 	import Frame from '$lib/template/Frame.svelte';
-	import Slideshow from '$lib/components/Slideshow.svelte';
-
-	const defaultTab = buildings[0].id;
-	let tab = $state(new URLSearchParams($page.url.search).get('building') || defaultTab);
-	const building = $derived(buildings.find((d) => d.id === tab));
-	const setBuilding = (id) =>
-		void window.history.replaceState(null, '', `/rooms?building=${(tab = id)}`);
+	import VR from '$lib/components/VR.svelte';
 </script>
 
 <svelte:head>
@@ -29,7 +21,7 @@
 		<div class="comparison-table">
 			<div></div>
 			<h2>Main House</h2>
-			<div class="divider"></div>
+			<VR style="grid-column: 3; grid-row: 1 / 10;" />
 			<h2>Lodge</h2>
 
 			<div></div>
@@ -66,7 +58,7 @@
 <style>
 	.comparison-table {
 		display: grid;
-		grid-template-columns: max-content 1fr 1px 1fr;
+		grid-template-columns: max-content 1fr 15px 1fr;
 		gap: 1rem 2rem;
 		margin-top: 4rem;
 	}
@@ -84,10 +76,5 @@
 	}
 	.comparison-table div a.cta {
 		display: inline-flex;
-	}
-	.divider {
-		grid-column: 3;
-		grid-row: 1 / 10; /* span every row */
-		background: var(--black); /* line colour */
 	}
 </style>
