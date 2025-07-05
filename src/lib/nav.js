@@ -3,95 +3,102 @@ export const RESERVATIONS_URL =
 	'https://tables.toasttab.com/restaurants/701827ce-60b2-4de3-a117-eeef40adcbe1/findTime';
 
 const nav = [
-	{ pathname: '/', title: 'Home', color: 'var(--black)' },
 	{
-		pathname: '/',
+		slug: 'overview',
 		title: 'Overview',
 		children: [
-			{ title: 'Property map', pathname: 'map' },
-			{ title: 'Gallery', pathname: '/gallery' },
-			{ title: 'FAQ', pathname: 'plan' }
+			{ title: 'Property map', slug: 'map' },
+			{ title: 'Gallery', slug: 'gallery' },
+			{ title: 'FAQ', slug: 'faq' }
 		]
 	},
 	{
-		pathname: '/rooms',
+		slug: 'rooms',
 		title: 'Rooms',
 		color: 'var(--green)',
 		children: [
-			{ title: 'Main House', pathname: null },
-			{ title: 'Lodge', pathname: null },
+			{ title: 'Main House', slug: 'main-house' },
+			{ title: 'Lodge', slug: 'lodge' },
 			{ title: 'Book a room', url: BOOKING_URL }
 		]
 	},
 	{
-		pathname: '/dining',
+		slug: 'dining',
 		title: 'Dining',
 		color: 'var(--red)',
 		children: [
-			// { title: 'Overview', pathname: null },
-			{ title: 'The Ostrich Room', pathname: 'ostrich-room' },
+			{ title: 'The Ostrich Room', slug: 'ostrich-room' },
 			{ title: 'Make a reservation', url: RESERVATIONS_URL }
 		]
 	},
 	{
-		pathname: '/music',
+		slug: 'music',
 		title: 'Live music',
 		color: 'var(--blue)'
-		// children: [
-		// 	{ title: 'Upcoming shows', pathname: null },
-		// 	{ title: 'Past shows', pathname: 'past' }
-		// ]
 	},
 	{
-		pathname: '/weddings-events',
+		slug: 'weddings-events',
 		title: 'Private events'
 	},
 	{
-		pathname: '/activities',
+		slug: 'activities',
 		title: 'Activities',
 		color: 'var(--gold)',
 		children: [
-			{ title: 'Amenities', pathname: 'amenities' },
-			{ title: 'Tanglewood', pathname: 'tanglewood' },
-			{ title: 'The Berkshires', pathname: 'berkshires' }
+			{ title: 'Amenities', slug: 'amenities' },
+			{ title: 'Tanglewood', slug: 'tanglewood' },
+			{ title: 'The Berkshires', slug: 'berkshires' }
 		]
 	},
 	{
-		pathname: '/about',
+		slug: 'about',
 		title: 'About us',
 		color: 'var(--gold)',
+		footer: true,
 		children: [
-			{ title: 'Staff', pathname: null },
-			// { title: 'Claire', pathname: 'claire' },
-			{ title: 'History', pathname: 'history' },
-			{ title: 'Press', pathname: null },
-			{ title: 'Newsletter', pathname: 'newsletter' }
+			{ title: 'Staff', slug: 'staff' },
+			{ title: 'History', slug: 'history' },
+			{ title: 'Press', slug: 'press' },
+			{ title: 'Newsletter', slug: 'newsletter' }
 		]
 	},
 	{
-		pathname: '/footer',
-		title: '(Footer)',
+		slug: 'other',
+		title: 'Other',
+		footer: true,
 		children: [
-			{ title: 'Policies', pathname: 'terms-of-service' },
-			{ title: 'Jobs', pathname: 'jobs' }
+			{ title: 'Policies', slug: 'policies' },
+			{ title: 'Jobs', slug: 'jobs' }
 		]
 	}
 ];
 
 export const getCurrentPage = ($page) => {
-	const pages = getNav($page).flatMap((section) => section.children || [{ ...section, section }]);
+	const pages = getNav($page).flatMap((section) => [
+		...(section.children || []),
+		{ ...section, section }
+	]);
 	return pages.find((d) => d.pathname === $page.url.pathname);
 };
 
 export const getNav = ($page) => {
 	const clone = structuredClone(nav);
 	for (const section of clone) {
-		section.active = $page.url.pathname === section.pathname;
+		if (section.slug === 'overview') {
+			// The “overview” section homepage is just the overall homepage
+			section.pathname = '/';
+			section.active =
+				$page.url.pathname === '/' || $page.url.pathname.split('/')[0] === section.slug;
+		} else {
+			section.pathname = `/${section.slug}`;
+			section.active = $page.url.pathname.split('/')[1] === section.slug;
+			console.log($page.url.pathname.split('/'), section.slug);
+		}
 		if (section.children) {
 			for (const page of section.children) {
-				page.pathname = page.url
-					? null
-					: [section.pathname, page.pathname].filter(Boolean).join('/');
+				if (page.slug) {
+					page.pathname = '/' + [section.slug, page.slug].join('/');
+				}
 				page.active = page.pathname === $page.url.pathname;
 				page.section = section;
 			}

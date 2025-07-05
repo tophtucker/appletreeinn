@@ -19,7 +19,7 @@
 
 {#if message}
 	<div>
-		<h6>Notice</h6>
+		<h6>Bulletins</h6>
 		{message}
 	</div>
 {/if}

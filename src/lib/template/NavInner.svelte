@@ -8,26 +8,34 @@
 	const nav = getNav($page);
 </script>
 
+{#snippet navSection(n)}
+	<div class="section">
+		<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a>
+		{#if n.children}
+			<div>
+				{#each n.children as n}
+					<a
+						href={n.url || n.pathname}
+						class={`${n.active ? 'active' : ''} ${n.url ? 'external' : ''}`}>{n.title}</a
+					>
+				{/each}
+			</div>
+		{/if}
+	</div>
+{/snippet}
+
 <nav>
-	{#each nav as n}
-		<div class="section">
-			<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a>
-			{#if n.children}
-				<div>
-					{#each n.children as n}
-						<a
-							href={n.url || n.pathname}
-							class={`${n.active ? 'active' : ''} ${n.url ? 'external' : ''}`}>{n.title}</a
-						>
-					{/each}
-				</div>
-			{/if}
-		</div>
+	{#each nav.filter((d) => !d.footer) as n}
+		{@render navSection(n)}
 	{/each}
-	<hr />
-	<Banner />
-	<OpenSign data={ostrichRoom} />
-	<Events />
+	<div class="bulletins">
+		<Banner />
+		<OpenSign data={ostrichRoom} />
+		<Events />
+	</div>
+	<!-- {#each nav.filter((d) => d.footer) as n}
+		{@render navSection(n)}
+	{/each} -->
 </nav>
 
 <style>
@@ -54,14 +62,6 @@
 
 	.section div {
 		padding-left: 1em;
-		/* color: #aaa; */
-		transition: color 0.2s;
-		/* font-size: smaller; */
-		/* padding-top: 0.5rem; */
-	}
-
-	.section:hover div {
-		color: #333;
 	}
 
 	.active {
@@ -73,5 +73,14 @@
 		content: '↗';
 		font-size: 12px;
 		padding-left: 3px;
+	}
+
+	.bulletins {
+		border-left: 3px double black;
+		padding-left: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin: 2rem 0 2rem calc(-1rem - 3px);
 	}
 </style>
