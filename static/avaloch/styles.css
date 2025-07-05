@@ -99,7 +99,7 @@ a {
 
 a.cta {
 	color: inherit;
-	border: 1px solid black;
+	border: 2px inset var(--black);
 	text-decoration: none;
 	height: 2rem;
 	padding: 0 6px;
@@ -111,6 +111,7 @@ a.cta {
 a.cta:hover {
 	background: var(--black);
 	color: white;
+	border-style: outset;
 }
 
 button {

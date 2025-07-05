@@ -56,7 +56,7 @@
 
 			<div class="header">Reservations</div>
 			<div>None</div>
-			<div><a href={RESERVATIONS_URL}>Make a reservation</a></div>
+			<div>Optional; <a href={RESERVATIONS_URL}>make a reservation</a></div>
 		</div>
 	</div>
 </Frame>
