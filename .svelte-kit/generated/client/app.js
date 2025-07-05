@@ -33,8 +33,7 @@ export const nodes = [
 	() => import('./nodes/29'),
 	() => import('./nodes/30'),
 	() => import('./nodes/31'),
-	() => import('./nodes/32'),
-	() => import('./nodes/33')
+	() => import('./nodes/32')
 ];
 
 export const server_loads = [];
@@ -53,25 +52,24 @@ export const dictionary = {
 		"/explore": [~12],
 		"/landing/review": [13],
 		"/music": [~14],
-		"/music/past": [~15],
-		"/offers": [~16],
-		"/ostrich-room": [~17],
-		"/other": [18],
-		"/other/claire": [19],
-		"/other/history": [20],
-		"/other/jobs": [21],
-		"/other/newsletter": [22],
-		"/other/policies": [23],
-		"/other/scrapbook": [24],
-		"/overview/faq": [25],
-		"/overview/gallery": [~26],
-		"/overview/map": [27],
-		"/restaurants": [~28],
-		"/rooms": [29],
-		"/rooms/lodge": [30],
-		"/rooms/main-house": [31],
-		"/termsandcondition": [~32],
-		"/weddings-events": [33]
+		"/offers": [~15],
+		"/ostrich-room": [~16],
+		"/other": [17],
+		"/other/claire": [18],
+		"/other/history": [19],
+		"/other/jobs": [20],
+		"/other/newsletter": [21],
+		"/other/policies": [22],
+		"/other/scrapbook": [23],
+		"/overview/faq": [24],
+		"/overview/gallery": [~25],
+		"/overview/map": [26],
+		"/restaurants": [~27],
+		"/rooms": [28],
+		"/rooms/lodge": [29],
+		"/rooms/main-house": [30],
+		"/termsandcondition": [~31],
+		"/weddings-events": [32]
 	};
 
 export const hooks = {

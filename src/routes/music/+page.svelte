@@ -1,18 +1,37 @@
 <script>
 	import { timeFormat } from 'd3-time-format';
-	import { min, group } from 'd3-array';
-	import { timeDay, timeSunday } from 'd3-time';
+	import { timeDay, timeSunday, timeMonth } from 'd3-time';
+	import { group, min, sort } from 'd3-array';
+
 	import Frame from '$lib/template/Frame.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	let { data } = $props();
+	const { performances } = data;
+
+	const threshold = timeDay();
+	const past = performances.filter((d) => d.time < threshold);
+	const future = performances.filter((d) => d.time >= threshold);
+
+	const upcoming = future.slice(0, 4);
+
+	const grouped = group(future, (d) => timeDay(d.time));
+	const start = timeSunday(min(future, (d) => d.time));
+	const calendar = timeDay
+		.range(start, timeDay.offset(start, 28))
+		.map((day) => ({ day, performances: grouped.get(day) }));
+
+	const pastMonths = sort(
+		[...group(past, (d) => timeMonth(d.time))].map(([month, performances]) => ({
+			month,
+			performances
+		})),
+		(d) => -d.month
+	);
 
 	const fWeekday = timeFormat('%a');
 	const fDate = timeFormat('%B %-d');
 	const fTime = timeFormat('%-I:%M %p');
-
-	const start = timeSunday(min(data.performances, (d) => d.time));
-	const days = timeDay.range(start, timeDay.offset(start, 28));
-	const groupedPerformances = group(data.performances, (d) => timeDay(d.time));
+	const fMonth = timeFormat('%B %Y');
 
 	let dialogRef;
 	let dialogPerformance = $state(null);
@@ -69,19 +88,17 @@
 		<h2>Upcoming shows</h2>
 
 		<div class="performances">
-			{#each data.performances.slice(0, 4) as p}
-				{@render card(p)}
-			{/each}
+			{#each upcoming as p}{@render card(p)}{/each}
 		</div>
 
 		<div class="calendar">
-			{#each days.slice(0, 7) as day}
+			{#each calendar.slice(0, 7) as day}
 				<div class="header">{fWeekday(day)}</div>
 			{/each}
-			{#each days as day}
+			{#each calendar as { day, performances }}
 				<div class={+day === +timeDay() ? 'today' : ''}>
 					<div class="date">{day.getDate() === 1 ? fDate(day) : day.getDate()}</div>
-					{#each groupedPerformances.get(day) as p}
+					{#each performances as p}
 						<button onclick={() => open(p)}
 							><small>{fTime(p.time)}</small><br /> {p.act.name}</button
 						>
@@ -89,6 +106,27 @@
 				</div>
 			{/each}
 		</div>
+
+		<hr />
+
+		<h2>Past shows</h2>
+
+		{#each pastMonths as { month, performances }}
+			<details>
+				<summary>{fMonth(month)}</summary>
+				<table>
+					<tbody>
+						{#each performances as p}
+							<tr>
+								<td>{fWeekday(p.time)}. {fDate(p.time)}</td>
+								<td>{fTime(p.time)}</td>
+								<td>{p.act.name}</td>
+							</tr>
+						{/each}
+					</tbody>
+				</table>
+			</details>
+		{/each}
 
 		<dialog bind:this={dialogRef}>
 			<div class="button-wrapper"><button onclick={close}><Icon icon="Close" /></button></div>
@@ -100,6 +138,19 @@
 </Frame>
 
 <style>
+	details {
+		margin-bottom: 2rem;
+	}
+	summary {
+		font-family: watkins;
+	}
+	details table {
+		padding-left: 10px;
+	}
+	details table td {
+		padding: 0.25rem 0.5rem;
+	}
+
 	.calendar {
 		margin-top: 2rem;
 		display: grid;
