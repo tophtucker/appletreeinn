@@ -62,20 +62,4 @@
 		gap: 1rem;
 		align-items: center;
 	}
-
-	a.cta {
-		color: inherit;
-		border: 1px solid black;
-		text-decoration: none;
-		height: 2rem;
-		padding: 0 6px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	a.cta:hover {
-		background: var(--black);
-		color: white;
-	}
 </style>
