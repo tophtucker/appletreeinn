@@ -51,22 +51,14 @@ const nav = [
 		]
 	},
 	{
-		slug: 'about',
-		title: 'About us',
-		color: 'var(--gold)',
-		footer: true,
-		children: [
-			{ title: 'Staff', slug: 'staff' },
-			{ title: 'History', slug: 'history' },
-			{ title: 'Press', slug: 'press' },
-			{ title: 'Newsletter', slug: 'newsletter' }
-		]
-	},
-	{
 		slug: 'other',
 		title: 'Other',
 		footer: true,
 		children: [
+			{ title: 'About us', slug: 'about-us' },
+			{ title: 'History', slug: 'history' },
+			{ title: 'Press', slug: 'press' },
+			{ title: 'Newsletter', slug: 'newsletter' },
 			{ title: 'Policies', slug: 'policies' },
 			{ title: 'Jobs', slug: 'jobs' }
 		]
