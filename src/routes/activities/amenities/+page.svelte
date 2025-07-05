@@ -3,13 +3,13 @@
 </script>
 
 <svelte:head>
-	<title>The property • Apple Tree Inn • Lenox, MA</title>
+	<title>Amenities • Apple Tree Inn • Lenox, MA</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
 <Frame>
 	<div class="inner">
-		<h1>The property</h1>
+		<h1>Amenities</h1>
 		<h2>…</h2>
 	</div>
 </Frame>

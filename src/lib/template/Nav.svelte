@@ -58,7 +58,7 @@
 		}
 		div.nav-outer {
 			width: 200px;
-			padding-top: 6px;
+			padding-top: 5rem;
 		}
 	}
 	@media (max-width: 1400px) {

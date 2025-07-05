@@ -76,16 +76,9 @@ export const getCurrentPage = ($page) => {
 export const getNav = ($page) => {
 	const clone = structuredClone(nav);
 	for (const section of clone) {
-		if (section.slug === 'overview') {
-			// The “overview” section homepage is just the overall homepage
-			section.pathname = '/';
-			section.active =
-				$page.url.pathname === '/' || $page.url.pathname.split('/')[0] === section.slug;
-		} else {
-			section.pathname = `/${section.slug}`;
-			section.active = $page.url.pathname.split('/')[1] === section.slug;
-			console.log($page.url.pathname.split('/'), section.slug);
-		}
+		// The “overview” section homepage is just the overall homepage
+		section.pathname = section.slug === 'overview' ? '/' : `/${section.slug}`;
+		section.active = section.pathname === $page.url.pathname;
 		if (section.children) {
 			for (const page of section.children) {
 				if (page.slug) {

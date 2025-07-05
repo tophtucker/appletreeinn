@@ -3,13 +3,13 @@
 </script>
 
 <svelte:head>
-	<title>The area • Apple Tree Inn • Lenox, MA</title>
+	<title>The Berkshires • Apple Tree Inn • Lenox, MA</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
 <Frame>
 	<div class="inner">
-		<h1>The area</h1>
+		<h1>The Berkshires</h1>
 
 		<div class="prose-columns">
 			<p>

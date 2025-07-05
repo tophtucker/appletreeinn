@@ -4,19 +4,20 @@
 </script>
 
 <svelte:head>
-	<title>Plan your stay • Apple Tree Inn • Lenox, MA</title>
+	<title>FAQ • Apple Tree Inn • Lenox, MA</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
 <Frame>
 	<div class="inner">
-		<h1>Plan your stay</h1>
-		<h2>Getting here</h2>
+		<h1>FAQ</h1>
+		<h2>How do I get there?</h2>
 		<p>
-			The nearest airport is Albany, but it doesn’t have many direct flights, so we typically fly
-			into Boston Logan. There are buses to downtown Lenox, but we definitely recommend coming with
-			a car! We’re a 40-minute walk to downtown Lenox, and there are basically zero Ubers or taxis
-			in the area.
+			The nearest airport is Albany, but it has few direct flights, so we typically fly into Boston
+			Logan. There are buses to downtown Lenox, but we definitely recommend coming with a car!
+			Tanglewood and Kripalu are the only things within walking distance of the hotel; it’s a
+			40-minute walk (or 3-minute drive) to downtown Lenox, and there are basically zero taxis or
+			Ubers around.
 		</p>
 		<div class="comparison">
 			<div>
@@ -40,20 +41,16 @@
 			<div>
 				<h3>From Albany</h3>
 				<p>
-					Forty five minutes. It’s slightly prettier (but 12 minutes slower) if you take NY-22 S
-					(through New Lebanon) instead of the I-90 route.
+					Forty five minutes. It’s slightly prettier if you take NY-22 S through New Lebanon (+ 12
+					min) instead of the I-90 route.
 				</p>
 			</div>
 		</div>
 		<hr />
-		<h2>Amenities</h2>
-		<p>We have dinner only these nights. Continental bfast every morning.</p>
-		<p>No elevators, no laundry, no taxis.</p>
-		<hr />
-		<h2>Kids</h2>
+		<h2>Are you kid-friendly?</h2>
 		<p>
-			We’re not the most kid-friendly hotel but not the least. Things we have… things to watch out
-			for…
+			We try to be! We’re not the most kid-friendly hotel but not the least. Things we have… things
+			to watch out for…
 		</p>
 	</div>
 </Frame>
