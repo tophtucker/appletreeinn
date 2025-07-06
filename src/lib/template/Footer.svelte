@@ -25,7 +25,7 @@
 	footer {
 		font-family: watkins;
 		font-size: 14px;
-		margin: 4rem 0 0 0;
+		margin: 4rem 0;
 	}
 	.top {
 		display: flex;

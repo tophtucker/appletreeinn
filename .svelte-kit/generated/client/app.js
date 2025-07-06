@@ -62,7 +62,7 @@ export const dictionary = {
 		"/other/policies": [22],
 		"/other/scrapbook": [23],
 		"/overview/faq": [24],
-		"/overview/gallery": [~25],
+		"/overview/gallery": [25],
 		"/overview/map": [26],
 		"/restaurants": [~27],
 		"/rooms": [28],
