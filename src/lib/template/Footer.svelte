@@ -43,19 +43,14 @@
 		align-items: center;
 	}
 	@media (max-width: 800px) {
-		footer {
+		.top {
 			flex-direction: column;
 			text-align: center;
 			gap: 1rem;
+			margin-bottom: 1rem;
 		}
 
-		footer div:nth-child(2) {
-			padding-top: 0;
-			order: 3;
-		}
-
-		footer div:nth-child(3) {
-			order: 2;
+		.top div:last-child {
 			text-align: center;
 		}
 	}
