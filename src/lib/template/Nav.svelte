@@ -13,16 +13,16 @@
 	});
 </script>
 
-<div class="nav-outer">
+<div class="nav">
 	<NavInner />
 </div>
-<dialog class="nav-outer" bind:this={dialogRef}>
+<dialog class="nav" bind:this={dialogRef}>
 	<button onclick={toggleNav}><Icon icon="Close" /></button>
 	<NavInner />
 </dialog>
 
 <style>
-	dialog.nav-outer {
+	dialog.nav {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -33,19 +33,19 @@
 		background: white;
 		border: 3px double black;
 		z-index: 2;
-		padding: 1em;
+		padding: 2rem;
 		margin: 0;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		gap: 1em;
+		gap: 1rem;
 	}
-	dialog.nav-outer::backdrop {
+	dialog.nav::backdrop {
 		background: rgba(255, 255, 255, 0.7);
 	}
 
 	@media (min-width: 600px) {
-		dialog.nav-outer {
+		dialog.nav {
 			margin: 0;
 			border: none;
 			border-right: 3px double black;
@@ -53,16 +53,16 @@
 		}
 	}
 	@media (min-width: 1401px) {
-		dialog.nav-outer {
+		dialog.nav {
 			display: none;
 		}
-		div.nav-outer {
+		div.nav {
 			width: 200px;
 			padding-top: 5rem;
 		}
 	}
 	@media (max-width: 1400px) {
-		div.nav-outer {
+		div.nav {
 			display: none;
 		}
 	}

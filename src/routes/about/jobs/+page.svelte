@@ -10,7 +10,7 @@
 <Frame>
 	<div class="inner">
 		<h1>Jobs</h1>
-		<p>We may have openings for roles in the following teams:</p>
+		<div>We may have openings for roles in the following teams:</div>
 		<ul>
 			<li>Front desk</li>
 			<li>Housekeeping</li>
@@ -19,6 +19,8 @@
 			<li>Cook</li>
 			<li>Dishwasher</li>
 		</ul>
-		<p>Inquire at info@appletreeinnlenox.com.</p>
+		<div>
+			Inquire at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
+		</div>
 	</div>
 </Frame>

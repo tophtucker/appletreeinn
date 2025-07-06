@@ -7,6 +7,7 @@
 	import Pentathing from './Pentathing.svelte';
 	import Hamburger from './Hamburger.svelte';
 	import Close from './Close.svelte';
+	import External from './External.svelte';
 
 	let { icon, ...rest } = $props();
 </script>
@@ -27,6 +28,8 @@
 	<Hamburger {...rest} />
 {:else if icon === 'Close'}
 	<Close {...rest} />
+{:else if icon === 'External'}
+	<External {...rest} />
 {:else}
 	<div></div>
 {/if}

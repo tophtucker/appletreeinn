@@ -5,6 +5,7 @@
 	import Banner from './Banner.svelte';
 	import OpenSign from '../components/OpenSign.svelte';
 	import Events from '../components/Events.svelte';
+	import Icon from '../icons/Icon.svelte';
 	const nav = getNav($page);
 
 	const mainNav = nav.filter((d) => d.slug !== 'about');
@@ -13,14 +14,18 @@
 
 {#snippet navSection(n)}
 	<div class="section">
-		<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a>
+		{#if n.active}<div class="active">
+				<Icon icon="Asterisk" style="position: absolute; left: -1rem;" />{n.title}
+			</div>{:else}<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a>{/if}
+
 		{#if n.children}
-			<div>
+			<div class="children">
 				{#each n.children as n}
-					<a
-						href={n.url || n.pathname}
-						class={`${n.active ? 'active' : ''} ${n.url ? 'external' : ''}`}>{n.title}</a
-					>
+					{#if n.active}<div class="active">
+							<Icon icon="Asterisk" style="position: absolute; left: -1rem; top: 5px" />{n.title}
+						</div>{:else}<a href={n.url || n.pathname} class={n.active ? 'active' : ''}
+							>{n.title}{#if n.url}<Icon icon="External" style="margin-left: 5px" />{/if}</a
+						>{/if}
 				{/each}
 			</div>
 		{/if}
@@ -68,18 +73,19 @@
 		text-decoration: underline;
 	}
 
-	.section > a {
+	.section > a,
+	.section > .active {
 		font-family: watkins;
 		font-size: 14px;
 	}
 
-	.section div {
-		padding-left: 1em;
+	.active {
+		position: relative;
 	}
 
-	.active {
-		text-decoration: underline;
-		color: black;
+	.section .children a,
+	.section .children .active {
+		padding-left: 1em;
 	}
 
 	.external::after {
