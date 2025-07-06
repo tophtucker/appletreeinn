@@ -3,16 +3,18 @@
 </div>
 
 <footer class="inner">
-	<div>10 Richmond Mountain Road<br />Lenox, Massachusetts<br />01240</div>
-	<div>
+	<div class="top">
+		<div>10 Richmond Mountain Road<br />Lenox, Massachusetts<br />01240</div>
+		<div>
+			<div>
+				(413) 637-1910<br />info@avalochinn.com<br />
+				@avaloch.inn
+			</div>
+		</div>
+	</div>
+	<div class="bottom">
 		<img src="/avaloch/icons/pentathing.svg" alt="Pentathing" width="50" />
 		Directly across the road from Tanglewood
-	</div>
-	<div>
-		<div>
-			(413) 637-1910<br />info@avalochinn.com<br />
-			@avaloch.inn
-		</div>
 	</div>
 </footer>
 
@@ -21,23 +23,24 @@
 		margin: 4rem 0;
 	}
 	footer {
-		display: flex;
-		justify-content: space-between;
 		font-family: watkins;
 		font-size: 14px;
-		margin: 4rem 0;
+		margin: 4rem 0 0 0;
 	}
-	footer div:nth-child(2) {
+	.top {
+		display: flex;
+		justify-content: space-between;
+	}
+	.top div:last-child {
+		text-align: right;
+	}
+	.bottom {
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 		justify-content: center;
 		align-items: center;
-		padding-top: 1rem;
-	}
-	footer div:nth-child(3) {
-		text-align: right;
 	}
 	@media (max-width: 800px) {
 		footer {
