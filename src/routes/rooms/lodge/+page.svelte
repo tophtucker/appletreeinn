@@ -12,38 +12,30 @@
 <Frame>
 	<div class="inner">
 		<h1>Lodge</h1>
-	</div>
 
-	<div id="rooms" class="rooms-section">
-		<div id="buildingContainer">
-			{#each building.rooms as { room_number, room_name, floor, tags, pics }, i (room_name)}
-				<div class="room">
-					<Slideshow pics={pics.map((src) => ({ src: `/roompics/${src}`, title: room_name }))} />
-					<div>
-						{#if room_number}
-							<small
-								>{floor === 1 ? '1st' : floor === 2 ? '2nd' : floor === 3 ? '3rd' : floor} floor, room
-								{room_number?.split(', ')?.join(' or ')}</small
-							>
-						{/if}
-						<h3>{room_name}</h3>
-						<ul>
-							{#each tags as tag}
-								<li>{tag}</li>
-							{/each}
-						</ul>
-					</div>
+		{#each building.rooms as { room_number, room_name, floor, tags, pics }, i (room_name)}
+			<div class="room">
+				<Slideshow pics={pics.map((src) => ({ src: `/roompics/${src}`, title: room_name }))} />
+				<div>
+					{#if room_number}
+						<small
+							>{floor === 1 ? '1st' : floor === 2 ? '2nd' : floor === 3 ? '3rd' : floor} floor, room
+							{room_number?.split(', ')?.join(' or ')}</small
+						>
+					{/if}
+					<h3>{room_name}</h3>
+					<ul>
+						{#each tags as tag}
+							<li>{tag}</li>
+						{/each}
+					</ul>
 				</div>
-			{/each}
-		</div>
+			</div>
+		{/each}
 	</div>
 </Frame>
 
 <style>
-	#buildingContainer {
-		padding: 1em var(--gutter);
-	}
-
 	.room {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
@@ -54,6 +46,10 @@
 
 	.room:last-child {
 		border-bottom: none;
+	}
+
+	h3 {
+		margin-top: 0;
 	}
 
 	@media (max-width: 800px) {
