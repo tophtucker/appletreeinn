@@ -7,8 +7,8 @@
 	import Events from '../components/Events.svelte';
 	const nav = getNav($page);
 
-	const mainNav = nav.filter((d) => d.slug !== 'other');
-	const otherNav = nav.find((d) => d.slug === 'other').children;
+	const mainNav = nav.filter((d) => d.slug !== 'about');
+	const aboutNav = nav.find((d) => d.slug === 'about').children;
 </script>
 
 {#snippet navSection(n)}
@@ -36,20 +36,20 @@
 		<OpenSign data={ostrichRoom} />
 		<Events />
 	</div>
-	<div class="other">
-		{#each otherNav as n, i}
-			<a href={n.pathname}>{n.title}</a>{#if i < otherNav.length - 1}
+	<div class="about">
+		{#each aboutNav as n, i}
+			<a href={n.pathname}>{n.title}</a>{#if i < aboutNav.length - 1}
 				{` `}<span class="bullet">•</span>{` `}{/if}
 		{/each}
 	</div>
 </nav>
 
 <style>
-	.other a {
+	.about a {
 		display: inline;
 		font-size: smaller;
 	}
-	.other .bullet {
+	.about .bullet {
 		font-size: x-small;
 	}
 	nav {

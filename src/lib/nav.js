@@ -51,8 +51,8 @@ const nav = [
 		]
 	},
 	{
-		slug: 'other',
-		title: 'Other',
+		slug: 'about',
+		title: 'About',
 		footer: true,
 		children: [
 			{ title: 'About us', slug: 'about-us' },
