@@ -5,7 +5,6 @@
 	import { getCurrentPage, BOOKING_URL } from '$lib/nav.js';
 	const currentPage = getCurrentPage($page);
 	let { toggleNav } = $props();
-	// console.log(currentPage);
 </script>
 
 <header style={`--accent: ${currentPage?.section.color || 'var(--black)'};`}>
@@ -16,13 +15,20 @@
 			<a href="/" class="home"><Avaloch style="width: 100%" /></a>
 			<div>A country inn</div>
 		</div>
-		<a class="book" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a>
+		<a class="book cta" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a
+		>
 	</div>
 	{#if currentPage && currentPage.section && currentPage.pathname !== '/'}
 		<div class="subheader">
 			<div class="spacer"></div>
 			<div class="subheader-inner">
-				<h2>{currentPage.section.title}</h2>
+				<h2>
+					{#if currentPage.section.active}
+						{currentPage.section.title}
+					{:else}
+						<a href={currentPage.section.pathname}>{currentPage.section.title}</a>
+					{/if}
+				</h2>
 			</div>
 			<div class="spacer"></div>
 		</div>
@@ -40,20 +46,7 @@
 	}
 
 	.book {
-		color: inherit;
-		border: 1px solid black;
 		justify-self: end;
-		text-decoration: none;
-		height: 2rem;
-		padding: 0 6px;
-		display: flex;
-		align-items: center;
-	}
-
-	button:hover,
-	.book:hover {
-		background: var(--black);
-		color: white;
 	}
 
 	.outer-header {
@@ -105,6 +98,10 @@
 		margin: 0;
 		position: relative;
 		font-size: 1.3rem;
+	}
+	.subheader-inner a {
+		color: inherit;
+		text-decoration: none;
 	}
 
 	.home {

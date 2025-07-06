@@ -43,18 +43,17 @@
 </script>
 
 <svelte:head>
-	<title>Weddings & Events • Apple Tree Inn • Lenox, MA</title>
-	<meta name="description" content="TODO" />
+	<title>Private events • Apple Tree Inn • Lenox, MA</title>
+	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
 <Frame>
 	<div class="inner">
 		<div class="grid-or-flex">
 			<div>
-				<h1>Weddings & events</h1>
 				<p>
-					We are no longer accepting private events for the 2025 & 2026 seasons. If you’d like to be
-					put on our list, we will reach out to you once private events bookings reopen.
+					We are no longer accepting private events for the 2025 and 2026 seasons. If you’d like to
+					be put on our list, we will reach out to you once private events bookings reopen.
 				</p>
 				<p>
 					If you are looking for guest rooms only (as opposed to venue rental or catering), please
@@ -65,13 +64,12 @@
 					contact us at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
 				</p>
 				<p>Thank you for your interest!</p>
-				<p>
-					<a
-						style="font-weight: bold;"
-						href="https://docs.google.com/forms/d/e/1FAIpQLSeWZNsHNjJ7gsrEh0-p4hrJJk5SCSnHJgSuPCR1YmSoNuXsRA/viewform?usp=preview"
-						>Let me know when bookings reopen →</a
-					>
-				</p>
+				<a
+					class="cta"
+					style="margin-top:1rem;"
+					href="https://docs.google.com/forms/d/e/1FAIpQLSeWZNsHNjJ7gsrEh0-p4hrJJk5SCSnHJgSuPCR1YmSoNuXsRA/viewform?usp=preview"
+					>Tell me when bookings reopen</a
+				>
 			</div>
 			<Slideshow {pics} />
 		</div>

@@ -99,16 +99,17 @@ a {
 
 a.cta {
 	color: inherit;
-	border: 2px inset var(--black);
+	border: 3px inset #ccc;
 	text-decoration: none;
 	height: 2rem;
 	padding: 0 6px;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 }
 
-a.cta:hover {
+a.cta:hover,
+button:hover {
 	background: var(--black);
 	color: white;
 	border-style: outset;
@@ -121,9 +122,9 @@ button {
 	letter-spacing: inherit;
 	color: inherit;
 	opacity: 1;
-	border: 1px solid black;
+	border: 3px inset var(--gray);
 	padding: 3px;
-	background-color: #0000;
+	background-color: #fff;
 	border-radius: 0;
 }
 

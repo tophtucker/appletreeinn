@@ -9,7 +9,6 @@
 
 <Frame>
 	<div class="inner">
-		<h1>Activities</h1>
-		<h2>…</h2>
+		<p>…</p>
 	</div>
 </Frame>

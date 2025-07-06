@@ -31,8 +31,8 @@
 	/>
 	{#if pics.length > 1}
 		<div class={`controls ${side}`}>
-			<button onclick={prev}>←</button>
-			<button onclick={next}>→</button>
+			<button onclick={prev}>&lt;</button>
+			<button onclick={next}>&gt;</button>
 		</div>
 	{/if}
 	{#if pic.caption}
@@ -48,33 +48,19 @@
 	.slideshow.square {
 		aspect-ratio: 1 / 1;
 	}
+
 	.controls {
+		font-family: watkins;
 		position: absolute;
+		bottom: 0.5rem;
+		right: 0.5rem;
+	}
+	.controls button {
+		width: 2rem;
 	}
 
-	.controls.bottom {
-		bottom: 1em;
-		right: 1em;
-	}
-	.controls.top {
-		top: 1em;
-		left: 1em;
-	}
 	figcaption {
-		position: absolute;
-		left: 1em;
-		bottom: 1em;
-		color: var(--black);
-		font-family: sans-serif;
 		font-size: smaller;
-		margin-top: 0.25em;
-		background: rgb(255, 255, 255, 1);
-		border: 1px solid var(--black);
-		padding: 4px 8px;
-		border-radius: 4px;
-		margin-right: 120px;
-	}
-	figcaption a {
-		color: inherit;
+		margin-top: 0.5rem;
 	}
 </style>
