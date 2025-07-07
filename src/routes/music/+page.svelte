@@ -23,7 +23,7 @@
 	const pastMonths = sort(
 		[...group(past, (d) => timeMonth(d.time))].map(([month, performances]) => ({
 			month,
-			performances
+			performances: sort(performances, (d) => -d.time)
 		})),
 		(d) => -d.month
 	);
@@ -149,6 +149,7 @@
 	}
 	details table td {
 		padding: 0.25rem 0.5rem;
+		min-width: 6rem;
 	}
 
 	.calendar {

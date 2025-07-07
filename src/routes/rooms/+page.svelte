@@ -15,8 +15,9 @@
 			summer.
 		</p>
 		<p>
-			There are no elevators in either building; all rooms require stairs to access. Continental
-			breakfast is included in the room rates.
+			Both buildings can access all hotel <a href="/activities/amenities">amenities</a>, such as
+			free Wi-Fi, parking, and pool. Continental breakfast is included in the room rates. There are
+			no elevators in either building; all rooms require stairs to access.
 		</p>
 		<div class="comparison-table">
 			<div></div>
@@ -45,12 +46,12 @@
 			<div>Queen or 2 double</div>
 
 			<div class="header">Amenities</div>
-			<div>Front desk, tavern, lobby</div>
-			<div>None</div>
+			<div>Front desk, tavern, lobby, tea & coffee station</div>
+			<div>Tea & coffee station</div>
 
 			<div class="header">Open</div>
 			<div>All year</div>
-			<div>Memorial Day to Labor Day</div>
+			<div>Summer and Fall</div>
 		</div>
 	</div>
 </Frame>
