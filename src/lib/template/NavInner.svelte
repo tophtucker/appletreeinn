@@ -15,14 +15,14 @@
 {#snippet navSection(n)}
 	<div class="section">
 		{#if n.active}<div class="active">
-				<Icon icon="Asterisk" style="position: absolute; left: -1rem;" />{n.title}
+				<Icon icon="Asterisk" style="position: absolute; left: -23px;" />{n.title}
 			</div>{:else}<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a>{/if}
 
 		{#if n.children}
 			<div class="children">
 				{#each n.children as n}
 					{#if n.active}<div class="active">
-							<Icon icon="Asterisk" style="position: absolute; left: -1rem; top: 5px" />{n.title}
+							<Icon icon="Asterisk" style="position: absolute; left: -23px; top: 5px" />{n.title}
 						</div>{:else}<a href={n.url || n.pathname} class={n.active ? 'active' : ''}
 							>{n.title}{#if n.url}<Icon icon="External" style="margin-left: 5px" />{/if}</a
 						>{/if}
@@ -86,12 +86,6 @@
 	.section .children a,
 	.section .children .active {
 		padding-left: 1em;
-	}
-
-	.external::after {
-		content: '↗';
-		font-size: 12px;
-		padding-left: 3px;
 	}
 
 	.bulletins {
