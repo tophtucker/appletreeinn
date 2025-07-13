@@ -81,10 +81,46 @@
 			</div>
 		</div>
 		<hr />
-		<h2>Are you kid-friendly?</h2>
+		<h2>What should I bring?</h2>
+		<ul>
+			<li>
+				<strong>A car.</strong> The only things within walking distance are Tanglewood and Kripalu (about
+				10 minutes each); it’s a 45-minute walk into town, there’s basically no Uber, the only taxis
+				are more like limosuine services you have reserve ahead of time, and there’s very little food
+				delivery.
+			</li>
+			<li>
+				<strong>Picnic supplies.</strong> If you’re going to Tanglewood, we think the best way to
+				enjoy it is to arrive early and picnic on the lawn. People bring blankets, lawn chairs,
+				coolers, baskets, bug spray, binoculars, cheese, crackers, beer, wine, flashlights, etc.;
+				read our
+				<a href="/activities/tanglewood">Tanglewood guide</a> for more.
+			</li>
+			<li>
+				<strong>A bathing suit.</strong> We have a lovely pool! Open between Memorial Day and Labor Day,
+				sunrise to sunset. There’s a pond a couple minutes down the road and other swimming holes and
+				little waterfalls in the area. We have pool towels but we don’t have goggles, swim caps, floaties,
+				etc.
+			</li>
+			<li>
+				<strong>Hiking gear.</strong> There’s lots of hiking opportunities in the area, of varying difficulties.
+				Bring sneakers, at least!
+			</li>
+		</ul>
+		<hr />
+		<h2>Is the property accessible?</h2>
 		<p>
-			We try to be! We’re not the most kid-friendly hotel but not the least. Things we have… things
-			to watch out for…
+			The downside of being historic is that our buildings are zany. All access, and all guest
+			rooms, require at least some stairs. As examples (not comprehensive, all depending on which
+			path you take): It’s four steps up to the Main House lobby. From there, it’s one or two steps
+			down to the round room; two steps down to the Ostrich Room; 21 steps up to the 2nd floor
+			(where guest rooms begin); and 15 more (steeper) steps to the 3rd floor.
+		</p>
+		<hr />
+		<h2>What do you have for kids?</h2>
+		<p>
+			We have high chairs for the restaurant, one loaner pack ’n play (limited availability!), lots
+			of board games, sleds for winter, and tons of lawn space to play around; BYO wiffle ball.
 		</p>
 	</div>
 </Frame>
@@ -107,5 +143,9 @@
 		flex-direction: column;
 		gap: 1rem;
 		align-items: center;
+	}
+
+	ul {
+		max-width: 640px;
 	}
 </style>

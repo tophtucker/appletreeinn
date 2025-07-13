@@ -85,8 +85,11 @@ h6 {
 
 p {
 	max-width: 640px;
-	margin: 0;
+}
+
+p.prose {
 	text-indent: 1em;
+	margin: 0;
 }
 
 p:first-of-type {
@@ -99,7 +102,7 @@ a {
 
 a.cta {
 	color: inherit;
-	border: 3px inset #ccc;
+	border: 3px inset var(--gray);
 	text-decoration: none;
 	height: 2rem;
 	padding: 0 6px;
