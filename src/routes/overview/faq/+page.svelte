@@ -84,16 +84,17 @@
 		<h2>What should I bring?</h2>
 		<ul>
 			<li>
-				<strong>A car.</strong> The only things within walking distance are Tanglewood and Kripalu (about
-				10 minutes each); it’s a 45-minute walk into town, there’s basically no Uber, the only taxis
-				are more like limosuine services you have reserve ahead of time, and there’s very little food
-				delivery.
+				<strong>A car.</strong> The only things within walking distance are Tanglewood and Kripalu
+				(about 10 minutes each); it’s a 45-minute walk into town. There’s basically no Uber, and the
+				only taxis are more like limosuine services you have reserve ahead of time. There’s very
+				little food delivery; the hotel has continental breakfast every morning, but our dinner
+				restaurant is only open <a href="/dining/ostrich-room">certain nights</a>.
 			</li>
 			<li>
 				<strong>Picnic supplies.</strong> If you’re going to Tanglewood, we think the best way to
 				enjoy it is to arrive early and picnic on the lawn. People bring blankets, lawn chairs,
-				coolers, baskets, bug spray, binoculars, cheese, crackers, beer, wine, flashlights, etc.;
-				read our
+				coolers, baskets, bug spray, binoculars, cheese, crackers, beer, wine, candles, flashlights,
+				etc.; read our
 				<a href="/activities/tanglewood">Tanglewood guide</a> for more.
 			</li>
 			<li>
@@ -104,23 +105,33 @@
 			</li>
 			<li>
 				<strong>Hiking gear.</strong> There’s lots of hiking opportunities in the area, of varying difficulties.
-				Bring sneakers, at least!
+				Bring sneakers, a water bottle, and long pants (if you’re worried about ticks).
+			</li>
+			<li>
+				<strong>Tablet or laptop.</strong> There are no TVs in the room! You can just bask in the natural
+				beauty of the Berkshires and watch the clouds go by, but if you want to watch screen stuff, you’ll
+				have to bring your own screen.
 			</li>
 		</ul>
 		<hr />
 		<h2>Is the property accessible?</h2>
 		<p>
 			The downside of being historic is that our buildings are zany. All access, and all guest
-			rooms, require at least some stairs. As examples (not comprehensive, all depending on which
-			path you take): It’s four steps up to the Main House lobby. From there, it’s one or two steps
-			down to the round room; two steps down to the Ostrich Room; 21 steps up to the 2nd floor
-			(where guest rooms begin); and 15 more (steeper) steps to the 3rd floor.
+			rooms, require at least some stairs; we have no elevators. As examples (not comprehensive):
+			it’s four steps up to the Main House lobby; 21 steps up to the 2nd floor, where guest rooms
+			begin; and 15 steeper steps to the 3rd floor. There are random little internal steps, too: one
+			or two down to the round room; two down to the Ostrich Room. Our motto is “Watch your step!”
+			We sometimes have a golf cart available to ferry guests down the hill to Tanglewood; if you’re
+			depending on that, call ahead.
 		</p>
 		<hr />
 		<h2>What do you have for kids?</h2>
 		<p>
-			We have high chairs for the restaurant, one loaner pack ’n play (limited availability!), lots
-			of board games, sleds for winter, and tons of lawn space to play around; BYO wiffle ball.
+			We have high chairs for the restaurant, one pack ’n play, lots of board games, sleds for
+			winter, and tons of lawn space to play around, both flat and hilly, including plenty of space
+			far from the road; B.Y.O. wiffle ball. We have a hotel dog, Max, who is great with kids and
+			will play fetch with them forever. Our <a href="/activities/berkshires">local guide</a> includes
+			some kid-friendly activities.
 		</p>
 	</div>
 </Frame>
