@@ -1,5 +1,6 @@
 <script>
 	import Frame from '$lib/template/Frame.svelte';
+	import Image from '$lib/lightbox/Image.svelte';
 </script>
 
 <svelte:head>
@@ -11,11 +12,18 @@
 	<div class="inner">
 		<h1>Property map</h1>
 
-		<img src="/avaloch/map/map.svg" alt="Property map with labels 1–6" />
+		<Image src="/avaloch/map/map.svg" alt="Property map" />
 
 		<div class="item">
 			<h3>1.</h3>
-			<img src="/avaloch/img/map-lower-lot.jpg" alt="Lower parking" />
+			<div class="img-wrapper">
+				<Image
+					src="/avaloch/img/map-lower-lot.jpg"
+					alt="1. Lower parking lot"
+					class="square"
+					style="width: 100%"
+				/>
+			</div>
 			<div>
 				<h3>Lower parking lot</h3>
 				<p>
@@ -26,7 +34,9 @@
 		</div>
 		<div class="item">
 			<h3>2.</h3>
-			<img src="/heropics/driveway.jpg" alt="Main House" />
+			<div class="img-wrapper">
+				<Image src="/heropics/driveway.jpg" alt="Main House" class="square" style="width: 100%" />
+			</div>
 			<div>
 				<h3>Main House</h3>
 				<p>
@@ -40,7 +50,14 @@
 		</div>
 		<div class="item">
 			<h3>3.</h3>
-			<img src="/avaloch/img/wanda.jpg" alt="Lower parking" />
+			<div class="img-wrapper">
+				<Image
+					src="/avaloch/img/wanda.jpg"
+					alt="3. The Ostrich Room"
+					class="square"
+					style="width: 100%"
+				/>
+			</div>
 			<div>
 				<h3>The Ostrich Room</h3>
 				<p>
@@ -52,7 +69,14 @@
 		</div>
 		<div class="item">
 			<h3>4.</h3>
-			<img src="/avaloch/img/map-upper-lot.jpg" alt="Upper parking" />
+			<div class="img-wrapper">
+				<Image
+					src="/avaloch/img/map-upper-lot.jpg"
+					alt="4. Upper parking lot"
+					class="square"
+					style="width: 100%"
+				/>
+			</div>
 			<div>
 				<h3>Upper parking lot</h3>
 				<p>
@@ -63,7 +87,9 @@
 		</div>
 		<div class="item">
 			<h3>5.</h3>
-			<img src="/heropics/summer-annex.jpg" alt="Lodge" />
+			<div class="img-wrapper">
+				<Image src="/heropics/summer-annex.jpg" alt="5. Lodge" class="square" style="width: 100%" />
+			</div>
 			<div>
 				<h3>Lodge</h3>
 				<p>
@@ -76,7 +102,9 @@
 		</div>
 		<div class="item">
 			<h3>6.</h3>
-			<img src="/heropics/pool1.jpg" alt="Pool" />
+			<div class="img-wrapper">
+				<Image src="/heropics/pool1.jpg" alt="6. Pool" class="square" style="width: 100%" />
+			</div>
 			<div>
 				<h3>Pool</h3>
 				<p>
@@ -105,19 +133,19 @@
 	.item p {
 		margin: 0;
 	}
-	.item img {
+	.item .img-wrapper {
 		width: 200px;
 		height: 200px;
 		border: 3px double black;
-		aspect-ratio: 1/1;
-		object-fit: cover;
+		align-self: self-start;
+		flex-shrink: 0;
 	}
 	.item .cta {
 		margin-top: 0.5rem;
 	}
 
 	@media (max-width: 1000px) {
-		.item img {
+		.item .img-wrapper {
 			width: 50px;
 			height: 50px;
 		}

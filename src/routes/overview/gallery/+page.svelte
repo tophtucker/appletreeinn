@@ -99,6 +99,7 @@
 				<Image
 					src={image.src}
 					alt={image.alt}
+					loading="lazy"
 					style="object-fit: cover; width: 100%; height: 100%;"
 				/>
 			{/each}
