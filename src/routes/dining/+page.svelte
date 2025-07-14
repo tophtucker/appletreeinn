@@ -16,15 +16,15 @@
 <Frame>
 	<div class="inner">
 		<div class="comparison-table">
-			<div></div>
+			<div class="header hide-mobile"></div>
 			<h2>Continental breakfast</h2>
-			<VR style="grid-column: 3; grid-row: 1 / 10;" />
+			<VR style="grid-column: 3; grid-row: 1 / 10;" class="hide-mobile" />
 			<div>
 				<h2>The Ostrich Room</h2>
 				<a class="cta" href="/dining/ostrich-room">Learn more</a>
 			</div>
 
-			<div></div>
+			<div class="header hide-mobile"></div>
 			<Image
 				src="/heropics/baladi2.jpg"
 				style="width: 200px; height: 200px; object-fit: cover; border: 3px double black; border-radius: 100%; margin: 0 auto;"
@@ -82,5 +82,21 @@
 	}
 	.comparison-table div a.cta {
 		display: inline-flex;
+	}
+
+	@media (max-width: 800px) {
+		h2 {
+			font-size: 1rem;
+		}
+		.comparison-table {
+			grid-template-columns: 1fr 1fr;
+			margin-top: 2rem;
+		}
+		.header {
+			grid-column: span 2;
+			text-transform: uppercase;
+			font-size: smaller;
+			padding-top: 1rem;
+		}
 	}
 </style>

@@ -3,7 +3,7 @@
 	let props = $props();
 </script>
 
-<div class="vr" {...props}>
+<div {...props} class={`vr ${props.class}`}>
 	<div></div>
 	<Asterisk />
 	<div></div>

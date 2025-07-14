@@ -20,16 +20,16 @@
 			no elevators in either building; all rooms require stairs to access.
 		</p>
 		<div class="comparison-table">
-			<div></div>
+			<div class="header hide-mobile"></div>
 			<h2>Main House</h2>
-			<VR style="grid-column: 3; grid-row: 1 / 10;" />
+			<VR style="grid-column: 3; grid-row: 1 / 10;" class="hide-mobile" />
 			<h2>Lodge</h2>
 
-			<div></div>
+			<div class="header hide-mobile"></div>
 			<div><a class="cta" href="/rooms/main-house">See rooms</a></div>
 			<div><a class="cta" href="/rooms/lodge">See rooms</a></div>
 
-			<div></div>
+			<div class="header hide-mobile"></div>
 			<img src="heropics/driveway.jpg" alt="Main House" />
 			<img src="heropics/summer-annex.jpg" alt="Lodge" />
 
@@ -77,5 +77,21 @@
 	}
 	.comparison-table div a.cta {
 		display: inline-flex;
+	}
+
+	@media (max-width: 800px) {
+		h2 {
+			font-size: 1rem;
+		}
+		.comparison-table {
+			grid-template-columns: 1fr 1fr;
+			margin-top: 2rem;
+		}
+		.header {
+			grid-column: span 2;
+			text-transform: uppercase;
+			font-size: smaller;
+			padding-top: 1rem;
+		}
 	}
 </style>

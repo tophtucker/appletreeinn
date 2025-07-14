@@ -164,7 +164,7 @@ button {
 	}
 
 	.hide-mobile {
-		display: none;
+		display: none !important;
 	}
 
 	.show-mobile {
