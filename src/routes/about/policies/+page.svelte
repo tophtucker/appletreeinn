@@ -20,7 +20,9 @@
 
 		<p>
 			Hotel check-in is at 3:00 p.m. Check-out is at 11:00 a.m. Early check-in and late check-out
-			may be available upon request and is subject to availability. Additional fees will apply.
+			may be available upon request and is subject to availability. Guests are welcome to arrive as
+			early as they like to use the property before check-in, and to stay after check-out; we have
+			luggage storage in the front hall.
 		</p>
 
 		<p>
