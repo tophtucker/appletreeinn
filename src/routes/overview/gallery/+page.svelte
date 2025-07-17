@@ -1,5 +1,4 @@
 <script>
-	import Frame from '$lib/template/Frame.svelte';
 	import Image from '$lib/lightbox/Image.svelte';
 	const pics = [
 		{ src: '/heropics/verdant.jpg', alt: 'Main house' },
@@ -90,22 +89,20 @@
 	/>
 </svelte:head>
 
-<Frame>
-	<div class="inner">
-		<h1>Gallery</h1>
+<div class="inner">
+	<h1>Gallery</h1>
 
-		<div class="grid">
-			{#each pics as image}
-				<Image
-					src={image.src}
-					alt={image.alt}
-					loading="lazy"
-					style="object-fit: cover; width: 100%; height: 100%;"
-				/>
-			{/each}
-		</div>
+	<div class="grid">
+		{#each pics as image}
+			<Image
+				src={image.src}
+				alt={image.alt}
+				loading="lazy"
+				style="object-fit: cover; width: 100%; height: 100%;"
+			/>
+		{/each}
 	</div>
-</Frame>
+</div>
 
 <style>
 	h1 {

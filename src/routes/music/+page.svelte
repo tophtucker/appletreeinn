@@ -3,7 +3,6 @@
 	import { timeDay, timeSunday, timeMonth } from 'd3-time';
 	import { group, min, sort } from 'd3-array';
 
-	import Frame from '$lib/template/Frame.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	let { data } = $props();
 	const { performances } = data;
@@ -69,73 +68,69 @@
 	</div>
 {/snippet}
 
-<Frame>
-	<div class="inner">
-		<p>
-			<a href="/ostrich-room">The Ostrich Room</a> features live music every week, drawing on the Berkshires’
-			rich history… Though this incarnation is only a few years old, we have people come in who tell
-			us they played here decades ago… something something… Johnny Irion, James Taylor played here in
-			the summer of 1970… Arlo Guthrie has been through… Claire once heard that Bob Dylan has been here.
-			Stephanie show we have the poster for, check out the poster when you visit. Randy Weston…
-		</p>
-		<p>
-			See <a href="https://instagram.com/appletreeinn">Instagram</a>
-			for previews and updates. Email Jenny Rubin at
-			<a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information about booking
-			acts.
-		</p>
+<div class="inner">
+	<p>
+		<a href="/ostrich-room">The Ostrich Room</a> features live music every week, drawing on the Berkshires’
+		rich history… Though this incarnation is only a few years old, we have people come in who tell us
+		they played here decades ago… something something… Johnny Irion, James Taylor played here in the
+		summer of 1970… Arlo Guthrie has been through… Claire once heard that Bob Dylan has been here. Stephanie
+		show we have the poster for, check out the poster when you visit. Randy Weston…
+	</p>
+	<p>
+		See <a href="https://instagram.com/appletreeinn">Instagram</a>
+		for previews and updates. Email Jenny Rubin at
+		<a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information about booking
+		acts.
+	</p>
 
-		<h2>Upcoming shows</h2>
+	<h2>Upcoming shows</h2>
 
-		<div class="performances">
-			{#each upcoming as p}{@render card(p)}{/each}
-		</div>
-
-		<div class="calendar">
-			{#each calendar.slice(0, 7) as day}
-				<div class="header">{fWeekday(day)}</div>
-			{/each}
-			{#each calendar as { day, performances }}
-				<div class={+day === +timeDay() ? 'today' : ''}>
-					<div class="date">{day.getDate() === 1 ? fDate(day) : day.getDate()}</div>
-					{#each performances as p}
-						<button onclick={() => open(p)}
-							><small>{fTime(p.time)}</small><br /> {p.act.name}</button
-						>
-					{/each}
-				</div>
-			{/each}
-		</div>
-
-		<hr />
-
-		<h2>Past shows</h2>
-
-		{#each pastMonths as { month, performances }}
-			<details>
-				<summary>{fMonth(month)}</summary>
-				<table>
-					<tbody>
-						{#each performances as p}
-							<tr>
-								<td>{fWeekday(p.time)}. {fDate(p.time)}</td>
-								<td>{fTime(p.time)}</td>
-								<td>{p.act.name}</td>
-							</tr>
-						{/each}
-					</tbody>
-				</table>
-			</details>
-		{/each}
-
-		<dialog bind:this={dialogRef}>
-			<div class="button-wrapper"><button onclick={close}><Icon icon="Close" /></button></div>
-			{#if dialogPerformance}
-				{@render card(dialogPerformance)}
-			{/if}
-		</dialog>
+	<div class="performances">
+		{#each upcoming as p}{@render card(p)}{/each}
 	</div>
-</Frame>
+
+	<div class="calendar">
+		{#each calendar.slice(0, 7) as day}
+			<div class="header">{fWeekday(day)}</div>
+		{/each}
+		{#each calendar as { day, performances }}
+			<div class={+day === +timeDay() ? 'today' : ''}>
+				<div class="date">{day.getDate() === 1 ? fDate(day) : day.getDate()}</div>
+				{#each performances as p}
+					<button onclick={() => open(p)}><small>{fTime(p.time)}</small><br /> {p.act.name}</button>
+				{/each}
+			</div>
+		{/each}
+	</div>
+
+	<hr />
+
+	<h2>Past shows</h2>
+
+	{#each pastMonths as { month, performances }}
+		<details>
+			<summary>{fMonth(month)}</summary>
+			<table>
+				<tbody>
+					{#each performances as p}
+						<tr>
+							<td>{fWeekday(p.time)}. {fDate(p.time)}</td>
+							<td>{fTime(p.time)}</td>
+							<td>{p.act.name}</td>
+						</tr>
+					{/each}
+				</tbody>
+			</table>
+		</details>
+	{/each}
+
+	<dialog bind:this={dialogRef}>
+		<div class="button-wrapper"><button onclick={close}><Icon icon="Close" /></button></div>
+		{#if dialogPerformance}
+			{@render card(dialogPerformance)}
+		{/if}
+	</dialog>
+</div>
 
 <style>
 	details {

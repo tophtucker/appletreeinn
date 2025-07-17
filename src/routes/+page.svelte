@@ -1,5 +1,4 @@
 <script>
-	import Frame from '$lib/template/Frame.svelte';
 	import GalleryGrid from '$lib/components/GalleryGrid.svelte';
 </script>
 
@@ -11,15 +10,13 @@
 	/>
 </svelte:head>
 
-<Frame>
-	<div class="inner">
-		<div class="img-pair">
-			<img src="./avaloch/img/door.jpg" alt="Door" />
-			<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" />
-		</div>
-		<div class="section"><GalleryGrid /></div>
+<div class="inner">
+	<div class="img-pair">
+		<img src="./avaloch/img/door.jpg" alt="Door" />
+		<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" />
 	</div>
-</Frame>
+	<div class="section"><GalleryGrid /></div>
+</div>
 
 <style>
 	.section {

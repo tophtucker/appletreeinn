@@ -1,23 +1,17 @@
-<script>
-	import Frame from '$lib/template/Frame.svelte';
-</script>
-
 <svelte:head>
-	<title>404 • Apple Tree Inn • Lenox, MA</title>
+	<title>Page not found • Apple Tree Inn • Lenox, MA</title>
 </svelte:head>
 
-<Frame>
-	<div class="inner">
-		<div class="broken">
-			<h1>Page not found</h1>
-			<div>
-				If you can’t find what you’re looking for, please email <a
-					href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a
-				>; we’d love to hear from you.
-			</div>
+<div class="inner">
+	<div class="broken">
+		<h1>Page not found</h1>
+		<div>
+			If you can’t find what you’re looking for, please email <a
+				href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a
+			>; we’d love to hear from you.
 		</div>
 	</div>
-</Frame>
+</div>
 
 <style>
 	.broken {

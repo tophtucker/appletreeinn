@@ -6,10 +6,10 @@
 	import OpenSign from '../components/OpenSign.svelte';
 	import Events from '../components/Events.svelte';
 	import Icon from '../icons/Icon.svelte';
-	const nav = getNav($page);
+	const nav = $derived(getNav($page));
 
-	const mainNav = nav.filter((d) => d.slug !== 'about');
-	const aboutNav = nav.find((d) => d.slug === 'about').children;
+	const mainNav = $derived(nav.filter((d) => d.slug !== 'about'));
+	const aboutNav = $derived(nav.find((d) => d.slug === 'about').children);
 </script>
 
 {#snippet navSection(n)}
