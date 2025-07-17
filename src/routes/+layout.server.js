@@ -1,6 +1,6 @@
-import { sanity, parsePerformance } from '$lib/sanity.js';
+import { sanity, parsePerformance, parseBulletin } from '$lib/sanity.js';
 
-const QUERY = `*[_type == "performance" && time > now()] | order(time asc) [0] {
+const MUSIC_QUERY = `*[_type == "performance" && time > now()] | order(time asc) [0] {
   _id,
   time,
   note,
@@ -13,6 +13,16 @@ const QUERY = `*[_type == "performance" && time > now()] | order(time asc) [0] {
   }
 }`;
 
+const BULLETINS_QUERY = `*[_type == "bulletin" && startTime < now() && endTime > now()] {
+  _id,
+  startTime,
+  text,
+  details
+}`;
+
 export async function load() {
-	return { nextPerformance: parsePerformance(await sanity.fetch(QUERY)) };
+	return {
+		nextPerformance: parsePerformance(await sanity.fetch(MUSIC_QUERY)),
+		bulletins: (await sanity.fetch(BULLETINS_QUERY)).map(parseBulletin)
+	};
 }

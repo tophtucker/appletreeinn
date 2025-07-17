@@ -8,7 +8,7 @@
 	import Icon from '../icons/Icon.svelte';
 
 	let { data } = $props();
-	let { nextPerformance } = data;
+	let { nextPerformance, bulletins } = data;
 
 	const nav = $derived(getNav($page));
 
@@ -41,7 +41,7 @@
 		{@render navSection(n)}
 	{/each}
 	<div class="bulletins">
-		<Banner />
+		<Banner {bulletins} />
 		<OpenSign data={ostrichRoom} />
 		<Events {nextPerformance} />
 	</div>

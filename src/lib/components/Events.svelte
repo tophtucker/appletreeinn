@@ -3,14 +3,21 @@
 	let { nextPerformance } = $props();
 </script>
 
-<div class="wrapper">
+<a href="/live-music">
 	<h6>Live music</h6>
-	{#if !nextPerformance}
-		See <a href="https://instagram.com/appletreeinn">Instagram</a> for live music updates.
+	{#if nextPerformance}
+		{formatDate(nextPerformance.time)}: {nextPerformance.act.name}.
 	{:else}
-		<span
-			>{formatDate(nextPerformance.time)}: {nextPerformance.act.name}.
-			<a href="/live-music">More →</a></span
-		>
+		See Instagram for updates.
 	{/if}
-</div>
+</a>
+
+<style>
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	a:hover {
+		color: var(--blue);
+	}
+</style>

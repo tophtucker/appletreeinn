@@ -18,3 +18,8 @@ export function parsePerformance(p) {
 	p.time = isoParse(p.time);
 	return p;
 }
+
+export function parseBulletin(b) {
+	b.startTime = isoParse(b.startTime);
+	return b;
+}
