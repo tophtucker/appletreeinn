@@ -2,9 +2,9 @@
 	import { page } from '$app/stores';
 	import { ostrichRoom } from '$lib/index.js';
 	import { getNav } from '$lib/nav.js';
-	import Banner from './Banner.svelte';
-	import OpenSign from '../components/OpenSign.svelte';
-	import Events from '../components/Events.svelte';
+	import Bulletins from './Bulletins.svelte';
+	import OpenSign from './OpenSign.svelte';
+	import NextPerformance from './NextPerformance.svelte';
 	import Icon from '../icons/Icon.svelte';
 
 	let { data } = $props();
@@ -41,9 +41,9 @@
 		{@render navSection(n)}
 	{/each}
 	<div class="bulletins">
-		<Banner {bulletins} />
+		<Bulletins {bulletins} />
 		<OpenSign data={ostrichRoom} />
-		<Events {nextPerformance} />
+		<NextPerformance {nextPerformance} />
 	</div>
 	<div class="about">
 		{#each aboutNav as n, i}

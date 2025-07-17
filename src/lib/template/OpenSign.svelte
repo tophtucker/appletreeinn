@@ -48,12 +48,22 @@
 </script>
 
 {#if isET}
-	<div>
+	<a href="/dining/ostrich-room">
 		<h6>The Ostrich Room</h6>
 		{#if isOpen}
 			<div>Open until {formatFutureDate(nextHours[1])}.</div>
 		{:else if nextHours}
 			<div>Closed until {formatFutureDate(nextHours[0])}.</div>
 		{/if}
-	</div>
+	</a>
 {/if}
+
+<style>
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	a:hover {
+		color: var(--blue);
+	}
+</style>

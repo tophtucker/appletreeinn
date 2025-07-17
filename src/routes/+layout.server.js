@@ -13,7 +13,7 @@ const MUSIC_QUERY = `*[_type == "performance" && time > now()] | order(time asc)
   }
 }`;
 
-const BULLETINS_QUERY = `*[_type == "bulletin" && startTime < now() && endTime > now()] {
+const BULLETINS_QUERY = `*[_type == "bulletin" && startTime < now() && endTime > now()] | order(startTime desc) {
   _id,
   startTime,
   text,

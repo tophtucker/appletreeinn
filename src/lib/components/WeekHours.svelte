@@ -32,7 +32,7 @@
 			<th style="min-width: 7em;">Hours</th>
 			{#if events?.future.length}
 				<th class="hide-mobile"
-					><div style="display: flex; justify-content: space-between;">Events</div></th
+					><div style="display: flex; justify-content: space-between;">Live music</div></th
 				>
 			{/if}
 		</tr>

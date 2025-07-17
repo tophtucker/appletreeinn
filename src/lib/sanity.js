@@ -21,5 +21,6 @@ export function parsePerformance(p) {
 
 export function parseBulletin(b) {
 	b.startTime = isoParse(b.startTime);
+	if (b.details) b.details = toHTML(b.details);
 	return b;
 }

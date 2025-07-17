@@ -59,6 +59,7 @@
 		div.nav {
 			width: 200px;
 			padding-top: 5rem;
+			flex-shrink: 0;
 		}
 	}
 	@media (max-width: 1400px) {

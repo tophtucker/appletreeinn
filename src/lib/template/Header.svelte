@@ -3,7 +3,7 @@
 	import Avaloch from '$lib/icons/Avaloch.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	import { getCurrentPage, BOOKING_URL } from '$lib/nav.js';
-	const currentPage = getCurrentPage($page);
+	const currentPage = $derived(getCurrentPage($page));
 	let { toggleNav } = $props();
 </script>
 

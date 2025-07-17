@@ -3,7 +3,7 @@
 	let { nextPerformance } = $props();
 </script>
 
-<a href="/live-music">
+<a href="/music">
 	<h6>Live music</h6>
 	{#if nextPerformance}
 		{formatDate(nextPerformance.time)}: {nextPerformance.act.name}.
