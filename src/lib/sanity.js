@@ -12,11 +12,9 @@ export const sanity = createClient({
 
 const builder = imageUrlBuilder(sanity);
 
-export function parsePerformances(performances) {
-	for (const p of performances) {
-		if (p.act?.description) p.act.description = toHTML(p.act.description);
-		if (p.act?.image) p.act.image = builder.image(p.act.image).url();
-		p.time = isoParse(p.time);
-	}
-	return performances;
+export function parsePerformance(p) {
+	if (p.act?.description) p.act.description = toHTML(p.act.description);
+	if (p.act?.image) p.act.image = builder.image(p.act.image).url();
+	p.time = isoParse(p.time);
+	return p;
 }

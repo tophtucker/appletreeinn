@@ -1,21 +1,16 @@
 <script>
-	import { loadEvents, formatDate } from '$lib/index.js';
-	let data = $state(undefined);
-	(async function () {
-		data = await loadEvents();
-	})();
+	import { formatDate } from '$lib/index.js';
+	let { nextPerformance } = $props();
 </script>
 
 <div class="wrapper">
 	<h6>Live music</h6>
-	{#if data === undefined}
-		Loading music calendar…
-	{:else if data === null}
+	{#if !nextPerformance}
 		See <a href="https://instagram.com/appletreeinn">Instagram</a> for live music updates.
 	{:else}
 		<span
-			>{formatDate(data.future[0].date)}: {data.future[0].description}.
-			<a href="/ostrich-room#calendar">More →</a></span
+			>{formatDate(nextPerformance.time)}: {nextPerformance.act.name}.
+			<a href="/live-music">More →</a></span
 		>
 	{/if}
 </div>

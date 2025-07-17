@@ -1,6 +1,6 @@
 import { sanity, parsePerformance } from '$lib/sanity.js';
 
-const QUERY = `*[_type == "performance"] | order(time asc) {
+const QUERY = `*[_type == "performance" && time > now()] | order(time asc) [0] {
   _id,
   time,
   note,
@@ -14,5 +14,5 @@ const QUERY = `*[_type == "performance"] | order(time asc) {
 }`;
 
 export async function load() {
-	return { performances: (await sanity.fetch(QUERY)).map(parsePerformance) };
+	return { nextPerformance: parsePerformance(await sanity.fetch(QUERY)) };
 }

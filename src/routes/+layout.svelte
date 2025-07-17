@@ -1,8 +1,8 @@
 <script>
 	import Frame from '$lib/template/Frame.svelte';
-	let { children } = $props();
+	let { children, data } = $props();
 </script>
 
-<Frame>
+<Frame {data}>
 	{@render children()}
 </Frame>

@@ -6,6 +6,10 @@
 	import OpenSign from '../components/OpenSign.svelte';
 	import Events from '../components/Events.svelte';
 	import Icon from '../icons/Icon.svelte';
+
+	let { data } = $props();
+	let { nextPerformance } = data;
+
 	const nav = $derived(getNav($page));
 
 	const mainNav = $derived(nav.filter((d) => d.slug !== 'about'));
@@ -39,7 +43,7 @@
 	<div class="bulletins">
 		<Banner />
 		<OpenSign data={ostrichRoom} />
-		<Events />
+		<Events {nextPerformance} />
 	</div>
 	<div class="about">
 		{#each aboutNav as n, i}

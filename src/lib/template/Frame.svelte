@@ -5,7 +5,9 @@
 	import Nav from './Nav.svelte';
 	import { setContext } from 'svelte';
 
-	let { children } = $props();
+	let { children, data } = $props();
+
+	console.log('frame', { data });
 
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
@@ -30,7 +32,7 @@
 <svelte:window on:resize={onResize} />
 
 <main>
-	<Nav {toggleNav} {mobileNav} />
+	<Nav {toggleNav} {mobileNav} {data} />
 
 	<div class="frame">
 		{@render circle()}

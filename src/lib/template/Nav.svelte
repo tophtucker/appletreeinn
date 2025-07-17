@@ -1,7 +1,7 @@
 <script>
 	import NavInner from './NavInner.svelte';
 	import Icon from '../icons/Icon.svelte';
-	let { toggleNav, mobileNav } = $props();
+	let { toggleNav, mobileNav, data } = $props();
 
 	let dialogRef;
 	$effect(() => {
@@ -14,11 +14,11 @@
 </script>
 
 <div class="nav">
-	<NavInner />
+	<NavInner {data} />
 </div>
 <dialog class="nav" bind:this={dialogRef}>
 	<button onclick={toggleNav}><Icon icon="Close" /></button>
-	<NavInner />
+	<NavInner {data} />
 </dialog>
 
 <style>
