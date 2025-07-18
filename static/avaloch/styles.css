@@ -131,6 +131,10 @@ button {
 	border-radius: 0;
 }
 
+ul {
+	max-width: 640px;
+}
+
 .grid-or-flex {
 	display: grid;
 	grid-template-columns: 2fr 3fr;

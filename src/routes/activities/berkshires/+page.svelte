@@ -5,55 +5,95 @@
 
 <div class="inner">
 	<h1>The Berkshires</h1>
-	<h2>Itineraries</h2>
-	<p>…</p>
-	<hr />
-	<h2>Index</h2>
-	<p>…</p>
-	<hr />
-	<h2>Eat and drink</h2>
-	<p>Downtown Lenox (3 min) has lots of cute shops and restaurants:</p>
+	<p>
+		Do as we do! Living here, Claire has some ideas from personal experience about how to spend a
+		spare chunk of your time.
+	</p>
+	<h2>Walk to town</h2>
+
+	<p>
+		Wake up and give yourself 2.5 hours to walk from the inn into town via Under Mountain Rd (Lenox–
+		4 mile walk). I think Under Mountain Rd has got to one of the prettiest roads in America. It
+		literally has it all:
+	</p>
 	<ul>
-		<li>Breakfast & cafés: Haven, Bagel & Brew, Patisserie Lenox, Shots</li>
-		<li>Groceries and sandwiches to go: Loeb’s Foodtown</li>
+		<li>scenic pastures</li>
+		<li>a charming duck pond at Stonover Farm (an excellent high-end B&B)</li>
 		<li>
-			Dinner: Pizzeria Boema (pizza), Betty’s (pizza), Frankie’s (Italian), Olde Heritage Tavern
-			(pub), Alta (Mediterranean)
+			a stunning boardwalk that winds you through boggy woods before you emerge onto a gorgeous
+			vista at Parsons Marsh Reserve (Lenox– 3 min drive), which adds 0.6 mi total out and back
 		</li>
-		<li>Drinks: Alta, Brava, Firefly, Olde Heritage Tavern, Ombra</li>
+		<li>
+			HomeFarm, an equestrian center in a Gilded Age estate farm that offers trail rides and you can
+			also just swing by to pat the horses on the nose in their stables
+		</li>
+		<li>
+			gorgeous historic homes, especially once Under Mountain turns into Cliffwood St. Particularly
+			impressive are 101 Yokun (the Winthrop Estate/Ethelwynde), 106 Cliffwood (Underledge), and 80
+			Cliffwood (Belvoir Terrace). My personal favorites are 71 Cliffwood and 13 Cliffwood.
+		</li>
 	</ul>
-	<p>Some of our favorite special places beyond:</p>
+	<p>
+		Right before you enter town, check out the Stebbins Fountain (Lenox– 5 min drive) at the
+		intersection of Cliffwood and Main Sts. I love this little fountain because it makes me feel
+		like I’m in Italy. I also love it because Emma Stebbins was a sculptor who was the first woman
+		to receive a public art commission from New York City (the centerpiece of Central Park’s
+		Bethesda Fountain) and she summered in Lenox. It was dedicated in her honor by three of her
+		friends when she died in 1882.
+	</p>
+
+	<h2>Working morning</h2>
+	<p>
+		Grab a coffee at Lenox Coffee (Lenox – 5 min drive). My signature order is a hot mocha with one
+		shot of espresso. And their pastries are pretty good–I think the best in town. Lenox Coffee is a
+		real locals spot; see if you can eavesdrop on any good gossip.
+	</p>
+	<p>
+		Read the Berkshire Eagle–the best local paper in America–or get some work done on your laptop in
+		the Reading Room at the Lenox Library (Lenox– 5 min drive). I love this building because it
+		reminds me of boarding school / makes me feel like I’m about to sign the Constitution.
+	</p>
+
+	<h2>Coffee and a hike</h2>
+	<p>
+		Wake up and drive to No. Six Depot (West Stockbridge – 8 min drive), a charming roastery with a
+		mix of indoor and outdoor seating, from which the hotel gets its coffee.
+	</p>
+	<p>
+		Stroll around West Stockbridge. There’s a bunch of good shops, a beautiful old book store, and
+		some sculpture gardens — but our favorite thing to do is just to stand on the bridge over the
+		river.
+	</p>
+	<p>Hike Stevens Glen (4 min drive), a 1.1 mile loop leading to a beautiful waterfall.</p>
+
+	<h2>Other pairings</h2>
+
 	<ul>
-		<li>The Red Lion Inn — Stockbridge, 10 min (dinner, drinks, live music Wed–Sun)</li>
-		<li>Common or Garden Pub — Great Barrington, 14 min</li>
-		<li>No Comply — Great Barrington, 18 min</li>
-		<li>Hilltown Hot Pies — Egremont Barn, 27 min (pizza pop-up)</li>
-		<li>Stissing House — Pine Plains, 1 hour</li>
-	</ul>
-	<h2>Everything else</h2>
-	<ul>
+		<li>Get brunch at No Comply and then tour Naumkeag.</li>
 		<li>
-			<a href="https://www.bso.org/tanglewood/">Tanglewood</a> (outdoor summer concert venue) — across
-			the street
+			Get takeout sandwiches at Lost Lamb. There’s nowhere to sit, so do the Housatonic Flats
+			walking loop at eat your sandwich on a bench there.
 		</li>
-		<li><a href="https://kripalu.org/">Kripalu</a> (year-round yoga retreat) — next door</li>
-		<li>Stockbridge Bowl (lake) — 2 min</li>
-		<li>Olivia’s Overlook (viewpoint and trailhead for many popular hikes) — 4 min</li>
-		<li>Shakespeare & Co (famous theater company with shows in summer & fall) — 5 min</li>
-		<li>The Mount (Edith Wharton historic home) — 7 min</li>
-		<li>Canyon Ranch (famous spa) — 7 min</li>
-		<li>Miraval (famous spa) — 7 min</li>
-		<li>Norman Rockwell Museum (galleries and studio) — 9 min</li>
-		<li>Naumkeag (McKim, Mead & White–designed historic home)</li>
 		<li>
-			<a href="https://www.highlawnfarm.com/">High Lawn Farm</a> (baby calves you can pat, cheese, ice
-			cream) — 10 min
+			Get a classic diner breakfast at Paige’s Place and then walk around Ashintully, the ruins of
+			an old historic home.
 		</li>
-		<li>Arrowhead (Herman Melville historic home) — 12 min</li>
-		<li>Bousquet (ski area) — 12 min</li>
-		<li>Hancock Shaker Village (open-air architectural museum) — 17 min</li>
-		<li>Pittsfield (city of 40k+) — 20 min</li>
-		<li>Butternut (ski area) — 22 min</li>
-		<li>Jacob’s Pillow (summer dance festival with a famous wooded outdoor stage) — 25 min</li>
+		<li>
+			Get a sandwich at Southfield Store, a nice old-fashioned general store, and then go see
+			Umpachene Falls.
+		</li>
+		<li>
+			Take your kids to all the animal spots: the little duck pond at Stoneover Farm, the stables at
+			HomeFarm, the calf barn at High Lawn, and the variety of animals at the Hancock Shaker
+			Village.
+		</li>
+		<li>
+			For a rainy kid-friendly night, eat at Amici Italian or Xicohtencatl and then go bowling at
+			Cove Bowling and Entertainment.
+		</li>
+		<li>
+			For another rainy kid-friendly night, get fried chicken or cauliflower at Juju’s and then see
+			a movie at the Triplex.
+		</li>
 	</ul>
 </div>

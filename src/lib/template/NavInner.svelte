@@ -46,20 +46,30 @@
 		<NextPerformance {nextPerformance} />
 	</div>
 	<div class="about">
+		{#if aboutNav.some((d) => d.active)}
+			<Icon icon="Asterisk" style="position: absolute; left: -23px; top: 5px;" />
+		{/if}
 		{#each aboutNav as n, i}
-			<a href={n.pathname}>{n.title}</a>{#if i < aboutNav.length - 1}
+			<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a
+			>{#if i < aboutNav.length - 1}
 				{` `}<span class="bullet">•</span>{` `}{/if}
 		{/each}
 	</div>
 </nav>
 
 <style>
+	.about {
+		position: relative;
+	}
 	.about a {
 		display: inline;
 		font-size: smaller;
 	}
 	.about .bullet {
 		font-size: x-small;
+	}
+	.about .active {
+		text-decoration: underline;
 	}
 	nav {
 		display: flex;

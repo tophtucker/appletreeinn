@@ -1,6 +1,7 @@
 // place files you want to import through the `$lib` alias in this folder.
 // e.g. import { buildings } from '$lib/index.js';
 import { timeFormat } from 'd3-time-format';
+import { min, max, extent, range, sort, ascending } from 'd3-array';
 
 export const ostrichRoom = {
 	hours: [
@@ -28,8 +29,8 @@ export const formatDateShort = timeFormat('%-m/%d');
 export const formatTime = (d) => timeFormat('%-I:%M %p')(d).toLowerCase();
 
 const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
-const mod = (hour) => hour % 12;
-const fmt = (hour) => `${~~mod(hour)}${hour % 1 ? `:${(hour % 1) * 60}` : ''}`;
+const hrMod = (hour) => hour % 12;
+const fmt = (hour) => `${~~hrMod(hour)}${hour % 1 ? `:${(hour % 1) * 60}` : ''}`;
 // Takes in hour numbers
 export const formatHourRange = (hours) =>
 	hours.every((hour) => hour < 12 === hours[0] < 12)
@@ -49,6 +50,26 @@ export function formatTimeRange(range) {
 
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 export const formatWeekday = (d) => `${daysOfWeek[d]}.`;
+const modulo = 7;
+const isDense = (data) => range(min(data), max(data) + 1).every((d) => data.includes(d));
+const mod = (number, modulus) => ((number % modulus) + modulus) % modulus;
+const isDenseCyclical = (data) => {
+	for (let i = 0; i < modulo; i++) {
+		if (isDense(data.map((d) => (d + i) % modulo))) return i;
+	}
+	return false;
+};
+export const formatDayRange = (days) => {
+	days = sort(new Set(days.map((d) => d % modulo)), ascending);
+	if (days.length === 1) return formatWeekday(days[0]);
+	const i = isDenseCyclical(days);
+	if (i === false) return days.map(formatWeekday).join(', ');
+	if (days.length === 7) return 'Every day';
+	const ext = extent(days.map((d) => (d + i) % modulo))
+		.map((d) => mod(d - i, modulo))
+		.map(formatWeekday);
+	return days.length === 2 ? ext.join(' & ') : ext.join(' – ');
+};
 
 // https://observablehq.com/d/37b2ab91a954e6bc
 export const buildings = [
