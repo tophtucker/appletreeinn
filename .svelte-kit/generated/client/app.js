@@ -55,7 +55,7 @@ export const dictionary = {
 		"/career": [~15],
 		"/dining_ati/[...catchall]": [~18],
 		"/dining": [16],
-		"/dining/ostrich-room": [17],
+		"/dining/ostrich-room": [~17],
 		"/explore": [~19],
 		"/landing/review": [20],
 		"/music": [~21],

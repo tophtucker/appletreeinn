@@ -1,5 +1,5 @@
 <script>
-	import { formatTimeRange, formatWeekday } from '$lib/index.js';
+	import { formatHourRange, formatWeekday } from '$lib/index.js';
 	let { data } = $props();
 	// TODO: show overrides
 	const { hours, overrides } = data;
@@ -11,6 +11,6 @@
 
 <span>
 	{collapsible
-		? `${hours.map((d) => formatWeekday(d[0])).join(' & ')}, ${formatTimeRange(hours[0][1])}`
-		: hours.map((d) => `${formatWeekday(d[0])} ${formatTimeRange(d[1])}`).join(', ')}
+		? `${hours.map((d) => formatWeekday(d[0])).join(' & ')}, ${formatHourRange(hours[0][1])}`
+		: hours.map((d) => `${formatWeekday(d[0])} ${formatHourRange(d[1])}`).join(', ')}
 </span>

@@ -1,5 +1,5 @@
 <script>
-	import { loadEvents, ostrichRoom } from '$lib/index.js';
+	import { ostrichRoom } from '$lib/index.js';
 	import { RESERVATIONS_URL } from '$lib/nav.js';
 	import WeekHours from '$lib/components/WeekHours.svelte';
 	import GoogleDrive from '$lib/components/GoogleDrive.svelte';
@@ -7,10 +7,8 @@
 	import HR from '$lib/components/HR.svelte';
 	import Image from '$lib/lightbox/Image.svelte';
 
-	let events = $state(undefined);
-	(async function () {
-		events = await loadEvents();
-	})();
+	let { data } = $props();
+	let { performances } = data;
 </script>
 
 <svelte:head>
@@ -32,7 +30,7 @@
 		</div>
 	</div>
 	<div class="hours-wrapper">
-		<WeekHours data={ostrichRoom} {events} />
+		<WeekHours data={ostrichRoom} {performances} />
 		<div style="text-align: center; font-style: italic; max-width: 420px;">
 			Now accepting <a href={RESERVATIONS_URL}>reservations</a>! Walk-ins always welcome.<br /><br
 			/>

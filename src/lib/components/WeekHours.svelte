@@ -1,26 +1,34 @@
 <script>
 	import { timeMonday, timeDay } from 'd3-time';
-	import { formatTimeRange, formatDay, formatDateShort } from '$lib/index.js';
-	let { data, events } = $props();
+	import {
+		formatHourRange,
+		formatTimeRange,
+		formatTime,
+		formatDay,
+		formatDateShort
+	} from '$lib/index.js';
+	let { data, performances } = $props();
 	const { hours, overrides } = data;
 
-	const start = timeMonday.floor(new Date());
-	const end = timeMonday.ceil(new Date());
+	const start = timeMonday();
+	const end = timeMonday.offset(start, 1);
 	const days = timeDay.range(start, end);
 
 	const getRegularHoursForDate = (date) => {
 		const h = hours.find((h) => h[0] === date.getDay());
 		if (!h || !h[1]) return '—';
-		return formatTimeRange(h[1]);
+		return formatHourRange(h[1]);
 	};
 
-	const override = (date) => {
-		return overrides.find((o) => +o[0] === +date);
-	};
+	const override = (date) => overrides.find((o) => +o[0] === +date);
 
-	const getEventsForDay = (date) => {
-		return events?.data.filter((d) => +date === +d.date) ?? [];
-	};
+	const getPerformancesForDay = (date) =>
+		(performances.filter((d) => +date === +timeDay(d.time)) ?? [])
+			.map(
+				(d) =>
+					`${d.act.name} (${d.endTime ? formatTimeRange([d.time, d.endTime]) : formatTime(d.time)})`
+			)
+			.join('; ');
 
 	const isToday = (day) => +timeDay(day) === +timeDay(new Date());
 </script>
@@ -30,11 +38,7 @@
 		<tr>
 			<th style="border-top: none; border-left: none; background: none;"></th>
 			<th style="min-width: 7em;">Hours</th>
-			{#if events?.future.length}
-				<th class="hide-mobile"
-					><div style="display: flex; justify-content: space-between;">Live music</div></th
-				>
-			{/if}
+			<th class="hide-mobile"><a href="/music">Live music</a></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -52,29 +56,19 @@
 				</td>
 				<td
 					>{getRegularHoursForDate(day)}{#if override(day)}<span class="notice"
-							>{#if override(day)[1]}{formatTimeRange(override(day)[1])}{:else}Closed{/if}</span
+							>{#if override(day)[1]}{formatHourRange(override(day)[1])}{:else}Closed{/if}</span
 						>{/if}
-					{#if getEventsForDay(day).length}
+					{#if getPerformancesForDay(day).length}
 						<div class="description show-mobile">
-							{getEventsForDay(day)
-								.map((d) => d.description)
-								.join(', ')}
+							{getPerformancesForDay(day)}
 						</div>
 					{/if}</td
 				>
-				{#if events?.future.length}
-					<td class="description hide-mobile">
-						{#each getEventsForDay(day) as event}
-							{event.description}
-							<br />
-						{/each}
-					</td>
-				{/if}
+				<td class="description hide-mobile">
+					{getPerformancesForDay(day)}
+				</td>
 			</tr>
 		{/each}
-		<tr>
-			<td colspan="3" style="text-align: center"><a href="#calendar">More events</a></td>
-		</tr>
 	</tbody>
 </table>
 

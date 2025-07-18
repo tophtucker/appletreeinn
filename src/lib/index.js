@@ -1,8 +1,6 @@
 // place files you want to import through the `$lib` alias in this folder.
 // e.g. import { buildings } from '$lib/index.js';
-import { csvParse } from 'd3-dsv';
-import { timeDay } from 'd3-time';
-import { timeParse, timeFormat } from 'd3-time-format';
+import { timeFormat } from 'd3-time-format';
 
 export const ostrichRoom = {
 	hours: [
@@ -24,62 +22,30 @@ export const ostrichRoom = {
 	]
 };
 
-export const baladi = {
-	hours: [
-		[6, [9, 14]],
-		[0, [9, 14]]
-	],
-	overrides: [new Date(2025, 0, 20), [9, 14]]
-};
-
-const parseDate = timeParse('%Y-%m-%d');
-
-export async function getSheet(gid) {
-	const url = `https://docs.google.com/spreadsheets/d/1BWPT2mLSwruoWHLiNzuOCT1flhFPk4aoa4KbGaN_c-Y/export?format=csv&gid=${gid}`;
-	let sheet;
-	try {
-		sheet = await (await fetch(url)).text();
-	} catch (err) {
-		console.error(err);
-		return [];
-	}
-	return csvParse(sheet);
-}
-
-export async function loadAnnouncements() {
-	return (await getSheet('604853803')).map((d) => ({
-		message: d.message,
-		from: parseDate(d.from),
-		until: parseDate(d.until),
-		page: d.page,
-		wavy: d.wavy === 'TRUE'
-	}));
-}
-
-export async function loadEvents() {
-	const data = (await getSheet('287995536')).map((d) => ({
-		date: parseDate(d.date),
-		description: d.description || 'TBD'
-	}));
-	const today = timeDay(new Date());
-	return {
-		data,
-		past: data.filter((d) => d.date < today),
-		future: data.filter((d) => d.date >= today)
-	};
-}
-
 export const formatDate = timeFormat('%a. %-m/%d');
 export const formatDay = timeFormat('%a.');
 export const formatDateShort = timeFormat('%-m/%d');
+export const formatTime = (d) => timeFormat('%-I:%M %p')(d).toLowerCase();
 
 const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
 const mod = (hour) => hour % 12;
 const fmt = (hour) => `${~~mod(hour)}${hour % 1 ? `:${(hour % 1) * 60}` : ''}`;
-export const formatTimeRange = (hours) =>
+// Takes in hour numbers
+export const formatHourRange = (hours) =>
 	hours.every((hour) => hour < 12 === hours[0] < 12)
 		? `${hours.map(fmt).join(' – ')} ${amPm(hours[0])}`
 		: hours.map((hour) => `${fmt(hour)} ${amPm(hour)}`).join(' – ');
+
+// Takes in real date objects
+export function formatTimeRange(range) {
+	const amPm = (d) => timeFormat('%p')(d).toLowerCase();
+	const hr = timeFormat('%-I');
+	const hrMin = timeFormat('%-I:%M');
+	const fmt = (d) => (d.getMinutes() ? hrMin(d) : hr(d));
+	return range.every((t) => amPm(t) === amPm(range[0]))
+		? `${range.map(fmt).join(' – ')} ${amPm(range[0])}`
+		: range.map((t) => `${fmt(t)} ${amPm(t)}`).join(' – ');
+}
 
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 export const formatWeekday = (d) => `${daysOfWeek[d]}.`;
