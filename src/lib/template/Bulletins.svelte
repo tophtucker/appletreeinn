@@ -18,7 +18,7 @@
 		<div class="bulletins-content">
 			{#each bulletins as b}
 				<div>
-					{b.text}{#if b.details}{' '}<small>More →</small>{/if}
+					{b.text}{#if b.details}{' '}<small>More&nbsp;→</small>{/if}
 				</div>
 			{/each}
 		</div>
