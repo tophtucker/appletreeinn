@@ -42,6 +42,7 @@
 		dialogPerformance = null;
 		dialogRef.close();
 	};
+	console.log(calendar.slice(0, 7));
 </script>
 
 <svelte:head>
@@ -90,7 +91,7 @@
 	</div>
 
 	<div class="calendar">
-		{#each calendar.slice(0, 7) as day}
+		{#each calendar.slice(0, 7) as { day }}
 			<div class="header">{fWeekday(day)}</div>
 		{/each}
 		{#each calendar as { day, performances }}
@@ -183,6 +184,7 @@
 	}
 	.calendar button:hover {
 		color: var(--blue);
+		background: none;
 	}
 	.performances {
 		display: flex;
