@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import Avaloch from '$lib/icons/Avaloch.svelte';
+	import ATI from '$lib/icons/ATI.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	import { getCurrentPage, BOOKING_URL } from '$lib/nav.js';
 	const currentPage = $derived(getCurrentPage($page));
@@ -10,10 +11,10 @@
 <header style={`--accent: ${currentPage?.section.color || 'var(--black)'};`}>
 	<div class="outer-header">
 		<button class="hamburger" onclick={toggleNav}><Icon icon="Hamburger" /></button>
+		<div class="tagline hide-medium">Lenox, Mass.</div>
 		<div class="inner-header">
-			<div>Lenox, Mass.</div>
-			<a href="/" class="home"><Avaloch style="width: 100%" /></a>
-			<div>A country inn</div>
+			<a href="/" class="home" style="width: 100%;"><ATI height="65" style="width: 100%" /></a>
+			<div class="tagline show-medium">Lenox, Mass.</div>
 		</div>
 		<a class="book cta" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a
 		>
@@ -56,23 +57,18 @@
 		gap: 1rem;
 		padding: 0 var(--gutter);
 	}
-	.inner-header {
-		display: grid;
-		grid-template-columns: 1fr max-content 1fr;
-		gap: 2rem;
+	.tagline {
 		font-size: 14px;
 		font-family: 'watkins';
+	}
+	.inner-header {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 		justify-content: space-between;
 		align-items: center;
-		padding: 3rem 2rem;
-		transform: rotate(-1deg);
-		/* text-align: center; */
-	}
-	.inner-header > div {
-		padding-top: 1em;
-	}
-	.inner-header > div:first-child {
-		text-align: right;
+		padding: 3rem 0;
+		text-align: center;
 	}
 
 	.subheader {
@@ -112,23 +108,22 @@
 	}
 
 	.hamburger {
-		visibility: hidden;
+		display: none;
+	}
+
+	.show-medium {
+		display: none;
 	}
 
 	@media (max-width: 1400px) {
 		.hamburger {
-			visibility: visible;
+			display: block;
 		}
-	}
-
-	@container (max-width: 1000px) {
-		.inner-header {
-			display: flex;
-			flex-direction: column;
-			gap: 0.5rem;
-		}
-		.inner-header > div:first-child {
+		.hide-medium {
 			display: none;
+		}
+		.show-medium {
+			display: block;
 		}
 	}
 
@@ -136,10 +131,14 @@
 		.home {
 			width: 40vw;
 		}
+		.outer-header {
+			grid-template-columns: 1fr 4fr 1fr;
+			gap: 0.5rem;
+		}
 		.inner-header {
-			gap: 0;
 			font-size: 12px;
 			padding: 2rem 0;
+			gap: 0;
 		}
 	}
 </style>
