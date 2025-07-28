@@ -121,10 +121,11 @@
 
 	<h2>Non-amenities</h2>
 	<p>
-		There are no TVs, no elevators, no brunch, no lunch, no dinner when the Ostrich Room is closed.
-		Sorry!! If you’re hungry or in need of entertainment we have lots of recommendations for <a
-			href="/activities/berkshires">around town</a
-		>!
+		There are no TVs, no elevators, no electric car charger, no brunch, and no lunch. On some
+		nights, there’s no dinner; check the <a href="/dining/ostrich-room">Ostrich Room</a> hours if
+		you’re counting on it. Sorry!! If you’re hungry or in need of entertainment we have lots of
+		recommendations for
+		<a href="/activities/berkshires">around town</a>!
 	</p>
 </div>
 

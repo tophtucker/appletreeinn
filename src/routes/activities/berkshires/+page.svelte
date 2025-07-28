@@ -95,5 +95,19 @@
 			For another rainy kid-friendly night, get fried chicken or cauliflower at Juju’s and then see
 			a movie at the Triplex.
 		</li>
+		<li>
+			If you’re not tired when the Ostrich Room kicks you out, the classic place to go next is Ombra
+			(5 minute drive to Lenox downtown).
+		</li>
+		<li>
+			Keep an eye out for the Berkshires’ industrial heritage hiding in plain sight. The William
+			Stanley Overlook on the Housatonic River Walk in Great Barrington commemorates the birthplace
+			of the Stanley water bottle. Berkshire Hathaway can trace half its name back to Berkshire Mill
+			No. 1 up in Adams, now an apartment complex. A former Crane Stationery headquarters is now a
+			multifunction event venue in Dalton, aptly named “The Stationery Factory”. Some streetlamps
+			trace back to George Westinghouse. Monument Mills and Rising Paper Mill are both historic
+			buildings. The Becket quarry, a good swimming hole if you’re down to scramble down some rocks,
+			was once quarried for Chester Blue granite.
+		</li>
 	</ul>
 </div>
