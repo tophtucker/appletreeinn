@@ -137,11 +137,8 @@
 	details {
 		margin-bottom: 2rem;
 	}
-	summary {
-		font-family: watkins;
-	}
 	details table {
-		padding-left: 10px;
+		padding: 1rem;
 	}
 	details table td {
 		padding: 0.25rem 0.5rem;
