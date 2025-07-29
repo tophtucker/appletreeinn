@@ -54,41 +54,8 @@
 </div>
 
 <style>
-	.comparison-table {
-		display: grid;
-		grid-template-columns: max-content 1fr 15px 1fr;
-		gap: 1rem 2rem;
-		margin-top: 4rem;
-	}
-	.comparison-table div,
-	.comparison-table h2 {
-		text-align: center;
-		margin: 0;
-	}
 	.comparison-table img {
 		border: 3px double black;
 		aspect-ratio: 5/3;
-	}
-	.header {
-		color: var(--gray);
-	}
-	.comparison-table div a.cta {
-		display: inline-flex;
-	}
-
-	@media (max-width: 800px) {
-		h2 {
-			font-size: 1rem;
-		}
-		.comparison-table {
-			grid-template-columns: 1fr 1fr;
-			margin-top: 2rem;
-		}
-		.header {
-			grid-column: span 2;
-			text-transform: uppercase;
-			font-size: smaller;
-			padding-top: 1rem;
-		}
 	}
 </style>

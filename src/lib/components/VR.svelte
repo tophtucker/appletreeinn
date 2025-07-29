@@ -15,6 +15,7 @@
 		grid-template-rows: 1fr 12px 1fr;
 		justify-items: center;
 		gap: 0.5rem;
+		height: 100%;
 	}
 	.vr div {
 		border: none;

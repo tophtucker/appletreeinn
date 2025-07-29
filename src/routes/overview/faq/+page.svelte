@@ -1,5 +1,5 @@
 <script>
-	import VR from '$lib/components/VR.svelte';
+	import XR from '$lib/components/XR.svelte';
 </script>
 
 <svelte:head>
@@ -52,31 +52,31 @@
 		40-minute walk (or 3-minute drive) to downtown Lenox, and there are basically zero taxis or
 		Ubers around.
 	</p>
-	<div class="comparison">
+	<div class="grid-or-flex trio">
 		<div>
 			<h3>From Boston</h3>
-			<p>
+			<div>
 				Two hours once you’re out of the city. Take the Mass Pike for 123 miles (90% of the drive).
 				Listen to “Sweet Baby James”. Stop at the 24/7 Charlton Service Plaza McDonald’s; beware the
 				D’Angelos rest stops.
-			</p>
+			</div>
 		</div>
-		<VR />
+		<XR />
 		<div>
 			<h3>From NYC</h3>
-			<p>
+			<div>
 				Two and a half once you’re out of the city. Take the Taconic for 91 miles (⅔ of the drive).
 				Try stopping at Troutbeck (+20 min) or Stissing House (+10 min) (check hours). The road
 				becomes winding as you get closer; watch for deer.
-			</p>
+			</div>
 		</div>
-		<VR />
+		<XR />
 		<div>
 			<h3>From Albany</h3>
-			<p>
+			<div>
 				Forty five minutes. It’s slightly prettier if you take NY-22 S through New Lebanon (+ 12
 				min) instead of the I-90 route.
-			</p>
+			</div>
 		</div>
 	</div>
 	<hr />
@@ -134,23 +134,21 @@
 </div>
 
 <style>
-	.comparison {
-		display: grid;
-		grid-template-columns: 1fr 12px 1fr 12px 1fr;
-		gap: 1rem;
-		text-align: center;
-		margin-top: 2rem;
-	}
-
-	.comparison h3 {
+	.grid-or-flex h3 {
 		margin: 0;
 	}
 
-	.comparison > div {
+	.grid-or-flex > div {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 		align-items: center;
+	}
+
+	@media (max-width: 800px) {
+		.grid-or-flex {
+			padding: 0 1rem;
+		}
 	}
 
 	ul {

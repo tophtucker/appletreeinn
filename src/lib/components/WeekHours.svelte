@@ -110,7 +110,7 @@
 	.manicule {
 		position: absolute;
 		left: -14px;
-		top: 6px;
+		top: 10px;
 		animation: wiggle 10s ease-in-out infinite;
 	}
 	.notice {

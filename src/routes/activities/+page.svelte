@@ -1,6 +1,5 @@
 <script>
-	import VR from '$lib/components/VR.svelte';
-	import HR from '$lib/components/HR.svelte';
+	import XR from '$lib/components/XR.svelte';
 	const items = [
 		{
 			slug: 'amenities',
@@ -38,22 +37,11 @@
 </svelte:head>
 
 <div class="inner">
-	<div class="hide-mobile">
-		<div class="trio horizontal">
-			{#each items as d, i}
-				{@render item(d)}
-				{#if i < items.length - 1}<VR />{/if}
-			{/each}
-		</div>
-	</div>
-
-	<div class="show-mobile">
-		<div class="trio vertical">
-			{#each items as d, i}
-				{@render item(d)}
-				{#if i < items.length - 1}<HR />{/if}
-			{/each}
-		</div>
+	<div class="grid-or-flex trio">
+		{#each items as d, i}
+			{@render item(d)}
+			{#if i < items.length - 1}<XR />{/if}
+		{/each}
 	</div>
 </div>
 
@@ -63,19 +51,10 @@
 		justify-content: center;
 		margin-top: 2rem;
 	}
-	.trio img {
+	img {
 		width: 200px;
 		height: 200px;
 		border-radius: 100%;
 		object-fit: cover;
-	}
-	.trio.horizontal {
-		display: grid;
-		gap: 1rem;
-		grid-template-columns: 1fr 15px 1fr 15px 1fr;
-	}
-	.trio.vertical {
-		display: flex;
-		flex-direction: column;
 	}
 </style>

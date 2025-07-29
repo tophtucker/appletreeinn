@@ -70,18 +70,13 @@
 {/snippet}
 
 <div class="inner">
+	<img src="/avaloch/img/wanda.jpg" alt="Wanda Houston performing live at the Ostrich Room" />
 	<p>
 		<a href="/ostrich-room">The Ostrich Room</a> features live music every week, drawing on the Berkshires’
 		rich history… Though this incarnation is only a few years old, we have people come in who tell us
 		they played here decades ago… something something… Johnny Irion, James Taylor played here in the
 		summer of 1970… Arlo Guthrie has been through… Claire once heard that Bob Dylan has been here. Stephanie
 		show we have the poster for, check out the poster when you visit. Randy Weston…
-	</p>
-	<p>
-		See <a href="https://instagram.com/appletreeinn">Instagram</a>
-		for previews and updates. Email Jenny Rubin at
-		<a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information about booking
-		acts.
 	</p>
 
 	<h2>Upcoming shows</h2>
@@ -103,6 +98,13 @@
 			</div>
 		{/each}
 	</div>
+
+	<p>
+		See <a href="https://instagram.com/appletreeinn">Instagram</a>
+		for previews and updates. Email Jenny Rubin at
+		<a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information about booking
+		acts.
+	</p>
 
 	<hr />
 
@@ -203,7 +205,7 @@
 	h3 {
 		margin: 0;
 	}
-	img {
+	.performance img {
 		border: 3px double black;
 		width: 200px;
 	}

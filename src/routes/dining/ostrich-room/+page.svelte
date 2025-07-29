@@ -68,7 +68,7 @@
 		<em>inglenook</em>. It gets its name from its chandelier of real ostrich eggs.
 	</p>
 
-	<div class="letter">
+	<div class="letter prose">
 		<p>
 			Our menu isn’t just a list of what we pour. It’s a reflection of the time, care, and heart
 			we’ve put into building something we hope feels like yours.
@@ -142,6 +142,9 @@
 		border: 1px solid var(--black);
 		padding: 2rem;
 		margin-top: 2rem;
+		border-radius: 3px;
+		transform: rotate(-1deg);
+		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 	}
 
 	@media (max-width: 420px) {
