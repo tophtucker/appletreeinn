@@ -73,7 +73,11 @@
 {/snippet}
 
 <div class="inner">
-	<img src="/avaloch/img/wanda.jpg" alt="Wanda Houston performing live at the Ostrich Room" />
+	<img
+		src="/avaloch/img/wanda.jpg"
+		alt="Wanda Houston performing live at the Ostrich Room"
+		class="intro"
+	/>
 	<div class="grid-or-flex" style="grid-template-columns: 4fr 1fr;">
 		<p>
 			People come in and say they first played in this room fifty years ago. The Berkshires have a
@@ -147,6 +151,11 @@
 </div>
 
 <style>
+	.intro {
+		aspect-ratio: 6/3;
+		object-fit: cover;
+	}
+
 	details {
 		margin-bottom: 2rem;
 	}
