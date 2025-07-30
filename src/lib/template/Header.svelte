@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Avaloch from '$lib/icons/Avaloch.svelte';
+	// import Avaloch from '$lib/icons/Avaloch.svelte';
 	import ATI from '$lib/icons/ATI.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	import { getCurrentPage, BOOKING_URL } from '$lib/nav.js';

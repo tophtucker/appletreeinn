@@ -1,4 +1,6 @@
 <script>
+	import { untrack } from 'svelte';
+	import { page } from '$app/stores';
 	import NavInner from './NavInner.svelte';
 	import Icon from '../icons/Icon.svelte';
 	let { toggleNav, mobileNav, data } = $props();
@@ -10,6 +12,11 @@
 		} else {
 			dialogRef.close();
 		}
+	});
+	$effect(() => {
+		// Close nav if open on page navigation
+		const path = $page.url.pathname;
+		if (untrack(() => mobileNav)) toggleNav();
 	});
 </script>
 

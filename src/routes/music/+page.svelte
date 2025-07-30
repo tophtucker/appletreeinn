@@ -42,7 +42,6 @@
 		dialogPerformance = null;
 		dialogRef.close();
 	};
-	console.log(calendar.slice(0, 7));
 </script>
 
 <svelte:head>
