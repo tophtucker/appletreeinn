@@ -66,13 +66,29 @@
 	</p>
 	<p>Hike Stevens Glen (4 min drive), a 1.1 mile loop leading to a beautiful waterfall.</p>
 
+	<h2>Industrial heritage</h2>
+
+	<p>
+		It’s not as suitable for sightseeing as the many Gilded Age mansions, but keep an eye out for
+		remnants of the Berkshires’ old mills and factories hiding in plain sight. The William Stanley
+		Overlook on the Housatonic River Walk in Great Barrington commemorates the birthplace of his and
+		George Westinghouse’s alternating current transformer (and of the Stanley water bottle). Some
+		streetlamps still trace back to Westinghouse. Berkshire Hathaway owes half its name to Berkshire
+		Mill No. 1 up in Adams, now an apartment complex. Monument Mills is “the last un-condofied mill
+		in the Berkshires” (used for photo shoots); Rising Paper Mill is still operating. A former Crane
+		Stationery headquarters is now a multifunction event venue in Dalton, aptly named “The
+		Stationery Factory”. The Becket quarry was once a major source of Chester Blue granite, and is
+		now a good swimming hole if you’re willing and able to scramble down some rocks.
+	</p>
+
 	<h2>Other pairings</h2>
 
 	<ul>
 		<li>Get brunch at No Comply and then tour Naumkeag.</li>
 		<li>
 			Get takeout sandwiches at Lost Lamb. There’s nowhere to sit, so do the Housatonic Flats
-			walking loop at eat your sandwich on a bench there.
+			walking loop at eat your sandwich on a bench there. (Or substitute Berkshire Mountain Bakery,
+			where Tartine founder Chad Robertson trained.)
 		</li>
 		<li>
 			Get a classic diner breakfast at Paige’s Place and then walk around Ashintully, the ruins of
@@ -98,16 +114,6 @@
 		<li>
 			If you’re not tired when the Ostrich Room kicks you out, the classic place to go next is Ombra
 			(5 minute drive to Lenox downtown).
-		</li>
-		<li>
-			Keep an eye out for the Berkshires’ industrial heritage hiding in plain sight. The William
-			Stanley Overlook on the Housatonic River Walk in Great Barrington commemorates the birthplace
-			of the Stanley water bottle. Berkshire Hathaway can trace half its name back to Berkshire Mill
-			No. 1 up in Adams, now an apartment complex. A former Crane Stationery headquarters is now a
-			multifunction event venue in Dalton, aptly named “The Stationery Factory”. Some streetlamps
-			trace back to George Westinghouse. Monument Mills and Rising Paper Mill are both historic
-			buildings. The Becket quarry, a good swimming hole if you’re down to scramble down some rocks,
-			was once quarried for Chester Blue granite.
 		</li>
 	</ul>
 </div>
