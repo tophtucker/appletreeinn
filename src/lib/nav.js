@@ -57,7 +57,7 @@ const nav = [
 		children: [
 			{ title: 'About us', slug: 'about-us' },
 			{ title: 'History', slug: 'history' },
-			{ title: 'Scrapbook', slug: 'scrapbook' }, // TODO: press
+			{ title: 'Press', slug: 'press' },
 			{ title: 'Newsletter', slug: 'newsletter' },
 			{ title: 'Policies', slug: 'policies' },
 			{ title: 'Jobs', slug: 'jobs' }

@@ -3,6 +3,7 @@
 	import { timeDay, timeSunday, timeMonth } from 'd3-time';
 	import { group, min, sort } from 'd3-array';
 
+	import HR from '$lib/components/HR.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	let { data } = $props();
 	const { performances } = data;
@@ -46,7 +47,10 @@
 
 <svelte:head>
 	<title>Live music • Apple Tree Inn • Lenox, MA</title>
-	<!-- <meta name="description" content="TODO" /> -->
+	<meta
+		name="description"
+		content="The Apple Tree Inn has several live music events every week in the Ostrich Room, carrying on a tradition of many decades"
+	/>
 </svelte:head>
 
 {#snippet card(p)}
@@ -70,13 +74,21 @@
 
 <div class="inner">
 	<img src="/avaloch/img/wanda.jpg" alt="Wanda Houston performing live at the Ostrich Room" />
-	<p>
-		<a href="/ostrich-room">The Ostrich Room</a> features live music every week, drawing on the Berkshires’
-		rich history… Though this incarnation is only a few years old, we have people come in who tell us
-		they played here decades ago… something something… Johnny Irion, James Taylor played here in the
-		summer of 1970… Arlo Guthrie has been through… Claire once heard that Bob Dylan has been here. Stephanie
-		show we have the poster for, check out the poster when you visit. Randy Weston…
-	</p>
+	<div class="grid-or-flex" style="grid-template-columns: 4fr 1fr;">
+		<p>
+			People come in and say they first played in this room fifty years ago. The Berkshires have a
+			rich musical tradition, we’re a little part of it! James Taylor played on the lawn in the
+			summer of 1970; Randy Weston would play here; Arlo Guthrie has come through; there’s a rumor
+			that Bob Dylan was once in attendance. We have a groovy poster from when “Stephanie” played
+			here when it was Alice’s. Johnny Irion revitalized the program a few years ago, and now we
+			generally have a show every night the bar is open.
+		</p>
+		<div style="border: 3px double black; padding: 1rem; margin: 1rem; text-align: center;">
+			<span style="font-family: watkins">THE OSTRICH ROOM</span><br /><br />W T F S
+		</div>
+	</div>
+
+	<HR />
 
 	<h2>Upcoming shows</h2>
 
@@ -105,7 +117,7 @@
 		acts.
 	</p>
 
-	<hr />
+	<HR />
 
 	<h2>Past shows</h2>
 

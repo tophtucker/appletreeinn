@@ -112,6 +112,12 @@
 			a movie at the Triplex.
 		</li>
 		<li>
+			Follow the “Arlo Guthrie’s Historic Garbage Trail Walk to Massacree HD” six miles through
+			Stockbridge and Great Barrington along the path described “Alice’s Restaurant Massacree”
+			(Alice being our former owner).
+		</li>
+		<!-- Pray -->
+		<li>
 			If you’re not tired when the Ostrich Room kicks you out, the classic place to go next is Ombra
 			(5 minute drive to Lenox downtown).
 		</li>
