@@ -1,5 +1,7 @@
 <script>
 	import XR from '$lib/components/XR.svelte';
+	import { ostrichRoom, formatDayRange } from '$lib/index.js';
+	const ostrichRange = formatDayRange(ostrichRoom.hours.map((d) => d[0]));
 </script>
 
 <svelte:head>
@@ -18,6 +20,18 @@
 			Restaurant” ran her third and final restaurant here, <em>Alice’s at Avaloch</em>. In 1983 it
 			became the
 			<em>Apple Tree Inn</em>.
+		</p>
+		<p>
+			We have thirteen unique guest rooms in the historic Main House, plus twenty-one more basic
+			rooms in the seasonal Lodge. The Main House has the front desk; the lobby; the porch; the
+			quirky “round room”; and our tavern, The Ostrich Room, which is open to the public {ostrichRange}
+			for food, drinks, and live music.
+		</p>
+		<p>
+			We’re just outside the town of Lenox and close to Stockbridge and Great Barrington, at the far
+			Western end of the Massachusetts Turnpike, almost at the New York border. The area is
+			generally known for performing arts, historic homes, wellness, and hiking; we’re close to the
+			Appalachian Trail.
 		</p>
 		<p>
 			The summer is the peak season. From late June until early September, the world-famous
@@ -40,7 +54,7 @@
 			(or more often cocktail) by the lobby fire, the outdoor fire pit, the tavern’s fireplace <em
 				>inglenook</em
 			>, or one of our four guest rooms with real wood-burning private fireplaces. You know Melville
-			wrote Moby Dick right up the road, right? What’s your excuse?
+			wrote Moby Dick right up the road, right? What’re you doing?
 		</p>
 	</div>
 	<hr />
