@@ -2,6 +2,8 @@
 	import Image from '$lib/lightbox/Image.svelte';
 	import VR from '$lib/components/VR.svelte';
 	import { RESERVATIONS_URL } from '$lib/nav.js';
+	import { ostrichRoom, formatDayRange } from '$lib/index.js';
+	const ostrichRange = formatDayRange(ostrichRoom.hours.map((d) => d[0]));
 </script>
 
 <svelte:head>
@@ -42,7 +44,7 @@
 
 		<div class="header">Hours</div>
 		<div>Daily 8 – 10 a.m.</div>
-		<div>Wed. – Sat. evenings</div>
+		<div>{ostrichRange} evenings</div>
 
 		<div class="header">Location</div>
 		<div>Round room (Main House)</div>
@@ -50,7 +52,7 @@
 
 		<div class="header">Price</div>
 		<div>Included with room</div>
-		<div>$$</div>
+		<div>~$8 beers, ~$15 cocktails, ~$22 entrées; no cover charge</div>
 
 		<div class="header">Reservations</div>
 		<div>None</div>
