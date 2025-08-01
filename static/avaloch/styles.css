@@ -109,6 +109,7 @@ a.cta {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	background: white;
 }
 
 a.cta:hover,

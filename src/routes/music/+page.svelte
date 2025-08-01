@@ -2,35 +2,36 @@
 	import { timeFormat } from 'd3-time-format';
 	import { timeDay, timeSunday, timeMonth } from 'd3-time';
 	import { group, min, sort } from 'd3-array';
+	import { formatTime, formatTimeRange } from '$lib/index.js';
 
+	import OstrichRoom from '$lib/components/OstrichRoom.svelte';
 	import HR from '$lib/components/HR.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	let { data } = $props();
 	const { performances } = data;
 
 	const threshold = timeDay();
-	const past = performances.filter((d) => d.time < threshold);
-	const future = performances.filter((d) => d.time >= threshold);
+	const past = performances.filter((d) => d.startTime < threshold);
+	const future = performances.filter((d) => d.startTime >= threshold);
 
 	const upcoming = future.slice(0, 4);
 
-	const grouped = group(future, (d) => timeDay(d.time));
-	const start = timeSunday(min(future, (d) => d.time));
+	const grouped = group(future, (d) => timeDay(d.startTime));
+	const start = timeSunday(min(future, (d) => d.startTime));
 	const calendar = timeDay
 		.range(start, timeDay.offset(start, 28))
 		.map((day) => ({ day, performances: grouped.get(day) }));
 
 	const pastMonths = sort(
-		[...group(past, (d) => timeMonth(d.time))].map(([month, performances]) => ({
+		[...group(past, (d) => timeMonth(d.startTime))].map(([month, performances]) => ({
 			month,
-			performances: sort(performances, (d) => -d.time)
+			performances: sort(performances, (d) => -d.startTime)
 		})),
 		(d) => -d.month
 	);
 
 	const fWeekday = timeFormat('%a');
 	const fDate = timeFormat('%B %-d');
-	const fTime = timeFormat('%-I:%M %p');
 	const fMonth = timeFormat('%B %Y');
 
 	let dialogRef;
@@ -55,20 +56,21 @@
 
 {#snippet card(p)}
 	<div class="performance">
-		<div class="time">
-			<h3>{fWeekday(p.time)}.</h3>
-			<div>{fDate(p.time)}</div>
-			<div>{fTime(p.time)}</div>
-		</div>
-		<div>
-			<h3>{p.act.name}</h3>
-			{#if p.note}<strong>{p.note}</strong>{/if}
-			{@html p.act.description}
-			{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
-		</div>
 		{#if p.act.image}
 			<img src={p.act.image} alt={p.act.name} />
 		{/if}
+		<div class="time">
+			{fWeekday(p.startTime)}. {fDate(p.startTime)},
+			{p.endTime ? formatTimeRange([p.startTime, p.endTime]) : formatTime(p.startTime)}
+		</div>
+		<div class="name">
+			<h3>{p.act.name}</h3>
+			{#if p.note}<strong>{p.note}</strong>{/if}
+		</div>
+		<div class="bio">
+			{@html p.act.description}
+			{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
+		</div>
 	</div>
 {/snippet}
 
@@ -78,18 +80,16 @@
 		alt="Wanda Houston performing live at the Ostrich Room"
 		class="intro"
 	/>
-	<div class="grid-or-flex" style="grid-template-columns: 4fr 1fr;">
+	<div class="grid-or-flex" style="grid-template-columns: 3fr 1fr; margin-top: 1rem;">
 		<p>
-			People come in and say they first played in this room fifty years ago. The Berkshires have a
-			rich musical tradition, we’re a little part of it! James Taylor played on the lawn in the
-			summer of 1970; Randy Weston would play here; Arlo Guthrie has come through; there’s a rumor
-			that Bob Dylan was once in attendance. We have a groovy poster from when “Stephanie” played
-			here when it was Alice’s. Johnny Irion revitalized the program a few years ago, and now we
-			generally have a show every night the bar is open.
+			People come into our tavern and say they first played in it fifty years ago. The Berkshires
+			have a rich musical tradition, we’re a little part of it! James Taylor played on the lawn in
+			the summer of 1970; Randy Weston would play here; Arlo Guthrie has come through; there’s a
+			rumor that Bob Dylan was once in attendance. We have a groovy poster from when “Stephanie”
+			played here when it was Alice’s. Johnny Irion revitalized the program a few years ago, and now
+			we generally have a show every night the bar is open.
 		</p>
-		<div style="border: 3px double black; padding: 1rem; margin: 1rem; text-align: center;">
-			<span style="font-family: watkins">THE OSTRICH ROOM</span><br /><br />W T F S
-		</div>
+		<OstrichRoom />
 	</div>
 
 	<HR />
@@ -100,7 +100,7 @@
 		{#each upcoming as p}{@render card(p)}{/each}
 	</div>
 
-	<div class="calendar">
+	<div class="calendar hide-mobile">
 		{#each calendar.slice(0, 7) as { day }}
 			<div class="header">{fWeekday(day)}</div>
 		{/each}
@@ -108,11 +108,15 @@
 			<div class={+day === +timeDay() ? 'today' : ''}>
 				<div class="date">{day.getDate() === 1 ? fDate(day) : day.getDate()}</div>
 				{#each performances as p}
-					<button onclick={() => open(p)}><small>{fTime(p.time)}</small><br /> {p.act.name}</button>
+					<button onclick={() => open(p)}
+						><small>{formatTime(p.startTime)}</small><br /> {p.act.name}</button
+					>
 				{/each}
 			</div>
 		{/each}
 	</div>
+
+	<div class="upcoming show-mobile"></div>
 
 	<p>
 		See <a href="https://instagram.com/appletreeinn">Instagram</a>
@@ -132,8 +136,8 @@
 				<tbody>
 					{#each performances as p}
 						<tr>
-							<td>{fWeekday(p.time)}. {fDate(p.time)}</td>
-							<td>{fTime(p.time)}</td>
+							<td>{fWeekday(p.startTime)}. {fDate(p.startTime)}</td>
+							<td>{formatTime(p.startTime)}</td>
 							<td>{p.act.name}</td>
 						</tr>
 					{/each}
@@ -212,22 +216,25 @@
 	}
 	.performance {
 		display: flex;
-		gap: 2rem;
-		align-items: start;
+		flex-direction: column;
+		gap: 0.5rem;
 	}
 	.performance .time {
 		min-width: 4em;
 	}
-	.genre {
+	.performance .genre {
 		font-style: italic;
 		color: var(--gray);
 	}
-	h3 {
+	.performance .bio {
+		padding-left: 2rem;
+	}
+	.performance h3 {
 		margin: 0;
 	}
 	.performance img {
-		border: 3px double black;
-		width: 200px;
+		width: 100%;
+		max-width: 400px;
 	}
 	dialog {
 		max-width: 720px;

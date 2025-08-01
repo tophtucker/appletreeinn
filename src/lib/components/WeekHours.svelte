@@ -23,10 +23,10 @@
 	const override = (date) => overrides.find((o) => +o[0] === +date);
 
 	const getPerformancesForDay = (date) =>
-		(performances.filter((d) => +date === +timeDay(d.time)) ?? [])
+		(performances.filter((d) => +date === +timeDay(d.startTime)) ?? [])
 			.map(
 				(d) =>
-					`${d.act.name} (${d.endTime ? formatTimeRange([d.time, d.endTime]) : formatTime(d.time)})`
+					`${d.act.name} (${d.endTime ? formatTimeRange([d.startTime, d.endTime]) : formatTime(d.startTime)})`
 			)
 			.join('; ');
 

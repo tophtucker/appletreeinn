@@ -5,7 +5,7 @@ import { isoParse } from 'd3-time-format';
 
 export const sanity = createClient({
 	projectId: 'lxtjf1cx',
-	dataset: 'production',
+	dataset: 'prod',
 	apiVersion: '2024-01-01',
 	useCdn: false
 });
@@ -13,9 +13,11 @@ export const sanity = createClient({
 const builder = imageUrlBuilder(sanity);
 
 export function parsePerformance(p) {
+	if (!p) return null;
 	if (p.act?.description) p.act.description = toHTML(p.act.description);
 	if (p.act?.image) p.act.image = builder.image(p.act.image).url();
-	p.time = isoParse(p.time);
+	p.startTime = isoParse(p.startTime);
+	p.endTime = p.endTime ? isoParse(p.endTime) : null;
 	return p;
 }
 

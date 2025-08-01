@@ -69,6 +69,16 @@
 
 	<h2>Press Kit</h2>
 
+	<p>
+		The Apple Tree Inn is a Victorian inn in Lenox, Massachusetts. Originally built in 1885 and
+		operating as a hotel since 1952, the 21-acre hilltop property offers 34 guest rooms, a charming
+		living room with books and board games, six wood-burning fireplaces, and a pool with panoramic
+		views of the Berkshires. The wood-paneled tavern, the Ostrich Room, features live music,
+		handcrafted seasonal cocktails, and elevated bar food, with outdoor dining also available on our
+		front porch. Guests enjoy a locally sourced complimentary continental breakfast buffet each
+		morning and can walk to Tanglewood or Kripalu in under ten minutes.
+	</p>
+
 	<table>
 		<tbody>
 			<tr><td>Owner</td><td><a href="/about/claire">Claire Collery</a> (April 2024–)</td></tr>
@@ -77,11 +87,9 @@
 			<tr><td>Main House built</td><td>1885</td></tr>
 			<tr><td>Tavern added</td><td>1899</td></tr>
 			<tr><td>Opened as an inn</td><td>1952</td></tr>
-			<tr><td>Architect</td><td>H. Neill Wilson (Shadowbrook)</td></tr>
+			<tr><td>Architect</td><td>H. Neill Wilson</td></tr>
 			<tr
-				><td>Notable past owners</td><td
-					>Cecile Bristed (Astor)<br />Roy Rappaport<br />Alice Broch</td
-				></tr
+				><td>Notable past owners</td><td>Cecile Bristed<br />Roy Rappaport<br />Alice Broch</td></tr
 			>
 		</tbody>
 	</table>

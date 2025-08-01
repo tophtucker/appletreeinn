@@ -1,15 +1,18 @@
 import { sanity, parsePerformance, parseBulletin } from '$lib/sanity.js';
 
-const MUSIC_QUERY = `*[_type == "performance" && time > now()] | order(time asc) [0] {
+const MUSIC_QUERY = `*[_type == "performance" && startTime > now()] | order(startTime asc) [0] {
   _id,
-  time,
+  startTime,
+  endTime,
+  noTime,
   note,
   act->{
     _id,
     name,
     genre,
     description,
-    image
+    image,
+    youtube
   }
 }`;
 

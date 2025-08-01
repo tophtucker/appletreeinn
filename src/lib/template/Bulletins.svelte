@@ -18,7 +18,7 @@
 		<div class="bulletins-content">
 			{#each bulletins as b}
 				<div>
-					{b.text}{#if b.details}{' '}<small>More&nbsp;→</small>{/if}
+					{b.text}{#if b.details}…{' '}<small>(more)</small>{/if}
 				</div>
 			{/each}
 		</div>
@@ -57,10 +57,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-	}
-
-	small {
-		text-transform: uppercase;
 	}
 
 	.details-wrapper {

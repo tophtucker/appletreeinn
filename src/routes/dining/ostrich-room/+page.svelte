@@ -21,22 +21,21 @@
 
 <div class="inner">
 	<div class="intro">
-		<div>Drinks • Food • Music</div>
 		<h1>The Ostrich Room</h1>
-		<div>
-			<div><Pin /> <a href="https://g.co/kgs/7ueSZgy">Google Maps</a></div>
-			<a class="cta" href={RESERVATIONS_URL}>Make a reservation</a>
-			<div>(413) 637-1910</div>
-		</div>
+		<div>Drinks • Food • Music</div>
 	</div>
+	<div class="links">
+		<a href="https://g.co/kgs/7ueSZgy">Google Maps</a>
+		<a class="cta" href={RESERVATIONS_URL}>Make a reservation</a>
+		<div>(413) 637-1910</div>
+	</div>
+
 	<div class="hours-wrapper">
 		<WeekHours data={ostrichRoom} {performances} />
 		<div style="text-align: center; font-style: italic; max-width: 420px;">
-			Now accepting <a href={RESERVATIONS_URL}>reservations</a>! Walk-ins always welcome.<br /><br
-			/>
-			Reservations are for the Ostrich Room only. Service is available in other areas — patio, front
-			porch, and parlor — but they are “first come, first served”.<br /><br />
-			Feel free to call the front desk at 413-637-1910 for help or to make a reservation.
+			Reservations optional; walk-ins always welcome. Reservations are for the Ostrich Room only.
+			Service is available in other areas — patio, front porch, and parlor — but they are “first
+			come, first served”.
 		</div>
 	</div>
 	<HR />
@@ -108,33 +107,28 @@
 		background-position: 50% 30%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
+		text-align: center;
 		padding: 2rem 1rem;
 		color: white;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		position: relative;
-		min-height: 500px;
+		min-height: 400px;
 		font-family: watkins;
 		color: white;
 	}
 
 	.intro div {
-		opacity: 0.8;
 		text-align: center;
 		display: flex;
 		align-items: center;
 	}
 
-	.intro a {
-		color: inherit;
-	}
-
 	h1 {
-		font-size: 3vw;
+		font-size: 3rem;
 		text-shadow: 3px 3px 3px black;
-		margin: 3em 1em 3em 1em;
 	}
 
 	.letter {
@@ -152,6 +146,14 @@
 			font-size: small;
 			flex-direction: column;
 		}
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 2rem 0;
+		gap: 2rem;
 	}
 
 	.hours-wrapper {
@@ -173,21 +175,18 @@
 		width: 100%;
 	}
 
-	.cta {
-		display: block;
-		border: 1px solid var(--brown);
-		border-radius: 5px;
-		padding: 0.5em 1em;
-		margin: 1em;
-		text-decoration: none;
-		color: var(--brown) !important;
-		background-color: var(--tan);
-	}
-
 	@media (max-width: 800px) {
 		.menus {
 			display: flex;
 			flex-direction: column;
+		}
+
+		.links {
+			flex-direction: column;
+		}
+
+		h1 {
+			font-size: 2rem;
 		}
 	}
 

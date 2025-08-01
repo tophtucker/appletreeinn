@@ -1,15 +1,18 @@
 import { sanity, parsePerformance } from '$lib/sanity.js';
 
-const QUERY = `*[_type == "performance"] | order(time asc) {
+const QUERY = `*[_type == "performance"] | order(startTime asc) {
   _id,
-  time,
+  startTime,
+  endTime,
+  noTime,
   note,
   act->{
     _id,
     name,
     genre,
     description,
-    image
+    image,
+    youtube
   }
 }`;
 

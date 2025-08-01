@@ -6,7 +6,7 @@
 <a href="/music">
 	<h6>Live music</h6>
 	{#if nextPerformance}
-		{formatDate(nextPerformance.time)}: {nextPerformance.act.name}.
+		{formatDate(nextPerformance.startTime)}: {nextPerformance.act.name}.
 	{:else}
 		See Instagram for updates.
 	{/if}
