@@ -35,13 +35,15 @@ export const nodes = [
 	() => import('./nodes/31'),
 	() => import('./nodes/32'),
 	() => import('./nodes/33'),
-	() => import('./nodes/34')
+	() => import('./nodes/34'),
+	() => import('./nodes/35')
 ];
 
 export const server_loads = [0];
 
 export const dictionary = {
 		"/": [2],
+		"/about-us/[...catchall]": [~12],
 		"/about": [~3],
 		"/about/about-us": [4],
 		"/about/claire": [5],
@@ -51,29 +53,29 @@ export const dictionary = {
 		"/about/policies": [9],
 		"/about/press": [10],
 		"/about/scrapbook": [11],
-		"/activities": [12],
-		"/activities/amenities": [13],
-		"/activities/berkshires": [14],
-		"/activities/tanglewood": [15],
-		"/baladi": [~16],
-		"/career": [~17],
-		"/dining_ati/[...catchall]": [~20],
-		"/dining": [18],
-		"/dining/ostrich-room": [~19],
-		"/explore": [~21],
-		"/landing/review": [22],
-		"/music": [~23],
-		"/offers": [~24],
-		"/ostrich-room": [~25],
-		"/overview/faq": [26],
-		"/overview/gallery": [27],
-		"/overview/map": [28],
-		"/restaurants": [~29],
-		"/rooms": [30],
-		"/rooms/lodge": [31],
-		"/rooms/main-house": [32],
-		"/termsandcondition": [~33],
-		"/weddings-events": [34]
+		"/activities": [13],
+		"/activities/amenities": [14],
+		"/activities/berkshires": [15],
+		"/activities/tanglewood": [16],
+		"/baladi": [~17],
+		"/career": [~18],
+		"/dining_ati/[...catchall]": [~21],
+		"/dining": [19],
+		"/dining/ostrich-room": [~20],
+		"/explore": [~22],
+		"/landing/review": [23],
+		"/music": [~24],
+		"/offers": [~25],
+		"/ostrich-room": [~26],
+		"/overview/faq": [27],
+		"/overview/gallery": [28],
+		"/overview/map": [29],
+		"/restaurants": [~30],
+		"/rooms": [31],
+		"/rooms/lodge": [32],
+		"/rooms/main-house": [33],
+		"/termsandcondition": [~34],
+		"/weddings-events": [35]
 	};
 
 export const hooks = {
