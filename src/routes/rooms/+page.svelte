@@ -28,7 +28,7 @@
 		<div><a class="cta" href="/rooms/lodge">See rooms</a></div>
 
 		<div class="header hide-mobile"></div>
-		<img src="heropics/driveway.jpg" alt="Main House" />
+		<img src="avaloch/img/main-house.jpg" alt="Main House" />
 		<img src="heropics/summer-annex.jpg" alt="Lodge" />
 
 		<div class="header">Built</div>

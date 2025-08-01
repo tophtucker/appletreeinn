@@ -16,7 +16,7 @@
 		<h3>1.</h3>
 		<div class="img-wrapper">
 			<Image
-				src="/avaloch/img/map-lower-lot.jpg"
+				src="/avaloch/img/lower-parking.jpg"
 				alt="1. Lower parking lot"
 				class="square"
 				style="width: 100%"
@@ -49,7 +49,7 @@
 		<h3>3.</h3>
 		<div class="img-wrapper">
 			<Image
-				src="/avaloch/img/wanda.jpg"
+				src="/avaloch/img/ostrich-exterior.jpg"
 				alt="3. The Ostrich Room"
 				class="square"
 				style="width: 100%"

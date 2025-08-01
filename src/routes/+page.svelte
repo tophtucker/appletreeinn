@@ -10,17 +10,21 @@
 	/>
 </svelte:head>
 
-<div class="inner">
+<div class="inner main">
+	<img src="/avaloch/img/hero-drone.jpg" alt="The Apple Tree Inn’s Main House" />
 	<div class="img-pair">
 		<img src="./avaloch/img/door.jpg" alt="Door" />
 		<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" />
 	</div>
-	<div class="section"><GalleryGrid /></div>
+	<GalleryGrid />
+	<img src="/avaloch/img/porch-breakfast.jpg" alt="Breakfast on the porch" />
 </div>
 
 <style>
-	.section {
-		margin: 1rem 0;
+	.main {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 	.img-pair {
 		display: grid;

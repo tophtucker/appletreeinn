@@ -1,5 +1,6 @@
 <script>
 	import Image from '$lib/lightbox/Image.svelte';
+	import HR from '$lib/components/HR.svelte';
 </script>
 
 <svelte:head>
@@ -83,6 +84,8 @@
 			parts of today’s offerings. Only has information about the current day.
 		</li>
 	</ul>
+	<HR />
+	<Image src="/avaloch/img/tanglewood-walk.jpg" />
 </div>
 
 <style>
