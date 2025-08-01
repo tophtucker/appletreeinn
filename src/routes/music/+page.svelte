@@ -30,9 +30,19 @@
 		(d) => -d.month
 	);
 
+	const futureMonths = sort(
+		[...group(future.slice(4), (d) => timeMonth(d.startTime))].map(([month, performances]) => ({
+			month,
+			performances: sort(performances, (d) => -d.startTime)
+		})),
+		(d) => -d.month
+	);
+
 	const fWeekday = timeFormat('%a');
 	const fDate = timeFormat('%B %-d');
 	const fMonth = timeFormat('%B %Y');
+	const fTime = (p) =>
+		p.endTime ? formatTimeRange([p.startTime, p.endTime]) : formatTime(p.startTime);
 
 	let dialogRef;
 	let dialogPerformance = $state(null);
@@ -61,7 +71,7 @@
 		{/if}
 		<div class="time">
 			{fWeekday(p.startTime)}. {fDate(p.startTime)},
-			{p.endTime ? formatTimeRange([p.startTime, p.endTime]) : formatTime(p.startTime)}
+			{fTime(p)}
 		</div>
 		<div class="name">
 			<h3>{p.act.name}</h3>
@@ -72,6 +82,25 @@
 			{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
 		</div>
 	</div>
+{/snippet}
+
+{#snippet monthSummary({ month, performances })}
+	<details>
+		<summary>{fMonth(month)}</summary>
+		<table>
+			<tbody>
+				{#each performances as p}
+					<tr>
+						<td>{fWeekday(p.startTime)}. {fDate(p.startTime)}</td>
+						<td>{fTime(p)}</td>
+						<td
+							>{p.act.name}{#if p.note}<br /><small>{p.note}</small>{/if}</td
+						>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	</details>
 {/snippet}
 
 <div class="inner">
@@ -116,7 +145,12 @@
 		{/each}
 	</div>
 
-	<div class="upcoming show-mobile"></div>
+	<div class="upcoming show-mobile">
+		<h3>More upcoming shows</h3>
+		{#each futureMonths as m}
+			{@render monthSummary(m)}
+		{/each}
+	</div>
 
 	<p>
 		See <a href="https://instagram.com/appletreeinn">Instagram</a>
@@ -129,21 +163,8 @@
 
 	<h2>Past shows</h2>
 
-	{#each pastMonths as { month, performances }}
-		<details>
-			<summary>{fMonth(month)}</summary>
-			<table>
-				<tbody>
-					{#each performances as p}
-						<tr>
-							<td>{fWeekday(p.startTime)}. {fDate(p.startTime)}</td>
-							<td>{formatTime(p.startTime)}</td>
-							<td>{p.act.name}</td>
-						</tr>
-					{/each}
-				</tbody>
-			</table>
-		</details>
+	{#each pastMonths as m}
+		{@render monthSummary(m)}
 	{/each}
 
 	<dialog bind:this={dialogRef}>
@@ -169,6 +190,7 @@
 	details table td {
 		padding: 0.25rem 0.5rem;
 		min-width: 6rem;
+		vertical-align: top;
 	}
 
 	.calendar {
