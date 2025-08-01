@@ -75,7 +75,7 @@
 		</div>
 		<div class="name">
 			<h3>{p.act.name}</h3>
-			{#if p.note}<strong>{p.note}</strong>{/if}
+			{#if p.note}{p.note}{/if}
 		</div>
 		<div class="bio">
 			{@html p.act.description}
@@ -168,7 +168,9 @@
 	{/each}
 
 	<dialog bind:this={dialogRef}>
-		<div class="button-wrapper"><button onclick={close}><Icon icon="Close" /></button></div>
+		<div class="button-wrapper">
+			Show<button onclick={close}><Icon icon="Close" /></button>
+		</div>
 		{#if dialogPerformance}
 			{@render card(dialogPerformance)}
 		{/if}
@@ -263,8 +265,10 @@
 	}
 	dialog .button-wrapper {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
+		align-items: center;
 		margin-bottom: 1rem;
+		font-family: watkins;
 	}
 	dialog button {
 		width: 2rem;
