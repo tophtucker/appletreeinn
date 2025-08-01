@@ -24,12 +24,12 @@
 
 		<div class="header hide-mobile"></div>
 		<Image
-			src="/heropics/baladi2.jpg"
-			style="width: 200px; height: 200px; object-fit: cover; border: 3px double black; border-radius: 100%; margin: 0 auto;"
+			src="/avaloch/img/continental-breakfast.jpg"
+			style="width: 260px; height: 260px; object-fit: cover; border: 3px double black; margin: 0 auto;"
 		/>
 		<Image
-			src="/ostrich-room/fireplace.jpg"
-			style="width: 200px; height: 200px; object-fit: cover; border: 3px double black; border-radius: 100%; margin: 0 auto;"
+			src="/avaloch/img/ostrich-dining.jpg"
+			style="width: 260px; height: 260px; object-fit: cover; border: 3px double black; margin: 0 auto;"
 		/>
 
 		<div class="header">Offerings</div>
