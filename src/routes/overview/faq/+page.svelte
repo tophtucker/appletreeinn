@@ -37,9 +37,9 @@
 			The summer is the peak season. From late June until early September, the world-famous
 			Tanglewood music festival across the street has concerts almost every day. Not just the Boston
 			Symphony Orchestra in residence, or the popular artists series featuring the likes of James
-			Taylor and John Legend; our personal favorite is to pop into the free open rehearsals. Or you
-			lifelong learners can try a lecture! For a swim, jump into our pool, with the best view on the
-			property, or drive three minutes to the Stockbridge Bowl.
+			Taylor and John Legend; our personal favorite is to pop into the casual open rehearsals. Or
+			you lifelong learners can try a lecture! For a swim, jump into our pool, with the best view on
+			the property, or drive three minutes to the Stockbridge Bowl.
 		</p>
 		<p>
 			In the fall, visitors tend to relax and “peep” the spectacular foliage. We can recommend a
