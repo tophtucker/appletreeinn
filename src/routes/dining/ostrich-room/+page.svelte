@@ -79,11 +79,11 @@
 		</p>
 		<p>
 			We hope you find something familiar here — but more than that, we hope you find something
-			unexpected. Something that wages you gently (or not so gently) out of your usual go-to. That’s
-			the fun part. The good part.
+			unexpected. Something that nudeges you gently (or not so gently) out of your usual go-to.
+			That’s the fun part. The good part.
 		</p>
 		<p>
-			This whole project is for the community — for the regulars no stay too long (please keep
+			This whole project is for the community — for the regulars who stay too long (please keep
 			staying), the newcomers who ask good questions, and everyone in between. You’re why we do
 			this. You’re what keeps the lights on and the ideas flowing. So thank you. For showing up. For
 			trusting us with your time and your taste buds.
