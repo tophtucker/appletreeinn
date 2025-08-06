@@ -79,7 +79,7 @@
 		</p>
 		<p>
 			We hope you find something familiar here — but more than that, we hope you find something
-			unexpected. Something that nudeges you gently (or not so gently) out of your usual go-to.
+			unexpected. Something that nudges you gently (or not so gently) out of your usual go-to.
 			That’s the fun part. The good part.
 		</p>
 		<p>
