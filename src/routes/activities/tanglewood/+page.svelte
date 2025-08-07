@@ -37,8 +37,9 @@
 	<p>
 		To take full advantage of staying so close, we generally don’t recommend driving somewhere else
 		to get dinner before a show. But if you are driving, we recommend parking in the West or Upper
-		West lots. After the show, Tanglewood traffic cops often make West St. one-way going into town,
-		so we like to avoid you taking that detour through town before getting back to your room.
+		West lots. After the show, Tanglewood traffic cops often make West St. a one-way street, so
+		guests exiting other lots may have to take a detour through town before they get back to the
+		Apple Tree.
 	</p>
 	<h2>Key Tanglewood spots</h2>
 	<table class="walk">

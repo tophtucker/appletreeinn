@@ -78,7 +78,7 @@
 			<h3>Upper parking lot</h3>
 			<p>
 				The larger upper parking lot is closer to the lodge, and available as overflow parking for
-				everyone. It’s TK steps down from there to the lodge entrance.
+				everyone. It’s 12 steps down from there to the lodge entrance.
 			</p>
 		</div>
 	</div>

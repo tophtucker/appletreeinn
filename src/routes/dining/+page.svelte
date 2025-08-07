@@ -35,11 +35,11 @@
 		/>
 
 		<div class="header">Offerings</div>
-		<div>Toast, fruit, hard-boiled eggs (no hot food)</div>
+		<div>Buffet featuring toast, fruit, hard-boiled eggs (no hot food)</div>
 		<div>Beer, cocktails, elevated tavern classics</div>
 
 		<div class="header">Open to</div>
-		<div>Guests</div>
+		<div>Guests only</div>
 		<div>Guests and public</div>
 
 		<div class="header">Hours</div>

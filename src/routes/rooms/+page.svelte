@@ -44,8 +44,8 @@
 		<div>Queen or 2 double</div>
 
 		<div class="header">Amenities</div>
-		<div>Front desk, tavern, lobby, tea & coffee station</div>
-		<div>Tea & coffee station</div>
+		<div>Front desk, tavern, lobby, coffee & tea station</div>
+		<div>Coffee & tea station</div>
 
 		<div class="header">Open</div>
 		<div>All year</div>

@@ -108,7 +108,7 @@
 			backgammon, cribbage, or cards.
 		</li>
 		<li>
-			Instead of sitting a table in the Ostrich Room, sit at a table in the lobby so that you can
+			Instead of sitting at a table in the Ostrich Room, sit at a table in the lobby so that you can
 			easily hear your dinner conversation, but you still get the Ostrich Room live music vibes
 			wafting out to you.
 		</li>

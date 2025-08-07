@@ -111,13 +111,13 @@ export const buildings = [
 					'main-house/2/_XCS2621.jpg',
 					'main-house/2/_XCS2624.jpg'
 				],
-				features: 'Working wood-burning fireplace, Balcony with seating, Large room',
+				features: 'Wood-burning fireplace, Balcony with seating, Large room',
 				caveats: null,
 				tags: [
 					'1 king',
 					'Sleeps 2',
 					'Beautiful views of the hills',
-					'Working wood-burning fireplace',
+					'Wood-burning fireplace',
 					'Balcony with seating',
 					'Large room'
 				]
@@ -131,9 +131,9 @@ export const buildings = [
 				sleeps: 2,
 				views: null,
 				pics: ['main-house/3/_XCS2685.jpg', 'main-house/3/_XCS2686.jpg'],
-				features: 'Working wood-burning fireplace',
+				features: 'Wood-burning fireplace',
 				caveats: null,
-				tags: ['1 queen', 'Sleeps 2', 'Working wood-burning fireplace']
+				tags: ['1 queen', 'Sleeps 2', 'Wood-burning fireplace']
 			},
 			{
 				building: 'main-house',
@@ -148,9 +148,9 @@ export const buildings = [
 					'main-house/4/_XCS2628.jpg',
 					'main-house/4/_XCS2631.jpg'
 				],
-				features: 'Working wood-burning fireplace, Window seat',
+				features: 'Wood-burning fireplace, Window seat',
 				caveats: null,
-				tags: ['1 king', 'Sleeps 2', 'Working wood-burning fireplace', 'Window seat']
+				tags: ['1 king', 'Sleeps 2', 'Wood-burning fireplace', 'Window seat']
 			},
 			{
 				building: 'main-house',
@@ -173,16 +173,11 @@ export const buildings = [
 				beds: '1 queen',
 				sleeps: 2,
 				views: null,
+				overOstrich: true,
 				pics: ['main-house/7/_XCS2637.jpg'],
 				features: 'Claw foot bathtub, Vintage sink',
-				caveats: 'Located above Ostrich Room; can be noisy',
-				tags: [
-					'1 queen',
-					'Sleeps 2',
-					'Claw foot bathtub',
-					'Vintage sink',
-					'Located above Ostrich Room; can be noisy'
-				]
+				caveats: null,
+				tags: ['1 queen', 'Sleeps 2', 'Claw foot bathtub', 'Vintage sink']
 			},
 			{
 				building: 'main-house',
@@ -192,21 +187,21 @@ export const buildings = [
 				beds: '1 king, 1 pull-out',
 				sleeps: 4,
 				views: true,
+				overOstrich: true,
 				pics: [
 					'main-house/8/_XCS2672.jpg',
 					'main-house/8/_XCS2666.jpg',
 					'main-house/8/_XCS2668.jpg',
 					'main-house/8/_XCS2669.jpg'
 				],
-				features: 'Working wood-burning fireplace, Living room',
-				caveats: 'Located above Ostrich Room; can be noisy',
+				features: 'Wood-burning fireplace, Living room',
+				caveats: null,
 				tags: [
 					'1 king, 1 pull-out',
 					'Sleeps 4',
 					'Beautiful views of the hills',
-					'Working wood-burning fireplace',
-					'Living room',
-					'Located above Ostrich Room; can be noisy'
+					'Wood-burning fireplace',
+					'Living room'
 				]
 			},
 			{
@@ -217,15 +212,11 @@ export const buildings = [
 				beds: '1 queen',
 				sleeps: 2,
 				views: true,
+				overOstrich: true,
 				pics: ['main-house/9/_XCS2640.jpg', 'main-house/9/_XCS2641.jpg'],
 				features: null,
-				caveats: 'Located above Ostrich Room; can be noisy',
-				tags: [
-					'1 queen',
-					'Sleeps 2',
-					'Beautiful views of the hills',
-					'Located above Ostrich Room; can be noisy'
-				]
+				caveats: null,
+				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
 			},
 			{
 				building: 'main-house',

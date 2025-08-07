@@ -87,7 +87,7 @@
 		<li>Get brunch at No Comply and then tour Naumkeag.</li>
 		<li>
 			Get takeout sandwiches at Lost Lamb. There’s nowhere to sit, so do the Housatonic Flats
-			walking loop at eat your sandwich on a bench there. (Or substitute Berkshire Mountain Bakery,
+			walking loop and eat your sandwich on a bench there. (Or substitute Berkshire Mountain Bakery,
 			where Tartine founder Chad Robertson trained.)
 		</li>
 		<li>
@@ -113,7 +113,7 @@
 		</li>
 		<li>
 			Follow the “Arlo Guthrie’s Historic Garbage Trail Walk to Massacree HD” six miles through
-			Stockbridge and Great Barrington along the path described “Alice’s Restaurant Massacree”
+			Stockbridge and Great Barrington along the path described in “Alice’s Restaurant Massacree”
 			(Alice being our former owner).
 		</li>
 		<!-- Pray -->
