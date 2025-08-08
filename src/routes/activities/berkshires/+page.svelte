@@ -1,6 +1,9 @@
 <svelte:head>
 	<title>The Berkshires • Apple Tree Inn • Lenox, MA</title>
-	<!-- <meta name="description" content="TODO" /> -->
+	<meta
+		name="description"
+		content="Do as we do! Tips for local activities, hikes, restaurants, shows, farms, and one bowling alley."
+	/>
 </svelte:head>
 
 <div class="inner">
@@ -66,21 +69,6 @@
 	</p>
 	<p>Hike Stevens Glen (4 min drive), a 1.1 mile loop leading to a beautiful waterfall.</p>
 
-	<h2>Industrial heritage</h2>
-
-	<p>
-		It’s not as suitable for sightseeing as the many Gilded Age mansions, but keep an eye out for
-		remnants of the Berkshires’ old mills and factories hiding in plain sight. The William Stanley
-		Overlook on the Housatonic River Walk in Great Barrington commemorates the birthplace of his and
-		George Westinghouse’s alternating current transformer (and of the Stanley water bottle). Some
-		streetlamps still trace back to Westinghouse. Berkshire Hathaway owes half its name to Berkshire
-		Mill No. 1 up in Adams, now an apartment complex. Monument Mills is “the last un-condofied mill
-		in the Berkshires” (used for photo shoots); Rising Paper Mill is still operating. A former Crane
-		Stationery headquarters is now a multifunction event venue in Dalton, aptly named “The
-		Stationery Factory”. The Becket quarry was once a major source of Chester Blue granite, and is
-		now a good swimming hole if you’re willing and able to scramble down some rocks.
-	</p>
-
 	<h2>Other pairings</h2>
 
 	<ul>
@@ -99,6 +87,12 @@
 			Umpachene Falls.
 		</li>
 		<li>
+			For antiques, check out Elise Abrams Antiques and the Berkshire Galleries in Great Barrington;
+			Linda Rosen Antiques, Corner House, and Mix On Main along Route 7 in Sheffield; Sandy Klempner
+			@ Home and Shaker Mill Books in West Stockbridge; or Knollwood Antiques, Retro Pop Shop,
+			Christopher James, Henry’s Eclectic, and Finders Keepers in Lee.
+		</li>
+		<li>
 			Take your kids to all the animal spots: the little duck pond at Stoneover Farm, the stables at
 			HomeFarm, the calf barn at High Lawn, and the variety of animals at the Hancock Shaker
 			Village.
@@ -112,14 +106,38 @@
 			a movie at the Triplex.
 		</li>
 		<li>
+			If the kids have been extra good, buy them a toy at Acorn in Egremont (fancier and farther
+			away) or The Gifted Child in Lenox (less fancy and closer).
+		</li>
+		<li>
 			Follow the “Arlo Guthrie’s Historic Garbage Trail Walk to Massacree HD” six miles through
 			Stockbridge and Great Barrington along the path described in “Alice’s Restaurant Massacree”
 			(Alice being our former owner).
 		</li>
-		<!-- Pray -->
+		<li>
+			If our live music isn’t enough, try the Lion’s Den, Dream Away Lodge, Stationery Factory, or
+			Egremont Barn. Mark Greenlaw’s <a href="https://musicintheberkshires.com/"
+				>Music in the Berkshires</a
+			> is the definitive guide to smaller local shows (aside from Tanglewood).
+		</li>
 		<li>
 			If you’re not tired when the Ostrich Room kicks you out, the classic place to go next is Ombra
 			(5 minute drive to Lenox downtown).
 		</li>
 	</ul>
+
+	<h2>Industrial heritage</h2>
+
+	<p>
+		It’s not as suitable for sightseeing as the many Gilded Age mansions, but keep an eye out for
+		remnants of the Berkshires’ old mills and factories hiding in plain sight. The William Stanley
+		Overlook on the Housatonic River Walk in Great Barrington commemorates the birthplace of his and
+		George Westinghouse’s alternating current transformer (and of the Stanley water bottle). Some
+		streetlamps still trace back to Westinghouse. Berkshire Hathaway owes half its name to Berkshire
+		Mill No. 1 up in Adams, now an apartment complex. Monument Mills is “the last un-condofied mill
+		in the Berkshires” (used for photo shoots); Rising Paper Mill is still operating. A former Crane
+		Stationery headquarters is now a multifunction event venue in Dalton, aptly named “The
+		Stationery Factory”. The Becket quarry was once a major source of Chester Blue granite, and is
+		now a good swimming hole if you’re willing and able to scramble down some rocks.
+	</p>
 </div>
