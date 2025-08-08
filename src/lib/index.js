@@ -19,7 +19,8 @@ export const ostrichRoom = {
 		[new Date(2025, 3, 4), null],
 		[new Date(2025, 3, 5), null],
 		[new Date(2025, 6, 3), [15, 23]],
-		[new Date(2025, 6, 4), [15, 23]]
+		[new Date(2025, 6, 4), [15, 23]],
+		[new Date(2025, 7, 23), [16, 22]]
 	]
 };
 
