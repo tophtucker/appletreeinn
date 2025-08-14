@@ -99,10 +99,11 @@
 		gap: 2rem;
 	}
 
-	h1 {
+	h1,
+	h2,
+	h3 {
 		max-width: 640px;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 1rem auto;
 	}
 
 	p {
