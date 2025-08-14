@@ -27,6 +27,7 @@ const nav = [
 		title: 'Dining',
 		color: 'var(--red)',
 		children: [
+			{ title: 'Breakfast', slug: 'breakfast' },
 			{ title: 'The Ostrich Room', slug: 'ostrich-room' },
 			{ title: 'Make a reservation', url: RESERVATIONS_URL }
 		]

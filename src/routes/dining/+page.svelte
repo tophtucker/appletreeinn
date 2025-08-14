@@ -17,12 +17,14 @@
 <div class="inner">
 	<div class="comparison-table">
 		<div class="header hide-mobile"></div>
+
 		<h2>Continental breakfast</h2>
 		<VR style="grid-column: 3; grid-row: 1 / 10;" class="hide-mobile" />
-		<div>
-			<h2>The Ostrich Room</h2>
-			<a class="cta" href="/dining/ostrich-room">Learn more</a>
-		</div>
+		<h2>The Ostrich Room</h2>
+
+		<div class="header hide-mobile"></div>
+		<div><a class="cta" href="/dining/breakfast">Learn more</a></div>
+		<div><a class="cta" href="/dining/ostrich-room">Learn more</a></div>
 
 		<div class="header hide-mobile"></div>
 		<Image

@@ -37,7 +37,8 @@ export const nodes = [
 	() => import('./nodes/33'),
 	() => import('./nodes/34'),
 	() => import('./nodes/35'),
-	() => import('./nodes/36')
+	() => import('./nodes/36'),
+	() => import('./nodes/37')
 ];
 
 export const server_loads = [0];
@@ -60,24 +61,25 @@ export const dictionary = {
 		"/activities/tanglewood": [16],
 		"/baladi": [~17],
 		"/career": [~18],
-		"/dining_ati/[...catchall]": [~21],
+		"/dining_ati/[...catchall]": [~22],
 		"/dining": [19],
-		"/dining/ostrich-room": [~20],
-		"/explore": [~22],
-		"/landing/kripalu": [23],
-		"/landing/review": [24],
-		"/music": [~25],
-		"/offers": [~26],
-		"/ostrich-room": [~27],
-		"/overview/faq": [28],
-		"/overview/gallery": [29],
-		"/overview/map": [30],
-		"/restaurants": [~31],
-		"/rooms": [32],
-		"/rooms/lodge": [33],
-		"/rooms/main-house": [34],
-		"/termsandcondition": [~35],
-		"/weddings-events": [36]
+		"/dining/breakfast": [20],
+		"/dining/ostrich-room": [~21],
+		"/explore": [~23],
+		"/landing/kripalu": [24],
+		"/landing/review": [25],
+		"/music": [~26],
+		"/offers": [~27],
+		"/ostrich-room": [~28],
+		"/overview/faq": [29],
+		"/overview/gallery": [30],
+		"/overview/map": [31],
+		"/restaurants": [~32],
+		"/rooms": [33],
+		"/rooms/lodge": [34],
+		"/rooms/main-house": [35],
+		"/termsandcondition": [~36],
+		"/weddings-events": [37]
 	};
 
 export const hooks = {
