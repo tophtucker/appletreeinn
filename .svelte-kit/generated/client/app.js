@@ -36,7 +36,8 @@ export const nodes = [
 	() => import('./nodes/32'),
 	() => import('./nodes/33'),
 	() => import('./nodes/34'),
-	() => import('./nodes/35')
+	() => import('./nodes/35'),
+	() => import('./nodes/36')
 ];
 
 export const server_loads = [0];
@@ -63,19 +64,20 @@ export const dictionary = {
 		"/dining": [19],
 		"/dining/ostrich-room": [~20],
 		"/explore": [~22],
-		"/landing/review": [23],
-		"/music": [~24],
-		"/offers": [~25],
-		"/ostrich-room": [~26],
-		"/overview/faq": [27],
-		"/overview/gallery": [28],
-		"/overview/map": [29],
-		"/restaurants": [~30],
-		"/rooms": [31],
-		"/rooms/lodge": [32],
-		"/rooms/main-house": [33],
-		"/termsandcondition": [~34],
-		"/weddings-events": [35]
+		"/landing/kripalu": [23],
+		"/landing/review": [24],
+		"/music": [~25],
+		"/offers": [~26],
+		"/ostrich-room": [~27],
+		"/overview/faq": [28],
+		"/overview/gallery": [29],
+		"/overview/map": [30],
+		"/restaurants": [~31],
+		"/rooms": [32],
+		"/rooms/lodge": [33],
+		"/rooms/main-house": [34],
+		"/termsandcondition": [~35],
+		"/weddings-events": [36]
 	};
 
 export const hooks = {
