@@ -7,7 +7,7 @@
 
 	let { children, data } = $props();
 
-	console.log('frame', { data });
+	// console.log('frame', { data });
 
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);

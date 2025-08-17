@@ -63,7 +63,7 @@
 	<figure class={`${size} ${!alt ? 'hide-mobile' : ''}`}>
 		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
-		<img {src} {alt} data-lightbox onclick={setLightbox} />
+		<img {src} {alt} data-lightbox onclick={setLightbox} loading="lazy" />
 		{#if alt}
 			<figcaption class={url ? 'link' : ''} style={`--accent: var(--${colors[i % 4]})`}>
 				{#if url}

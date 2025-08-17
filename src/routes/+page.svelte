@@ -1,5 +1,8 @@
 <script>
 	import GalleryGrid from '$lib/components/GalleryGrid.svelte';
+	import heroDrone from '$lib/assets/hero-drone.jpg?enhanced';
+
+	console.log('toph', { heroDrone });
 </script>
 
 <svelte:head>
@@ -11,13 +14,13 @@
 </svelte:head>
 
 <div class="inner main">
-	<img src="/avaloch/img/hero-drone.jpg" alt="The Apple Tree Inn’s Main House" />
+	<enhanced:img src={heroDrone} alt="The Apple Tree Inn’s Main House" />
 	<div class="img-pair">
-		<img src="./avaloch/img/door.jpg" alt="Door" />
-		<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" />
+		<img src="./avaloch/img/door.jpg" alt="Door" loading="lazy" />
+		<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" loading="lazy" />
 	</div>
 	<GalleryGrid />
-	<img src="/avaloch/img/porch-breakfast.jpg" alt="Breakfast on the porch" />
+	<img src="/avaloch/img/porch-breakfast.jpg" alt="Breakfast on the porch" loading="lazy" />
 </div>
 
 <style>
@@ -33,5 +36,9 @@
 	}
 	.img-pair img {
 		max-width: 100%;
+	}
+
+	picture img {
+		height: auto;
 	}
 </style>
