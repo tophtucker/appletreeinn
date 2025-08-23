@@ -34,6 +34,7 @@ declare module '$env/static/private' {
 	export const TERM: string;
 	export const SHELL: string;
 	export const FNM_NODE_DIST_MIRROR: string;
+	export const npm_config_metrics_registry: string;
 	export const TMPDIR: string;
 	export const HOMEBREW_REPOSITORY: string;
 	export const npm_config_global_prefix: string;
@@ -127,6 +128,7 @@ declare module '$env/dynamic/private' {
 		TERM: string;
 		SHELL: string;
 		FNM_NODE_DIST_MIRROR: string;
+		npm_config_metrics_registry: string;
 		TMPDIR: string;
 		HOMEBREW_REPOSITORY: string;
 		npm_config_global_prefix: string;

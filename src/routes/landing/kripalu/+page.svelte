@@ -12,11 +12,11 @@
 		<img src="/avaloch/img/hero-drone.jpg" alt="The Apple Tree Inn’s Main House" />
 		<p>
 			Just 3 minutes from Kripalu, the <a href="/">Apple Tree Inn</a> is your home base for exploring
-			the Berkshires. After a day out, come back for a swim, live music, handcrafted cocktails, and plenty
-			of space to unwind.
+			the Berkshires. After a day out, come back for a swim, live music, cocktails, and plenty of space
+			to unwind.
 		</p>
 		<HR style="width: 100%;" />
-		<h2>Your Berkshires Escape, Your Way</h2>
+		<h2>Your Berkshires Escape,<br />Your Way</h2>
 		<HR style="width: 100%;" />
 	</div>
 
@@ -35,7 +35,7 @@
 		<p>
 			Choose from <a
 				href="https://direct-book.com/properties/AppleTreeInndirect?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=USD&checkInDate=2025-08-13&checkOutDate=2025-08-15&trackPage=yes"
-				>charming rooms</a
+				target="_blank">charming rooms</a
 			> in our historic Main House, each designed for comfort and furnished to create a relaxing, welcoming
 			stay.
 		</p>
@@ -49,7 +49,9 @@
 		<h3>Cocktails with a view</h3>
 		<p>
 			After a day of hiking and exploring, relax in an Adirondack chair and take in the hillside
-			view with one of our delicious <a href="/dining/ostrich-room">handcrafted cocktails</a>.
+			view with one of our delicious <a href="/dining/ostrich-room" target="_blank"
+				>handcrafted cocktails</a
+			>.
 		</p>
 	</div>
 
@@ -70,7 +72,7 @@
 		<h3>Relaxed Dining Options</h3>
 		<p>
 			Start your day with a nourishing breakfast, or enjoy a comforting meal at our on-site
-			restaurant, the <a href="/dining/ostrich-room">Ostrich Room</a>.
+			restaurant, the <a href="/dining/ostrich-room" target="_blank">Ostrich Room</a>.
 		</p>
 	</div>
 
@@ -78,15 +80,15 @@
 		<img src="/avaloch/img/music2.jpg" alt="Andy Wrba and friends performing in the Ostrich Room" />
 		<h3>Live Music in the Evenings</h3>
 		<p>
-			Unwind with intimate <a href="/music">live music performances</a> in the Ostrich Room, featuring
-			local musicians Wednesdays-Saturdays.
+			Unwind with intimate <a href="/music" target="_blank">live music performances</a> in the Ostrich
+			Room, featuring local musicians Wednesdays-Saturdays.
 		</p>
 	</div>
 
 	<a
 		class="cta"
 		href="https://direct-book.com/properties/AppleTreeInndirect?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=USD&checkInDate=2025-08-13&checkOutDate=2025-08-15&trackPage=yes"
-		>Plan your stay</a
+		target="_blank">Plan your stay</a
 	>
 </div>
 
@@ -110,6 +112,7 @@
 		font-size: larger;
 		margin: 1rem auto;
 		max-width: 500px;
+		text-wrap: pretty;
 	}
 
 	img {
