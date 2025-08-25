@@ -20,7 +20,7 @@
 
 	<div class="tagline">
 		<HR />
-		<h2>For the young who are old are heart<br />and the old who are young at heart</h2>
+		<h2>For the young who are old at heart<br />and the old who are young at heart</h2>
 		<HR />
 	</div>
 

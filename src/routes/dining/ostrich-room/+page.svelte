@@ -100,6 +100,12 @@
 
 	<HR />
 
+	<div class="tagline">
+		<h2>Most elevated cocktails on<br />I-90 east of South Dakoka</h2>
+	</div>
+
+	<HR />
+
 	<img src="/avaloch/img/cheers.jpg" alt="Cheers!" />
 </div>
 
@@ -170,6 +176,11 @@
 
 	h2 {
 		margin: 1em 0 0.5em 0;
+	}
+
+	.tagline {
+		text-align: center;
+		text-wrap: balance;
 	}
 
 	.menus {
