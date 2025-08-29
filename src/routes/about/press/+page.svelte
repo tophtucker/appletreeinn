@@ -11,36 +11,15 @@
 
 	<dl>
 		<dt>
-			<a href="https://www.nytimes.com/2025/02/20/t-magazine/florence-italy-hills-hotel.html"
-				>New Restaurants to Know in the Berkshires</a
-			>
-		</dt>
-		<dd><em>The New York Times Style Magazine</em>, Amy Conway, 2025</dd>
-
-		<dt>
 			<a href="https://viewer.joomag.com/berkshire-magazine-may-june-2025/0574228001744924955/p40"
 				>Small Stages, Big Sound</a
 			>
 		</dt>
 		<dd>
-			<em>Berkshire Magazine</em>, Mark Greenlaw, 2025
+			<em>Berkshire Magazine</em>, Mark Greenlaw, May/June 2025
 			<blockquote>
 				“The cozy-wood paneled tavern offers an elevated Mediterranean-inspired menu, handcrafted
 				cocktails, and a welcoming vibe.”
-			</blockquote>
-		</dd>
-
-		<dt>
-			<a
-				href="https://www.berkshireeagle.com/news/central_berkshires/historic-lenox-inn-has-a-new-owner-who-is-keen-on-fulfilling-her-dream/article_d19dd82e-fdaf-11ee-909e-77af370eac17.html"
-				>There’s a new proprietor at the 1885 Apple Tree Inn</a
-			>
-		</dt>
-		<dd>
-			<em>The Berkshire Eagle</em>, Clarence Fanto, 2024
-			<blockquote>
-				“Collery purchased the 34-room Apple Tree Inn overlooking Tanglewood from previous owners
-				James and Maxwell Khagan.”
 			</blockquote>
 		</dd>
 
@@ -51,7 +30,7 @@
 			>
 		</dt>
 		<dd>
-			<em>Berkshires Week</em>, “The Serial Eater”, 2025
+			<em>Berkshires Week</em>, “The Serial Eater”, May 2025
 			<blockquote>
 				“The size and flavor of our dishes, combined with good musicianship, made it a memorable
 				evening.”
@@ -59,12 +38,39 @@
 		</dd>
 
 		<dt>
-			<a
-				href="https://www.worldatlas.com/cities/massachusetts-s-11-most-underrated-towns-to-visit-in-2024.html"
-				>Massachusetts’s 11 Most Underrated Towns to Visit in 2024</a
+			<a href="https://www.nytimes.com/2025/02/20/t-magazine/florence-italy-hills-hotel.html"
+				>New Restaurants to Know in the Berkshires</a
 			>
 		</dt>
-		<dd><em>World Atlas</em>, John Divinagracia, 2024</dd>
+		<dd><em>The New York Times Style Magazine</em>, Amy Conway, February 2025</dd>
+
+		<dt>
+			<a
+				href="https://www.edibleberkshires.com/recipes/beverages/maravilla-ahumada-smokey-wonder-cocktail/"
+				>Maravilla Ahumada (Smokey Wonder) Cocktail</a
+			>
+		</dt>
+		<dd>
+			<em>Edible Berkshires</em>, Sean Mackie, December 2024
+			<blockquote>
+				Sean, our bar manager, contributed this cocktail recipe. “Embrace the cold season with this
+				smoky, chocolatey cocktail, accented by a touch of nutty bitterness.”
+			</blockquote>
+		</dd>
+
+		<dt>
+			<a
+				href="https://www.berkshireeagle.com/news/central_berkshires/historic-lenox-inn-has-a-new-owner-who-is-keen-on-fulfilling-her-dream/article_d19dd82e-fdaf-11ee-909e-77af370eac17.html"
+				>There’s a new proprietor at the 1885 Apple Tree Inn</a
+			>
+		</dt>
+		<dd>
+			<em>The Berkshire Eagle</em>, Clarence Fanto, April 2024
+			<blockquote>
+				“Collery purchased the 34-room Apple Tree Inn overlooking Tanglewood from previous owners
+				James and Maxwell Khagan.”
+			</blockquote>
+		</dd>
 	</dl>
 
 	<h2>Press Kit</h2>
