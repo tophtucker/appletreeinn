@@ -17,7 +17,7 @@
 			The Apple Tree Inn is a <a href="/about/history">historic estate</a> built high atop a Lenox
 			hill in 1885 by Cecile Bristed, a great-granddaughter of John Jacob Astor. She called it
 			<em>The Orchard</em>; in 1952 Roy Rappaport turned it into a hotel called <em>Avaloch</em>.
-			Alice Broch of “Alice’s Restaurant” ran her third and final restaurant here,
+			Alice Brock of “Alice’s Restaurant” ran her third and final restaurant here,
 			<em>Alice’s at Avaloch</em>. In 1983 it became the
 			<em>Apple Tree Inn</em>.
 		</p>

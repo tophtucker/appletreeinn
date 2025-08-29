@@ -89,7 +89,7 @@
 			<tr><td>Opened as an inn</td><td>1952</td></tr>
 			<tr><td>Architect</td><td>H. Neill Wilson</td></tr>
 			<tr
-				><td>Notable past owners</td><td>Cecile Bristed<br />Roy Rappaport<br />Alice Broch</td></tr
+				><td>Notable past owners</td><td>Cecile Bristed<br />Roy Rappaport<br />Alice Brock</td></tr
 			>
 		</tbody>
 	</table>
