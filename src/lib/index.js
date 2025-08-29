@@ -6,9 +6,9 @@ import { min, max, extent, range, sort, ascending } from 'd3-array';
 export const ostrichRoom = {
 	hours: [
 		[3, [17, 21.5]],
-		[4, [17, 22.5]],
-		[5, [16, 23]],
-		[6, [16, 23]]
+		[4, [17, 21.5]],
+		[5, [16, 22.5]],
+		[6, [16, 22.5]]
 	],
 	overrides: [
 		[new Date(2024, 10, 27), null],
@@ -20,7 +20,10 @@ export const ostrichRoom = {
 		[new Date(2025, 3, 5), null],
 		[new Date(2025, 6, 3), [15, 23]],
 		[new Date(2025, 6, 4), [15, 23]],
-		[new Date(2025, 7, 23), [16, 22]]
+		[new Date(2025, 7, 23), [16, 22]],
+		[new Date(2025, 7, 29), [17, 23]],
+		[new Date(2025, 7, 30), [17, 23]],
+		[new Date(2025, 7, 31), [12, 18]] // Hilltown pop-up
 	]
 };
 
