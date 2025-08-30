@@ -53,7 +53,7 @@
 		{#if isOpen}
 			<div>Open until {formatFutureDate(nextHours[1])}.</div>
 		{:else if nextHours}
-			<div>Closed until {formatFutureDate(nextHours[0])}.</div>
+			<div>Next open {formatFutureDate(nextHours[0])}.</div>
 		{/if}
 	</a>
 {/if}

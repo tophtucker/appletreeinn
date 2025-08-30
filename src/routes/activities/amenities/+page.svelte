@@ -1,4 +1,5 @@
 <script>
+	import Asterisk from '$lib/icons/Asterisk.svelte';
 	import { ostrichRoom, formatDayRange } from '$lib/index.js';
 	const ostrichRange = formatDayRange(ostrichRoom.hours.map((d) => d[0]));
 </script>
@@ -29,8 +30,9 @@
 		<dt>GAMES</dt>
 		<dd>
 			Board games and packs of cards can be found in the Living Room; most are stored in the cabinet
-			outside of Reception. A bocce set is generally set up by the yard; ask at the Front Desk. We
-			have giant Jenga somewhere in the basement, too!
+			outside of Reception. We’ve got a badminton net on the grass, weather permitting. A bocce set
+			is generally set up by the yard; ask at the Front Desk. We have giant Jenga somewhere in the
+			basement, too!
 		</dd>
 
 		<dt>HEAT AND AIR CONDITIONING</dt>
@@ -59,7 +61,10 @@
 		<dt>PACK ’N PLAY</dt>
 		<dd>Available to borrow upon request. (Ask early — we only have one!)</dd>
 
-		<dt>POOL</dt>
+		<dt>
+			POOL
+			<span class="badge"><Asterisk />Summer only</span>
+		</dt>
 		<dd>
 			The pool is located beyond the Lodge and the Carriage House and is open from dawn to dusk from
 			the Friday of Memorial Day Weekend to the Monday of Labor Day Weekend. Pool towels are
@@ -136,5 +141,9 @@
 	dd {
 		margin-bottom: 1rem;
 		max-width: 640px;
+	}
+	.badge {
+		color: var(--gray);
+		font-size: smaller;
 	}
 </style>

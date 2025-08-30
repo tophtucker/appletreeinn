@@ -33,7 +33,7 @@ export const formatDateShort = timeFormat('%-m/%d');
 export const formatTime = (d) => timeFormat('%-I:%M %p')(d).toLowerCase();
 
 const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
-const hrMod = (hour) => hour % 12;
+const hrMod = (hour) => hour % 12 || 12;
 const fmt = (hour) => `${~~hrMod(hour)}${hour % 1 ? `:${(hour % 1) * 60}` : ''}`;
 // Takes in hour numbers
 export const formatHourRange = (hours) =>
