@@ -20,7 +20,8 @@ const BULLETINS_QUERY = `*[_type == "bulletin" && startTime < now() && endTime >
   _id,
   startTime,
   text,
-  details
+  details,
+  urgent
 }`;
 
 export async function load() {
