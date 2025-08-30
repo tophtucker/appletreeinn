@@ -72,28 +72,15 @@
 
 <style>
 	.urgent {
-		background: var(--green);
+		background: var(--red);
 		color: white;
-		padding: 8px 2rem 4px 2rem;
+		padding: 8px 4px 4px 4px;
 		text-align: center;
 		display: flex;
-		gap: 1rem;
+		gap: 0.25rem;
 		align-items: center;
-		justify-content: space-between;
-	}
-
-	@media (max-width: 1000px) {
-		.urgent {
-			padding-left: 1rem;
-			padding-right: 1rem;
-		}
-	}
-
-	@media (max-width: 800px) {
-		.urgent {
-			padding-left: 0;
-			padding-right: 0;
-		}
+		justify-content: center;
+		text-wrap: balance;
 	}
 
 	main {
