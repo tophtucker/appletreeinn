@@ -2,13 +2,11 @@
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import Header from '$lib/template/Header.svelte';
 	import Footer from '$lib/template/Footer.svelte';
+	import Urgent from '$lib/template/Urgent.svelte';
 	import Nav from './Nav.svelte';
-	import Asterisk from '$lib/icons/Asterisk.svelte';
 	import { setContext } from 'svelte';
 
 	let { children, data } = $props();
-
-	let urgent = $derived(data.bulletins?.filter((d) => d.urgent));
 
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
@@ -32,15 +30,7 @@
 
 <svelte:window on:resize={onResize} />
 
-{#if urgent.length}
-	{#each urgent as bulletin}
-		<div class="urgent">
-			<Asterisk style="flex-shrink: 0; margin: 0 4px;" />{bulletin.text}<Asterisk
-				style="flex-shrink: 0; margin: 0 4px;"
-			/>
-		</div>
-	{/each}
-{/if}
+<Urgent bulletins={data.bulletins} />
 
 <main>
 	<Nav {toggleNav} {mobileNav} {data} />
@@ -71,18 +61,6 @@
 <Lightbox />
 
 <style>
-	.urgent {
-		background: var(--red);
-		color: white;
-		padding: 8px 4px 4px 4px;
-		text-align: center;
-		display: flex;
-		gap: 0.25rem;
-		align-items: center;
-		justify-content: center;
-		text-wrap: balance;
-	}
-
 	main {
 		display: flex;
 		justify-content: center;
