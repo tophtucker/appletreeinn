@@ -29,15 +29,8 @@
 		<a class="cta" href={RESERVATIONS_URL}>Make a reservation</a>
 		<div>(413) 637-1910</div>
 	</div>
-
-	<div class="hours-wrapper">
-		<WeekHours data={ostrichRoom} {performances} />
-		<div style="text-align: center; font-style: italic; max-width: 420px;">
-			Reservations optional; walk-ins always welcome. Reservations are for the Ostrich Room only.
-			Service is available in other areas — patio, front porch, and parlor — but they are “first
-			come, first served”.
-		</div>
-	</div>
+	<div style="text-align: center;"><em>Walk-ins always welcome!</em></div>
+	<div class="hours-wrapper"><WeekHours data={ostrichRoom} {performances} /></div>
 	<HR />
 	<h2 id="menus">Menus</h2>
 	<div class="menus">
@@ -164,7 +157,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 1rem;
 		margin-top: 2em;
 	}
 
