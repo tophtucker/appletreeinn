@@ -41,7 +41,7 @@
 	{/each}
 	<div class="bulletins">
 		<Bulletins {bulletins} />
-		<OpenSign hours={ostrichRoom.hours} />
+		<OpenSign calendar={ostrichRoom.calendar} />
 		<NextPerformance {nextPerformance} />
 	</div>
 	<div class="about">

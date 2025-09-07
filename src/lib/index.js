@@ -1,24 +1,95 @@
 // place files you want to import through the `$lib` alias in this folder.
 // e.g. import { buildings } from '$lib/index.js';
-import { timeFormat } from 'd3-time-format';
+import { Temporal } from '@js-temporal/polyfill';
 import { min, max, extent, range, sort, ascending } from 'd3-array';
 
-export const formatDate = timeFormat('%a. %-m/%d');
-export const formatDay = timeFormat('%a.');
-export const formatDateShort = timeFormat('%-m/%d');
-export const formatTimePart = (d) => (d.getMinutes() ? timeFormat('%-I:%M') : timeFormat('%-I'))(d);
-export const formatTimeMeridiem = (d) => timeFormat('%p')(d).toLowerCase();
-export const formatTime = (d) => `${formatTimePart(d)} ${formatTimeMeridiem(d)}`;
+const TIME_ZONE = 'America/New_York'; // TODO dedupe with sanity.js
+function upzone(pt) {
+	if (pt instanceof Temporal.PlainTime) {
+		return Temporal.PlainDate.from('2000-01-01').toPlainDateTime(pt).toZonedDateTime(TIME_ZONE);
+	}
+	if (pt instanceof Temporal.PlainDate || pt instanceof Temporal.PlainDateTime) {
+		return pt.toZonedDateTime(TIME_ZONE);
+	}
+	if (pt instanceof Temporal.ZonedDateTime) {
+		return pt;
+	} else {
+		console.error('Couldn’t convert time to ZonedDateTime');
+	}
+}
+
+// Sun. 9/7
+export function formatDate(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		weekday: 'short',
+		month: 'numeric',
+		day: 'numeric',
+		timeZone: zdt.timeZoneId
+	}).format(new Date(zdt.epochMilliseconds));
+}
+
+// Sun.
+export function formatDay(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		weekday: 'short',
+		timeZone: zdt.timeZoneId
+	}).format(new Date(zdt.epochMilliseconds));
+}
+
+// 9/7
+export function formatDateShort(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		month: 'numeric',
+		day: 'numeric',
+		timeZone: zdt.timeZoneId
+	}).format(new Date(zdt.epochMilliseconds));
+}
+
+// 9 or 9:30
+export function formatTimePart(zdt) {
+	zdt = upzone(zdt);
+	const hasMinutes = zdt.minute !== 0;
+	return new Intl.DateTimeFormat('en-US', {
+		hour: 'numeric',
+		...(hasMinutes && { minute: '2-digit' }),
+		hour12: true,
+		timeZone: zdt.timeZoneId
+	})
+		.format(new Date(zdt.epochMilliseconds))
+		.replace(/\s?(AM|PM)/i, ''); // strip meridiem
+}
+
+// am / pm
+export function formatTimeMeridiem(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		hour: 'numeric',
+		hour12: true,
+		timeZone: zdt.timeZoneId
+	})
+		.formatToParts(new Date(zdt.epochMilliseconds))
+		.find((p) => p.type === 'dayPeriod')
+		.value.toLowerCase();
+}
+
+// e.g. "9:30 pm"
+export function formatTime(zdt) {
+	zdt = upzone(zdt);
+	return `${formatTimePart(zdt)} ${formatTimeMeridiem(zdt)}`;
+}
 
 export const formatTimeRange = (hours) => {
-	if (!hours) return '—';
+	if (!hours.length) return '—';
 	if (hours.every((hour) => formatTimeMeridiem(hour) === formatTimeMeridiem(hours[0]))) {
 		return `${hours.map(formatTimePart).join(' – ')} ${formatTimeMeridiem(hours[0])}`;
 	}
 	return hours.map(formatTime).join(' – ');
 };
 
-const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; // TODO rm in favor of new Temporal stuff, currently in sanity.js
 export const formatWeekday = (d) => `${daysOfWeek[d]}.`;
 const modulo = 7;
 const isDense = (data) => range(min(data), max(data) + 1).every((d) => data.includes(d));

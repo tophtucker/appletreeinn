@@ -65,6 +65,7 @@ declare module '$env/static/private' {
 	export const EDITOR: string;
 	export const npm_package_name: string;
 	export const LANG: string;
+	export const TZ: string;
 	export const npm_config_npm_version: string;
 	export const XPC_FLAGS: string;
 	export const FNM_MULTISHELL_PATH: string;
@@ -159,6 +160,7 @@ declare module '$env/dynamic/private' {
 		EDITOR: string;
 		npm_package_name: string;
 		LANG: string;
+		TZ: string;
 		npm_config_npm_version: string;
 		XPC_FLAGS: string;
 		FNM_MULTISHELL_PATH: string;

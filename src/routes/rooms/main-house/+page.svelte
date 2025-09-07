@@ -1,5 +1,5 @@
 <script>
-	import { buildings, ostrichRoom, formatDayRange } from '$lib/index.js';
+	import { buildings } from '$lib/index.js';
 	import Slideshow from '$lib/components/Slideshow.svelte';
 	const building = buildings.find((d) => d.id === 'main-house');
 </script>

@@ -1,9 +1,10 @@
 import { createClient } from '@sanity/client';
 import { toHTML } from '@portabletext/to-html';
 import imageUrlBuilder from '@sanity/image-url';
-import { isoParse, timeFormat } from 'd3-time-format';
+import { timeFormat } from 'd3-time-format';
 import { timeMonday, timeDay } from 'd3-time';
 import { formatDayRange } from '$lib/index.js';
+import { Temporal } from '@js-temporal/polyfill';
 
 export const sanity = createClient({
 	projectId: 'lxtjf1cx',
@@ -11,6 +12,10 @@ export const sanity = createClient({
 	apiVersion: '2024-01-01',
 	useCdn: false
 });
+
+const TIME_ZONE = 'America/New_York';
+const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const isoParse = (isoUtc) => Temporal.Instant.from(isoUtc).toZonedDateTimeISO('America/New_York');
 
 // PERFORMANCES
 
@@ -35,34 +40,36 @@ export function parseBulletin(b) {
 
 // RESTAURANTS
 
-function parseTime(baseDate, str) {
-	const [hours, minutes] = str.split(':');
-	return new Date(+baseDate + hours * 60 * 60 * 1000 + minutes * 60 * 1000);
+function parseDayHours(hours) {
+	if (hours.closed) return [];
+	return [hours.open, hours.close].map((time) => Temporal.PlainTime.from(time));
 }
 
-function parseDateHours(baseDate, hours) {
-	if (hours.closed) return false;
-	return [hours.open, hours.close].map((time) => parseTime(baseDate, time));
-}
-
-const daysOfWeek = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-const fmtDate = timeFormat('%Y-%m-%d');
 export function parseRestaurant({ hours, hourOverrides, menus }) {
-	const startDay = timeMonday(new Date());
-	const dates = timeDay.range(startDay, timeDay.offset(startDay, 14));
-	const combinedHours = dates.map((date) => {
-		const dayOfWeek = daysOfWeek[date.getDay()];
-		const normalHours = parseDateHours(date, hours[dayOfWeek]);
-		const dateFmt = fmtDate(date);
-		let specialHours = (hourOverrides || []).find((d) => d.date === dateFmt);
-		if (specialHours) specialHours = specialHours ? parseDateHours(date, specialHours) : null;
-		return { date, hours: specialHours || normalHours, specialHours, normalHours };
-	});
-	const dayRange = formatDayRange(
-		daysOfWeek
-			.map((d, i) => [d, i])
-			.filter(([d]) => !hours[d].closed)
-			.map(([, i]) => i)
-	);
-	return { hours: combinedHours, menus, dayRange };
+	const normalHours = daysOfWeek.map((day, i) => ({
+		day,
+		i: i + 1,
+		hours: parseDayHours(hours[day.toLowerCase()])
+	}));
+
+	// Make calendar of absolute dates from most recent Monday for next two weeks
+	const calendar = [];
+	const today = Temporal.Now.plainDateISO(TIME_ZONE);
+	const latestMonday = today.subtract({ days: (today.dayOfWeek + 6) % 7 });
+	for (let i = 0; i < 14; i++) {
+		const date = latestMonday.add({ days: i });
+		const normal = normalHours.find((d) => d.i === date.dayOfWeek).hours;
+		let special = hourOverrides.find((d) => date.equals(d.date));
+		special = special ? parseDayHours(special) : null;
+		calendar.push({
+			date, // PlainDate
+			hours: (special ?? normal).map((time) =>
+				date.toPlainDateTime(time).toZonedDateTime(TIME_ZONE)
+			), // ZonedDateTime
+			normalHours: normal, // PlainTime
+			specialHours: special // PlainTime
+		});
+	}
+
+	return { normalHours, calendar, menus };
 }

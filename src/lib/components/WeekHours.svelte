@@ -1,23 +1,24 @@
 <script>
-	import { timeDay } from 'd3-time';
+	import { Temporal } from '@js-temporal/polyfill';
 	import { formatTimeRange, formatTime, formatDay, formatDateShort } from '$lib/index.js';
 	import { browser } from '$app/environment';
-	let { hours, performances } = $props();
+	let { calendar, performances } = $props();
 
-	const getPerformancesForDay = (date) =>
-		performances
-			.filter((d) => +date === +timeDay(d.startTime))
+	const getPerformancesForDay = (date) => {
+		return performances
+			.filter((d) => date.equals(d.startTime.toPlainDate()))
 			.map(
 				(d) =>
 					`${d.act.name} (${d.endTime ? formatTimeRange([d.startTime, d.endTime]) : formatTime(d.startTime)})`
 			)
 			.join('; ');
+	};
 
-	const week = hours
+	const week = calendar
 		.slice(0, 7)
 		.map((d) => ({ ...d, performances: getPerformancesForDay(d.date) }));
 
-	const isToday = (day) => +timeDay(day) === +timeDay(new Date());
+	const isToday = (day) => Temporal.Now.plainDateISO().equals(day);
 </script>
 
 {#if browser}
@@ -43,7 +44,7 @@
 						</div>
 					</td>
 					<td
-						>{formatTimeRange(d.normalHours)}{#if d.specialHours !== undefined}<span class="notice"
+						>{formatTimeRange(d.normalHours)}{#if d.specialHours}<span class="notice"
 								>{#if d.specialHours}{formatTimeRange(d.specialHours)}{:else}Closed{/if}</span
 							>{/if}
 						{#if d.performances}

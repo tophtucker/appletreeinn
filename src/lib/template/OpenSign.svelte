@@ -1,47 +1,56 @@
 <script>
-	import { browser } from '$app/environment';
+	import { Temporal } from '@js-temporal/polyfill';
 
-	let { hours } = $props();
+	let { calendar } = $props();
 
-	const isET = Intl.DateTimeFormat().resolvedOptions().timeZone === 'America/New_York';
-	const now = new Date();
-	const nextHours = hours.find((d) => d.hours?.[1] >= now)?.hours;
-	const isOpen = nextHours && nextHours[0] <= now && nextHours[1] > now;
+	// TODO: replace with Temporal.Now
+	const now = +new Date();
+	const nextHours = calendar.find(
+		(d) => d.hours.length === 2 && d.hours[1].epochMilliseconds >= now
+	)?.hours;
 
-	function formatFutureDate(date) {
-		const now = new Date();
-		if (
-			date.getDate() === now.getDate() &&
-			date.getMonth() === now.getMonth() &&
-			date.getFullYear() === now.getFullYear()
-		) {
+	const isOpen =
+		nextHours && nextHours[0].epochMilliseconds <= now && nextHours[1].epochMilliseconds > now;
+
+	// TODO: replace formatters with standard named ones
+	function formatFutureDate(zdt) {
+		const now = Temporal.Now.zonedDateTimeISO(zdt.timeZoneId);
+
+		if (zdt.toPlainDate().equals(now.toPlainDate())) {
+			// same calendar day → show just the time
 			return new Intl.DateTimeFormat('en-US', {
 				hour: 'numeric',
-				hour12: true
-			}).format(date);
-		} else if (date < new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7)) {
-			return new Intl.DateTimeFormat('en-US', {
-				weekday: 'short'
-			}).format(date);
-		} else {
-			return new Intl.DateTimeFormat('en-US', {
-				month: 'numeric',
-				day: 'numeric'
-			}).format(date);
+				hour12: true,
+				timeZone: zdt.timeZoneId
+			}).format(new Date(zdt.epochMilliseconds));
 		}
+
+		const oneWeekOut = now.add({ days: 7 }).toPlainDate();
+		if (Temporal.PlainDate.compare(zdt.toPlainDate(), oneWeekOut) < 0) {
+			// within the next 7 days → show weekday
+			return new Intl.DateTimeFormat('en-US', {
+				weekday: 'short',
+				timeZone: zdt.timeZoneId
+			}).format(new Date(zdt.epochMilliseconds));
+		}
+
+		// otherwise → numeric month/day
+		return new Intl.DateTimeFormat('en-US', {
+			month: 'numeric',
+			day: 'numeric',
+			timeZone: zdt.timeZoneId
+		}).format(new Date(zdt.epochMilliseconds));
 	}
 </script>
 
-{#if isET && browser}
-	<a href="/dining/ostrich-room">
-		<h6>The Ostrich Room</h6>
-		{#if isOpen}
-			<div>Open until {formatFutureDate(nextHours[1])}.</div>
-		{:else if nextHours}
-			<div>Next open {formatFutureDate(nextHours[0])}.</div>
-		{/if}
-	</a>
-{/if}
+<a href="/dining/ostrich-room">
+	<h6>The Ostrich Room</h6>
+	{#if isOpen}
+		<div>Open until {formatFutureDate(nextHours[1])}.</div>
+	{:else if nextHours}
+		<div>Next open {formatFutureDate(nextHours[0])}.</div>
+	{/if}
+</a>
 
 <style>
 	a {

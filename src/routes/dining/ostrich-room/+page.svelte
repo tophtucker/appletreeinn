@@ -7,7 +7,7 @@
 	let { data } = $props();
 	let {
 		performances,
-		ostrichRoom: { hours, menus }
+		ostrichRoom: { calendar, menus }
 	} = data;
 </script>
 
@@ -30,7 +30,7 @@
 		<div>(413) 637-1910</div>
 	</div>
 	<div style="text-align: center;"><em>Walk-ins always welcome!</em></div>
-	<div class="hours-wrapper"><WeekHours {hours} {performances} /></div>
+	<div class="hours-wrapper"><WeekHours {calendar} {performances} /></div>
 	<HR />
 	<h2 id="menus">Menus</h2>
 	<div class="menus">
