@@ -1,4 +1,6 @@
 <script>
+	import { browser } from '$app/environment';
+
 	let { hours } = $props();
 
 	const isET = Intl.DateTimeFormat().resolvedOptions().timeZone === 'America/New_York';
@@ -30,7 +32,7 @@
 	}
 </script>
 
-{#if isET}
+{#if isET && browser}
 	<a href="/dining/ostrich-room">
 		<h6>The Ostrich Room</h6>
 		{#if isOpen}

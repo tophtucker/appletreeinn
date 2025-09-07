@@ -2,9 +2,7 @@
 	import Image from '$lib/lightbox/Image.svelte';
 	import VR from '$lib/components/VR.svelte';
 	import { RESERVATIONS_URL } from '$lib/nav.js';
-	import { formatHoursDayRange } from '$lib/index.js';
 	let { data } = $props();
-	const ostrichRange = formatHoursDayRange(data.ostrichRoom.hours);
 </script>
 
 <svelte:head>
@@ -47,7 +45,7 @@
 
 		<div class="header">Hours</div>
 		<div>Daily 8 – 10 a.m.</div>
-		<div>{ostrichRange} evenings</div>
+		<div>{data.ostrichRoom.dayRange} evenings</div>
 
 		<div class="header">Location</div>
 		<div>Round room (Main House)</div>

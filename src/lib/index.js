@@ -30,7 +30,7 @@ const isDenseCyclical = (data) => {
 	return false;
 };
 // Takes in an array of day numbers like [0, 1, 2] and returns a range like “Sun. – Tue.”
-const formatDayRange = (days) => {
+export const formatDayRange = (days) => {
 	days = sort(new Set(days.map((d) => d % modulo)), ascending);
 	if (days.length === 1) return formatWeekday(days[0]);
 	const i = isDenseCyclical(days);
@@ -41,14 +41,6 @@ const formatDayRange = (days) => {
 		.map(formatWeekday);
 	return days.length === 2 ? ext.join(' & ') : ext.join(' – ');
 };
-// Takes in a standard restaurant hours object and returns a range like “Wed. – Sat.”
-export const formatHoursDayRange = (hours) =>
-	formatDayRange(
-		hours
-			.slice(0, 7)
-			.filter((d) => d.normalHours)
-			.map((d) => d.date.getDay())
-	);
 
 // https://observablehq.com/d/37b2ab91a954e6bc
 export const buildings = [

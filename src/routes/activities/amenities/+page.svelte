@@ -1,8 +1,6 @@
 <script>
 	import Asterisk from '$lib/icons/Asterisk.svelte';
-	import { formatHoursDayRange } from '$lib/index.js';
 	let { data } = $props();
-	const ostrichRange = formatHoursDayRange(data.ostrichRoom.hours);
 </script>
 
 <svelte:head>
@@ -24,8 +22,8 @@
 
 		<dt>DINING</dt>
 		<dd>
-			We have a complimentary continental breakfast buffet every day and a tavern open {ostrichRange};
-			see <a href="/dining">dining</a>.
+			We have a complimentary continental breakfast buffet every day and a tavern open {data
+				.ostrichRoom.dayRange}; see <a href="/dining">dining</a>.
 		</dd>
 
 		<dt>GAMES</dt>

@@ -1,6 +1,5 @@
 <script>
-	import { formatHoursDayRange } from '$lib/index.js';
-	let { hours } = $props();
+	let { ostrichRoom } = $props();
 </script>
 
 <div class="wrapper">
@@ -11,7 +10,7 @@
 	<div class="top-bottom"></div>
 	<div class="content">
 		<h3>The<br />Ostrich<br />Room</h3>
-		<div>{formatHoursDayRange(hours)}</div>
+		<div>{ostrichRoom.dayRange}</div>
 		<a class="cta" href="/dining/ostrich-room">More info</a>
 	</div>
 	<div class="top-bottom"></div>

@@ -1,6 +1,7 @@
 <script>
 	import { timeDay } from 'd3-time';
 	import { formatTimeRange, formatTime, formatDay, formatDateShort } from '$lib/index.js';
+	import { browser } from '$app/environment';
 	let { hours, performances } = $props();
 
 	const getPerformancesForDay = (date) =>
@@ -19,40 +20,42 @@
 	const isToday = (day) => +timeDay(day) === +timeDay(new Date());
 </script>
 
-<table class="hours">
-	<thead>
-		<tr>
-			<th style="border-top: none; border-left: none; background: none;"></th>
-			<th style="min-width: 7em;">Hours</th>
-			<th class="hide-mobile"><a href="/music">Live music</a></th>
-		</tr>
-	</thead>
-	<tbody>
-		{#each week as d}
+{#if browser}
+	<table class="hours">
+		<thead>
 			<tr>
-				<td
-					><div
-						style="display: flex; justify-content: space-between; align-items: center; gap: 0.5em;"
-					>
-						{#if isToday(d.date)}<span class="manicule">☞</span>{/if}{formatDay(d.date)}
-						<span style="color: var(--gray); font-variant-numeric: tabular-nums;"
-							>{formatDateShort(d.date)}</span
-						>
-					</div>
-				</td>
-				<td
-					>{formatTimeRange(d.normalHours)}{#if d.specialHours !== undefined}<span class="notice"
-							>{#if d.specialHours}{formatTimeRange(d.specialHours)}{:else}Closed{/if}</span
-						>{/if}
-					{#if d.performances}
-						<div class="description show-mobile">{d.performances}</div>
-					{/if}</td
-				>
-				<td class="description hide-mobile">{d.performances}</td>
+				<th style="border-top: none; border-left: none; background: none;"></th>
+				<th style="min-width: 7em;">Hours</th>
+				<th class="hide-mobile"><a href="/music">Live music</a></th>
 			</tr>
-		{/each}
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			{#each week as d}
+				<tr>
+					<td
+						><div
+							style="display: flex; justify-content: space-between; align-items: center; gap: 0.5em;"
+						>
+							{#if isToday(d.date)}<span class="manicule">☞</span>{/if}{formatDay(d.date)}
+							<span style="color: var(--gray); font-variant-numeric: tabular-nums;"
+								>{formatDateShort(d.date)}</span
+							>
+						</div>
+					</td>
+					<td
+						>{formatTimeRange(d.normalHours)}{#if d.specialHours !== undefined}<span class="notice"
+								>{#if d.specialHours}{formatTimeRange(d.specialHours)}{:else}Closed{/if}</span
+							>{/if}
+						{#if d.performances}
+							<div class="description show-mobile">{d.performances}</div>
+						{/if}</td
+					>
+					<td class="description hide-mobile">{d.performances}</td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
+{/if}
 
 <style>
 	.hours {

@@ -3,6 +3,7 @@ import { toHTML } from '@portabletext/to-html';
 import imageUrlBuilder from '@sanity/image-url';
 import { isoParse, timeFormat } from 'd3-time-format';
 import { timeMonday, timeDay } from 'd3-time';
+import { formatDayRange } from '$lib/index.js';
 
 export const sanity = createClient({
 	projectId: 'lxtjf1cx',
@@ -57,5 +58,11 @@ export function parseRestaurant({ hours, hourOverrides, menus }) {
 		if (specialHours) specialHours = specialHours ? parseDateHours(date, specialHours) : null;
 		return { date, hours: specialHours || normalHours, specialHours, normalHours };
 	});
-	return { hours: combinedHours, menus };
+	const dayRange = formatDayRange(
+		daysOfWeek
+			.map((d, i) => [d, i])
+			.filter(([d]) => !hours[d].closed)
+			.map(([, i]) => i)
+	);
+	return { hours: combinedHours, menus, dayRange };
 }

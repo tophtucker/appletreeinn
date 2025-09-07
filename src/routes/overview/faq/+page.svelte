@@ -1,8 +1,6 @@
 <script>
 	import XR from '$lib/components/XR.svelte';
-	import { formatHoursDayRange } from '$lib/index.js';
 	let { data } = $props();
-	const ostrichRange = formatHoursDayRange(data.ostrichRoom.hours);
 </script>
 
 <svelte:head>
@@ -29,7 +27,8 @@
 			We have thirteen unique <a href="/rooms">guest rooms</a> in the historic Main House, plus
 			twenty-one more basic rooms in the seasonal Lodge. The Main House has the front desk; the
 			lobby; the porch; the quirky “round room”; and our tavern,
-			<a href="/dining/ostrich-room">The Ostrich Room</a>, which is open to the public {ostrichRange}
+			<a href="/dining/ostrich-room">The Ostrich Room</a>, which is open to the public {data
+				.ostrichRoom.dayRange}
 			for food, drinks, and <a href="/music">live music</a>.
 		</p>
 		<p>
@@ -116,7 +115,7 @@
 			and the only taxis are more like limosuine services you have reserve ahead of time. There’s
 			very little food delivery; the hotel has continental breakfast every morning, but our
 			<a href="/dining/ostrich-room">dinner restaurant</a>
-			is only open {ostrichRange}
+			is only open {data.ostrichRoom.dayRange}
 		</li>
 		<li>
 			<strong>Hiking gear.</strong> There’s lots of hiking opportunities in the area, of varying difficulties.

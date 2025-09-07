@@ -118,7 +118,7 @@
 			played here when it was Alice’s. Johnny Irion revitalized the program a few years ago, and now
 			we generally have a show every night the bar is open.
 		</p>
-		<OstrichRoom hours={ostrichRoom.hours} />
+		<OstrichRoom {ostrichRoom} />
 	</div>
 
 	<HR />
