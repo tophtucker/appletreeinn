@@ -2,16 +2,17 @@
 	import Image from '$lib/lightbox/Image.svelte';
 	import VR from '$lib/components/VR.svelte';
 	import { RESERVATIONS_URL } from '$lib/nav.js';
-	import { ostrichRoom, formatDayRange } from '$lib/index.js';
-	const ostrichRange = formatDayRange(ostrichRoom.hours.map((d) => d[0]));
+	import { formatHoursDayRange } from '$lib/index.js';
+	let { data } = $props();
+	const ostrichRange = formatHoursDayRange(data.ostrichRoom.hours);
 </script>
 
 <svelte:head>
 	<title>Dining • Apple Tree Inn • Lenox, MA</title>
-	<!-- <meta
+	<meta
 		name="description"
-		content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream"
-	/> -->
+		content="The inn offers a historic tavern open to the public and a complimentary continental breakfast for guests"
+	/>
 </svelte:head>
 
 <div class="inner">

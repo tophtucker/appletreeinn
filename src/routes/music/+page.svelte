@@ -8,7 +8,7 @@
 	import HR from '$lib/components/HR.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	let { data } = $props();
-	const { performances } = data;
+	const { performances, ostrichRoom } = data;
 
 	const threshold = timeDay();
 	const past = performances.filter((d) => d.startTime < threshold);
@@ -118,7 +118,7 @@
 			played here when it was Alice’s. Johnny Irion revitalized the program a few years ago, and now
 			we generally have a show every night the bar is open.
 		</p>
-		<OstrichRoom />
+		<OstrichRoom hours={ostrichRoom.hours} />
 	</div>
 
 	<HR />

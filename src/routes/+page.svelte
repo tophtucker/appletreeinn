@@ -1,8 +1,6 @@
 <script>
 	import GalleryGrid from '$lib/components/GalleryGrid.svelte';
 	import heroDrone from '$lib/assets/hero-drone.jpg?enhanced';
-
-	console.log('toph', { heroDrone });
 </script>
 
 <svelte:head>

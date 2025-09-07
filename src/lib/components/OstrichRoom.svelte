@@ -1,8 +1,6 @@
 <script>
-	import { timeDay, timeMinute } from 'd3-time';
-	import { ostrichRoom, formatDayRange } from '$lib/index.js';
-
-	const data = ostrichRoom;
+	import { formatHoursDayRange } from '$lib/index.js';
+	let { hours } = $props();
 </script>
 
 <div class="wrapper">
@@ -13,7 +11,7 @@
 	<div class="top-bottom"></div>
 	<div class="content">
 		<h3>The<br />Ostrich<br />Room</h3>
-		<div>{formatDayRange(ostrichRoom.hours.map((d) => d[0]))}</div>
+		<div>{formatHoursDayRange(hours)}</div>
 		<a class="cta" href="/dining/ostrich-room">More info</a>
 	</div>
 	<div class="top-bottom"></div>

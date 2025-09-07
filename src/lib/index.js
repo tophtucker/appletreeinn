@@ -3,54 +3,20 @@
 import { timeFormat } from 'd3-time-format';
 import { min, max, extent, range, sort, ascending } from 'd3-array';
 
-export const ostrichRoom = {
-	hours: [
-		[3, [17, 21.5]],
-		[4, [17, 21.5]],
-		[5, [17, 22.5]],
-		[6, [17, 22.5]]
-	],
-	overrides: [
-		[new Date(2024, 10, 27), null],
-		[new Date(2024, 10, 28), null],
-		[new Date(2024, 11, 25), null],
-		[new Date(2025, 2, 19), [18, 21]],
-		[new Date(2025, 3, 3), null],
-		[new Date(2025, 3, 4), null],
-		[new Date(2025, 3, 5), null],
-		[new Date(2025, 6, 3), [15, 23]],
-		[new Date(2025, 6, 4), [15, 23]],
-		[new Date(2025, 7, 23), [16, 22]],
-		[new Date(2025, 7, 29), [17, 23]],
-		[new Date(2025, 7, 30), [17, 23]],
-		[new Date(2025, 7, 31), [12, 18]] // Hilltown pop-up
-	]
-};
-
 export const formatDate = timeFormat('%a. %-m/%d');
 export const formatDay = timeFormat('%a.');
 export const formatDateShort = timeFormat('%-m/%d');
-export const formatTime = (d) => timeFormat('%-I:%M %p')(d).toLowerCase();
+export const formatTimePart = (d) => (d.getMinutes() ? timeFormat('%-I:%M') : timeFormat('%-I'))(d);
+export const formatTimeMeridiem = (d) => timeFormat('%p')(d).toLowerCase();
+export const formatTime = (d) => `${formatTimePart(d)} ${formatTimeMeridiem(d)}`;
 
-const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
-const hrMod = (hour) => hour % 12 || 12;
-const fmt = (hour) => `${~~hrMod(hour)}${hour % 1 ? `:${(hour % 1) * 60}` : ''}`;
-// Takes in hour numbers
-export const formatHourRange = (hours) =>
-	hours.every((hour) => hour < 12 === hours[0] < 12)
-		? `${hours.map(fmt).join(' – ')} ${amPm(hours[0])}`
-		: hours.map((hour) => `${fmt(hour)} ${amPm(hour)}`).join(' – ');
-
-// Takes in real date objects
-export function formatTimeRange(range) {
-	const amPm = (d) => timeFormat('%p')(d).toLowerCase();
-	const hr = timeFormat('%-I');
-	const hrMin = timeFormat('%-I:%M');
-	const fmt = (d) => (d.getMinutes() ? hrMin(d) : hr(d));
-	return range.every((t) => amPm(t) === amPm(range[0]))
-		? `${range.map(fmt).join(' – ')} ${amPm(range[0])}`
-		: range.map((t) => `${fmt(t)} ${amPm(t)}`).join(' – ');
-}
+export const formatTimeRange = (hours) => {
+	if (!hours) return '—';
+	if (hours.every((hour) => formatTimeMeridiem(hour) === formatTimeMeridiem(hours[0]))) {
+		return `${hours.map(formatTimePart).join(' – ')} ${formatTimeMeridiem(hours[0])}`;
+	}
+	return hours.map(formatTime).join(' – ');
+};
 
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 export const formatWeekday = (d) => `${daysOfWeek[d]}.`;
@@ -63,7 +29,8 @@ const isDenseCyclical = (data) => {
 	}
 	return false;
 };
-export const formatDayRange = (days) => {
+// Takes in an array of day numbers like [0, 1, 2] and returns a range like “Sun. – Tue.”
+const formatDayRange = (days) => {
 	days = sort(new Set(days.map((d) => d % modulo)), ascending);
 	if (days.length === 1) return formatWeekday(days[0]);
 	const i = isDenseCyclical(days);
@@ -74,6 +41,14 @@ export const formatDayRange = (days) => {
 		.map(formatWeekday);
 	return days.length === 2 ? ext.join(' & ') : ext.join(' – ');
 };
+// Takes in a standard restaurant hours object and returns a range like “Wed. – Sat.”
+export const formatHoursDayRange = (hours) =>
+	formatDayRange(
+		hours
+			.slice(0, 7)
+			.filter((d) => d.normalHours)
+			.map((d) => d.date.getDay())
+	);
 
 // https://observablehq.com/d/37b2ab91a954e6bc
 export const buildings = [

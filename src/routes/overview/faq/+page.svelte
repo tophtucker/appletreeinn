@@ -1,7 +1,8 @@
 <script>
 	import XR from '$lib/components/XR.svelte';
-	import { ostrichRoom, formatDayRange } from '$lib/index.js';
-	const ostrichRange = formatDayRange(ostrichRoom.hours.map((d) => d[0]));
+	import { formatHoursDayRange } from '$lib/index.js';
+	let { data } = $props();
+	const ostrichRange = formatHoursDayRange(data.ostrichRoom.hours);
 </script>
 
 <svelte:head>

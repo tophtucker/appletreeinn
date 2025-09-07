@@ -1,14 +1,15 @@
 <script>
-	import { ostrichRoom } from '$lib/index.js';
 	import { RESERVATIONS_URL } from '$lib/nav.js';
 	import WeekHours from '$lib/components/WeekHours.svelte';
 	import GoogleDrive from '$lib/components/GoogleDrive.svelte';
-	import Pin from '$lib/components/Pin.svelte';
 	import HR from '$lib/components/HR.svelte';
 	import Image from '$lib/lightbox/Image.svelte';
 
 	let { data } = $props();
-	let { performances } = data;
+	let {
+		performances,
+		ostrichRoom: { hours, menus }
+	} = data;
 </script>
 
 <svelte:head>
@@ -30,7 +31,7 @@
 		<div>(413) 637-1910</div>
 	</div>
 	<div style="text-align: center;"><em>Walk-ins always welcome!</em></div>
-	<div class="hours-wrapper"><WeekHours data={ostrichRoom} {performances} /></div>
+	<div class="hours-wrapper"><WeekHours {hours} {performances} /></div>
 	<HR />
 	<h2 id="menus">Menus</h2>
 	<div class="menus">
