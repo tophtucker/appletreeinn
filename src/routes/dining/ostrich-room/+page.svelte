@@ -1,7 +1,6 @@
 <script>
 	import { RESERVATIONS_URL } from '$lib/nav.js';
 	import WeekHours from '$lib/components/WeekHours.svelte';
-	import GoogleDrive from '$lib/components/GoogleDrive.svelte';
 	import HR from '$lib/components/HR.svelte';
 	import Image from '$lib/lightbox/Image.svelte';
 
@@ -35,8 +34,12 @@
 	<HR />
 	<h2 id="menus">Menus</h2>
 	<div class="menus">
-		<GoogleDrive id={'1139xqH3Gb25F5FIamPBE8G-TPF8uputv'} title="Drinks" />
-		<GoogleDrive id={'1_9J3SqtSpiVupO8VgDlnq8YMsSdQ3Qgx'} title="Food" />
+		{#each menus as menu}
+			<div>
+				<a href={menu.url}>{menu.name}</a>
+				<iframe src={menu.url} title={menu.name}></iframe>
+			</div>
+		{/each}
 	</div>
 	<HR />
 	<div class="gallery">
@@ -170,6 +173,20 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 1em;
 		width: 100%;
+	}
+
+	.menus a {
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.menus iframe {
+		display: block;
+		width: 100%;
+		height: 600px;
+		border: none;
+		border: 1px solid var(--black);
+		border-radius: 5px;
 	}
 
 	@media (max-width: 800px) {

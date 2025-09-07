@@ -27,7 +27,7 @@ const BULLETINS_QUERY = `*[_type == "bulletin" && startTime < now() && endTime >
 const OSTRICH_QUERY = `*[_type == "restaurant" && name == "The Ostrich Room"][0] {
   hours,
   hourOverrides,
-  menus
+  "menus": menus[]{ name, "url": asset->url }
 }`;
 
 export async function load() {
