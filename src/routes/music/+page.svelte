@@ -222,7 +222,7 @@
 		width: 180px;
 	}
 	details table td:nth-child(2) {
-		width: 140px;
+		width: 160px;
 	}
 	details .narrow-performances {
 		padding: 1rem 2rem;
