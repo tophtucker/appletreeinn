@@ -3,20 +3,14 @@
 	import { formatTimeRange, formatTime, formatDay, formatDateShort } from '$lib/index.js';
 	let { calendar, performances } = $props();
 
-	console.log(performances.map((d) => [d.act.name, d.startTime.toString()]));
-	const getPerformancesForDay = (date) => {
-		// console.log(
-		// 	date,
-		// 	performances.filter((d) => date.equals(d.startTime.toPlainDate()))
-		// );
-		return performances
+	const getPerformancesForDay = (date) =>
+		performances
 			.filter((d) => date.equals(d.startTime.toPlainDate()))
 			.map(
 				(d) =>
 					`${d.act.name} (${d.endTime ? formatTimeRange([d.startTime, d.endTime]) : formatTime(d.startTime)})`
 			)
 			.join('; ');
-	};
 
 	const week = calendar
 		.slice(0, 7)

@@ -53,7 +53,7 @@ export function parseRestaurant({ hours, hourOverrides, menus }) {
 	for (let i = 0; i < 14; i++) {
 		const date = latestMonday.add({ days: i });
 		const normal = normalHours.find((d) => d.i === date.dayOfWeek).hours;
-		let special = hourOverrides.find((d) => date.equals(d.date));
+		let special = hourOverrides?.find((d) => date.equals(d.date));
 		special = special ? parseDayHours(special) : null;
 		calendar.push({
 			date, // PlainDate
