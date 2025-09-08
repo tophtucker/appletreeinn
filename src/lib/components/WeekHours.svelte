@@ -3,7 +3,12 @@
 	import { formatTimeRange, formatTime, formatDay, formatDateShort } from '$lib/index.js';
 	let { calendar, performances } = $props();
 
+	console.log(performances.map((d) => [d.act.name, d.startTime.toString()]));
 	const getPerformancesForDay = (date) => {
+		// console.log(
+		// 	date,
+		// 	performances.filter((d) => date.equals(d.startTime.toPlainDate()))
+		// );
 		return performances
 			.filter((d) => date.equals(d.startTime.toPlainDate()))
 			.map(
