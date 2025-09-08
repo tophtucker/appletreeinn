@@ -73,20 +73,29 @@
 
 {#snippet card(p)}
 	<div class="performance">
-		{#if p.act.image}
-			<img src={p.act.image} alt={p.act.name} />
-		{/if}
-		<div class="time">
-			{formatDay(p.startTime)}. {formatMonthDate(p.startTime)},
-			{formatTimeMaybeRange(p)}
-		</div>
-		<div class="name">
-			<h3>{p.act.name}</h3>
-			{#if p.note}{p.note}{/if}
-		</div>
-		<div class="bio">
-			{@html p.act.description}
-			{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
+		<div class="perf-inner">
+			<div class="text">
+				<div class="time">
+					{formatDay(p.startTime)}. {formatMonthDate(p.startTime)},
+					{formatTimeMaybeRange(p)}
+				</div>
+				<div class="name">
+					<h3>{p.act.name}</h3>
+					{#if p.note}{p.note}{/if}
+				</div>
+				<div class="bio">
+					{@html p.act.description}
+				</div>
+				{#if p.act.genre || p.act.youtube}
+					<div class="meta">
+						{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
+						{#if p.act.youtube}<span><a href={p.act.youtube}>Watch clip</a></span>{/if}
+					</div>
+				{/if}
+			</div>
+			{#if p.act.image}
+				<img src={p.act.image} alt={p.act.name} />
+			{/if}
 		</div>
 	</div>
 {/snippet}
@@ -107,14 +116,16 @@
 				{/each}
 			</tbody>
 		</table>
-		<div class="show-mobile narrow-performances">
-			{#each performances as p}
-				<div>
-					<small>{formatDate(p.startTime)}</small>
-					<div>{p.act.name}</div>
-					{#if p.note}<small>{p.note}</small>{/if}
-				</div>
-			{/each}
+		<div class="show-mobile">
+			<div class="narrow-performances">
+				{#each performances as p}
+					<div>
+						<small>{formatDate(p.startTime)}</small>
+						<div>{p.act.name}</div>
+						{#if p.note}<small>{p.note}</small>{/if}
+					</div>
+				{/each}
+			</div>
 		</div>
 	</details>
 {/snippet}
@@ -199,15 +210,21 @@
 		margin-bottom: 2rem;
 	}
 	details table {
-		padding: 1rem;
+		padding: 1rem 2rem;
 	}
 	details table td {
 		padding: 0.25rem 0.5rem;
 		min-width: 6rem;
 		vertical-align: top;
 	}
+	details table td:nth-child(1) {
+		width: 180px;
+	}
+	details table td:nth-child(2) {
+		width: 140px;
+	}
 	details .narrow-performances {
-		padding: 1rem;
+		padding: 1rem 2rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
@@ -251,12 +268,24 @@
 		color: var(--blue);
 		background: none;
 	}
+
 	.performances {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
 	}
 	.performance {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.performance .perf-inner {
+		display: grid;
+		grid-template-columns: 4fr 3fr;
+		gap: 1rem;
+	}
+	.performance .text {
+		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
@@ -271,13 +300,29 @@
 	.performance .bio {
 		padding-left: 2rem;
 	}
+	.performance .meta {
+		padding-left: 2rem;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	}
 	.performance h3 {
 		margin: 0;
 	}
 	.performance img {
-		width: 100%;
 		max-width: 400px;
+		width: 100%;
 	}
+	:global(.performance p) {
+		margin: 0;
+	}
+	@media (max-width: 1000px) {
+		.performance .perf-inner {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+
 	dialog {
 		max-width: 720px;
 	}
