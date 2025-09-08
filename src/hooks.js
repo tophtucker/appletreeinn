@@ -16,5 +16,9 @@ export const transport = {
 	TemporalPlainDateTime: {
 		encode: (v) => v instanceof Temporal.PlainDateTime && v.toString(),
 		decode: (s) => Temporal.PlainDateTime.from(s)
+	},
+	TemporalPlainYearMonth: {
+		encode: (v) => v instanceof Temporal.PlainYearMonth && v.toString(),
+		decode: (s) => Temporal.PlainYearMonth.from(s)
 	}
 };

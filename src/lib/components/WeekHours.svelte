@@ -1,7 +1,6 @@
 <script>
 	import { Temporal } from '@js-temporal/polyfill';
 	import { formatTimeRange, formatTime, formatDay, formatDateShort } from '$lib/index.js';
-	import { browser } from '$app/environment';
 	let { calendar, performances } = $props();
 
 	const getPerformancesForDay = (date) => {
@@ -21,42 +20,40 @@
 	const isToday = (day) => Temporal.Now.plainDateISO().equals(day);
 </script>
 
-{#if browser}
-	<table class="hours">
-		<thead>
+<table class="hours">
+	<thead>
+		<tr>
+			<th style="border-top: none; border-left: none; background: none;"></th>
+			<th style="min-width: 7em;">Hours</th>
+			<th class="hide-mobile"><a href="/music">Live music</a></th>
+		</tr>
+	</thead>
+	<tbody>
+		{#each week as d}
 			<tr>
-				<th style="border-top: none; border-left: none; background: none;"></th>
-				<th style="min-width: 7em;">Hours</th>
-				<th class="hide-mobile"><a href="/music">Live music</a></th>
-			</tr>
-		</thead>
-		<tbody>
-			{#each week as d}
-				<tr>
-					<td
-						><div
-							style="display: flex; justify-content: space-between; align-items: center; gap: 0.5em;"
-						>
-							{#if isToday(d.date)}<span class="manicule">☞</span>{/if}{formatDay(d.date)}
-							<span style="color: var(--gray); font-variant-numeric: tabular-nums;"
-								>{formatDateShort(d.date)}</span
-							>
-						</div>
-					</td>
-					<td
-						>{formatTimeRange(d.normalHours)}{#if d.specialHours}<span class="notice"
-								>{#if d.specialHours}{formatTimeRange(d.specialHours)}{:else}Closed{/if}</span
-							>{/if}
-						{#if d.performances}
-							<div class="description show-mobile">{d.performances}</div>
-						{/if}</td
+				<td
+					><div
+						style="display: flex; justify-content: space-between; align-items: center; gap: 0.5em;"
 					>
-					<td class="description hide-mobile">{d.performances}</td>
-				</tr>
-			{/each}
-		</tbody>
-	</table>
-{/if}
+						{#if isToday(d.date)}<span class="manicule">☞</span>{/if}{formatDay(d.date)}
+						<span style="color: var(--gray); font-variant-numeric: tabular-nums;"
+							>{formatDateShort(d.date)}</span
+						>
+					</div>
+				</td>
+				<td
+					>{formatTimeRange(d.normalHours)}{#if d.specialHours}<span class="notice"
+							>{#if d.specialHours}{formatTimeRange(d.specialHours)}{:else}Closed{/if}</span
+						>{/if}
+					{#if d.performances}
+						<div class="description show-mobile">{d.performances}</div>
+					{/if}</td
+				>
+				<td class="description hide-mobile">{d.performances}</td>
+			</tr>
+		{/each}
+	</tbody>
+</table>
 
 <style>
 	.hours {

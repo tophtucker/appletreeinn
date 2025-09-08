@@ -1,9 +1,7 @@
 import { createClient } from '@sanity/client';
 import { toHTML } from '@portabletext/to-html';
 import imageUrlBuilder from '@sanity/image-url';
-import { timeFormat } from 'd3-time-format';
-import { timeMonday, timeDay } from 'd3-time';
-import { formatDayRange } from '$lib/index.js';
+import { TIME_ZONE, daysOfWeek, isoParse, formatDayRange } from '$lib/index.js';
 import { Temporal } from '@js-temporal/polyfill';
 
 export const sanity = createClient({
@@ -12,10 +10,6 @@ export const sanity = createClient({
 	apiVersion: '2024-01-01',
 	useCdn: false
 });
-
-const TIME_ZONE = 'America/New_York';
-const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-const isoParse = (isoUtc) => Temporal.Instant.from(isoUtc).toZonedDateTimeISO('America/New_York');
 
 // PERFORMANCES
 
@@ -71,5 +65,8 @@ export function parseRestaurant({ hours, hourOverrides, menus }) {
 		});
 	}
 
-	return { normalHours, calendar, menus };
+	// E.g. “Wed. – Sat.”
+	const dayRange = formatDayRange(normalHours.filter((d) => d.hours.length).map((d) => d.i));
+
+	return { normalHours, calendar, menus, dayRange };
 }

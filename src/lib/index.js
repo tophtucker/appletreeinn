@@ -3,10 +3,34 @@
 import { Temporal } from '@js-temporal/polyfill';
 import { min, max, extent, range, sort, ascending } from 'd3-array';
 
-const TIME_ZONE = 'America/New_York'; // TODO dedupe with sanity.js
+// Since the hotel is in Eastern Time, we try to show all dates and times around
+// the site in Eastern Time, not in the user’s local time
+export const TIME_ZONE = 'America/New_York';
+
+// Temporal starts the week with Monday, which it calls day 1
+export const daysOfWeek = [
+	'Monday',
+	'Tuesday',
+	'Wednesday',
+	'Thursday',
+	'Friday',
+	'Saturday',
+	'Sunday'
+];
+
+// Go from an ISO UTC datetime string to an Eastern Time ZonedDateTime
+export const isoParse = (isoUtc) =>
+	Temporal.Instant.from(isoUtc).toZonedDateTimeISO('America/New_York');
+
 function upzone(pt) {
 	if (pt instanceof Temporal.PlainTime) {
 		return Temporal.PlainDate.from('2000-01-01').toPlainDateTime(pt).toZonedDateTime(TIME_ZONE);
+	}
+	if (pt instanceof Temporal.PlainYearMonth) {
+		return pt
+			.toPlainDate({ day: 1 })
+			.toPlainDateTime({ hour: 0, minute: 0 })
+			.toZonedDateTime(TIME_ZONE);
 	}
 	if (pt instanceof Temporal.PlainDate || pt instanceof Temporal.PlainDateTime) {
 		return pt.toZonedDateTime(TIME_ZONE);
@@ -18,27 +42,31 @@ function upzone(pt) {
 	}
 }
 
-// Sun. 9/7
+export function epochMs(t) {
+	return upzone(t).epochMilliseconds;
+}
+
+// e.g. “Sun. 9/7”
 export function formatDate(zdt) {
 	zdt = upzone(zdt);
-	return new Intl.DateTimeFormat('en-US', {
-		weekday: 'short',
-		month: 'numeric',
-		day: 'numeric',
-		timeZone: zdt.timeZoneId
-	}).format(new Date(zdt.epochMilliseconds));
+	return `${formatDay(zdt)} ${formatDateShort(zdt)}`;
 }
 
-// Sun.
+// e.g. “Sun.”
 export function formatDay(zdt) {
 	zdt = upzone(zdt);
-	return new Intl.DateTimeFormat('en-US', {
-		weekday: 'short',
-		timeZone: zdt.timeZoneId
-	}).format(new Date(zdt.epochMilliseconds));
+	return (
+		new Intl.DateTimeFormat('en-US', {
+			weekday: 'short',
+			timeZone: zdt.timeZoneId
+		}).format(new Date(zdt.epochMilliseconds)) + '.'
+	);
 }
 
-// 9/7
+// e.g. 1 → “Mon.”, 2 → “Tue.”, … 7 → “Sun.”
+export const formatWeekday = (d) => `${daysOfWeek[d - 1].slice(0, 3)}.`;
+
+// e.g. “9/7”
 export function formatDateShort(zdt) {
 	zdt = upzone(zdt);
 	return new Intl.DateTimeFormat('en-US', {
@@ -48,7 +76,27 @@ export function formatDateShort(zdt) {
 	}).format(new Date(zdt.epochMilliseconds));
 }
 
-// 9 or 9:30
+// e.g. “September 7”
+export function formatMonthDate(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		month: 'long',
+		day: 'numeric',
+		timeZone: zdt.timeZoneId
+	}).format(new Date(zdt.epochMilliseconds));
+}
+
+// e.g. “September 2025”
+export function formatMonthYear(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		month: 'long',
+		year: 'numeric',
+		timeZone: zdt.timeZoneId
+	}).format(new Date(zdt.epochMilliseconds));
+}
+
+// e.g. “9” or “9:30”
 export function formatTimePart(zdt) {
 	zdt = upzone(zdt);
 	const hasMinutes = zdt.minute !== 0;
@@ -62,7 +110,7 @@ export function formatTimePart(zdt) {
 		.replace(/\s?(AM|PM)/i, ''); // strip meridiem
 }
 
-// am / pm
+// e.g. “am”, “pm”
 export function formatTimeMeridiem(zdt) {
 	zdt = upzone(zdt);
 	return new Intl.DateTimeFormat('en-US', {
@@ -81,6 +129,7 @@ export function formatTime(zdt) {
 	return `${formatTimePart(zdt)} ${formatTimeMeridiem(zdt)}`;
 }
 
+// e.g. “—”, “7 – 9 pm”, “10:30 am – 4:45 pm”
 export const formatTimeRange = (hours) => {
 	if (!hours.length) return '—';
 	if (hours.every((hour) => formatTimeMeridiem(hour) === formatTimeMeridiem(hours[0]))) {
@@ -89,8 +138,16 @@ export const formatTimeRange = (hours) => {
 	return hours.map(formatTime).join(' – ');
 };
 
-const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']; // TODO rm in favor of new Temporal stuff, currently in sanity.js
-export const formatWeekday = (d) => `${daysOfWeek[d]}.`;
+// For same calendar day, show time; within 7 days, show weekday; else, month/day
+export function formatFutureDate(zdt) {
+	const now = Temporal.Now.zonedDateTimeISO(zdt.timeZoneId);
+	if (zdt.toPlainDate().equals(now.toPlainDate())) return formatTime;
+	const oneWeekOut = now.add({ days: 7 }).toPlainDate();
+	if (Temporal.PlainDate.compare(zdt.toPlainDate(), oneWeekOut) < 0) return formatDay(zdt);
+	return formatDateShort(zdt);
+}
+
+// formatDayRange takes in an array of day numbers like [0, 1, 2] and returns a range like “Sun. – Tue.”
 const modulo = 7;
 const isDense = (data) => range(min(data), max(data) + 1).every((d) => data.includes(d));
 const mod = (number, modulus) => ((number % modulus) + modulus) % modulus;
@@ -100,7 +157,6 @@ const isDenseCyclical = (data) => {
 	}
 	return false;
 };
-// Takes in an array of day numbers like [0, 1, 2] and returns a range like “Sun. – Tue.”
 export const formatDayRange = (days) => {
 	days = sort(new Set(days.map((d) => d % modulo)), ascending);
 	if (days.length === 1) return formatWeekday(days[0]);

@@ -1,5 +1,4 @@
 import { sanity, parsePerformance, parseBulletin, parseRestaurant } from '$lib/sanity.js';
-import { timeFormat } from 'd3-time-format';
 
 const MUSIC_QUERY = `*[_type == "performance" && startTime > now()] | order(startTime asc) [0] {
   _id,
