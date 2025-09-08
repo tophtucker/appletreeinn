@@ -27,6 +27,7 @@
  */
 declare module '$env/static/private' {
 	export const GOOGLE_KEY: string;
+	export const TZ: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const FNM_LOGLEVEL: string;
@@ -34,7 +35,6 @@ declare module '$env/static/private' {
 	export const TERM: string;
 	export const SHELL: string;
 	export const FNM_NODE_DIST_MIRROR: string;
-	export const npm_config_metrics_registry: string;
 	export const TMPDIR: string;
 	export const HOMEBREW_REPOSITORY: string;
 	export const npm_config_global_prefix: string;
@@ -65,7 +65,6 @@ declare module '$env/static/private' {
 	export const EDITOR: string;
 	export const npm_package_name: string;
 	export const LANG: string;
-	export const TZ: string;
 	export const npm_config_npm_version: string;
 	export const XPC_FLAGS: string;
 	export const FNM_MULTISHELL_PATH: string;
@@ -122,6 +121,7 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		GOOGLE_KEY: string;
+		TZ: string;
 		TERM_PROGRAM: string;
 		NODE: string;
 		FNM_LOGLEVEL: string;
@@ -129,7 +129,6 @@ declare module '$env/dynamic/private' {
 		TERM: string;
 		SHELL: string;
 		FNM_NODE_DIST_MIRROR: string;
-		npm_config_metrics_registry: string;
 		TMPDIR: string;
 		HOMEBREW_REPOSITORY: string;
 		npm_config_global_prefix: string;
@@ -160,7 +159,6 @@ declare module '$env/dynamic/private' {
 		EDITOR: string;
 		npm_package_name: string;
 		LANG: string;
-		TZ: string;
 		npm_config_npm_version: string;
 		XPC_FLAGS: string;
 		FNM_MULTISHELL_PATH: string;
