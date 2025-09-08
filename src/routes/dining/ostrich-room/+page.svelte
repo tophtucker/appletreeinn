@@ -216,10 +216,4 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1em;
 	}
-	@media (max-width: 800px) {
-		.gallery {
-			grid-template-rows: 1fr 1fr;
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
 </style>
