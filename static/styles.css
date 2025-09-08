@@ -142,6 +142,11 @@ ul {
 	gap: 1em;
 }
 
+.duo {
+	gap: 1rem;
+	grid-template-columns: 1fr 15px 1fr;
+}
+
 .trio {
 	gap: 1rem;
 	grid-template-columns: 1fr 15px 1fr 15px 1fr;
