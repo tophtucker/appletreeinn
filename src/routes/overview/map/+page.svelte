@@ -10,13 +10,13 @@
 <div class="inner">
 	<h1>Property map</h1>
 
-	<Image src="/avaloch/map/map.svg" alt="Property map" />
+	<Image src="/map/map.svg" alt="Property map" />
 
 	<div class="item">
 		<h3>1.</h3>
 		<div class="img-wrapper">
 			<Image
-				src="/avaloch/img/lower-parking.jpg"
+				src="/img/lower-parking.jpg"
 				alt="1. Lower parking lot"
 				class="square"
 				style="width: 100%"
@@ -49,7 +49,7 @@
 		<h3>3.</h3>
 		<div class="img-wrapper">
 			<Image
-				src="/avaloch/img/ostrich-exterior.jpg"
+				src="/img/ostrich-exterior.jpg"
 				alt="3. The Ostrich Room"
 				class="square"
 				style="width: 100%"
@@ -68,7 +68,7 @@
 		<h3>4.</h3>
 		<div class="img-wrapper">
 			<Image
-				src="/avaloch/img/map-upper-lot.jpg"
+				src="/img/map-upper-lot.jpg"
 				alt="4. Upper parking lot"
 				class="square"
 				style="width: 100%"

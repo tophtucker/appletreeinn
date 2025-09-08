@@ -14,7 +14,7 @@
 
 <div class="inner">
 	<h1>Continental breakfast</h1>
-	<Image src="/avaloch/img/continental-breakfast.jpg" />
+	<Image src="/img/continental-breakfast.jpg" />
 
 	<p>
 		Guests enjoy a complimentary continental breakfast every morning from 8 to 10 a.m. Offerings
@@ -24,7 +24,7 @@
 	<div class="offerings">
 		<figure>
 			<Image
-				src="/avaloch/img/breakfast-eggs.jpg"
+				src="/img/breakfast-eggs.jpg"
 				style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 100%;"
 			/>
 			<figcaption>hard-boiled eggs,</figcaption>
@@ -32,7 +32,7 @@
 
 		<figure>
 			<Image
-				src="/avaloch/img/breakfast-fruit.jpg"
+				src="/img/breakfast-fruit.jpg"
 				style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 100%;"
 			/>
 			<figcaption>fresh fruit,</figcaption>
@@ -40,7 +40,7 @@
 
 		<figure>
 			<Image
-				src="/avaloch/img/breakfast-granola.jpg"
+				src="/img/breakfast-granola.jpg"
 				style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 100%;"
 			/>
 			<figcaption>local BOLA granola,</figcaption>
@@ -48,7 +48,7 @@
 
 		<figure>
 			<Image
-				src="/avaloch/img/breakfast-jam.jpg"
+				src="/img/breakfast-jam.jpg"
 				style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 100%;"
 			/>
 			<figcaption>homemade jam,</figcaption>
@@ -56,7 +56,7 @@
 
 		<figure>
 			<Image
-				src="/avaloch/img/breakfast-juice.jpg"
+				src="/img/breakfast-juice.jpg"
 				style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 100%;"
 			/>
 			<figcaption>juice,</figcaption>
@@ -64,7 +64,7 @@
 
 		<figure>
 			<Image
-				src="/avaloch/img/breakfast-yogurt.jpg"
+				src="/img/breakfast-yogurt.jpg"
 				style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 100%;"
 			/>
 			<figcaption>Greek yogurt,</figcaption>
@@ -72,7 +72,7 @@
 
 		<figure>
 			<Image
-				src="/avaloch/img/breakfast-muffins.jpg"
+				src="/img/breakfast-muffins.jpg"
 				style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 100%;"
 			/>
 			<figcaption>homemade muffins,</figcaption>
@@ -80,7 +80,7 @@
 
 		<figure>
 			<Image
-				src="/avaloch/img/breakfast-bread.jpg"
+				src="/img/breakfast-bread.jpg"
 				style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 100%;"
 			/>
 			<figcaption>and fresh bread from the famous Berkshire Mountain Bakery.</figcaption>
@@ -95,25 +95,19 @@
 		<div>
 			<h3>The Round Room</h3>
 			<div>Our iconic 18-sided room offers panoramic views</div>
-			<Image
-				src="/avaloch/img/round-room.jpg"
-				style="width: 260px; height: 260px; object-fit: cover;"
-			/>
+			<Image src="/img/round-room.jpg" style="width: 260px; height: 260px; object-fit: cover;" />
 		</div>
 		<XR />
 		<div>
 			<h3>The Porch</h3>
 			<div>Take in the fresh morning air and play fetch with Max</div>
-			<Image src="/avaloch/img/porch.jpg" style="width: 260px; height: 260px; object-fit: cover;" />
+			<Image src="/img/porch.jpg" style="width: 260px; height: 260px; object-fit: cover;" />
 		</div>
 		<XR />
 		<div>
 			<h3>The Lobby Lounge</h3>
 			<div>A brisk morning is a great excuse for a fire</div>
-			<Image
-				src="/avaloch/img/fireplace.jpg"
-				style="width: 260px; height: 260px; object-fit: cover;"
-			/>
+			<Image src="/img/fireplace.jpg" style="width: 260px; height: 260px; object-fit: cover;" />
 		</div>
 	</div>
 
@@ -125,7 +119,7 @@
 		morning supply lasts — fresh coffee from No. Six Depot, our favorite roastery down the road.
 	</p>
 
-	<Image src="/avaloch/img/coffee-station.jpg" />
+	<Image src="/img/coffee-station.jpg" />
 
 	<p>
 		There’s always plenty of reading material around, including the latest New York Times, Berkshire

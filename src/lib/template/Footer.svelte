@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="bottom">
-		<img src="/avaloch/icons/pentathing.svg" alt="Pentathing" width="50" />
+		<img src="/icons/pentathing.svg" alt="Pentathing" width="50" />
 		Directly across the road from Tanglewood
 	</div>
 </footer>

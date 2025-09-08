@@ -14,11 +14,11 @@
 <div class="inner main">
 	<enhanced:img src={heroDrone} alt="The Apple Tree Inn’s Main House" />
 	<div class="img-pair">
-		<img src="./avaloch/img/door.jpg" alt="Door" loading="lazy" />
-		<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" loading="lazy" />
+		<img src="./img/door.jpg" alt="Door" loading="lazy" />
+		<img src="./img/fireplace.jpg" alt="Fireplace" loading="lazy" />
 	</div>
 	<GalleryGrid />
-	<img src="/avaloch/img/porch-breakfast.jpg" alt="Breakfast on the porch" loading="lazy" />
+	<img src="/img/porch-breakfast.jpg" alt="Breakfast on the porch" loading="lazy" />
 </div>
 
 <style>

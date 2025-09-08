@@ -27,11 +27,11 @@
 
 		<div class="header hide-mobile"></div>
 		<Image
-			src="/avaloch/img/continental-breakfast.jpg"
+			src="/img/continental-breakfast.jpg"
 			style="width: 260px; height: 260px; object-fit: cover; border: 3px double black; margin: 0 auto;"
 		/>
 		<Image
-			src="/avaloch/img/ostrich-dining.jpg"
+			src="/img/ostrich-dining.jpg"
 			style="width: 260px; height: 260px; object-fit: cover; border: 3px double black; margin: 0 auto;"
 		/>
 

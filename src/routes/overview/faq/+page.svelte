@@ -169,7 +169,7 @@
 	<hr />
 	<h2>What’s that on yonder hill?</h2>
 	<img
-		src="/avaloch/img/winden-hill.jpg"
+		src="/img/winden-hill.jpg"
 		style="border: 3px double black; border-radius: 100%; margin-right: 1rem; margin-bottom: 2rem; float: left; width: 150px;"
 		alt="The Winden Hill Condominium, atop a distant hill, nestled among trees, shadowed by a bright but cloudy sky"
 	/>

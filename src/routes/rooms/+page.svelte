@@ -28,8 +28,8 @@
 		<div><a class="cta" href="/rooms/lodge">See rooms</a></div>
 
 		<div class="header hide-mobile"></div>
-		<img src="avaloch/img/main-house.jpg" alt="Main House" />
-		<img src="heropics/summer-annex.jpg" alt="Lodge" />
+		<img src="/img/main-house.jpg" alt="Main House" />
+		<img src="/heropics/summer-annex.jpg" alt="Lodge" />
 
 		<div class="header">Built</div>
 		<div>1885</div>

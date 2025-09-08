@@ -120,11 +120,7 @@
 {/snippet}
 
 <div class="inner">
-	<img
-		src="/avaloch/img/wanda.jpg"
-		alt="Wanda Houston performing live at the Ostrich Room"
-		class="intro"
-	/>
+	<img src="/img/wanda.jpg" alt="Wanda Houston performing live at the Ostrich Room" class="intro" />
 	<div class="grid-or-flex" style="grid-template-columns: 3fr 1fr; margin-top: 1rem;">
 		<p>
 			People come into our tavern and say they first played in it fifty years ago. The Berkshires

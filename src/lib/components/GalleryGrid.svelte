@@ -13,26 +13,26 @@
 			url: '/rooms'
 		},
 		{
-			src: '/avaloch/img/bar.jpg',
+			src: '/img/bar.jpg',
 			alt: 'Wood-paneled tavern',
 			url: '/ostrich-room',
 			size: 'md'
 		},
 		{
-			src: '/avaloch/img/tanglewood-walk.jpg',
+			src: '/img/tanglewood-walk.jpg',
 			alt: 'Walk to Tanglewood',
 			url: '/activities/tanglewood',
 			size: 'md'
 		},
-		{ src: '/avaloch/img/wanda.jpg', alt: 'Live music', size: 'md', url: '/music' },
+		{ src: '/img/wanda.jpg', alt: 'Live music', size: 'md', url: '/music' },
 		{
-			src: '/avaloch/img/adirondack-view.jpg',
+			src: '/img/adirondack-view.jpg',
 			alt: 'Gallery',
 			size: 'md',
 			url: '/overview/gallery'
 		},
 		{
-			src: '/avaloch/history/avaloch.jpg',
+			src: '/history/avaloch.jpg',
 			alt: 'History',
 			size: 'md',
 			url: '/about/history'
@@ -40,18 +40,18 @@
 		// TODO: Hilltop views of Berkshires hills
 	];
 	const pics2 = [
-		{ src: '/avaloch/img/flowers.jpg' },
-		{ src: '/avaloch/img/inglenook.jpg' },
+		{ src: '/img/flowers.jpg' },
+		{ src: '/img/inglenook.jpg' },
 		{ src: '/heropics/fire-pit.jpg' },
 		{ src: '/ostrich-room/P8243018.JPG' },
-		{ src: '/avaloch/img/music.jpg' },
+		{ src: '/img/music.jpg' },
 		{ src: '/img/cocktail.jpg' },
 		{ src: '/heropics/pool1.jpg' },
 		{ src: '/heropics/max.jpg' },
 		{ src: '/heropics/view2.jpg' },
-		{ src: '/avaloch/img/proposal.jpg' },
-		{ src: '/avaloch/img/sledding.jpg' },
-		{ src: '/avaloch/img/pool-view.jpg' }
+		{ src: '/img/proposal.jpg' },
+		{ src: '/img/sledding.jpg' },
+		{ src: '/img/pool-view.jpg' }
 	];
 	const colors = ['red', 'blue', 'green', 'gold'];
 	// const randColor = () => {

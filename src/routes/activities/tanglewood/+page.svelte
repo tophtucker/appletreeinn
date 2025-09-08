@@ -10,10 +10,7 @@
 
 <div class="inner">
 	<h1>Tanglewood</h1>
-	<Image
-		src="/avaloch/map/tanglewood-map.jpg"
-		style="border: 3px double black; margin-bottom: 2rem;"
-	/>
+	<Image src="/map/tanglewood-map.jpg" style="border: 3px double black; margin-bottom: 2rem;" />
 	<p>
 		From late June until early September, the world-famous Tanglewood music festival across the
 		street has concerts almost every day. Since traffic gets crazy on our little one-way roads ahead
@@ -86,7 +83,7 @@
 		</li>
 	</ul>
 	<HR />
-	<Image src="/avaloch/img/tanglewood-walk.jpg" />
+	<Image src="/img/tanglewood-walk.jpg" />
 </div>
 
 <style>

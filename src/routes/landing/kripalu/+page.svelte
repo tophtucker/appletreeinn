@@ -9,7 +9,7 @@
 <div class="inner">
 	<div>
 		<h1>Your Berkshires Retreat Doesn’t Have to End Yet</h1>
-		<img src="/avaloch/img/hero-drone.jpg" alt="The Apple Tree Inn’s Main House" />
+		<img src="/img/hero-drone.jpg" alt="The Apple Tree Inn’s Main House" />
 		<p>
 			Just 3 minutes from Kripalu, the <a href="/">Apple Tree Inn</a> is your home base for exploring
 			the Berkshires. After a day out, come back for a swim, live music, cocktails, and plenty of space
@@ -21,7 +21,7 @@
 	</div>
 
 	<div>
-		<img src="/avaloch/img/firepit2.jpg" alt="The view approaching the fire pit" />
+		<img src="/img/firepit2.jpg" alt="The view approaching the fire pit" />
 		<h3>Peaceful and Private</h3>
 		<p>
 			Our hilltop location offers sweeping mountain views, a calm setting, and plenty of space to
@@ -43,7 +43,7 @@
 
 	<div>
 		<img
-			src="/avaloch/img/adirondack-cheers.jpg"
+			src="/img/adirondack-cheers.jpg"
 			alt="Enjoying cocktails on the lawn overlooking the Berkshire hills"
 		/>
 		<h3>Cocktails with a view</h3>
@@ -56,7 +56,7 @@
 	</div>
 
 	<div>
-		<img src="/avaloch/img/pool-2025.jpg" alt="A view of the pool" />
+		<img src="/img/pool-2025.jpg" alt="A view of the pool" />
 		<h3>No Schedule Required</h3>
 		<p>
 			Sleep in, sip coffee on the porch, take a hike up Monument Mountain, or take a dip in the
@@ -66,7 +66,7 @@
 
 	<div>
 		<img
-			src="/avaloch/img/rigatoni-outside.jpg"
+			src="/img/rigatoni-outside.jpg"
 			alt="Enjoying a bowl of spicy rigatoni on the side patio"
 		/>
 		<h3>Relaxed Dining Options</h3>
@@ -77,7 +77,7 @@
 	</div>
 
 	<div>
-		<img src="/avaloch/img/music2.jpg" alt="Andy Wrba and friends performing in the Ostrich Room" />
+		<img src="/img/music2.jpg" alt="Andy Wrba and friends performing in the Ostrich Room" />
 		<h3>Live Music in the Evenings</h3>
 		<p>
 			Unwind with intimate <a href="/music" target="_blank">live music performances</a> in the Ostrich

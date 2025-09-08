@@ -5,13 +5,13 @@
 			slug: 'amenities',
 			name: 'Amenities',
 			desc: 'Across our 21 acres there’s plenty of room to roam, chat, swim, read, or work in any weather.',
-			img: '/avaloch/img/chess.jpg'
+			img: '/img/chess.jpg'
 		},
 		{
 			slug: 'tanglewood',
 			name: 'Tanglewood',
 			desc: 'The world-class music center across the street is open year-round but really comes alive each summer.',
-			img: '/avaloch/map/tanglewood-map.jpg'
+			img: '/map/tanglewood-map.jpg'
 		},
 		{
 			slug: 'berkshires',
