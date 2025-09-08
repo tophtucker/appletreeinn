@@ -31,12 +31,11 @@
 	</div>
 	<div style="text-align: center;"><em>Walk-ins always welcome!</em></div>
 	<div class="hours-wrapper"><WeekHours {calendar} {performances} /></div>
-	<HR />
-	<h2 id="menus">Menus</h2>
+	<h3 id="menus">Menus</h3>
 	<div class="menus">
 		{#each menus as menu}
 			<div>
-				<a href={menu.url}>{menu.name}</a>
+				<a class="cta" href={menu.url}>{menu.name}</a>
 				<iframe src={menu.url} title={menu.name}></iframe>
 			</div>
 		{/each}
@@ -164,29 +163,29 @@
 		margin-top: 2em;
 	}
 
-	h2 {
+	h3 {
 		margin: 1em 0 0.5em 0;
+		text-align: center;
 	}
 
 	.menus {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1em;
-		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
 	}
 
-	.menus a {
-		display: block;
-		margin-bottom: 0.5rem;
+	.menus > div {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: center;
 	}
 
 	.menus iframe {
-		display: block;
-		width: 100%;
-		height: 600px;
-		border: none;
-		border: 1px solid var(--black);
-		border-radius: 5px;
+		width: 220px;
+		height: 240px;
+		border-radius: 0.5rem;
 	}
 
 	@media (max-width: 800px) {
