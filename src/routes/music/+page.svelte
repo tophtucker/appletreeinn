@@ -76,7 +76,8 @@
 		<div class="perf-inner">
 			<div class="text">
 				<div class="time">
-					{formatDay(p.startTime)}. {formatMonthDate(p.startTime)},
+					{formatDay(p.startTime)}
+					{formatMonthDate(p.startTime)},
 					{formatTimeMaybeRange(p)}
 				</div>
 				<div class="name">
