@@ -15,9 +15,9 @@
 <a href="/dining/ostrich-room">
 	<h6>The Ostrich Room</h6>
 	{#if isOpen}
-		<div>Open until {formatFutureDate(nextHours[1])}.</div>
+		<div>Open until {formatFutureDate(nextHours[1])}</div>
 	{:else if nextHours}
-		<div>Next open {formatFutureDate(nextHours[0])}.</div>
+		<div>Next open {formatFutureDate(nextHours[0])}</div>
 	{/if}
 </a>
 
