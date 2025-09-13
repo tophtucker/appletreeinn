@@ -141,7 +141,7 @@ export const formatTimeRange = (hours) => {
 // For same calendar day, show time; within 7 days, show weekday; else, month/day
 export function formatFutureDate(zdt) {
 	const now = Temporal.Now.zonedDateTimeISO(zdt.timeZoneId);
-	if (zdt.toPlainDate().equals(now.toPlainDate())) return formatTime;
+	if (zdt.toPlainDate().equals(now.toPlainDate())) return formatTime(zdt);
 	const oneWeekOut = now.add({ days: 7 }).toPlainDate();
 	if (Temporal.PlainDate.compare(zdt.toPlainDate(), oneWeekOut) < 0) return formatDay(zdt);
 	return formatDateShort(zdt);
