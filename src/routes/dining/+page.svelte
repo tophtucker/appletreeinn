@@ -2,16 +2,15 @@
 	import Image from '$lib/lightbox/Image.svelte';
 	import VR from '$lib/components/VR.svelte';
 	import { RESERVATIONS_URL } from '$lib/nav.js';
-	import { ostrichRoom, formatDayRange } from '$lib/index.js';
-	const ostrichRange = formatDayRange(ostrichRoom.hours.map((d) => d[0]));
+	let { data } = $props();
 </script>
 
 <svelte:head>
 	<title>Dining • Apple Tree Inn • Lenox, MA</title>
-	<!-- <meta
+	<meta
 		name="description"
-		content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream"
-	/> -->
+		content="The inn offers a historic tavern open to the public and a complimentary continental breakfast for guests"
+	/>
 </svelte:head>
 
 <div class="inner">
@@ -28,11 +27,11 @@
 
 		<div class="header hide-mobile"></div>
 		<Image
-			src="/avaloch/img/continental-breakfast.jpg"
+			src="/img/continental-breakfast.jpg"
 			style="width: 260px; height: 260px; object-fit: cover; border: 3px double black; margin: 0 auto;"
 		/>
 		<Image
-			src="/avaloch/img/ostrich-dining.jpg"
+			src="/img/ostrich-dining.jpg"
 			style="width: 260px; height: 260px; object-fit: cover; border: 3px double black; margin: 0 auto;"
 		/>
 
@@ -46,7 +45,7 @@
 
 		<div class="header">Hours</div>
 		<div>Daily 8 – 10 a.m.</div>
-		<div>{ostrichRange} evenings</div>
+		<div>{data.ostrichRoom.dayRange} evenings</div>
 
 		<div class="header">Location</div>
 		<div>Round room (Main House)</div>

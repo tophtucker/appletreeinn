@@ -1,12 +1,14 @@
 <script>
 	import XR from '$lib/components/XR.svelte';
-	import { ostrichRoom, formatDayRange } from '$lib/index.js';
-	const ostrichRange = formatDayRange(ostrichRoom.hours.map((d) => d[0]));
+	let { data } = $props();
 </script>
 
 <svelte:head>
 	<title>FAQ • Apple Tree Inn • Lenox, MA</title>
-	<!-- <meta name="description" content="TODO" /> -->
+	<meta
+		name="description"
+		content="What’s the deal with the Apple Tree Inn? How it works, how to get there, what to bring, what to know before your trip."
+	/>
 </svelte:head>
 
 <div class="inner">
@@ -17,7 +19,7 @@
 			The Apple Tree Inn is a <a href="/about/history">historic estate</a> built high atop a Lenox
 			hill in 1885 by Cecile Bristed, a great-granddaughter of John Jacob Astor. She called it
 			<em>The Orchard</em>; in 1952 Roy Rappaport turned it into a hotel called <em>Avaloch</em>.
-			Alice Broch of “Alice’s Restaurant” ran her third and final restaurant here,
+			Alice Brock of “Alice’s Restaurant” ran her third and final restaurant here,
 			<em>Alice’s at Avaloch</em>. In 1983 it became the
 			<em>Apple Tree Inn</em>.
 		</p>
@@ -25,7 +27,8 @@
 			We have thirteen unique <a href="/rooms">guest rooms</a> in the historic Main House, plus
 			twenty-one more basic rooms in the seasonal Lodge. The Main House has the front desk; the
 			lobby; the porch; the quirky “round room”; and our tavern,
-			<a href="/dining/ostrich-room">The Ostrich Room</a>, which is open to the public {ostrichRange}
+			<a href="/dining/ostrich-room">The Ostrich Room</a>, which is open to the public {data
+				.ostrichRoom.dayRange}
 			for food, drinks, and <a href="/music">live music</a>.
 		</p>
 		<p>
@@ -72,16 +75,16 @@
 			<h3>From Boston</h3>
 			<div>
 				Two hours once you’re out of the city. Take the Mass Pike for 123 miles (90% of the drive).
-				Listen to “Sweet Baby James”. Stop at the 24/7 Charlton Service Plaza McDonald’s; beware the
-				D’Angelos rest stops.
+				Listen to “Sweet Baby James”. Stop at the 24/7 Charlton Service Plaza McDonald’s; skip
+				eating at the D’Angelos rest stops.
 			</div>
 		</div>
 		<XR />
 		<div>
 			<h3>From NYC</h3>
 			<div>
-				Two and a half once you’re out of the city. Take the Taconic for 91 miles (⅔ of the drive).
-				Stop to eat at <a href="https://troutbeck.com/">Troutbeck</a> (+20 min) or
+				Two and a half hours once you’re out of the city. Take the Taconic for 91 miles (⅔ of the
+				drive). Stop to eat at <a href="https://troutbeck.com/">Troutbeck</a> (+20 min) or
 				<a href="https://www.stissinghouse.com/">Stissing House</a> (+10 min) (check hours). The road
 				becomes winding as you get closer; watch for deer.
 			</div>
@@ -90,43 +93,54 @@
 		<div>
 			<h3>From Albany</h3>
 			<div>
-				Forty five minutes. It’s slightly prettier if you take NY-22 S through New Lebanon (+ 12
+				Forty-five minutes. It’s slightly prettier if you take NY-22 S through New Lebanon (+ 12
 				min) instead of the I-90 route.
 			</div>
 		</div>
 	</div>
+	<p>
+		If you do need a car service, we recommend <a href="https://abbottslimo.com/"
+			>Abbott’s Limousine</a
+		>, <a href="https://happycarberkshiretrips.com/">HappyCAR</a> (long-distance only; minimum $50
+		charge for trips under 10 miles), or
+		<a href="https://www.berkshireshuttle.com/">Berkshire Shuttle</a> (just goes between the Berkshires
+		and the Albany airport).
+	</p>
 	<hr />
 	<h2>What should I bring?</h2>
 	<ul>
 		<li>
-			<strong>A car.</strong> The only things within walking distance are Tanglewood and Kripalu
-			(about 10 minutes each); it’s a 45-minute walk into town. There’s basically no Uber, and the
-			only taxis are more like limosuine services you have reserve ahead of time. There’s very
-			little food delivery; the hotel has continental breakfast every morning, but our
+			<strong>A car.</strong> See above. The only things within walking distance are Tanglewood and
+			Kripalu (about 10 minutes each); it’s a 45-minute walk into town. There’s basically no Uber,
+			and the only taxis are more like limosuine services you have reserve ahead of time. There’s
+			very little food delivery; the hotel has continental breakfast every morning, but our
 			<a href="/dining/ostrich-room">dinner restaurant</a>
-			is only open {ostrichRange}
+			is only open {data.ostrichRoom.dayRange}
 		</li>
+		<li>
+			<strong>Hiking gear.</strong> There’s lots of hiking opportunities in the area, of varying difficulties.
+			Bring sneakers (or boots for winter), a water bottle, and long pants (if you’re worried about ticks).
+		</li>
+		<li>
+			<strong>Tablet or laptop.</strong> There are no TVs in the room! You can just bask in the natural
+			beauty of the Berkshires and watch the clouds go by, but if you want to watch screen stuff, you’ll
+			have to bring your own screen.
+		</li>
+	</ul>
+	<p>In the summer:</p>
+	<ul>
 		<li>
 			<strong>Picnic supplies.</strong> If you’re going to Tanglewood, we think the best way to
 			enjoy it is to arrive early and picnic on the lawn. People bring blankets, lawn chairs,
 			coolers, baskets, bug spray, binoculars, cheese, crackers, beer, wine, candles, flashlights,
-			etc.; read our
+			<em>etc.</em>; read our
 			<a href="/activities/tanglewood">Tanglewood guide</a> for more.
 		</li>
 		<li>
 			<strong>A bathing suit.</strong> We have a lovely pool! Open between Memorial Day and Labor
 			Day, sunrise to sunset. There’s a lake three minutes down the road and other swimming holes
 			and little waterfalls <a href="/activities/berkshires">in the area</a>. We have pool towels
-			but we don’t have goggles, swim caps, floaties, etc.
-		</li>
-		<li>
-			<strong>Hiking gear.</strong> There’s lots of hiking opportunities in the area, of varying difficulties.
-			Bring sneakers, a water bottle, and long pants (if you’re worried about ticks).
-		</li>
-		<li>
-			<strong>Tablet or laptop.</strong> There are no TVs in the room! You can just bask in the natural
-			beauty of the Berkshires and watch the clouds go by, but if you want to watch screen stuff, you’ll
-			have to bring your own screen.
+			but we don’t have goggles, swim caps, floaties, <em>etc.</em>
 		</li>
 	</ul>
 	<hr />
@@ -145,9 +159,27 @@
 	<p>
 		We have high chairs for the restaurant, one pack ’n play, lots of board games, sleds for winter,
 		and tons of lawn space to play around, both flat and hilly, including plenty of space far from
-		the road; B.Y.O. wiffle ball. We have a hotel dog, Max, who is great with kids and will play
-		fetch with them forever. Our <a href="/activities/berkshires">local guide</a> includes some kid-friendly
-		activities.
+		the road; B.Y.O. wiffle ball. We have a hotel dog, Max, a big German shepherd who is great with
+		kids and will play fetch with them forever. Our <a href="/activities/berkshires">local guide</a>
+		includes some kid-friendly activities. The <em>New York Times</em> just wrote about
+		<a href="https://www.nytimes.com/2025/08/27/arts/music/tanglewood-classical-music-children.html"
+			>how great Tanglewood is for kids</a
+		>.
+	</p>
+	<hr />
+	<h2>What’s that on yonder hill?</h2>
+	<img
+		src="/img/winden-hill.jpg"
+		style="border: 3px double black; border-radius: 100%; margin-right: 1rem; margin-bottom: 2rem; float: left; width: 150px;"
+		alt="The Winden Hill Condominium, atop a distant hill, nestled among trees, shadowed by a bright but cloudy sky"
+	/>
+	<p>
+		That’s the Winden Hill Condominium on the former site of the Allen Winden estate. It stands so
+		prominently on its distant hill that people sometimes mistake it for Miraval, Kripalu, <em
+			>etc.</em
+		>, so we are not kidding when we say this question is frequently asked! If this entices you, you
+		should check out one of the many local historic homes open to the public, such as The Mount,
+		Naumkeag, or Ventfort Hall.
 	</p>
 </div>
 

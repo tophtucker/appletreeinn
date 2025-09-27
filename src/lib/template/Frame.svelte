@@ -2,12 +2,11 @@
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import Header from '$lib/template/Header.svelte';
 	import Footer from '$lib/template/Footer.svelte';
+	import Urgent from '$lib/template/Urgent.svelte';
 	import Nav from './Nav.svelte';
 	import { setContext } from 'svelte';
 
 	let { children, data } = $props();
-
-	// console.log('frame', { data });
 
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
@@ -30,6 +29,8 @@
 {/snippet}
 
 <svelte:window on:resize={onResize} />
+
+<Urgent bulletins={data.bulletins} />
 
 <main>
 	<Nav {toggleNav} {mobileNav} {data} />

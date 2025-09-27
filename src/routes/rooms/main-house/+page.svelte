@@ -1,8 +1,7 @@
 <script>
-	import { buildings, ostrichRoom, formatDayRange } from '$lib/index.js';
+	import { buildings } from '$lib/index.js';
 	import Slideshow from '$lib/components/Slideshow.svelte';
 	const building = buildings.find((d) => d.id === 'main-house');
-	const ostrichRange = formatDayRange(ostrichRoom.hours.map((d) => d[0]));
 </script>
 
 <svelte:head>

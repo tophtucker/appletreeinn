@@ -50,7 +50,7 @@
 				office desk job life and try something different, and judging from some of the stuff we’ve
 				got him doing (climbing ladders to update security cameras or cleaning up bird poop), we bet
 				we have achieved “different”. His mom is in Toph’s mom’s book group and has always worked at
-				bookstores, which is how she met Christian’s dad. Christian is currently reading:
+				bookstores, which is how she met Christian’s dad. Christian was recently reading:
 			</p>
 			<ul>
 				<li><em>The Year of the Locust</em>, by Terry Hayes</li>
@@ -79,11 +79,6 @@
 			UMass Amherst, where she played soccer. We think maybe she likes Disney movies but we’re not
 			sure. Her brother goes by “Toph” but weirdly she didn’t even tell our Toph for like two
 			months.
-		</p>
-		<img src="/img/giovanna.png" alt="Giovanna" />
-		<p>
-			Giovanna (bartender) studied linguistics and teaches literacy to kids in North Adams; ask her
-			about phonemes, Aquinas, dogs, the Death &amp; Co. cocktail book, or the cows at High Lawn.
 		</p>
 		<img src="/img/peter.jpg" alt="Peter" />
 		<p>

@@ -3,8 +3,6 @@
 	import HR from '$lib/components/HR.svelte';
 	import LilFrame from '$lib/components/LilFrame.svelte';
 	import heroDrone from '$lib/assets/hero-drone.jpg?enhanced';
-
-	console.log('toph', { heroDrone });
 </script>
 
 <svelte:head>
@@ -49,11 +47,11 @@
 				<p><a href="/dining/ostrich-room" class="cta">See the menu</a></p>
 			</div>
 		</LilFrame>
-		<img src="/avaloch/img/ostrich-room-packed.jpg" />
+		<img src="/img/ostrich-room-packed.jpg" />
 	</div>
 
 	<div class="tout">
-		<img src="/avaloch/img/wanda.jpg" />
+		<img src="/img/wanda.jpg" />
 		<LilFrame accent="var(--blue)">
 			<div class="tout-inner">
 				<h2>Second-best show<br />on the block</h2>
@@ -67,8 +65,8 @@
 	</div>
 
 	<div class="img-pair">
-		<img src="./avaloch/img/door.jpg" alt="Door" loading="lazy" />
-		<img src="./avaloch/img/fireplace.jpg" alt="Fireplace" loading="lazy" />
+		<img src="./img/door.jpg" alt="Door" loading="lazy" />
+		<img src="./img/fireplace.jpg" alt="Fireplace" loading="lazy" />
 	</div>
 </div>
 

@@ -1,56 +1,153 @@
 // place files you want to import through the `$lib` alias in this folder.
 // e.g. import { buildings } from '$lib/index.js';
-import { timeFormat } from 'd3-time-format';
+import { Temporal } from '@js-temporal/polyfill';
 import { min, max, extent, range, sort, ascending } from 'd3-array';
 
-export const ostrichRoom = {
-	hours: [
-		[3, [17, 21.5]],
-		[4, [17, 22.5]],
-		[5, [16, 23]],
-		[6, [16, 23]]
-	],
-	overrides: [
-		[new Date(2024, 10, 27), null],
-		[new Date(2024, 10, 28), null],
-		[new Date(2024, 11, 25), null],
-		[new Date(2025, 2, 19), [18, 21]],
-		[new Date(2025, 3, 3), null],
-		[new Date(2025, 3, 4), null],
-		[new Date(2025, 3, 5), null],
-		[new Date(2025, 6, 3), [15, 23]],
-		[new Date(2025, 6, 4), [15, 23]],
-		[new Date(2025, 7, 23), [16, 22]]
-	]
-};
+// Since the hotel is in Eastern Time, we try to show all dates and times around
+// the site in Eastern Time, not in the user’s local time
+export const TIME_ZONE = 'America/New_York';
 
-export const formatDate = timeFormat('%a. %-m/%d');
-export const formatDay = timeFormat('%a.');
-export const formatDateShort = timeFormat('%-m/%d');
-export const formatTime = (d) => timeFormat('%-I:%M %p')(d).toLowerCase();
+// Temporal starts the week with Monday, which it calls day 1
+export const daysOfWeek = [
+	'Monday',
+	'Tuesday',
+	'Wednesday',
+	'Thursday',
+	'Friday',
+	'Saturday',
+	'Sunday'
+];
 
-const amPm = (hour) => (hour < 12 ? 'am' : 'pm');
-const hrMod = (hour) => hour % 12;
-const fmt = (hour) => `${~~hrMod(hour)}${hour % 1 ? `:${(hour % 1) * 60}` : ''}`;
-// Takes in hour numbers
-export const formatHourRange = (hours) =>
-	hours.every((hour) => hour < 12 === hours[0] < 12)
-		? `${hours.map(fmt).join(' – ')} ${amPm(hours[0])}`
-		: hours.map((hour) => `${fmt(hour)} ${amPm(hour)}`).join(' – ');
+// Go from an ISO UTC datetime string to an Eastern Time ZonedDateTime
+export const isoParse = (isoUtc) =>
+	Temporal.Instant.from(isoUtc).toZonedDateTimeISO('America/New_York');
 
-// Takes in real date objects
-export function formatTimeRange(range) {
-	const amPm = (d) => timeFormat('%p')(d).toLowerCase();
-	const hr = timeFormat('%-I');
-	const hrMin = timeFormat('%-I:%M');
-	const fmt = (d) => (d.getMinutes() ? hrMin(d) : hr(d));
-	return range.every((t) => amPm(t) === amPm(range[0]))
-		? `${range.map(fmt).join(' – ')} ${amPm(range[0])}`
-		: range.map((t) => `${fmt(t)} ${amPm(t)}`).join(' – ');
+function upzone(pt) {
+	if (pt instanceof Temporal.PlainTime) {
+		return Temporal.PlainDate.from('2000-01-01').toPlainDateTime(pt).toZonedDateTime(TIME_ZONE);
+	}
+	if (pt instanceof Temporal.PlainYearMonth) {
+		return pt
+			.toPlainDate({ day: 1 })
+			.toPlainDateTime({ hour: 0, minute: 0 })
+			.toZonedDateTime(TIME_ZONE);
+	}
+	if (pt instanceof Temporal.PlainDate || pt instanceof Temporal.PlainDateTime) {
+		return pt.toZonedDateTime(TIME_ZONE);
+	}
+	if (pt instanceof Temporal.ZonedDateTime) {
+		return pt;
+	} else {
+		console.error('Couldn’t convert time to ZonedDateTime');
+	}
 }
 
-const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-export const formatWeekday = (d) => `${daysOfWeek[d]}.`;
+export function epochMs(t) {
+	return upzone(t).epochMilliseconds;
+}
+
+// e.g. “Sun. 9/7”
+export function formatDate(zdt) {
+	zdt = upzone(zdt);
+	return `${formatDay(zdt)} ${formatDateShort(zdt)}`;
+}
+
+// e.g. “Sun.”
+export function formatDay(zdt) {
+	zdt = upzone(zdt);
+	return (
+		new Intl.DateTimeFormat('en-US', {
+			weekday: 'short',
+			timeZone: zdt.timeZoneId
+		}).format(new Date(zdt.epochMilliseconds)) + '.'
+	);
+}
+
+// e.g. 1 → “Mon.”, 2 → “Tue.”, … 7 → “Sun.”
+export const formatWeekday = (d) => `${daysOfWeek[d - 1].slice(0, 3)}.`;
+
+// e.g. “9/7”
+export function formatDateShort(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		month: 'numeric',
+		day: 'numeric',
+		timeZone: zdt.timeZoneId
+	}).format(new Date(zdt.epochMilliseconds));
+}
+
+// e.g. “September 7”
+export function formatMonthDate(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		month: 'long',
+		day: 'numeric',
+		timeZone: zdt.timeZoneId
+	}).format(new Date(zdt.epochMilliseconds));
+}
+
+// e.g. “September 2025”
+export function formatMonthYear(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		month: 'long',
+		year: 'numeric',
+		timeZone: zdt.timeZoneId
+	}).format(new Date(zdt.epochMilliseconds));
+}
+
+// e.g. “9” or “9:30”
+export function formatTimePart(zdt) {
+	zdt = upzone(zdt);
+	const hasMinutes = zdt.minute !== 0;
+	return new Intl.DateTimeFormat('en-US', {
+		hour: 'numeric',
+		...(hasMinutes && { minute: '2-digit' }),
+		hour12: true,
+		timeZone: zdt.timeZoneId
+	})
+		.format(new Date(zdt.epochMilliseconds))
+		.replace(/\s?(AM|PM)/i, ''); // strip meridiem
+}
+
+// e.g. “am”, “pm”
+export function formatTimeMeridiem(zdt) {
+	zdt = upzone(zdt);
+	return new Intl.DateTimeFormat('en-US', {
+		hour: 'numeric',
+		hour12: true,
+		timeZone: zdt.timeZoneId
+	})
+		.formatToParts(new Date(zdt.epochMilliseconds))
+		.find((p) => p.type === 'dayPeriod')
+		.value.toLowerCase();
+}
+
+// e.g. "9:30 pm"
+export function formatTime(zdt) {
+	zdt = upzone(zdt);
+	return `${formatTimePart(zdt)} ${formatTimeMeridiem(zdt)}`;
+}
+
+// e.g. “—”, “7 – 9 pm”, “10:30 am – 4:45 pm”
+export const formatTimeRange = (hours) => {
+	if (!hours.length) return '—';
+	if (hours.every((hour) => formatTimeMeridiem(hour) === formatTimeMeridiem(hours[0]))) {
+		return `${hours.map(formatTimePart).join(' – ')} ${formatTimeMeridiem(hours[0])}`;
+	}
+	return hours.map(formatTime).join(' – ');
+};
+
+// For same calendar day, show time; within 7 days, show weekday; else, month/day
+export function formatFutureDate(zdt) {
+	const now = Temporal.Now.zonedDateTimeISO(zdt.timeZoneId);
+	if (zdt.toPlainDate().equals(now.toPlainDate())) return formatTime(zdt);
+	const oneWeekOut = now.add({ days: 7 }).toPlainDate();
+	if (Temporal.PlainDate.compare(zdt.toPlainDate(), oneWeekOut) < 0) return formatDay(zdt);
+	return formatDateShort(zdt);
+}
+
+// formatDayRange takes in an array of day numbers like [0, 1, 2] and returns a range like “Sun. – Tue.”
 const modulo = 7;
 const isDense = (data) => range(min(data), max(data) + 1).every((d) => data.includes(d));
 const mod = (number, modulus) => ((number % modulus) + modulus) % modulus;

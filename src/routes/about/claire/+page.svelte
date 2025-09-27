@@ -81,11 +81,7 @@
 	</p>
 
 	<p>
-		<img
-			src="../heropics/claire-sig.png"
-			alt="Claire’s illegible scrawl of a signature"
-			height="80"
-		/>
+		<img src="/signatures/claire.png" alt="Claire’s illegible scrawl of a signature" height="80" />
 	</p>
 </div>
 

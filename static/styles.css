@@ -1,74 +1,22 @@
+@import url('fonts/fonts.css');
+
 * {
 	box-sizing: border-box;
 }
 
-html {
-	scroll-padding-top: 4em;
-}
-
 body {
 	margin: 0;
-	font-size: 20px;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	--brown: #5e4c3c;
-	--tan: #ffeacc;
+	font-size: 18px;
+	line-height: 1.2;
+	font-family: 'Brunel', 'Times New Roman', Times, serif;
+	--red: #750f29;
+	--green: #204638;
+	--gold: #c29b58;
+	--blue: #02718a;
+	--black: #333;
 	--gray: #999;
-	--gutter: max(1em, calc((100vw - 1200px) / 2));
-}
-
-.links {
-	display: flex;
-	align-items: center;
-	gap: 1em;
-}
-
-nav {
-	padding: 1em var(--gutter);
-	border-top: 1px solid var(--brown);
-	border-bottom: 1px solid var(--brown);
-	text-align: center;
-	background: var(--tan);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	color: var(--brown);
-}
-
-a {
-	color: var(--brown);
-}
-
-nav a {
-	text-decoration: none;
-}
-
-nav a:hover {
-	text-decoration: underline;
-}
-
-input,
-button {
-	font-family: inherit;
-	font-size: inherit;
-}
-
-h1 {
-	margin: 0;
-	font-weight: normal;
-}
-
-/* h1 + h2 {
-	font-style: italic;
-	font-weight: normal;
-	font-size: 1.2em;
-	margin-top: 0;
-} */
-
-h2,
-h3,
-h4 {
-	font-weight: normal;
-	margin: 0;
+	--gutter: 6rem;
+	color: var(--black);
 }
 
 img {
@@ -76,21 +24,116 @@ img {
 }
 
 hr {
-	margin: 2em 0;
+	width: 100%;
 	border: none;
-	border-bottom: 1px solid var(--brown);
+	border-top: 1px solid black;
+	margin: 2rem 0;
+}
+
+.red {
+	color: var(--red);
+}
+.blue {
+	color: var(--blue);
+}
+.green {
+	color: var(--green);
+}
+.gold {
+	color: var(--gold);
+}
+
+.bg-red {
+	background-color: var(--red);
+}
+.bg-blue {
+	background-color: var(--blue);
+}
+.bg-green {
+	background-color: var(--green);
+}
+.bg-gold {
+	background-color: var(--gold);
+}
+
+.square {
+	aspect-ratio: 1;
+	object-fit: cover;
 }
 
 .inner {
-	padding: 1em var(--gutter) 2em var(--gutter);
+	padding: 0 var(--gutter);
 }
 
-.inner p {
+h1,
+h2,
+h3 {
+	font-family: watkins;
+}
+
+h2,
+h3,
+h4 {
+	font-weight: normal;
+}
+
+h6 {
+	font-size: 14px;
+	font-family: watkins;
+	margin: 0;
+}
+
+p {
 	max-width: 640px;
 }
 
-.inner p:first-child {
-	margin-top: 0;
+.prose p {
+	text-indent: 1em;
+	margin: 0;
+}
+
+p:first-of-type {
+	text-indent: 0;
+}
+
+a {
+	color: var(--blue);
+}
+
+a.cta {
+	color: var(--black);
+	border: 3px inset var(--gray);
+	text-decoration: none;
+	height: 2rem;
+	padding: 0 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: white;
+}
+
+a.cta:hover,
+button:hover {
+	background: var(--black);
+	color: white;
+	border-style: outset;
+}
+
+button {
+	font: inherit;
+	font-feature-settings: inherit;
+	font-variation-settings: inherit;
+	letter-spacing: inherit;
+	color: inherit;
+	opacity: 1;
+	border: 3px inset var(--gray);
+	padding: 3px;
+	background-color: #fff;
+	border-radius: 0;
+}
+
+ul {
+	max-width: 640px;
 }
 
 .grid-or-flex {
@@ -99,28 +142,70 @@ hr {
 	gap: 1em;
 }
 
-p {
-	line-height: 1.4;
+.duo {
+	gap: 1rem;
+	grid-template-columns: 1fr 15px 1fr;
 }
 
-li {
-	line-height: 1.4;
+.trio {
+	gap: 1rem;
+	grid-template-columns: 1fr 15px 1fr 15px 1fr;
+}
+
+.comparison-table {
+	display: grid;
+	grid-template-columns: max-content 1fr 15px 1fr;
+	gap: 1rem 2rem;
+	margin-top: 4rem;
+	text-align: center;
+}
+.comparison-table h2 {
+	margin: 0;
+}
+.comparison-table .header {
+	color: var(--gray);
 }
 
 .show-mobile {
 	display: none;
 }
 
+.prose-columns {
+	columns: 3;
+}
+.prose-columns p {
+	margin: 0;
+	text-indent: 1em;
+}
+.prose-columns p:first-child {
+	text-indent: 0;
+}
+
+.prose-columns p:first-child::first-letter {
+	initial-letter: 2;
+	padding-right: 2px;
+}
+
+@media (max-width: 1000px) {
+	body {
+		--gutter: 2rem;
+	}
+	.prose-columns {
+		columns: 2;
+	}
+}
+
 @media (max-width: 800px) {
-	nav,
-	.links {
-		align-items: start;
-		gap: 1em;
-		flex-wrap: wrap;
+	body {
+		--gutter: 0;
+	}
+
+	.prose-columns {
+		columns: 1;
 	}
 
 	.hide-mobile {
-		display: none;
+		display: none !important;
 	}
 
 	.show-mobile {
@@ -130,5 +215,20 @@ li {
 	.grid-or-flex {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.comparison-table h2 {
+		font-size: 1rem;
+	}
+	.comparison-table {
+		grid-template-columns: 1fr 1fr;
+		margin-top: 2rem;
+		text-align: left;
+	}
+	.comparison-table .header {
+		grid-column: span 2;
+		text-transform: uppercase;
+		font-size: smaller;
+		padding-top: 1rem;
 	}
 }

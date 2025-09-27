@@ -1,48 +1,39 @@
 <script>
-	import { timeFormat } from 'd3-time-format';
-	import { timeDay, timeSunday, timeMonth } from 'd3-time';
-	import { group, min, sort } from 'd3-array';
-	import { formatTime, formatTimeRange } from '$lib/index.js';
-
+	import { Temporal } from '@js-temporal/polyfill';
+	import { group, sort } from 'd3-array';
+	import {
+		formatDay,
+		formatDate,
+		formatMonthDate,
+		formatMonthYear,
+		formatTime,
+		formatTimeRange,
+		epochMs,
+		TIME_ZONE
+	} from '$lib/index.js';
 	import OstrichRoom from '$lib/components/OstrichRoom.svelte';
 	import HR from '$lib/components/HR.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	let { data } = $props();
-	const { performances } = data;
+	const { performances, ostrichRoom } = data;
 
-	const threshold = timeDay();
-	const past = performances.filter((d) => d.startTime < threshold);
-	const future = performances.filter((d) => d.startTime >= threshold);
-
+	const threshold = Temporal.Now.zonedDateTimeISO(TIME_ZONE).epochMilliseconds;
+	const past = performances.filter((d) => d.startTime.epochMilliseconds < threshold);
+	const future = performances.filter((d) => d.startTime.epochMilliseconds >= threshold);
 	const upcoming = future.slice(0, 4);
+	const beyondUpcoming = future.slice(4);
 
-	const grouped = group(future, (d) => timeDay(d.startTime));
-	const start = timeSunday(min(future, (d) => d.startTime));
-	const calendar = timeDay
-		.range(start, timeDay.offset(start, 28))
-		.map((day) => ({ day, performances: grouped.get(day) }));
+	const pastMonths = groupPerformancesByMonth(past, -1);
+	const futureMonths = groupPerformancesByMonth(beyondUpcoming, 1);
 
-	const pastMonths = sort(
-		[...group(past, (d) => timeMonth(d.startTime))].map(([month, performances]) => ({
-			month,
-			performances: sort(performances, (d) => -d.startTime)
-		})),
-		(d) => -d.month
-	);
-
-	const futureMonths = sort(
-		[...group(future.slice(4), (d) => timeMonth(d.startTime))].map(([month, performances]) => ({
-			month,
-			performances: sort(performances, (d) => -d.startTime)
-		})),
-		(d) => -d.month
-	);
-
-	const fWeekday = timeFormat('%a');
-	const fDate = timeFormat('%B %-d');
-	const fMonth = timeFormat('%B %Y');
-	const fTime = (p) =>
-		p.endTime ? formatTimeRange([p.startTime, p.endTime]) : formatTime(p.startTime);
+	const calendar = [];
+	const today = Temporal.Now.plainDateISO(TIME_ZONE);
+	const latestSunday = today.subtract({ days: today.dayOfWeek % 7 });
+	const groupedByDay = group(future, (d) => d.startTime.toPlainDate().toString());
+	for (let i = 0; i < 28; i++) {
+		const date = latestSunday.add({ days: i });
+		calendar.push({ date, performances: groupedByDay.get(date.toString()) });
+	}
 
 	let dialogRef;
 	let dialogPerformance = $state(null);
@@ -54,6 +45,22 @@
 		dialogPerformance = null;
 		dialogRef.close();
 	};
+
+	function groupPerformancesByMonth(performances, direction) {
+		return sort(
+			[...group(performances, (d) => d.startTime.toPlainDate().toPlainYearMonth().toString())].map(
+				([month, performances]) => ({
+					month: Temporal.PlainYearMonth.from(month),
+					performances: sort(performances, (d) => direction * d.startTime.epochMilliseconds)
+				})
+			),
+			(d) => direction * epochMs(d.month)
+		);
+	}
+
+	function formatTimeMaybeRange(p) {
+		return p.endTime ? formatTimeRange([p.startTime, p.endTime]) : formatTime(p.startTime);
+	}
 </script>
 
 <svelte:head>
@@ -66,33 +73,43 @@
 
 {#snippet card(p)}
 	<div class="performance">
-		{#if p.act.image}
-			<img src={p.act.image} alt={p.act.name} />
-		{/if}
-		<div class="time">
-			{fWeekday(p.startTime)}. {fDate(p.startTime)},
-			{fTime(p)}
-		</div>
-		<div class="name">
-			<h3>{p.act.name}</h3>
-			{#if p.note}{p.note}{/if}
-		</div>
-		<div class="bio">
-			{@html p.act.description}
-			{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
+		<div class="perf-inner">
+			<div class="text">
+				<div class="time">
+					{formatDay(p.startTime)}
+					{formatMonthDate(p.startTime)},
+					{formatTimeMaybeRange(p)}
+				</div>
+				<div class="name">
+					<h3>{p.act.name}</h3>
+					{#if p.note}{p.note}{/if}
+				</div>
+				<div class="bio">
+					{@html p.act.description}
+				</div>
+				{#if p.act.genre || p.act.youtube}
+					<div class="meta">
+						{#if p.act.genre}<span class="genre">{p.act.genre}</span>{/if}
+						{#if p.act.youtube}<span><a href={p.act.youtube}>Watch clip</a></span>{/if}
+					</div>
+				{/if}
+			</div>
+			{#if p.act.image}
+				<img src={p.act.image} alt={p.act.name} />
+			{/if}
 		</div>
 	</div>
 {/snippet}
 
 {#snippet monthSummary({ month, performances })}
 	<details>
-		<summary>{fMonth(month)}</summary>
-		<table>
+		<summary>{formatMonthYear(month)}</summary>
+		<table class="hide-mobile">
 			<tbody>
 				{#each performances as p}
 					<tr>
-						<td>{fWeekday(p.startTime)}. {fDate(p.startTime)}</td>
-						<td>{fTime(p)}</td>
+						<td>{formatDay(p.startTime)} {formatMonthDate(p.startTime)}</td>
+						<td>{formatTimeMaybeRange(p)}</td>
 						<td
 							>{p.act.name}{#if p.note}<br /><small>{p.note}</small>{/if}</td
 						>
@@ -100,15 +117,22 @@
 				{/each}
 			</tbody>
 		</table>
+		<div class="show-mobile">
+			<div class="narrow-performances">
+				{#each performances as p}
+					<div>
+						<small>{formatDate(p.startTime)}</small>
+						<div>{p.act.name}</div>
+						{#if p.note}<small>{p.note}</small>{/if}
+					</div>
+				{/each}
+			</div>
+		</div>
 	</details>
 {/snippet}
 
 <div class="inner">
-	<img
-		src="/avaloch/img/wanda.jpg"
-		alt="Wanda Houston performing live at the Ostrich Room"
-		class="intro"
-	/>
+	<img src="/img/wanda.jpg" alt="Wanda Houston performing live at the Ostrich Room" class="intro" />
 	<div class="grid-or-flex" style="grid-template-columns: 3fr 1fr; margin-top: 1rem;">
 		<p>
 			People come into our tavern and say they first played in it fifty years ago. The Berkshires
@@ -118,7 +142,7 @@
 			played here when it was Alice’s. Johnny Irion revitalized the program a few years ago, and now
 			we generally have a show every night the bar is open.
 		</p>
-		<OstrichRoom />
+		<OstrichRoom {ostrichRoom} />
 	</div>
 
 	<HR />
@@ -130,12 +154,12 @@
 	</div>
 
 	<div class="calendar hide-mobile">
-		{#each calendar.slice(0, 7) as { day }}
-			<div class="header">{fWeekday(day)}</div>
+		{#each calendar.slice(0, 7) as { date }}
+			<div class="header">{formatDay(date)}</div>
 		{/each}
-		{#each calendar as { day, performances }}
-			<div class={+day === +timeDay() ? 'today' : ''}>
-				<div class="date">{day.getDate() === 1 ? fDate(day) : day.getDate()}</div>
+		{#each calendar as { date, performances }}
+			<div class={date.equals(today) ? 'today' : ''}>
+				<div class="date">{date.day === 1 ? formatMonthDate(date) : date.day}</div>
 				{#each performances as p}
 					<button onclick={() => open(p)}
 						><small>{formatTime(p.startTime)}</small><br /> {p.act.name}</button
@@ -187,12 +211,24 @@
 		margin-bottom: 2rem;
 	}
 	details table {
-		padding: 1rem;
+		padding: 1rem 2rem;
 	}
 	details table td {
 		padding: 0.25rem 0.5rem;
 		min-width: 6rem;
 		vertical-align: top;
+	}
+	details table td:nth-child(1) {
+		width: 180px;
+	}
+	details table td:nth-child(2) {
+		width: 160px;
+	}
+	details .narrow-performances {
+		padding: 1rem 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 
 	.calendar {
@@ -233,12 +269,24 @@
 		color: var(--blue);
 		background: none;
 	}
+
 	.performances {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
 	}
 	.performance {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.performance .perf-inner {
+		display: grid;
+		grid-template-columns: 4fr 3fr;
+		gap: 1rem;
+	}
+	.performance .text {
+		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
@@ -253,13 +301,29 @@
 	.performance .bio {
 		padding-left: 2rem;
 	}
+	.performance .meta {
+		padding-left: 2rem;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	}
 	.performance h3 {
 		margin: 0;
 	}
 	.performance img {
-		width: 100%;
 		max-width: 400px;
+		width: 100%;
 	}
+	:global(.performance p) {
+		margin: 0;
+	}
+	@media (max-width: 1000px) {
+		.performance .perf-inner {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+
 	dialog {
 		max-width: 720px;
 	}

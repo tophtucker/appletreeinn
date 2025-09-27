@@ -1,36 +1,22 @@
 <script>
-	import { timeMonday, timeDay } from 'd3-time';
-	import {
-		formatHourRange,
-		formatTimeRange,
-		formatTime,
-		formatDay,
-		formatDateShort
-	} from '$lib/index.js';
-	let { data, performances } = $props();
-	const { hours, overrides } = data;
-
-	const start = timeMonday();
-	const end = timeMonday.offset(start, 1);
-	const days = timeDay.range(start, end);
-
-	const getRegularHoursForDate = (date) => {
-		const h = hours.find((h) => h[0] === date.getDay());
-		if (!h || !h[1]) return '—';
-		return formatHourRange(h[1]);
-	};
-
-	const override = (date) => overrides.find((o) => +o[0] === +date);
+	import { Temporal } from '@js-temporal/polyfill';
+	import { formatTimeRange, formatTime, formatDay, formatDateShort } from '$lib/index.js';
+	let { calendar, performances } = $props();
 
 	const getPerformancesForDay = (date) =>
-		(performances.filter((d) => +date === +timeDay(d.startTime)) ?? [])
+		performances
+			.filter((d) => date.equals(d.startTime.toPlainDate()))
 			.map(
 				(d) =>
 					`${d.act.name} (${d.endTime ? formatTimeRange([d.startTime, d.endTime]) : formatTime(d.startTime)})`
 			)
 			.join('; ');
 
-	const isToday = (day) => +timeDay(day) === +timeDay(new Date());
+	const week = calendar
+		.slice(0, 7)
+		.map((d) => ({ ...d, performances: getPerformancesForDay(d.date) }));
+
+	const isToday = (day) => Temporal.Now.plainDateISO().equals(day);
 </script>
 
 <table class="hours">
@@ -42,31 +28,27 @@
 		</tr>
 	</thead>
 	<tbody>
-		{#each days as day}
+		{#each week as d}
 			<tr>
 				<td
 					><div
 						style="display: flex; justify-content: space-between; align-items: center; gap: 0.5em;"
 					>
-						{#if isToday(day)}<span class="manicule">☞</span>{/if}{formatDay(day)}
+						{#if isToday(d.date)}<span class="manicule">☞</span>{/if}{formatDay(d.date)}
 						<span style="color: var(--gray); font-variant-numeric: tabular-nums;"
-							>{formatDateShort(day)}</span
+							>{formatDateShort(d.date)}</span
 						>
 					</div>
 				</td>
 				<td
-					>{getRegularHoursForDate(day)}{#if override(day)}<span class="notice"
-							>{#if override(day)[1]}{formatHourRange(override(day)[1])}{:else}Closed{/if}</span
+					>{formatTimeRange(d.normalHours)}{#if d.specialHours}<span class="notice"
+							>{#if d.specialHours}{formatTimeRange(d.specialHours)}{:else}Closed{/if}</span
 						>{/if}
-					{#if getPerformancesForDay(day).length}
-						<div class="description show-mobile">
-							{getPerformancesForDay(day)}
-						</div>
+					{#if d.performances}
+						<div class="description show-mobile">{d.performances}</div>
 					{/if}</td
 				>
-				<td class="description hide-mobile">
-					{getPerformancesForDay(day)}
-				</td>
+				<td class="description hide-mobile">{d.performances}</td>
 			</tr>
 		{/each}
 	</tbody>

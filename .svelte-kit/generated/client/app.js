@@ -1,3 +1,5 @@
+import * as universal_hooks from '../../../src/hooks.js';
+
 export { matchers } from './matchers.js';
 
 export const nodes = [
@@ -85,8 +87,8 @@ export const dictionary = {
 export const hooks = {
 	handleError: (({ error }) => { console.error(error) }),
 	
-	reroute: (() => {}),
-	transport: {}
+	reroute: universal_hooks.reroute || (() => {}),
+	transport: universal_hooks.transport || {}
 };
 
 export const decoders = Object.fromEntries(Object.entries(hooks.transport).map(([k, v]) => [k, v.decode]));

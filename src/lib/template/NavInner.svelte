@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import { ostrichRoom } from '$lib/index.js';
 	import { getNav } from '$lib/nav.js';
 	import Bulletins from './Bulletins.svelte';
 	import OpenSign from './OpenSign.svelte';
@@ -8,7 +7,7 @@
 	import Icon from '../icons/Icon.svelte';
 
 	let { data } = $props();
-	let { nextPerformance, bulletins } = data;
+	let { nextPerformance, bulletins, ostrichRoom } = data;
 
 	const nav = $derived(getNav($page));
 
@@ -42,7 +41,7 @@
 	{/each}
 	<div class="bulletins">
 		<Bulletins {bulletins} />
-		<OpenSign data={ostrichRoom} />
+		<OpenSign calendar={ostrichRoom.calendar} />
 		<NextPerformance {nextPerformance} />
 	</div>
 	<div class="about">
