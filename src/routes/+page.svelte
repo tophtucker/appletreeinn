@@ -26,7 +26,7 @@
 		<img src="/roompics/main-house/8/_XCS2672.jpg" />
 		<LilFrame accent="var(--green)">
 			<div class="tout-inner">
-				<h2>The living room<br />of the Berkshires</h2>
+				<h2>Not fancy</h2>
 				<p>
 					For seventy years, this 1885 house has been welcoming guests to stay and dine directly
 					across the street from Tanglewood.
@@ -39,25 +39,30 @@
 	<div class="tout">
 		<LilFrame accent="var(--red)">
 			<div class="tout-inner">
-				<h2>Not fancy</h2>
+				<h2>Food with a view</h2>
 				<p>
-					The Ostrich Room’s drinks run the gamut from $4 Bud to Sean’s much more elevated
-					cocktails.
+					You can enjoy the Ostrich Room’s casual food and Sean’s elevated cocktails anywhere from
+					the cozy hearth to the airy porch.
 				</p>
 				<p><a href="/dining/ostrich-room" class="cta">See the menu</a></p>
 			</div>
 		</LilFrame>
-		<img src="/img/ostrich-room-packed.jpg" />
+		<img src="/img/cheers.jpg" alt="Two people toast out on the deck " />
 	</div>
 
 	<div class="tout">
-		<img src="/img/wanda.jpg" />
+		<img
+			src="/img/wanda.jpg"
+			alt="Wanda Houston, one of our favorite performers, on stage in the Ostrich Room"
+		/>
 		<LilFrame accent="var(--blue)">
 			<div class="tout-inner">
 				<h2>Second-best show<br />on the block</h2>
 				<p>
-					We may not draw 18,000 people, but locals love the deep bench of musical talent in the
-					Berkshires.
+					We may not draw 18,000 people like <a
+						href="/activities/tanglewood"
+						style="color: inherit;">some</a
+					>, but locals love the deep bench of musical talent in the Berkshires.
 				</p>
 				<p><a href="/dining/ostrich-room" class="cta">See the schedule</a></p>
 			</div>
