@@ -23,7 +23,6 @@
 	</div>
 
 	<div class="tout">
-		<img src="/roompics/main-house/8/_XCS2672.jpg" />
 		<LilFrame accent="var(--green)">
 			<div class="tout-inner">
 				<h2>Not fancy</h2>
@@ -34,6 +33,11 @@
 				<p><a href="/rooms" class="cta">See rooms</a></p>
 			</div>
 		</LilFrame>
+		<img
+			src="/roompics/main-house/8/_XCS2672.jpg"
+			alt="The bed in Room 8, one of our favorites in the Main House"
+			class="first"
+		/>
 	</div>
 
 	<div class="tout">
@@ -51,10 +55,6 @@
 	</div>
 
 	<div class="tout">
-		<img
-			src="/img/wanda.jpg"
-			alt="Wanda Houston, one of our favorite performers, on stage in the Ostrich Room"
-		/>
 		<LilFrame accent="var(--blue)">
 			<div class="tout-inner">
 				<h2>Second-best show<br />on the block</h2>
@@ -67,6 +67,11 @@
 				<p><a href="/dining/ostrich-room" class="cta">See the schedule</a></p>
 			</div>
 		</LilFrame>
+		<img
+			src="/img/wanda.jpg"
+			alt="Wanda Houston, one of our favorite performers, on stage in the Ostrich Room"
+			class="first"
+		/>
 	</div>
 
 	<div class="img-pair">
@@ -117,6 +122,10 @@
 		aspect-ratio: 4 / 3;
 	}
 
+	.first {
+		order: -1;
+	}
+
 	.img-pair {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -128,5 +137,19 @@
 
 	picture img {
 		height: auto;
+	}
+
+	@media (max-width: 800px) {
+		.tout {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+		.tout p {
+			font-size: inherit;
+		}
+		.first {
+			order: 0;
+		}
 	}
 </style>
