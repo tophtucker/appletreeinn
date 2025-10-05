@@ -1,5 +1,4 @@
 <script>
-	import GalleryGrid from '$lib/components/GalleryGrid.svelte';
 	import HR from '$lib/components/HR.svelte';
 	import LilFrame from '$lib/components/LilFrame.svelte';
 	import heroDrone from '$lib/assets/hero-drone.jpg?enhanced';
@@ -36,7 +35,8 @@
 		<img
 			src="/roompics/main-house/8/_XCS2672.jpg"
 			alt="The bed in Room 8, one of our favorites in the Main House"
-			class="first"
+			class="first-lg"
+			loading="lazy"
 		/>
 	</div>
 
@@ -51,7 +51,11 @@
 				<p><a href="/dining/ostrich-room" class="cta">See the menu</a></p>
 			</div>
 		</LilFrame>
-		<img src="/img/cheers.jpg" alt="Two people toast out on the deck " />
+		<img
+			src="/img/cheers.jpg"
+			alt="Two people toast with some of Sean’s cool cocktails out on the deck"
+			loading="lazy"
+		/>
 	</div>
 
 	<div class="tout">
@@ -69,14 +73,55 @@
 		</LilFrame>
 		<img
 			src="/img/wanda.jpg"
-			alt="Wanda Houston, one of our favorite performers, on stage in the Ostrich Room"
-			class="first"
+			alt="Wanda Houston, one of our favorite performers, on stage in the Ostrich Room; Andy Wrba in the background; I forget the third guy’s name"
+			class="first-lg"
+			loading="lazy"
 		/>
 	</div>
 
 	<div class="img-pair">
 		<img src="./img/door.jpg" alt="Door" loading="lazy" />
 		<img src="./img/fireplace.jpg" alt="Fireplace" loading="lazy" />
+	</div>
+
+	<HR />
+
+	<div class="other">
+		<div>
+			<img
+				src="/img/adirondack-view.jpg"
+				alt="Adirondack chairs outside the fire pit looking out on the view down the hill"
+				loading="lazy"
+			/><a href="/overview/gallery" class="cta">Gallery</a>
+		</div>
+		<div>
+			<img
+				src="/heropics/max.jpg"
+				alt="Max the hotel dog doesn’t have much to do with the FAQ, except that people do ask about him"
+				loading="lazy"
+			/><a href="/overview/faq" class="cta">FAQ</a>
+		</div>
+		<div><img src="/img/distant.jpg" alt="" /><a href="/overview/map" class="cta">Map</a></div>
+		<div>
+			<img
+				src="/heropics/pool1.jpg"
+				alt="There’s lots of things to do on the property and around the Berkshires"
+				loading="lazy"
+			/><a href="/activities" class="cta">Activities</a>
+		</div>
+		<div>
+			<img src="/img/sledding.jpg" alt="It’s all about the people, baby!!" loading="lazy" /><a
+				href="/about/about-us"
+				class="cta">About us</a
+			>
+		</div>
+		<div>
+			<img
+				src="/history/avaloch.jpg"
+				alt="Claire has read and written more than you can imagine about the history of the hotel"
+				loading="lazy"
+			/><a href="/about/history" class="cta">History</a>
+		</div>
 	</div>
 </div>
 
@@ -122,7 +167,7 @@
 		aspect-ratio: 4 / 3;
 	}
 
-	.first {
+	.first-lg {
 		order: -1;
 	}
 
@@ -139,6 +184,27 @@
 		height: auto;
 	}
 
+	.other {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.other div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.other div img {
+		max-width: 100%;
+		border-radius: 100%;
+		aspect-ratio: 1;
+		object-fit: cover;
+	}
+
 	@media (max-width: 800px) {
 		.tout {
 			display: flex;
@@ -148,8 +214,17 @@
 		.tout p {
 			font-size: inherit;
 		}
-		.first {
+		.first-lg {
 			order: 0;
+		}
+		.other {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media (max-width: 400px) {
+		.other {
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 </style>
