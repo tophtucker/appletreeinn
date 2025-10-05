@@ -1,7 +1,19 @@
 <script>
 	import HR from '$lib/components/HR.svelte';
 	import LilFrame from '$lib/components/LilFrame.svelte';
+
+	import adirondackView from '$lib/assets/adirondack-view.jpg?enhanced';
+	import avaloch from '$lib/assets/avaloch.jpg?enhanced';
+	import cheers from '$lib/assets/cheers.jpg?enhanced';
+	import distant from '$lib/assets/distant.jpg?enhanced';
+	import door from '$lib/assets/door.jpg?enhanced';
+	import fireplace from '$lib/assets/fireplace.jpg?enhanced';
 	import heroDrone from '$lib/assets/hero-drone.jpg?enhanced';
+	import max from '$lib/assets/max.jpg?enhanced';
+	import pool1 from '$lib/assets/pool1.jpg?enhanced';
+	import room8 from '$lib/assets/room8.jpg?enhanced';
+	import sledding from '$lib/assets/sledding.jpg?enhanced';
+	import wanda from '$lib/assets/wanda.jpg?enhanced';
 </script>
 
 <svelte:head>
@@ -24,7 +36,7 @@
 		<HR />
 	</div>
 
-	<div class="tout">
+	<div class="tout reverse">
 		<LilFrame accent="var(--green)">
 			<div class="tout-inner">
 				<h2>Not fancy</h2>
@@ -35,10 +47,9 @@
 				<p><a href="/rooms" class="cta">See rooms</a></p>
 			</div>
 		</LilFrame>
-		<img
-			src="/roompics/main-house/8/_XCS2672.jpg"
+		<enhanced:img
+			src={room8}
 			alt="The bed in Room 8, one of our favorites in the Main House"
-			class="first-lg"
 			loading="lazy"
 		/>
 	</div>
@@ -54,14 +65,14 @@
 				<p><a href="/dining/ostrich-room" class="cta">See the menu</a></p>
 			</div>
 		</LilFrame>
-		<img
-			src="/img/cheers.jpg"
+		<enhanced:img
+			src={cheers}
 			alt="Two people toast with some of Sean’s cool cocktails out on the deck"
 			loading="lazy"
 		/>
 	</div>
 
-	<div class="tout">
+	<div class="tout reverse">
 		<LilFrame accent="var(--blue)">
 			<div class="tout-inner">
 				<h2>Second-best show <br class="hide-mobile" />on the block</h2>
@@ -74,53 +85,58 @@
 				<p><a href="/dining/ostrich-room" class="cta">See the schedule</a></p>
 			</div>
 		</LilFrame>
-		<img
-			src="/img/wanda.jpg"
+		<enhanced:img
+			src={wanda}
 			alt="Wanda Houston, one of our favorite performers, on stage in the Ostrich Room; Andy Wrba in the background; I forget the third guy’s name"
-			class="first-lg"
 			loading="lazy"
 		/>
 	</div>
 
 	<div class="img-pair">
-		<img src="./img/door.jpg" alt="Door" loading="lazy" />
-		<img src="./img/fireplace.jpg" alt="Fireplace" loading="lazy" />
+		<enhanced:img src={door} alt="Door" loading="lazy" />
+		<enhanced:img src={fireplace} alt="Fireplace" loading="lazy" />
 	</div>
 
 	<HR />
 
 	<div class="other">
 		<div>
-			<img
-				src="/img/adirondack-view.jpg"
+			<enhanced:img
+				src={adirondackView}
 				alt="Adirondack chairs outside the fire pit looking out on the view down the hill"
 				loading="lazy"
-			/><a href="/overview/gallery" class="cta">Gallery</a>
+			/>
+			<a href="/overview/gallery" class="cta">Gallery</a>
 		</div>
 		<div>
-			<img
-				src="/heropics/max.jpg"
+			<enhanced:img
+				src={max}
 				alt="Max the hotel dog doesn’t have much to do with the FAQ, except that people do ask about him"
 				loading="lazy"
-			/><a href="/overview/faq" class="cta">FAQ</a>
+			/>
+			<a href="/overview/faq" class="cta">FAQ</a>
 		</div>
-		<div><img src="/img/distant.jpg" alt="" /><a href="/overview/map" class="cta">Map</a></div>
 		<div>
-			<img
-				src="/heropics/pool1.jpg"
+			<enhanced:img src={distant} alt="" loading="lazy" /><a href="/overview/map" class="cta">Map</a
+			>
+		</div>
+		<div>
+			<enhanced:img
+				src={pool1}
 				alt="There’s lots of things to do on the property and around the Berkshires"
 				loading="lazy"
-			/><a href="/activities" class="cta">Activities</a>
+			/>
+			<a href="/activities" class="cta">Activities</a>
 		</div>
 		<div>
-			<img src="/img/sledding.jpg" alt="It’s all about the people, baby!!" loading="lazy" /><a
+			<enhanced:img src={sledding} alt="It’s all about the people, baby!!" loading="lazy" /><a
 				href="/about/about-us"
 				class="cta">About us</a
 			>
 		</div>
 		<div>
-			<img
-				src="/history/avaloch.jpg"
+			<enhanced:img
+				src={avaloch}
 				alt="Claire has read and written more than you can imagine about the history of the hotel"
 				loading="lazy"
 			/><a href="/about/history" class="cta">History</a>
@@ -170,7 +186,8 @@
 		aspect-ratio: 4 / 3;
 	}
 
-	.first-lg {
+	/* TODO: brittle hack to work with enhanced:img */
+	.tout.reverse picture {
 		order: -1;
 	}
 
@@ -217,7 +234,7 @@
 		.tout p {
 			font-size: inherit;
 		}
-		.first-lg {
+		.tout.reverse picture {
 			order: 0;
 		}
 		.other {
