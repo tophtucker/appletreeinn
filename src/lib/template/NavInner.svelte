@@ -59,6 +59,7 @@
 <style>
 	.about {
 		position: relative;
+		text-wrap: balance;
 	}
 	.about a {
 		display: inline;
