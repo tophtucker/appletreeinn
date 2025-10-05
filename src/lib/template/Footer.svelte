@@ -48,6 +48,7 @@
 		gap: 1rem;
 		justify-content: center;
 		align-items: center;
+		text-wrap: balance;
 	}
 	a {
 		color: inherit;
