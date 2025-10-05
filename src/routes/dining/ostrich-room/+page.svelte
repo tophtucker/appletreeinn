@@ -59,7 +59,10 @@
 				<XR />
 			{/if}
 			<div class="menu">
-				<div><a class="cta" href={menu.url}>{menu.name}</a> — <em>for example:</em></div>
+				<div>
+					<a class="cta" href={menu.url}>See {menu.name.toLowerCase()} menu</a> —
+					<em>for example:</em>
+				</div>
 				<div class="food-gallery">
 					{#each foodGallery[menu.name] as [img, alt]}
 						<Image src={`/img/${img}`} {alt} style="aspect-ratio: 500/643; object-fit: cover;" />

@@ -16,6 +16,8 @@
 		.slice(0, 7)
 		.map((d) => ({ ...d, performances: getPerformancesForDay(d.date) }));
 
+	console.log(week);
+
 	const isToday = (day) => Temporal.Now.plainDateISO().equals(day);
 </script>
 
@@ -42,7 +44,7 @@
 				</td>
 				<td
 					>{formatTimeRange(d.normalHours)}{#if d.specialHours}<span class="notice"
-							>{#if d.specialHours}{formatTimeRange(d.specialHours)}{:else}Closed{/if}</span
+							>{#if d.specialHours.length}{formatTimeRange(d.specialHours)}{:else}Closed{/if}</span
 						>{/if}
 					{#if d.performances}
 						<div class="description show-mobile">{d.performances}</div>
