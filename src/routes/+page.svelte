@@ -30,7 +30,7 @@
 	<div class="tagline">
 		<HR />
 		<h2>
-			For the young who are old at heart <br class="hide-mobile" />and the old who are young at
+			For the old who are young at heart <br class="hide-mobile" />and the young who are old at
 			heart
 		</h2>
 		<HR />
