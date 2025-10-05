@@ -82,7 +82,7 @@
 						style="color: inherit;">some</a
 					>, but locals love the deep bench of musical talent in the Berkshires.
 				</p>
-				<p><a href="/dining/ostrich-room" class="cta">See the schedule</a></p>
+				<p><a href="/music" class="cta">See the schedule</a></p>
 			</div>
 		</LilFrame>
 		<enhanced:img
