@@ -17,7 +17,10 @@
 
 	<div class="tagline">
 		<HR />
-		<h2>For the young who are old at heart<br />and the old who are young at heart</h2>
+		<h2>
+			For the young who are old at heart <br class="hide-mobile" />and the old who are young at
+			heart
+		</h2>
 		<HR />
 	</div>
 
@@ -61,7 +64,7 @@
 	<div class="tout">
 		<LilFrame accent="var(--blue)">
 			<div class="tout-inner">
-				<h2>Second-best show<br />on the block</h2>
+				<h2>Second-best show <br class="hide-mobile" />on the block</h2>
 				<p>
 					We may not draw 18,000 people like <a
 						href="/activities/tanglewood"
@@ -220,9 +223,12 @@
 		.other {
 			grid-template-columns: repeat(3, 1fr);
 		}
+		h2 {
+			font-size: 1.2em;
+		}
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 340px) {
 		.other {
 			grid-template-columns: repeat(2, 1fr);
 		}
