@@ -68,6 +68,19 @@
 	<HR />
 
 	<div class="bios">
+		<img src="/img/staff-memo.jpg" alt="Memo" />
+		<p>
+			Memo (maintenance manager) has been with the hotel through the last three owners and knows the
+			building better than anyone. We also admire how fast and adeptly he put together an ad hoc
+			team of painters to <a href="https://www.instagram.com/reel/DA3wc94ObOt/">paint the hotel</a> about
+			six months sooner than we thought we’d be able to!
+		</p>
+		<img src="/img/staff-demetrio.jpg" alt="Demetrio" />
+		<p>
+			Demetrio (maintenance) has been here as long as Memo has, and is Memo’s father in law! Did you
+			know that all our firewood is felled and cut and dried on the property? That’s thanks to
+			Demetrio.
+		</p>
 		<img src="/img/sean.jpg" alt="Sean" />
 		<p>
 			Sean (bar manager) really knows a lot about cocktails and has vastly expanded our menu. His
@@ -90,6 +103,11 @@
 			Magdalen (server) also works at the Springfield zoo where she takes care of emus, wallabees,
 			and porcupines. “No ostriches, I’d die. Emus are already scary and ostriches are bigger. Emus
 			have murder in their eyes.”
+		</p>
+		<img src="/img/staff-armando.jpg" alt="Armando" />
+		<p>
+			Armando (server) came into the bar as a patron when we were very new here and kindly indulged
+			all Toph’s questions about the Mayan language, calendar, and numerals.
 		</p>
 		<img src="/img/luke.jpg" alt="Luke" />
 		<p>Luke (server) is all bundled up for the cold in his nice hat!</p>
