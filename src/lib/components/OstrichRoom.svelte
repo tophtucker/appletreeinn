@@ -1,4 +1,5 @@
 <script>
+	// TODO: Refactor to combine with LilFrame.svelte
 	let { ostrichRoom } = $props();
 </script>
 

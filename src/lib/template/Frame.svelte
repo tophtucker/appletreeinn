@@ -1,5 +1,6 @@
 <script>
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
+	import Dialog from '$lib/template/Dialog.svelte';
 	import Header from '$lib/template/Header.svelte';
 	import Footer from '$lib/template/Footer.svelte';
 	import Urgent from '$lib/template/Urgent.svelte';
@@ -10,6 +11,9 @@
 
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
+
+	let dialog = $state({ snippet: null });
+	setContext('dialog', dialog);
 
 	let mobileNav = $state(false);
 	const toggleNav = () => {
@@ -59,6 +63,8 @@
 </main>
 
 <Lightbox />
+
+<Dialog />
 
 <style>
 	main {
