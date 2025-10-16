@@ -93,6 +93,13 @@
 			sure. Her brother goes by “Toph” but weirdly she didn’t even tell our Toph for like two
 			months.
 		</p>
+		<img src="/img/staff-jeff.jpg" alt="Jeff" />
+		<p>
+			Jeff (front desk) loves the Mount from all directions: he worked and lived there when it
+			played host to Shakespeare and Co.; he got married there; today, visiting there is his top
+			recommendation for guests. He also worked here parking cars for guests back when it was
+			Alice’s at Avaloch.
+		</p>
 		<img src="/img/peter.jpg" alt="Peter" />
 		<p>
 			Peter (bartender) looks a lot like Luke Wilson. He was a camp counselor for 14 summers at Camp
