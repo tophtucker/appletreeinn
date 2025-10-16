@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>About us: Renovation • Apple Tree Inn • Lenox, MA</title>
+	<title>About us: Renovations • Apple Tree Inn • Lenox, MA</title>
 	<meta
 		name="description"
 		content="The Apple Tree Inn will be closed for renovations from November 3 onward"

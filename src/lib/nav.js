@@ -57,8 +57,8 @@ const nav = [
 		footer: true,
 		children: [
 			{ title: 'About us', slug: 'about-us' },
-			// { title: 'Renovation', slug: 'renovation' },
 			{ title: 'History', slug: 'history' },
+			{ title: 'Renovations', slug: 'renovations' },
 			{ title: 'Press', slug: 'press' },
 			{ title: 'Newsletter', slug: 'newsletter' },
 			{ title: 'Policies', slug: 'policies' },
