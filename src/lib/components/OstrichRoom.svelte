@@ -2,6 +2,7 @@
 	let { ostrichRoom } = $props();
 </script>
 
+<!-- TODO refactor to use LilFrame component -->
 <div class="wrapper">
 	<div class="filled"></div>
 	<div class="left-right"></div>

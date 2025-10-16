@@ -19,7 +19,7 @@
 <style>
 	.wrapper {
 		border: 1px solid var(--accent);
-		display: inline-grid;
+		display: grid;
 		grid-template-columns: 4px 1fr 4px;
 		grid-template-rows: 4px 1fr 4px;
 	}

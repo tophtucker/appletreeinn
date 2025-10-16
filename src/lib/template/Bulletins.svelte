@@ -1,16 +1,29 @@
+<script module>
+	export { bulletin };
+</script>
+
 <script>
-	import Icon from '$lib/icons/Icon.svelte';
+	import Dialog from '$lib/components/Dialog.svelte';
 	import { formatDate } from '$lib/index.js';
 	// TODO: let sanity scope a bulletin to a given route
 	let { bulletins } = $props();
-	let dialogRef;
+	let dialogRef = $state();
 	const open = () => {
 		dialogRef.showModal();
 	};
-	const close = () => {
-		dialogRef.close();
-	};
 </script>
+
+{#snippet bulletin(b)}
+	<div>
+		<small>{formatDate(b.startTime)}</small>
+		<div>{b.text}</div>
+		{#if b.details}
+			<div class="details-wrapper">
+				{@html b.details}
+			</div>
+		{/if}
+	</div>
+{/snippet}
 
 {#if bulletins.length > 0}
 	<button class="bulletins" onclick={open}>
@@ -18,29 +31,21 @@
 		<div class="bulletins-content">
 			{#each bulletins as b}
 				<div>
-					{b.text}{#if b.details}…{' '}<small>(more)</small>{/if}
+					{b.text}{#if b.details}{' '}<small>(more)</small>{/if}
 				</div>
 			{/each}
 		</div>
 	</button>
 {/if}
 
-<dialog bind:this={dialogRef}>
-	<div class="button-wrapper">Bulletins<button onclick={close}><Icon icon="Close" /></button></div>
-	<div class="bulletins-content">
+<!-- TODO: show only one bulletin at a time? -->
+<Dialog title="Bulletins" bind:ref={dialogRef}>
+	<div style="display: flex; flex-direction: column; gap: 1rem;">
 		{#each bulletins as b}
-			<div>
-				<small>{formatDate(b.startTime)}</small>
-				<div>{b.text}</div>
-				{#if b.details}
-					<div class="details-wrapper">
-						{@html b.details}
-					</div>
-				{/if}
-			</div>
+			{@render bulletin(b)}
 		{/each}
 	</div>
-</dialog>
+</Dialog>
 
 <style>
 	button.bulletins {
@@ -61,26 +66,5 @@
 
 	.details-wrapper {
 		padding-left: 2rem;
-	}
-
-	dialog .bulletins-content {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	dialog {
-		max-width: 720px;
-	}
-	dialog .button-wrapper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 1rem;
-		font-family: watkins;
-	}
-	dialog button {
-		width: 2rem;
-		height: 2rem;
 	}
 </style>

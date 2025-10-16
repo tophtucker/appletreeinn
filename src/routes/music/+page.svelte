@@ -12,8 +12,8 @@
 		TIME_ZONE
 	} from '$lib/index.js';
 	import OstrichRoom from '$lib/components/OstrichRoom.svelte';
+	import Dialog from '$lib/components/Dialog.svelte';
 	import HR from '$lib/components/HR.svelte';
-	import Icon from '$lib/icons/Icon.svelte';
 	let { data } = $props();
 	const { performances, ostrichRoom } = data;
 
@@ -40,10 +40,6 @@
 	const open = (p) => {
 		dialogPerformance = p;
 		dialogRef.showModal();
-	};
-	const close = () => {
-		dialogPerformance = null;
-		dialogRef.close();
 	};
 
 	function groupPerformancesByMonth(performances, direction) {
@@ -191,14 +187,11 @@
 		{@render monthSummary(m)}
 	{/each}
 
-	<dialog bind:this={dialogRef}>
-		<div class="button-wrapper">
-			Show<button onclick={close}><Icon icon="Close" /></button>
-		</div>
+	<Dialog title="Show" bind:ref={dialogRef}>
 		{#if dialogPerformance}
 			{@render card(dialogPerformance)}
 		{/if}
-	</dialog>
+	</Dialog>
 </div>
 
 <style>
@@ -322,20 +315,5 @@
 			display: flex;
 			flex-direction: column-reverse;
 		}
-	}
-
-	dialog {
-		max-width: 720px;
-	}
-	dialog .button-wrapper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 1rem;
-		font-family: watkins;
-	}
-	dialog button {
-		width: 2rem;
-		height: 2rem;
 	}
 </style>

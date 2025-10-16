@@ -124,12 +124,20 @@ button {
 	font-feature-settings: inherit;
 	font-variation-settings: inherit;
 	letter-spacing: inherit;
-	color: inherit;
+	color: var(--black);
 	opacity: 1;
 	border: 3px inset var(--gray);
 	padding: 3px;
 	background-color: #fff;
 	border-radius: 0;
+}
+
+button.mini {
+	border-width: 2px;
+	padding: 2px 4px;
+	margin: 0 2px;
+	font-size: 11px;
+	text-transform: uppercase;
 }
 
 ul {
