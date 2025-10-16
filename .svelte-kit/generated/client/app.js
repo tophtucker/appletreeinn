@@ -57,7 +57,7 @@ export const dictionary = {
 		"/about/newsletter": [8],
 		"/about/policies": [9],
 		"/about/press": [10],
-		"/about/renovation": [11],
+		"/about/renovations": [11],
 		"/about/scrapbook": [12],
 		"/activities": [14],
 		"/activities/amenities": [15],
