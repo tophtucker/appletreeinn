@@ -1,12 +1,19 @@
 <script>
 	import Icon from '$lib/icons/Icon.svelte';
 	import LilFrame from '$lib/components/LilFrame.svelte';
+	import { page } from '$app/stores';
 	let { children, title, ref = $bindable() } = $props();
 
 	// TODO: onclose prop?
 	const close = () => {
 		ref.close();
 	};
+
+	$effect(() => {
+		// Close dialog if open on page navigation
+		const path = $page.url.pathname;
+		close();
+	});
 </script>
 
 <dialog bind:this={ref}>
