@@ -1,7 +1,9 @@
 <script>
 	import HR from '$lib/components/HR.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
-	import Embed from './Embed.svelte';
+	import { formatMonthYear } from '$lib/index.js';
+	let { data } = $props();
+	const { newsletters } = data;
 </script>
 
 <svelte:head>
@@ -27,13 +29,43 @@
 
 	<h2>Past installments</h2>
 
-	<div style="padding: 1em 0">
-		<Embed />
-	</div>
+	{#if newsletters.length}
+		<table>
+			<tbody>
+				{#each newsletters as n}
+					<tr><td>{formatMonthYear(n.date)}</td><td><a href={n.url}>{n.title}</a></td></tr>
+				{/each}
+			</tbody>
+		</table>
+	{:else}
+		<p class="notice">
+			⚠️ Can’t load newsletters. Try again later, or <a href="mailto:info@appletreeinnlenox.com"
+				>email us</a
+			> if this continues.
+		</p>
+	{/if}
 </div>
 
 <style>
+	table {
+		border-collapse: collapse;
+	}
+	table td {
+		border: 1px solid var(--gray);
+		padding: 0.25rem 0.5rem;
+		vertical-align: top;
+	}
+	table td:first-child {
+		text-align: right;
+	}
+
 	.inner {
 		min-height: 50vh;
+	}
+
+	.notice {
+		border: 2px solid var(--gold);
+		padding: 6px;
+		transform: rotate(-3deg);
 	}
 </style>

@@ -27,6 +27,7 @@ export function parsePerformance(p) {
 // BULLETINS
 
 export function parseBulletin(b) {
+	console.log('parseBulletin', b.startTime, typeof b.startTime, `hello ${b.startTime} world`);
 	b.startTime = isoParse(b.startTime);
 	if (b.details) b.details = toHTML(b.details);
 	return b;

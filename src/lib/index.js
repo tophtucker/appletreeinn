@@ -18,9 +18,8 @@ export const daysOfWeek = [
 	'Sunday'
 ];
 
-// Go from an ISO UTC datetime string to an Eastern Time ZonedDateTime
-export const isoParse = (isoUtc) =>
-	Temporal.Instant.from(isoUtc).toZonedDateTimeISO('America/New_York');
+// Go from a full ISO UTC datetime string (e.g. 2025-10-09T15:45:00.000Z) to an Eastern Time ZonedDateTime
+export const isoParse = (isoUtc) => Temporal.Instant.from(isoUtc).toZonedDateTimeISO(TIME_ZONE);
 
 function upzone(pt) {
 	if (pt instanceof Temporal.PlainTime) {
