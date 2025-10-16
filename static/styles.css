@@ -113,13 +113,21 @@ a.cta {
 }
 
 a.cta:hover,
-button:hover {
+button:hover,
+input[type='submit']:hover {
 	background: var(--black);
 	color: white;
 	border-style: outset;
 }
 
-button {
+input[type='text'],
+input[type='email'] {
+	font: inherit;
+	padding: 4px;
+}
+
+button,
+input[type='submit'] {
 	font: inherit;
 	font-feature-settings: inherit;
 	font-variation-settings: inherit;
