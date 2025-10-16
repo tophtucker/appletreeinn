@@ -1,3 +1,15 @@
+/**
+ * MailChimp makes their embeds available as a script that has a document.write
+ * with the HTML of your “campaign” listings. I wanted to be able to format the
+ * listings a bit differently, and I wanted them to SSR with the rest of the
+ * page. So this fetches the source of that script, extracts the HTML it wants
+ * to write to the DOM, parses it with JSDOM, and then extracts a
+ * {date, title, url}[] array of object.
+ *
+ * Prototyped in this val, helpful for iterating if this breaks:
+ * https://www.val.town/x/tophtucker/fetch-ati-mailchimp/code/main.ts
+ */
+
 import { JSDOM } from 'jsdom';
 import { Temporal } from '@js-temporal/polyfill';
 
