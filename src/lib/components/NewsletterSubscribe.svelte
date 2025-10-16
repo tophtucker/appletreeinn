@@ -11,21 +11,24 @@
 		>
 			<div id="mc_embed_signup_scroll">
 				<div class="mc-field-group">
-					<label for="mce-EMAIL">Email address:</label><input
-						type="email"
-						name="EMAIL"
-						class="required email"
-						id="mce-EMAIL"
-						required=""
-						value=""
-					/>
-					<input
-						type="submit"
-						name="subscribe"
-						id="mc-embedded-subscribe"
-						class="button"
-						value="Subscribe"
-					/>
+					<label for="mce-EMAIL">Email address:</label>
+					<div>
+						<input
+							type="email"
+							name="EMAIL"
+							class="required email"
+							id="mce-EMAIL"
+							required=""
+							value=""
+						/>
+						<input
+							type="submit"
+							name="subscribe"
+							id="mc-embedded-subscribe"
+							class="button"
+							value="Subscribe"
+						/>
+					</div>
 				</div>
 				<div id="mce-responses" class="clear">
 					<div class="response" id="mce-error-response" style="display: none;"></div>
@@ -40,10 +43,8 @@
 </div>
 
 <style>
-	.mc-field-group {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		flex-wrap: wrap;
+	label {
+		font-size: smaller;
+		text-transform: uppercase;
 	}
 </style>
