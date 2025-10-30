@@ -18,8 +18,11 @@
 	const { performances, ostrichRoom } = data;
 
 	const threshold = Temporal.Now.zonedDateTimeISO(TIME_ZONE).epochMilliseconds;
-	const past = performances.filter((d) => d.startTime.epochMilliseconds < threshold);
-	const future = performances.filter((d) => d.startTime.epochMilliseconds >= threshold);
+	// TODO: test this logic for performances without an endTime; see also +layout.server.js MUSIC_QUERY
+	const past = performances.filter((d) => (d.endTime || d.startTime).epochMilliseconds < threshold);
+	const future = performances.filter(
+		(d) => (d.endTime || d.startTime).epochMilliseconds >= threshold
+	);
 	const upcoming = future.slice(0, 4);
 	const beyondUpcoming = future.slice(4);
 
@@ -35,7 +38,7 @@
 		calendar.push({ date, performances: groupedByDay.get(date.toString()) });
 	}
 
-	let dialogRef;
+	let dialogRef = $state();
 	let dialogPerformance = $state(null);
 	const open = (p) => {
 		dialogPerformance = p;
@@ -143,6 +146,7 @@
 
 	<HR />
 
+	<!-- TODO: connect with ostrich room hours? -->
 	<h2>Upcoming shows</h2>
 
 	<div class="performances">
@@ -181,6 +185,7 @@
 
 	<HR />
 
+	<!-- TODO: make past shows open a modal with details -->
 	<h2>Past shows</h2>
 
 	{#each pastMonths as m}

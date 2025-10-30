@@ -1,6 +1,7 @@
 import { sanity, parsePerformance, parseBulletin, parseRestaurant } from '$lib/sanity.js';
 
-const MUSIC_QUERY = `*[_type == "performance" && startTime > now()] | order(startTime asc) [0] {
+// TODO: bang on this logic for when there's no listed end time; see also music/+page.svelte
+const MUSIC_QUERY = `*[_type == "performance" && (endTime > now() || (!endTime && startTime > now()))] | order(startTime asc) [0] {
   _id,
   startTime,
   endTime,

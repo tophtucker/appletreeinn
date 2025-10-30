@@ -5,7 +5,7 @@
 	import Icon from '../icons/Icon.svelte';
 	let { toggleNav, mobileNav, data } = $props();
 
-	let dialogRef;
+	let dialogRef = $state();
 	$effect(() => {
 		if (mobileNav) {
 			dialogRef.showModal();

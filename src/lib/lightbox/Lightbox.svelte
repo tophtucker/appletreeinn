@@ -2,7 +2,7 @@
 	import { getContext } from 'svelte';
 	let lightbox = getContext('lightbox');
 
-	let dialogRef;
+	let dialogRef = $state();
 
 	$effect(() => {
 		if (lightbox.src) {
