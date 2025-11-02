@@ -16,8 +16,13 @@
 			<a href="/" class="home" style="width: 100%;"><ATI height="65" style="width: 100%" /></a>
 			<div class="tagline show-medium">Lenox, Mass.</div>
 		</div>
-		<a class="book cta" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a
+		<a class="book cta disabled" href={BOOKING_URL}
+			>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a
 		>
+		<div class="tape">
+			UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION •
+			UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION
+		</div>
 	</div>
 	{#if currentPage && currentPage.section && currentPage.pathname !== '/'}
 		<div class="subheader">
@@ -37,9 +42,40 @@
 </header>
 
 <style>
+	.tape {
+		position: absolute;
+		display: inline;
+		background: var(--gold);
+		color: white;
+		border: 1px solid white;
+		width: auto;
+		left: -10%;
+		top: 70px;
+		width: 120%;
+		transform: rotate(-5deg);
+		padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+		text-align: center;
+		font-family: watkins;
+		font-size: smaller;
+		white-space: nowrap;
+	}
+
 	header {
 		container-type: inline-size;
+		position: relative;
+		overflow: hidden;
 	}
+
+	@media (max-width: 800px) {
+		header {
+			overflow: visible;
+		}
+
+		.tape {
+			font-size: small;
+		}
+	}
+
 	button {
 		justify-self: start;
 		width: 2rem;
@@ -109,6 +145,7 @@
 
 	.hamburger {
 		display: none;
+		z-index: 2;
 	}
 
 	.show-medium {

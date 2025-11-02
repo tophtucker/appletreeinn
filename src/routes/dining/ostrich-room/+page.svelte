@@ -46,7 +46,7 @@
 	</div>
 	<div class="links">
 		<a href="https://g.co/kgs/7ueSZgy">Google Maps</a>
-		<a class="cta" href={RESERVATIONS_URL}>Make a reservation</a>
+		<a class="cta disabled" href={RESERVATIONS_URL}>Make a reservation</a>
 		<div>(413) 637-1910</div>
 	</div>
 	<div style="text-align: center;"><em>Walk-ins always welcome!</em></div>

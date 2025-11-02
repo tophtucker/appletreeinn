@@ -26,7 +26,9 @@
 				{#each n.children as n}
 					{#if n.active}<div class="active">
 							<Icon icon="Asterisk" style="position: absolute; left: -23px; top: 5px" />{n.title}
-						</div>{:else}<a href={n.url || n.pathname} class={n.active ? 'active' : ''}
+						</div>{:else}<a
+							href={n.url || n.pathname}
+							class={`${n.active ? 'active' : ''} ${n.disabled ? 'disabled' : ''}`}
 							>{n.title}{#if n.url}<Icon icon="External" style="margin-left: 5px" />{/if}</a
 						>{/if}
 				{/each}

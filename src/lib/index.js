@@ -157,6 +157,7 @@ const isDenseCyclical = (data) => {
 	return false;
 };
 export const formatDayRange = (days) => {
+	if (!days.length) return '(Closed for renovations)'; // TODO: this language is brittle, specific to renovation; would probably be better to have something like a "restaurant status" higher up
 	days = sort(new Set(days.map((d) => d % modulo)), ascending);
 	if (days.length === 1) return formatWeekday(days[0]);
 	const i = isDenseCyclical(days);

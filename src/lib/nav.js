@@ -1,6 +1,5 @@
-export const BOOKING_URL = 'https://direct-book.com/properties/AppleTreeInndirect';
-export const RESERVATIONS_URL =
-	'https://tables.toasttab.com/restaurants/701827ce-60b2-4de3-a117-eeef40adcbe1/findTime';
+export const BOOKING_URL = '#'; // 'https://direct-book.com/properties/AppleTreeInndirect';
+export const RESERVATIONS_URL = '#'; // 'https://tables.toasttab.com/restaurants/701827ce-60b2-4de3-a117-eeef40adcbe1/findTime';
 
 const nav = [
 	{
@@ -19,7 +18,7 @@ const nav = [
 		children: [
 			{ title: 'Main House', slug: 'main-house' },
 			{ title: 'Lodge', slug: 'lodge' },
-			{ title: 'Book a room', url: BOOKING_URL }
+			{ title: 'Book a room', url: BOOKING_URL, disabled: true }
 		]
 	},
 	{
@@ -29,7 +28,7 @@ const nav = [
 		children: [
 			{ title: 'Breakfast', slug: 'breakfast' },
 			{ title: 'The Ostrich Room', slug: 'ostrich-room' },
-			{ title: 'Make a reservation', url: RESERVATIONS_URL }
+			{ title: 'Make a reservation', url: RESERVATIONS_URL, disabled: true }
 		]
 	},
 	{

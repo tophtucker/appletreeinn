@@ -100,6 +100,11 @@ a {
 	color: var(--blue);
 }
 
+a.disabled {
+	text-decoration: line-through !important;
+	cursor: not-allowed;
+}
+
 a.cta {
 	color: var(--black);
 	border: 3px inset var(--gray);
@@ -112,9 +117,9 @@ a.cta {
 	background: white;
 }
 
-a.cta:hover,
-button:hover,
-input[type='submit']:hover {
+a.cta:hover:not(.disabled),
+button:hover:not(.disabled),
+input[type='submit']:hover:not(.disabled) {
 	background: var(--black);
 	color: white;
 	border-style: outset;
