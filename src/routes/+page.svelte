@@ -35,13 +35,11 @@
 			While we’re closed for “<a href="https://www.instagram.com/reel/DPkb0aVjruV/">some months</a>”
 			Claire will share all the debates, blueprints, wrecking balls, and progress.
 		</p>
-		<div style="display: flex; flex-direction: column; align-items: center; gap: 1em;">
-			<div>
-				<NewsletterSubscribe />
-			</div>
-			and
-			<a href="https://instagram.com/appletreeinn" class="cta">Follow us on Instagram</a>
-		</div>
+		<NewsletterSubscribe />
+		<p>
+			<a href="https://instagram.com/appletreeinn">Follow us on Instagram</a>
+		</p>
+		<p><a href="/about/newsletter">See past newsletters</a></p>
 	</div>
 
 	<HR />
