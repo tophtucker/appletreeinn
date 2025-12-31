@@ -66,6 +66,7 @@
 		justify-content: center;
 		padding: 2rem;
 		gap: 2rem;
+		overflow: hidden; /* TODO: remove after renovation */
 	}
 	.top {
 		border-top: 1px solid var(--black);

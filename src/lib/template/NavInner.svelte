@@ -41,11 +41,13 @@
 	{#each mainNav as n}
 		{@render navSection(n)}
 	{/each}
-	<div class="bulletins">
-		<Bulletins {bulletins} />
-		<OpenSign calendar={ostrichRoom.calendar} />
-		<NextPerformance {nextPerformance} />
-	</div>
+	{#if bulletins.length}
+		<div class="bulletins">
+			<Bulletins {bulletins} />
+			<!-- <OpenSign calendar={ostrichRoom.calendar} />
+    		<NextPerformance {nextPerformance} /> -->
+		</div>
+	{/if}
 	<div class="about">
 		{#if aboutNav.some((d) => d.active)}
 			<Icon icon="Asterisk" style="position: absolute; left: -23px; top: 5px;" />

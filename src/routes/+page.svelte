@@ -1,6 +1,9 @@
 <script>
 	import HR from '$lib/components/HR.svelte';
+	import XR from '$lib/components/XR.svelte';
 	import LilFrame from '$lib/components/LilFrame.svelte';
+	import Reno from '$lib/components/Reno.svelte';
+	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 
 	import adirondackView from '$lib/assets/adirondack-view.jpg?enhanced';
 	import avaloch from '$lib/assets/avaloch.jpg?enhanced';
@@ -8,7 +11,6 @@
 	import distant from '$lib/assets/distant.jpg?enhanced';
 	import door from '$lib/assets/door.jpg?enhanced';
 	import fireplace from '$lib/assets/fireplace.jpg?enhanced';
-	import heroDrone from '$lib/assets/hero-drone.jpg?enhanced';
 	import max from '$lib/assets/max.jpg?enhanced';
 	import pool1 from '$lib/assets/pool1.jpg?enhanced';
 	import room8 from '$lib/assets/room8.jpg?enhanced';
@@ -25,16 +27,24 @@
 </svelte:head>
 
 <div class="inner main">
-	<enhanced:img src={heroDrone} alt="The Apple Tree Inn’s Main House" />
+	<Reno />
 
-	<div class="tagline">
-		<HR />
-		<h2>
-			For the old who are young at heart <br class="hide-mobile" />and the young who are old at
-			heart
-		</h2>
-		<HR />
+	<div class="tout tout-inner" style="margin-top: 2rem">
+		<h2>Follow our renovations</h2>
+		<p>
+			While we’re closed for “<a href="https://www.instagram.com/reel/DPkb0aVjruV/">some months</a>”
+			Claire will share all the debates, blueprints, wrecking balls, and progress.
+		</p>
+		<div style="display: flex; flex-direction: column; align-items: center; gap: 1em;">
+			<div>
+				<NewsletterSubscribe />
+			</div>
+			and
+			<a href="https://instagram.com/appletreeinn" class="cta">Follow us on Instagram</a>
+		</div>
 	</div>
+
+	<HR />
 
 	<div class="tout reverse">
 		<LilFrame accent="var(--green)">
@@ -90,6 +100,15 @@
 			alt="Wanda Houston, one of our favorite performers, on stage in the Ostrich Room; Andy Wrba in the background; I forget the third guy’s name"
 			loading="lazy"
 		/>
+	</div>
+
+	<div class="tagline">
+		<HR />
+		<h2>
+			For the old who are young at heart <br class="hide-mobile" />and the young who are old at
+			heart
+		</h2>
+		<HR />
 	</div>
 
 	<div class="img-pair">

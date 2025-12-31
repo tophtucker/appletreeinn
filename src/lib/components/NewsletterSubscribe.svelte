@@ -43,6 +43,9 @@
 </div>
 
 <style>
+	#mc_embed_shell {
+		text-align: left;
+	}
 	label {
 		font-size: smaller;
 		text-transform: uppercase;

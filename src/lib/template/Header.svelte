@@ -68,7 +68,7 @@
 
 	@media (max-width: 800px) {
 		header {
-			overflow: visible;
+			overflow: visible; /* TODO: remove after renovation */
 		}
 
 		.tape {
