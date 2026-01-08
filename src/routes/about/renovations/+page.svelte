@@ -1,13 +1,16 @@
 <script>
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 	import HR from '$lib/components/HR.svelte';
+	import { HOTEL_OPEN } from '$lib/index.js';
+
+	if (HOTEL_OPEN) throw new Error('update copy');
 </script>
 
 <svelte:head>
 	<title>About us: Renovations • Apple Tree Inn • Lenox, MA</title>
 	<meta
 		name="description"
-		content="The Apple Tree Inn will be closed for renovations from November 3 onward"
+		content="The Apple Tree Inn is documenting every step of renovating the historic main house through the newsletter and Instagram"
 	/>
 </svelte:head>
 
@@ -20,12 +23,22 @@
 	/>
 
 	<p>
-		The inn and Ostrich Room will be closed for renovations starting November 3, 2025. We don’t know
-		exactly when we’ll reopen. Starting in February, we hope to let you book rooms for summer 2026.
-		Newsletter subscribers will hear first when bookings re-open!
+		The inn and Ostrich Room closed for renovations in November 2025. We don’t know exactly when
+		we’ll reopen, but hope to see you summer 2026. Newsletter subscribers will hear first when
+		bookings re-open!
 	</p>
 
 	<NewsletterSubscribe />
+
+	<p>Projects include:</p>
+
+	<ul>
+		<li>Demolishing the round room.</li>
+		<li>Building a new glassed-in dining room on the front of the house.</li>
+		<li>Reorienting the primary entrance to be on the east side.</li>
+		<li>Adding garden space.</li>
+		<li>Rebranding the hotel.</li>
+	</ul>
 
 	<HR />
 

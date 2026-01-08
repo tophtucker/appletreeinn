@@ -3,6 +3,9 @@
 import { Temporal } from '@js-temporal/polyfill';
 import { min, max, extent, range, sort, ascending } from 'd3-array';
 
+// To track down places where we say we’re closed for renovations.
+export const HOTEL_OPEN = false;
+
 // Since the hotel is in Eastern Time, we try to show all dates and times around
 // the site in Eastern Time, not in the user’s local time
 export const TIME_ZONE = 'America/New_York';
@@ -157,7 +160,8 @@ const isDenseCyclical = (data) => {
 	return false;
 };
 export const formatDayRange = (days) => {
-	if (!days.length) return '(Closed for renovations)'; // TODO: this language is brittle, specific to renovation; would probably be better to have something like a "restaurant status" higher up
+	if (!HOTEL_OPEN) return '(Closed for renovations)';
+	if (!days.length) return '(Closed)';
 	days = sort(new Set(days.map((d) => d % modulo)), ascending);
 	if (days.length === 1) return formatWeekday(days[0]);
 	const i = isDenseCyclical(days);

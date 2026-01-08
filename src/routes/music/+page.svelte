@@ -14,6 +14,7 @@
 	import OstrichRoom from '$lib/components/OstrichRoom.svelte';
 	import Dialog from '$lib/components/Dialog.svelte';
 	import HR from '$lib/components/HR.svelte';
+	import { HOTEL_OPEN } from '$lib/index.js';
 	let { data } = $props();
 	const { performances, ostrichRoom } = data;
 
@@ -149,32 +150,41 @@
 	<!-- TODO: connect with ostrich room hours? -->
 	<h2>Upcoming shows</h2>
 
-	<div class="performances">
-		{#each upcoming as p}{@render card(p)}{/each}
-	</div>
+	{#if future.length > 0}
+		<div class="performances">
+			{#each upcoming as p}{@render card(p)}{/each}
+		</div>
 
-	<div class="calendar hide-mobile">
-		{#each calendar.slice(0, 7) as { date }}
-			<div class="header">{formatDay(date)}</div>
-		{/each}
-		{#each calendar as { date, performances }}
-			<div class={date.equals(today) ? 'today' : ''}>
-				<div class="date">{date.day === 1 ? formatMonthDate(date) : date.day}</div>
-				{#each performances as p}
-					<button onclick={() => open(p)}
-						><small>{formatTime(p.startTime)}</small><br /> {p.act.name}</button
-					>
-				{/each}
-			</div>
-		{/each}
-	</div>
+		<div class="calendar hide-mobile">
+			{#each calendar.slice(0, 7) as { date }}
+				<div class="header">{formatDay(date)}</div>
+			{/each}
+			{#each calendar as { date, performances }}
+				<div class={date.equals(today) ? 'today' : ''}>
+					<div class="date">{date.day === 1 ? formatMonthDate(date) : date.day}</div>
+					{#each performances as p}
+						<button onclick={() => open(p)}
+							><small>{formatTime(p.startTime)}</small><br /> {p.act.name}</button
+						>
+					{/each}
+				</div>
+			{/each}
+		</div>
 
-	<div class="upcoming show-mobile">
-		<h3>More upcoming shows</h3>
-		{#each futureMonths as m}
-			{@render monthSummary(m)}
-		{/each}
-	</div>
+		<div class="upcoming show-mobile">
+			<h3>More upcoming shows</h3>
+			{#each futureMonths as m}
+				{@render monthSummary(m)}
+			{/each}
+		</div>
+	{:else if !HOTEL_OPEN}
+		<p>
+			We have no live music while we <a href="/about/renovations">renovate</a>. Check back when we
+			reopen!
+		</p>
+	{:else}
+		<p>No upcoming shows.</p>
+	{/if}
 
 	<p>
 		See <a href="https://instagram.com/appletreeinn">Instagram</a>
