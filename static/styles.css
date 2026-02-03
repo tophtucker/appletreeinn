@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	font-size: 18px;
 	line-height: 1.2;
-	font-family: 'Brunel', 'Times New Roman', Times, serif;
+	font-family: var(--body-font);
 	--red: #750f29;
 	--green: #204638;
 	--gold: #c29b58;
@@ -16,6 +16,8 @@ body {
 	--black: #333;
 	--gray: #999;
 	--gutter: 6rem;
+	--hed-font: watkins;
+	--body-font: 'Brunel', 'Times New Roman', Times, serif;
 	color: var(--black);
 }
 
@@ -68,7 +70,7 @@ hr {
 h1,
 h2,
 h3 {
-	font-family: watkins;
+	font-family: var(--hed-font);
 }
 
 h2,
@@ -79,7 +81,7 @@ h4 {
 
 h6 {
 	font-size: 14px;
-	font-family: watkins;
+	font-family: var(--hed-font);
 	margin: 0;
 }
 

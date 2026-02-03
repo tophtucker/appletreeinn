@@ -93,7 +93,7 @@
 
 	.section > a,
 	.section > .active {
-		font-family: watkins;
+		font-family: var(--hed-font);
 		font-size: 14px;
 	}
 

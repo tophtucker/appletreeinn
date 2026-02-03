@@ -41,7 +41,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-family: watkins;
+		font-family: var(--hed-font);
 	}
 
 	dialog .header button {

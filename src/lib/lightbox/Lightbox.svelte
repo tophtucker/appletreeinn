@@ -83,7 +83,7 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
-		font-family: watkins;
+		font-family: var(--hed-font);
 	}
 
 	dialog .header > div {

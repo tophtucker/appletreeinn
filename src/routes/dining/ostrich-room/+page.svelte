@@ -141,7 +141,7 @@
 		letter-spacing: 0.1em;
 		position: relative;
 		min-height: 400px;
-		font-family: watkins;
+		font-family: var(--hed-font);
 		color: white;
 	}
 

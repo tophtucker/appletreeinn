@@ -13,6 +13,19 @@
 /* COMMERCIAL TYPE */
 
 @font-face {
+	font-family: 'Align Web';
+	src: url('AlignUpright-VF-Web.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+.align {
+	font-family: 'Align Web';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Brunel';
 	src: url('BrunelText-Roman-Web.woff2') format('woff2');
 	font-weight: 300;

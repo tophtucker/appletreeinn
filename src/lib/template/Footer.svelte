@@ -40,7 +40,7 @@
 		text-align: right;
 	}
 	.bottom {
-		font-family: watkins;
+		font-family: var(--hed-font);
 		font-size: 14px;
 		text-align: center;
 		display: flex;

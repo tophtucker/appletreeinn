@@ -55,7 +55,7 @@
 		transform: rotate(-5deg);
 		padding: 0.5rem 0.5rem 0.2rem 0.5rem;
 		text-align: center;
-		font-family: watkins;
+		font-family: var(--hed-font);
 		font-size: smaller;
 		white-space: nowrap;
 	}
@@ -95,7 +95,7 @@
 	}
 	.tagline {
 		font-size: 14px;
-		font-family: 'watkins';
+		font-family: var(--hed-font);
 	}
 	.inner-header {
 		display: flex;

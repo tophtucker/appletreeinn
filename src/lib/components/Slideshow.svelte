@@ -50,7 +50,7 @@
 	}
 
 	.controls {
-		font-family: watkins;
+		font-family: var(--hed-font);
 		position: absolute;
 		bottom: 0.5rem;
 		right: 0.5rem;

@@ -135,7 +135,7 @@
 
 <style>
 	dt {
-		font-family: watkins;
+		font-family: var(--hed-font);
 	}
 	dd {
 		margin-bottom: 1rem;
