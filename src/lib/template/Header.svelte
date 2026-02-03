@@ -53,10 +53,11 @@
 		top: 70px;
 		width: 120%;
 		transform: rotate(-5deg);
-		padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+		padding: 0.25rem 0.5rem 0.2rem 0.5rem;
+		font-variation-settings: 'wght' 800;
 		text-align: center;
 		font-family: var(--hed-font);
-		font-size: smaller;
+		font-size: larger;
 		white-space: nowrap;
 	}
 
@@ -94,8 +95,9 @@
 		padding: 0 var(--gutter);
 	}
 	.tagline {
-		font-size: 14px;
+		font-size: larger;
 		font-family: var(--hed-font);
+		font-variation-settings: 'wght' 500;
 	}
 	.inner-header {
 		display: flex;
@@ -126,7 +128,7 @@
 	.subheader-inner h2 {
 		background-color: var(--accent);
 		color: white;
-		padding: 0.5rem 1rem 0.2rem 1rem;
+		padding: 0.2rem 1rem;
 		margin: 0;
 		position: relative;
 		font-size: 1.3rem;

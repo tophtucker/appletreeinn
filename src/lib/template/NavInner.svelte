@@ -18,7 +18,7 @@
 {#snippet navSection(n)}
 	<div class="section">
 		{#if n.active}<div class="active">
-				<Icon icon="Asterisk" style="position: absolute; left: -23px;" />{n.title}
+				<Icon icon="Asterisk" style="position: absolute; left: -23px; top: 5px;" />{n.title}
 			</div>{:else}<a href={n.pathname} class={n.active ? 'active' : ''}>{n.title}</a>{/if}
 
 		{#if n.children}
@@ -94,7 +94,9 @@
 	.section > a,
 	.section > .active {
 		font-family: var(--hed-font);
-		font-size: 14px;
+		font-variation-settings: 'wght' 700;
+		/*text-transform: uppercase;*/
+		/*font-size: 14px;*/
 	}
 
 	.active {
@@ -103,7 +105,7 @@
 
 	.section .children a,
 	.section .children .active {
-		padding-left: 1em;
+		padding-left: 1em; /* TODO remove? */
 	}
 
 	.bulletins {
