@@ -186,6 +186,7 @@
 
 	.tagline {
 		text-align: center;
+		text-transform: uppercase;
 	}
 
 	.tout {

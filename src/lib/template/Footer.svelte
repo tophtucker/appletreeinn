@@ -41,7 +41,8 @@
 	}
 	.bottom {
 		font-family: var(--hed-font);
-		font-size: 14px;
+		font-variation-settings: 'wght' 900;
+		text-transform: uppercase;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
