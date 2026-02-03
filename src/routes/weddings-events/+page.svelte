@@ -50,24 +50,52 @@
 	<div class="grid-or-flex">
 		<div>
 			<p>
-				We are no longer accepting private events for the 2025 and 2026 seasons. If you’d like to be
-				put on our list, we will reach out to you once private events bookings reopen.
+				We are currently <a href="/about/renovations">under construction</a> and are unable to say at
+				this point when we will reopen. It’s really important to us that we don’t promise to host an
+				event if we are still under construction and cannot deliver so we are erring on the side of caution
+				here.
 			</p>
+
+			<p>If it’s helpful, when we reopen, we are planning to have:</p>
+
+			<ul>
+				<li>
+					32 guest rooms
+					<ul>
+						<li>12 in 1885 Main House</li>
+						<li>20 in 1966 Motel</li>
+					</ul>
+				</li>
+				<li>
+					2 private dining spaces
+					<ul>
+						<li>Smaller room for 25 seated guests</li>
+						<li>Larger room for 50 seated guests</li>
+						<li>Both rooms for 75 seated guests</li>
+						<li>We can accommodate more for a stand-up cocktail party</li>
+					</ul>
+				</li>
+				<li>Ostrich Room bar: 50 ppl seated</li>
+				<li>Front porch & lawn with ability for private parties</li>
+				<li>Tent lawn with beautiful views that could accommodate a tent for up to 300 people</li>
+				<li>Pool</li>
+			</ul>
+
 			<p>
-				If you are looking for guest rooms only (as opposed to venue rental or catering), please
-				contact us at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
+				We are keeping a list of inquiries and, if you are interested, we will add your contact
+				information to the list and will reach out when we know more. Please feel free to email
+				<a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
 			</p>
-			<p>
-				If you are looking to book dinner for a party up to 12 people in the Ostrich Room, please
-				contact us at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
-			</p>
-			<p>Thank you for your interest!</p>
-			<a
+
+			<p>Thank you!</p>
+
+			<!-- TODO: is this form still being monitored? -->
+			<!-- <a
 				class="cta"
 				style="margin-top:1rem;"
 				href="https://docs.google.com/forms/d/e/1FAIpQLSeWZNsHNjJ7gsrEh0-p4hrJJk5SCSnHJgSuPCR1YmSoNuXsRA/viewform?usp=preview"
 				>Tell me when bookings reopen</a
-			>
+			> -->
 		</div>
 		<Slideshow {pics} />
 	</div>

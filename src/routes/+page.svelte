@@ -1,6 +1,7 @@
 <script>
 	import HR from '$lib/components/HR.svelte';
 	import XR from '$lib/components/XR.svelte';
+	import Door from '$lib/icons/Door.svelte';
 	import LilFrame from '$lib/components/LilFrame.svelte';
 	import Reno from '$lib/components/Reno.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
@@ -40,6 +41,21 @@
 			<a href="https://instagram.com/appletreeinn">Follow us on Instagram</a>
 		</p>
 		<p><a href="/about/newsletter">See past newsletters</a></p>
+
+		<Door size={32} style="margin-top: 1rem" />
+		<div>
+			<h3 style="margin-bottom: 0">Can I book a room for the summer?</h3>
+			<p style="margin-top: 0">
+				Not yet; there’s still too much construction uncertainty. We should have an update on our
+				timeline by the end of March.
+			</p>
+		</div>
+		<div>
+			<h3 style="margin-bottom: 0">Can I book a private event?</h3>
+			<p style="margin-top: 0">
+				Also not yet, but email us. <a href="/weddings-events">Learn more</a>
+			</p>
+		</div>
 	</div>
 
 	<HR />
