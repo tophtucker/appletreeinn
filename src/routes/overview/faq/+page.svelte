@@ -122,7 +122,7 @@
 		<li>
 			<strong>A car.</strong> See above. The only things within walking distance are Tanglewood and
 			Kripalu (about 10 minutes each); it’s a 45-minute walk into town. There’s basically no Uber,
-			and the only taxis are more like limosuine services you have reserve ahead of time. There’s
+			and the only taxis are more like limousine services you have reserve ahead of time. There’s
 			very little food delivery; the hotel has continental breakfast every morning, but our
 			<a href="/dining/ostrich-room">dinner restaurant</a>
 			is only open {data.ostrichRoom.dayRange}
