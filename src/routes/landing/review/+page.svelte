@@ -31,6 +31,6 @@
 	<p>
 		<img src="/signatures/christian-digital.png" alt="Christian's signature" height="75" /><br />
 		Christian, hotel manager<br />
-		and the whole staff of the Apple Tree Inn
+		and the whole staff of Avaloch
 	</p>
 </div>

@@ -46,7 +46,9 @@
 		<div>
 			<h3 style="margin-bottom: 0">What’s “Avaloch”?</h3>
 			<p style="margin-top: 0">
-				The Apple Tree Inn is returning to its original name. <a href="/#">Learn more</a>
+				The Apple Tree Inn is returning to its original name. <a href="/about/renovations#rebrand"
+					>Learn more</a
+				>
 			</p>
 		</div>
 		<div>

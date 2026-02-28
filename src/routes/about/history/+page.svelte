@@ -2,17 +2,17 @@
 	<title>About us: History • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
-		content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream"
+		content="Claire took over the inn in April 2024, realizing a lifelong dream"
 	/>
 </svelte:head>
 
 <div class="inner">
-	<h1>More than you ever wanted to know about the Apple Tree Inn</h1>
+	<h1>More than you ever wanted to know about Avaloch</h1>
 
 	<p>
-		The Apple Tree Inn has a long and fun history, and uncovering it is an ongoing treasure hunt for
-		me! The property is currently 21.5 acres and has 3 structures, but has been through many
-		different iterations over the last 140 years:
+		Avaloch, formerly the Apple Tree Inn, has a long and fun history, and uncovering it is an
+		ongoing treasure hunt for me! The property is currently 21.5 acres and has 3 structures, but has
+		been through many different iterations over the last 140 years:
 	</p>
 
 	<p>I don’t know anything yet about the property before 1885.</p>

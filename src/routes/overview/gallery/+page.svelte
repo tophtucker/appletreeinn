@@ -85,7 +85,7 @@
 	<title>Gallery • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
-		content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream"
+		content="Photographs of Avaloch in all seasons featuring the rooms, food, cocktails, weddings, fireplaces, sledding, and foliage."
 	/>
 </svelte:head>
 

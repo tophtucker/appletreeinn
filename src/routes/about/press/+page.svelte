@@ -1,9 +1,6 @@
 <svelte:head>
 	<title>Press • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
-	<!-- <meta
-		name="description"
-		content="Information about potential job openings at the Apple Tree Inn"
-	/> -->
+	<!-- <meta name="description" content="TK" /> -->
 </svelte:head>
 
 <div class="inner">
@@ -76,13 +73,13 @@
 	<h2>Press Kit</h2>
 
 	<p>
-		The Apple Tree Inn is a Victorian inn in Lenox, Massachusetts. Originally built in 1885 and
-		operating as a hotel since 1952, the 21-acre hilltop property offers 34 guest rooms, a charming
-		living room with books and board games, six wood-burning fireplaces, and a pool with panoramic
-		views of the Berkshires. The wood-paneled tavern, the Ostrich Room, features live music,
-		handcrafted seasonal cocktails, and elevated bar food, with outdoor dining also available on our
-		front porch. Guests enjoy a locally sourced complimentary continental breakfast buffet each
-		morning and can walk to Tanglewood or Kripalu in under ten minutes.
+		Avaloch is a Victorian inn in Lenox, Massachusetts. Originally built in 1885 and operating as a
+		hotel since 1952, the 21-acre hilltop property offers 34 guest rooms, a charming living room
+		with books and board games, six wood-burning fireplaces, and a pool with panoramic views of the
+		Berkshires. The wood-paneled tavern, the Ostrich Room, features live music, handcrafted seasonal
+		cocktails, and elevated bar food, with outdoor dining also available on our front porch. Guests
+		enjoy a locally sourced complimentary continental breakfast buffet each morning and can walk to
+		Tanglewood or Kripalu in under ten minutes.
 	</p>
 
 	<table>

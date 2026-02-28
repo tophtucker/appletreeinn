@@ -4,7 +4,10 @@
 
 <svelte:head>
 	<title>Property map • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
-	<!-- <meta name="description" content="TODO" /> -->
+	<meta
+		name="description"
+		content="Getting around Avaloch, including two guest room buildings, restaurant, parking lots, and pool."
+	/>
 </svelte:head>
 
 <div class="inner">
