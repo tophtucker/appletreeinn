@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Policies • Apple Tree Inn • Lenox, MA</title>
+	<title>Policies • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 

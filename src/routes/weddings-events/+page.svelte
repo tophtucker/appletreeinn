@@ -42,7 +42,7 @@
 </script>
 
 <svelte:head>
-	<title>Private events • Apple Tree Inn • Lenox, MA</title>
+	<title>Private events • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 

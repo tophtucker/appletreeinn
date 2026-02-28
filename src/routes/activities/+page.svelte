@@ -32,7 +32,7 @@
 {/snippet}
 
 <svelte:head>
-	<title>Activities • Apple Tree Inn • Lenox, MA</title>
+	<title>Activities • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 

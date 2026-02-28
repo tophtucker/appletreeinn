@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Thanks for staying! • Apple Tree Inn • Lenox, MA</title>
+	<title>Thanks for staying! • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 </svelte:head>
 
 <div class="inner">

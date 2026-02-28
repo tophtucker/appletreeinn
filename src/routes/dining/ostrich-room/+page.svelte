@@ -32,7 +32,7 @@
 </script>
 
 <svelte:head>
-	<title>The Ostrich Room • Apple Tree Inn • Lenox, MA</title>
+	<title>The Ostrich Room • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="The Ostrich Room is open for drinks and food (and often live music) Wed.–Sat. at the Apple Tree Inn"

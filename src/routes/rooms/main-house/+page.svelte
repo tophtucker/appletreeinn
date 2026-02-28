@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Main House • Apple Tree Inn • Lenox, MA</title>
+	<title>Main House • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 </svelte:head>
 
 <div class="inner">

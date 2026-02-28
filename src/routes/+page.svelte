@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>Apple Tree Inn • Lenox, MA</title>
+	<title>Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="A historic hotel in Lenox, MA, with views of the Berkshires hills and 5-minute walks to Tanglewood or Kripalu"

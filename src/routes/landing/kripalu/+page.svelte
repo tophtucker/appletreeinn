@@ -3,7 +3,10 @@
 </script>
 
 <svelte:head>
-	<title>Your Berkshires Retreat Doesn’t Have to End Yet • Apple Tree Inn • Lenox, MA</title>
+	<title
+		>Your Berkshires Retreat Doesn’t Have to End Yet • Avaloch (formerly Apple Tree Inn) • Lenox,
+		Mass.</title
+	>
 </svelte:head>
 
 <div class="inner">

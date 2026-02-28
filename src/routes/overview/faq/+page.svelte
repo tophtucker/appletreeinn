@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>FAQ • Apple Tree Inn • Lenox, MA</title>
+	<title>FAQ • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="What’s the deal with the Apple Tree Inn? How it works, how to get there, what to bring, what to know before your trip."

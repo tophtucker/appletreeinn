@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>About us: History • Apple Tree Inn • Lenox, MA</title>
+	<title>About us: History • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream"

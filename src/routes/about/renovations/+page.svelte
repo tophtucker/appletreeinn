@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>About us: Renovations • Apple Tree Inn • Lenox, MA</title>
+	<title>About us: Renovations • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="The Apple Tree Inn is documenting every step of renovating the historic main house through the newsletter and Instagram"
