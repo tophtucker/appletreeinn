@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	// import Avaloch from '$lib/icons/Avaloch.svelte';
+	import Avaloch from '$lib/icons/Avaloch.svelte';
 	import ATI from '$lib/icons/ATI.svelte';
 	import Icon from '$lib/icons/Icon.svelte';
 	import { getCurrentPage, BOOKING_URL } from '$lib/nav.js';
@@ -13,7 +13,10 @@
 		<button class="hamburger" onclick={toggleNav}><Icon icon="Hamburger" /></button>
 		<div class="tagline hide-medium">Lenox, Mass.</div>
 		<div class="inner-header">
-			<a href="/" class="home" style="width: 100%;"><ATI height="65" style="width: 100%" /></a>
+			<a href="/" class="home" style="width: 100%;">
+				<ATI class="ati" />
+				<Avaloch class="avaloch" />
+			</a>
 			<div class="tagline show-medium">Lenox, Mass.</div>
 		</div>
 		<a class="book cta disabled" href={BOOKING_URL}
@@ -49,14 +52,14 @@
 		color: white;
 		border: 1px solid white;
 		width: auto;
-		left: -10%;
-		top: 70px;
+		top: 0px;
 		width: 120%;
-		transform: rotate(-5deg);
-		padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+		transform: rotate(20deg);
+		padding: 0.25rem 0.5rem 0.2rem 0.5rem;
+		font-variation-settings: 'wght' 800;
 		text-align: center;
 		font-family: var(--hed-font);
-		font-size: smaller;
+		font-size: larger;
 		white-space: nowrap;
 	}
 
@@ -92,10 +95,12 @@
 		align-items: center;
 		gap: 1rem;
 		padding: 0 var(--gutter);
+		overflow: hidden;
 	}
 	.tagline {
-		font-size: 14px;
+		font-size: larger;
 		font-family: var(--hed-font);
+		font-variation-settings: 'wght' 500;
 	}
 	.inner-header {
 		display: flex;
@@ -126,7 +131,7 @@
 	.subheader-inner h2 {
 		background-color: var(--accent);
 		color: white;
-		padding: 0.5rem 1rem 0.2rem 1rem;
+		padding: 0.2rem 1rem;
 		margin: 0;
 		position: relative;
 		font-size: 1.3rem;
@@ -141,6 +146,8 @@
 		flex-direction: column;
 		align-items: center;
 		color: var(--accent);
+		z-index: 2;
+		position: relative;
 	}
 
 	.hamburger {
@@ -152,6 +159,44 @@
 		display: none;
 	}
 
+	:global(.ati) {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		height: 65px;
+	}
+
+	:global(.avaloch) {
+		width: 100%;
+		height: 100px;
+	}
+
+	:global(.ati) {
+		animation: ati-slide-up 1s ease-in-out 1s both;
+	}
+
+	:global(.avaloch) {
+		animation: avaloch-slide-in 1s ease-in-out 1s both;
+	}
+
+	@keyframes ati-slide-up {
+		from {
+			transform: translateY(-50%);
+		}
+		to {
+			transform: translateY(-300%);
+		}
+	}
+
+	@keyframes avaloch-slide-in {
+		from {
+			transform: translateY(200%);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+
 	@media (max-width: 1400px) {
 		.hamburger {
 			display: block;
@@ -161,6 +206,12 @@
 		}
 		.show-medium {
 			display: block;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		:global(.avaloch) {
+			height: 60px;
 		}
 	}
 

@@ -1,4 +1,4 @@
-# Apple Tree Inn
+# Avaloch
 
 I’m keeping this repo public in the hopes that people will file issues! See some [crude notes](https://x.com/RingoHosp/status/1803303449313849817) on what we’re going for here.
 

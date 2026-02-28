@@ -1,5 +1,5 @@
 <div style="position: relative;">
-	<img src="/img/reno-bg.jpg" alt="The Apple Tree Inn’s Main House" class="bg" />
+	<img src="/img/reno-bg.jpg" alt="The Main House" class="bg" />
 	<img
 		src="/img/reno-fg.png"
 		style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"

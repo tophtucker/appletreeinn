@@ -64,10 +64,10 @@
 </script>
 
 <svelte:head>
-	<title>Live music • Apple Tree Inn • Lenox, MA</title>
+	<title>Live music • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
-		content="The Apple Tree Inn has several live music events every week in the Ostrich Room, carrying on a tradition of many decades"
+		content="Avaloch typically has several live music events every week in the Ostrich Room, carrying on a tradition of many decades"
 	/>
 </svelte:head>
 

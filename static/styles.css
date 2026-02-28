@@ -16,7 +16,7 @@ body {
 	--black: #333;
 	--gray: #999;
 	--gutter: 6rem;
-	--hed-font: watkins;
+	--hed-font: 'Align Web', watkins;
 	--body-font: 'Brunel', 'Times New Roman', Times, serif;
 	color: var(--black);
 }
@@ -69,19 +69,33 @@ hr {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--hed-font);
 }
 
-h2,
-h3,
-h4 {
-	font-weight: normal;
+h1 {
+	font-variation-settings: 'wght' 900;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-variation-settings: 'wght' 800;
+}
+
+h3 {
+	font-variation-settings: 'wght' 700;
+}
+
+h4,
+h5,
+h6 {
+	font-variation-settings: 'wght' 500;
 }
 
 h6 {
-	font-size: 14px;
-	font-family: var(--hed-font);
 	margin: 0;
 }
 

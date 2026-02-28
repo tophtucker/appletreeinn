@@ -7,25 +7,33 @@
 </script>
 
 <svelte:head>
-	<title>About us: Renovations • Apple Tree Inn • Lenox, MA</title>
+	<title>About us: Renovations • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
-		content="The Apple Tree Inn is documenting every step of renovating the historic main house through the newsletter and Instagram"
+		content="Avaloch is documenting every step of renovating the historic main house through the newsletter and Instagram"
 	/>
 </svelte:head>
 
 <div class="inner">
 	<h1>We are renovating!</h1>
 
-	<img
-		src="/img/renovations.jpg"
-		alt="A Blackwing pencil lies atop tracing paper lying atop blueprints for our renovations"
-	/>
+	<div class="reno-grid">
+		<img src="/reno/demo.jpg" alt="The round room in the midst of being demolished" />
+		<img
+			src="/reno/blueprints.jpg"
+			alt="A Blackwing pencil lies atop tracing paper lying atop blueprints for our renovations"
+		/>
+		<img
+			src="/reno/foundation.jpg"
+			alt="The new foundation dug and poured on the south side of the Main House"
+		/>
+	</div>
 
 	<p>
-		The inn and Ostrich Room closed for renovations in November 2025. We don’t know exactly when
-		we’ll reopen, but hope to see you summer 2026. Newsletter subscribers will hear first when
-		bookings re-open!
+		The inn and Ostrich Room closed for renovations in November 2025. We don’t know when we’ll
+		reopen, but hope to see you this summer. Subscribe to our newsletter and follow on <a
+			href="https://instagram.com/appletreeinn">Instagram</a
+		> for updates. Newsletter subscribers will hear first when bookings re-open!
 	</p>
 
 	<NewsletterSubscribe />
@@ -37,17 +45,71 @@
 		<li>Building a new glassed-in dining room on the front of the house.</li>
 		<li>Reorienting the primary entrance to be on the east side.</li>
 		<li>Adding garden space.</li>
-		<li>Rebranding the hotel.</li>
+		<li>Rebranding the hotel to Avaloch.</li>
 	</ul>
 
 	<HR />
 
-	<h2>Updates</h2>
+	<h2 id="rebrand">From “Apple Tree Inn” to “Avaloch”</h2>
+
 	<p>
-		Claire will be posting lots of renovation content on our <a
-			href="https://instagram.com/appletreeinn">Instagram</a
-		>. The problems she’s trying to solve, the books that inspire her, the iterations of the
-		blueprints, the people involved… follow along!
+		Claire never loved the name “Apple Tree Inn”. It’s very common — there are about ten in the U.S.
+		— and “cute”. As she researched the <a href="/about/history">history</a>, she learned about Roy
+		Rappaport, who initially opened the house as an inn, and who named it Avaloch. We still don’t
+		know why. It seems to be a variation on Avalon, the island of the apple trees from Arthurian
+		legend, where Excalibur was forged and where King Arthur went to die.
+	</p>
+
+	<p>
+		We’ve always liked his vibe! He seemed to have a cool thing going on here. “Avaloch” appears on
+		some old maps of the area; see if you can find one next time you’re in the lobby of the Red Lion
+		Inn. Micheal Bakwin carried it on, and we’ve revived the logo from that era. We still don’t know
+		who designed it; tell us if you know! The name’s last era was “Alice’s at Avaloch”. Before she
+		died, Alice told us it meant “over the lake”, <em>i.e.</em> the Stockbridge Bowl, which our hill
+		looks over.
+	</p>
+
+	<p>We know it’s harder to spell. We believe in you to figure it out!</p>
+
+	<HR />
+
+	<h2>Updates</h2>
+
+	<p><strong>February 28</strong> — They’ve begun timber framing over the basement.</p>
+
+	<p>
+		<strong>February 22</strong> — They’ve filled the dirt in around the new concrete foundation so we
+		can walk around it for the first time. Honestly, just being able to walk fully around the hotel on
+		level ground is incredibly gratifying.
+	</p>
+
+	<p>
+		<strong>February 5</strong> — The new foundation is fully dug out, and they’ve started pouring concrete.
+		It’s a lot more fun when you move on from the melancholy demolition to building something new!
+	</p>
+
+	<p>
+		<strong>January 15</strong> — Posted our
+		<a href="https://www.instagram.com/p/DTi5j_lkguP/">2025 in review</a> reel on Instagram. It’s especially
+		sweet to look back at everything operating, in full swing, now that we’re closed.
+	</p>
+
+	<p>
+		<strong>January 13</strong> — In two days of hard work, the front porch and round room have been
+		demolished. Until now, there was hardly any trace of renovation; now it’s dramatic and feels very
+		real.
+	</p>
+
+	<p>
+		<strong>November 3</strong> — Held our last event of the season (a memorial for Alice Brock) and
+		closed.
+	</p>
+
+	<p>
+		<strong>October 8</strong> — Announced that we’re closing. Claire will be posting lots of
+		renovation content on our
+		<a href="https://instagram.com/appletreeinn">Instagram</a>. The problems she’s trying to solve,
+		the books that inspire her, the iterations of the blueprints, the people involved… follow along!
 	</p>
 
 	<div>
@@ -165,3 +227,18 @@
 		<script async src="//www.instagram.com/embed.js"></script>
 	</div>
 </div>
+
+<style>
+	.reno-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+
+	.reno-grid img {
+		display: block;
+		width: 100%;
+		height: 480px;
+		object-fit: cover;
+	}
+</style>

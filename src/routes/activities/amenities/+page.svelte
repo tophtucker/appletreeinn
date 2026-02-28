@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Amenities • Apple Tree Inn • Lenox, MA</title>
+	<title>Amenities • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 

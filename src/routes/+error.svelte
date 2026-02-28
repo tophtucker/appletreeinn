@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Page not found • Apple Tree Inn • Lenox, MA</title>
+	<title>Page not found • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 </svelte:head>
 
 <div class="inner">

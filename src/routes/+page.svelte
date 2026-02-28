@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>Apple Tree Inn • Lenox, MA</title>
+	<title>Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="A historic hotel in Lenox, MA, with views of the Berkshires hills and 5-minute walks to Tanglewood or Kripalu"
@@ -43,6 +43,14 @@
 		<p><a href="/about/newsletter">See past newsletters</a></p>
 
 		<Door size={32} style="margin-top: 1rem" />
+		<div>
+			<h3 style="margin-bottom: 0">What’s “Avaloch”?</h3>
+			<p style="margin-top: 0">
+				The Apple Tree Inn is returning to its original name. <a href="/about/renovations#rebrand"
+					>Learn more</a
+				>
+			</p>
+		</div>
 		<div>
 			<h3 style="margin-bottom: 0">Can I book a room for the summer?</h3>
 			<p style="margin-top: 0">
@@ -186,6 +194,7 @@
 
 	.tagline {
 		text-align: center;
+		text-transform: uppercase;
 	}
 
 	.tout {
