@@ -14,12 +14,8 @@
 		<div class="tagline hide-medium">Lenox, Mass.</div>
 		<div class="inner-header">
 			<a href="/" class="home" style="width: 100%;">
-				<ATI
-					height="65"
-					class="ati"
-					style="width: 100%; position: absolute; top: 50%; transform: translateY(-50%);"
-				/>
-				<Avaloch height="100" class="avaloch" style="width: 100%" />
+				<ATI class="ati" />
+				<Avaloch class="avaloch" />
 			</a>
 			<div class="tagline show-medium">Lenox, Mass.</div>
 		</div>
@@ -56,10 +52,9 @@
 		color: white;
 		border: 1px solid white;
 		width: auto;
-		left: -10%;
-		top: -30px;
+		top: 0px;
 		width: 120%;
-		transform: rotate(15deg);
+		transform: rotate(20deg);
 		padding: 0.25rem 0.5rem 0.2rem 0.5rem;
 		font-variation-settings: 'wght' 800;
 		text-align: center;
@@ -100,6 +95,7 @@
 		align-items: center;
 		gap: 1rem;
 		padding: 0 var(--gutter);
+		overflow: hidden;
 	}
 	.tagline {
 		font-size: larger;
@@ -164,11 +160,23 @@
 	}
 
 	:global(.ati) {
-		animation: ati-slide-up 2s cubic-bezier(0.4, 0, 0.2, 1) 1s both;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		height: 65px;
 	}
 
 	:global(.avaloch) {
-		animation: avaloch-slide-in 2s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+		width: 100%;
+		height: 100px;
+	}
+
+	:global(.ati) {
+		animation: ati-slide-up 1s ease-in-out 1s both;
+	}
+
+	:global(.avaloch) {
+		animation: avaloch-slide-in 1s ease-in-out 1s both;
 	}
 
 	@keyframes ati-slide-up {
@@ -198,6 +206,12 @@
 		}
 		.show-medium {
 			display: block;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		:global(.avaloch) {
+			height: 60px;
 		}
 	}
 
