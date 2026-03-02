@@ -98,7 +98,6 @@
 		overflow: hidden;
 	}
 	.tagline {
-		font-size: larger;
 		font-family: var(--hed-font);
 		font-variation-settings: 'wght' 500;
 	}

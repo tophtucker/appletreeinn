@@ -15,7 +15,7 @@
 </svelte:head>
 
 <div class="inner">
-	<h1>We are renovating!</h1>
+	<h1>Renovations</h1>
 
 	<div class="reno-grid">
 		<img src="/reno/demo.jpg" alt="The round room in the midst of being demolished" />
@@ -31,9 +31,11 @@
 
 	<p>
 		The inn and Ostrich Room closed for renovations in November 2025. We don’t know when we’ll
-		reopen, but hope to see you this summer. Subscribe to our newsletter and follow on <a
-			href="https://instagram.com/appletreeinn">Instagram</a
-		> for updates. Newsletter subscribers will hear first when bookings re-open!
+		reopen, but hope to see you this summer. Subscribe to our <a href="/about/newsletter"
+			>newsletter</a
+		>
+		and follow on <a href="https://instagram.com/appletreeinn">Instagram</a> for updates. Newsletter
+		subscribers will hear first when bookings re-open!
 	</p>
 
 	<NewsletterSubscribe />
@@ -41,16 +43,17 @@
 	<p>Projects include:</p>
 
 	<ul>
-		<li>Demolishing the round room.</li>
+		<li>Demolishing the front porch and round room.</li>
 		<li>Building a new glassed-in dining room on the front of the house.</li>
 		<li>Reorienting the primary entrance to be on the east side.</li>
 		<li>Adding garden space.</li>
-		<li>Rebranding the hotel to Avaloch.</li>
+		<li>Redecorating the Lodge.</li>
+		<li>Rebranding to Avaloch.</li>
 	</ul>
 
 	<HR />
 
-	<h2 id="rebrand">From “Apple Tree Inn” to “Avaloch”</h2>
+	<h2 id="rebrand">Rebranding from “Apple Tree Inn” to “Avaloch”</h2>
 
 	<p>
 		Claire never loved the name “Apple Tree Inn”. It’s very common — there are about ten in the U.S.
@@ -61,15 +64,15 @@
 	</p>
 
 	<p>
-		We’ve always liked his vibe! He seemed to have a cool thing going on here. “Avaloch” appears on
-		some old maps of the area; see if you can find one next time you’re in the lobby of the Red Lion
-		Inn. Micheal Bakwin carried it on, and we’ve revived the logo from that era. We still don’t know
-		who designed it; tell us if you know! The name’s last era was “Alice’s at Avaloch”. Before she
-		died, Alice told us it meant “over the lake”, <em>i.e.</em> the Stockbridge Bowl, which our hill
+		We’ve always liked Roy’s vibe! He seemed to have a cool thing going on here. “Avaloch” appears
+		on some old maps of the area; see if you can find one next time you’re in the lobby of the Red
+		Lion Inn. Micheal Bakwin carried it on, and we’ve revived the logo from that era. We still don’t
+		know who designed it; tell us if you know! The name’s last era was “Alice’s at Avaloch”. Before
+		she died, Alice told us it meant “over the lake”, <em>i.e.</em> the Stockbridge Bowl, which our hill
 		looks over.
 	</p>
 
-	<p>We know it’s harder to spell. We believe in you to figure it out!</p>
+	<p>Watch <a href="https://www.instagram.com/p/DVWl1noD5nt/">Claire’s announcement</a>.</p>
 
 	<HR />
 
@@ -233,12 +236,13 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1rem;
+		aspect-ratio: 2 / 1;
 	}
 
 	.reno-grid img {
 		display: block;
 		width: 100%;
-		height: 480px;
+		height: 100%;
 		object-fit: cover;
 	}
 </style>
