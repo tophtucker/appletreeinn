@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Continental breakfast • Apple Tree Inn • Lenox, MA</title>
+	<title>Continental breakfast • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="Guests enjoy a complimentary breakfast buffet served with panoramic views of the Berkshire hills"

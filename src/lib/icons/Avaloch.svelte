@@ -4,7 +4,7 @@
 
 <svg
 	{height}
-	viewBox="0 0 500 109"
+	viewBox="0 0 500 120"
 	fill="currentColor"
 	xmlns="http://www.w3.org/2000/svg"
 	{...rest}

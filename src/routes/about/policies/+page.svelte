@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Policies • Apple Tree Inn • Lenox, MA</title>
+	<title>Policies • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
@@ -7,8 +7,8 @@
 	<h1>Policies</h1>
 	<p>
 		Reservations require a valid credit card at the time of booking (Visa, American Express,
-		MasterCard, Discover), email and mobile phone number. Apple Tree Inn does not accept cash or
-		check payments.
+		MasterCard, Discover), email and mobile phone number. Avaloch does not accept cash or check
+		payments.
 	</p>
 
 	<p>Guests must be 21 years or older to book a reservation. Minimum check-in age is 21.</p>
@@ -28,9 +28,9 @@
 	<p>A valid photo ID and credit card are required at check-in.</p>
 
 	<p>
-		The Apple Tree Inn charges a 1% deposit at the time of booking in order to i) secure your
-		reservation and ii) validate the card provided. Please note that the full amount of the
-		reservation is due before arrival.
+		The Avaloch charges a 1% deposit at the time of booking in order to i) secure your reservation
+		and ii) validate the card provided. Please note that the full amount of the reservation is due
+		before arrival.
 	</p>
 
 	<p>
@@ -70,8 +70,8 @@
 	</p>
 
 	<p>
-		Apple Tree Inn is a 100% smoke-free hotel. Smoking is strictly prohibited in all guest rooms. A
-		minimum cleaning fee of $250 will be charged for violations.
+		Avaloch is a 100% smoke-free hotel. Smoking is strictly prohibited in all guest rooms. A minimum
+		cleaning fee of $250 will be charged for violations.
 	</p>
 
 	<p>
@@ -85,12 +85,12 @@
 	</p>
 
 	<p>
-		Apple Tree Inn will provide 2 towels per room. Guests are responsible for returning the towels
-		to their room. Any items not returned in good order will result in the following charges: $20
-		per beach towel and $50 per beach chair.
+		Avaloch will provide 2 towels per room. Guests are responsible for returning the towels to their
+		room. Any items not returned in good order will result in the following charges: $20 per beach
+		towel and $50 per beach chair.
 	</p>
 
-	<p>Apple Tree Inn is not responsible for any lost or stolen items.</p>
+	<p>Avaloch is not responsible for any lost or stolen items.</p>
 
 	<p>
 		No pets allowed. An additional cleaning fee of $250 will be charged to the credit card on file
@@ -98,10 +98,10 @@
 	</p>
 
 	<p>
-		Apple Tree Inn does not share customer information and credit card transactions to comply with
-		Payment Card Industry (PCI) Data Security Standards. If you would like to review, correct,
-		update, or delete Personal Information that you have previously provided to us, you may contact
-		us by calling us at (413) 637-1910 or emailing us at <a
+		Avaloch does not share customer information and credit card transactions to comply with Payment
+		Card Industry (PCI) Data Security Standards. If you would like to review, correct, update, or
+		delete Personal Information that you have previously provided to us, you may contact us by
+		calling us at (413) 637-1910 or emailing us at <a
 			class="autolink"
 			href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a
 		>.

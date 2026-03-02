@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Dining • Apple Tree Inn • Lenox, MA</title>
+	<title>Dining • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="The inn offers a historic tavern open to the public and a complimentary continental breakfast for guests"

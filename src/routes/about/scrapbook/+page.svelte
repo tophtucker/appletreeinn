@@ -1,8 +1,8 @@
 <svelte:head>
-	<title>About us: Scrapbook • Apple Tree Inn • Lenox, MA</title>
+	<title>About us: Scrapbook • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
-		content="Claire took over the Apple Tree Inn in April 2024, realizing a lifelong dream"
+		content="Claire took over Avaloch in April 2024, realizing a lifelong dream"
 	/>
 </svelte:head>
 

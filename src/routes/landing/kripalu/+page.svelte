@@ -3,17 +3,19 @@
 </script>
 
 <svelte:head>
-	<title>Your Berkshires Retreat Doesn’t Have to End Yet • Apple Tree Inn • Lenox, MA</title>
+	<title
+		>Your Berkshires Retreat Doesn’t Have to End Yet • Avaloch (formerly Apple Tree Inn) • Lenox,
+		Mass.</title
+	>
 </svelte:head>
 
 <div class="inner">
 	<div>
 		<h1>Your Berkshires Retreat Doesn’t Have to End Yet</h1>
-		<img src="/img/hero-drone.jpg" alt="The Apple Tree Inn’s Main House" />
+		<img src="/img/hero-drone.jpg" alt="Avaloch’s Main House" />
 		<p>
-			Just 3 minutes from Kripalu, the <a href="/">Apple Tree Inn</a> is your home base for exploring
-			the Berkshires. After a day out, come back for a swim, live music, cocktails, and plenty of space
-			to unwind.
+			Just 3 minutes from Kripalu, <a href="/">Avaloch</a> is your home base for exploring the Berkshires.
+			After a day out, come back for a swim, live music, cocktails, and plenty of space to unwind.
 		</p>
 		<HR style="width: 100%;" />
 		<h2>Your Berkshires Escape,<br />Your Way</h2>

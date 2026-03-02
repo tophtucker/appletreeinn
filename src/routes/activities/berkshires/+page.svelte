@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>The Berkshires • Apple Tree Inn • Lenox, MA</title>
+	<title>The Berkshires • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="Do as we do! Tips for local activities, hikes, restaurants, shows, farms, and one bowling alley."

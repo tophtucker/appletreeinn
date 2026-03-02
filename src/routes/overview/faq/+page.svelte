@@ -4,10 +4,10 @@
 </script>
 
 <svelte:head>
-	<title>FAQ • Apple Tree Inn • Lenox, MA</title>
+	<title>FAQ • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
-		content="What’s the deal with the Apple Tree Inn? How it works, how to get there, what to bring, what to know before your trip."
+		content="What’s the deal with Avaloch? How it works, how to get there, what to bring, what to know before your trip."
 	/>
 </svelte:head>
 
@@ -16,12 +16,12 @@
 	<h2>What’s the deal?</h2>
 	<div class="prose-columns">
 		<p>
-			The Apple Tree Inn is a <a href="/about/history">historic estate</a> built high atop a Lenox
-			hill in 1885 by Cecile Bristed, a great-granddaughter of John Jacob Astor. She called it
+			AVALOCH is a <a href="/about/history">historic estate</a> built high atop a Lenox hill in 1885
+			by Cecile Bristed, a great-granddaughter of John Jacob Astor. She called it
 			<em>The Orchard</em>; in 1952 Roy Rappaport turned it into a hotel called <em>Avaloch</em>.
 			Alice Brock of “Alice’s Restaurant” ran her third and final restaurant here,
 			<em>Alice’s at Avaloch</em>. In 1983 it became the
-			<em>Apple Tree Inn</em>.
+			<em>Apple Tree Inn</em>, and in 2026 it returned to <em>Avaloch</em>.
 		</p>
 		<p>
 			We have thirteen unique <a href="/rooms">guest rooms</a> in the historic Main House, plus

@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Rooms • Apple Tree Inn • Lenox, MA</title>
+	<title>Rooms • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 </svelte:head>
 
 <div class="inner">

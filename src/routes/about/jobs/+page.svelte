@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Jobs • Apple Tree Inn • Lenox, MA</title>
+	<title>Jobs • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
 		name="description"
 		content="Information about potential job openings at the Apple Tree Inn"
