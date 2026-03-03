@@ -187,7 +187,7 @@
 	{/if}
 
 	<p>
-		See <a href="https://instagram.com/appletreeinn">Instagram</a>
+		See <a href="https://instagram.com/avaloch.inn">Instagram</a>
 		for previews and updates. Email Jenny Rubin at
 		<a href="mailto:jennyjrubin70@gmail.com">jennyjrubin70@gmail.com</a> for information about booking
 		acts.

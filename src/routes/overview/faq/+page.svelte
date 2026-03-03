@@ -67,7 +67,7 @@
 		Unfortunately, we really don’t know! We can only assure you that the uncertainty weighs on us
 		too. We don’t want to over-promise, so we will let you know when we have confidence in our
 		timeline. Subscribe to the <a href="/about/newsletter">newsletter</a>, follow us on
-		<a href="https://instagram.com/appletreeinn">Instagram</a>, and check the
+		<a href="https://instagram.com/avaloch.inn">Instagram</a>, and check the
 		<a href="/">home page</a>
 		and <a href="/weddings-events">events page</a> for updates.
 	</p>

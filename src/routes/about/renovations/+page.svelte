@@ -34,8 +34,8 @@
 		reopen, but hope to see you this summer. Subscribe to our <a href="/about/newsletter"
 			>newsletter</a
 		>
-		and follow on <a href="https://instagram.com/appletreeinn">Instagram</a> for updates. Newsletter
-		subscribers will hear first when bookings re-open!
+		and follow on <a href="https://instagram.com/avaloch.inn">Instagram</a> for updates. Newsletter subscribers
+		will hear first when bookings re-open!
 	</p>
 
 	<NewsletterSubscribe />
@@ -111,7 +111,7 @@
 	<p>
 		<strong>October 8</strong> — Announced that we’re closing. Claire will be posting lots of
 		renovation content on our
-		<a href="https://instagram.com/appletreeinn">Instagram</a>. The problems she’s trying to solve,
+		<a href="https://instagram.com/avaloch.inn">Instagram</a>. The problems she’s trying to solve,
 		the books that inspire her, the iterations of the blueprints, the people involved… follow along!
 	</p>
 

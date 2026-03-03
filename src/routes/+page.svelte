@@ -38,7 +38,7 @@
 		</p>
 		<NewsletterSubscribe />
 		<p>
-			<a href="https://instagram.com/appletreeinn">Follow us on Instagram</a>
+			<a href="https://instagram.com/avaloch.inn">Follow us on Instagram</a>
 		</p>
 		<p><a href="/about/newsletter">See past newsletters</a></p>
 

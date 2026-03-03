@@ -15,7 +15,7 @@
 					href="mailto:info@appletreeinnlenox.com"
 					target="_blank">info@appletreeinnlenox.com</a
 				><br />
-				<a href="https://www.instagram.com/appletreeinn/" target="_blank">@appletreeinn</a>
+				<a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a>
 			</div>
 		</div>
 	</div>
