@@ -66,7 +66,7 @@
 	<p>
 		We’ve always liked Roy’s vibe! He seemed to have a cool thing going on here. “Avaloch” appears
 		on some old maps of the area; see if you can find one next time you’re in the lobby of the Red
-		Lion Inn. Micheal Bakwin carried it on, and we’ve revived the logo from that era. We still don’t
+		Lion Inn. Michael Bakwin carried it on, and we’ve revived the logo from that era. We still don’t
 		know who designed it; tell us if you know! The name’s last era was “Alice’s at Avaloch”. Before
 		she died, Alice told us it meant “over the lake”, <em>i.e.</em> the Stockbridge Bowl, which our hill
 		looks over.
