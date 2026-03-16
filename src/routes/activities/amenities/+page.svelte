@@ -136,6 +136,7 @@
 <style>
 	dt {
 		font-family: var(--hed-font);
+		font-variation-settings: 'wght' 700;
 	}
 	dd {
 		margin-bottom: 1rem;
