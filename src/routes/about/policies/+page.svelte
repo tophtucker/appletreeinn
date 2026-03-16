@@ -5,105 +5,130 @@
 
 <div class="inner">
 	<h1>Policies</h1>
+
+	<h3>IMPORTANT NOTICE: ACTIVE CONSTRUCTION SUMMER 2026</h3>
 	<p>
-		Reservations require a valid credit card at the time of booking (Visa, American Express,
-		MasterCard, Discover), email and mobile phone number. Avaloch does not accept cash or check
-		payments.
+		Active construction is underway on the property during the current season. Work is scheduled
+		during daytime hours and every effort is made to minimize disruption to guests. By completing
+		your reservation, you acknowledge awareness of this condition. Refunds will not be issued on the
+		basis of construction activity that has been disclosed at the time of booking.
 	</p>
 
-	<p>Guests must be 21 years or older to book a reservation. Minimum check-in age is 21.</p>
-
+	<h3>RESERVATIONS & PAYMENT</h3>
 	<p>
-		Hotel check-in is at 3:00 p.m. Check-out is at 11:00 a.m. Early check-in and late check-out may
-		be available upon request and is subject to availability. Guests are welcome to arrive as early
-		as they like to use the property before check-in, and to stay after check-out; we have luggage
-		storage in the front hall.
+		Avaloch Inn accepts Visa, American Express, MasterCard, and Discover. We do not accept cash or
+		check payments. A valid credit card is required at the time of booking, along with a valid email
+		address and mobile phone number. A $1.00 authorization hold will be placed on the card provided
+		at booking to verify the card. This is a verification hold only and is not a charge. The full
+		balance of the reservation is due prior to arrival. An incidental hold of $150.00 will be placed
+		on the credit card presented at check-in. The final charges for your stay will be posted at
+		checkout, and any remaining held funds will be released at that time. Please allow up to 72
+		business hours for released funds to be reflected in your account.
 	</p>
 
+	<h3>CANCELLATIONS & MODIFICATIONS</h3>
 	<p>
-		We will do our best to honor your room and bed type preferences based on availability at the
-		time of stay. Please note that room and bed type preferences are a request and not a guarantee.
+		A cancellation policy will be specified at the time of booking and may vary by rate plan or
+		season. The policy confirmed at booking governs your reservation. Should you need to modify your
+		departure date, please contact Guest Services. Extensions are subject to room availability and
+		your rate may change. Avaloch Inn cannot guarantee availability for extended stays.
 	</p>
 
-	<p>A valid photo ID and credit card are required at check-in.</p>
-
+	<h3>CHECK-IN & CHECK-OUT</h3>
 	<p>
-		The Avaloch charges a 1% deposit at the time of booking in order to i) secure your reservation
-		and ii) validate the card provided. Please note that the full amount of the reservation is due
-		before arrival.
+		Check-in time is 3:00 p.m. Check-out time is 11:00 a.m. Early check-in and late check-out may be
+		available upon request and are subject to availability. A late checkout until 1:00 p.m. is
+		available for $40.00. A valid government-issued photo ID and the credit card used for the
+		reservation are required at check-in.
 	</p>
 
+	<h3>AGE REQUIREMENT</h3>
 	<p>
-		An additional incidental amount of $150 will be placed on your credit card provided at check in
-		for incidentals. The final amount of your stay will post at check-out and the remaining funds on
-		hold will be released at that time. These funds may take up to 72 business hours to be reflected
-		on your account.
+		Guests must be 21 years of age or older to make a reservation and to check in. Valid photo
+		identification will be required at check-in to confirm age.
 	</p>
 
+	<h3>ROOM ASSIGNMENTS & PREFERENCES</h3>
 	<p>
-		Only the assigned number of guests are allowed in the hotel room. Any additional, unregistered,
-		guests staying in the room any time after 11pm will be charged $150 per person to the credit
-		card on file.
+		Avaloch Inn will make every effort to honor room type and bed type preferences based on
+		availability at the time of arrival. All room and bed type preferences are requests only and
+		cannot be guaranteed.
 	</p>
 
+	<h3>OCCUPANCY</h3>
 	<p>
-		Parties and gatherings of any kind are strictly prohibited. If guests are found to have had a
-		party, guests will be responsible for extra cleaning charges and in the unfortunate event of the
-		disruptions alerting neighbors, guests may be subject to fines.
+		Only registered guests are permitted to occupy guest rooms. Any unregistered guest found in a
+		guest room after 11:00 p.m. will be charged $150.00 per person to the credit card on file.
+		Parties and gatherings of any kind are strictly prohibited. Guests found to have hosted a party
+		or gathering will be responsible for all additional cleaning charges. Guests who cause
+		disturbances affecting other guests or neighbors may be subject to fines and may be asked to
+		vacate the property without refund.
 	</p>
 
+	<h3>SMOKE-FREE PROPERTY</h3>
 	<p>
-		All damages and breakages must be reported to us as soon as reasonably practicable. Failure to
-		report them will likely result in a penalty deduction from the security deposit. In the result
-		of any room damages or missing room items guest credit card on file will be charged to cover
-		damages or missing items after departure.
+		Avaloch Inn is a 100% smoke-free property. Smoking of any kind is strictly prohibited in all
+		guest rooms, on balconies, and in all interior common areas. A minimum cleaning fee of $250.00
+		will be charged for violations.
 	</p>
 
-	<p>To avoid damages and breakages, no furniture is to be moved whatsoever.</p>
-
+	<h3>PET POLICY</h3>
 	<p>
-		You are liable for all charges posted to your room(s). You are further liable for all damages
-		(including missing items) to the room(s) caused by you or your guests during your stay. Should
-		your plans require you to adjust your departure date, please check with Guest Services on room
-		availability, but note that availability is not guaranteed, and your rate may be subject to
-		change.
+		Pets are not permitted in guest rooms. Evidence of a pet in a guest room will result in an
+		additional cleaning fee of $250.00 charged to the credit card on file.
 	</p>
 
+	<h3>DAMAGES, MISSING ITEMS & ROOM CONDITION</h3>
 	<p>
-		Avaloch is a 100% smoke-free hotel. Smoking is strictly prohibited in all guest rooms. A minimum
-		cleaning fee of $250 will be charged for violations.
+		Guests are responsible for all charges posted to their room and for any damages (including
+		missing items) caused by themselves or their guests during the stay. All damages or breakages
+		must be reported to the front desk as soon as reasonably possible. The credit card on file will
+		be charged for any room damages or missing items identified after departure. No furniture is to
+		be moved under any circumstances. Damage or staining to linens will be charged as follows:
+		pillowcases $15.00 each, towels $15.00 each, sheets $25.00 each, duvets $50.00 each. Avaloch Inn
+		provides 2 towels per guest room. Unreturned or damaged towels will be charged at $20.00 per
+		towel. Unreturned beach chairs will be charged at $50.00 each. All in-room kitchenware must be
+		accounted for at checkout. Missing items will be charged at $10.00 per unit.
 	</p>
 
+	<h3>LOST & STOLEN ITEMS</h3>
 	<p>
-		Damaged linens due to make-up stains and or other stains will be charged for each of the
-		following: $15 pillowcases, $15 towels, $25 sheets, and $50 duvets.
+		Avaloch Inn is not responsible for any lost or stolen items. Guests are encouraged to report any
+		concerns to the front desk promptly.
 	</p>
 
+	<h3>QUIET HOURS</h3>
 	<p>
-		All kitchenware must be accounted for at the time of checkout. If items from the kitchen are
-		missing the credit card on file will be charged $10 per each unit missing.
+		Quiet hours are observed from 10:00 p.m. to 8:00 a.m. Out of respect for fellow guests, please
+		keep noise to a minimum during these hours. Guests who repeatedly disturb others may be asked to
+		vacate the property.
 	</p>
 
+	<h3>PRIVACY & DATA SECURITY</h3>
 	<p>
-		Avaloch will provide 2 towels per room. Guests are responsible for returning the towels to their
-		room. Any items not returned in good order will result in the following charges: $20 per beach
-		towel and $50 per beach chair.
-	</p>
-
-	<p>Avaloch is not responsible for any lost or stolen items.</p>
-
-	<p>
-		No pets allowed. An additional cleaning fee of $250 will be charged to the credit card on file
-		should there be evidence of any pets staying in the room.
-	</p>
-
-	<p>
-		Avaloch does not share customer information and credit card transactions to comply with Payment
-		Card Industry (PCI) Data Security Standards. If you would like to review, correct, update, or
-		delete Personal Information that you have previously provided to us, you may contact us by
-		calling us at (413) 637-1910 or emailing us at <a
-			class="autolink"
-			href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a
+		Avaloch Inn does not sell or share guest personal information. All credit card transactions are
+		processed in compliance with Payment Card Industry (PCI) Data Security Standards. To review,
+		correct, update, or request deletion of personal information you have provided to us, please
+		contact us at (413) 637-1910 or <a href="mailto:frontdesk@avalochinn.com"
+			>frontdesk@avalochinn.com</a
 		>.
 	</p>
+
+	<h3>GENERAL</h3>
+	<p>
+		Avaloch Inn reserves the right to modify these terms at any time. Room rates and availability
+		are subject to change. Avaloch Inn is not liable for circumstances beyond its reasonable
+		control, including but not limited to weather events, utility disruptions, or other force
+		majeure conditions. By completing a reservation, guests confirm that they have read, understood,
+		and agreed to these Terms & Conditions.
+	</p>
 </div>
+
+<style>
+	h3 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+	}
+</style>
