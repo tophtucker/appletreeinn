@@ -39,7 +39,7 @@
 		</table>
 	{:else}
 		<p class="notice">
-			⚠️ Can’t load newsletters. Try again later, or <a href="mailto:info@appletreeinnlenox.com"
+			⚠️ Can’t load newsletters. Try again later, or <a href="mailto:frontdesk@avalochinn.com"
 				>email us</a
 			> if this continues.
 		</p>

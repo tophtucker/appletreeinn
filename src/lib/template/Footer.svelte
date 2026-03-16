@@ -12,8 +12,8 @@
 		<div>
 			<div>
 				<a href="tel:1.413.637.1910" target="_blank">(413) 637-1910</a><br /><a
-					href="mailto:info@appletreeinnlenox.com"
-					target="_blank">info@appletreeinnlenox.com</a
+					href="mailto:frontdesk@avalochinn.com"
+					target="_blank">frontdesk@avalochinn.com</a
 				><br />
 				<a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a>
 			</div>

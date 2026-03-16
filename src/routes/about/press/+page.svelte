@@ -102,7 +102,7 @@
 		<a href="/about/history">history</a> for more information, or contact us:
 	</p>
 	<ul>
-		<li>Email <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a></li>
+		<li>Email <a href="mailto:frontdesk@avalochinn.com">frontdesk@avalochinn.com</a></li>
 		<li>Call <a href="tel:1.413.637.1910" target="_blank">(413) 637-1910</a></li>
 	</ul>
 </div>

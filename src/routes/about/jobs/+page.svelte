@@ -18,6 +18,6 @@
 		<li>Dishwasher</li>
 	</ul>
 	<div>
-		Inquire at <a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
+		Inquire at <a href="mailto:frontdesk@avalochinn.com">frontdesk@avalochinn.com</a>.
 	</div>
 </div>

@@ -84,7 +84,7 @@
 			<p>
 				We are keeping a list of inquiries and, if you are interested, we will add your contact
 				information to the list and will reach out when we know more. Please feel free to email
-				<a href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a>.
+				<a href="mailto:frontdesk@avalochinn.com">frontdesk@avalochinn.com</a>.
 			</p>
 
 			<p>Thank you!</p>

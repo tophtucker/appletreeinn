@@ -7,7 +7,7 @@
 		<h1>Page not found</h1>
 		<div>
 			If you can’t find what you’re looking for, please email <a
-				href="mailto:info@appletreeinnlenox.com">info@appletreeinnlenox.com</a
+				href="mailto:frontdesk@avalochinn.com">frontdesk@avalochinn.com</a
 			>; we’d love to hear from you.
 		</div>
 	</div>
