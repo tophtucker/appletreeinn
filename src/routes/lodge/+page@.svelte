@@ -5,6 +5,7 @@
 
 <main>
 	<header>
+		<img src="/heropics/pool1.jpg" alt="The pool at Avaloch" />
 		<Avaloch class="avaloch" />
 		<h1>Lodge</h1>
 	</header>
@@ -24,7 +25,7 @@
 		font-size: 4em;
 		background: var(--green);
 		color: white;
-		font-family: Align;
+		font-family: 'Align Web';
 	}
 
 	h1 {
@@ -42,6 +43,13 @@
 		height: auto;
 		padding: 0.2em 0.4em;
 		border-width: 8px;
+		border-color: var(--green);
+		background: inherit;
+		color: inherit;
+	}
+	main .cta:hover {
+		background: rgba(255, 255, 255, 0.8);
+		color: var(--green);
 	}
 
 	:global(.avaloch) {
