@@ -49,6 +49,14 @@
 
 <Rule />
 
+<section class="gallery">
+	<img src="/heropics/summer-annex.jpg" alt="Pic" />
+	<img src="/roompics/lodge/queen-scenic-view/_XCS2772.jpg" alt="Pic" />
+	<img src="/heropics/view2.jpg" alt="Pic" />
+</section>
+
+<Rule />
+
 <section>
 	<div style="display: flex; justify-content: space-between; align-items: center;">
 		<div>
@@ -83,6 +91,7 @@
 		background: var(--green);
 		color: rgba(255, 255, 255, 0.85);
 		font-family: 'Align Web';
+		padding-bottom: 200px;
 	}
 
 	section {
@@ -92,6 +101,23 @@
 
 	section.first {
 		font-size: 2em;
+	}
+
+	section.gallery {
+		max-width: 100%;
+		margin: 0;
+		display: grid;
+		gap: 2px;
+		grid-template-columns: repeat(3, 1fr);
+		height: 400px;
+	}
+
+	section.gallery img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: bottom;
 	}
 
 	header {
