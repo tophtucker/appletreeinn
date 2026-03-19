@@ -56,8 +56,7 @@
 
 	h1 {
 		margin: 0;
-		text-box-trim: trim-both;
-		margin-top: -0.4em;
+		margin-top: -0.6em;
 		font-size: 5vw;
 	}
 
@@ -84,7 +83,7 @@
 
 	.wordmark {
 		position: absolute;
-		top: 2rem;
+		bottom: 4rem;
 		left: 0;
 		right: 0;
 		color: white;
@@ -99,9 +98,17 @@
 		position: relative;
 	}
 
+	.hero-img-wrap {
+		aspect-ratio: 2 / 1;
+		overflow: hidden;
+	}
+
 	.hero-img-wrap img {
 		display: block;
 		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: bottom;
 	}
 
 	.noise-svg {
