@@ -24,6 +24,7 @@
 		font-size: 4em;
 		background: var(--green);
 		color: white;
+		font-family: Align;
 	}
 
 	h1 {
