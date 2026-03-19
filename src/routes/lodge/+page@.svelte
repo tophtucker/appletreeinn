@@ -3,13 +3,31 @@
 	import HR from '$lib/components/HR.svelte';
 </script>
 
-<main>
-	<header>
+<header>
+	<div class="hero-img-wrap">
 		<img src="/heropics/pool1.jpg" alt="The pool at Avaloch" />
-		<Avaloch class="avaloch" />
-		<h1>Lodge</h1>
-	</header>
+		<svg class="noise-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+			<filter id="noise-filter">
+				<feTurbulence
+					type="fractalNoise"
+					baseFrequency="0.65"
+					numOctaves="3"
+					stitchTiles="stitch"
+				/>
+			</filter>
+			<rect width="100%" height="100%" filter="url(#noise-filter)" />
+		</svg>
+		<div class="grain-overlay" aria-hidden="true"></div>
+	</div>
+	<div class="wordmark">
+		<div class="wordmark-inner">
+			<Avaloch class="avaloch" />
+			<h1>Lodge</h1>
+		</div>
+	</div>
+</header>
 
+<main>
 	<p>is the only lodging within walking distance to Tanglewood.</p>
 	<p>
 		Perched on a big hill overlooking the Stockbridge Bowl, it has a view, a pool, a coffee machine,
@@ -20,12 +38,20 @@
 </main>
 
 <style>
-	main {
-		padding: 2em;
+	:global(body) {
 		font-size: 4em;
 		background: var(--green);
 		color: white;
 		font-family: 'Align Web';
+	}
+
+	main {
+		max-width: 980px;
+		margin: 0 auto;
+	}
+
+	header {
+		position: relative;
 	}
 
 	h1 {
@@ -54,5 +80,44 @@
 
 	:global(.avaloch) {
 		height: 15vw;
+	}
+
+	.wordmark {
+		position: absolute;
+		top: 2rem;
+		left: 0;
+		right: 0;
+		color: white;
+	}
+
+	.wordmark-inner {
+		max-width: 980px;
+		margin: 0 auto;
+	}
+
+	.hero-img-wrap {
+		position: relative;
+	}
+
+	.hero-img-wrap img {
+		display: block;
+		width: 100%;
+	}
+
+	.noise-svg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.grain-overlay {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background: linear-gradient(to right, white 20%, var(--green) 100%);
+		filter: contrast(120%) brightness(100%);
+		mix-blend-mode: multiply;
 	}
 </style>
