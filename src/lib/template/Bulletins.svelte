@@ -1,10 +1,10 @@
 <script module>
+	import { formatDate } from '$lib/index.js';
 	export { bulletin };
 </script>
 
 <script>
 	import Dialog from '$lib/components/Dialog.svelte';
-	import { formatDate } from '$lib/index.js';
 	// TODO: let sanity scope a bulletin to a given route
 	let { bulletins } = $props();
 	let dialogRef = $state();
