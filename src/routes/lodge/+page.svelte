@@ -4,6 +4,7 @@
 	import Doorknob from '$lib/icons/Doorknob.svelte';
 	import Rule from './Rule.svelte';
 	import Map from './Map.svelte';
+	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 </script>
 
 <svelte:head>
@@ -79,16 +80,23 @@
 
 <Rule />
 
-<section style="display: grid; grid-template-columns: 3fr 1fr; gap: 1rem;">
+<section style="display: grid; grid-template-columns: 3fr 2fr; gap: 1rem;">
 	<div>
-		<div class="coming-soon">Coming Fall 2026</div>
+		<div class="coming-soon">Coming soon</div>
 		<p>
 			The <span class="inalign">Avaloch Inn</span> and <span class="inalign">Café</span> and
-			<span class="inalign">Ostrich Room</span> are currently closed for renovations. Claire and Christian
-			and co. are going as fast as they can and expect to reopen fully this fall.
+			<span class="inalign">Ostrich Room</span> are currently closed for renovations. Subscribe to our
+			newsletter for updates.
 		</p>
+		<div style="font-size: smaller;">
+			<NewsletterSubscribe />
+		</div>
 	</div>
-	<img src="/reno/hill.jpg" />
+	<img
+		src="/reno/hill.jpg"
+		alt="Construction underway on the main house"
+		style="border: 3px double currentColor"
+	/>
 </section>
 
 <style>
