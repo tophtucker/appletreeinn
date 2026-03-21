@@ -6,6 +6,7 @@
 	import Map from './Map.svelte';
 	import GalleryCarousel from './GalleryCarousel.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
+	import NoMinimum from './NoMinimum.svelte';
 </script>
 
 <svelte:head>
@@ -47,7 +48,10 @@
 		and almost nothing else.
 	</p>
 
-	<a class="cta" href="https://direct-book.com/properties/AppleTreeInndirect">Book now</a>
+	<div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
+		<a class="cta" href="https://direct-book.com/properties/AppleTreeInndirect">Book now</a>
+		<NoMinimum />
+	</div>
 </section>
 
 <Rule />
