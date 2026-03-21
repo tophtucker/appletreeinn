@@ -1,5 +1,5 @@
 <script>
-	import Avaloch from '$lib/icons/Avaloch.svelte';
+	import AvalochShadowed from '$lib/icons/AvalochShadowed.svelte';
 	import Pentathing from '$lib/icons/Pentathing.svelte';
 	import Doorknob from '$lib/icons/Doorknob.svelte';
 	import Rule from './Rule.svelte';
@@ -33,8 +33,11 @@
 	</div>
 	<div class="wordmark">
 		<div class="wordmark-inner">
-			<Avaloch class="avaloch" />
-			<h1>Lodge</h1>
+			<div class="top">SUMMER 2026</div>
+			<div class="bottom">
+				<AvalochShadowed class="avaloch" altFill="var(--green)" />
+				<h1>Lodge</h1>
+			</div>
 		</div>
 	</div>
 </header>
@@ -191,15 +194,29 @@
 
 	.wordmark {
 		position: absolute;
-		bottom: 4rem;
+		top: 0;
 		left: 0;
 		right: 0;
+		bottom: 0;
 		color: white;
+		text-shadow: 1px 1px 1px var(--green);
 	}
 
 	.wordmark-inner {
 		max-width: 980px;
 		margin: 0 auto;
+		padding: 4rem 0;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.wordmark-inner .top {
+		font-variation-settings: 'wght' 700;
+		display: flex;
+		justify-content: space-between;
+		font-size: smaller;
 	}
 
 	.hero-img-wrap {
