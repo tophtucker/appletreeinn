@@ -50,4 +50,7 @@
 		font-size: smaller;
 		text-transform: uppercase;
 	}
+	input[type='email'] {
+		background: rgba(255, 255, 255, 0.7);
+	}
 </style>

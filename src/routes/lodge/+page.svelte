@@ -4,6 +4,7 @@
 	import Doorknob from '$lib/icons/Doorknob.svelte';
 	import Rule from './Rule.svelte';
 	import Map from './Map.svelte';
+	import GalleryCarousel from './GalleryCarousel.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 </script>
 
@@ -51,11 +52,7 @@
 
 <Rule />
 
-<section class="gallery">
-	<img src="/heropics/summer-annex.jpg" alt="Pic" />
-	<img src="/roompics/lodge/queen-scenic-view/_XCS2772.jpg" alt="Pic" />
-	<img src="/heropics/view2.jpg" alt="Pic" />
-</section>
+<GalleryCarousel />
 
 <Rule />
 
@@ -115,23 +112,6 @@
 
 	section.first {
 		font-size: 2em;
-	}
-
-	section.gallery {
-		max-width: 100%;
-		margin: 0;
-		display: grid;
-		gap: 2px;
-		grid-template-columns: repeat(3, 1fr);
-		height: 400px;
-	}
-
-	section.gallery img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: bottom;
 	}
 
 	section.flex {
