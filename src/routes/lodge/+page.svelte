@@ -3,6 +3,7 @@
 	import Pentathing from '$lib/icons/Pentathing.svelte';
 	import Doorknob from '$lib/icons/Doorknob.svelte';
 	import Rule from './Rule.svelte';
+	import Map from './Map.svelte';
 </script>
 
 <svelte:head>
@@ -70,6 +71,12 @@
 		</div>
 		<Pentathing height="100" width="100" altFill="var(--green)" />
 	</div>
+</section>
+
+<Rule />
+
+<section>
+	<Map />
 </section>
 
 <Rule />

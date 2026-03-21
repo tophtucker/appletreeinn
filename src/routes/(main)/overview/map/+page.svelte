@@ -15,7 +15,7 @@
 
 	<Image src="/map/map.svg" alt="Property map" />
 
-	<div class="item">
+	<!-- <div class="item">
 		<h3>1.</h3>
 		<div class="img-wrapper">
 			<Image
@@ -114,7 +114,7 @@
 				>.
 			</p>
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <style>
