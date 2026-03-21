@@ -199,7 +199,7 @@
 		right: 0;
 		bottom: 0;
 		color: white;
-		text-shadow: 1px 1px 1px var(--green);
+		text-shadow: 2px 2px 2px var(--green);
 	}
 
 	.wordmark-inner {
