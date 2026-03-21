@@ -58,19 +58,17 @@
 
 <Rule />
 
-<section>
-	<div style="display: flex; justify-content: space-between; align-items: center;">
+<section class="flex">
+	<div>
+		<div>10 Richmond Mountain Road</div>
+		<div>Lenox, Massachusetts 01240</div>
 		<div>
-			<div>10 Richmond Mountain Road</div>
-			<div>Lenox, Massachusetts 01240</div>
-			<div>
-				<a href="mailto:frontdesk@avalochinn.com" target="_blank">frontdesk@avalochinn.com</a>
-			</div>
-			<div>(413) 637-1910</div>
-			<div><a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a></div>
+			<a href="mailto:frontdesk@avalochinn.com" target="_blank">frontdesk@avalochinn.com</a>
 		</div>
-		<Pentathing height="100" width="100" altFill="var(--green)" />
+		<div>(413) 637-1910</div>
+		<div><a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a></div>
 	</div>
+	<Pentathing height="100" width="100" altFill="var(--green)" />
 </section>
 
 <Rule />
@@ -81,15 +79,16 @@
 
 <Rule />
 
-<section>
-	<div class="coming-soon">Coming Fall 2026</div>
-	<p>
-		The <span class="inalign">Avaloch Inn</span> and <span class="inalign">Café</span> and
-		<span class="inalign">Ostrich Room</span> are currently closed for renovations. The whole main
-		house of the former
-		<em>Apple Tree Inn</em> will miss the summer season. Claire and Christian and co. are going as fast
-		as they can and expect to reopen fully this fall. There will be construction onsite this summer.
-	</p>
+<section style="display: grid; grid-template-columns: 3fr 1fr; gap: 1rem;">
+	<div>
+		<div class="coming-soon">Coming Fall 2026</div>
+		<p>
+			The <span class="inalign">Avaloch Inn</span> and <span class="inalign">Café</span> and
+			<span class="inalign">Ostrich Room</span> are currently closed for renovations. Claire and Christian
+			and co. are going as fast as they can and expect to reopen fully this fall.
+		</p>
+	</div>
+	<img src="/reno/hill.jpg" />
 </section>
 
 <style>
@@ -125,6 +124,12 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: bottom;
+	}
+
+	section.flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	header {
