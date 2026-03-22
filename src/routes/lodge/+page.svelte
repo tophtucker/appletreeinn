@@ -83,8 +83,8 @@
 	<div>
 		<div class="notice">ACTIVITY GUIDES</div>
 		<p>
-			<a href="/activities/tanglewood" target="_blank">Tanglewood</a> •
-			<a href="/activities/berkshires" target="_blank">The Berkshires</a>
+			<a href="/activities/tanglewood" data-sveltekit-reload>Tanglewood</a> •
+			<a href="/activities/berkshires" data-sveltekit-reload>The Berkshires</a>
 		</p>
 	</div>
 </section>
