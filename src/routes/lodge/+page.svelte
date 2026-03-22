@@ -1,12 +1,12 @@
 <script>
 	import AvalochShadowed from '$lib/icons/AvalochShadowed.svelte';
-	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import Pentathing from '$lib/icons/Pentathing.svelte';
-	import Rule from './Rule.svelte';
-	import Map from './Map.svelte';
-	import GalleryCarousel from './GalleryCarousel.svelte';
+	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
+	import Gallery from './Gallery.svelte';
+	import Map from './Map.svelte';
 	import NoMinimum from './NoMinimum.svelte';
+	import Rule from './Rule.svelte';
 	import { setContext } from 'svelte';
 
 	let lightbox = $state({ src: null });
@@ -63,7 +63,7 @@
 
 <Rule />
 
-<GalleryCarousel />
+<Gallery />
 
 <Rule />
 
@@ -211,8 +211,8 @@
 	}
 
 	section .cta:hover {
-		background: rgba(255, 255, 255, 0.8);
-		color: var(--green);
+		background: rgba(70, 154, 123, 0.5);
+		color: black;
 	}
 
 	:global(.avaloch) {
