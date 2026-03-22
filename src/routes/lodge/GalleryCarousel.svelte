@@ -1,4 +1,5 @@
 <script>
+	import Image from '$lib/lightbox/Image.svelte';
 	const images = [
 		{ src: '/heropics/summer-annex.jpg', alt: 'Summer annex' },
 		{ src: '/newlodge/view.jpg', alt: 'The view from the lodge' },
@@ -15,7 +16,11 @@
 
 <div class="gallery">
 	{#each images as img}
-		<img src={img.src} alt={img.alt} />
+		<Image
+			src={img.src}
+			alt={img.alt}
+			style="aspect-ratio: 3 / 2; object-fit: cover; object-position: center;"
+		/>
 	{/each}
 </div>
 
@@ -25,14 +30,5 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2px;
 		background: white;
-	}
-	img {
-		display: block;
-		height: 100%;
-		width: auto;
-		aspect-ratio: 3 / 2;
-		object-fit: cover;
-		object-position: center;
-		flex-shrink: 0;
 	}
 </style>

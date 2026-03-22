@@ -1,12 +1,16 @@
 <script>
 	import AvalochShadowed from '$lib/icons/AvalochShadowed.svelte';
+	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import Pentathing from '$lib/icons/Pentathing.svelte';
-	import Doorknob from '$lib/icons/Doorknob.svelte';
 	import Rule from './Rule.svelte';
 	import Map from './Map.svelte';
 	import GalleryCarousel from './GalleryCarousel.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 	import NoMinimum from './NoMinimum.svelte';
+	import { setContext } from 'svelte';
+
+	let lightbox = $state({ src: null });
+	setContext('lightbox', lightbox);
 </script>
 
 <svelte:head>
@@ -63,7 +67,7 @@
 
 <Rule />
 
-<section class="flex">
+<section class="flex" style="align-items: stretch">
 	<div>
 		<div>10 Richmond Mountain Road</div>
 		<div>Lenox, Massachusetts 01240</div>
@@ -73,7 +77,12 @@
 		<div>(413) 637-1910</div>
 		<div><a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a></div>
 	</div>
-	<Pentathing height="100" width="100" altFill="var(--green)" />
+	<div
+		style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;"
+	>
+		<Pentathing height="100" width="100" altFill="var(--green)" />
+		<div><a href="/about/policies" data-sveltekit-reload>Policies</a></div>
+	</div>
 </section>
 
 <Rule />
@@ -109,6 +118,8 @@
 		style="border: 3px double currentColor"
 	/>
 </section>
+
+<Lightbox />
 
 <style>
 	:global(body) {
