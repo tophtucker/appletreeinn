@@ -26,7 +26,7 @@
 <style>
 	.frame {
 		display: grid;
-		grid-template-columns: 1fr 15px calc(980px - 2 * 15px) 15px 1fr;
+		grid-template-columns: 1fr 15px calc(var(--center-width) - 2 * 15px) 15px 1fr;
 	}
 	.frame > div {
 		border-top: 2px solid currentColor;

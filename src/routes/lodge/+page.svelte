@@ -128,10 +128,11 @@
 		color: rgba(255, 255, 255, 0.85);
 		font-family: 'Align Web';
 		padding-bottom: 200px;
+		--center-width: 980px;
 	}
 
 	section {
-		max-width: 980px;
+		max-width: var(--center-width);
 		margin: 4rem auto;
 	}
 
@@ -152,7 +153,7 @@
 	h1 {
 		margin: 0;
 		margin-top: -0.4em;
-		font-size: 5vw;
+		font-size: 2.4em;
 	}
 
 	p {
@@ -230,7 +231,7 @@
 	}
 
 	.wordmark-inner {
-		max-width: 980px;
+		max-width: var(--center-width);
 		margin: 0 auto;
 		padding: 4rem 0;
 		height: 100%;
@@ -278,5 +279,32 @@
 		background: linear-gradient(to right, white 20%, var(--green) 100%);
 		filter: contrast(120%) brightness(100%);
 		mix-blend-mode: multiply;
+	}
+
+	@media (max-width: 1100px) {
+		:global(body) {
+			--center-width: 90%;
+			font-size: 1em;
+		}
+		:global(.avaloch) {
+			height: 90px;
+		}
+		sup {
+			font-size: initial;
+			position: absolute;
+			padding-left: 0;
+			padding-top: 0;
+		}
+		.hero-img-wrap {
+			aspect-ratio: 1 / 1;
+			overflow: hidden;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.hero-img-wrap {
+			aspect-ratio: 3 / 4;
+			overflow: hidden;
+		}
 	}
 </style>
