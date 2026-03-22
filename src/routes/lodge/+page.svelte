@@ -295,13 +295,15 @@
 			padding-left: 0;
 			padding-top: 0;
 		}
-		.hero-img-wrap {
-			aspect-ratio: 1 / 1;
-			overflow: hidden;
-		}
 	}
 
 	@media (max-width: 600px) {
+		:global(body) {
+			font-size: 0.8em;
+		}
+		:global(.avaloch) {
+			height: 70px;
+		}
 		.hero-img-wrap {
 			aspect-ratio: 3 / 4;
 			overflow: hidden;
