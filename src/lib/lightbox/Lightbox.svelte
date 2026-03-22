@@ -33,11 +33,11 @@
 
 <dialog id="lightbox" bind:this={dialogRef} onclose={() => (lightbox.src = null)}>
 	<div class="header">
-		<button onclick={() => advance(-1)}>&lt;</button>
+		<button onclick={() => advance(-1)}>←</button>
 		{lightbox.src?.getAttribute('alt')}
 		<div>
-			<button onclick={() => advance(1)}>&gt;</button>
-			<button onclick={() => (lightbox.src = null)}>✕</button>
+			<button onclick={() => advance(1)}>→</button>
+			<button onclick={() => (lightbox.src = null)}>×</button>
 		</div>
 	</div>
 	<img src={lightbox.src?.getAttribute('src')} alt={lightbox.src?.getAttribute('alt')} />
@@ -98,8 +98,8 @@
 		border: 1px solid white;
 		border-radius: 3px;
 		font-family: inherit;
-		padding-top: 5px;
-		width: 24px;
-		height: 24px;
+		width: 32px;
+		height: 32px;
+		line-height: 24px;
 	}
 </style>
