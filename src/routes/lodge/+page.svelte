@@ -80,6 +80,13 @@
 
 <section>
 	<Map />
+	<div>
+		<div class="notice">ACTIVITY GUIDES</div>
+		<p>
+			<a href="/activities/tanglewood" target="_blank">Tanglewood</a> •
+			<a href="/activities/berkshires" target="_blank">The Berkshires</a>
+		</p>
+	</div>
 </section>
 
 <Rule />
@@ -161,6 +168,15 @@
 		font-variation-settings: 'wght' 800;
 		text-transform: uppercase;
 		color: white;
+	}
+
+	.notice {
+		border: 3px double currentColor;
+		padding: 0.25rem 0.5rem;
+		font-size: smaller;
+		text-transform: uppercase;
+		display: inline-block;
+		letter-spacing: 2px;
 	}
 
 	.coming-soon {

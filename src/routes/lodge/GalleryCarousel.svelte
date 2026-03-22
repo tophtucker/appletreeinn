@@ -1,13 +1,14 @@
 <script>
 	const images = [
 		{ src: '/heropics/summer-annex.jpg', alt: 'Summer annex' },
+		{ src: '/newlodge/view.jpg', alt: 'The view from the lodge' },
 		{ src: '/newlodge/1.jpg', alt: 'Queen room' },
-		// { src: '/heropics/view2.jpg', alt: 'View of the Stockbridge Bowl' },
 		{ src: '/heropics/pool1.jpg', alt: 'The pool' },
 		{ src: '/newlodge/2.jpg', alt: 'Queen room' },
-		// { src: '/heropics/view3.jpg', alt: 'View from the hill' },
-		{ src: '/newlodge/3.jpg', alt: 'Bathroom' },
-		// { src: '/heropics/pool2.jpg', alt: 'Pool area' },
+		{ src: '/newlodge/drone-hill.jpg', alt: 'The whole property' },
+		// { src: '/newlodge/3.jpg', alt: 'Bathroom' },
+		{ src: '/newlodge/pool-chairs.jpg', alt: 'Chairs by the pool' },
+		{ src: '/newlodge/drone-lot.jpg', alt: 'The parking lot and lodge' },
 		{ src: '/newlodge/4.jpg', alt: 'Double room' }
 	];
 </script>
