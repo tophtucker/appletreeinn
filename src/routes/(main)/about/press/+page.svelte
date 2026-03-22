@@ -8,6 +8,40 @@
 
 	<dl>
 		<dt>
+			<a
+				href="https://www.berkshireeagle.com/news/central_berkshires/two-lenox-businesses-win-zoning-board-approvals-for-expansion-and-renovation/article_169fc51c-de7b-47fb-ab79-87eed2f3d8ba.html"
+				>Antimony Brewery and Apple Tree Inn in Lenox cleared for expansion and renovation plans,
+				respectively</a
+			>
+		</dt>
+		<dd>
+			<em>The Berkshire Eagle</em>, Clarence Fanto, November 25, 2025
+			<blockquote>
+				“Robert Fuster, the ZBA chairman, said he was sad to see the Round Room go because it was
+				‘iconic,’ and he recalled having birthday parties there… Conklin called it ‘a positive move
+				for the community, the environment and a business owner here in Lenox.’ Considine praised
+				the renovation’s goal of restoring a 1930s look. The board then voted unanimously to approve
+				a modified special permit for the renovation.”
+			</blockquote>
+		</dd>
+		<dt>
+			<a
+				href="https://www.berkshireeagle.com/news/central_berkshires/apple-tree-inn-renovation-proposed-round-room/article_b8147b5d-fe57-47a5-9f95-c810f5d9c1d4.html"
+				>Extensive renovation proposed at a historic Apple Tree Inn in Lenox</a
+			>
+		</dt>
+		<dd>
+			<em>The Berkshire Eagle</em>, Clarence Fanto, November 16, 2025
+			<blockquote>
+				“She plans to replace the Round Room, added in 1963, with a new rectangular-shaped
+				restaurant space featuring updated, modernized windows. The Ostrich Room will remain as is.…
+				Collery said the design for the revamped room is based on a 1938 photo of the glassed-in
+				porch shown to her by Lenox Library historian Amy Lafave. The main entrance to the inn will
+				be reoriented to the east side of the building with a new front porch, and the parking area
+				will be expanded and improved.”
+			</blockquote>
+		</dd>
+		<dt>
 			<a href="https://viewer.joomag.com/berkshire-magazine-may-june-2025/0574228001744924955/p40"
 				>Small Stages, Big Sound</a
 			>
