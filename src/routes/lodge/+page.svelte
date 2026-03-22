@@ -89,8 +89,8 @@
 
 <section>
 	<Map />
-	<div>
-		<div class="notice">ACTIVITY GUIDES</div>
+	<div style="margin-top: 1em">
+		<div class="notice">Activity guides</div>
 		<p>
 			<a href="/activities/tanglewood" data-sveltekit-reload>Tanglewood</a> •
 			<a href="/activities/berkshires" data-sveltekit-reload>The Berkshires</a>

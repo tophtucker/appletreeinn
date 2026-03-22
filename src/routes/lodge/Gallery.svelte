@@ -1,7 +1,7 @@
 <script>
 	import Image from '$lib/lightbox/Image.svelte';
 	const images = [
-		{ src: '/heropics/summer-annex.jpg', alt: 'Summer annex' },
+		{ src: '/heropics/summer-annex.jpg', alt: 'The lodge' },
 		{ src: '/newlodge/view.jpg', alt: 'The view from the lodge' },
 		{ src: '/newlodge/1.jpg', alt: 'Queen room' },
 		{ src: '/heropics/pool1.jpg', alt: 'The pool' },
