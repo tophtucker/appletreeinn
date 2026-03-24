@@ -25,11 +25,15 @@
 
 		<div class="header hide-mobile"></div>
 		<div><a class="cta" href="/rooms/main-house">See rooms</a></div>
-		<div><a class="cta" href="/rooms/lodge">See rooms</a></div>
+		<div><a class="cta" href="/lodge">See more</a></div>
 
 		<div class="header hide-mobile"></div>
 		<img src="/img/main-house.jpg" alt="Main House" />
 		<img src="/heropics/summer-annex.jpg" alt="Lodge" />
+
+		<div class="header">Status</div>
+		<div>Closed for renovations</div>
+		<div>Open for summer 2026</div>
 
 		<div class="header">Built</div>
 		<div>1885</div>
@@ -47,9 +51,9 @@
 		<div>Front desk, tavern, lobby, coffee & tea station</div>
 		<div>Coffee & tea station</div>
 
-		<div class="header">Open</div>
+		<!-- <div class="header">Open</div>
 		<div>All year</div>
-		<div>Summer and Fall</div>
+		<div>Summer and Fall</div> -->
 	</div>
 </div>
 

@@ -41,7 +41,27 @@
 			<a href="https://instagram.com/avaloch.inn">Follow us on Instagram</a>
 		</p>
 		<p><a href="/about/newsletter">See past newsletters</a></p>
+	</div>
 
+	<HR />
+
+	<div class="tout">
+		<LilFrame accent="var(--green)">
+			<div class="tout-inner">
+				<h2>Lodge</h2>
+				<p>
+					The Avaloch Lodge and pool are operating as a standalone pop-up, without the Main House,
+					for summer 2026.
+				</p>
+				<p><a href="/lodge" class="cta" data-sveltekit-reload>Learn more</a></p>
+			</div>
+		</LilFrame>
+		<img src="/heropics/summer-annex.jpg" alt="Lodge" />
+	</div>
+
+	<HR />
+
+	<div class="tout tout-inner">
 		<Door size={32} style="margin-top: 1rem" />
 		<div>
 			<h3 style="margin-bottom: 0">What’s “Avaloch”?</h3>
@@ -54,21 +74,19 @@
 		<div>
 			<h3 style="margin-bottom: 0">Can I book a room for the summer?</h3>
 			<p style="margin-top: 0">
-				Not yet; there’s still too much construction uncertainty. We should have an update on our
-				timeline by the end of March.
+				In the lodge, yes; <a href="/lodge" data-sveltekit-reload>learn more</a>. The main house is
+				still closed for renovations, and we don’t yet know when it will reopen.
 			</p>
 		</div>
 		<div>
 			<h3 style="margin-bottom: 0">Can I book a private event?</h3>
 			<p style="margin-top: 0">
-				Also not yet, but email us. <a href="/weddings-events">Learn more</a>
+				Not yet, but email us. <a href="/weddings-events">Learn more</a>
 			</p>
 		</div>
 	</div>
 
-	<HR />
-
-	<div class="tout reverse">
+	<!-- <div class="tout reverse">
 		<LilFrame accent="var(--green)">
 			<div class="tout-inner">
 				<h2>Not fancy</h2>
@@ -122,9 +140,9 @@
 			alt="Wanda Houston, one of our favorite performers, on stage in the Ostrich Room; Andy Wrba in the background; I forget the third guy’s name"
 			loading="lazy"
 		/>
-	</div>
+	</div> -->
 
-	<div class="tagline">
+	<!-- <div class="tagline">
 		<HR />
 		<h2>
 			For the old who are young at heart <br class="hide-mobile" />and the young who are old at
@@ -136,11 +154,19 @@
 	<div class="img-pair">
 		<enhanced:img src={door} alt="Door" loading="lazy" />
 		<enhanced:img src={fireplace} alt="Fireplace" loading="lazy" />
-	</div>
+	</div> -->
 
 	<HR />
 
 	<div class="other">
+		<div>
+			<img src="/heropics/summer-annex.jpg" alt="The Lodge" loading="lazy" />
+			<a href="/lodge" class="cta" data-sveltekit-reload>Lodge</a>
+		</div>
+		<div>
+			<img src="/reno/hill.jpg" alt="The café under construction" loading="lazy" />
+			<a href="/about/renovations" class="cta">Renovations</a>
+		</div>
 		<div>
 			<enhanced:img
 				src={adirondackView}
@@ -150,6 +176,10 @@
 			<a href="/overview/gallery" class="cta">Gallery</a>
 		</div>
 		<div>
+			<enhanced:img src={distant} alt="" loading="lazy" /><a href="/overview/map" class="cta">Map</a
+			>
+		</div>
+		<!-- <div>
 			<enhanced:img
 				src={max}
 				alt="Max the hotel dog doesn’t have much to do with the FAQ, except that people do ask about him"
@@ -158,17 +188,13 @@
 			<a href="/overview/faq" class="cta">FAQ</a>
 		</div>
 		<div>
-			<enhanced:img src={distant} alt="" loading="lazy" /><a href="/overview/map" class="cta">Map</a
-			>
-		</div>
-		<div>
 			<enhanced:img
 				src={pool1}
 				alt="There’s lots of things to do on the property and around the Berkshires"
 				loading="lazy"
 			/>
 			<a href="/activities" class="cta">Activities</a>
-		</div>
+		</div> -->
 		<div>
 			<enhanced:img src={sledding} alt="It’s all about the people, baby!!" loading="lazy" /><a
 				href="/about/about-us"

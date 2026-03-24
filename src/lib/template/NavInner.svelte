@@ -11,8 +11,10 @@
 
 	const nav = $derived(getNav($page));
 
-	const mainNav = $derived(nav.filter((d) => d.slug !== 'about'));
-	const aboutNav = $derived(nav.find((d) => d.slug === 'about').children);
+	// TODO: Mini about footer disabled during construction
+	const mainNav = $derived(nav);
+	// const mainNav = $derived(nav.filter((d) => d.slug !== 'about'));
+	// const aboutNav = $derived(nav.find((d) => d.slug === 'about').children);
 </script>
 
 {#snippet navSection(n)}
@@ -38,6 +40,10 @@
 {/snippet}
 
 <nav>
+	<div class="section">
+		<a href="/lodge" data-sveltekit-reload>Lodge</a>
+		<div><em>Open for summer 2026 during renovations</em></div>
+	</div>
 	{#each mainNav as n}
 		{@render navSection(n)}
 	{/each}
@@ -48,7 +54,7 @@
     		<NextPerformance {nextPerformance} /> -->
 		</div>
 	{/if}
-	<div class="about">
+	<!-- <div class="about">
 		{#if aboutNav.some((d) => d.active)}
 			<Icon icon="Asterisk" style="position: absolute; left: -23px; top: 5px;" />
 		{/if}
@@ -57,7 +63,7 @@
 			>{#if i < aboutNav.length - 1}
 				{` `}<span class="bullet">•</span>{` `}{/if}
 		{/each}
-	</div>
+	</div> -->
 </nav>
 
 <style>
