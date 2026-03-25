@@ -3,10 +3,10 @@
 	import Pentathing from '$lib/icons/Pentathing.svelte';
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
-	import Gallery from './Gallery.svelte';
-	import Map from './Map.svelte';
-	import NoMinimum from './NoMinimum.svelte';
-	import Rule from './Rule.svelte';
+	import Gallery from './lodge/Gallery.svelte';
+	import Map from './lodge/Map.svelte';
+	import NoMinimum from './lodge/NoMinimum.svelte';
+	import Rule from './lodge/Rule.svelte';
 	import { setContext } from 'svelte';
 
 	let lightbox = $state({ src: null });
