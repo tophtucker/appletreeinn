@@ -1,7 +1,9 @@
 <div class="tape">
 	<div>
-		UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION •
-		UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION
+		MAIN HOUSE UNDER RENOVATION • LODGE OPEN FOR SUMMER <span class="hide-mobile">
+			• MAIN HOUSE UNDER RENOVATION • LODGE OPEN FOR SUMMER • MAIN HOUSE UNDER RENOVATION • LODGE
+			OPEN FOR SUMMER • MAIN HOUSE UNDER RENOVATION • LODGE OPEN FOR SUMMER</span
+		>
 	</div>
 </div>
 
@@ -21,13 +23,17 @@
 	}
 
 	.tape > div {
-		margin-left: -20px;
-		margin-right: -20px;
+		margin-left: -34px;
 	}
 
 	@media (max-width: 800px) {
 		.tape {
 			font-size: small;
+			white-space: normal;
+			text-wrap: balance;
+		}
+		.tape > div {
+			margin: 0;
 		}
 	}
 </style>

@@ -22,7 +22,10 @@
 			>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a
 		> -->
 	</div>
-	{#if currentPage && currentPage.section && currentPage.pathname !== '/'}
+	<div class="subheader">
+		<hr />
+	</div>
+	<!-- {#if currentPage && currentPage.section && currentPage.pathname !== '/'}
 		<div class="subheader">
 			<div class="spacer"></div>
 			<div class="subheader-inner">
@@ -36,7 +39,7 @@
 			</div>
 			<div class="spacer"></div>
 		</div>
-	{/if}
+	{/if} -->
 </header>
 
 <style>
@@ -111,6 +114,10 @@
 	.subheader-inner a {
 		color: inherit;
 		text-decoration: none;
+	}
+
+	.subheader hr {
+		margin: 0;
 	}
 
 	.home {

@@ -1,6 +1,6 @@
 <script>
-	import AvalochShadowed from '$lib/icons/AvalochShadowed.svelte';
-	import Pentathing from '$lib/icons/Pentathing.svelte';
+	import Avaloch from '$lib/icons/Avaloch.svelte';
+	import PentathingOrnate from '$lib/icons/PentathingOrnate.svelte';
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 	import Gallery from './lodge/Gallery.svelte';
@@ -16,6 +16,15 @@
 <svelte:head>
 	<title>Avaloch Lodge • Lenox, Mass.</title>
 </svelte:head>
+
+<Rule />
+
+<div class="banner">
+	Our restaurant and Main House are closed for summer 2026. <a
+		href="/about/renovations"
+		data-sveltekit-reload>Learn more →</a
+	>
+</div>
 
 <Rule />
 
@@ -37,11 +46,8 @@
 	</div>
 	<div class="wordmark">
 		<div class="wordmark-inner">
-			<div class="top">SUMMER 2026</div>
-			<div class="bottom">
-				<AvalochShadowed class="avaloch" altFill="var(--green)" />
-				<h1>Lodge</h1>
-			</div>
+			<Avaloch class="avaloch" />
+			<h1>Lodge</h1>
 		</div>
 	</div>
 </header>
@@ -76,13 +82,9 @@
 		</div>
 		<div>(413) 637-1910</div>
 		<div><a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a></div>
-	</div>
-	<div
-		style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;"
-	>
-		<Pentathing height="100" width="100" altFill="var(--green)" />
 		<div><a href="/about/policies" data-sveltekit-reload>Policies</a></div>
 	</div>
+	<PentathingOrnate class="pentathing" />
 </section>
 
 <Rule />
@@ -144,6 +146,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 1em;
 	}
 
 	header {
@@ -206,7 +209,7 @@
 		height: auto;
 		padding: 0.2em 0.4em;
 		border-width: 8px;
-		border-color: var(--green);
+		border-color: rgba(30, 30, 30, 0.5);
 		background: inherit;
 		color: inherit;
 	}
@@ -214,6 +217,13 @@
 	section .cta:hover {
 		background: rgba(70, 154, 123, 0.5);
 		color: black;
+	}
+
+	.banner {
+		font-size: smaller;
+		max-width: var(--center-width);
+		margin: 0 auto;
+		padding: 0.5em 0;
 	}
 
 	:global(.avaloch) {
@@ -227,7 +237,6 @@
 		right: 0;
 		bottom: 0;
 		color: white;
-		text-shadow: 2px 2px 2px var(--green);
 	}
 
 	.wordmark-inner {
@@ -237,14 +246,8 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-	}
-
-	.wordmark-inner .top {
-		font-variation-settings: 'wght' 700;
-		display: flex;
-		justify-content: space-between;
-		font-size: smaller;
+		justify-content: end;
+		align-items: start;
 	}
 
 	.hero-img-wrap {
@@ -276,37 +279,62 @@
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
-		background: linear-gradient(to right, white 20%, var(--green) 100%);
+		background: linear-gradient(to bottom, white 20%, var(--green) 100%);
 		filter: contrast(120%) brightness(100%);
 		mix-blend-mode: multiply;
+	}
+
+	:global(.pentathing) {
+		width: 180px;
 	}
 
 	@media (max-width: 1100px) {
 		:global(body) {
 			--center-width: 90%;
-			font-size: 1em;
+			font-size: 1.5em;
 		}
 		:global(.avaloch) {
-			height: 90px;
+			height: 120px;
 		}
 		sup {
 			font-size: initial;
 			position: absolute;
-			padding-left: 0;
 			padding-top: 0;
+		}
+		h1 {
+			margin-top: -0.2em;
+		}
+		:global(.pentathing) {
+			width: 140px;
 		}
 	}
 
 	@media (max-width: 600px) {
 		:global(body) {
-			font-size: 0.8em;
+			font-size: 1em;
 		}
 		:global(.avaloch) {
 			height: 70px;
+			font-size: 1em;
+		}
+		:global(.pentathing) {
+			width: 80px;
 		}
 		.hero-img-wrap {
 			aspect-ratio: 3 / 4;
 			overflow: hidden;
+		}
+		.wordmark-inner {
+			padding: 2rem 0;
+		}
+		section {
+			margin: 2rem auto;
+		}
+		.flex {
+			flex-direction: column;
+		}
+		.banner {
+			font-size: 1rem;
 		}
 	}
 </style>

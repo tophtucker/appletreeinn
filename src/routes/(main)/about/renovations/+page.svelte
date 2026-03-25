@@ -49,9 +49,7 @@
 		</div>
 		<div>
 			<h3>Can I book a private event?</h3>
-			<p>
-				Not yet, but email us. <a href="/weddings-events">Learn more</a>.
-			</p>
+			<p>Not yet!</p>
 		</div>
 		<div>
 			<h3>What’re you doing?</h3>
@@ -103,6 +101,11 @@
 	<HR />
 
 	<h2>Updates</h2>
+
+	<p>
+		<strong>March 25</strong> — The floor is in, the walls of the private dining room are up, and we’re
+		beginning to see traces of a roof.
+	</p>
 
 	<p><strong>February 28</strong> — They’ve begun timber framing over the basement.</p>
 

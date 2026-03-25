@@ -2,6 +2,18 @@ export const BOOKING_URL = '#'; // 'https://direct-book.com/properties/AppleTree
 export const RESERVATIONS_URL = '#'; // 'https://tables.toasttab.com/restaurants/701827ce-60b2-4de3-a117-eeef40adcbe1/findTime';
 
 const nav = [
+	{ title: 'Renovations', slug: 'about/renovations' },
+	{ title: 'Tanglewood', slug: 'activities/tanglewood' },
+	{ title: 'The Berkshires', slug: 'activities/berkshires' },
+	{ title: 'Property map', slug: 'overview/map' },
+	{ title: 'About', slug: 'about/about-us' },
+	{ title: 'History', slug: 'about/history' },
+	{ title: 'Press', slug: 'about/press' },
+	{ title: 'Newsletter', slug: 'about/newsletter' },
+	{ title: 'Policies', slug: 'about/policies' }
+];
+
+const _nav = [
 	{
 		slug: 'overview',
 		title: 'Overview',
