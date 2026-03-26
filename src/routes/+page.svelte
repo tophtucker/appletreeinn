@@ -63,7 +63,7 @@
 
 	<div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
 		<a class="cta" href="https://direct-book.com/properties/AppleTreeInndirect">Book now</a>
-		<NoMinimum />
+		<NoMinimum class="nomin" />
 	</div>
 </section>
 
@@ -102,9 +102,9 @@
 
 <Rule />
 
-<section style="display: grid; grid-template-columns: 3fr 2fr; gap: 1rem;">
+<section class="coming-soon">
 	<div>
-		<div class="coming-soon">Coming soon</div>
+		<div class="notice">Coming soon</div>
 		<p>
 			The <span class="inalign">Avaloch Inn</span> and <span class="inalign">Café</span> and
 			<span class="inalign">Ostrich Room</span> are currently closed for renovations. Subscribe to our
@@ -147,6 +147,12 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 1em;
+	}
+
+	section.coming-soon {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		gap: 1rem;
 	}
 
 	header {
@@ -194,15 +200,9 @@
 		letter-spacing: 2px;
 	}
 
-	.coming-soon {
-		border: 3px double currentColor;
-		padding: 0.25rem 0.5rem;
-		font-size: smaller;
+	.coming-soon .notice {
 		color: var(--green);
 		background: white;
-		text-transform: uppercase;
-		display: inline-block;
-		letter-spacing: 2px;
 	}
 
 	.cta {
@@ -292,6 +292,10 @@
 		width: 180px;
 	}
 
+	:global(.nomin) {
+		width: 140px;
+	}
+
 	@media (max-width: 1100px) {
 		:global(body) {
 			--center-width: 90%;
@@ -315,13 +319,16 @@
 
 	@media (max-width: 600px) {
 		:global(body) {
-			font-size: 1em;
+			font-size: 1.2em;
 		}
 		:global(.avaloch) {
 			height: 70px;
 			font-size: 1em;
 		}
 		:global(.pentathing) {
+			width: 80px;
+		}
+		:global(.nomin) {
 			width: 80px;
 		}
 		.hero-img-wrap {
@@ -333,6 +340,13 @@
 		}
 		section {
 			margin: 2rem auto;
+		}
+		section.first {
+			font-size: inherit;
+		}
+		section.coming-soon {
+			display: flex;
+			flex-direction: column;
 		}
 		.flex {
 			flex-direction: column;
