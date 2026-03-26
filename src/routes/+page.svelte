@@ -1,13 +1,14 @@
 <script>
+	import { setContext } from 'svelte';
+	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 	import AvalochLodge from '$lib/icons/AvalochLodge.svelte';
 	import PentathingOrnate from '$lib/icons/PentathingOrnate.svelte';
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
-	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
+	import { BOOKING_URL } from '$lib/nav.js';
 	import Gallery from './lodge/Gallery.svelte';
 	import Map from './lodge/Map.svelte';
 	import NoMinimum from './lodge/NoMinimum.svelte';
 	import Rule from './lodge/Rule.svelte';
-	import { setContext } from 'svelte';
 
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
@@ -59,7 +60,7 @@
 	</p>
 
 	<div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
-		<a class="cta" href="https://direct-book.com/properties/AppleTreeInndirect">Book now</a>
+		<a class="cta" href={BOOKING_URL}>Book now</a>
 		<NoMinimum class="nomin" />
 	</div>
 </section>
