@@ -156,12 +156,6 @@
 		position: relative;
 	}
 
-	h1 {
-		margin: 0;
-		margin-top: -0.4em;
-		font-size: 2.4em;
-	}
-
 	p {
 		max-width: 100%;
 	}
@@ -299,9 +293,6 @@
 			font-size: initial;
 			position: absolute;
 			padding-top: 0;
-		}
-		h1 {
-			margin-top: -0.2em;
 		}
 		:global(.pentathing) {
 			width: 140px;
