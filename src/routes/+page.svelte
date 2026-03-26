@@ -1,5 +1,5 @@
 <script>
-	import Avaloch from '$lib/icons/Avaloch.svelte';
+	import AvalochLodge from '$lib/icons/AvalochLodge.svelte';
 	import PentathingOrnate from '$lib/icons/PentathingOrnate.svelte';
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
@@ -45,10 +45,7 @@
 		<div class="grain-overlay" aria-hidden="true"></div>
 	</div>
 	<div class="wordmark">
-		<div class="wordmark-inner">
-			<Avaloch class="avaloch" />
-			<h1>Lodge</h1>
-		</div>
+		<AvalochLodge class="avaloch" />
 	</div>
 </header>
 
@@ -231,7 +228,7 @@
 	}
 
 	:global(.avaloch) {
-		height: 180px;
+		height: 240px;
 	}
 
 	.wordmark {
@@ -241,13 +238,7 @@
 		right: 0;
 		bottom: 0;
 		color: white;
-	}
-
-	.wordmark-inner {
-		max-width: var(--center-width);
-		margin: 0 auto;
-		padding: 4rem 0;
-		height: 100%;
+		padding: 4rem calc((100vw - var(--center-width)) / 2);
 		display: flex;
 		flex-direction: column;
 		justify-content: end;
@@ -302,7 +293,7 @@
 			font-size: 1.5em;
 		}
 		:global(.avaloch) {
-			height: 120px;
+			height: 180px;
 		}
 		sup {
 			font-size: initial;
@@ -322,8 +313,7 @@
 			font-size: 1.2em;
 		}
 		:global(.avaloch) {
-			height: 70px;
-			font-size: 1em;
+			height: 100px;
 		}
 		:global(.pentathing) {
 			width: 80px;
@@ -335,8 +325,9 @@
 			aspect-ratio: 3 / 4;
 			overflow: hidden;
 		}
-		.wordmark-inner {
-			padding: 2rem 0;
+		.wordmark {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
 		}
 		section {
 			margin: 2rem auto;
