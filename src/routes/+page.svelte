@@ -20,10 +20,10 @@
 <Rule />
 
 <div class="banner">
-	Our restaurant and Main House are closed for summer 2026. <a
-		href="/about/renovations"
-		data-sveltekit-reload>Learn more →</a
-	>
+	<span
+		>The Apple Tree Inn is now Avaloch. <br class="hide-mobile" />Our restaurant and Main House are
+		closed for summer 2026.
+	</span> <a href="/about/renovations" data-sveltekit-reload>Learn more →</a>
 </div>
 
 <Rule />
@@ -220,10 +220,14 @@
 	}
 
 	.banner {
-		font-size: smaller;
+		font-size: 1.5rem;
 		max-width: var(--center-width);
 		margin: 0 auto;
 		padding: 0.5em 0;
+		text-wrap: pretty;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
 	}
 
 	:global(.avaloch) {
@@ -335,6 +339,7 @@
 		}
 		.banner {
 			font-size: 1rem;
+			display: block;
 		}
 	}
 </style>
