@@ -55,14 +55,15 @@
 <section class="first">
 	<p>is the only lodging within walking distance to Tanglewood<sup>(9 min.)</sup>.</p>
 	<p>
-		Perched on a big hill overlooking the Stockbridge Bowl, it has a view, a pool, a coffee machine,
-		and almost nothing else.
+		Perched on a big hill overlooking the Stockbridge Bowl, it has a view, a pool, and a coffee
+		machine.
 	</p>
 
-	<div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
-		<a class="cta" href={BOOKING_URL}>Book now</a>
+	<!-- <div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
+		<a class="cta disabled" href={BOOKING_URL}>Book now</a>
 		<NoMinimum class="nomin" />
-	</div>
+	</div> -->
+	<p>Bookings open soon.</p>
 </section>
 
 <Rule />

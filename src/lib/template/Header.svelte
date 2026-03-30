@@ -18,7 +18,8 @@
 			</a>
 			<div class="tagline show-medium">Lenox, Mass.</div>
 		</div>
-		<a class="book cta" href={BOOKING_URL}>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a
+		<a class="book cta disabled" href={BOOKING_URL}
+			>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a
 		>
 	</div>
 	<div class="subheader">
