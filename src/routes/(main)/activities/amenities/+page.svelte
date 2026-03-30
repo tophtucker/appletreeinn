@@ -11,7 +11,9 @@
 <div class="inner">
 	<h1>Amenities</h1>
 
-	<dl>
+	<p>Amenities are in flux during renovations. Check back later for an updated list.</p>
+
+	<!-- <dl>
 		<dt>COFFEE AND TEA</dt>
 		<dd>
 			Complimentary coffee and tea are served in the Round Room servery all day long. Fresh brewed
@@ -130,7 +132,7 @@
 		you’re counting on it. Sorry!! If you’re hungry or in need of entertainment we have lots of
 		recommendations for
 		<a href="/activities/berkshires">around town</a>!
-	</p>
+	</p> -->
 </div>
 
 <style>

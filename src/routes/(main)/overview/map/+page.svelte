@@ -1,4 +1,5 @@
 <script>
+	import Map from '$lib/components/Map.svelte';
 	import Image from '$lib/lightbox/Image.svelte';
 </script>
 
@@ -13,7 +14,7 @@
 <div class="inner">
 	<h1>Property map</h1>
 
-	<Image src="/map/map.svg" alt="Property map" />
+	<Map />
 
 	<!-- <div class="item">
 		<h3>1.</h3>

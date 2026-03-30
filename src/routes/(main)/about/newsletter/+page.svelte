@@ -18,9 +18,8 @@
 	<h1>Newsletter</h1>
 
 	<p>
-		Claire writes every month with: the goings-on (live music schedule, new food and cocktails,
-		interesting events you can come to), behind-the-scenes stories about running an inn, and a
-		couple of other short recommendations to enhance your Berkshires experience.
+		Claire writes every month with the goings-on, behind-the-scenes stories, and recommendations for
+		enjoying the Berkshires.
 	</p>
 
 	<NewsletterSubscribe />

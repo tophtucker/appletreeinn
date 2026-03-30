@@ -106,7 +106,7 @@
 
 	<h2>Press Kit</h2>
 
-	<p>
+	<!-- <p>
 		Avaloch is a Victorian inn in Lenox, Massachusetts. Originally built in 1885 and operating as a
 		hotel since 1952, the 21-acre hilltop property offers 34 guest rooms, a charming living room
 		with books and board games, six wood-burning fireplaces, and a pool with panoramic views of the
@@ -114,7 +114,7 @@
 		cocktails, and elevated bar food, with outdoor dining also available on our front porch. Guests
 		enjoy a locally sourced complimentary continental breakfast buffet each morning and can walk to
 		Tanglewood or Kripalu in under ten minutes.
-	</p>
+	</p> -->
 
 	<table>
 		<tbody>

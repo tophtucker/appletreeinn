@@ -13,7 +13,7 @@
 		<button class="hamburger" onclick={toggleNav}><Icon icon="Hamburger" /></button>
 		<div class="tagline hide-medium">Lenox, Mass.</div>
 		<div class="inner-header">
-			<a href="/" class="home" style="width: 100%;">
+			<a href="/" class="home" style="width: 100%;" data-sveltekit-reload>
 				<ATI class="ati" />
 				<Avaloch class="avaloch" />
 			</a>
@@ -22,12 +22,11 @@
 		<a class="book cta disabled" href={BOOKING_URL}
 			>Book<span class="hide-mobile">&nbsp;a&nbsp;room</span></a
 		>
-		<div class="tape">
-			UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION •
-			UNDER RENOVATION • UNDER RENOVATION • UNDER RENOVATION
-		</div>
 	</div>
-	{#if currentPage && currentPage.section && currentPage.pathname !== '/'}
+	<div class="subheader">
+		<hr />
+	</div>
+	<!-- {#if currentPage && currentPage.section && currentPage.pathname !== '/'}
 		<div class="subheader">
 			<div class="spacer"></div>
 			<div class="subheader-inner">
@@ -41,28 +40,10 @@
 			</div>
 			<div class="spacer"></div>
 		</div>
-	{/if}
+	{/if} -->
 </header>
 
 <style>
-	.tape {
-		position: absolute;
-		display: inline;
-		background: var(--gold);
-		color: white;
-		border: 1px solid white;
-		width: auto;
-		top: 0px;
-		width: 120%;
-		transform: rotate(20deg);
-		padding: 0.25rem 0.5rem 0.2rem 0.5rem;
-		font-variation-settings: 'wght' 800;
-		text-align: center;
-		font-family: var(--hed-font);
-		font-size: larger;
-		white-space: nowrap;
-	}
-
 	header {
 		container-type: inline-size;
 		position: relative;
@@ -72,10 +53,6 @@
 	@media (max-width: 800px) {
 		header {
 			overflow: visible; /* TODO: remove after renovation */
-		}
-
-		.tape {
-			font-size: small;
 		}
 	}
 
@@ -138,6 +115,10 @@
 	.subheader-inner a {
 		color: inherit;
 		text-decoration: none;
+	}
+
+	.subheader hr {
+		margin: 0;
 	}
 
 	.home {

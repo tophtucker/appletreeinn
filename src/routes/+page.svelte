@@ -1,13 +1,14 @@
 <script>
-	import AvalochShadowed from '$lib/icons/AvalochShadowed.svelte';
-	import Pentathing from '$lib/icons/Pentathing.svelte';
-	import Lightbox from '$lib/lightbox/Lightbox.svelte';
-	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
-	import Gallery from './Gallery.svelte';
-	import Map from './Map.svelte';
-	import NoMinimum from './NoMinimum.svelte';
-	import Rule from './Rule.svelte';
 	import { setContext } from 'svelte';
+	import Map from '$lib/components/Map.svelte';
+	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
+	import AvalochLodge from '$lib/icons/AvalochLodge.svelte';
+	import PentathingOrnate from '$lib/icons/PentathingOrnate.svelte';
+	import Lightbox from '$lib/lightbox/Lightbox.svelte';
+	import { BOOKING_URL } from '$lib/nav.js';
+	import Gallery from './lodge/Gallery.svelte';
+	import NoMinimum from './lodge/NoMinimum.svelte';
+	import Rule from './lodge/Rule.svelte';
 
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
@@ -15,7 +16,20 @@
 
 <svelte:head>
 	<title>Avaloch Lodge • Lenox, Mass.</title>
+	<meta
+		name="description"
+		content="A historic hotel in Lenox, MA, with views of the Berkshires hills and 10-minute walks to Tanglewood or Kripalu. Formerly the Apple Tree Inn."
+	/>
 </svelte:head>
+
+<Rule />
+
+<div class="banner">
+	<span
+		>The Apple Tree Inn is now Avaloch. <br class="hide-mobile" />Our restaurant and Main House are
+		closed for summer 2026.
+	</span> <a href="/about/renovations" data-sveltekit-reload>Learn more →</a>
+</div>
 
 <Rule />
 
@@ -36,13 +50,7 @@
 		<div class="grain-overlay" aria-hidden="true"></div>
 	</div>
 	<div class="wordmark">
-		<div class="wordmark-inner">
-			<div class="top">SUMMER 2026</div>
-			<div class="bottom">
-				<AvalochShadowed class="avaloch" altFill="var(--green)" />
-				<h1>Lodge</h1>
-			</div>
-		</div>
+		<AvalochLodge class="avaloch-lodge" />
 	</div>
 </header>
 
@@ -51,14 +59,15 @@
 <section class="first">
 	<p>is the only lodging within walking distance to Tanglewood<sup>(9 min.)</sup>.</p>
 	<p>
-		Perched on a big hill overlooking the Stockbridge Bowl, it has a view, a pool, a coffee machine,
-		and almost nothing else.
+		Perched on a big hill overlooking the Stockbridge Bowl, it has a view, a pool, and a coffee
+		machine.
 	</p>
 
-	<div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
-		<a class="cta" href="https://direct-book.com/properties/AppleTreeInndirect">Book now</a>
-		<NoMinimum />
-	</div>
+	<!-- <div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
+		<a class="cta disabled" href={BOOKING_URL}>Book now</a>
+		<NoMinimum class="nomin" />
+	</div> -->
+	<p>Bookings open soon.</p>
 </section>
 
 <Rule />
@@ -76,13 +85,9 @@
 		</div>
 		<div>(413) 637-1910</div>
 		<div><a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a></div>
-	</div>
-	<div
-		style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;"
-	>
-		<Pentathing height="100" width="100" altFill="var(--green)" />
 		<div><a href="/about/policies" data-sveltekit-reload>Policies</a></div>
 	</div>
+	<PentathingOrnate class="pentathing" />
 </section>
 
 <Rule />
@@ -100,9 +105,9 @@
 
 <Rule />
 
-<section style="display: grid; grid-template-columns: 3fr 2fr; gap: 1rem;">
+<section class="coming-soon">
 	<div>
-		<div class="coming-soon">Coming soon</div>
+		<div class="notice">Coming soon</div>
 		<p>
 			The <span class="inalign">Avaloch Inn</span> and <span class="inalign">Café</span> and
 			<span class="inalign">Ostrich Room</span> are currently closed for renovations. Subscribe to our
@@ -144,16 +149,17 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 1em;
+	}
+
+	section.coming-soon {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		gap: 1rem;
 	}
 
 	header {
 		position: relative;
-	}
-
-	h1 {
-		margin: 0;
-		margin-top: -0.4em;
-		font-size: 2.4em;
 	}
 
 	p {
@@ -191,22 +197,16 @@
 		letter-spacing: 2px;
 	}
 
-	.coming-soon {
-		border: 3px double currentColor;
-		padding: 0.25rem 0.5rem;
-		font-size: smaller;
+	.coming-soon .notice {
 		color: var(--green);
 		background: white;
-		text-transform: uppercase;
-		display: inline-block;
-		letter-spacing: 2px;
 	}
 
 	.cta {
 		height: auto;
 		padding: 0.2em 0.4em;
 		border-width: 8px;
-		border-color: var(--green);
+		border-color: rgba(30, 30, 30, 0.5);
 		background: inherit;
 		color: inherit;
 	}
@@ -216,8 +216,19 @@
 		color: black;
 	}
 
-	:global(.avaloch) {
-		height: 180px;
+	.banner {
+		font-size: 1.5rem;
+		max-width: var(--center-width);
+		margin: 0 auto;
+		padding: 0.5em 0;
+		text-wrap: pretty;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	:global(.avaloch-lodge) {
+		height: 240px;
 	}
 
 	.wordmark {
@@ -227,24 +238,11 @@
 		right: 0;
 		bottom: 0;
 		color: white;
-		text-shadow: 2px 2px 2px var(--green);
-	}
-
-	.wordmark-inner {
-		max-width: var(--center-width);
-		margin: 0 auto;
-		padding: 4rem 0;
-		height: 100%;
+		padding: 4rem calc((100vw - var(--center-width)) / 2);
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-	}
-
-	.wordmark-inner .top {
-		font-variation-settings: 'wght' 700;
-		display: flex;
-		justify-content: space-between;
-		font-size: smaller;
+		justify-content: end;
+		align-items: start;
 	}
 
 	.hero-img-wrap {
@@ -276,37 +274,74 @@
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
-		background: linear-gradient(to right, white 20%, var(--green) 100%);
+		background: linear-gradient(to bottom, white 20%, var(--green) 100%);
 		filter: contrast(120%) brightness(100%);
 		mix-blend-mode: multiply;
+	}
+
+	:global(.pentathing) {
+		width: 180px;
+	}
+
+	:global(.nomin) {
+		width: 140px;
 	}
 
 	@media (max-width: 1100px) {
 		:global(body) {
 			--center-width: 90%;
-			font-size: 1em;
+			font-size: 1.5em;
 		}
-		:global(.avaloch) {
-			height: 90px;
+		:global(.avaloch-lodge) {
+			height: 180px;
 		}
 		sup {
 			font-size: initial;
 			position: absolute;
-			padding-left: 0;
 			padding-top: 0;
+		}
+		:global(.pentathing) {
+			width: 140px;
 		}
 	}
 
 	@media (max-width: 600px) {
 		:global(body) {
-			font-size: 0.8em;
+			font-size: 1.2em;
 		}
-		:global(.avaloch) {
-			height: 70px;
+		:global(.avaloch-lodge) {
+			height: 100px;
+		}
+		:global(.pentathing) {
+			width: 80px;
+		}
+		:global(.nomin) {
+			width: 80px;
 		}
 		.hero-img-wrap {
 			aspect-ratio: 3 / 4;
 			overflow: hidden;
+		}
+		.wordmark {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+		}
+		section {
+			margin: 2rem auto;
+		}
+		section.first {
+			font-size: inherit;
+		}
+		section.coming-soon {
+			display: flex;
+			flex-direction: column;
+		}
+		.flex {
+			flex-direction: column;
+		}
+		.banner {
+			font-size: 1rem;
+			display: block;
 		}
 	}
 </style>

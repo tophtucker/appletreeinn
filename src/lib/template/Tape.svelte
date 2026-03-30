@@ -1,0 +1,39 @@
+<div class="tape">
+	<div>
+		MAIN HOUSE UNDER RENOVATION • LODGE OPEN FOR SUMMER <span class="hide-mobile">
+			• MAIN HOUSE UNDER RENOVATION • LODGE OPEN FOR SUMMER • MAIN HOUSE UNDER RENOVATION • LODGE
+			OPEN FOR SUMMER • MAIN HOUSE UNDER RENOVATION • LODGE OPEN FOR SUMMER</span
+		>
+	</div>
+</div>
+
+<style>
+	.tape {
+		width: 100%;
+		overflow: hidden;
+		background: var(--gold);
+		color: white;
+		border: 1px solid white;
+		padding: 0.25rem 0.5rem 0.2rem 0.5rem;
+		font-variation-settings: 'wght' 800;
+		text-align: center;
+		font-family: var(--hed-font);
+		font-size: larger;
+		white-space: nowrap;
+	}
+
+	.tape > div {
+		margin-left: -34px;
+	}
+
+	@media (max-width: 800px) {
+		.tape {
+			font-size: small;
+			white-space: normal;
+			text-wrap: balance;
+		}
+		.tape > div {
+			margin: 0;
+		}
+	}
+</style>

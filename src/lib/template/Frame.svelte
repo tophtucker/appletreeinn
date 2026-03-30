@@ -3,6 +3,7 @@
 	import Header from '$lib/template/Header.svelte';
 	import Footer from '$lib/template/Footer.svelte';
 	import Urgent from '$lib/template/Urgent.svelte';
+	import Tape from '$lib/template/Tape.svelte';
 	import Nav from './Nav.svelte';
 	import { setContext } from 'svelte';
 
@@ -29,6 +30,8 @@
 {/snippet}
 
 <svelte:window on:resize={onResize} />
+
+<Tape />
 
 <Urgent bulletins={data.bulletins} />
 

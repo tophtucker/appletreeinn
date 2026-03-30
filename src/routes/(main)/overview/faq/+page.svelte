@@ -24,12 +24,14 @@
 			<em>Apple Tree Inn</em>, and in 2026 it returned to <em>Avaloch</em>.
 		</p>
 		<p>
-			We have thirteen unique <a href="/rooms">guest rooms</a> in the historic Main House, plus
-			twenty-one more basic rooms in the seasonal Lodge. The Main House has the front desk; the
-			lobby; the porch; the quirky “round room”; and our tavern,
+			We have thirteen unique <a href="/rooms">guest rooms</a> in the historic Main House (closed
+			for renovations), plus twenty-one more basic rooms in the seasonal Lodge (open for summer
+			2026).
+			<!-- The Main House has the front desk; the lobby; the porch; the quirky “round room”; and
+			our tavern,
 			<a href="/dining/ostrich-room">The Ostrich Room</a>, which is open to the public {data
 				.ostrichRoom.dayRange}
-			for food, drinks, and <a href="/music">live music</a>.
+			for food, drinks, and <a href="/music">live music</a>. -->
 		</p>
 		<p>
 			We’re just outside the town of Lenox and close to Stockbridge and Great Barrington, at the far
@@ -165,7 +167,7 @@
 		available to ferry guests down the hill to Tanglewood; if you’re depending on that, call ahead.
 	</p>
 	<hr />
-	<h2>What do you have for kids?</h2>
+	<!-- <h2>What do you have for kids?</h2>
 	<p>
 		We have high chairs for the restaurant, one pack ’n play, lots of board games, sleds for winter,
 		and tons of lawn space to play around, both flat and hilly, including plenty of space far from
@@ -176,7 +178,7 @@
 			>how great Tanglewood is for kids</a
 		>.
 	</p>
-	<hr />
+	<hr /> -->
 	<h2>What’s that on yonder hill?</h2>
 	<img
 		src="/img/winden-hill.jpg"

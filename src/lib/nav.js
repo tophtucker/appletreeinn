@@ -1,7 +1,19 @@
-export const BOOKING_URL = '#'; // 'https://direct-book.com/properties/AppleTreeInndirect';
+export const BOOKING_URL = '#'; // https://direct-book.com/properties/AppleTreeInndirect
 export const RESERVATIONS_URL = '#'; // 'https://tables.toasttab.com/restaurants/701827ce-60b2-4de3-a117-eeef40adcbe1/findTime';
 
 const nav = [
+	{ title: 'Renovations', slug: 'about/renovations' },
+	{ title: 'Tanglewood', slug: 'activities/tanglewood' },
+	{ title: 'The Berkshires', slug: 'activities/berkshires' },
+	{ title: 'Property map', slug: 'overview/map' },
+	{ title: 'About', slug: 'about/about-us' },
+	{ title: 'History', slug: 'about/history' },
+	{ title: 'Press', slug: 'about/press' },
+	{ title: 'Newsletter', slug: 'about/newsletter' },
+	{ title: 'Policies', slug: 'about/policies' }
+];
+
+const _nav = [
 	{
 		slug: 'overview',
 		title: 'Overview',
@@ -14,22 +26,22 @@ const nav = [
 	{
 		slug: 'rooms',
 		title: 'Rooms',
-		color: 'var(--green)',
-		children: [
-			{ title: 'Main House', slug: 'main-house' },
-			{ title: 'Lodge', slug: 'lodge' },
-			{ title: 'Book a room', url: BOOKING_URL, disabled: true }
-		]
+		color: 'var(--green)'
+		// children: [
+		// 	{ title: 'Main House', slug: 'main-house' },
+		// 	{ title: 'Lodge', slug: 'lodge' },
+		// 	{ title: 'Book a room', url: BOOKING_URL, disabled: true }
+		// ]
 	},
 	{
 		slug: 'dining',
 		title: 'Dining',
-		color: 'var(--red)',
-		children: [
-			{ title: 'Breakfast', slug: 'breakfast' },
-			{ title: 'The Ostrich Room', slug: 'ostrich-room' },
-			{ title: 'Make a reservation', url: RESERVATIONS_URL, disabled: true }
-		]
+		color: 'var(--red)'
+		// children: [
+		// 	{ title: 'Breakfast', slug: 'breakfast' },
+		// 	{ title: 'The Ostrich Room', slug: 'ostrich-room' },
+		// 	{ title: 'Make a reservation', url: RESERVATIONS_URL, disabled: true }
+		// ]
 	},
 	{
 		slug: 'music',
@@ -45,7 +57,7 @@ const nav = [
 		title: 'Activities',
 		color: 'var(--gold)',
 		children: [
-			{ title: 'Amenities', slug: 'amenities' },
+			// { title: 'Amenities', slug: 'amenities' },
 			{ title: 'Tanglewood', slug: 'tanglewood' },
 			{ title: 'The Berkshires', slug: 'berkshires' }
 		]
@@ -53,9 +65,9 @@ const nav = [
 	{
 		slug: 'about',
 		title: 'About',
-		footer: true,
+		// footer: true,
 		children: [
-			{ title: 'About us', slug: 'about-us' },
+			// { title: 'About us', slug: 'about-us' },
 			{ title: 'History', slug: 'history' },
 			{ title: 'Renovations', slug: 'renovations' },
 			{ title: 'Press', slug: 'press' },

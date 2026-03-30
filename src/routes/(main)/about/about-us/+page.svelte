@@ -65,8 +65,8 @@
 			</p>
 		</div>
 	</div>
-	<HR />
 
+	<!-- <HR />
 	<div class="bios">
 		<img src="/img/staff-memo.jpg" alt="Memo" />
 		<p>
@@ -86,39 +86,7 @@
 			Sean (bar manager) really knows a lot about cocktails and has vastly expanded our menu. His
 			favorite is a Vesper martini. Also he and his wife have a 3-year-old daughter.
 		</p>
-		<img src="/img/abby.jpg" alt="Abby" />
-		<p>
-			Abby (front desk and private events) grew up like a mile from here; she went to Lenox High and
-			UMass Amherst, where she played soccer. We think maybe she likes Disney movies but we’re not
-			sure. Her brother goes by “Toph” but weirdly she didn’t even tell our Toph for like two
-			months.
-		</p>
-		<img src="/img/staff-jeff.jpg" alt="Jeff" />
-		<p>
-			Jeff (front desk) loves the Mount from all directions: he worked and lived there when it
-			played host to Shakespeare and Co.; he got married there; today, visiting there is his top
-			recommendation for guests. He also worked here parking cars for guests back when it was
-			Alice’s at Avaloch.
-		</p>
-		<img src="/img/peter.jpg" alt="Peter" />
-		<p>
-			Peter (bartender) looks a lot like Luke Wilson. He was a camp counselor for 14 summers at Camp
-			Timanous and has a Master’s in elementary education.
-		</p>
-		<img src="/img/magdalen.jpg" alt="Magdalen" />
-		<p>
-			Magdalen (server) also works at the Springfield zoo where she takes care of emus, wallabees,
-			and porcupines. “No ostriches, I’d die. Emus are already scary and ostriches are bigger. Emus
-			have murder in their eyes.”
-		</p>
-		<img src="/img/staff-armando.jpg" alt="Armando" />
-		<p>
-			Armando (server) came into the bar as a patron when we were very new here and kindly indulged
-			all Toph’s questions about the Mayan language, calendar, and numerals.
-		</p>
-		<img src="/img/luke.jpg" alt="Luke" />
-		<p>Luke (server) is all bundled up for the cold in his nice hat!</p>
-	</div>
+	</div> -->
 </div>
 
 <style>

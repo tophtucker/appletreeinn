@@ -1,6 +1,8 @@
 <script>
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 	import HR from '$lib/components/HR.svelte';
+	import Reno from '$lib/components/Reno.svelte';
+	import Door from '$lib/icons/Door.svelte';
 	import { HOTEL_OPEN } from '$lib/index.js';
 
 	if (HOTEL_OPEN) throw new Error('update copy');
@@ -17,39 +19,61 @@
 <div class="inner">
 	<h1>Renovations</h1>
 
-	<div class="reno-grid">
-		<img src="/reno/demo.jpg" alt="The round room in the midst of being demolished" />
-		<img
-			src="/reno/blueprints.jpg"
-			alt="A Blackwing pencil lies atop tracing paper lying atop blueprints for our renovations"
-		/>
-		<img
-			src="/reno/foundation.jpg"
-			alt="The new foundation dug and poured on the south side of the Main House"
-		/>
+	<Reno />
+
+	<div class="tout">
+		<p>
+			While we’re closed for “<a href="https://www.instagram.com/reel/DPkb0aVjruV/">some months</a>”
+			Claire will share all the debates, blueprints, wrecking balls, and progress.
+		</p>
+		<NewsletterSubscribe />
+		<p>
+			<a href="https://instagram.com/avaloch.inn">Follow us on Instagram</a>
+		</p>
+		<p><a href="/about/newsletter">See past newsletters</a></p>
+
+		<div>
+			<h3>What’s “Avaloch”?</h3>
+			<p>
+				The Apple Tree Inn is returning to its original name. <a href="/about/renovations#rebrand"
+					>Learn more</a
+				>.
+			</p>
+		</div>
+		<div>
+			<h3>Can I book a room for the summer?</h3>
+			<p>
+				In the lodge, yes; <a href="/lodge" data-sveltekit-reload>learn more</a>. The main house is
+				still closed for renovations, and we don’t yet know when it will reopen.
+			</p>
+		</div>
+		<div>
+			<h3>Can I book a private event?</h3>
+			<p>Not yet!</p>
+		</div>
+		<div>
+			<h3>What’re you doing?</h3>
+			<ul>
+				<li>Demolishing the front porch and round room.</li>
+				<li>Building a new glassed-in café and private dining room.</li>
+				<li>Reorienting the primary entrance to be on the east side.</li>
+				<li>Adding garden space.</li>
+				<li>Redecorating the Lodge.</li>
+				<li>Rebranding to Avaloch.</li>
+			</ul>
+		</div>
+		<div class="reno-grid">
+			<img src="/reno/demo.jpg" alt="The round room in the midst of being demolished" />
+			<img
+				src="/reno/blueprints.jpg"
+				alt="A Blackwing pencil lies atop tracing paper lying atop blueprints for our renovations"
+			/>
+			<img
+				src="/reno/foundation.jpg"
+				alt="The new foundation dug and poured on the south side of the Main House"
+			/>
+		</div>
 	</div>
-
-	<p>
-		The inn and Ostrich Room closed for renovations in November 2025. We don’t know when we’ll
-		reopen, but hope to see you this summer. Subscribe to our <a href="/about/newsletter"
-			>newsletter</a
-		>
-		and follow on <a href="https://instagram.com/avaloch.inn">Instagram</a> for updates. Newsletter subscribers
-		will hear first when bookings re-open!
-	</p>
-
-	<NewsletterSubscribe />
-
-	<p>Projects include:</p>
-
-	<ul>
-		<li>Demolishing the front porch and round room.</li>
-		<li>Building a new glassed-in dining room on the front of the house.</li>
-		<li>Reorienting the primary entrance to be on the east side.</li>
-		<li>Adding garden space.</li>
-		<li>Redecorating the Lodge.</li>
-		<li>Rebranding to Avaloch.</li>
-	</ul>
 
 	<HR />
 
@@ -77,6 +101,11 @@
 	<HR />
 
 	<h2>Updates</h2>
+
+	<p>
+		<strong>March 25</strong> — The floor is in, the walls of the private dining room are up, and we’re
+		beginning to see traces of a roof.
+	</p>
 
 	<p><strong>February 28</strong> — They’ve begun timber framing over the basement.</p>
 
@@ -244,5 +273,20 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	.tout {
+		margin: 2rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		text-wrap: pretty;
+		font-size: larger;
+	}
+
+	.tout h3,
+	.tout p,
+	.tout ul {
+		margin: 0;
 	}
 </style>
