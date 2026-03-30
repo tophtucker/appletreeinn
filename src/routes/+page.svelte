@@ -16,6 +16,10 @@
 
 <svelte:head>
 	<title>Avaloch Lodge • Lenox, Mass.</title>
+	<meta
+		name="description"
+		content="A historic hotel in Lenox, MA, with views of the Berkshires hills and 10-minute walks to Tanglewood or Kripalu. Formerly the Apple Tree Inn."
+	/>
 </svelte:head>
 
 <Rule />
@@ -46,7 +50,7 @@
 		<div class="grain-overlay" aria-hidden="true"></div>
 	</div>
 	<div class="wordmark">
-		<AvalochLodge class="avaloch" />
+		<AvalochLodge class="avaloch-lodge" />
 	</div>
 </header>
 
@@ -223,7 +227,7 @@
 		gap: 1rem;
 	}
 
-	:global(.avaloch) {
+	:global(.avaloch-lodge) {
 		height: 240px;
 	}
 
@@ -288,7 +292,7 @@
 			--center-width: 90%;
 			font-size: 1.5em;
 		}
-		:global(.avaloch) {
+		:global(.avaloch-lodge) {
 			height: 180px;
 		}
 		sup {
@@ -305,7 +309,7 @@
 		:global(body) {
 			font-size: 1.2em;
 		}
-		:global(.avaloch) {
+		:global(.avaloch-lodge) {
 			height: 100px;
 		}
 		:global(.pentathing) {
