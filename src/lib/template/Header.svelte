@@ -14,6 +14,7 @@
 		<div class="tagline hide-medium">Lenox, Mass.</div>
 		<div class="inner-header">
 			<a href="/" class="home" style="width: 100%;" data-sveltekit-reload>
+				<ATI class="ati" />
 				<Avaloch class="avaloch" />
 			</a>
 			<div class="tagline show-medium">Lenox, Mass.</div>
@@ -138,9 +139,42 @@
 		display: none;
 	}
 
+	:global(.ati) {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		height: 65px;
+	}
+
 	:global(.avaloch) {
 		width: 100%;
 		height: 100px;
+	}
+
+	:global(.ati) {
+		animation: ati-slide-up 1s ease-in-out 1s both;
+	}
+
+	:global(.avaloch) {
+		animation: avaloch-slide-in 1s ease-in-out 1s both;
+	}
+
+	@keyframes ati-slide-up {
+		from {
+			transform: translateY(-50%);
+		}
+		to {
+			transform: translateY(-300%);
+		}
+	}
+
+	@keyframes avaloch-slide-in {
+		from {
+			transform: translateY(200%);
+		}
+		to {
+			transform: translateY(0);
+		}
 	}
 
 	@media (max-width: 1400px) {
