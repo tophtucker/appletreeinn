@@ -10,7 +10,11 @@ const nav = [
 	{ title: 'History', slug: 'about/history' },
 	{ title: 'Press', slug: 'about/press' },
 	{ title: 'Newsletter', slug: 'about/newsletter' },
-	{ title: 'Policies', slug: 'about/policies' }
+	{ title: 'Policies', slug: 'about/policies' },
+	{
+		slug: 'weddings-events',
+		title: 'Private events'
+	}
 ];
 
 const _nav = [

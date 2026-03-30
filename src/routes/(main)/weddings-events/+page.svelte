@@ -83,19 +83,18 @@
 
 			<p>
 				We are keeping a list of inquiries and, if you are interested, we will add your contact
-				information to the list and will reach out when we know more. Please feel free to email
-				<a href="mailto:frontdesk@avalochinn.com">frontdesk@avalochinn.com</a>.
+				information to the list and will reach out when we know more. Please click to fill out this
+				form:
 			</p>
 
-			<p>Thank you!</p>
-
-			<!-- TODO: is this form still being monitored? -->
-			<!-- <a
+			<a
 				class="cta"
-				style="margin-top:1rem;"
+				style="margin:1rem 0;"
 				href="https://docs.google.com/forms/d/e/1FAIpQLSeWZNsHNjJ7gsrEh0-p4hrJJk5SCSnHJgSuPCR1YmSoNuXsRA/viewform?usp=preview"
 				>Tell me when bookings reopen</a
-			> -->
+			>
+
+			<p>Thank you!</p>
 		</div>
 		<Slideshow {pics} />
 	</div>
