@@ -1,12 +1,12 @@
 <script>
 	import { setContext } from 'svelte';
+	import Map from '$lib/components/Map.svelte';
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 	import AvalochLodge from '$lib/icons/AvalochLodge.svelte';
 	import PentathingOrnate from '$lib/icons/PentathingOrnate.svelte';
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import { BOOKING_URL } from '$lib/nav.js';
 	import Gallery from './lodge/Gallery.svelte';
-	import Map from './lodge/Map.svelte';
 	import NoMinimum from './lodge/NoMinimum.svelte';
 	import Rule from './lodge/Rule.svelte';
 
