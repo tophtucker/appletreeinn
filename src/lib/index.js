@@ -406,58 +406,62 @@ export const buildings = [
 		desc: 'Built in 1966, the motel-style lodge has four standard room types, facing either the woods (basically no view) or mountains (beautiful view). It’s located between the main house and the pool, a three-minute walk from each. There are 21 guest rooms on the first and second floors. Open from May to October.',
 		building: 'lodge',
 		rooms: [
-			{
-				building: 'lodge',
-				floor: null,
-				room_number: null,
-				room_name: 'Queen Scenic View',
-				beds: '1 queen',
-				sleeps: 2,
-				views: true,
-				pics: ['lodge/queen-scenic-view/_XCS2772.jpg', 'lodge/queen-scenic-view/3.jpg'],
-				features: null,
-				caveats: null,
-				tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
-			},
-			{
-				building: 'lodge',
-				floor: null,
-				room_number: null,
-				room_name: '2 Double Scenic View',
-				beds: '2 double',
-				sleeps: 4,
-				views: true,
-				pics: ['lodge/2-double-scenic-view/_XCS2782.jpg', 'lodge/2-double-scenic-view/2.jpg'],
-				features: null,
-				caveats: null,
-				tags: ['2 double', 'Sleeps 4', 'Beautiful views of the hills']
-			},
-			{
-				building: 'lodge',
-				floor: null,
-				room_number: null,
-				room_name: 'Queen',
-				beds: '1 queen',
-				sleeps: 2,
-				views: null,
-				pics: ['lodge/queen/_XCS2800.jpg', 'lodge/queen/2.jpg'],
-				features: null,
-				caveats: null,
-				tags: ['1 queen', 'Sleeps 2']
-			},
-			{
-				building: 'lodge',
-				floor: null,
-				room_number: null,
-				room_name: '2 Double',
-				beds: '2 double',
-				sleeps: 4,
-				views: null,
-				pics: ['lodge/2-double/_XCS2794.jpg', 'lodge/2-double/2.jpg'],
-				features: null,
-				caveats: null,
-				tags: ['2 double', 'Sleeps 4']
-			}
+			// ****
+			// TODO — queens are now kings; new photos; move to Sanity
+			// ****
+			//
+			// {
+			// 	building: 'lodge',
+			// 	floor: null,
+			// 	room_number: null,
+			// 	room_name: 'Queen Scenic View',
+			// 	beds: '1 queen',
+			// 	sleeps: 2,
+			// 	views: true,
+			// 	pics: ['lodge/queen-scenic-view/_XCS2772.jpg', 'lodge/queen-scenic-view/3.jpg'],
+			// 	features: null,
+			// 	caveats: null,
+			// 	tags: ['1 queen', 'Sleeps 2', 'Beautiful views of the hills']
+			// },
+			// {
+			// 	building: 'lodge',
+			// 	floor: null,
+			// 	room_number: null,
+			// 	room_name: '2 Double Scenic View',
+			// 	beds: '2 double',
+			// 	sleeps: 4,
+			// 	views: true,
+			// 	pics: ['lodge/2-double-scenic-view/_XCS2782.jpg', 'lodge/2-double-scenic-view/2.jpg'],
+			// 	features: null,
+			// 	caveats: null,
+			// 	tags: ['2 double', 'Sleeps 4', 'Beautiful views of the hills']
+			// },
+			// {
+			// 	building: 'lodge',
+			// 	floor: null,
+			// 	room_number: null,
+			// 	room_name: 'Queen',
+			// 	beds: '1 queen',
+			// 	sleeps: 2,
+			// 	views: null,
+			// 	pics: ['lodge/queen/_XCS2800.jpg', 'lodge/queen/2.jpg'],
+			// 	features: null,
+			// 	caveats: null,
+			// 	tags: ['1 queen', 'Sleeps 2']
+			// },
+			// {
+			// 	building: 'lodge',
+			// 	floor: null,
+			// 	room_number: null,
+			// 	room_name: '2 Double',
+			// 	beds: '2 double',
+			// 	sleeps: 4,
+			// 	views: null,
+			// 	pics: ['lodge/2-double/_XCS2794.jpg', 'lodge/2-double/2.jpg'],
+			// 	features: null,
+			// 	caveats: null,
+			// 	tags: ['2 double', 'Sleeps 4']
+			// }
 		]
 	}
 ];
