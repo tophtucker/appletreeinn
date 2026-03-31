@@ -20,6 +20,7 @@
 		name="description"
 		content="A historic hotel in Lenox, MA, with views of the Berkshires hills and 10-minute walks to Tanglewood or Kripalu. Formerly the Apple Tree Inn."
 	/>
+	<link rel="canonical" href="https://avalochinn.com/" />
 </svelte:head>
 
 <Rule />
