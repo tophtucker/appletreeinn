@@ -1,6 +1,7 @@
 <script>
 	import { buildings } from '$lib/index.js';
 	import Slideshow from '$lib/components/Slideshow.svelte';
+	import RenoNotice from '$lib/components/RenoNotice.svelte';
 	const building = buildings.find((d) => d.id === 'main-house');
 </script>
 
@@ -8,7 +9,12 @@
 	<title>Main House • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 </svelte:head>
 
-<div class="inner">
+<RenoNotice
+	>Our Main House guest rooms will be the same charming quirky experience as ever. Renovations focus
+	on the common spaces: more beautiful, less confusing, better flow, and nicer windows!</RenoNotice
+>
+
+<div class="inner blur">
 	<h1>Main House</h1>
 
 	{#each building.rooms as { room_number, room_name, floor, tags, pics, overOstrich }, i (room_name)}

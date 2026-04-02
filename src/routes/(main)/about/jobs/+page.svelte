@@ -8,7 +8,8 @@
 
 <div class="inner">
 	<h1>Jobs</h1>
-	<div>We may have openings for roles in the following teams:</div>
+	<p>We currently have no openings. Sorry!!</p>
+	<!-- <div>We may have openings for roles in the following teams:</div>
 	<ul>
 		<li>Front desk</li>
 		<li>Housekeeping</li>
@@ -19,5 +20,5 @@
 	</ul>
 	<div>
 		Inquire at <a href="mailto:frontdesk@avalochinn.com">frontdesk@avalochinn.com</a>.
-	</div>
+	</div> -->
 </div>

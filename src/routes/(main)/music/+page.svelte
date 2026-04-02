@@ -14,6 +14,7 @@
 	import OstrichRoom from '$lib/components/OstrichRoom.svelte';
 	import Dialog from '$lib/components/Dialog.svelte';
 	import HR from '$lib/components/HR.svelte';
+	import RenoNotice from '$lib/components/RenoNotice.svelte';
 	import { HOTEL_OPEN } from '$lib/index.js';
 	let { data } = $props();
 	const { performances, ostrichRoom } = data;
@@ -131,7 +132,11 @@
 	</details>
 {/snippet}
 
-<div class="inner">
+<RenoNotice
+	>There’s no Ostrich Room music during renovations. We may do some lawn shows; stay tuned!</RenoNotice
+>
+
+<div class="inner blur">
 	<img src="/img/wanda.jpg" alt="Wanda Houston performing live at the Ostrich Room" class="intro" />
 	<div class="grid-or-flex" style="grid-template-columns: 3fr 1fr; margin-top: 1rem;">
 		<p>

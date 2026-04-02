@@ -29,7 +29,8 @@ img {
 hr {
 	width: 100%;
 	border: none;
-	border-top: 1px solid black;
+	color: inherit;
+	border-top: 1px solid currentColor;
 	margin: 2rem 0;
 }
 
@@ -222,6 +223,14 @@ ul {
 .prose-columns p:first-child::first-letter {
 	initial-letter: 2;
 	padding-right: 2px;
+}
+
+.blur {
+	filter: blur(6px) saturate(0.3);
+	opacity: 0.6;
+	pointer-events: none;
+	user-select: none;
+	position: relative;
 }
 
 @media (max-width: 1000px) {

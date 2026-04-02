@@ -16,11 +16,6 @@
 		align-items: center;
 		gap: 0.5rem;
 	}
-	.hr hr {
-		width: 100%;
-		border: none;
-		border-top: 1px solid black;
-	}
 	.margin-0 hr {
 		margin: 0;
 	}

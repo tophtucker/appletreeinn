@@ -1,5 +1,6 @@
 <script>
 	import Image from '$lib/lightbox/Image.svelte';
+	import RenoNotice from '$lib/components/RenoNotice.svelte';
 	import XR from '$lib/components/XR.svelte';
 	import HR from '$lib/components/HR.svelte';
 </script>
@@ -12,7 +13,12 @@
 	/>
 </svelte:head>
 
-<div class="inner">
+<RenoNotice
+	>There will be no continental breakfast during renovations. We will reopen with a beautiful new
+	café room with floor-to-ceiling, wall-to-wall views of the hills.</RenoNotice
+>
+
+<div class="inner blur">
 	<h1>Continental breakfast</h1>
 	<Image src="/img/continental-breakfast.jpg" />
 

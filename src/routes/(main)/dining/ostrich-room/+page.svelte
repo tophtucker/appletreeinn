@@ -2,6 +2,7 @@
 	import { RESERVATIONS_URL } from '$lib/nav.js';
 	import WeekHours from '$lib/components/WeekHours.svelte';
 	import HR from '$lib/components/HR.svelte';
+	import RenoNotice from '$lib/components/RenoNotice.svelte';
 	import XR from '$lib/components/XR.svelte';
 	import Image from '$lib/lightbox/Image.svelte';
 
@@ -39,7 +40,12 @@
 	/>
 </svelte:head>
 
-<div class="inner">
+<RenoNotice
+	>The Ostrich Room itself is largely untouched. There will be a new accessible ramp, the flow into
+	the room will be less obstructed, and the outdoor porch space will be reconfigured.</RenoNotice
+>
+
+<div class="inner blur">
 	<div class="intro">
 		<h1>The Ostrich Room</h1>
 		<div>Drinks • Food • Music</div>

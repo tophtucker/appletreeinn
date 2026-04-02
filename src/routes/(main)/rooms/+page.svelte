@@ -1,12 +1,18 @@
 <script>
 	import VR from '$lib/components/VR.svelte';
+	import RenoNotice from '$lib/components/RenoNotice.svelte';
 </script>
 
 <svelte:head>
 	<title>Rooms • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 </svelte:head>
 
-<div class="inner">
+<RenoNotice
+	>We have guest rooms in two buildings: the Lodge (b. 1966), open for the summer; and the Main
+	House (b. 1885), under renovation. For now, you have no choice!</RenoNotice
+>
+
+<div class="inner blur">
 	<p>
 		We have two buildings: the historic Main House, including our front desk, lounge, and tavern,
 		where every guest room is unique; and the more basic and standardized Lodge, only open in the

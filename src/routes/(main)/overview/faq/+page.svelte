@@ -64,16 +64,6 @@
 		</p>
 	</div>
 	<hr />
-	<h2>When will renovations be done?</h2>
-	<p>
-		Unfortunately, we really don’t know! We can only assure you that the uncertainty weighs on us
-		too. We don’t want to over-promise, so we will let you know when we have confidence in our
-		timeline. Subscribe to the <a href="/about/newsletter">newsletter</a>, follow us on
-		<a href="https://instagram.com/avaloch.inn">Instagram</a>, and check the
-		<a href="/">home page</a>
-		and <a href="/weddings-events">events page</a> for updates.
-	</p>
-	<hr />
 	<h2>How do I get there?</h2>
 	<p>
 		The nearest airport is Albany, but it has few direct flights, so we typically fly into Boston
@@ -159,12 +149,13 @@
 	<h2>Is the property accessible?</h2>
 	<p>
 		The downside of being historic is that our buildings are zany. All access, and all guest rooms,
-		require at least some stairs; we have no elevators. As examples (not comprehensive): it’s four
+		require at least some stairs; we have no elevators. As examples (not comprehensive): the Lodge
+		is 12 steps down from the upper parking lot or 12 steps up from the road. Our motto is “Watch
+		your step!” We sometimes have a golf cart available to ferry guests down the hill to Tanglewood;
+		if you’re depending on that, call ahead. <!-- it’s four
 		steps up to the Main House lobby; 21 steps up to the 2nd floor, where guest rooms begin; and 15
 		steeper steps to the 3rd floor. There are random little internal steps, too: one or two down to
-		the round room; two down to the Ostrich Room. The Lodge is 12 steps down from the upper parking
-		lot or 12 steps up from the road. Our motto is “Watch your step!” We sometimes have a golf cart
-		available to ferry guests down the hill to Tanglewood; if you’re depending on that, call ahead.
+		the round room; two down to the Ostrich Room. -->
 	</p>
 	<hr />
 	<!-- <h2>What do you have for kids?</h2>
@@ -179,6 +170,16 @@
 		>.
 	</p>
 	<hr /> -->
+	<h2>When will renovations be done?</h2>
+	<p>
+		The Lodge will be open for the summer. For the Main House, we still really don’t know! We don’t
+		want to over-promise, so we will let you know when we have confidence in our timeline. Subscribe
+		to the <a href="/about/newsletter">newsletter</a>, follow us on
+		<a href="https://instagram.com/avaloch.inn">Instagram</a>, and check the
+		<a href="/">home page</a>
+		and <a href="/weddings-events">events page</a> for updates.
+	</p>
+	<hr />
 	<h2>What’s that on yonder hill?</h2>
 	<img
 		src="/img/winden-hill.jpg"

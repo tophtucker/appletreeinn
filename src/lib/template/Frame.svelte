@@ -48,7 +48,11 @@
 		<div class="left right bottom"></div>
 
 		<div class="left right mobile-no-border"></div>
-		<div class="content"><Header {toggleNav} />{@render children()}<Footer /></div>
+		<div class="content">
+			<Header {toggleNav} />
+			<div class="page">{@render children()}</div>
+			<Footer />
+		</div>
 		<div class="left right mobile-no-border"></div>
 
 		<div class="left right top"></div>
@@ -70,6 +74,9 @@
 		padding: 2rem;
 		gap: 2rem;
 		overflow: hidden; /* TODO: remove after renovation */
+	}
+	.page {
+		position: relative;
 	}
 	.top {
 		border-top: 1px solid var(--black);

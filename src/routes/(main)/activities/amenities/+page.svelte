@@ -1,5 +1,6 @@
 <script>
 	import Asterisk from '$lib/icons/Asterisk.svelte';
+	import RenoNotice from '$lib/components/RenoNotice.svelte';
 	let { data } = $props();
 </script>
 
@@ -8,12 +9,16 @@
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
-<div class="inner">
+<RenoNotice
+	>Lodge and pool amenities will be open for the summer, including a new lounge room, free Wi-Fi,
+	parking, coffee and tea, a guest refrigerator, and yoga mats. Main House amenities, including the
+	Ostrich Room, remain under renovation.</RenoNotice
+>
+
+<div class="inner blur">
 	<h1>Amenities</h1>
 
-	<p>Amenities are in flux during renovations. Check back later for an updated list.</p>
-
-	<!-- <dl>
+	<dl>
 		<dt>COFFEE AND TEA</dt>
 		<dd>
 			Complimentary coffee and tea are served in the Round Room servery all day long. Fresh brewed
@@ -132,7 +137,7 @@
 		you’re counting on it. Sorry!! If you’re hungry or in need of entertainment we have lots of
 		recommendations for
 		<a href="/activities/berkshires">around town</a>!
-	</p> -->
+	</p>
 </div>
 
 <style>

@@ -1,3 +1,5 @@
+// TODO: replace static/sitemap.txt with this, if Google will accept it
+
 import { nav } from '$lib/nav.js';
 
 const base = 'https://avalochinn.com';
