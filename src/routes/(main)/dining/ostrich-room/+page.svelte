@@ -41,8 +41,8 @@
 </svelte:head>
 
 <RenoNotice
-	>The Ostrich Room itself is largely untouched. There will be a new accessible ramp, the flow into
-	the room will be less obstructed, and the outdoor porch space will be reconfigured.</RenoNotice
+	>The Ostrich Room — including bar, food, and music — is closed while we renovate the Main House.
+	The room will be untouched by construction aside from the addition of an accessible ramp.</RenoNotice
 >
 
 <div class="inner blur">
