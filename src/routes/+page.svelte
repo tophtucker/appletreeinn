@@ -4,6 +4,7 @@
 	import NewsletterSubscribe from '$lib/components/NewsletterSubscribe.svelte';
 	import AvalochLodge from '$lib/icons/AvalochLodge.svelte';
 	import PentathingOrnate from '$lib/icons/PentathingOrnate.svelte';
+	import Asterisk from '$lib/icons/Asterisk.svelte';
 	import Lightbox from '$lib/lightbox/Lightbox.svelte';
 	import { BOOKING_URL } from '$lib/nav.js';
 	import Gallery from './lodge/Gallery.svelte';
@@ -125,6 +126,11 @@
 	/>
 </section>
 
+<section class="footer">
+	<Asterisk style="vertical-align: middle; margin-right: 0.5em;" />Directly across the road from
+	Tanglewood
+</section>
+
 <Lightbox />
 
 <style>
@@ -133,7 +139,6 @@
 		background: var(--green);
 		color: rgba(255, 255, 255, 0.85);
 		font-family: 'Align Web';
-		padding-bottom: 200px;
 		--center-width: 980px;
 	}
 
@@ -157,6 +162,16 @@
 		display: grid;
 		grid-template-columns: 3fr 2fr;
 		gap: 1rem;
+	}
+
+	section.footer {
+		font-size: small;
+		text-align: right;
+		text-transform: uppercase;
+		font-family: 'Align Web';
+		font-variation-settings: 'wght' 800;
+		padding-top: 200px;
+		text-wrap: pretty;
 	}
 
 	header {
