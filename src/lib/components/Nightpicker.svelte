@@ -8,10 +8,11 @@
 	const days = timeDay.range(start, timeDay.offset(start, 14));
 
 	let bookHover = $state(null);
-	let bookA = $state(null);
-	let bookB = $state(null);
-	let bookStart = $derived(Math.min(bookA, bookB));
-	let bookEnd = $derived(Math.max(bookA, bookB));
+	let bookStart = $state(null);
+	let bookEnd = $state(null);
+	let bookStartStr = $derived(dateFormat(bookStart));
+	let bookEndStr = $derived(dateFormat(bookEnd));
+	let dragStart = $state(null);
 	let bookNights = $derived(
 		bookStart && bookEnd ? days.filter((day) => day >= bookStart && day <= bookEnd) : []
 	);
@@ -19,13 +20,19 @@
 
 	function handleMouseDown(day) {
 		isDragging = true;
-		bookB = null;
-		bookA = day;
+		dragStart = bookStart = day;
+		bookEnd = null;
 	}
 
 	function handleMouseUp(day) {
 		if (isDragging) {
-			bookB = day;
+			if (day > dragStart) {
+				bookStart = dragStart;
+				bookEnd = day;
+			} else {
+				bookStart = day;
+				bookEnd = dragStart;
+			}
 			isDragging = false;
 		}
 	}
@@ -33,17 +40,45 @@
 	function handleMouseEnter(day) {
 		bookHover = day;
 		if (isDragging) {
-			bookB = day;
+			if (day > dragStart) {
+				bookStart = dragStart;
+				bookEnd = day;
+			} else {
+				bookStart = day;
+				bookEnd = dragStart;
+			}
 		}
 	}
 
 	function handleMouseLeave() {
 		bookHover = null;
 	}
+
+	function dateFormat(date) {
+		if (!date) return '';
+		const y = date.getFullYear();
+		const m = String(date.getMonth() + 1).padStart(2, '0');
+		const d = String(date.getDate()).padStart(2, '0');
+		return `${y}-${m}-${d}`;
+	}
 </script>
 
-<!-- Check in <input type="date" />
-Check out <input type="date" /> -->
+<div class="form">
+	<div>Check in</div>
+	<input
+		type="date"
+		value={bookStartStr}
+		oninput={(e) => (bookStart = days.find((d) => dateFormat(d) === e.target.value))}
+	/>
+	<div>after 3 p.m.</div>
+	<div>Check out</div>
+	<input
+		type="date"
+		value={bookEndStr}
+		oninput={(e) => (bookEnd = days.find((d) => dateFormat(d) === e.target.value))}
+	/>
+	<div>by 11 a.m.</div>
+</div>
 
 <div class="calendar">
 	{#each days as day}
@@ -74,6 +109,19 @@ Check out <input type="date" /> -->
 </div>
 
 <style>
+	.form {
+		width: 400px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
+		margin-bottom: 1em;
+		align-items: center;
+	}
+	input[type='date'] {
+		font: inherit;
+		font-variant: tabular-nums;
+	}
+
 	.calendar {
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
