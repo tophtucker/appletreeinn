@@ -8,28 +8,65 @@
 	const days = timeDay.range(start, timeDay.offset(start, 14));
 
 	let bookHover = $state(null);
-	let bookStart = $state(null);
-	let bookEnd = $state(null);
+	let bookA = $state(null);
+	let bookB = $state(null);
+	let bookStart = $derived(Math.min(bookA, bookB));
+	let bookEnd = $derived(Math.max(bookA, bookB));
 	let bookNights = $derived(
-		bookStart && bookEnd ? days.filter((day) => day >= bookStart && day <= bookEnd) : null
+		bookStart && bookEnd ? days.filter((day) => day >= bookStart && day <= bookEnd) : []
 	);
+	let isDragging = false;
+
+	function handleMouseDown(day) {
+		isDragging = true;
+		bookB = null;
+		bookA = day;
+	}
+
+	function handleMouseUp(day) {
+		if (isDragging) {
+			bookB = day;
+			isDragging = false;
+		}
+	}
+
+	function handleMouseEnter(day) {
+		bookHover = day;
+		if (isDragging) {
+			bookB = day;
+		}
+	}
+
+	function handleMouseLeave() {
+		bookHover = null;
+	}
 </script>
+
+<!-- Check in <input type="date" />
+Check out <input type="date" /> -->
 
 <div class="calendar">
 	{#each days as day}
+		{@const morning = timeDay.offset(day, -1)}
 		<div class="day">
 			<div class="label">{day.getDate()}</div>
-			<div class="nightparts">
+			<div
+				class={`nightparts ${bookNights.find((d) => +d === +morning) && bookNights.find((d) => +d === +day) ? 'selected' : ''}`}
+			>
 				<div
-					class={`morning part ${+bookHover === +timeDay.offset(day, -1) ? 'hover' : ''}`}
-					onmouseenter={() => (bookHover = timeDay.offset(day, -1))}
-					onmouseleave={() => (bookHover = null)}
+					class={`morning part ${+bookHover === +morning ? 'hover' : ''} ${bookNights.find((d) => +d === +morning) ? 'selected' : ''}`}
+					onmousedown={() => handleMouseDown(morning)}
+					onmouseup={() => handleMouseUp(morning)}
+					onmouseenter={() => handleMouseEnter(morning)}
+					onmouseleave={() => handleMouseLeave(morning)}
 				></div>
 				<div class="gap"></div>
 				<div
-					class={`evening part ${+bookHover === +day ? 'hover' : ''}`}
-					onmouseenter={() => (bookHover = day)}
-					onmouseleave={() => (bookHover = null)}
+					class={`evening part ${+bookHover === +day ? 'hover' : ''} ${bookNights.find((d) => +d === +day) ? 'selected' : ''}`}
+					onmousedown={() => handleMouseDown(day)}
+					onmouseup={() => handleMouseUp(day)}
+					onmouseenter={() => handleMouseEnter(day)}
+					onmouseleave={() => handleMouseLeave(day)}
 				></div>
 			</div>
 		</div>
@@ -47,6 +84,7 @@
 		aspect-ratio: 1;
 		display: flex;
 		flex-direction: column;
+		user-select: none;
 	}
 	.label {
 		text-align: right;
@@ -75,5 +113,9 @@
 	}
 	.nightparts .part.hover {
 		background: #eee;
+	}
+	.nightparts.selected,
+	.nightparts .part.selected {
+		background: var(--blue);
 	}
 </style>
