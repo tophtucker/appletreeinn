@@ -27,11 +27,16 @@
 <Rule />
 
 <div class="banner">
-	<span
-		>The Apple Tree Inn is now Avaloch. <br class="hide-mobile" />Our restaurant and Main House are
-		closed for summer 2026.
-	</span> <a href="/about/renovations" data-sveltekit-reload>Learn more →</a>
+	The Apple Tree Inn is now Avaloch. Our redecorated Lodge guest rooms and pool will be open
+	starting May 15. Our Main House guest rooms and Ostrich Room tavern are under renovation and
+	closed for summer 2026. <a href="/about/renovations" data-sveltekit-reload>Learn more →</a>
 </div>
+
+<!--
+The Apple Tree Inn is now Avaloch.
+Our redecorated Lodge guest rooms and pool will be open starting May 15.
+Our Main House guest rooms and Ostrich Room tavern are under renovation and closed for summer 2026.
+-->
 
 <Rule />
 
@@ -238,9 +243,6 @@
 		margin: 0 auto;
 		padding: 0.5em 0;
 		text-wrap: pretty;
-		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
 	}
 
 	:global(.avaloch-lodge) {
@@ -357,7 +359,6 @@
 		}
 		.banner {
 			font-size: 1rem;
-			display: block;
 		}
 	}
 </style>
