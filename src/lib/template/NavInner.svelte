@@ -42,7 +42,6 @@
 <nav>
 	<div class="section">
 		<a href="/" data-sveltekit-reload>Lodge</a>
-		<div><em>Open for summer 2026 during renovations</em></div>
 	</div>
 	{#each mainNav as n}
 		{@render navSection(n)}
