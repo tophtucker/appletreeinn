@@ -81,6 +81,13 @@
 </div>
 
 <div class="calendar">
+	<div class="dow">Sunday</div>
+	<div class="dow">Monday</div>
+	<div class="dow">Tuesday</div>
+	<div class="dow">Wednesday</div>
+	<div class="dow">Thursday</div>
+	<div class="dow">Friday</div>
+	<div class="dow">Saturday</div>
 	{#each days as day}
 		{@const morning = timeDay.offset(day, -1)}
 		<div class="day">
@@ -126,6 +133,11 @@
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
 		border: 0.5px solid #eee;
+	}
+	.dow {
+		box-shadow: inset 0 0 0 0.5px #eee;
+		text-align: center;
+		padding: 0.25em;
 	}
 	.day {
 		box-shadow: inset 0 0 0 0.5px #eee;
