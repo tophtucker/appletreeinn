@@ -1,11 +1,12 @@
 <script>
 	import { timeDay, timeSunday } from 'd3-time';
+	import { BOOKING_URL } from '$lib/nav.js';
 
 	const checkin = 15;
 	const checkout = 11;
 
 	const start = timeSunday.floor(new Date());
-	const days = timeDay.range(start, timeDay.offset(start, 14));
+	const days = timeDay.range(start, timeDay.offset(start, 7 * 10));
 
 	let bookHover = $state(null);
 	let bookStart = $state(null);
@@ -54,6 +55,18 @@
 		bookHover = null;
 	}
 
+	function handleInputIn(e) {
+		const newDay = days.find((d) => dateFormat(d) === e.target.value);
+		if (!isBookable(newDay)) return;
+		bookStart = newDay;
+	}
+
+	function handleInputOut(e) {
+		const newDay = days.find((d) => dateFormat(timeDay.offset(d, 1)) === e.target.value);
+		if (!isBookable(newDay)) return;
+		bookEnd = newDay;
+	}
+
 	function dateFormat(date) {
 		if (!date) return '';
 		const y = date.getFullYear();
@@ -61,24 +74,28 @@
 		const d = String(date.getDate()).padStart(2, '0');
 		return `${y}-${m}-${d}`;
 	}
+
+	function getUrl(a, b) {
+		return `${BOOKING_URL}?checkInDate=${a}&checkOutDate=${b}`;
+	}
+
+	function isBookable(date) {
+		// TODO: edge cases? i've tried to book a room for "tonight" after midnight before
+		return date >= timeDay(new Date());
+	}
 </script>
 
-<div class="form">
-	<div>Check in</div>
-	<input
-		type="date"
-		value={bookStartStr}
-		oninput={(e) => (bookStart = days.find((d) => dateFormat(d) === e.target.value))}
-	/>
-	<div>after 3 p.m.</div>
-	<div>Check out</div>
-	<input
-		type="date"
-		value={bookEndStr}
-		oninput={(e) =>
-			(bookEnd = days.find((d) => dateFormat(timeDay.offset(d, 1)) === e.target.value))}
-	/>
-	<div>by 11 a.m.</div>
+<div class="form-wrapper">
+	<div class="form">
+		<div>Check in</div>
+		<!-- TODO: min & max dates -->
+		<input type="date" value={bookStartStr} oninput={handleInputIn} />
+		<div>after 3 p.m.</div>
+		<div>Check out</div>
+		<input type="date" value={bookEndStr} oninput={handleInputOut} />
+		<div>by 11 a.m.</div>
+	</div>
+	<a class="cta" href={getUrl(bookStartStr, bookEndStr)}>Book now</a>
 </div>
 
 <div
@@ -95,12 +112,20 @@
 	{#each days as day}
 		{@const morning = timeDay.offset(day, -1)}
 		<div class="day">
-			<div class="label">{day.getDate()}</div>
+			<div class="label">
+				<span
+					>{#if day.getDate() === 1 || day === days[0]}
+						{new Intl.DateTimeFormat('en', { month: 'long' }).format(
+							new Date(2000, day.getMonth())
+						)}
+					{/if}</span
+				><span>{day.getDate()}</span>
+			</div>
 			<div
 				class={`nightparts ${bookNights.find((d) => +d === +morning) && bookNights.find((d) => +d === +day) ? 'selected' : ''}`}
 			>
 				<div
-					class={`morning part ${+bookHover === +morning ? 'hover' : ''} ${bookNights.find((d) => +d === +morning) ? 'selected' : ''}`}
+					class={`morning part ${+bookHover === +morning ? 'hover' : ''} ${bookNights.find((d) => +d === +morning) ? 'selected' : ''} ${!isBookable(morning) ? 'disabled' : ''}`}
 					onmousedown={() => handleMouseDown(morning)}
 					onmouseup={() => handleMouseUp(morning)}
 					onmouseenter={() => handleMouseEnter(morning)}
@@ -108,7 +133,7 @@
 				></div>
 				<div class="gap"></div>
 				<div
-					class={`evening part ${+bookHover === +day ? 'hover' : ''} ${bookNights.find((d) => +d === +day) ? 'selected' : ''}`}
+					class={`evening part ${+bookHover === +day ? 'hover' : ''} ${bookNights.find((d) => +d === +day) ? 'selected' : ''} ${!isBookable(day) ? 'disabled' : ''}`}
 					onmousedown={() => handleMouseDown(day)}
 					onmouseup={() => handleMouseUp(day)}
 					onmouseenter={() => handleMouseEnter(day)}
@@ -120,6 +145,12 @@
 </div>
 
 <style>
+	.form-wrapper {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		gap: 1em;
+	}
 	.form {
 		width: 400px;
 		display: grid;
@@ -137,11 +168,20 @@
 		display: grid;
 		grid-template-columns: repeat(7, 1fr);
 		border: 0.5px solid #eee;
+		max-height: 500px;
+		overflow-y: scroll;
+		scroll-snap-type: y mandatory;
+		scroll-padding-top: 31px;
 	}
 	.dow {
 		box-shadow: inset 0 0 0 0.5px #eee;
 		text-align: center;
 		padding: 0.25em;
+		scroll-snap-align: start;
+		position: sticky;
+		top: 0;
+		background: white;
+		z-index: 1;
 	}
 	.day {
 		box-shadow: inset 0 0 0 0.5px #eee;
@@ -149,11 +189,19 @@
 		display: flex;
 		flex-direction: column;
 		user-select: none;
+		scroll-snap-align: start;
+	}
+	.part.disabled {
+		opacity: 0.3;
+		pointer-events: none;
 	}
 	.label {
-		text-align: right;
+		display: flex;
+		justify-content: space-between;
 		padding: 0.5em;
-		justify-self: end;
+	}
+	.label span:last-child {
+		text-align: right;
 	}
 	.nightparts {
 		display: grid;
