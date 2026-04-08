@@ -1,7 +1,7 @@
 <script>
 	import { timeDay, timeSunday } from 'd3-time';
 
-	const checkin = 3;
+	const checkin = 15;
 	const checkout = 11;
 
 	const start = timeSunday.floor(new Date());
@@ -11,7 +11,7 @@
 	let bookStart = $state(null);
 	let bookEnd = $state(null);
 	let bookStartStr = $derived(dateFormat(bookStart));
-	let bookEndStr = $derived(dateFormat(bookEnd));
+	let bookEndStr = $derived(bookEnd && dateFormat(timeDay.offset(bookEnd, 1)));
 	let dragStart = $state(null);
 	let bookNights = $derived(
 		bookStart && bookEnd ? days.filter((day) => day >= bookStart && day <= bookEnd) : []
@@ -75,12 +75,16 @@
 	<input
 		type="date"
 		value={bookEndStr}
-		oninput={(e) => (bookEnd = days.find((d) => dateFormat(d) === e.target.value))}
+		oninput={(e) =>
+			(bookEnd = days.find((d) => dateFormat(timeDay.offset(d, 1)) === e.target.value))}
 	/>
 	<div>by 11 a.m.</div>
 </div>
 
-<div class="calendar">
+<div
+	class="calendar"
+	style="--morning: {checkout}fr; --turnover: {checkin - checkout}fr; --evening: {24 - checkin}fr;"
+>
 	<div class="dow">Sunday</div>
 	<div class="dow">Monday</div>
 	<div class="dow">Tuesday</div>
@@ -153,7 +157,7 @@
 	}
 	.nightparts {
 		display: grid;
-		grid-template-columns: 11fr 4fr 9fr;
+		grid-template-columns: var(--morning) var(--turnover) var(--evening);
 		gap: 4fr;
 		height: 3em;
 	}
