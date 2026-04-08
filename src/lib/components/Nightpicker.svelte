@@ -192,7 +192,7 @@
 		scroll-snap-align: start;
 	}
 	.part.disabled {
-		opacity: 0.3;
+		visibility: hidden;
 		pointer-events: none;
 	}
 	.label {
@@ -210,7 +210,7 @@
 		height: 3em;
 	}
 	.nightparts .part {
-		border: 1px solid var(--blue);
+		border: 1px solid #ccc;
 		background: white;
 	}
 	.nightparts .morning {
@@ -229,5 +229,6 @@
 	.nightparts.selected,
 	.nightparts .part.selected {
 		background: var(--blue);
+		border-color: var(--blue);
 	}
 </style>
