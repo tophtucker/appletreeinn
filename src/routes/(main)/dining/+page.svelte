@@ -1,6 +1,7 @@
 <script>
 	import Image from '$lib/lightbox/Image.svelte';
 	import VR from '$lib/components/VR.svelte';
+	import RenoNotice from '$lib/components/RenoNotice.svelte';
 	import { RESERVATIONS_URL } from '$lib/nav.js';
 	let { data } = $props();
 </script>
@@ -13,7 +14,12 @@
 	/>
 </svelte:head>
 
-<div class="inner">
+<RenoNotice
+	>There is no restaurant onsite during renovations. Guests staying at the Lodge during summer 2026
+	will be able to purchase breakfast boxes.</RenoNotice
+>
+
+<div class="inner blur">
 	<div class="comparison-table">
 		<div class="header hide-mobile"></div>
 
