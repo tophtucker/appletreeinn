@@ -111,7 +111,13 @@
 	<div class="dow">Saturday</div>
 	{#each days as day}
 		{@const morning = timeDay.offset(day, -1)}
-		<div class="day">
+		<div
+			class="day"
+			onmousedown={() => handleMouseDown(isDragging ? morning : day)}
+			onmouseup={() => handleMouseUp(isDragging ? morning : day)}
+			onmouseenter={() => handleMouseEnter(isDragging ? morning : day)}
+			onmouseleave={() => handleMouseLeave(isDragging ? morning : day)}
+		>
 			<div class="label">
 				<span
 					>{#if day.getDate() === 1 || day === days[0]}
