@@ -70,11 +70,10 @@ Our Main House guest rooms and Ostrich Room tavern are under renovation and clos
 		machine.
 	</p>
 
-	<!-- <div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
-		<a class="cta disabled" href={BOOKING_URL}>Book now</a>
+	<div style="display: flex; justify-content: flex-start; align-items: center; gap: 2rem;">
+		<a class="cta" href={BOOKING_URL}>Book now</a>
 		<NoMinimum class="nomin" />
-	</div> -->
-	<p>Bookings open soon.</p>
+	</div>
 </section>
 
 <Rule />
