@@ -185,11 +185,13 @@
 	}
 	.day {
 		box-shadow: inset 0 0 0 0.5px #eee;
-		aspect-ratio: 1;
-		display: flex;
-		flex-direction: column;
+		aspect-ratio: 3 / 2;
+		display: grid;
+		grid-template-rows: 1fr 2fr;
 		user-select: none;
 		scroll-snap-align: start;
+		padding: 0.5em 0;
+		gap: 0.5em;
 	}
 	.part.disabled {
 		visibility: hidden;
@@ -198,7 +200,7 @@
 	.label {
 		display: flex;
 		justify-content: space-between;
-		padding: 0.5em;
+		padding: 0 0.5em;
 	}
 	.label span:last-child {
 		text-align: right;
@@ -206,8 +208,6 @@
 	.nightparts {
 		display: grid;
 		grid-template-columns: var(--morning) var(--turnover) var(--evening);
-		gap: 4fr;
-		height: 3em;
 	}
 	.nightparts .part {
 		border: 1px solid #ccc;
