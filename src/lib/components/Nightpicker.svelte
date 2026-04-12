@@ -1,5 +1,6 @@
 <script>
-	import { timeDay, timeSunday, timeMonday } from 'd3-time';
+	import Icon from '$lib/icons/Icon.svelte';
+	import { timeDay, timeMonday } from 'd3-time';
 	import { BOOKING_URL } from '$lib/nav.js';
 
 	const checkin = 15;
@@ -169,6 +170,14 @@
 		bookEnd = newDay;
 	}
 
+	function clearStart() {
+		bookStart = null;
+	}
+
+	function clearEnd() {
+		bookEnd = null;
+	}
+
 	function dateFormat(date) {
 		if (!date) return '';
 		const y = date.getFullYear();
@@ -206,22 +215,28 @@
 <div class="form-wrapper">
 	<div class="form">
 		<div>Check in</div>
-		<input
-			type="date"
-			value={bookStartStr}
-			min={dateFormat(bookingMin)}
-			max={dateFormat(bookingMax)}
-			oninput={handleInputIn}
-		/>
+		<span>
+			<input
+				type="date"
+				value={bookStartStr}
+				min={dateFormat(bookingMin)}
+				max={dateFormat(bookingMax)}
+				oninput={handleInputIn}
+			/>
+			<button class="clear" onclick={clearStart}><Icon icon="Close" /></button>
+		</span>
 		<div>after 3 p.m.</div>
 		<div>Check out</div>
-		<input
-			type="date"
-			value={bookEndStr}
-			min={dateFormat(timeDay.offset(bookingMin, 1))}
-			max={dateFormat(timeDay.offset(bookingMax, 1))}
-			oninput={handleInputOut}
-		/>
+		<span
+			><input
+				type="date"
+				value={bookEndStr}
+				min={dateFormat(timeDay.offset(bookingMin, 1))}
+				max={dateFormat(timeDay.offset(bookingMax, 1))}
+				oninput={handleInputOut}
+			/>
+			<button class="clear" onclick={clearEnd}><Icon icon="Close" /></button></span
+		>
 		<div>by 11 a.m.</div>
 	</div>
 	<a class="cta" href={getUrl(bookStartStr, bookEndStr)}>Book now</a>
@@ -313,14 +328,24 @@
 	.form {
 		width: 400px;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1em;
+		grid-template-columns: 0.8fr 1.7fr 1fr;
+		gap: 0.5em;
 		margin-bottom: 1em;
 		align-items: center;
 	}
 	input[type='date'] {
 		font: inherit;
 		font-variant: tabular-nums;
+	}
+	.clear {
+		border-color: transparent;
+		cursor: pointer;
+		width: 1.5em;
+		color: #ccc;
+	}
+	.clear:hover {
+		background: none;
+		color: black;
 	}
 
 	.calendar {
