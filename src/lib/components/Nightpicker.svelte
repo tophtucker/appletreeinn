@@ -126,11 +126,19 @@
 			>
 				<div
 					class={`morning part ${+bookHover === +morning ? 'hover' : ''} ${bookNights.find((d) => +d === +morning) ? 'selected' : ''} ${!isBookable(morning) ? 'disabled' : ''}`}
-				></div>
+				>
+					{#if +morning === +bookEnd}
+						<div class="edge"></div>
+					{/if}
+				</div>
 				<div class="gap"></div>
 				<div
 					class={`evening part ${+bookHover === +day ? 'hover' : ''} ${bookNights.find((d) => +d === +day) ? 'selected' : ''} ${!isBookable(day) ? 'disabled' : ''}`}
-				></div>
+				>
+					{#if +day === +bookStart}
+						<div class="edge"></div>
+					{/if}
+				</div>
 			</div>
 			<div class="hitboxes">
 				<div
@@ -199,7 +207,7 @@
 		user-select: none;
 		scroll-snap-align: start;
 		padding: 0.5em 0;
-		gap: 0.5em;
+		gap: 1px;
 		position: relative;
 	}
 	.label {
@@ -233,6 +241,7 @@
 	.nightparts .part {
 		border: 1px solid #ccc;
 		background: white;
+		position: relative;
 	}
 	.nightparts .part.disabled {
 		visibility: hidden;
@@ -252,7 +261,25 @@
 	}
 	.nightparts.selected,
 	.nightparts .part.selected {
+		background: color-mix(in srgb, var(--blue) 30%, white);
+		border-color: transparent;
+	}
+	.nightparts .part .edge {
+		position: absolute;
+		top: -1px;
+		height: calc(100% + 2px);
+		width: 5px;
+	}
+	.nightparts .morning.part .edge {
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
 		background: var(--blue);
-		border-color: var(--blue);
+		right: -1px;
+	}
+	.nightparts .evening.part .edge {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		background: var(--blue);
+		left: -1px;
 	}
 </style>

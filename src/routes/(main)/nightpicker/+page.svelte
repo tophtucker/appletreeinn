@@ -8,6 +8,6 @@
 </svelte:head>
 
 <div class="inner">
-	<h1>Nightpicker demo</h1>
+	<h1>Nightpicker</h1>
 	<Nightpicker />
 </div>
