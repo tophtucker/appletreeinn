@@ -40,7 +40,7 @@
 		return bookStart && bookEnd && day >= bookStart && day <= bookEnd;
 	}
 
-	function handleEdgeMouseDown(which, e) {
+	function handleEdgePointerDown(which, e) {
 		e.preventDefault();
 		e.stopPropagation();
 		if (which === 'start') {
@@ -52,7 +52,7 @@
 		}
 	}
 
-	function handleMouseDown(day, e) {
+	function handlePointerDown(day, e) {
 		e.preventDefault();
 
 		if (bookStart && bookEnd && isInSelection(day)) {
@@ -71,7 +71,7 @@
 		bookEnd = null;
 	}
 
-	function handleMouseUp(day) {
+	function handlePointerUp(day) {
 		if (!dragMode) return;
 
 		if (dragMode === 'new') {
@@ -88,7 +88,7 @@
 		dragAnchorDay = null;
 	}
 
-	function handleMouseEnter(day) {
+	function handlePointerEnter(day) {
 		bookHover = day;
 		if (!dragMode) return;
 
@@ -146,12 +146,12 @@
 		}
 	}
 
-	function handleMouseLeave() {
+	function handlePointerLeave() {
 		bookHover = null;
 	}
 
 	// Global mouseup so a drag released outside the calendar still finishes cleanly
-	function handleGlobalMouseUp() {
+	function handleGlobalPointerUp() {
 		if (dragMode) {
 			dragMode = null;
 			dragAnchorDay = null;
@@ -214,7 +214,7 @@
 	);
 </script>
 
-<svelte:window onmouseup={handleGlobalMouseUp} />
+<svelte:window onpointerup={handleGlobalPointerUp} />
 
 <div class="form-wrapper">
 	<div class="form">
@@ -281,7 +281,7 @@
 						<div
 							class="edge"
 							role="presentation"
-							onmousedown={(e) => handleEdgeMouseDown('end', e)}
+							onpointerdown={(e) => handleEdgePointerDown('end', e)}
 						></div>
 					{/if}
 				</div>
@@ -293,7 +293,7 @@
 						<div
 							class="edge"
 							role="presentation"
-							onmousedown={(e) => handleEdgeMouseDown('start', e)}
+							onpointerdown={(e) => handleEdgePointerDown('start', e)}
 						></div>
 					{/if}
 				</div>
@@ -303,19 +303,19 @@
 					role="presentation"
 					class={`hitbox ${!isBookable(morning) ? 'disabled' : ''}`}
 					style="cursor: {hitboxCursor(morning)}"
-					onmousedown={(e) => handleMouseDown(morning, e)}
-					onmouseup={() => handleMouseUp(morning)}
-					onmouseenter={() => handleMouseEnter(morning)}
-					onmouseleave={() => handleMouseLeave()}
+					onpointerdown={(e) => handlePointerDown(morning, e)}
+					onpointerup={() => handlePointerUp(morning)}
+					onpointerenter={() => handlePointerEnter(morning)}
+					onpointerleave={() => handlePointerLeave()}
 				></div>
 				<div
 					role="presentation"
 					class={`hitbox ${!isBookable(day) ? 'disabled' : ''}`}
 					style="cursor: {hitboxCursor(day)}"
-					onmousedown={(e) => handleMouseDown(day, e)}
-					onmouseup={() => handleMouseUp(day)}
-					onmouseenter={() => handleMouseEnter(day)}
-					onmouseleave={() => handleMouseLeave()}
+					onpointerdown={(e) => handlePointerDown(day, e)}
+					onpointerup={() => handlePointerUp(day)}
+					onpointerenter={() => handlePointerEnter(day)}
+					onpointerleave={() => handlePointerLeave()}
 				></div>
 			</div>
 		</div>
