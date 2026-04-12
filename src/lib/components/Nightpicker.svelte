@@ -158,6 +158,7 @@
 			</div>
 			<div class="hitboxes">
 				<div
+					role="presentation"
 					class={`hitbox ${!isBookable(morning) ? 'disabled' : ''}`}
 					onmousedown={() => handleMouseDown(morning)}
 					onmouseup={() => handleMouseUp(morning)}
@@ -165,6 +166,7 @@
 					onmouseleave={() => handleMouseLeave(morning)}
 				></div>
 				<div
+					role="presentation"
 					class={`hitbox ${!isBookable(day) ? 'disabled' : ''}`}
 					onmousedown={() => handleMouseDown(day)}
 					onmouseup={() => handleMouseUp(day)}
