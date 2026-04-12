@@ -91,10 +91,24 @@
 	<div class="form">
 		<div>Check in</div>
 		<!-- TODO: min & max dates -->
-		<input type="date" value={bookStartStr} oninput={handleInputIn} />
+		<input
+			type="date"
+			value={bookStartStr}
+			min={dateFormat(bookingMin)}
+			max={dateFormat(bookingMax)}
+			oninput={handleInputIn}
+		/>
+
 		<div>after 3 p.m.</div>
 		<div>Check out</div>
-		<input type="date" value={bookEndStr} oninput={handleInputOut} />
+		<input
+			type="date"
+			value={bookEndStr}
+			min={dateFormat(timeDay.offset(bookingMin, 1))}
+			max={dateFormat(timeDay.offset(bookingMax, 1))}
+			oninput={handleInputOut}
+		/>
+
 		<div>by 11 a.m.</div>
 	</div>
 	<a class="cta" href={getUrl(bookStartStr, bookEndStr)}>Book now</a>
