@@ -111,13 +111,7 @@
 	<div class="dow">Saturday</div>
 	{#each days as day}
 		{@const morning = timeDay.offset(day, -1)}
-		<div
-			class="day"
-			onmousedown={() => handleMouseDown(isDragging ? morning : day)}
-			onmouseup={() => handleMouseUp(isDragging ? morning : day)}
-			onmouseenter={() => handleMouseEnter(isDragging ? morning : day)}
-			onmouseleave={() => handleMouseLeave(isDragging ? morning : day)}
-		>
+		<div class="day">
 			<div class="label">
 				<span
 					>{#if day.getDate() === 1 || day === days[0]}
@@ -132,14 +126,22 @@
 			>
 				<div
 					class={`morning part ${+bookHover === +morning ? 'hover' : ''} ${bookNights.find((d) => +d === +morning) ? 'selected' : ''} ${!isBookable(morning) ? 'disabled' : ''}`}
+				></div>
+				<div class="gap"></div>
+				<div
+					class={`evening part ${+bookHover === +day ? 'hover' : ''} ${bookNights.find((d) => +d === +day) ? 'selected' : ''} ${!isBookable(day) ? 'disabled' : ''}`}
+				></div>
+			</div>
+			<div class="hitboxes">
+				<div
+					class={`hitbox ${!isBookable(morning) ? 'disabled' : ''}`}
 					onmousedown={() => handleMouseDown(morning)}
 					onmouseup={() => handleMouseUp(morning)}
 					onmouseenter={() => handleMouseEnter(morning)}
 					onmouseleave={() => handleMouseLeave(morning)}
 				></div>
-				<div class="gap"></div>
 				<div
-					class={`evening part ${+bookHover === +day ? 'hover' : ''} ${bookNights.find((d) => +d === +day) ? 'selected' : ''} ${!isBookable(day) ? 'disabled' : ''}`}
+					class={`hitbox ${!isBookable(day) ? 'disabled' : ''}`}
 					onmousedown={() => handleMouseDown(day)}
 					onmouseup={() => handleMouseUp(day)}
 					onmouseenter={() => handleMouseEnter(day)}
@@ -198,10 +200,7 @@
 		scroll-snap-align: start;
 		padding: 0.5em 0;
 		gap: 0.5em;
-	}
-	.part.disabled {
-		visibility: hidden;
-		pointer-events: none;
+		position: relative;
 	}
 	.label {
 		display: flex;
@@ -211,6 +210,22 @@
 	.label span:last-child {
 		text-align: right;
 	}
+	.hitboxes {
+		display: grid;
+		grid-template-columns: var(--morning) var(--evening);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+	.hitbox {
+		/* */
+	}
+	.hitbox.disabled {
+		pointer-events: none;
+	}
 	.nightparts {
 		display: grid;
 		grid-template-columns: var(--morning) var(--turnover) var(--evening);
@@ -218,6 +233,9 @@
 	.nightparts .part {
 		border: 1px solid #ccc;
 		background: white;
+	}
+	.nightparts .part.disabled {
+		visibility: hidden;
 	}
 	.nightparts .morning {
 		border-left: none;
