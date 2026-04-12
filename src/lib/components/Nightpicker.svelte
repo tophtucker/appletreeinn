@@ -5,8 +5,10 @@
 	const checkin = 15;
 	const checkout = 11;
 
-	const start = timeSunday.floor(new Date());
-	const days = timeDay.range(start, timeDay.offset(start, 7 * 10));
+	const bookingMin = timeDay(new Date());
+	const bookingMax = timeDay.offset(bookingMin, 7 * 10);
+	const bookingDays = timeDay.range(bookingMin, bookingMax);
+	const calendarDays = timeDay.range(timeSunday.floor(bookingMin), timeSunday.ceil(bookingMax));
 
 	let bookHover = $state(null);
 	let bookStart = $state(null);
@@ -15,7 +17,7 @@
 	let bookEndStr = $derived(bookEnd && dateFormat(timeDay.offset(bookEnd, 1)));
 	let dragStart = $state(null);
 	let bookNights = $derived(
-		bookStart && bookEnd ? days.filter((day) => day >= bookStart && day <= bookEnd) : []
+		bookStart && bookEnd ? calendarDays.filter((day) => day >= bookStart && day <= bookEnd) : []
 	);
 	let isDragging = false;
 
@@ -56,13 +58,13 @@
 	}
 
 	function handleInputIn(e) {
-		const newDay = days.find((d) => dateFormat(d) === e.target.value);
+		const newDay = calendarDays.find((d) => dateFormat(d) === e.target.value);
 		if (!isBookable(newDay)) return;
 		bookStart = newDay;
 	}
 
 	function handleInputOut(e) {
-		const newDay = days.find((d) => dateFormat(timeDay.offset(d, 1)) === e.target.value);
+		const newDay = calendarDays.find((d) => dateFormat(timeDay.offset(d, 1)) === e.target.value);
 		if (!isBookable(newDay)) return;
 		bookEnd = newDay;
 	}
@@ -79,9 +81,9 @@
 		return `${BOOKING_URL}?checkInDate=${a}&checkOutDate=${b}`;
 	}
 
+	// TODO: edge cases? i've tried to book a room for "tonight" after midnight before
 	function isBookable(date) {
-		// TODO: edge cases? i've tried to book a room for "tonight" after midnight before
-		return date >= timeDay(new Date());
+		return !!bookingDays.find((d) => +d === +date);
 	}
 </script>
 
@@ -109,12 +111,12 @@
 	<div class="dow">Thursday</div>
 	<div class="dow">Friday</div>
 	<div class="dow">Saturday</div>
-	{#each days as day}
+	{#each calendarDays as day}
 		{@const morning = timeDay.offset(day, -1)}
 		<div class="day">
 			<div class="label">
 				<span
-					>{#if day.getDate() === 1 || day === days[0]}
+					>{#if day.getDate() === 1 || day === calendarDays[0]}
 						{new Intl.DateTimeFormat('en', { month: 'long' }).format(
 							new Date(2000, day.getMonth())
 						)}
