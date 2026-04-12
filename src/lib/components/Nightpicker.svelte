@@ -186,6 +186,10 @@
 		return `${y}-${m}-${d}`;
 	}
 
+	function timeFormat(hour) {
+		return hour >= 12 ? `${hour - 12} p.m.` : `${hour} a.m.`;
+	}
+
 	function getUrl(a, b) {
 		return `${BOOKING_URL}?checkInDate=${a}&checkOutDate=${b}`;
 	}
@@ -225,7 +229,7 @@
 			/>
 			<button class="clear" onclick={clearStart}><Icon icon="Close" /></button>
 		</span>
-		<div>after 3 p.m.</div>
+		<div>after {timeFormat(checkin)}</div>
 		<div>Check out</div>
 		<span
 			><input
@@ -237,7 +241,7 @@
 			/>
 			<button class="clear" onclick={clearEnd}><Icon icon="Close" /></button></span
 		>
-		<div>by 11 a.m.</div>
+		<div>by {timeFormat(checkout)}</div>
 	</div>
 	<a class="cta" href={getUrl(bookStartStr, bookEndStr)}>Book now</a>
 </div>
@@ -248,18 +252,18 @@
 	style="--morning: {checkout}fr; --turnover: {checkin - checkout}fr; --evening: {24 -
 		checkin}fr; {dragCursor ? `cursor: ${dragCursor};` : ''}"
 >
-	<div class="dow">Monday</div>
-	<div class="dow">Tuesday</div>
-	<div class="dow">Wednesday</div>
-	<div class="dow">Thursday</div>
-	<div class="dow">Friday</div>
-	<div class="dow weekend">Saturday</div>
-	<div class="dow weekend">Sunday</div>
+	<div class="dow">M<span class="hide-mobile">onday</span></div>
+	<div class="dow">T<span class="hide-mobile">uesday</span></div>
+	<div class="dow">W<span class="hide-mobile">ednesday</span></div>
+	<div class="dow">T<span class="hide-mobile">hursday</span></div>
+	<div class="dow">F<span class="hide-mobile">riday</span></div>
+	<div class="dow weekend">S<span class="hide-mobile">aturday</span></div>
+	<div class="dow weekend">S<span class="hide-mobile">unday</span></div>
 	{#each calendarDays as day}
 		{@const morning = timeDay.offset(day, -1)}
 		<div class={`day ${day.getDay() === 0 || day.getDay() === 6 ? 'weekend' : ''}`}>
 			<div class="label">
-				<span
+				<span class="hide-mobile"
 					>{#if day.getDate() === 1 || day === calendarDays[0]}
 						{new Intl.DateTimeFormat('en', { month: 'long' }).format(
 							new Date(2000, day.getMonth())
@@ -324,13 +328,14 @@
 		align-items: start;
 		justify-content: space-between;
 		gap: 1em;
+		flex-wrap: wrap;
+		margin-bottom: 1em;
 	}
 	.form {
-		width: 400px;
+		max-width: 400px;
 		display: grid;
 		grid-template-columns: 0.8fr 1.7fr 1fr;
 		gap: 0.5em;
-		margin-bottom: 1em;
 		align-items: center;
 	}
 	input[type='date'] {
@@ -409,9 +414,6 @@
 		z-index: 3;
 		pointer-events: none;
 	}
-	.hitbox {
-		/* */
-	}
 	.hitbox.disabled {
 		pointer-events: none;
 	}
@@ -464,5 +466,17 @@
 		border-bottom-left-radius: 5px;
 		background: var(--blue);
 		left: -1px;
+	}
+	@media (max-width: 800px) {
+		.form {
+			grid-template-columns: 2fr 1fr;
+		}
+		.form div:nth-child(3n + 1) {
+			grid-column: 1 / span 2;
+		}
+		.day {
+			aspect-ratio: 2 / 3;
+			padding: 0 0 5px 0;
+		}
 	}
 </style>
