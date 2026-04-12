@@ -1,14 +1,14 @@
 <script>
-	import { timeDay, timeSunday } from 'd3-time';
+	import { timeDay, timeSunday, timeMonday } from 'd3-time';
 	import { BOOKING_URL } from '$lib/nav.js';
 
 	const checkin = 15;
 	const checkout = 11;
 
-	const bookingMin = timeDay(new Date());
-	const bookingMax = timeDay.offset(bookingMin, 7 * 10);
+	const bookingMin = timeDay(new Date(2026, 4, 15));
+	const bookingMax = timeDay(new Date(2026, 9, 31));
 	const bookingDays = timeDay.range(bookingMin, bookingMax);
-	const calendarDays = timeDay.range(timeSunday.floor(bookingMin), timeSunday.ceil(bookingMax));
+	const calendarDays = timeDay.range(timeMonday.floor(bookingMin), timeMonday.ceil(bookingMax));
 
 	let bookHover = $state(null);
 	let bookStart = $state(null);
@@ -233,16 +233,16 @@
 	style="--morning: {checkout}fr; --turnover: {checkin - checkout}fr; --evening: {24 -
 		checkin}fr; {dragCursor ? `cursor: ${dragCursor};` : ''}"
 >
-	<div class="dow">Sunday</div>
 	<div class="dow">Monday</div>
 	<div class="dow">Tuesday</div>
 	<div class="dow">Wednesday</div>
 	<div class="dow">Thursday</div>
 	<div class="dow">Friday</div>
-	<div class="dow">Saturday</div>
+	<div class="dow weekend">Saturday</div>
+	<div class="dow weekend">Sunday</div>
 	{#each calendarDays as day}
 		{@const morning = timeDay.offset(day, -1)}
-		<div class="day">
+		<div class={`day ${day.getDay() === 0 || day.getDay() === 6 ? 'weekend' : ''}`}>
 			<div class="label">
 				<span
 					>{#if day.getDate() === 1 || day === calendarDays[0]}
@@ -343,7 +343,9 @@
 		position: sticky;
 		top: 0;
 		background: white;
-		z-index: 1;
+		z-index: 4;
+		text-transform: uppercase;
+		font-size: smaller;
 	}
 	.day {
 		box-shadow: inset 0 0 0 0.5px #eee;
@@ -355,6 +357,9 @@
 		padding: 0.5em 0;
 		gap: 1px;
 		position: relative;
+	}
+	.weekend {
+		background: #f9f9f9;
 	}
 	.label {
 		display: flex;

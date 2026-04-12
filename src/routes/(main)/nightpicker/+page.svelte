@@ -8,6 +8,12 @@
 </svelte:head>
 
 <div class="inner">
-	<h1>Nightpicker</h1>
+	<h1>Nightpicker (Variant A)</h1>
+	<p>
+		This is an experiment. See <a href="https://github.com/tophtucker/avaloch/issues/133"
+			>GitHub issue</a
+		>.
+	</p>
+	<hr />
 	<Nightpicker />
 </div>
