@@ -43,6 +43,7 @@
 	function handleEdgePointerDown(which, e) {
 		e.preventDefault();
 		e.stopPropagation();
+		e.target.releasePointerCapture(e.pointerId);
 		if (which === 'start') {
 			dragMode = 'resize-start';
 			dragAnchorDay = bookEnd;
@@ -54,6 +55,7 @@
 
 	function handlePointerDown(day, e) {
 		e.preventDefault();
+		e.target.releasePointerCapture(e.pointerId);
 
 		if (bookStart && bookEnd && isInSelection(day)) {
 			// Interior → move the whole selection
@@ -86,6 +88,7 @@
 
 		dragMode = null;
 		dragAnchorDay = null;
+		bookHover = null;
 	}
 
 	function handlePointerEnter(day) {
@@ -150,11 +153,12 @@
 		bookHover = null;
 	}
 
-	// Global mouseup so a drag released outside the calendar still finishes cleanly
+	// Fallback: drag released outside the calendar
 	function handleGlobalPointerUp() {
 		if (dragMode) {
 			dragMode = null;
 			dragAnchorDay = null;
+			bookHover = null;
 		}
 	}
 
@@ -473,6 +477,10 @@
 		}
 		.form div:nth-child(3n + 1) {
 			grid-column: 1 / span 2;
+		}
+		.calendar {
+			max-height: none;
+			touch-action: none;
 		}
 		.day {
 			aspect-ratio: 2 / 3;
