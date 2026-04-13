@@ -27,10 +27,16 @@ export function parsePerformance(p) {
 // BULLETINS
 
 export function parseBulletin(b) {
-	console.log('parseBulletin', b.startTime, typeof b.startTime, `hello ${b.startTime} world`);
 	b.startTime = isoParse(b.startTime);
 	if (b.details) b.details = toHTML(b.details);
 	return b;
+}
+
+// AMENITIES
+
+export function parseAmenity(a) {
+	if (a.description) a.description = toHTML(a.description);
+	return a;
 }
 
 // RESTAURANTS

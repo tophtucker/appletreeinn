@@ -2,6 +2,8 @@
 	import Asterisk from '$lib/icons/Asterisk.svelte';
 	import RenoNotice from '$lib/components/RenoNotice.svelte';
 	let { data } = $props();
+	let { amenities, nonAmenities } = data;
+	console.log(amenities);
 </script>
 
 <svelte:head>
@@ -9,91 +11,20 @@
 	<!-- <meta name="description" content="TODO" /> -->
 </svelte:head>
 
-<RenoNotice
-	>Lodge and pool amenities will be open for the summer, including a new lounge room, free Wi-Fi,
-	parking, coffee and tea, a guest refrigerator, and yoga mats. Main House amenities, including the
-	Ostrich Room, remain under renovation.</RenoNotice
->
-
-<div class="inner blur">
+<div class="inner">
 	<h1>Amenities</h1>
 
 	<dl>
-		<dt>COFFEE AND TEA</dt>
-		<dd>
-			Complimentary coffee and tea are served in the Round Room servery all day long. Fresh brewed
-			coffee from our favorite local coffee roastery, No. Six Depot, is available each morning,
-			until supplies run out. After that, please help yourself to Keurig pods. We also offer a
-			selection of Harney & Sons teas at all times.
-		</dd>
-
-		<dt>DINING</dt>
-		<dd>
-			We have a complimentary continental breakfast buffet every day and a tavern open {data
-				.ostrichRoom.dayRange}; see <a href="/dining">dining</a>.
-		</dd>
-
-		<dt>GAMES</dt>
-		<dd>
-			Board games and packs of cards can be found in the Living Room; most are stored in the cabinet
-			outside of Reception. We’ve got a badminton net on the grass, weather permitting. A bocce set
-			is generally set up by the yard; ask at the Front Desk. We have giant Jenga somewhere in the
-			basement, too!
-		</dd>
-
-		<dt>HEAT AND AIR CONDITIONING</dt>
-		<dd>
-			All rooms are heated with baseboard heaters that can be adjusted individually. The dial is
-			located either on the heater itself or on the wall. All rooms are also air conditioned with
-			in-window or in-wall units that can be adjusted individually.
-		</dd>
-
-		<dt>HIGH CHAIRS</dt>
-		<dd>Available for dining upon request. (Limited inventory.)</dd>
-
-		<dt>ICE</dt>
-		<dd>A cooler filled with ice is located in the Round Room servery.</dd>
-
-		<dt>MICROWAVE</dt>
-		<dd>A communal microwave is located in the Round Room servery.</dd>
-
-		<dt>PARKING</dt>
-		<dd>
-			There is ample free parking on the property. The lower lot is closer to the Main House; the
-			larger upper lot is closer to the Lodge. All guests are welcome to use whichever lot suits
-			their needs.
-		</dd>
-
-		<dt>PACK ’N PLAY</dt>
-		<dd>Available to borrow upon request. (Ask early — we only have one!)</dd>
-
-		<dt>
-			POOL
-			<span class="badge"><Asterisk />Summer only</span>
-		</dt>
-		<dd>
-			The pool is located beyond the Lodge and the Carriage House and is open from dawn to dusk from
-			the Friday of Memorial Day Weekend to the Monday of Labor Day Weekend. Pool towels are
-			provided in your room. There is no lifeguard.
-		</dd>
-
-		<dt>REFRIGERATORS</dt>
-		<dd>
-			In the Main House, there is a communal refrigerator in the Round Room servery. In the Lodge,
-			there is a communal refrigerator off of the entryway on the first floor.
-		</dd>
-
-		<dt>WI-FI</dt>
-		<dd>
-			There is fast free Wi-Fi available throughout the property. It even works well from the picnic
-			benches and pool!
-		</dd>
-
-		<dt>YOGA MATS</dt>
-		<dd>Available to borrow upon request.</dd>
+		{#each amenities as amenity}
+			<dt>
+				{amenity.name}
+				{#if amenity.badge}<span class="badge"><Asterisk />{amenity.badge}</span>{/if}
+			</dt>
+			<dd>{@html amenity.description}</dd>
+		{/each}
 	</dl>
 
-	<hr />
+	<!-- <hr />
 
 	<h2>How Claire would use the hotel</h2>
 	<p>Living here, we have some opinions about how to make the most of it!</p>
@@ -126,18 +57,12 @@
 		<li>Bring a drink out to the firepit to close out the night.</li>
 		<li>Talk to us at the desk to get advice for your stay! We are here to help!</li>
 		<li>Come on a day besides a Friday or Saturday. Weekdays are much, much cheaper year-round!</li>
-	</ul>
+	</ul> -->
 
 	<hr />
 
 	<h2>Non-amenities</h2>
-	<p>
-		There are no TVs, no elevators, no electric car charger, no brunch, and no lunch. On some
-		nights, there’s no dinner; check the <a href="/dining/ostrich-room">Ostrich Room</a> hours if
-		you’re counting on it. Sorry!! If you’re hungry or in need of entertainment we have lots of
-		recommendations for
-		<a href="/activities/berkshires">around town</a>!
-	</p>
+	{@html nonAmenities}
 </div>
 
 <style>
@@ -148,6 +73,9 @@
 	dd {
 		margin-bottom: 1rem;
 		max-width: 640px;
+	}
+	:global(dd p:first-child) {
+		margin-top: 0;
 	}
 	.badge {
 		color: var(--gray);
