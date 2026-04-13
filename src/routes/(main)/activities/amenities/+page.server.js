@@ -1,7 +1,6 @@
 import { sanity, parseAmenity } from '$lib/sanity.js';
 
 const QUERY = `*[_type == "amenity" && disabled != true] | order(name asc) {
-
   _id,
   name,
   badge,

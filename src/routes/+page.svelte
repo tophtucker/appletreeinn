@@ -13,6 +13,9 @@
 
 	let lightbox = $state({ src: null });
 	setContext('lightbox', lightbox);
+
+	let { data } = $props();
+	let { mainGallery } = data;
 </script>
 
 <svelte:head>
@@ -78,7 +81,7 @@ Our Main House guest rooms and Ostrich Room tavern are under renovation and clos
 
 <Rule />
 
-<Gallery />
+<Gallery images={mainGallery} />
 
 <Rule />
 

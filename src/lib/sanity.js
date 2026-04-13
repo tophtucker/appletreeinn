@@ -39,6 +39,18 @@ export function parseAmenity(a) {
 	return a;
 }
 
+// GALLERIES
+
+export function parseGallery(g) {
+	return {
+		...g,
+		images: g.images.map((i) => ({
+			image: builder.image(i.image).url(),
+			caption: i.caption
+		}))
+	};
+}
+
 // RESTAURANTS
 
 function parseDayHours(hours) {
