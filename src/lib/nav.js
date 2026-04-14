@@ -4,6 +4,7 @@ export const RESERVATIONS_URL = '#'; // 'https://tables.toasttab.com/restaurants
 export const nav = [
 	{ title: 'Renovations', slug: 'about/renovations' },
 	{ title: 'Gallery', slug: 'overview/gallery' },
+	{ title: 'Amenities', slug: 'activities/amenities' },
 	{ title: 'Tanglewood', slug: 'activities/tanglewood' },
 	{ title: 'The Berkshires', slug: 'activities/berkshires' },
 	{ title: 'Property map', slug: 'overview/map' },
