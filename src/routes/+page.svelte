@@ -87,14 +87,14 @@ Our Main House guest rooms and Ostrich Room tavern are under renovation and clos
 
 <section class="flex" style="align-items: stretch">
 	<div>
-		<div>10 Richmond Mountain Road</div>
-		<div>Lenox, Massachusetts 01240</div>
-		<div>
-			<a href="mailto:frontdesk@avalochinn.com" target="_blank">frontdesk@avalochinn.com</a>
-		</div>
+		<div>10 Richmond Mountain Road<br />Lenox, Massachusetts 01240</div>
+		<a href="mailto:frontdesk@avalochinn.com" target="_blank">frontdesk@avalochinn.com</a>
 		<div>(413) 637-1910</div>
-		<div><a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a></div>
-		<div><a href="/about/policies" data-sveltekit-reload>Policies</a></div>
+		<a href="https://www.instagram.com/avaloch.inn/" target="_blank">@avaloch.inn</a>
+		<div style="margin-top: 1em;">
+			<a href="/activities/amenities" data-sveltekit-reload>Amenities</a> •
+			<a href="/about/policies" data-sveltekit-reload>Policies</a>
+		</div>
 	</div>
 	<PentathingOrnate class="pentathing" />
 </section>
@@ -316,7 +316,7 @@ Our Main House guest rooms and Ostrich Room tavern are under renovation and clos
 			height: 180px;
 		}
 		sup {
-			font-size: initial;
+			font-size: small;
 			position: absolute;
 			padding-top: 0;
 		}
