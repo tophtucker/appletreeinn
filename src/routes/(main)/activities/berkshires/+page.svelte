@@ -1,3 +1,12 @@
+<script>
+	import { PortableText } from '@portabletext/svelte';
+	import PlaceReference from '$lib/components/PlaceReference.svelte';
+
+	let { data } = $props();
+	let { itineraries } = data;
+	console.log(itineraries);
+</script>
+
 <svelte:head>
 	<title>The Berkshires • Avaloch (formerly Apple Tree Inn) • Lenox, Mass.</title>
 	<meta
@@ -5,6 +14,20 @@
 		content="Do as we do! Tips for local activities, hikes, restaurants, shows, farms, and one bowling alley."
 	/>
 </svelte:head>
+
+{#each itineraries as itinerary}
+	<div class="inner">
+		<h2>{itinerary.title}</h2>
+		<PortableText
+			value={itinerary.body}
+			components={{
+				marks: {
+					placeReference: PlaceReference
+				}
+			}}
+		/>
+	</div>
+{/each}
 
 <div class="inner">
 	<h1>The Berkshires</h1>
