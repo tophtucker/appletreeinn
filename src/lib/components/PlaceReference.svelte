@@ -1,8 +1,10 @@
 <script>
+	const INN_COORDINATES = { latitude: 42.35333212075441, longitude: -73.31689264984297 };
+
 	let { portableText, children } = $props();
 
 	let { value } = $derived(portableText);
-	let { name, address, coordinates } = $derived(value.place);
+	let { name, address, coordinates, gmaps, website } = $derived(value.place);
 
 	let open = $state(false);
 	let wrapper = $state(null);
@@ -23,7 +25,21 @@
 	{#if open}
 		<div class="popover">
 			<div class="name">{name}</div>
-			<div class="address">{address}</div>
+			<div class="address">{address.street}</div>
+			<div class="address">{address.city}</div>
+			<div style="display: flex; gap: 6px;">
+				{#if gmaps}
+					<a href={gmaps} target="_blank">Map</a>
+				{:else}
+					<a
+						href={`https://www.google.com/maps/search/?api=1&query=${coordinates.latitude},${coordinates.longitude}`}
+						target="_blank">Map</a
+					>
+				{/if}
+				{#if website}
+					<a href={website} target="_blank">Website</a>
+				{/if}
+			</div>
 		</div>
 	{/if}
 </span>
@@ -40,9 +56,8 @@
 		padding: 0;
 		cursor: pointer;
 		outline: 1px solid #ccc;
-		outline-offset: 3px;
 		border-radius: 2px;
-		margin: 0 4px;
+		padding: 0 4px;
 	}
 	.place:hover {
 		border: none;

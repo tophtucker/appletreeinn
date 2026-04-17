@@ -6,7 +6,7 @@ const QUERY = `*[_type == "itinerary"] {
       ...,
       markDefs[] {
         ...,
-        "place": place-> { _id, name, address, coordinates }
+        "place": place-> { _id, name, address, gmaps, website, coordinates }
       }
     }
 }
