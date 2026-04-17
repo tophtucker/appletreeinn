@@ -17,13 +17,13 @@
 <svelte:window onclick={handleWindowClick} />
 
 <span class="wrapper" bind:this={wrapper}>
-	<button class="place-reference" onclick={() => (open = !open)}>
+	<button class="place" onclick={() => (open = !open)}>
 		{@render children()}
 	</button>
 	{#if open}
 		<div class="popover">
-			<div>{name}</div>
-			<div>{address}</div>
+			<div class="name">{name}</div>
+			<div class="address">{address}</div>
 		</div>
 	{/if}
 </span>
@@ -34,16 +34,17 @@
 		display: inline-block;
 	}
 
-	.place-reference {
+	.place {
 		background: none;
 		border: none;
 		padding: 0;
 		cursor: pointer;
 		outline: 1px solid #ccc;
 		outline-offset: 3px;
-		border-radius: 5px;
+		border-radius: 2px;
+		margin: 0 4px;
 	}
-	.place-reference:hover {
+	.place:hover {
 		border: none;
 		background: none;
 		color: inherit;
@@ -51,16 +52,20 @@
 	}
 
 	.popover {
+		font-size: smaller;
 		position: absolute;
-		top: 100%;
+		top: calc(100% + 2px);
 		left: 0;
 		margin-top: 4px;
 		z-index: 100;
 		padding: 0.75rem 1rem;
 		border: 1px solid #ccc;
-		border-radius: 6px;
+		border-radius: 5px;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 		background: white;
 		min-width: 200px;
+	}
+	.name {
+		font-weight: bold;
 	}
 </style>
