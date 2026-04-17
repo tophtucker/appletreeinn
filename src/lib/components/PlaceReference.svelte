@@ -44,27 +44,9 @@
 		return ((Math.atan2(y, x) * 180) / Math.PI + 360) % 360;
 	}
 
-	const COMPASS_POINTS = [
-		'N',
-		'NNE',
-		'NE',
-		'ENE',
-		'E',
-		'ESE',
-		'SE',
-		'SSE',
-		'S',
-		'SSW',
-		'SW',
-		'WSW',
-		'W',
-		'WNW',
-		'NW',
-		'NNW'
-	];
-
+	const COMPASS_POINTS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
 	function bearingLabel(deg) {
-		const i = Math.round(deg / 22.5) % 16;
+		const i = Math.round(deg / 45) % 8;
 		return COMPASS_POINTS[i];
 	}
 
