@@ -1,20 +1,58 @@
 <script>
-	const MAIN_HOUSE_COORDS = [42.35333258206217, -73.31690434841543];
-
 	let { portableText, children } = $props();
 
 	let { value } = $derived(portableText);
-
-	// value.place._ref is the Sanity document ID of the referenced place
-	let href = $derived(`/places/${value.place._ref}`);
+	let { name, address, coordinates } = $derived(value.place);
 
 	let open = $state(false);
+	let wrapper = $state(null);
 
-	function handleClick() {
-		open = !open;
+	function handleWindowClick(event) {
+		if (open && wrapper && !wrapper.contains(event.target)) {
+			open = false;
+		}
 	}
 </script>
 
-<button class="place-reference" onclick={handleClick}>
-	{@render children()}
-</button>
+<svelte:window onclick={handleWindowClick} />
+
+<span class="wrapper" bind:this={wrapper}>
+	<button class="place-reference" onclick={() => (open = !open)}>
+		{@render children()}
+	</button>
+	{#if open}
+		<div class="popover">
+			<div>{name}</div>
+			<div>{address}</div>
+		</div>
+	{/if}
+</span>
+
+<style>
+	.wrapper {
+		position: relative;
+		display: inline-block;
+	}
+
+	.place-reference {
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		text-decoration: underline dotted;
+	}
+
+	.popover {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin-top: 4px;
+		z-index: 100;
+		padding: 0.75rem 1rem;
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		background: white;
+		min-width: 200px;
+	}
+</style>
