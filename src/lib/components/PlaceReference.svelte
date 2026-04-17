@@ -39,7 +39,15 @@
 		border: none;
 		padding: 0;
 		cursor: pointer;
-		text-decoration: underline dotted;
+		outline: 1px solid #ccc;
+		outline-offset: 3px;
+		border-radius: 5px;
+	}
+	.place-reference:hover {
+		border: none;
+		background: none;
+		color: inherit;
+		outline-color: var(--blue);
 	}
 
 	.popover {
