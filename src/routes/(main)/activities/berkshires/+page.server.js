@@ -2,7 +2,13 @@ import { sanity } from '$lib/sanity.js';
 
 const QUERY = `*[_type == "itinerary"] {
   title,
-  body[]
+  body[] {
+      ...,
+      markDefs[] {
+        ...,
+        "place": place-> { _id, name, address, coordinates }
+      }
+    }
 }
 `;
 

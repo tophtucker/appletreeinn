@@ -15,20 +15,6 @@
 	/>
 </svelte:head>
 
-{#each itineraries as itinerary}
-	<div class="inner">
-		<h2>{itinerary.title}</h2>
-		<PortableText
-			value={itinerary.body}
-			components={{
-				marks: {
-					placeReference: PlaceReference
-				}
-			}}
-		/>
-	</div>
-{/each}
-
 <div class="inner">
 	<h1>The Berkshires</h1>
 	<p>
@@ -163,4 +149,12 @@
 		Stationery Factory”. The Becket quarry was once a major source of Chester Blue granite, and is
 		now a good swimming hole if you’re willing and able to scramble down some rocks.
 	</p>
+
+	{#each itineraries as itinerary}
+		<h2>{itinerary.title}</h2>
+		<PortableText
+			value={itinerary.body}
+			components={{ marks: { placeReference: PlaceReference } }}
+		/>
+	{/each}
 </div>
