@@ -135,21 +135,6 @@
 		</li>
 	</ul>
 
-	<h2>Industrial heritage</h2>
-
-	<p>
-		It’s not as suitable for sightseeing as the many Gilded Age mansions, but keep an eye out for
-		remnants of the Berkshires’ old mills and factories hiding in plain sight. The William Stanley
-		Overlook on the Housatonic River Walk in Great Barrington commemorates the birthplace of his and
-		George Westinghouse’s alternating current transformer (and of the Stanley water bottle). Some
-		streetlamps still trace back to Westinghouse. Berkshire Hathaway owes half its name to Berkshire
-		Mill No. 1 up in Adams, now an apartment complex. Monument Mills is “the last un-condofied mill
-		in the Berkshires” (used for photo shoots); Rising Paper Mill is still operating. A former Crane
-		Stationery headquarters is now a multifunction event venue in Dalton, aptly named “The
-		Stationery Factory”. The Becket quarry was once a major source of Chester Blue granite, and is
-		now a good swimming hole if you’re willing and able to scramble down some rocks.
-	</p>
-
 	{#each itineraries as itinerary}
 		<h2>{itinerary.title}</h2>
 		<PortableText
