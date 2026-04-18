@@ -2,7 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { INN_COORDINATES, getPlaceUrl } from '$lib/places.js';
 
-	let { itinerary } = $props();
+	let { itinerary, includeInn = true } = $props();
 
 	// Extract unique places with coordinates from all markDefs across all blocks
 	let places = $derived(
@@ -68,8 +68,8 @@
 		}).addTo(map);
 
 		// Fit map to bounds of all markers
-		const group = L.featureGroup([...markers, innMarker]);
-		map.fitBounds(group.getBounds(), { paddingBottomRight: [100, 5] });
+		const group = L.featureGroup(includeInn ? [...markers, innMarker] : markers);
+		map.fitBounds(group.getBounds(), { paddingBottomRight: [100, 5], paddingTopLeft: [5, 5] });
 	});
 
 	onDestroy(() => {
@@ -85,7 +85,6 @@
 
 <style>
 	.map-wrap {
-		margin: 1rem 0;
 		border: 1px solid #ddd;
 		border-radius: 6px;
 		overflow: hidden;

@@ -24,25 +24,79 @@
 		spare chunk of your time.
 	</p>
 
-	{#each itineraries as itinerary}
-		<h2 style="margin-bottom: 0;">{itinerary.title}</h2>
-		<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1em;">
-			<div>
-				<PortableText
-					value={itinerary.body}
-					components={{ marks: { placeReference: PlaceReference } }}
-				/>
-			</div>
-			<ItineraryMap {itinerary} />
-		</div>
-	{/each}
+	<h2>Itineraries</h2>
 
-	<small
-		><em>
-			Maps made with <a href="https://leafletjs.com/">Leaflet</a>. &copy;
-			<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
-			contributors &copy;
-			<a href="https://carto.com/attributions">CARTO</a>.
-		</em>
-	</small>
+	<div class="itineraries">
+		{#each itineraries.filter((d) => d.title) as itinerary}
+			<div class="itinerary">
+				<div>
+					<h3>{itinerary.title}</h3>
+					<PortableText
+						value={itinerary.body}
+						components={{ marks: { placeReference: PlaceReference } }}
+					/>
+				</div>
+				<ItineraryMap {itinerary} />
+			</div>
+		{/each}
+	</div>
+
+	<h3>Other pairings</h3>
+
+	<div class="others">
+		{#each itineraries.filter((d) => !d.title) as itinerary}
+			<div class="other">
+				<ItineraryMap {itinerary} includeInn={false} />
+				<div>
+					<PortableText
+						value={itinerary.body}
+						components={{ marks: { placeReference: PlaceReference } }}
+					/>
+				</div>
+			</div>
+		{/each}
+	</div>
+
+	<footer>
+		Maps made with <a href="https://leafletjs.com/">Leaflet</a>. &copy;
+		<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+		contributors &copy;
+		<a href="https://carto.com/attributions">CARTO</a>.
+	</footer>
 </div>
+
+<style>
+	.itineraries {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+	.itinerary {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1em;
+	}
+	.itinerary h3 {
+		margin: 0;
+	}
+
+	.others {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1em;
+	}
+	.other {
+		display: grid;
+		grid-template-rows: 140px 1fr;
+		gap: 0.5em;
+	}
+	:global(.other p) {
+		margin: 0;
+	}
+
+	footer {
+		font-size: smaller;
+		font-style: italic;
+		margin-top: 4em;
+	}
+</style>
