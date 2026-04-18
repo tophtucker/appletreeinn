@@ -3,6 +3,8 @@
 import { Temporal } from '@js-temporal/polyfill';
 import { min, max, extent, range, sort, ascending } from 'd3-array';
 
+export const INN_COORDINATES = { latitude: 42.35333212075441, longitude: -73.31689264984297 };
+
 // To track down places where we say we’re closed for renovations.
 export const HOTEL_OPEN = false;
 

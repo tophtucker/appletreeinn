@@ -1,7 +1,6 @@
 <script>
+	import { INN_COORDINATES } from '$lib/index.js';
 	import Icon from '$lib/icons/Icon.svelte';
-
-	const INN_COORDINATES = { latitude: 42.35333212075441, longitude: -73.31689264984297 };
 
 	let { portableText, children } = $props();
 
@@ -68,7 +67,6 @@
 	{#if open}
 		<div class="popover">
 			<div class="name">{name}</div>
-			<div class="address">{address.street}</div>
 			<div class="address">{address.city}</div>
 			<div style="display: flex; gap: 6px;">
 				{#if gmaps}
@@ -123,7 +121,7 @@
 		top: calc(100% + 2px);
 		left: 0;
 		margin-top: 4px;
-		z-index: 100;
+		z-index: 999;
 		padding: 0.75rem 1rem;
 		border: 1px solid #ccc;
 		border-radius: 5px;
