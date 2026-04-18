@@ -93,4 +93,11 @@
 			(5 minute drive to Lenox downtown).
 		</li>
 	</ul>
+
+	<small
+		>Maps made with <a href="https://leafletjs.com/">Leaflet</a>. &copy;
+		<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>
+		contributors &copy;
+		<a href="https://carto.com/attributions">CARTO</a>.</small
+	>
 </div>

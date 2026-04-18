@@ -67,7 +67,7 @@
 
 		// Fit map to bounds of all markers
 		const group = L.featureGroup([...markers, innMarker]);
-		map.fitBounds(group.getBounds().pad(0));
+		map.fitBounds(group.getBounds(), { paddingBottomRight: [100, 0] });
 	});
 
 	onDestroy(() => {
@@ -96,6 +96,7 @@
 	.map {
 		height: 100%;
 		width: 100%;
+		min-height: 100px;
 	}
 
 	:global(.leaflet-marker-icon) {
