@@ -1,6 +1,6 @@
 <script>
 	import { onMount, onDestroy } from 'svelte';
-	import { INN_COORDINATES } from '$lib/places.js';
+	import { INN_COORDINATES, getPlaceUrl } from '$lib/places.js';
 
 	let { itinerary } = $props();
 
@@ -51,7 +51,9 @@
 				iconSize: [12, 12],
 				iconAnchor: [6, 6]
 			});
-			return L.marker([latitude, longitude], { icon }).addTo(map);
+			const marker = L.marker([latitude, longitude], { icon }).addTo(map);
+			marker.on('click', () => window.open(getPlaceUrl(place), '_blank'));
+			return marker;
 		});
 
 		// Add inn star marker
@@ -67,7 +69,7 @@
 
 		// Fit map to bounds of all markers
 		const group = L.featureGroup([...markers, innMarker]);
-		map.fitBounds(group.getBounds(), { paddingBottomRight: [100, 0] });
+		map.fitBounds(group.getBounds(), { paddingBottomRight: [100, 5] });
 	});
 
 	onDestroy(() => {
@@ -87,10 +89,6 @@
 		border: 1px solid #ddd;
 		border-radius: 6px;
 		overflow: hidden;
-	}
-
-	.map-wrap * {
-		pointer-events: none !important;
 	}
 
 	.map {
