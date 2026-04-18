@@ -1,5 +1,17 @@
 export const INN_COORDINATES = { latitude: 42.35333212075441, longitude: -73.31689264984297 };
 
+export function getPlacesFromItinerary(itinerary) {
+	return Object.values(
+		itinerary.body
+			.flatMap((block) => block.markDefs ?? [])
+			.filter((m) => m._type === 'placeReference' && m.place?.coordinates)
+			.reduce((acc, m) => {
+				acc[m.place._id] = m.place;
+				return acc;
+			}, {})
+	);
+}
+
 function toRad(deg) {
 	return (deg * Math.PI) / 180;
 }

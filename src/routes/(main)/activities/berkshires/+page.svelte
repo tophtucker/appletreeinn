@@ -1,7 +1,8 @@
 <script>
 	import { PortableText } from '@portabletext/svelte';
 	import PlaceReference from '$lib/components/PlaceReference.svelte';
-	import ItineraryMap from '$lib/components/ItineraryMap.svelte';
+	import PlaceMap from '$lib/components/PlaceMap.svelte';
+	import { getPlacesFromItinerary } from '$lib/places.js';
 
 	let { data } = $props();
 	let { itineraries } = data;
@@ -39,7 +40,7 @@
 						components={{ marks: { placeReference: PlaceReference } }}
 					/>
 				</div>
-				<ItineraryMap {itinerary} />
+				<PlaceMap places={getPlacesFromItinerary(itinerary)} />
 			</div>
 		{/each}
 	</div>
@@ -51,7 +52,7 @@
 			.filter((d) => !d.title)
 			.sort((a, b) => bodyLength(b.body) - bodyLength(a.body)) as itinerary}
 			<div class="other">
-				<ItineraryMap {itinerary} />
+				<PlaceMap places={getPlacesFromItinerary(itinerary)} />
 				<div>
 					<PortableText
 						value={itinerary.body}

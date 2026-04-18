@@ -2,20 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { INN_COORDINATES, getPlaceUrl } from '$lib/places.js';
 
-	let { itinerary, includeInn = true } = $props();
-
-	// Extract unique places with coordinates from all markDefs across all blocks
-	let places = $derived(
-		Object.values(
-			itinerary.body
-				.flatMap((block) => block.markDefs ?? [])
-				.filter((m) => m._type === 'placeReference' && m.place?.coordinates)
-				.reduce((acc, m) => {
-					acc[m.place._id] = m.place;
-					return acc;
-				}, {})
-		)
-	);
+	let { places, includeInn = true } = $props();
 
 	let mapEl = $state(null);
 	let map = null;

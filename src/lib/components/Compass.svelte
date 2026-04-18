@@ -1,6 +1,6 @@
 <script>
 	let { size = 12, bearing, distance, fill = 'currentColor', style, ...rest } = $props();
-	const tail = 3 + distance * 1.2;
+	const tail = 5 + distance * 1.2;
 </script>
 
 <svg
