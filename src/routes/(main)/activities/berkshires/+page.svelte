@@ -6,6 +6,9 @@
 	let { data } = $props();
 	let { itineraries } = data;
 
+	const bodyLength = (body) =>
+		body?.flatMap((block) => block.children?.map((span) => span.text) ?? []).join('').length ?? 0;
+
 	console.log(itineraries);
 </script>
 
@@ -44,9 +47,11 @@
 	<h3>Other pairings</h3>
 
 	<div class="others">
-		{#each itineraries.filter((d) => !d.title) as itinerary}
+		{#each itineraries
+			.filter((d) => !d.title)
+			.sort((a, b) => bodyLength(b.body) - bodyLength(a.body)) as itinerary}
 			<div class="other">
-				<ItineraryMap {itinerary} includeInn={false} />
+				<ItineraryMap {itinerary} />
 				<div>
 					<PortableText
 						value={itinerary.body}
