@@ -22,12 +22,12 @@
 
 <div class="inner">
 	<h1>The Berkshires</h1>
+
+	<h2>Itineraries</h2>
 	<p>
 		Do as we do! Living here, Claire has some ideas from personal experience about how to spend a
 		spare chunk of your time.
 	</p>
-
-	<h2>Itineraries</h2>
 
 	<div class="itineraries">
 		{#each itineraries.filter((d) => d.title) as itinerary}

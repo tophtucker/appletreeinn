@@ -6,7 +6,7 @@
 		bearingDeg,
 		bearingLabel
 	} from '$lib/places.js';
-	import Icon from '$lib/icons/Icon.svelte';
+	import Compass from '$lib/components/Compass.svelte';
 
 	let { portableText, children } = $props();
 
@@ -35,7 +35,7 @@
 <span class="wrapper" bind:this={wrapper}>
 	<button class="place" onclick={() => (open = !open)}>
 		{@render children()}
-		<Icon icon="ArrowUp" class="arrow" style={`transform: rotate(${bearing}deg); opacity: 0.5`} />
+		<Compass {bearing} {distance} style="opacity: 0.5" />
 	</button>
 	{#if open}
 		<div class="popover">
@@ -49,7 +49,7 @@
 			</div>
 			{#if bearing != null}
 				<div class="direction">
-					<Icon icon="ArrowUp" style={`transform: rotate(${bearing}deg);`} />
+					<Compass {bearing} {distance} />
 					<span>{distanceLabel}</span>
 				</div>
 			{/if}
