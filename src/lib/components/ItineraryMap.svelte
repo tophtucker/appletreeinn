@@ -99,8 +99,9 @@
 		min-height: 100px;
 	}
 
-	:global(.leaflet-marker-icon) {
-		cursor: default !important;
+	:global(.leaflet-marker-icon:hover) {
+		position: relative;
+		z-index: 999 !important;
 	}
 
 	:global(.map-pin) {
@@ -128,8 +129,12 @@
 
 	:global(.map-label) {
 		font-size: 0.75rem;
-		/*font-weight: 500;*/
 		color: black;
+		text-shadow:
+			-1px -1px 0 white,
+			1px -1px 0 white,
+			-1px 1px 0 white,
+			1px 1px 0 white;
 		line-height: 1;
 	}
 </style>
