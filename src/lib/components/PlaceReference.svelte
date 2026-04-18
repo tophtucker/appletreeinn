@@ -1,11 +1,17 @@
 <script>
-	import { INN_COORDINATES } from '$lib/index.js';
+	import {
+		INN_COORDINATES,
+		getPlaceUrl,
+		distanceMiles,
+		bearingDeg,
+		bearingLabel
+	} from '$lib/places.js';
 	import Icon from '$lib/icons/Icon.svelte';
 
 	let { portableText, children } = $props();
 
 	let { value } = $derived(portableText);
-	let { name, address, coordinates, gmaps, website } = $derived(value.place);
+	let { name, address, coordinates, website } = $derived(value.place);
 
 	let open = $state(false);
 	let wrapper = $state(null);
@@ -14,39 +20,6 @@
 		if (open && wrapper && !wrapper.contains(event.target)) {
 			open = false;
 		}
-	}
-
-	function toRad(deg) {
-		return (deg * Math.PI) / 180;
-	}
-
-	// Haversine distance in miles
-	function distanceMiles(a, b) {
-		const R = 3958.8;
-		const dLat = toRad(b.latitude - a.latitude);
-		const dLon = toRad(b.longitude - a.longitude);
-		const sinDLat = Math.sin(dLat / 2);
-		const sinDLon = Math.sin(dLon / 2);
-		const h =
-			sinDLat * sinDLat +
-			Math.cos(toRad(a.latitude)) * Math.cos(toRad(b.latitude)) * sinDLon * sinDLon;
-		return R * 2 * Math.asin(Math.sqrt(h));
-	}
-
-	// Bearing in degrees clockwise from north (0–360)
-	function bearingDeg(from, to) {
-		const lat1 = toRad(from.latitude);
-		const lat2 = toRad(to.latitude);
-		const dLon = toRad(to.longitude - from.longitude);
-		const y = Math.sin(dLon) * Math.cos(lat2);
-		const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
-		return ((Math.atan2(y, x) * 180) / Math.PI + 360) % 360;
-	}
-
-	const COMPASS_POINTS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-	function bearingLabel(deg) {
-		const i = Math.round(deg / 45) % 8;
-		return COMPASS_POINTS[i];
 	}
 
 	let bearing = $derived(coordinates ? bearingDeg(INN_COORDINATES, coordinates) : null);
@@ -69,14 +42,7 @@
 			<div class="name">{name}</div>
 			<div class="address">{address.city}</div>
 			<div style="display: flex; gap: 6px;">
-				{#if gmaps}
-					<a href={gmaps} target="_blank">Map</a>
-				{:else}
-					<a
-						href={`https://www.google.com/maps/search/?api=1&query=${coordinates.latitude},${coordinates.longitude}`}
-						target="_blank">Map</a
-					>
-				{/if}
+				<a href={getPlaceUrl(value.place)} target="_blank">Map</a>
 				{#if website}
 					<a href={website} target="_blank">Website</a>
 				{/if}
