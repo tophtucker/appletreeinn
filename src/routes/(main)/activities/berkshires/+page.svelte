@@ -64,7 +64,7 @@
 
 	<HR />
 
-	<!-- TODO: interactive map of all places; list of all places, grouped by tags -->
+	<!-- TODO: interactive Leaflet map of all places, same style as PlaceMap, but with tooltips instead of static text labels, and draggable/zoomable; list of all places, grouped by tags -->
 
 	<footer>
 		Maps made with <a href="https://leafletjs.com/">Leaflet</a>. &copy;
