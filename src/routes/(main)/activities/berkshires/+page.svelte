@@ -1,6 +1,7 @@
 <script>
 	import { PortableText } from '@portabletext/svelte';
 	import PlaceReference from '$lib/components/PlaceReference.svelte';
+	import HR from '$lib/components/HR.svelte';
 	import PlaceMap from '$lib/components/PlaceMap.svelte';
 	import { getPlacesFromItinerary } from '$lib/places.js';
 
@@ -23,8 +24,6 @@
 
 <div class="inner">
 	<h1>The Berkshires</h1>
-
-	<h2>Itineraries</h2>
 	<p>
 		Do as we do! Living here, Claire has some ideas from personal experience about how to spend a
 		spare chunk of your time.
@@ -62,6 +61,10 @@
 			</div>
 		{/each}
 	</div>
+
+	<HR />
+
+	<!-- TODO: interactive map of all places; list of all places, grouped by tags -->
 
 	<footer>
 		Maps made with <a href="https://leafletjs.com/">Leaflet</a>. &copy;
