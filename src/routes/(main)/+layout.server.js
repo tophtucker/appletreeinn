@@ -1,42 +1,41 @@
 import { sanity, parsePerformance, parseBulletin, parseRestaurant } from '$lib/sanity.js';
 
 // TODO: bang on this logic for when there's no listed end time; see also music/+page.svelte
-const MUSIC_QUERY = `*[_type == "performance" && (endTime > now() || (!endTime && startTime > now()))] | order(startTime asc) [0] {
-  _id,
-  startTime,
-  endTime,
-  noTime,
-  note,
-  act->{
+const QUERY = `{
+  "nextPerformance": *[_type == "performance" && (endTime > now() || (!endTime && startTime > now()))] | order(startTime asc) [0] {
     _id,
-    name,
-    genre,
-    description,
-    image,
-    youtube
+    startTime,
+    endTime,
+    noTime,
+    note,
+    act->{
+      _id,
+      name,
+      genre,
+      description,
+      image,
+      youtube
+    }
+  },
+  "bulletins": *[_type == "bulletin" && startTime < now() && endTime > now()] | order(startTime desc) {
+    _id,
+    startTime,
+    text,
+    details,
+    urgent
+  },
+  "ostrichRoom": *[_type == "restaurant" && name == "The Ostrich Room"][0] {
+    hours,
+    hourOverrides,
+    "menus": menus[]{ name, "url": asset->url }
   }
 }`;
 
-const BULLETINS_QUERY = `*[_type == "bulletin" && startTime < now() && endTime > now()] | order(startTime desc) {
-  _id,
-  startTime,
-  text,
-  details,
-  urgent
-}`;
-
-const OSTRICH_QUERY = `*[_type == "restaurant" && name == "The Ostrich Room"][0] {
-  hours,
-  hourOverrides,
-  "menus": menus[]{ name, "url": asset->url }
-}`;
-
 export async function load() {
-	// TODO: combine into single Sanity GROQ query
-	// https://www.sanity.io/answers/combining-two-groq-queries-in-one-client-fetch---and-usepreview---in-sanity-io
+	const { nextPerformance, bulletins, ostrichRoom } = await sanity.fetch(QUERY);
 	return {
-		nextPerformance: parsePerformance(await sanity.fetch(MUSIC_QUERY)),
-		bulletins: (await sanity.fetch(BULLETINS_QUERY)).map(parseBulletin),
-		ostrichRoom: parseRestaurant(await sanity.fetch(OSTRICH_QUERY))
+		nextPerformance: parsePerformance(nextPerformance),
+		bulletins: bulletins.map(parseBulletin),
+		ostrichRoom: parseRestaurant(ostrichRoom)
 	};
 }
