@@ -9,7 +9,7 @@
 		{ key: 'overall', label: 'Overall', sub: 'All things considered, how did we do?' }
 	];
 
-	/** @type {'form' | 'google' | 'final'} */
+	/** @type {'form' | 'thanks'} */
 	let screen = $state('form');
 
 	/** @type {Record<string, number>} */
@@ -75,7 +75,7 @@
 	}
 
 	function routeAfterSubmit() {
-		screen = ratings.overall === 5 ? 'google' : 'final';
+		screen = 'thanks';
 		window.scrollTo({ top: 0 });
 	}
 
@@ -95,7 +95,7 @@
 		<h1>How was your stay?</h1>
 		<p>
 			Thank you for staying with us this season. I know how special this place is to so many of you,
-			and I'm incredibly grateful you've decided to stay with us during this slightly unusual time
+			and I’m incredibly grateful you’ve decided to stay with us during this slightly unusual time
 			as we renovate and rebrand.
 		</p>
 		<p>
@@ -107,8 +107,8 @@
 			better.
 		</p>
 
-		<img src="/signatures/christian-digital.png" alt="Christian's signature" height="56" />
-		<div class="sig-title">Christian, hotel manager</div>
+		<img src="/signatures/christian-digital.png" alt="Christian’s signature" height="56" />
+		<div>Christian, hotel manager</div>
 
 		<hr />
 
@@ -149,7 +149,7 @@
 			<label for="comments">Comments</label>
 			<textarea id="comments" name="comments" bind:value={comments}></textarea>
 
-			<label for="email">Your email (optional, if you want a reply)</label>
+			<label for="email">Your email (if you want a reply)</label>
 			<input
 				type="email"
 				id="email"
@@ -167,27 +167,22 @@
 		</form>
 	{/if}
 
-	<!-- ===== SCREEN: GOOGLE (overall = 5) ===== -->
-	{#if screen === 'google'}
-		<p class="stars-display">★★★★★</p>
-		<h1>Thanks again!</h1>
-		<p>
-			If you have <strong>30 more seconds</strong>, a Google review is the single most helpful thing
-			you can do for a small inn like ours.
-		</p>
-		<a href="https://g.page/r/CWrY-jLZWU-bEAI/review" class="cta" target="_blank" rel="noopener">
-			Leave a Google review →
-		</a>
-		<p><button onclick={() => (screen = 'final')}>No thanks, I'm done</button></p>
-	{/if}
-
-	<!-- ===== SCREEN: FINAL THANKS ===== -->
-	{#if screen === 'final'}
+	<!-- ===== SCREEN: THANKS ===== -->
+	{#if screen === 'thanks'}
 		<h1>Got it. Thank you.</h1>
 		<p>
-			I read every one of these myself. If you left your email, you'll hear back from me within a
+			I read every one of these myself. If you left your email, you’ll hear back from me within a
 			day or two.
 		</p>
+		{#if ratings.overall === 5}
+			<p>
+				If you have <em>30 more seconds</em>, a Google review is the single most helpful thing you
+				can do for a small inn like ours.
+			</p>
+			<a href="https://g.page/r/CWrY-jLZWU-bEAI/review" class="cta" target="_blank" rel="noopener">
+				Leave a Google review →
+			</a>
+		{/if}
 		<p>— Christian</p>
 	{/if}
 </div>
@@ -269,13 +264,6 @@
 	.error {
 		color: var(--red);
 		text-indent: 0;
-	}
-
-	/* Google screen */
-	.stars-display {
-		font-size: 2rem;
-		font-family: system-ui, sans-serif;
-		letter-spacing: 4px;
 	}
 
 	@media (max-width: 480px) {
