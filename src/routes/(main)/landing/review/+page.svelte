@@ -107,10 +107,10 @@
 			better.
 		</p>
 
-		<div class="signature">
-			<img src="/signatures/christian-digital.png" alt="Christian's signature" height="56" />
-			<span class="sig-title">Christian, hotel manager</span>
-		</div>
+		<img src="/signatures/christian-digital.png" alt="Christian's signature" height="56" />
+		<div class="sig-title">Christian, hotel manager</div>
+
+		<hr />
 
 		<form onsubmit={handleSubmit}>
 			<div class="ratings">
@@ -149,9 +149,7 @@
 			<label for="comments">Comments</label>
 			<textarea id="comments" name="comments" bind:value={comments}></textarea>
 
-			<label for="email">
-				Your email <span class="opt">(optional, only if you want a reply)</span>
-			</label>
+			<label for="email">Your email (optional, if you want a reply)</label>
 			<input
 				type="email"
 				id="email"
@@ -161,7 +159,7 @@
 			/>
 
 			<button type="submit" disabled={submitting}>
-				{submitting ? 'Sending…' : 'Submit feedback'}
+				{submitting ? 'Sending…' : 'Send'}
 			</button>
 			{#if errorMsg}
 				<p class="error">{errorMsg}</p>
@@ -195,17 +193,6 @@
 </div>
 
 <style>
-	.signature {
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-		margin-bottom: 1rem;
-	}
-
-	.sig-title {
-		font-style: italic;
-	}
-
 	h1 {
 		text-transform: none;
 	}
@@ -246,7 +233,6 @@
 		line-height: 1;
 		cursor: pointer;
 		color: #ccc;
-		padding: 4px;
 		font-family: system-ui, sans-serif;
 	}
 
@@ -255,6 +241,10 @@
 	}
 
 	/* Form fields */
+	form {
+		max-width: 640px;
+	}
+
 	label {
 		display: block;
 		margin-top: 1rem;
@@ -266,17 +256,14 @@
 		min-height: 110px;
 		resize: vertical;
 		font: inherit;
-		margin-top: 0.25rem;
 	}
 
 	input[type='email'] {
 		display: block;
-		margin-top: 0.25rem;
 	}
 
-	.opt {
-		font-style: italic;
-		font-size: smaller;
+	button[type='submit'] {
+		margin-top: 1rem;
 	}
 
 	.error {
@@ -294,6 +281,7 @@
 	@media (max-width: 480px) {
 		.rating-row {
 			flex-direction: column;
+			align-items: start;
 			gap: 0.25rem;
 		}
 	}
