@@ -1,4 +1,7 @@
 <script>
+	// This form submits feedback to Formspree.
+	// If the overall rating is 5 stars, we prompt the guest to review us on Google.
+
 	const FORMSPREE_ID = 'meendeko';
 
 	const DIMENSIONS = [
@@ -46,15 +49,6 @@
 		formData.append('rating_room', String(ratings.room));
 		formData.append('comments', comments);
 		if (email) formData.append('email', email);
-
-		if (!FORMSPREE_ID || FORMSPREE_ID === 'PASTE_FORM_ID_HERE') {
-			console.warn('Formspree ID not set. Logging payload to console only:');
-			console.log(Object.fromEntries(formData));
-			await new Promise((r) => setTimeout(r, 600));
-			routeAfterSubmit();
-			submitting = false;
-			return;
-		}
 
 		try {
 			const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
